@@ -1,0 +1,54 @@
+@mixin option($name) {
+	@if getter($options, $name){
+		@content;
+	}
+}
+
+@mixin hover {
+	&:hover { @content; }
+}
+
+@mixin focus {
+	&:focus { @content; }
+}
+
+@mixin active {
+	&:active { @content; }
+}
+
+@mixin hover-focus {
+	&:hover, &:focus { @content; }
+}
+
+@mixin transition($property, $duration: $transition-duration-base, $timing-function: $transition-timing-function-base) {
+	@include option("transitions") {
+		transition-property: $property;
+		transition-duration: $duration;
+		transition-timing-function: $timing-function;
+	}
+}
+
+@mixin respond-to($name, $direction: "up") {
+	@if map-has-key($breakpoints, $name) {
+		@if $direction == "up" {
+			@media (min-width: #{map-get($breakpoints, $name)}) {
+				@content;
+			}
+		}
+
+		@else if $direction == "down" {
+			@media (max-width: #{map-get($breakpoints, $name) - 1}) {
+				@content;
+			}
+		}
+	}
+
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoints}`. "
+		+ "Please make sure it is defined in `$breakpoints` map.";
+	}
+}
+
+@mixin print {
+	@media print { @content; }
+}

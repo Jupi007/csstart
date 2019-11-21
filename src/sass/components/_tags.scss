@@ -1,0 +1,47 @@
+[class*="Tag"] {
+    outline: 0;
+	display: inline-block;
+	background: $components-background-base;
+	color: $components-color-base;
+	border: none;
+	border-radius: $tags-border-radius;
+	padding: $tags-padding;
+	font-size: $tags-font-size;
+	line-height: 1;
+	vertical-align: middle;
+    text-decoration: none;
+
+    @include hover() {
+        text-decoration: none;
+        color: $components-color-base;
+    }
+
+	@each $component, $bg, $color in $components {
+		&[class*="-#{$component}"] {
+			background: $bg;
+			color: $color;
+
+			&[class*="--inversed"] {
+				background-color: transparent;
+				color: $bg;
+				box-shadow: 0 0 0 $buttons-inversed-border-width $bg inset;
+			}
+		}
+	}
+
+	&[class*="--inversed"] {
+		background-color: transparent;
+		color: $components-background-base;
+		box-shadow: 0 0 0 $buttons-inversed-border-width $components-background-base inset;
+	}
+
+	&[class*="--l"] {
+		padding: $tags-large-padding;
+		font-size: $tags-large-font-size;
+	}
+
+	&[class*="--xl"] {
+		padding: $tags-extra-large-padding;
+		font-size: $tags-extra-large-font-size;
+	}
+}

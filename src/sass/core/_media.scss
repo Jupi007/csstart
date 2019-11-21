@@ -1,0 +1,162 @@
+@each $name, $value in $breakpoints {
+	@include respond-to($name, "up") {
+		@include responsive-utilities($name + "-");
+		@include responsive-flex($name + "-");
+		@include responsive-grid($name + "-");
+	}
+}
+
+// Media Print reset and utilities based on Gutenberg (https://github.com/BafS/Gutenberg)
+@include print {
+	*,
+	*:before,
+	*:after,
+	p:first-letter,
+	div:first-letter,
+	blockquote:first-letter,
+	li:first-letter,
+	p:first-line,
+	div:first-line,
+	blockquote:first-line,
+	li:first-line {
+		background: transparent !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	body {
+		font-size: 12pt;
+		background: white;
+		font-smooth: always;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	}
+
+	table,
+	blockquote,
+	pre,
+	code,
+	figure,
+	li,
+	hr,
+	ul,
+	ol,
+	a,
+	tr {
+		page-break-inside: avoid;
+	}
+
+	#{$headings},
+	p,
+	a {
+		orphans: 3;
+		widows: 3;
+	}
+
+	#{$headings} {
+		page-break-after: avoid;
+		page-break-inside: avoid;
+
+		& + p {
+			page-break-before: avoid;
+		}
+	}
+
+	img {
+		page-break-after: auto;
+		page-break-before: auto;
+		page-break-inside: avoid;
+	}
+
+	pre {
+		white-space: pre-wrap !important;
+		word-wrap: break-word;
+	}
+
+	a {
+		&[href^='http'],
+		&[href^='ftp'] {
+			&:after {
+				content: ' (' attr(href) ')';
+				font-size: 80%;
+			}
+		}
+
+		&[href$='.jpg'],
+		&[href$='.jpeg'],
+		&[href$='.gif'],
+		&[href$='.png'] {
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	abbr[title],
+	acronym[title] {
+		&:after {
+			content: ' (' attr(title) ')';
+		}
+	}
+
+	a {
+		&.no-reformat:after { content: ''; }
+	}
+
+	abbr,
+	acronym {
+		&[title] {
+			&.no-reformat:after { content: ''; }
+		}
+	}
+
+	.no-reformat {
+		abbr,
+		acronym,
+		a {
+			&:after { content: ''; }
+		}
+	}
+
+	::placeholder {
+		color: transparent;
+	}
+
+	.print {
+        &-main {
+            margin: 0!important;
+            background: transparent!important;
+            border: 0!important;
+        }
+		&-break,
+		&-break-before {
+			page-break-before: always!important;
+		}
+
+		&-break-after{
+			page-break-after: always!important;
+		}
+
+        &-m0 { margin: 0!important;}
+        &-wauto {
+            width: auto!important;
+            max-width: 100%!important;
+            min-width: auto!important;
+        }
+
+		&-d-none { display: none!important; }
+		&-d-inline { display: inline!important; }
+		&-d-inline-block { display: inline-block!important; }
+		&-d-block { display: block!important; }
+		&-d-table { display: table!important; }
+		&-d-table-cell { display: table-cell!important; }
+		&-d-table-row { display: table-row!important; }
+		&-d-flex { display: flex!important; }
+		&-d-inline-flex { display: inline-flex!important; }
+		&-d-grid { display: grid!important; }
+
+		&-visible { visibility: visible!important; }
+		&-hidden { visibility: hidden!important; }
+	}
+}

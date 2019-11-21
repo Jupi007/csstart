@@ -1,0 +1,64 @@
+input[type="checkbox"],
+input[type="radio"] {
+	height: $checkbox-size;
+	width: $checkbox-size;
+    margin: spacer('tiny-plus') spacer('medium');
+	vertical-align: middle;
+
+	&:checked {
+		background-color: $checkbox-checked-background;
+		border-color: $checkbox-checked-background;
+	}
+
+	@include active {
+		background-color: $checkbox-active-background;
+	}
+
+	&[disabled] {
+		border-color: $checkbox-disabled-border-color;
+		background-color: $checkbox-disabled-background;
+
+		@include hover-focus { border-color: $checkbox-disabled-border-color; }
+
+		&:checked {
+			background-color: $checkbox-disabled-border-color;
+		}
+	}
+}
+
+input[type="checkbox"]:checked {
+	position: relative;
+
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%; left: 50%;
+		transform: translate(-50%, -50%);
+		width: 40%;
+		height: 40%;
+		background: $checkbox-checked-icon-color;
+		border-radius: 1px;
+	}
+
+	&:indeterminate:after {
+		height: 15%;
+	}
+}
+
+input[type="radio"] {
+	border-radius: 50%;
+	position: relative;
+
+	&:checked:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%; left: 50%;
+		transform: translate(-50%, -50%);
+		width: 40%;
+		height: 40%;
+		background: $checkbox-checked-icon-color;
+		border-radius: 50%;
+	}
+}

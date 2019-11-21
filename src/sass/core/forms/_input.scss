@@ -1,0 +1,57 @@
+input,
+textarea,
+select {
+	appearance: none;
+	border: $input-border-width solid $input-border-color;
+	border-radius: $border-radius-base;
+	padding: $input-padding-vertical $input-padding-horizontal;
+	box-shadow: none;
+	background-color: $input-background;
+	outline: none;
+    vertical-align: middle;
+    margin-left: spacer('medium');
+    margin-bottom: spacer('medium');
+    filter: none;
+
+	@include hover-focus { border-color: $input-hover-focus-border-color; }
+
+	&[disabled] {
+		cursor: not-allowed;
+		border-color: $input-border-color;
+		background: $input-disabled-background;
+
+		@include hover-focus { border-color: $input-border-color; }
+	}
+}
+
+input {
+	&[type="date"],
+	&[type="time"],
+	&[type="color"],
+	&[type="file"],
+	&[type="checkbox"],
+	&[type="radio"] {
+		cursor: pointer;
+
+		&[disabled] { cursor: not-allowed; }
+	}
+
+	&[type="file"] {
+		border: none;
+	}
+
+	&[type="color"] {
+		height: $input-color-height;
+		padding: $input-color-padding;
+	}
+
+    &[type="submit"] {
+        margin-left: 0;
+    }
+}
+
+textarea {
+	min-height: calc(#{$font-size-base} + #{$input-padding-vertical * 2});
+    transition-property: border;
+    vertical-align: initial;
+}

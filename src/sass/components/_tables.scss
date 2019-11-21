@@ -1,0 +1,111 @@
+[class*="Table"],  [class*="Afb"] table, {
+	display: table;
+	width: 100%;
+	max-width: 100%;
+	table-layout: auto;
+	border-spacing: 0px;
+	vertical-align: top;
+	border: $tables-border-width solid $tables-border-color;
+	border-radius: $tables-border-radius;
+    margin-top: $tables-margin-top;
+    margin-bottom: $tables-margin-bottom;
+
+	@if $tables-border-radius > 0 {
+		border-collapse: separate;
+
+		td, th {
+			border-right: $tables-border-width solid $tables-cells-border-color;
+			border-bottom: $tables-border-width solid $tables-cells-border-color;
+
+			&:last-child {
+				border-right: none;
+			}
+		}
+
+		tbody tr:last-child {
+			td, th {
+				border-bottom: none;
+			}
+		}
+
+		tfoot {
+			td, th {
+				border-top: $tables-border-width solid $tables-cells-border-color;
+				border-bottom: none;
+			}
+		}
+	}
+	@else {
+		border-collapse: collapse;
+
+		td, th {
+			border: $tables-border-width solid $tables-cells-border-color;
+		}
+	}
+
+	td, th {
+		padding: $tables-cells-padding;
+	}
+
+	th {
+		background: $tables-headings-cells-background;
+	}
+
+	&[class*="--fixed"] {
+		table-layout: fixed;
+	}
+
+	&[class*="--slim"] {
+		td, th {
+			padding: $tables-slim-cells-padding;
+		}
+	}
+
+	&[class*="--zebra"] {
+		th {
+			background: $tables-zebra-headings-cells-background;
+		}
+
+		tr:nth-child(even) {
+			background: $tables-zebra-cells-background;
+		}
+	}
+
+	&[class*="--hover"] {
+		th {
+			background: $tables-zebra-headings-cells-background;
+		}
+
+		tbody tr {
+			&:hover {
+				background: $tables-cells-hover-background;
+			}
+		}
+	}
+
+	&[class*="--dark"] {
+		background: $tables-dark-background;
+		color: $tables-dark-color;
+
+		th {
+			background: $tables-dark-headings-cells-background;
+		}
+
+		&[class*="--zebra"] {
+			tr:nth-child(even) {
+				background: $tables-dark-zebra-cells-background;
+			}
+		}
+
+		&[class*="--hover"] {
+			tbody tr:hover {
+				background: $tables-dark-cells-hover-background;
+			}
+		}
+	}
+
+	caption {
+		color: $captions-color;
+		font-style: $captions-font-style;
+	}
+}

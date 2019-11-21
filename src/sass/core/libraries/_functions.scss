@@ -1,0 +1,31 @@
+@function getter($map, $name) {
+	@if map-has-key($map, $name) {
+		@return(map-get($map, $name));
+	}
+	@else {
+		@warn "Unfortunately, `#{$name}` value couldn't be retrieved from `#{$map}`.";
+		@return null;
+	}
+}
+
+@function color($name) {
+	@return getter($colors, $name);
+}
+
+@function font-weight($name) {
+	@return getter($font-weights, $name);
+}
+
+@function spacer($name) {
+	@return getter($spacers, $name);
+}
+
+@function grey($percentage) {
+	@if $percentage >= 0 and $percentage <= 100 {
+		@return(darken(color("white"), $percentage));
+	}
+	@else {
+		@warn "Unfortunately, `#{$percentage}` value is not valid. It should be between 0 and 100.";
+		@return null;
+	}
+}

@@ -1,0 +1,101 @@
+//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+//-*-*-*-*-*-*-*-*-*-*-*-*Config variables-*-*-*-*-*-*-*-*-*-*-*-*-*
+//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+$options: (
+	"transitions": true,
+
+    "smooth-scroll": true,
+
+	"components-variants": true,
+
+	"buttons-sizes": true,
+	"buttons-inversed": true,
+
+	"tags-sizes": true,
+	"tags-inversed": true,
+
+	"cards-group": true,
+	"cards-overlay": true,
+
+	"blockquote-quote": true,
+
+	"figures-light": true,
+
+	"media-responsive": true,
+
+	"table-zebra": true,
+	"table-hover": true,
+	"table-dark": true,
+);
+
+$transition-duration-base:  .3s;
+$transition-timing-function-base: ease;
+
+$breakpoints: (
+	'tiny'        : 480px,
+	'small'       : 576px,
+	'medium'      : 768px,
+	'large'       : 992px,
+	'extraLarge' : 1500px,
+);
+
+$font-family-base: 'ubuntu';
+$font-family-monospace: 'ubuntu-mono';
+$font-size-base: 1.6rem;
+$font-size-mobile-base: 1.4rem;
+$font-weight-base: 400;
+$line-height-base: 1.5;
+$color-base: grey(95);
+$text-align-base: left;
+$border-radius-base: 3px;
+
+$body-bg: color('white');
+
+$heading-font-size-base: 1em;
+
+$headings-font-sizes: (
+	h1: $heading-font-size-base + 1.4,
+	h2: $heading-font-size-base + 1.0,
+	h3: $heading-font-size-base + 0.8,
+	h4: $heading-font-size-base + 0.4,
+	h5: $heading-font-size-base + 0.2,
+	h6: $heading-font-size-base + 0.1,
+);
+$headings-font-weight: font-weight('normal');
+
+$link-color: color('blue');
+$link-decoration: underline;
+$link-hover-color: darken( color('blue') , 15% );
+$link-hover-decoration: underline;
+
+$margin-base: spacer('medium-plus');
+
+$components-background-base: grey(80);
+$components-color-base: color('white');
+
+$components: (
+	('success', color('success'), color('white')),
+	('info', color('info'), color('white')),
+	('warning', color('warning'), color('white')),
+	('danger', color('danger'), color('white')),
+	('ghost', color('white'), $color-base),
+
+    ('green', color('green'), color('white')),
+    ('light-blue', color('light-blue'), color('white')),
+    ('orange', color('orange'), color('white')),
+    ('red', color('red'), color('white')),
+    ('yellow', color('yellow'), $color-base),
+    ('blue', color('blue'), color('white')),
+    ('purple', color('purple'), color('white')),
+    ('brown', color('brown'), color('white')),
+);
+
+$gutters: (
+	'': spacer('medium'),
+	'-l': spacer('large'),
+	'-xl': spacer('large-plus'),
+);
+
+$min-grid-breakpoint: "small";
+$max-grid-cols: 12;

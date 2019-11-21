@@ -1,0 +1,60 @@
+[class*="Grid"] {
+	display: grid;
+	grid-auto-flow: row;
+	grid-auto-columns: 1fr;
+	grid-template-columns: none;
+
+	@each $name, $value in $gutters  {
+		&.has-gutter#{$name} {
+			grid-gap: $value;
+		}
+	}
+
+	@include respond-to($min-grid-breakpoint, "up") {
+		grid-auto-flow: dense;
+
+		@for $i from 2 through $max-grid-cols {
+			&[class*="-#{$i}"] {
+				grid-template-columns: repeat(#{$i}, 1fr);
+			}
+
+            [class*="col-#{$i}"] {
+                grid-column: auto / span #{$i};
+            }
+
+            [class*="row-#{$i}"] {
+                grid-row: auto / span #{$i};
+            }
+		}
+
+		&[class*="--auto"] {
+		    grid-auto-flow: column;
+			grid-auto-columns: 1fr;
+			grid-template-columns: none;
+		}
+	}
+}
+
+@mixin responsive-grid($prefix: "") {
+	[class*="Grid--"] {
+		@for $i from 2 through $max-grid-cols {
+			&[class*="--#{$prefix}#{$i}"] {
+				grid-template-columns: repeat(#{$i}, 1fr);
+			}
+
+            [class*="#{$prefix}-col-#{$i}"] {
+                grid-column: auto / span #{$i};
+            }
+
+            [class*="#{$prefix}-row-#{$i}"] {
+                grid-row: auto / span #{$i};
+            }
+		}
+
+		&[class*="--#{$prefix}auto"] {
+		    grid-auto-flow: column;
+			grid-auto-columns: 1fr;
+			grid-template-columns: none;
+		}
+	}
+}

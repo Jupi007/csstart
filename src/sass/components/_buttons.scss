@@ -1,0 +1,86 @@
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+[class*="Button"] {
+	display: inline-block;
+	background: $components-background-base;
+	color: $components-color-base;
+    font-size: $buttons-font-size;
+	border: none;
+	padding: $buttons-padding;
+	border-radius: $buttons-border-radius;
+    text-decoration: none;
+	cursor: pointer;
+	user-select: none;
+	outline: 0;
+    vertical-align: middle;
+
+	@include hover-focus {
+        background-color: transparentize($components-background-base, $buttons-hover-transparency);
+        color: $components-color-base;
+        text-decoration: none;
+    }
+
+	@include active { background-color: transparentize($components-background-base, $buttons-active-transparency); }
+
+    @each $component, $bg, $color in $components {
+		&[class*="-#{$component}"] {
+			outline: 0;
+			background: $bg;
+			color: $color;
+
+            @include hover-focus {
+                background-color: transparentize($bg, $buttons-hover-transparency);
+                color: $color;
+                text-decoration: none;
+            }
+
+        	@include active { background-color: transparentize($bg, $buttons-active-transparency); }
+
+			&[class*="--inversed"] {
+				background-color: transparent;
+				color: $bg;
+				box-shadow: 0 0 0 $buttons-inversed-border-width $bg inset;
+
+				@include hover-focus {
+					background-color: $bg;
+					color: $color;
+				}
+			}
+		}
+	}
+}
+
+[class*="Button"] {
+	&[class*="--inversed"] {
+		background-color: transparent;
+		color: $components-background-base;
+		box-shadow: 0 0 0 $buttons-inversed-border-width $components-background-base inset;
+
+		@include hover-focus {
+			background-color: $components-background-base;
+			color: $components-color-base;
+		}
+	}
+
+	&[class*="--large"] {
+		padding: $buttons-large-padding;
+		font-size: $buttons-large-font-size;
+	}
+
+	&[class*="--xlarge"] {
+		padding: $buttons-extra-large-padding;
+		font-size: $buttons-extra-large-font-size;
+	}
+
+	&[class*="--small"] {
+		padding: $buttons-small-padding;
+		font-size: $buttons-small-font-size;
+	}
+
+	&[class*="--xsmall"] {
+		padding: $buttons-extra-small-padding;
+		font-size: $buttons-extra-small-font-size;
+	}
+}

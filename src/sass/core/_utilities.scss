@@ -1,0 +1,295 @@
+.txt{
+	&-normal {
+		font-style: normal !important;
+		font-weight: normal !important;
+		text-decoration: none !important;
+		text-transform: none !important;
+        font-size: 1em !important;
+	}
+
+	&-left { text-align: left !important; }
+	&-center { text-align: center !important; }
+	&-right { text-align: right !important; }
+	&-justify { text-align: justify !important; }
+
+	&-wrap {
+		white-space: wrap !important;
+		word-break: break-all !important;
+	}
+	&-nowrap { white-space: nowrap !important; }
+	&-truncate {
+		overflow: hidden !important;
+		text-overflow: ellipsis !important;
+		white-space: nowrap !important;
+	}
+
+	&-capitalize { text-transform: capitalize !important; }
+	&-uppercase { text-transform: uppercase !important; }
+	&-lowercase { text-transform: lowercase !important; }
+
+	&-italic { font-style: italic !important; }
+
+	&-underline { text-decoration: underline !important; }
+
+	&-smallest { font-size: .5em !important; }
+	&-smaller { font-size: .7em !important; }
+	&-small { font-size: .9em !important; }
+	&-big { font-size: 1.1em !important; }
+	&-bigger { font-size: 1.3em !important; }
+	&-biggest { font-size: 1.5em !important; }
+
+	@each $name, $weight in $font-weights {
+		&-weight-#{$name} { font-weight: $weight !important; }
+	}
+
+	@each $name, $color in $colors {
+		&-#{$name} { color: $color !important; }
+	}
+
+	@for $i from 1 through 20 {
+		&-grey#{$i * 5} { color: grey($i * 5) !important; }
+	}
+}
+
+[class*="border"] {
+	border: 1px solid $color-base !important;
+
+	&[class*="--radius"] {
+		border-radius: $border-radius-base !important;
+	}
+}
+
+@each $name, $color in $colors {
+	.background-#{$name} { background-color: $color !important; }
+	[class*="border-#{$name}"] { border: 1px solid $color !important; }
+}
+
+@for $i from 1 through 20 {
+	.background-grey#{$i * 5} { background-color: grey($i * 5) !important; }
+	[class*="border-grey#{$i * 5}"] { border: 1px solid grey($i * 5) !important; }
+}
+
+// Flex utilities
+    .centered-children {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+// End flex utilities
+
+.floatbox::after {
+	content: "" !important;
+	display: block !important;
+	clear: both !important;
+}
+
+.fl { float: left !important; }
+img.fl { margin-right: $spacer-base !important; }
+
+.fr { float: right !important; }
+img.fr { margin-left: $spacer-base !important; }
+
+img.fl,
+img.fr {
+	margin-bottom: $spacer-base !important;
+}
+
+.clear { clear: both !important; }
+.clear-l { clear: left !important; }
+.clear-r { clear: right !important; }
+
+// https://developer.mozilla.org/fr/docs/Web/CSS/Block_formatting_context
+.bfc { overflow: hidden !important; }
+
+.visually-hidden {
+	position: absolute !important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	padding: 0 !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+}
+
+@mixin responsive-utilities($prefix: "") {
+	.#{$prefix}display {
+		&-none { display: none !important; }
+		&-inline { display: inline !important; }
+		&-inline-block { display: inline-block !important; }
+		&-block { display: block !important; }
+		&-table { display: table !important; }
+		&-table-cell { display: table-cell !important; }
+		&-table-row { display: table-row !important; }
+		&-flex { display: flex !important; }
+		&-inline-flex { display: inline-flex !important; }
+		&-grid { display: grid !important; }
+	}
+
+	.#{$prefix}w {
+		&-auto {
+            max-width: auto !important;
+            width: 100% !important;
+        }
+        &-vp {
+            max-width: 100vw;
+            width: 100% !important;
+        }
+		&25 {
+            max-width: 25% !important;
+            width: 100% !important;
+        }
+		&50 {
+            max-width: 50% !important;
+            width: 100% !important;
+        }
+		&75 {
+            max-width: 75% !important;
+            width: 100% !important;
+        }
+		&100 {
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+		&1\/3 {
+            max-width: calc(100% / 3) !important;
+            width: 100% !important;
+        }
+		&2\/3 {
+            max-width: calc((100% / 3) * 2) !important;
+            width: 100% !important;
+        }
+	}
+
+    .#{$prefix}h {
+		&-auto { height: auto !important; }
+        &-vp { height: 100vh; }
+		&25 { height: 25% !important; }
+		&50 { height: 50% !important; }
+		&75 { height: 75% !important; }
+		&100 { height: 100% !important; }
+		&1\/3 { height: calc(100% / 3) !important; }
+		&2\/3 { height: calc((100% / 3) * 2) !important; }
+	}
+
+	.#{$prefix}left { margin-right: auto !important; }
+	.#{$prefix}right { margin-left: auto !important; }
+	.#{$prefix}center {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+
+	.#{$prefix}m {
+		& { margin: $spacer-base !important; }
+		&t { margin-top: $spacer-base !important; }
+		&r { margin-right: $spacer-base !important; }
+		&b { margin-bottom: $spacer-base !important; }
+		&l { margin-left: $spacer-base !important; }
+		&y {
+			margin-top: $spacer-base !important;
+			margin-bottom: $spacer-base !important;
+		}
+		&x {
+			margin-left: $spacer-base !important;
+			margin-right: $spacer-base !important;
+		}
+
+		&-0 { margin: 0 !important; }
+		&t-0 { margin-top: 0 !important; }
+		&r-0 { margin-right: 0 !important; }
+		&b-0 { margin-bottom: 0 !important; }
+		&l-0 { margin-left: 0 !important; }
+		&y-0 {
+			margin-top: 0 !important;
+			margin-bottom: 0 !important;
+		}
+		&x-0 {
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
+
+		&-auto { margin: auto !important; }
+		&t-auto{ margin-top: auto !important; }
+		&r-auto { margin-right: auto !important; }
+		&b-auto { margin-bottom: auto !important; }
+		&l-auto { margin-left: auto !important; }
+		&y-auto {
+			margin-top: auto !important;
+			margin-bottom: auto !important;
+		}
+		&x-auto {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		@each $name, $spacer in $spacers {
+			&-#{$name} { margin: $spacer !important; }
+			&t-#{$name} { margin-top: $spacer !important; }
+			&r-#{$name} { margin-right: $spacer !important; }
+			&b-#{$name} { margin-bottom: $spacer !important; }
+			&l-#{$name} { margin-left: $spacer !important; }
+			&y-#{$name} {
+				margin-top: $spacer !important;
+				margin-bottom: $spacer !important;
+			}
+			&x-#{$name} {
+				margin-left: $spacer !important;
+				margin-right: $spacer !important;
+			}
+		}
+	}
+
+	.#{$prefix}p {
+		& { padding: $spacer-base !important; }
+		&t { padding-top: $spacer-base !important; }
+		&r { padding-right: $spacer-base !important; }
+		&b { padding-bottom: $spacer-base !important; }
+		&l { padding-left: $spacer-base !important; }
+		&y {
+			padding-top: $spacer-base !important;
+			padding-bottom: $spacer-base !important;
+		}
+		&x {
+			padding-left: $spacer-base !important;
+			padding-right: $spacer-base !important;
+		}
+
+		&-0 { padding: 0 !important; }
+		&t-0 { padding-top: 0 !important; }
+		&r-0 { padding-right: 0 !important; }
+		&b-0 { padding-bottom: 0 !important; }
+		&l-0 { padding-left: 0 !important; }
+		&y-0 {
+			padding-top: 0 !important;
+			padding-bottom: 0 !important;
+		}
+		&x-0 {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+
+		@each $name, $spacer in $spacers {
+			&-#{$name} { padding: $spacer !important; }
+			&t-#{$name} { padding-top: $spacer !important; }
+			&r-#{$name} { padding-right: $spacer !important; }
+			&b-#{$name} { padding-bottom: $spacer !important; }
+			&l-#{$name} { padding-left: $spacer !important; }
+			&y-#{$name} {
+				padding-top: $spacer !important;
+				padding-bottom: $spacer !important;
+			}
+			&x-#{$name} {
+				padding-left: $spacer !important;
+				padding-right: $spacer !important;
+			}
+		}
+	}
+
+	.#{$prefix}visible { visibility: visible !important; }
+	.#{$prefix}hidden { visibility: hidden !important; }
+
+	.#{$prefix}item-first { order: -1 !important; }
+	.#{$prefix}item-last { order: 1 !important; }
+	.#{$prefix}item-centered { margin: auto !important; }
+}
+
+@include responsive-utilities();

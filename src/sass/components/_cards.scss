@@ -1,0 +1,105 @@
+[class*="Card"] {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	border: $cards-border-width solid $cards-border-color;
+	border-radius: $cards-border-radius;
+	word-wrap: break-word;
+}
+
+[class*="Card"][class*="--link"], a[class*="Card"] {
+	cursor: pointer;
+	color: $color-base;
+    text-decoration: none;
+
+	@include hover-focus {
+		//z-index: 1;
+		box-shadow: 0 0 $cards-hover-box-shadow-width $cards-hover-box-shadow-width $cards-border-color;
+        text-decoration: none;
+	}
+}
+
+.card-figure {
+	object-fit: cover;
+	max-height: 100vh;
+}
+
+.card-title {
+	font-size: $cards-title-font-size;
+}
+
+.card-subtitle {
+	display: block;
+	font-size: $cards-subtitle-font-size;
+	color: $cards-subtitle-color;
+}
+
+[class*="card-body"] {
+	padding: $cards-body-padding;
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+
+	&[class*="--overlay"] {
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		color: color("white");
+		text-shadow: 1px 1px 2px color("black");
+		overflow: hidden;
+
+		&[class*="--scroll"] {
+			overflow: scroll;
+		}
+	}
+}
+
+@include respond-to("tiny", "up") {
+	.card-group {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+
+		[class*="Card"] {
+			border-radius: 0;
+			border-radius: 0;
+			border-left-width: 0;
+			margin: 0;
+
+			&:first-child {
+				border-radius: $cards-border-radius 0 0 $cards-border-radius;
+				border-left-width: $cards-border-width;
+			}
+
+			&:last-child {
+				border-radius: 0 $cards-border-radius $cards-border-radius 0;
+			}
+		}
+	}
+}
+
+.card-group--column {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+
+	[class*="Card"] {
+		border-radius: 0;
+		border-radius: 0;
+		border-bottom-width: 0;
+		margin: 0;
+
+		&:first-child {
+			border-radius: $cards-border-radius $cards-border-radius 0 0;
+		}
+
+		&:last-child {
+			border-radius: 0 0 $cards-border-radius $cards-border-radius;
+			border-bottom-width: $cards-border-width;
+		}
+	}
+}

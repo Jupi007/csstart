@@ -1,0 +1,66 @@
+meter, progress {
+	background: $progress-background;
+	border: none;
+	height: $progress-height;
+	border-radius: $progress-border-radius;
+}
+
+::-webkit-progress-bar,
+::-webkit-meter-bar {
+	background: $progress-background;
+	border: none;
+	height: $progress-height;
+	border-radius: $progress-border-radius;
+}
+
+// ********
+// Progress
+// ********
+::-webkit-progress-value {
+	background: $progress-bar-background;
+	border-radius: $progress-border-radius;
+}
+
+::-moz-progress-bar {
+	background: $progress-bar-background;
+	border-radius: $progress-border-radius;
+}
+
+progress:indeterminate {
+	@if $progress-indeterminate-animation {
+		animation-duration: $progress-indeterminate-animation-duration;
+		animation-name: progress;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+	}
+
+	&::-moz-progress-bar { width: 0; }
+}
+
+@keyframes progress {
+	to { background: darken( $progress-background , 5% ); }
+}
+
+// *****
+// Meter
+// ******
+:-moz-meter-optimum::-moz-meter-bar,
+:-moz-meter-sub-optimum::-moz-meter-bar,
+:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+	border-radius: $progress-border-radius;
+}
+
+::-webkit-meter-optimum-value,
+::-webkit-meter-suboptimum-value,
+::-webkit-meter-even-less-good-value {
+	border-radius: $progress-border-radius;
+}
+
+:-moz-meter-optimum::-moz-meter-bar { background: $meter-optimum-background; }
+meter::-webkit-meter-optimum-value { background: $meter-optimum-background; }
+
+:-moz-meter-sub-optimum::-moz-meter-bar { background: $meter-sub-optimum-background; }
+meter::-webkit-meter-suboptimum-value { background: $meter-sub-optimum-background; }
+
+:-moz-meter-sub-sub-optimum::-moz-meter-bar { background: $meter-sub-sub-optimum-background; }
+meter::-webkit-meter-even-less-good-value { background: $meter-sub-sub-optimum-background; }

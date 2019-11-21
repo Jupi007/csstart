@@ -1,0 +1,29 @@
+[class*="Alert"] {
+	padding: $alerts-padding;
+	border: $alerts-border-width solid $components-background-base;
+	border-left-width: $alerts-border-left-width;
+	border-radius: $alerts-border-radius;
+	margin-bottom: $alerts-margin-bottom;
+    background-color: transparentize($components-background-base, $alerts-background-transparency);
+
+	@each $component, $bg, $color in $components {
+		&[class*="-#{$component}"] {
+			border-color: $bg;
+            background-color: transparentize($bg, $alerts-background-transparency);
+
+			.alert-title {
+				color: $bg;
+			}
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: $components-background-base;
+		font-size: $alerts-title-font-size;
+	}
+}

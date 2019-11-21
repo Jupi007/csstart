@@ -1,0 +1,16 @@
+$spacer-base: 1rem;
+
+$spacers: (
+	'tiny': $spacer-base * .25,
+	'tiny-plus': $spacer-base * .5,
+	'small': $spacer-base * .75,
+	'small-plus': $spacer-base * .9,
+	'medium': $spacer-base,
+	'medium-plus': $spacer-base * 1.5,
+	'large': $spacer-base * 2,
+	'large-plus': $spacer-base * 2.5,
+	'x-large': $spacer-base * 3,
+	'x-large-plus': $spacer-base * 3.5,
+	'xx-large': $spacer-base * 4,
+	'xx-large-plus': $spacer-base * 4.5,
+);
