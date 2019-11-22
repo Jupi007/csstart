@@ -85,9 +85,9 @@ hr {
     font-weight: $headings-font-weight;
 }
 
-@for $i from 1 through 6 {
-	h#{$i} {
-		font-size: map-get($headings-font-sizes, "h"+$i);
+@each $h, $font-size in $headings-font-sizes {
+	#{$h} {
+		font-size: $font-size;
 	}
 }
 
@@ -168,19 +168,16 @@ sup {
 sub { bottom: -.25em; }
 sup { top: -.5em; }
 
-a {
-	&,
-	&:visited {
-		color: $link-color;
-		text-decoration: $link-decoration;
-		background-color: transparent;
+a, a:visited{
+	color: $link-color;
+	text-decoration: $link-decoration;
+	background-color: transparent;
 
-        @include transition("color");
+    @include transition("color");
 
-		@include hover {
-			color: $link-hover-color;
-			text-decoration: $link-hover-decoration;
-		}
+	@include hover {
+		color: $link-hover-color;
+		text-decoration: $link-hover-decoration;
 	}
 }
 

@@ -10310,7 +10310,12 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 	background-color: rgba(96, 203, 74, .1);
 }
 
-[class*='Alert'][class*='-success'] .alert-title {
+[class*='Alert'][class*='-success'] h1,
+[class*='Alert'][class*='-success'] h2,
+[class*='Alert'][class*='-success'] h3,
+[class*='Alert'][class*='-success'] h4,
+[class*='Alert'][class*='-success'] h5,
+[class*='Alert'][class*='-success'] h6 {
 	color: #60cb4a;
 }
 
@@ -10319,7 +10324,12 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 	background-color: rgba(116, 192, 205, .1);
 }
 
-[class*='Alert'][class*='-info'] .alert-title {
+[class*='Alert'][class*='-info'] h1,
+[class*='Alert'][class*='-info'] h2,
+[class*='Alert'][class*='-info'] h3,
+[class*='Alert'][class*='-info'] h4,
+[class*='Alert'][class*='-info'] h5,
+[class*='Alert'][class*='-info'] h6 {
 	color: #74c0cd;
 }
 
@@ -10328,7 +10338,12 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 	background-color: rgba(217, 131, 30, .1);
 }
 
-[class*='Alert'][class*='-warning'] .alert-title {
+[class*='Alert'][class*='-warning'] h1,
+[class*='Alert'][class*='-warning'] h2,
+[class*='Alert'][class*='-warning'] h3,
+[class*='Alert'][class*='-warning'] h4,
+[class*='Alert'][class*='-warning'] h5,
+[class*='Alert'][class*='-warning'] h6 {
 	color: #d9831e;
 }
 
@@ -10337,7 +10352,12 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 	background-color: rgba(217, 77, 77, .1);
 }
 
-[class*='Alert'][class*='-danger'] .alert-title {
+[class*='Alert'][class*='-danger'] h1,
+[class*='Alert'][class*='-danger'] h2,
+[class*='Alert'][class*='-danger'] h3,
+[class*='Alert'][class*='-danger'] h4,
+[class*='Alert'][class*='-danger'] h5,
+[class*='Alert'][class*='-danger'] h6 {
 	color: #d94d4d;
 }
 
@@ -10346,7 +10366,12 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 	background-color: rgba(255, 255, 255, .1);
 }
 
-[class*='Alert'][class*='-ghost'] .alert-title {
+[class*='Alert'][class*='-ghost'] h1,
+[class*='Alert'][class*='-ghost'] h2,
+[class*='Alert'][class*='-ghost'] h3,
+[class*='Alert'][class*='-ghost'] h4,
+[class*='Alert'][class*='-ghost'] h5,
+[class*='Alert'][class*='-ghost'] h6 {
 	color: #fff;
 }
 
@@ -10355,7 +10380,12 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 	background-color: rgba(96, 203, 74, .1);
 }
 
-[class*='Alert'][class*='-green'] .alert-title {
+[class*='Alert'][class*='-green'] h1,
+[class*='Alert'][class*='-green'] h2,
+[class*='Alert'][class*='-green'] h3,
+[class*='Alert'][class*='-green'] h4,
+[class*='Alert'][class*='-green'] h5,
+[class*='Alert'][class*='-green'] h6 {
 	color: #60cb4a;
 }
 
@@ -10364,7 +10394,12 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 	background-color: rgba(116, 192, 205, .1);
 }
 
-[class*='Alert'][class*='-light-blue'] .alert-title {
+[class*='Alert'][class*='-light-blue'] h1,
+[class*='Alert'][class*='-light-blue'] h2,
+[class*='Alert'][class*='-light-blue'] h3,
+[class*='Alert'][class*='-light-blue'] h4,
+[class*='Alert'][class*='-light-blue'] h5,
+[class*='Alert'][class*='-light-blue'] h6 {
 	color: #74c0cd;
 }
 
@@ -10373,7 +10408,12 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 	background-color: rgba(217, 131, 30, .1);
 }
 
-[class*='Alert'][class*='-orange'] .alert-title {
+[class*='Alert'][class*='-orange'] h1,
+[class*='Alert'][class*='-orange'] h2,
+[class*='Alert'][class*='-orange'] h3,
+[class*='Alert'][class*='-orange'] h4,
+[class*='Alert'][class*='-orange'] h5,
+[class*='Alert'][class*='-orange'] h6 {
 	color: #d9831e;
 }
 
@@ -10382,7 +10422,12 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 	background-color: rgba(217, 77, 77, .1);
 }
 
-[class*='Alert'][class*='-red'] .alert-title {
+[class*='Alert'][class*='-red'] h1,
+[class*='Alert'][class*='-red'] h2,
+[class*='Alert'][class*='-red'] h3,
+[class*='Alert'][class*='-red'] h4,
+[class*='Alert'][class*='-red'] h5,
+[class*='Alert'][class*='-red'] h6 {
 	color: #d94d4d;
 }
 
@@ -10391,7 +10436,12 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 	background-color: rgba(255, 244, 108, .1);
 }
 
-[class*='Alert'][class*='-yellow'] .alert-title {
+[class*='Alert'][class*='-yellow'] h1,
+[class*='Alert'][class*='-yellow'] h2,
+[class*='Alert'][class*='-yellow'] h3,
+[class*='Alert'][class*='-yellow'] h4,
+[class*='Alert'][class*='-yellow'] h5,
+[class*='Alert'][class*='-yellow'] h6 {
 	color: #fff46c;
 }
 
@@ -10400,7 +10450,12 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 	background-color: rgba(57, 53, 205, .1);
 }
 
-[class*='Alert'][class*='-blue'] .alert-title {
+[class*='Alert'][class*='-blue'] h1,
+[class*='Alert'][class*='-blue'] h2,
+[class*='Alert'][class*='-blue'] h3,
+[class*='Alert'][class*='-blue'] h4,
+[class*='Alert'][class*='-blue'] h5,
+[class*='Alert'][class*='-blue'] h6 {
 	color: #3935cd;
 }
 
@@ -10409,7 +10464,12 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 	background-color: rgba(170, 128, 217, .1);
 }
 
-[class*='Alert'][class*='-purple'] .alert-title {
+[class*='Alert'][class*='-purple'] h1,
+[class*='Alert'][class*='-purple'] h2,
+[class*='Alert'][class*='-purple'] h3,
+[class*='Alert'][class*='-purple'] h4,
+[class*='Alert'][class*='-purple'] h5,
+[class*='Alert'][class*='-purple'] h6 {
 	color: #aa80d9;
 }
 
@@ -10418,7 +10478,12 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 	background-color: rgba(131, 86, 17, .1);
 }
 
-[class*='Alert'][class*='-brown'] .alert-title {
+[class*='Alert'][class*='-brown'] h1,
+[class*='Alert'][class*='-brown'] h2,
+[class*='Alert'][class*='-brown'] h3,
+[class*='Alert'][class*='-brown'] h4,
+[class*='Alert'][class*='-brown'] h5,
+[class*='Alert'][class*='-brown'] h6 {
 	color: #835611;
 }
 
@@ -10591,7 +10656,6 @@ a[class*='Card']:focus {
 
 [class*='Table'],
 [class*='Afb'] table {
-	display: table;
 	width: 100%;
 	max-width: 100%;
 	margin-top: 3rem;
@@ -10599,7 +10663,6 @@ a[class*='Card']:focus {
 	table-layout: auto;
 	border-spacing: 0;
 	border-collapse: separate;
-	vertical-align: top;
 	border: 1px solid #262626;
 	border-radius: 3px;
 }
