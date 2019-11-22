@@ -77,9 +77,10 @@
 		}
 
 		tbody tr {
-			&:hover {
-				background: $tables-cells-hover-background;
-			}
+            @include transition("background");
+            @include hover {
+                background: $tables-cells-hover-background;
+            }
 		}
 	}
 
@@ -97,11 +98,11 @@
 			}
 		}
 
-		&[class*="--hover"] {
-			tbody tr:hover {
-				background: $tables-dark-cells-hover-background;
-			}
-		}
+		&[class*="--hover"] tbody tr {
+            @include hover {
+                background: $tables-dark-cells-hover-background;
+            }
+        }
 	}
 
 	caption {

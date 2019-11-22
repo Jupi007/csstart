@@ -2,7 +2,7 @@ input[type="range"] {
 	cursor: pointer;
 	appearance: none;
 
-	@include focus {
+    @include focus {
         outline: none;
     }
 
@@ -14,21 +14,24 @@ input[type="range"] {
 		&::-moz-range-thumb {
 			border-color: $range-track-disabled-color;
 
-			&:hover { background: $range-thumb-color; }
+            @include transition("background");
+			@include hover-focus { background: $range-thumb-color; }
 		}
 
 		&::-webkit-slider-runnable-track { background: $range-track-disabled-color; }
 		&::-webkit-slider-thumb {
 			border-color: $range-track-disabled-color;
-
-			&:hover { background: $range-thumb-color; }
+            
+            @include transition("background");
+			@include hover-focus { background: $range-thumb-color; }
 		}
 
 		&::-ms-fill-lower, &::-ms-fill-upper { background: $range-track-disabled-color; }
 		&::-ms-thumb {
 			border-color: $range-track-disabled-color;
 
-			&:hover { background: $range-thumb-color; }
+            @include transition("background");
+			@include hover-focus { background: $range-thumb-color; }
 		}
 	}
 
@@ -44,7 +47,8 @@ input[type="range"] {
 		border-radius: 50%;
 		background: $range-thumb-color;
 
-		&:hover { background: darken( $range-thumb-color , 10% ); }
+        @include transition("background");
+		@include hover-focus { background: darken( $range-thumb-color , 10% ); }
 	}
 
 	&::-webkit-slider-runnable-track {
@@ -61,7 +65,8 @@ input[type="range"] {
 		background: $range-thumb-color;
 		margin-top: -7px;
 
-		&:hover { background: darken( $range-thumb-color , 10% ); }
+        @include transition("background");
+		@include hover-focus { background: darken( $range-thumb-color , 10% ); }
 	}
 
 	&::-ms-track {
@@ -81,6 +86,7 @@ input[type="range"] {
 		background: $range-thumb-color;
 		margin-top: 0;
 
-		&:hover { background: darken( $range-thumb-color , 10% ); }
+        @include transition("background");
+		@include hover-focus { background: darken( $range-thumb-color , 10% ); }
 	}
 }

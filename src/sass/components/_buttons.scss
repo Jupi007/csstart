@@ -16,6 +16,8 @@ input[type="reset"],
 	outline: 0;
     vertical-align: middle;
 
+    @include transition("background-color, color");
+
 	@include hover-focus {
         background-color: transparentize($components-background-base, $buttons-hover-transparency);
         color: $components-color-base;

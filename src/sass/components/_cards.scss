@@ -12,6 +12,8 @@
 	color: $color-base;
     text-decoration: none;
 
+    @include transition("box-shadow");
+
 	@include hover-focus {
 		//z-index: 1;
 		box-shadow: 0 0 $cards-hover-box-shadow-width $cards-hover-box-shadow-width $cards-border-color;

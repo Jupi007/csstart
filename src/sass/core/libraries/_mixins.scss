@@ -20,11 +20,14 @@
 	&:hover, &:focus { @content; }
 }
 
-@mixin transition($property, $duration: $transition-duration-base, $timing-function: $transition-timing-function-base) {
+@mixin transition($property, $duration: $transition-duration-base, $timing-function: $transition-timing-function-base, $delay: 0) {
 	@include option("transitions") {
-		transition-property: $property;
+        transition-property: #{$property};
 		transition-duration: $duration;
 		transition-timing-function: $timing-function;
+        @if $delay != 0 {
+            transition-delay: $delay;
+        }
 	}
 }
 

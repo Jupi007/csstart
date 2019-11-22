@@ -5,6 +5,8 @@ input[type="radio"] {
     margin: spacer('tiny-plus') spacer('medium');
 	vertical-align: middle;
 
+    @include transition("background, border");
+
 	&:checked {
 		background-color: $checkbox-checked-background;
 		border-color: $checkbox-checked-background;

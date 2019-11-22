@@ -13,6 +13,8 @@ select {
     margin-bottom: spacer('medium');
     filter: none;
 
+    @include transition("border");
+
 	@include hover-focus { border-color: $input-hover-focus-border-color; }
 
 	&[disabled] {

@@ -3,6 +3,8 @@ meter, progress {
 	border: none;
 	height: $progress-height;
 	border-radius: $progress-border-radius;
+
+    @include transition("all");
 }
 
 ::-webkit-progress-bar,

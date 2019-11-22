@@ -3,8 +3,6 @@
 //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
 * {
-    @include transition(all);
-
     @media (prefers-reduced-motion: reduce) {
         animation: none !important;
         transition: none !important;
@@ -176,6 +174,8 @@ a {
 		color: $link-color;
 		text-decoration: $link-decoration;
 		background-color: transparent;
+
+        @include transition("color");
 
 		@include hover {
 			color: $link-hover-color;
