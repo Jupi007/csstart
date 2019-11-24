@@ -10421,6 +10421,7 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 [class*='Alert'] {
 	margin-bottom: 1.5rem;
 	padding: 1rem;
+	color: black;
 	border: 1px solid #333;
 	border-left-width: 5px;
 	border-radius: 3px;
@@ -10428,185 +10429,81 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 }
 
 [class*='Alert'][class*='-success'] {
+	color: #388827;
 	border-color: #60cb4a;
 	background-color: rgba(96, 203, 74, .1);
 }
 
-[class*='Alert'][class*='-success'] h1,
-[class*='Alert'][class*='-success'] h2,
-[class*='Alert'][class*='-success'] h3,
-[class*='Alert'][class*='-success'] h4,
-[class*='Alert'][class*='-success'] h5,
-[class*='Alert'][class*='-success'] h6 {
-	color: #60cb4a;
-}
-
 [class*='Alert'][class*='-info'] {
+	color: #3a92a1;
 	border-color: #74c0cd;
 	background-color: rgba(116, 192, 205, .1);
 }
 
-[class*='Alert'][class*='-info'] h1,
-[class*='Alert'][class*='-info'] h2,
-[class*='Alert'][class*='-info'] h3,
-[class*='Alert'][class*='-info'] h4,
-[class*='Alert'][class*='-info'] h5,
-[class*='Alert'][class*='-info'] h6 {
-	color: #74c0cd;
-}
-
 [class*='Alert'][class*='-warning'] {
+	color: #7f4d12;
 	border-color: #d9831e;
 	background-color: rgba(217, 131, 30, .1);
 }
 
-[class*='Alert'][class*='-warning'] h1,
-[class*='Alert'][class*='-warning'] h2,
-[class*='Alert'][class*='-warning'] h3,
-[class*='Alert'][class*='-warning'] h4,
-[class*='Alert'][class*='-warning'] h5,
-[class*='Alert'][class*='-warning'] h6 {
-	color: #d9831e;
-}
-
 [class*='Alert'][class*='-danger'] {
+	color: #9e2222;
 	border-color: #d94d4d;
 	background-color: rgba(217, 77, 77, .1);
 }
 
-[class*='Alert'][class*='-danger'] h1,
-[class*='Alert'][class*='-danger'] h2,
-[class*='Alert'][class*='-danger'] h3,
-[class*='Alert'][class*='-danger'] h4,
-[class*='Alert'][class*='-danger'] h5,
-[class*='Alert'][class*='-danger'] h6 {
-	color: #d94d4d;
-}
-
 [class*='Alert'][class*='-ghost'] {
+	color: #ccc;
 	border-color: #fff;
 	background-color: rgba(255, 255, 255, .1);
 }
 
-[class*='Alert'][class*='-ghost'] h1,
-[class*='Alert'][class*='-ghost'] h2,
-[class*='Alert'][class*='-ghost'] h3,
-[class*='Alert'][class*='-ghost'] h4,
-[class*='Alert'][class*='-ghost'] h5,
-[class*='Alert'][class*='-ghost'] h6 {
-	color: #fff;
-}
-
 [class*='Alert'][class*='-green'] {
+	color: #388827;
 	border-color: #60cb4a;
 	background-color: rgba(96, 203, 74, .1);
 }
 
-[class*='Alert'][class*='-green'] h1,
-[class*='Alert'][class*='-green'] h2,
-[class*='Alert'][class*='-green'] h3,
-[class*='Alert'][class*='-green'] h4,
-[class*='Alert'][class*='-green'] h5,
-[class*='Alert'][class*='-green'] h6 {
-	color: #60cb4a;
-}
-
 [class*='Alert'][class*='-light-blue'] {
+	color: #3a92a1;
 	border-color: #74c0cd;
 	background-color: rgba(116, 192, 205, .1);
 }
 
-[class*='Alert'][class*='-light-blue'] h1,
-[class*='Alert'][class*='-light-blue'] h2,
-[class*='Alert'][class*='-light-blue'] h3,
-[class*='Alert'][class*='-light-blue'] h4,
-[class*='Alert'][class*='-light-blue'] h5,
-[class*='Alert'][class*='-light-blue'] h6 {
-	color: #74c0cd;
-}
-
 [class*='Alert'][class*='-orange'] {
+	color: #7f4d12;
 	border-color: #d9831e;
 	background-color: rgba(217, 131, 30, .1);
 }
 
-[class*='Alert'][class*='-orange'] h1,
-[class*='Alert'][class*='-orange'] h2,
-[class*='Alert'][class*='-orange'] h3,
-[class*='Alert'][class*='-orange'] h4,
-[class*='Alert'][class*='-orange'] h5,
-[class*='Alert'][class*='-orange'] h6 {
-	color: #d9831e;
-}
-
 [class*='Alert'][class*='-red'] {
+	color: #9e2222;
 	border-color: #d94d4d;
 	background-color: rgba(217, 77, 77, .1);
 }
 
-[class*='Alert'][class*='-red'] h1,
-[class*='Alert'][class*='-red'] h2,
-[class*='Alert'][class*='-red'] h3,
-[class*='Alert'][class*='-red'] h4,
-[class*='Alert'][class*='-red'] h5,
-[class*='Alert'][class*='-red'] h6 {
-	color: #d94d4d;
-}
-
 [class*='Alert'][class*='-yellow'] {
+	color: #ffec06;
 	border-color: #fff46c;
 	background-color: rgba(255, 244, 108, .1);
 }
 
-[class*='Alert'][class*='-yellow'] h1,
-[class*='Alert'][class*='-yellow'] h2,
-[class*='Alert'][class*='-yellow'] h3,
-[class*='Alert'][class*='-yellow'] h4,
-[class*='Alert'][class*='-yellow'] h5,
-[class*='Alert'][class*='-yellow'] h6 {
-	color: #fff46c;
-}
-
 [class*='Alert'][class*='-blue'] {
+	color: #211f7d;
 	border-color: #3935cd;
 	background-color: rgba(57, 53, 205, .1);
 }
 
-[class*='Alert'][class*='-blue'] h1,
-[class*='Alert'][class*='-blue'] h2,
-[class*='Alert'][class*='-blue'] h3,
-[class*='Alert'][class*='-blue'] h4,
-[class*='Alert'][class*='-blue'] h5,
-[class*='Alert'][class*='-blue'] h6 {
-	color: #3935cd;
-}
-
 [class*='Alert'][class*='-purple'] {
+	color: #7638bb;
 	border-color: #aa80d9;
 	background-color: rgba(170, 128, 217, .1);
 }
 
-[class*='Alert'][class*='-purple'] h1,
-[class*='Alert'][class*='-purple'] h2,
-[class*='Alert'][class*='-purple'] h3,
-[class*='Alert'][class*='-purple'] h4,
-[class*='Alert'][class*='-purple'] h5,
-[class*='Alert'][class*='-purple'] h6 {
-	color: #aa80d9;
-}
-
 [class*='Alert'][class*='-brown'] {
+	color: #291b05;
 	border-color: #835611;
 	background-color: rgba(131, 86, 17, .1);
-}
-
-[class*='Alert'][class*='-brown'] h1,
-[class*='Alert'][class*='-brown'] h2,
-[class*='Alert'][class*='-brown'] h3,
-[class*='Alert'][class*='-brown'] h4,
-[class*='Alert'][class*='-brown'] h5,
-[class*='Alert'][class*='-brown'] h6 {
-	color: #835611;
 }
 
 [class*='Alert'] h1,
@@ -10616,7 +10513,6 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 [class*='Alert'] h5,
 [class*='Alert'] h6 {
 	font-size: 1.5em;
-	color: #333;
 }
 
 [class*='Media'] {

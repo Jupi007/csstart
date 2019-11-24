@@ -5,20 +5,17 @@
 	border-radius: $alerts-border-radius;
 	margin-bottom: $alerts-margin-bottom;
     background-color: transparentize($components-background-base, $alerts-background-transparency);
+	color: darken($components-background-base, $buttons-color-darken);
 
 	@each $component, $bg, $color in $components {
 		&[class*="-#{$component}"] {
 			border-color: $bg;
             background-color: transparentize($bg, $alerts-background-transparency);
-
-			#{$headings} {
-				color: $bg;
-			}
+            color: darken($bg, $buttons-color-darken);
 		}
 	}
 
 	#{$headings} {
-		color: $components-background-base;
 		font-size: $alerts-title-font-size;
 	}
 }
