@@ -47,6 +47,7 @@ $font-size-mobile-base: 1.4rem;
 $font-weight-base: 400;
 $line-height-base: 1.5;
 $color-base: grey(95);
+$color-base-light: color('white');
 $text-align-base: left;
 $border-radius-base: 3px;
 
@@ -75,20 +76,20 @@ $components-background-base: grey(80);
 $components-color-base: color('white');
 
 $components: (
-	('success', color('success'), color('white')),
-	('info', color('info'), color('white')),
-	('warning', color('warning'), color('white')),
-	('danger', color('danger'), color('white')),
+	('success', color('success')),
+	('info', color('info')),
+	('warning', color('warning')),
+	('danger', color('danger')),
 	('ghost', color('white'), $color-base),
 
-    ('green', color('green'), color('white')),
-    ('light-blue', color('light-blue'), color('white')),
-    ('orange', color('orange'), color('white')),
-    ('red', color('red'), color('white')),
-    ('yellow', color('yellow'), $color-base),
-    ('blue', color('blue'), color('white')),
-    ('purple', color('purple'), color('white')),
-    ('brown', color('brown'), color('white')),
+    ('green', color('green')),
+    ('light-blue', color('light-blue')),
+    ('orange', color('orange')),
+    ('red', color('red')),
+    ('yellow', color('yellow')),
+    ('blue', color('blue')),
+    ('purple', color('purple')),
+    ('brown', color('brown')),
 );
 
 $gutters: (

@@ -29,3 +29,15 @@
 		@return null;
 	}
 }
+
+@function brightness($color) {
+  @return (red($color) + green($color) + blue($color)) / (255 * 3);
+}
+
+@function brightness_ratio($base, $color) {
+  @return abs(brightness($base) - brightness($color));
+}
+
+@function contrast($base, $color1, $color2) {
+  @return if(brightness_ratio($base, $color1) > brightness_ratio($base, $color2), $color1, $color2);
+}

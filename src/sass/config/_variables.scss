@@ -66,8 +66,7 @@ $meter-sub-sub-optimum-background: color("success");
 $buttons-padding: spacer("tiny-plus") spacer("medium");
 $buttons-font-size: .9em;
 $buttons-border-radius: $border-radius-base;
-$buttons-hover-transparency: .15;
-$buttons-active-transparency: 0;
+$buttons-hover-darken: 10%;
 $buttons-inversed-border-width: 2px;
 
 $buttons-large-padding: spacer("small") spacer("medium-plus");

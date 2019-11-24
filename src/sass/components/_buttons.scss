@@ -3,6 +3,7 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"],
 [class*="Button"] {
+    position: relative;
 	display: inline-block;
 	background: $components-background-base;
 	color: $components-color-base;
@@ -15,39 +16,63 @@ input[type="reset"],
 	user-select: none;
 	outline: 0;
     vertical-align: middle;
+    z-index: 1;
 
-    @include transition("background-color, color");
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: darken($components-background-base, $buttons-hover-darken);
+    	border-radius: $buttons-border-radius;
+        opacity: 0;
+        z-index: -1;
 
-	@include hover-focus {
-        background-color: transparentize($components-background-base, $buttons-hover-transparency);
-        color: $components-color-base;
-        text-decoration: none;
+        @include transition("opacity");
     }
 
-	@include active { background-color: transparentize($components-background-base, $buttons-active-transparency); }
+	@include hover-focus {
+        color: $components-color-base;
+        text-decoration: none;
+
+        &::after {
+            opacity: 1;
+        }
+    }
+
+	@include active {
+        &::after {
+            opacity: 0;
+        }
+    }
 
     @each $component, $bg, $color in $components {
 		&[class*="-#{$component}"] {
-			outline: 0;
 			background: $bg;
-			color: $color;
+			color: contrast($bg, $color-base, $color-base-light);
 
-            @include hover-focus {
-                background-color: transparentize($bg, $buttons-hover-transparency);
-                color: $color;
-                text-decoration: none;
+            &::after {
+                background-color: darken($bg, $buttons-hover-darken);
             }
 
-        	@include active { background-color: transparentize($bg, $buttons-active-transparency); }
+            @include hover-focus {
+                color: contrast($bg, $color-base, $color-base-light);
+                text-decoration: none;
+            }
 
 			&[class*="--inversed"] {
 				background-color: transparent;
 				color: $bg;
 				box-shadow: 0 0 0 $buttons-inversed-border-width $bg inset;
 
+                &::after {
+                    background-color: $bg;
+                }
+
 				@include hover-focus {
-					background-color: $bg;
-					color: $color;
+					color: contrast($bg, $color-base, $color-base-light);
 				}
 			}
 		}
@@ -59,9 +84,13 @@ input[type="reset"],
 		background-color: transparent;
 		color: $components-background-base;
 		box-shadow: 0 0 0 $buttons-inversed-border-width $components-background-base inset;
+        @include transition("color");
+
+        &::after {
+            background-color: $components-background-base;
+        }
 
 		@include hover-focus {
-			background-color: $components-background-base;
 			color: $components-color-base;
 		}
 	}
@@ -85,4 +114,9 @@ input[type="reset"],
 		padding: $buttons-extra-small-padding;
 		font-size: $buttons-extra-small-font-size;
 	}
+
+    &[class*="--block"] {
+        display: block;
+        width: 100%;
+    }
 }
