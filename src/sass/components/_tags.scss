@@ -16,10 +16,10 @@
         color: $components-color-base;
     }
 
-	@each $component, $bg, $color in $components {
+	@each $component, $bg in $components {
 		&[class*="-#{$component}"] {
 			background: $bg;
-			color: $color;
+			color: contrast($bg, $color-base, $color-base-light);
 
 			&[class*="--inversed"] {
 				background-color: transparent;

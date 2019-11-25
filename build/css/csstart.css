@@ -10449,6 +10449,7 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 }
 
 [class*='Tag'][class*='-success'] {
+	color: #fff;
 	background: #60cb4a;
 }
 
@@ -10459,6 +10460,7 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 }
 
 [class*='Tag'][class*='-info'] {
+	color: #0d0d0d;
 	background: #74c0cd;
 }
 
@@ -10469,6 +10471,7 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 }
 
 [class*='Tag'][class*='-warning'] {
+	color: #fff;
 	background: #d9831e;
 }
 
@@ -10479,6 +10482,7 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 }
 
 [class*='Tag'][class*='-danger'] {
+	color: #fff;
 	background: #d94d4d;
 }
 
@@ -10500,6 +10504,7 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 }
 
 [class*='Tag'][class*='-green'] {
+	color: #fff;
 	background: #60cb4a;
 }
 
@@ -10510,6 +10515,7 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 }
 
 [class*='Tag'][class*='-light-blue'] {
+	color: #0d0d0d;
 	background: #74c0cd;
 }
 
@@ -10520,6 +10526,7 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 }
 
 [class*='Tag'][class*='-orange'] {
+	color: #fff;
 	background: #d9831e;
 }
 
@@ -10530,6 +10537,7 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 }
 
 [class*='Tag'][class*='-red'] {
+	color: #fff;
 	background: #d94d4d;
 }
 
@@ -10540,6 +10548,7 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 }
 
 [class*='Tag'][class*='-yellow'] {
+	color: #0d0d0d;
 	background: #fff46c;
 }
 
@@ -10550,6 +10559,7 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 }
 
 [class*='Tag'][class*='-blue'] {
+	color: #fff;
 	background: #3935cd;
 }
 
@@ -10560,6 +10570,7 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 }
 
 [class*='Tag'][class*='-purple'] {
+	color: #0d0d0d;
 	background: #aa80d9;
 }
 
@@ -10570,6 +10581,7 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 }
 
 [class*='Tag'][class*='-brown'] {
+	color: #fff;
 	background: #835611;
 }
 
