@@ -213,8 +213,8 @@ a,
 a:visited {
 	-webkit-transition-timing-function: ease;
 	        transition-timing-function: ease;
-	-webkit-transition-duration: .3s;
-	        transition-duration: .3s;
+	-webkit-transition-duration: .2s;
+	        transition-duration: .2s;
 	-webkit-transition-property: color;
 	transition-property: color;
 	text-decoration: underline;
@@ -9019,8 +9019,8 @@ select {
 	padding: .5rem 1rem;
 	-webkit-transition-timing-function: ease;
 	        transition-timing-function: ease;
-	-webkit-transition-duration: .3s;
-	        transition-duration: .3s;
+	-webkit-transition-duration: .2s;
+	        transition-duration: .2s;
 	-webkit-transition-property: border;
 	transition-property: border;
 	vertical-align: middle;
@@ -9144,8 +9144,8 @@ input[type='radio'] {
 	margin: .5rem 1rem;
 	-webkit-transition-timing-function: ease;
 	        transition-timing-function: ease;
-	-webkit-transition-duration: .3s;
-	        transition-duration: .3s;
+	-webkit-transition-duration: .2s;
+	        transition-duration: .2s;
 	-webkit-transition-property: background, border;
 	transition-property: background, border;
 	vertical-align: middle;
@@ -9271,7 +9271,7 @@ input[type='range'][disabled]::-moz-range-track {
 
 input[type='range'][disabled]::-moz-range-thumb {
 	transition-timing-function: ease;
-	transition-duration: .3s;
+	transition-duration: .2s;
 	-moz-transition-property: background;
 	transition-property: background;
 	border-color: #666;
@@ -9289,8 +9289,8 @@ input[type='range'][disabled]::-webkit-slider-runnable-track {
 input[type='range'][disabled]::-webkit-slider-thumb {
 	-webkit-transition-timing-function: ease;
 	        transition-timing-function: ease;
-	-webkit-transition-duration: .3s;
-	        transition-duration: .3s;
+	-webkit-transition-duration: .2s;
+	        transition-duration: .2s;
 	-webkit-transition-property: background;
 	transition-property: background;
 	border-color: #666;
@@ -9308,7 +9308,7 @@ input[type='range'][disabled]::-ms-fill-upper {
 
 input[type='range'][disabled]::-ms-thumb {
 	transition-timing-function: ease;
-	transition-duration: .3s;
+	transition-duration: .2s;
 	-ms-transition-property: background;
 	transition-property: background;
 	border-color: #666;
@@ -9329,7 +9329,7 @@ input[type='range']::-moz-range-thumb {
 	width: 15px;
 	height: 15px;
 	transition-timing-function: ease;
-	transition-duration: .3s;
+	transition-duration: .2s;
 	-moz-transition-property: background;
 	transition-property: background;
 	border: 2px solid #4d4d4d;
@@ -9354,8 +9354,8 @@ input[type='range']::-webkit-slider-thumb {
 	margin-top: -7px;
 	-webkit-transition-timing-function: ease;
 	        transition-timing-function: ease;
-	-webkit-transition-duration: .3s;
-	        transition-duration: .3s;
+	-webkit-transition-duration: .2s;
+	        transition-duration: .2s;
 	-webkit-transition-property: background;
 	transition-property: background;
 	border: 2px solid #4d4d4d;
@@ -9387,7 +9387,7 @@ input[type='range']::-ms-thumb {
 	height: 15px;
 	margin-top: 0;
 	transition-timing-function: ease;
-	transition-duration: .3s;
+	transition-duration: .2s;
 	-ms-transition-property: background;
 	transition-property: background;
 	border: 2px solid #4d4d4d;
@@ -9405,8 +9405,8 @@ progress {
 	height: 2.5rem;
 	-webkit-transition-timing-function: ease;
 	        transition-timing-function: ease;
-	-webkit-transition-duration: .3s;
-	        transition-duration: .3s;
+	-webkit-transition-duration: .2s;
+	        transition-duration: .2s;
 	-webkit-transition-property: all;
 	transition-property: all;
 	border: none;
@@ -9533,8 +9533,8 @@ input[type='reset']::after,
 	content: '';
 	-webkit-transition-timing-function: ease;
 	        transition-timing-function: ease;
-	-webkit-transition-duration: .3s;
-	        transition-duration: .3s;
+	-webkit-transition-duration: .2s;
+	        transition-duration: .2s;
 	-webkit-transition-property: opacity;
 	transition-property: opacity;
 	opacity: 0;
@@ -10386,8 +10386,8 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 [class*='Button'][class*='--inversed'] {
 	-webkit-transition-timing-function: ease;
 	        transition-timing-function: ease;
-	-webkit-transition-duration: .3s;
-	        transition-duration: .3s;
+	-webkit-transition-duration: .2s;
+	        transition-duration: .2s;
 	-webkit-transition-property: color;
 	transition-property: color;
 	color: #333;
@@ -10774,8 +10774,8 @@ a[class*='Card'] {
 	cursor: pointer;
 	-webkit-transition-timing-function: ease;
 	        transition-timing-function: ease;
-	-webkit-transition-duration: .3s;
-	        transition-duration: .3s;
+	-webkit-transition-duration: .2s;
+	        transition-duration: .2s;
 	-webkit-transition-property: box-shadow;
 	transition-property: box-shadow;
 	text-decoration: none;
@@ -10968,8 +10968,8 @@ a[class*='Card']:focus {
 [class*='Afb'] table[class*='--hover'] tbody tr {
 	-webkit-transition-timing-function: ease;
 	        transition-timing-function: ease;
-	-webkit-transition-duration: .3s;
-	        transition-duration: .3s;
+	-webkit-transition-duration: .2s;
+	        transition-duration: .2s;
 	-webkit-transition-property: background;
 	transition-property: background;
 }
