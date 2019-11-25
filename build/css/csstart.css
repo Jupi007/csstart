@@ -9253,6 +9253,7 @@ input[type='radio']:indeterminate::after {
 
 input[type='range'] {
 	cursor: pointer;
+	border: 0;
 	-webkit-appearance: none;
 	   -moz-appearance: none;
 	        appearance: none;

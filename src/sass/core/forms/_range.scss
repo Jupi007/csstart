@@ -1,6 +1,7 @@
 input[type="range"] {
 	cursor: pointer;
 	appearance: none;
+    border: 0;
 
     @include focus {
         outline: none;
@@ -21,7 +22,7 @@ input[type="range"] {
 		&::-webkit-slider-runnable-track { background: $range-track-disabled-color; }
 		&::-webkit-slider-thumb {
 			border-color: $range-track-disabled-color;
-            
+
             @include transition("background");
 			@include hover-focus { background: $range-thumb-color; }
 		}
