@@ -9,6 +9,8 @@ select {
 	background-color: $input-background;
 	outline: none;
     vertical-align: middle;
+    vertical-align: -webkit-baseline-middle;
+    vertical-align: -moz-middle-with-baseline;
     margin-left: spacer('medium');
     margin-bottom: spacer('medium');
     filter: none;

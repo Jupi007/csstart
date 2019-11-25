@@ -9024,6 +9024,8 @@ select {
 	-webkit-transition-property: border;
 	transition-property: border;
 	vertical-align: middle;
+	vertical-align: -webkit-baseline-middle;
+	vertical-align: -moz-middle-with-baseline;
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	outline: none;
