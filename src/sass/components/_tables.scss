@@ -1,3 +1,5 @@
+@include option("tables") {
+
 [class*="Table"],  [class*="Afb"] table, {
 	width: 100%;
 	max-width: 100%;
@@ -107,4 +109,6 @@
 		color: $captions-color;
 		font-style: $captions-font-style;
 	}
+}
+
 }

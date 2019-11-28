@@ -22,6 +22,8 @@
     }
 }
 
+@include option("forms") {
+
 input[type="range"] {
 	cursor: pointer;
 	appearance: none;
@@ -79,4 +81,6 @@ input[type="range"] {
             }
         }
 	}
+}
+
 }

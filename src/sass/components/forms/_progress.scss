@@ -1,3 +1,5 @@
+@include option("forms") {
+
 meter, progress {
 	background: $progress-background;
 	border: none;
@@ -66,3 +68,5 @@ meter::-webkit-meter-suboptimum-value { background: $meter-sub-optimum-backgroun
 
 :-moz-meter-sub-sub-optimum::-moz-meter-bar { background: $meter-sub-sub-optimum-background; }
 meter::-webkit-meter-even-less-good-value { background: $meter-sub-sub-optimum-background; }
+
+}

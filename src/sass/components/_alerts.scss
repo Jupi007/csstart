@@ -1,3 +1,5 @@
+@include option("alerts") {
+
 [class*="Alert"] {
 	padding: $alerts-padding;
 	border: $alerts-border-width solid $components-background-base;
@@ -18,4 +20,6 @@
 	#{$headings} {
 		font-size: $alerts-title-font-size;
 	}
+}
+
 }

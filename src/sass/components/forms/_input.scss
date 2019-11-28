@@ -1,3 +1,5 @@
+@include option("forms") {
+
 input,
 textarea,
 select {
@@ -57,4 +59,6 @@ textarea {
 	min-height: calc(#{$font-size-base} + #{$input-padding-vertical * 2});
     transition-property: border;
     vertical-align: initial;
+}
+
 }

@@ -7,26 +7,16 @@ $options: (
 
     "smooth-scroll": true,
 
-	"components-variants": true,
+    "forms": true,
 
-	"buttons-sizes": true,
-	"buttons-inversed": true,
-
-	"tags-sizes": true,
-	"tags-inversed": true,
-
-	"cards-group": true,
-	"cards-overlay": true,
-
-	"blockquote-quote": true,
-
-	"figures-light": true,
-
-	"media-responsive": true,
-
-	"table-zebra": true,
-	"table-hover": true,
-	"table-dark": true,
+    "alerts": true,
+	"blockquotes": true,
+	"buttons": true,
+	"cards": true,
+	"figures": true,
+	"media": true,
+	"tables": true,
+	"tags": true,
 );
 
 $transition-duration-base:  .2s;

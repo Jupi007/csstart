@@ -1,3 +1,5 @@
+@include option("figures") {
+
 [class*="Figure"],  [class*="Afb"] figure, {
 	display: flex;
 	flex-direction: column;
@@ -26,4 +28,6 @@
 			color: $figures-light-figcaption-color;
 		}
 	}
+}
+
 }

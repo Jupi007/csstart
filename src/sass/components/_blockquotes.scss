@@ -1,3 +1,5 @@
+@include option("blockquotes") {
+
 [class*="Blockquote"],  [class*="Afb"] blockquote,{
 	padding: $blockquotes-padding;
 	background-color: $blockquotes-background;
@@ -31,4 +33,6 @@
 			content: "- ";
 		}
 	}
+}
+
 }

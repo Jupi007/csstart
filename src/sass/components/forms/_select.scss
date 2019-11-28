@@ -1,3 +1,5 @@
+@include option("forms") {
+
 select {
 	cursor: pointer;
 
@@ -33,4 +35,6 @@ select:not([multiple]), input[type="date"] {
     background-position: right 1rem center;
     background-repeat: no-repeat;
     background-size: 1.2rem;
+}
+
 }

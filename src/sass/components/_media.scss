@@ -1,3 +1,5 @@
+@include option("media") {
+
 [class*="Media"] {
 	display: flex;
 	flex-direction: row;
@@ -44,4 +46,6 @@
 	&[class*="-figure--bottomed"] {
 		align-self: flex-end;
 	}
+}
+
 }
