@@ -8,6 +8,10 @@ select {
         scrollbar-width: initial;
         scrollbar-color: initial;
 
+        @include active {
+            color: $color-base;
+        }
+
 		option{
 			padding: $select-option-padding;
 			border-top: $input-border-width solid $input-border-color;

@@ -9115,6 +9115,10 @@ select[multiple] {
 	scrollbar-color: initial;
 }
 
+select[multiple]:active {
+	color: #0d0d0d;
+}
+
 select[multiple] option {
 	padding: .75rem 1rem;
 	border-top: 1px solid #ccc;
