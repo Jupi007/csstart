@@ -9532,7 +9532,6 @@ input[type='reset'],
 	color: #fff;
 	border: none;
 	border-radius: 3px;
-	outline: 0;
 	background: #333;
 }
 
@@ -9571,6 +9570,7 @@ input[type='reset']:focus,
 [class*='Button']:focus {
 	text-decoration: none;
 	color: #fff;
+	outline: 0;
 }
 
 button:hover::after,
@@ -10414,6 +10414,10 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 
 [class*='Button'][class*='--inversed']::after {
 	background-color: #333;
+}
+
+[class*='Button'][class*='--inversed']:active::after {
+	opacity: .8;
 }
 
 [class*='Button'][class*='--inversed']:hover,
