@@ -24,6 +24,10 @@ $mark-background: color("yellow");
 $table-cell-padding: spacer("small");
 $table-caption-color: $color-base;
 
+// -----
+// Forms
+// -----
+
 $label-margin-bottom: spacer("small");
 
 $input-border-width: 1px;
@@ -63,6 +67,10 @@ $meter-optimum-background: color("danger");
 $meter-sub-optimum-background: color("warning");
 $meter-sub-sub-optimum-background: color("success");
 
+// -------
+// Buttons
+// -------
+
 $buttons-padding: spacer("tiny-plus") spacer("medium");
 $buttons-font-size: .9em;
 $buttons-border-radius: $border-radius-base;
@@ -81,6 +89,10 @@ $buttons-small-font-size: .8em;
 $buttons-extra-small-padding: spacer("tiny") spacer("tiny-plus");
 $buttons-extra-small-font-size: .7em;
 
+// ----
+// Tags
+// ----
+
 $tags-border-radius: $border-radius-base;
 $tags-padding: spacer("tiny") spacer("tiny-plus");
 $tags-font-size: .8em;
@@ -91,6 +103,10 @@ $tags-large-font-size: .85em;
 $tags-extra-large-padding: spacer("small") spacer("small-plus");
 $tags-extra-large-font-size: .9em;
 
+// ------
+// Alerts
+// ------
+
 $alerts-padding: spacer("medium");
 $alerts-border-width: 1px;
 $alerts-border-left-width: 5px;
@@ -99,6 +115,10 @@ $alerts-margin-bottom: $paragraph-margin-bottom;
 $alerts-title-font-size: 1.5em;
 $alerts-background-transparency: 0.9;
 $buttons-color-darken: 20%;
+
+// -----
+// Cards
+// -----
 
 $cards-border-width: 1px;
 $cards-border-color: grey(50);
@@ -109,10 +129,18 @@ $cards-subtitle-color: grey(60);
 $cards-body-padding: spacer("medium");
 $cards-hover-box-shadow-width: 2px;
 
+// ----
+// Flex
+// ----
+
 $flex-direction-base: row;
 $flex-wrap-base: nowrap;
 $flex-justify-content-base: flex-start;
 $flex-align-items-base: stretch;
+
+// ------
+// Tables
+// ------
 
 $tables-border-radius: $border-radius-base;
 $tables-border-color: grey(85);
@@ -136,6 +164,10 @@ $tables-dark-cells-hover-background: grey(85);
 $captions-color: grey(70);
 $captions-font-style: italic;
 
+// -----------
+// Blockquotes
+// -----------
+
 $blockquotes-padding: spacer("x-large");
 $blockquotes-margin-top: $paragraph-margin-bottom*2;
 $blockquotes-margin-bottom: $paragraph-margin-bottom*2;
@@ -144,6 +176,10 @@ $blockquotes-border-radius: 10px;
 $blockquotes-quote-color: grey(30);
 $blockquotes-cite-color: grey(70);
 $blockquotes-cite-text-align: right;
+
+// -------
+// Figures
+// -------
 
 $figures-background: grey(80);
 $figures-border-radius: $border-radius-base;
