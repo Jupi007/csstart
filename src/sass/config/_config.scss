@@ -30,30 +30,9 @@ $breakpoints: (
 	'extraLarge' : 1500px,
 );
 
-$font-family-base: 'ubuntu';
-$font-family-monospace: 'ubuntu-mono';
-$font-size-base: 1.6rem;
-$font-size-mobile-base: 1.4rem;
-$font-weight-base: 400;
-$line-height-base: 1.5;
-$color-base: grey(95);
-$color-base-light: color('white');
-$text-align-base: left;
 $border-radius-base: 3px;
 
 $body-bg: color('white');
-
-$heading-font-size-base: 1em;
-
-$headings-font-sizes: (
-	h1: $heading-font-size-base + 1.4,
-	h2: $heading-font-size-base + 1.0,
-	h3: $heading-font-size-base + 0.8,
-	h4: $heading-font-size-base + 0.4,
-	h5: $heading-font-size-base + 0.2,
-	h6: $heading-font-size-base + 0.1,
-);
-$headings-font-weight: font-weight('normal');
 
 $link-color: color('blue');
 $link-decoration: underline;

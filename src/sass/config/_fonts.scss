@@ -1,3 +1,53 @@
+// -------------
+// Font families
+// -------------
+
+$font-family-base: 'ubuntu';
+$font-family-monospace: 'ubuntu-mono';
+$headings-font-family: 'ubuntu';
+
+// ------------
+// Line heights
+// ------------
+
+$line-height-base: 1.5;
+$headings-line-height: 1.5;
+
+// ----------
+// Text color
+// ----------
+
+$color-base: grey(95);
+$color-base-light: color('white');
+
+// ----------
+// Text align
+// ----------
+
+$text-align-base: left;
+$headings-text-align: left;
+
+// ----------
+// Font sizes
+// ----------
+
+$font-size-base: 1.6rem;
+$font-size-mobile-base: 1.4rem;
+$headings-font-size-base: 1em;
+
+$headings-font-sizes: (
+	h1: $headings-font-size-base + 1.4,
+	h2: $headings-font-size-base + 1.0,
+	h3: $headings-font-size-base + 0.8,
+	h4: $headings-font-size-base + 0.4,
+	h5: $headings-font-size-base + 0.2,
+	h6: $headings-font-size-base + 0.1,
+);
+
+// ------------
+// Font weights
+// ------------
+
 $font-weights: (
 	'lighter': lighter,
 	'light': 300,
@@ -5,3 +55,6 @@ $font-weights: (
 	'bold': 700,
 	'bolder': bolder,
 );
+
+$font-weight-base: font-weight('normal');
+$headings-font-weight: font-weight('normal');

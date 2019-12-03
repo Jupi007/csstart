@@ -83,6 +83,9 @@ hr {
 	margin-top: 0;
 	margin-bottom: $headings-margin-bottom;
     font-weight: $headings-font-weight;
+    font-family: $headings-font-family;
+    line-height: $headings-line-height;
+    text-align: $headings-text-align;
 }
 
 @each $h, $font-size in $headings-font-sizes {
