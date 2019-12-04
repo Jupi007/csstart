@@ -9050,6 +9050,12 @@ select:focus {
 	border-color: gray;
 }
 
+input:invalid:not(:focus),
+textarea:invalid:not(:focus),
+select:invalid:not(:focus) {
+	border-color: #d94d4d;
+}
+
 input[disabled],
 textarea[disabled],
 select[disabled] {
