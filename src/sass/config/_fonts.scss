@@ -2,9 +2,9 @@
 // Font families
 // -------------
 
-$font-family-base: 'ubuntu';
-$font-family-monospace: 'ubuntu-mono';
-$headings-font-family: 'ubuntu';
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", 'ubuntu-mono', monospace;
+$headings-font-family: $font-family-base;
 
 // ------------
 // Line heights
