@@ -4,22 +4,6 @@
 	}
 }
 
-@mixin hover {
-	&:hover { @content; }
-}
-
-@mixin focus {
-	&:focus { @content; }
-}
-
-@mixin active {
-	&:active { @content; }
-}
-
-@mixin hover-focus {
-	&:hover, &:focus { @content; }
-}
-
 @mixin transition($property, $duration: $transition-duration-base, $timing-function: $transition-timing-function-base, $delay: 0) {
 	@include option("transitions") {
         transition-property: #{$property};

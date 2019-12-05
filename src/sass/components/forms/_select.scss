@@ -10,7 +10,7 @@ select {
         scrollbar-width: initial;
         scrollbar-color: initial;
 
-        @include active {
+        &:active {
             color: $color-base;
         }
 

@@ -13,7 +13,7 @@
 	vertical-align: middle;
     text-decoration: none;
 
-    @include hover() {
+    &:hover() {
         text-decoration: none;
         color: $components-color-base;
     }

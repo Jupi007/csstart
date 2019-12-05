@@ -78,7 +78,7 @@
 
 		tbody tr {
             @include transition("background");
-            @include hover {
+            &:hover {
                 background: $tables-cells-hover-background;
             }
 		}
@@ -99,7 +99,7 @@
 		}
 
 		&[class*="--hover"] tbody tr {
-            @include hover {
+            &:hover {
                 background: $tables-dark-cells-hover-background;
             }
         }

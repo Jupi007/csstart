@@ -10473,7 +10473,7 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 	background: #333;
 }
 
-[class*='Tag']:hover {
+[class*='Tag']:hover() {
 	text-decoration: none;
 	color: #fff;
 }

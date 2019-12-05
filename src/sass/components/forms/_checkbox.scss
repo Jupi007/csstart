@@ -10,7 +10,7 @@ input[type="radio"] {
 
     @include transition("background, border");
 
-	@include active {
+	&:active {
 		background-color: $checkbox-active-background;
 	}
 
@@ -31,7 +31,7 @@ input[type="radio"] {
 		border-color: $checkbox-disabled-border-color;
 		background-color: $checkbox-disabled-background;
 
-		@include hover-focus { border-color: $checkbox-disabled-border-color; }
+		&:hover, &:focus { border-color: $checkbox-disabled-border-color; }
 
         &::before, &::after {
     		background: $checkbox-disabled-background;

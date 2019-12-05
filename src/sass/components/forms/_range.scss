@@ -29,7 +29,7 @@ input[type="range"] {
 	appearance: none;
     border: 0;
 
-    @include focus {
+    &:focus {
         outline: none;
     }
 
@@ -48,7 +48,7 @@ input[type="range"] {
 		background: $range-thumb-color;
 
         @include transition("background");
-		@include hover-focus { background: darken( $range-thumb-color , 10% ); }
+		&:hover, &:focus { background: darken( $range-thumb-color , 10% ); }
     }
 
 	&::-webkit-slider-thumb {
@@ -76,7 +76,7 @@ input[type="range"] {
             border-color: $range-track-disabled-color;
 
             @include transition("background");
-			@include hover-focus {
+			&:hover, &:focus {
                 background: $range-thumb-color;
             }
         }

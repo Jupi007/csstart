@@ -18,7 +18,7 @@ select {
     filter: none;
 
     @include transition("border");
-	@include hover-focus { border-color: $input-hover-focus-border-color; }
+	&:hover, &:focus { border-color: $input-hover-focus-border-color; }
 
     &:invalid:not(:focus) {
         border-color: $input-border-color-invalid;
@@ -29,7 +29,7 @@ select {
 		border-color: $input-border-color;
 		background: $input-disabled-background;
 
-		@include hover-focus { border-color: $input-border-color; }
+		&:hover, &:focus { border-color: $input-border-color; }
 	}
 }
 

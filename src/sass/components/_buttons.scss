@@ -34,7 +34,7 @@ input[type="reset"],
         @include transition("opacity");
     }
 
-	@include hover-focus {
+	&:hover, &:focus {
         color: $components-color-base;
         text-decoration: none;
     	outline: 0;
@@ -44,7 +44,7 @@ input[type="reset"],
         }
     }
 
-	@include active {
+	&:active {
         &::after {
             opacity: 0;
         }
@@ -59,7 +59,7 @@ input[type="reset"],
                 background-color: darken($bg, $buttons-hover-darken);
             }
 
-            @include hover-focus {
+            &:hover, &:focus {
                 color: contrast($bg, $color-base, $color-base-light);
                 text-decoration: none;
             }
@@ -73,7 +73,7 @@ input[type="reset"],
                     background-color: $bg;
                 }
 
-				@include hover-focus {
+				&:hover, &:focus {
 					color: contrast($bg, $color-base, $color-base-light);
 				}
 			}
@@ -92,13 +92,13 @@ input[type="reset"],
             background-color: $components-background-base;
         }
 
-        @include active {
+        &:active {
             &::after {
                 opacity: .8;
             }
         }
 
-		@include hover-focus {
+		&:hover, &:focus {
 			color: $components-color-base;
 		}
 	}
