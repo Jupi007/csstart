@@ -43,7 +43,6 @@ gulp.task('watch',  function() {
 	    }
 	});
     gulp.watch('src/sass/**/*.scss', gulp.series('default')).on('change', browserSync.reload);
-	gulp.watch("*.html").on('change', browserSync.reload);
 });
 
 gulp.task('default', gulp.series('css', 'css-min'));
