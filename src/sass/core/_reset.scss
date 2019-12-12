@@ -74,6 +74,7 @@ body {
 hr {
 	box-sizing: content-box;
 	height: 0;
+    width: 100%;
 	overflow: visible;
 	margin-top: $separator-margins;
 	margin-bottom: $separator-margins;
