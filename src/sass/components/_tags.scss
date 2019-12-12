@@ -1,6 +1,6 @@
 @include option("tags") {
 
-[class*="Tag"] {
+[class*="Tag"], a[class*="Tag"] {
     outline: 0;
 	display: inline-block;
 	background: $components-background-base;
@@ -45,6 +45,88 @@
 	&[class*="--xl"] {
 		padding: $tags-extra-large-padding;
 		font-size: $tags-extra-large-font-size;
+	}
+}
+
+a[class*="Tag"] {
+    position: relative;
+    z-index: 1;
+    
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: darken($components-background-base, $buttons-hover-darken);
+    	border-radius: $buttons-border-radius;
+        opacity: 0;
+        z-index: -1;
+
+        @include transition("opacity");
+    }
+
+	&:hover, &:focus {
+        color: $components-color-base;
+        text-decoration: none;
+    	outline: 0;
+
+        &::after {
+            opacity: 1;
+        }
+    }
+
+	&:active {
+        &::after {
+            opacity: 0;
+        }
+    }
+
+    &[class*="--inversed"] {
+		&::after {
+            background-color: $components-background-base;
+        }
+
+        &:active {
+            &::after {
+                opacity: .8;
+            }
+        }
+
+		&:hover, &:focus {
+			color: $components-color-base;
+		}
+	}
+
+    @each $component, $bg, $color in $components {
+		&[class*="-#{$component}"] {
+			background: $bg;
+			color: contrast($bg, $color-base, $color-base-light);
+
+            &::after {
+                background-color: darken($bg, $buttons-hover-darken);
+            }
+
+            &:hover, &:focus {
+                color: contrast($bg, $color-base, $color-base-light);
+                text-decoration: none;
+            }
+
+			&[class*="--inversed"] {
+				background-color: transparent;
+				color: $bg;
+				box-shadow: 0 0 0 $buttons-inversed-border-width $bg inset;
+
+                &::after {
+                    background-color: $bg;
+                }
+
+				&:hover, &:focus {
+					color: contrast($bg, $color-base, $color-base-light);
+				}
+			}
+		}
 	}
 }
 
