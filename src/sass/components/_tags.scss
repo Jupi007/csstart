@@ -52,6 +52,7 @@ a[class*="Tag"] {
     position: relative;
     z-index: 1;
     text-decoration: none;
+	color: $components-color-base;
 
     &::after {
         content: "";

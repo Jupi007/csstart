@@ -10673,6 +10673,7 @@ a[class*='Tag'] {
 	position: relative;
 	z-index: 1;
 	text-decoration: none;
+	color: #fff;
 }
 
 a[class*='Tag']::after {
