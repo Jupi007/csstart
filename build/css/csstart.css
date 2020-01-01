@@ -10672,6 +10672,7 @@ a[class*='Tag'][class*='--xl'] {
 a[class*='Tag'] {
 	position: relative;
 	z-index: 1;
+	text-decoration: none;
 }
 
 a[class*='Tag']::after {
