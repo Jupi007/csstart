@@ -18,6 +18,7 @@
 		"gulp-postcss": "8.0.*",
 		"gulp-rename": "2.0.*",
 		"gulp-sass": "4.0.*",
-		"gulp-sourcemaps": "2.6.*"
+		"gulp-sourcemaps": "2.6.*",
+		"node-uuid": ">=1.4.4"
 	}
 }
