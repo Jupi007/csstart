@@ -8775,10 +8775,6 @@ img.fr {
 		content: '';
 	}
 
-	::-webkit-input-placeholder {
-		color: transparent;
-	}
-
 	::-moz-placeholder {
 		color: transparent;
 	}
