@@ -11,7 +11,7 @@
 		--components-color: #f2f2f2;
 		--tables-border-color: #262626;
 		--tables-cells-border-color: gray;
-		--tables-background: transparent;
+		--tables-background: #fff;
 		--tables-headings-cells-background: #e6e6e6;
 		--tables-zebra-headings-cells-background: #ccc;
 		--tables-zebra-cells-background: #f2f2f2;
@@ -11422,9 +11422,30 @@ a[class*='Card']:focus {
 	background: var(--tables-cells-hover-background);
 }
 
+[class*='Table'][class*='--light'],
+[class*='Afb'] table[class*='--light'] {
+	color: #0d0d0d;
+	background: #fff;
+}
+
+[class*='Table'][class*='--light'] th,
+[class*='Afb'] table[class*='--light'] th {
+	background: #e6e6e6;
+}
+
+[class*='Table'][class*='--light'][class*='--zebra'] tr:nth-child(even),
+[class*='Afb'] table[class*='--light'][class*='--zebra'] tr:nth-child(even) {
+	background: #f2f2f2;
+}
+
+[class*='Table'][class*='--light'][class*='--hover'] tbody tr:hover,
+[class*='Afb'] table[class*='--light'][class*='--hover'] tbody tr:hover {
+	background: #e6e6e6;
+}
+
 [class*='Table'][class*='--dark'],
 [class*='Afb'] table[class*='--dark'] {
-	color: #fff;
+	color: #f2f2f2;
 	background: #333;
 }
 

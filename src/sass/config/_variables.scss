@@ -142,7 +142,7 @@ $flex-align-items-base: stretch;
 // Tables
 // ------
 
-$tables-background: transparent;
+$tables-background: $body-bg;
 $tables-border-radius: $border-radius-base;
 $tables-border-color: grey(85);
 $tables-cells-border-color: grey(50);
@@ -159,7 +159,6 @@ $tables-cells-hover-background: grey(10);
 $tables-dark-border-color: grey(70);
 $tables-dark-cells-border-color: grey(50);
 $tables-dark-background: grey(80);
-$tables-dark-color: color("white");
 $tables-dark-headings-cells-background: grey(90);
 $tables-dark-zebra-headings-cells-background: grey(90);
 $tables-dark-zebra-cells-background: grey(75);
