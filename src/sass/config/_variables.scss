@@ -2,25 +2,6 @@
 //-*-*-*-*-*-*-*-*-*-*-*-*Core variables-*-*-*-*-*-*-*-*-*-*-*-*-*
 //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --body-bg-color: #{$body-bg};
-        --color: #{$color-base};
-        --components-background: #{$components-background-base};
-        --components-background-hover: #{darken($components-background-base, $components-hover-base)};
-        --components-color: #{$components-color-base};
-    }
-}
-@media (prefers-color-scheme: dark) {
-    :root {
-        --body-bg-color: #{$body-bg-dark};
-        --color: #{$color-dark};
-        --components-background: #{$components-background-dark};
-        --components-background-hover: #{darken($components-background-dark, $components-hover-dark)};
-        --components-color: #{$components-color-dark};
-    }
-}
-
 $headings: "h1, h2, h3, h4, h5, h6";
 
 $headings-margin-bottom : spacer($margin-base, .5);
@@ -210,3 +191,26 @@ $figures-figcaption-color: grey(15);
 $figures-light-background: grey(10);
 $figures-light-figcaption-color: grey(75);
 $figures-max-height-image: 60vh;
+
+// ---------------------------------------------------
+// CSS Variables (for dynamic light and dark variants)
+// ---------------------------------------------------
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --body-bg-color: #{$body-bg};
+        --color: #{$color-base};
+        --components-background: #{$components-background-base};
+        --components-background-hover: #{darken($components-background-base, $components-hover-base)};
+        --components-color: #{$components-color-base};
+    }
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --body-bg-color: #{$body-bg-dark};
+        --color: #{$color-dark};
+        --components-background: #{$components-background-dark};
+        --components-background-hover: #{darken($components-background-dark, $components-hover-dark)};
+        --components-color: #{$components-color-dark};
+    }
+}
