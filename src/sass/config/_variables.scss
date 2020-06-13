@@ -142,6 +142,7 @@ $flex-align-items-base: stretch;
 // Tables
 // ------
 
+$tables-background: transparent;
 $tables-border-radius: $border-radius-base;
 $tables-border-color: grey(85);
 $tables-cells-border-color: grey(50);
@@ -155,9 +156,12 @@ $tables-zebra-cells-background: grey(5);
 $tables-zebra-headings-cells-background: grey(20);
 $tables-cells-hover-background: grey(10);
 
+$tables-dark-border-color: grey(70);
+$tables-dark-cells-border-color: grey(50);
 $tables-dark-background: grey(80);
 $tables-dark-color: color("white");
 $tables-dark-headings-cells-background: grey(90);
+$tables-dark-zebra-headings-cells-background: grey(90);
 $tables-dark-zebra-cells-background: grey(75);
 $tables-dark-cells-hover-background: grey(85);
 
@@ -203,6 +207,14 @@ $figures-max-height-image: 60vh;
         --components-background: #{$components-background-base};
         --components-background-hover: #{darken($components-background-base, $components-hover-base)};
         --components-color: #{$components-color-base};
+
+        --tables-border-color: #{$tables-border-color};
+        --tables-cells-border-color: #{$tables-cells-border-color};
+        --tables-background: #{$tables-background};
+        --tables-headings-cells-background: #{$tables-headings-cells-background};
+        --tables-zebra-headings-cells-background: #{$tables-zebra-headings-cells-background};
+        --tables-zebra-cells-background: #{$tables-zebra-cells-background};
+        --tables-cells-hover-background: #{$tables-cells-hover-background};
     }
 }
 @media (prefers-color-scheme: dark) {
@@ -212,5 +224,13 @@ $figures-max-height-image: 60vh;
         --components-background: #{$components-background-dark};
         --components-background-hover: #{darken($components-background-dark, $components-hover-dark)};
         --components-color: #{$components-color-dark};
+
+        --tables-border-color: #{$tables-dark-border-color};
+        --tables-cells-border-color: #{$tables-dark-cells-border-color};
+        --tables-background: #{$tables-dark-background};
+        --tables-headings-cells-background: #{$tables-dark-headings-cells-background};
+        --tables-zebra-headings-cells-background: #{$tables-dark-zebra-headings-cells-background};
+        --tables-zebra-cells-background: #{$tables-dark-zebra-cells-background};
+        --tables-cells-hover-background: #{$tables-dark-cells-hover-background};
     }
 }

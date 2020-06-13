@@ -5,17 +5,18 @@
 	max-width: 100%;
 	table-layout: auto;
 	border-spacing: 0px;
-	border: $tables-border-width solid $tables-border-color;
+	border: $tables-border-width solid var(--tables-border-color);
 	border-radius: $tables-border-radius;
     margin-top: $tables-margin-top;
     margin-bottom: $tables-margin-bottom;
+    background: var(--tables-background);
 
 	@if $tables-border-radius > 0 {
 		border-collapse: separate;
 
 		td, th {
-			border-right: $tables-border-width solid $tables-cells-border-color;
-			border-bottom: $tables-border-width solid $tables-cells-border-color;
+			border-right: $tables-border-width solid var(--tables-cells-border-color);
+			border-bottom: $tables-border-width solid var(--tables-cells-border-color);
 
 			&:last-child {
 				border-right: none;
@@ -30,7 +31,7 @@
 
 		tfoot {
 			td, th {
-				border-top: $tables-border-width solid $tables-cells-border-color;
+				border-top: $tables-border-width solid var(--tables-cells-border-color);
 				border-bottom: none;
 			}
 		}
@@ -39,7 +40,7 @@
 		border-collapse: collapse;
 
 		td, th {
-			border: $tables-border-width solid $tables-cells-border-color;
+			border: $tables-border-width solid var(--tables-cells-border-color);
 		}
 	}
 
@@ -48,7 +49,7 @@
 	}
 
 	th {
-		background: $tables-headings-cells-background;
+		background: var(--tables-headings-cells-background);
 	}
 
 	&[class*="--fixed"] {
@@ -63,23 +64,23 @@
 
 	&[class*="--zebra"] {
 		th {
-			background: $tables-zebra-headings-cells-background;
+			background: var(--tables-zebra-headings-cells-background);
 		}
 
 		tr:nth-child(even) {
-			background: $tables-zebra-cells-background;
+			background: var(--tables-zebra-cells-background);
 		}
 	}
 
 	&[class*="--hover"] {
 		th {
-			background: $tables-zebra-headings-cells-background;
+			background: var(--tables-headings-cells-background);
 		}
 
 		tbody tr {
             @include transition("background");
             &:hover {
-                background: $tables-cells-hover-background;
+                background: var(--tables-cells-hover-background);
             }
 		}
 	}

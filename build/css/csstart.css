@@ -9,6 +9,13 @@
 		--components-background: #333;
 		--components-background-hover: #1a1a1a;
 		--components-color: #f2f2f2;
+		--tables-border-color: #262626;
+		--tables-cells-border-color: gray;
+		--tables-background: transparent;
+		--tables-headings-cells-background: #e6e6e6;
+		--tables-zebra-headings-cells-background: #ccc;
+		--tables-zebra-cells-background: #f2f2f2;
+		--tables-cells-hover-background: #e6e6e6;
 	}
 }
 
@@ -19,6 +26,13 @@
 		--components-background: #fff;
 		--components-background-hover: #e6e6e6;
 		--components-color: #0d0d0d;
+		--tables-border-color: #4d4d4d;
+		--tables-cells-border-color: gray;
+		--tables-background: #333;
+		--tables-headings-cells-background: #1a1a1a;
+		--tables-zebra-headings-cells-background: #1a1a1a;
+		--tables-zebra-cells-background: #404040;
+		--tables-cells-hover-background: #262626;
 	}
 }
 
@@ -11322,16 +11336,17 @@ a[class*='Card']:focus {
 	table-layout: auto;
 	border-spacing: 0;
 	border-collapse: separate;
-	border: 1px solid #262626;
+	border: 1px solid var(--tables-border-color);
 	border-radius: 3px;
+	background: var(--tables-background);
 }
 
 [class*='Table'] td,
 [class*='Table'] th,
 [class*='Afb'] table td,
 [class*='Afb'] table th {
-	border-right: 1px solid gray;
-	border-bottom: 1px solid gray;
+	border-right: 1px solid var(--tables-cells-border-color);
+	border-bottom: 1px solid var(--tables-cells-border-color);
 }
 
 [class*='Table'] td:last-child,
@@ -11352,7 +11367,7 @@ a[class*='Card']:focus {
 [class*='Table'] tfoot th,
 [class*='Afb'] table tfoot td,
 [class*='Afb'] table tfoot th {
-	border-top: 1px solid gray;
+	border-top: 1px solid var(--tables-cells-border-color);
 	border-bottom: none;
 }
 
@@ -11365,7 +11380,7 @@ a[class*='Card']:focus {
 
 [class*='Table'] th,
 [class*='Afb'] table th {
-	background: #e6e6e6;
+	background: var(--tables-headings-cells-background);
 }
 
 [class*='Table'][class*='--fixed'],
@@ -11382,17 +11397,17 @@ a[class*='Card']:focus {
 
 [class*='Table'][class*='--zebra'] th,
 [class*='Afb'] table[class*='--zebra'] th {
-	background: #ccc;
+	background: var(--tables-zebra-headings-cells-background);
 }
 
 [class*='Table'][class*='--zebra'] tr:nth-child(even),
 [class*='Afb'] table[class*='--zebra'] tr:nth-child(even) {
-	background: #f2f2f2;
+	background: var(--tables-zebra-cells-background);
 }
 
 [class*='Table'][class*='--hover'] th,
 [class*='Afb'] table[class*='--hover'] th {
-	background: #ccc;
+	background: var(--tables-headings-cells-background);
 }
 
 [class*='Table'][class*='--hover'] tbody tr,
@@ -11404,7 +11419,7 @@ a[class*='Card']:focus {
 
 [class*='Table'][class*='--hover'] tbody tr:hover,
 [class*='Afb'] table[class*='--hover'] tbody tr:hover {
-	background: #e6e6e6;
+	background: var(--tables-cells-hover-background);
 }
 
 [class*='Table'][class*='--dark'],
