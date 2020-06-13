@@ -191,6 +191,7 @@ $blockquotes-padding: spacer("x-large");
 $blockquotes-margin-top: calc(#{$paragraph-margin-bottom} * 2);
 $blockquotes-margin-bottom: calc(#{$paragraph-margin-bottom} * 2);
 $blockquotes-background: grey(10);
+$blockquotes-color: $color-base;
 $blockquotes-border-radius: 10px;
 $blockquotes-quote-color: grey(30);
 $blockquotes-cite-color: grey(70);

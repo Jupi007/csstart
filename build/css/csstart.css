@@ -11441,6 +11441,7 @@ a[class*='Card']:focus {
 	margin-bottom: calc(calc(var(--spacer-base) * 1.5) * 2);
 	padding: calc(var(--spacer-base) * 3);
 	padding-left: 80px;
+	color: #0d0d0d;
 	border-radius: 10px;
 	background-color: #e6e6e6;
 }

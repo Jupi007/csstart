@@ -3,6 +3,7 @@
 [class*="Blockquote"],  [class*="Afb"] blockquote,{
 	padding: $blockquotes-padding;
 	background-color: $blockquotes-background;
+    color: $blockquotes-color;
 	border-radius: $blockquotes-border-radius;
 	position: relative;
 	padding-left: 80px;
