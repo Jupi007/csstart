@@ -9,6 +9,9 @@
 		--components-background: #333;
 		--components-background-hover: #1a1a1a;
 		--components-color: #f2f2f2;
+		--components-background-inversed: #fff;
+		--components-background-hover-inversed: #e6e6e6;
+		--components-color-inversed: #0d0d0d;
 		--tables-border-color: #262626;
 		--tables-cells-border-color: gray;
 		--tables-background: #fff;
@@ -26,6 +29,9 @@
 		--components-background: #fff;
 		--components-background-hover: #e6e6e6;
 		--components-color: #0d0d0d;
+		--components-background-inversed: #333;
+		--components-background-hover-inversed: #1a1a1a;
+		--components-color-inversed: #f2f2f2;
 		--tables-border-color: #4d4d4d;
 		--tables-cells-border-color: gray;
 		--tables-background: #333;
@@ -9501,34 +9507,34 @@ input[type='reset'][class*='-success']:focus,
 	color: #0d0d0d;
 }
 
-button[class*='-success'][class*='--inversed'],
-input[type='button'][class*='-success'][class*='--inversed'],
-input[type='submit'][class*='-success'][class*='--inversed'],
-input[type='reset'][class*='-success'][class*='--inversed'],
-[class*='Button'][class*='-success'][class*='--inversed'] {
+button[class*='-success'][class*='--wired'],
+input[type='button'][class*='-success'][class*='--wired'],
+input[type='submit'][class*='-success'][class*='--wired'],
+input[type='reset'][class*='-success'][class*='--wired'],
+[class*='Button'][class*='-success'][class*='--wired'] {
 	color: #74cf61;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #74cf61 inset;
 }
 
-button[class*='-success'][class*='--inversed']::after,
-input[type='button'][class*='-success'][class*='--inversed']::after,
-input[type='submit'][class*='-success'][class*='--inversed']::after,
-input[type='reset'][class*='-success'][class*='--inversed']::after,
-[class*='Button'][class*='-success'][class*='--inversed']::after {
+button[class*='-success'][class*='--wired']::after,
+input[type='button'][class*='-success'][class*='--wired']::after,
+input[type='submit'][class*='-success'][class*='--wired']::after,
+input[type='reset'][class*='-success'][class*='--wired']::after,
+[class*='Button'][class*='-success'][class*='--wired']::after {
 	background-color: #74cf61;
 }
 
-button[class*='-success'][class*='--inversed']:hover,
-button[class*='-success'][class*='--inversed']:focus,
-input[type='button'][class*='-success'][class*='--inversed']:hover,
-input[type='button'][class*='-success'][class*='--inversed']:focus,
-input[type='submit'][class*='-success'][class*='--inversed']:hover,
-input[type='submit'][class*='-success'][class*='--inversed']:focus,
-input[type='reset'][class*='-success'][class*='--inversed']:hover,
-input[type='reset'][class*='-success'][class*='--inversed']:focus,
-[class*='Button'][class*='-success'][class*='--inversed']:hover,
-[class*='Button'][class*='-success'][class*='--inversed']:focus {
+button[class*='-success'][class*='--wired']:hover,
+button[class*='-success'][class*='--wired']:focus,
+input[type='button'][class*='-success'][class*='--wired']:hover,
+input[type='button'][class*='-success'][class*='--wired']:focus,
+input[type='submit'][class*='-success'][class*='--wired']:hover,
+input[type='submit'][class*='-success'][class*='--wired']:focus,
+input[type='reset'][class*='-success'][class*='--wired']:hover,
+input[type='reset'][class*='-success'][class*='--wired']:focus,
+[class*='Button'][class*='-success'][class*='--wired']:hover,
+[class*='Button'][class*='-success'][class*='--wired']:focus {
 	color: #0d0d0d;
 }
 
@@ -9563,34 +9569,34 @@ input[type='reset'][class*='-info']:focus,
 	color: #0d0d0d;
 }
 
-button[class*='-info'][class*='--inversed'],
-input[type='button'][class*='-info'][class*='--inversed'],
-input[type='submit'][class*='-info'][class*='--inversed'],
-input[type='reset'][class*='-info'][class*='--inversed'],
-[class*='Button'][class*='-info'][class*='--inversed'] {
+button[class*='-info'][class*='--wired'],
+input[type='button'][class*='-info'][class*='--wired'],
+input[type='submit'][class*='-info'][class*='--wired'],
+input[type='reset'][class*='-info'][class*='--wired'],
+[class*='Button'][class*='-info'][class*='--wired'] {
 	color: #74c0cd;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #74c0cd inset;
 }
 
-button[class*='-info'][class*='--inversed']::after,
-input[type='button'][class*='-info'][class*='--inversed']::after,
-input[type='submit'][class*='-info'][class*='--inversed']::after,
-input[type='reset'][class*='-info'][class*='--inversed']::after,
-[class*='Button'][class*='-info'][class*='--inversed']::after {
+button[class*='-info'][class*='--wired']::after,
+input[type='button'][class*='-info'][class*='--wired']::after,
+input[type='submit'][class*='-info'][class*='--wired']::after,
+input[type='reset'][class*='-info'][class*='--wired']::after,
+[class*='Button'][class*='-info'][class*='--wired']::after {
 	background-color: #74c0cd;
 }
 
-button[class*='-info'][class*='--inversed']:hover,
-button[class*='-info'][class*='--inversed']:focus,
-input[type='button'][class*='-info'][class*='--inversed']:hover,
-input[type='button'][class*='-info'][class*='--inversed']:focus,
-input[type='submit'][class*='-info'][class*='--inversed']:hover,
-input[type='submit'][class*='-info'][class*='--inversed']:focus,
-input[type='reset'][class*='-info'][class*='--inversed']:hover,
-input[type='reset'][class*='-info'][class*='--inversed']:focus,
-[class*='Button'][class*='-info'][class*='--inversed']:hover,
-[class*='Button'][class*='-info'][class*='--inversed']:focus {
+button[class*='-info'][class*='--wired']:hover,
+button[class*='-info'][class*='--wired']:focus,
+input[type='button'][class*='-info'][class*='--wired']:hover,
+input[type='button'][class*='-info'][class*='--wired']:focus,
+input[type='submit'][class*='-info'][class*='--wired']:hover,
+input[type='submit'][class*='-info'][class*='--wired']:focus,
+input[type='reset'][class*='-info'][class*='--wired']:hover,
+input[type='reset'][class*='-info'][class*='--wired']:focus,
+[class*='Button'][class*='-info'][class*='--wired']:hover,
+[class*='Button'][class*='-info'][class*='--wired']:focus {
 	color: #0d0d0d;
 }
 
@@ -9625,34 +9631,34 @@ input[type='reset'][class*='-warning']:focus,
 	color: #f2f2f2;
 }
 
-button[class*='-warning'][class*='--inversed'],
-input[type='button'][class*='-warning'][class*='--inversed'],
-input[type='submit'][class*='-warning'][class*='--inversed'],
-input[type='reset'][class*='-warning'][class*='--inversed'],
-[class*='Button'][class*='-warning'][class*='--inversed'] {
+button[class*='-warning'][class*='--wired'],
+input[type='button'][class*='-warning'][class*='--wired'],
+input[type='submit'][class*='-warning'][class*='--wired'],
+input[type='reset'][class*='-warning'][class*='--wired'],
+[class*='Button'][class*='-warning'][class*='--wired'] {
 	color: #d9831e;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #d9831e inset;
 }
 
-button[class*='-warning'][class*='--inversed']::after,
-input[type='button'][class*='-warning'][class*='--inversed']::after,
-input[type='submit'][class*='-warning'][class*='--inversed']::after,
-input[type='reset'][class*='-warning'][class*='--inversed']::after,
-[class*='Button'][class*='-warning'][class*='--inversed']::after {
+button[class*='-warning'][class*='--wired']::after,
+input[type='button'][class*='-warning'][class*='--wired']::after,
+input[type='submit'][class*='-warning'][class*='--wired']::after,
+input[type='reset'][class*='-warning'][class*='--wired']::after,
+[class*='Button'][class*='-warning'][class*='--wired']::after {
 	background-color: #d9831e;
 }
 
-button[class*='-warning'][class*='--inversed']:hover,
-button[class*='-warning'][class*='--inversed']:focus,
-input[type='button'][class*='-warning'][class*='--inversed']:hover,
-input[type='button'][class*='-warning'][class*='--inversed']:focus,
-input[type='submit'][class*='-warning'][class*='--inversed']:hover,
-input[type='submit'][class*='-warning'][class*='--inversed']:focus,
-input[type='reset'][class*='-warning'][class*='--inversed']:hover,
-input[type='reset'][class*='-warning'][class*='--inversed']:focus,
-[class*='Button'][class*='-warning'][class*='--inversed']:hover,
-[class*='Button'][class*='-warning'][class*='--inversed']:focus {
+button[class*='-warning'][class*='--wired']:hover,
+button[class*='-warning'][class*='--wired']:focus,
+input[type='button'][class*='-warning'][class*='--wired']:hover,
+input[type='button'][class*='-warning'][class*='--wired']:focus,
+input[type='submit'][class*='-warning'][class*='--wired']:hover,
+input[type='submit'][class*='-warning'][class*='--wired']:focus,
+input[type='reset'][class*='-warning'][class*='--wired']:hover,
+input[type='reset'][class*='-warning'][class*='--wired']:focus,
+[class*='Button'][class*='-warning'][class*='--wired']:hover,
+[class*='Button'][class*='-warning'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 
@@ -9687,34 +9693,34 @@ input[type='reset'][class*='-danger']:focus,
 	color: #f2f2f2;
 }
 
-button[class*='-danger'][class*='--inversed'],
-input[type='button'][class*='-danger'][class*='--inversed'],
-input[type='submit'][class*='-danger'][class*='--inversed'],
-input[type='reset'][class*='-danger'][class*='--inversed'],
-[class*='Button'][class*='-danger'][class*='--inversed'] {
+button[class*='-danger'][class*='--wired'],
+input[type='button'][class*='-danger'][class*='--wired'],
+input[type='submit'][class*='-danger'][class*='--wired'],
+input[type='reset'][class*='-danger'][class*='--wired'],
+[class*='Button'][class*='-danger'][class*='--wired'] {
 	color: #d94d4d;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #d94d4d inset;
 }
 
-button[class*='-danger'][class*='--inversed']::after,
-input[type='button'][class*='-danger'][class*='--inversed']::after,
-input[type='submit'][class*='-danger'][class*='--inversed']::after,
-input[type='reset'][class*='-danger'][class*='--inversed']::after,
-[class*='Button'][class*='-danger'][class*='--inversed']::after {
+button[class*='-danger'][class*='--wired']::after,
+input[type='button'][class*='-danger'][class*='--wired']::after,
+input[type='submit'][class*='-danger'][class*='--wired']::after,
+input[type='reset'][class*='-danger'][class*='--wired']::after,
+[class*='Button'][class*='-danger'][class*='--wired']::after {
 	background-color: #d94d4d;
 }
 
-button[class*='-danger'][class*='--inversed']:hover,
-button[class*='-danger'][class*='--inversed']:focus,
-input[type='button'][class*='-danger'][class*='--inversed']:hover,
-input[type='button'][class*='-danger'][class*='--inversed']:focus,
-input[type='submit'][class*='-danger'][class*='--inversed']:hover,
-input[type='submit'][class*='-danger'][class*='--inversed']:focus,
-input[type='reset'][class*='-danger'][class*='--inversed']:hover,
-input[type='reset'][class*='-danger'][class*='--inversed']:focus,
-[class*='Button'][class*='-danger'][class*='--inversed']:hover,
-[class*='Button'][class*='-danger'][class*='--inversed']:focus {
+button[class*='-danger'][class*='--wired']:hover,
+button[class*='-danger'][class*='--wired']:focus,
+input[type='button'][class*='-danger'][class*='--wired']:hover,
+input[type='button'][class*='-danger'][class*='--wired']:focus,
+input[type='submit'][class*='-danger'][class*='--wired']:hover,
+input[type='submit'][class*='-danger'][class*='--wired']:focus,
+input[type='reset'][class*='-danger'][class*='--wired']:hover,
+input[type='reset'][class*='-danger'][class*='--wired']:focus,
+[class*='Button'][class*='-danger'][class*='--wired']:hover,
+[class*='Button'][class*='-danger'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 
@@ -9749,34 +9755,34 @@ input[type='reset'][class*='-white']:focus,
 	color: #0d0d0d;
 }
 
-button[class*='-white'][class*='--inversed'],
-input[type='button'][class*='-white'][class*='--inversed'],
-input[type='submit'][class*='-white'][class*='--inversed'],
-input[type='reset'][class*='-white'][class*='--inversed'],
-[class*='Button'][class*='-white'][class*='--inversed'] {
+button[class*='-white'][class*='--wired'],
+input[type='button'][class*='-white'][class*='--wired'],
+input[type='submit'][class*='-white'][class*='--wired'],
+input[type='reset'][class*='-white'][class*='--wired'],
+[class*='Button'][class*='-white'][class*='--wired'] {
 	color: #fff;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #fff inset;
 }
 
-button[class*='-white'][class*='--inversed']::after,
-input[type='button'][class*='-white'][class*='--inversed']::after,
-input[type='submit'][class*='-white'][class*='--inversed']::after,
-input[type='reset'][class*='-white'][class*='--inversed']::after,
-[class*='Button'][class*='-white'][class*='--inversed']::after {
+button[class*='-white'][class*='--wired']::after,
+input[type='button'][class*='-white'][class*='--wired']::after,
+input[type='submit'][class*='-white'][class*='--wired']::after,
+input[type='reset'][class*='-white'][class*='--wired']::after,
+[class*='Button'][class*='-white'][class*='--wired']::after {
 	background-color: #fff;
 }
 
-button[class*='-white'][class*='--inversed']:hover,
-button[class*='-white'][class*='--inversed']:focus,
-input[type='button'][class*='-white'][class*='--inversed']:hover,
-input[type='button'][class*='-white'][class*='--inversed']:focus,
-input[type='submit'][class*='-white'][class*='--inversed']:hover,
-input[type='submit'][class*='-white'][class*='--inversed']:focus,
-input[type='reset'][class*='-white'][class*='--inversed']:hover,
-input[type='reset'][class*='-white'][class*='--inversed']:focus,
-[class*='Button'][class*='-white'][class*='--inversed']:hover,
-[class*='Button'][class*='-white'][class*='--inversed']:focus {
+button[class*='-white'][class*='--wired']:hover,
+button[class*='-white'][class*='--wired']:focus,
+input[type='button'][class*='-white'][class*='--wired']:hover,
+input[type='button'][class*='-white'][class*='--wired']:focus,
+input[type='submit'][class*='-white'][class*='--wired']:hover,
+input[type='submit'][class*='-white'][class*='--wired']:focus,
+input[type='reset'][class*='-white'][class*='--wired']:hover,
+input[type='reset'][class*='-white'][class*='--wired']:focus,
+[class*='Button'][class*='-white'][class*='--wired']:hover,
+[class*='Button'][class*='-white'][class*='--wired']:focus {
 	color: #0d0d0d;
 }
 
@@ -9811,34 +9817,34 @@ input[type='reset'][class*='-ghost']:focus,
 	color: #f2f2f2;
 }
 
-button[class*='-ghost'][class*='--inversed'],
-input[type='button'][class*='-ghost'][class*='--inversed'],
-input[type='submit'][class*='-ghost'][class*='--inversed'],
-input[type='reset'][class*='-ghost'][class*='--inversed'],
-[class*='Button'][class*='-ghost'][class*='--inversed'] {
+button[class*='-ghost'][class*='--wired'],
+input[type='button'][class*='-ghost'][class*='--wired'],
+input[type='submit'][class*='-ghost'][class*='--wired'],
+input[type='reset'][class*='-ghost'][class*='--wired'],
+[class*='Button'][class*='-ghost'][class*='--wired'] {
 	color: transparent;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px transparent inset;
 }
 
-button[class*='-ghost'][class*='--inversed']::after,
-input[type='button'][class*='-ghost'][class*='--inversed']::after,
-input[type='submit'][class*='-ghost'][class*='--inversed']::after,
-input[type='reset'][class*='-ghost'][class*='--inversed']::after,
-[class*='Button'][class*='-ghost'][class*='--inversed']::after {
+button[class*='-ghost'][class*='--wired']::after,
+input[type='button'][class*='-ghost'][class*='--wired']::after,
+input[type='submit'][class*='-ghost'][class*='--wired']::after,
+input[type='reset'][class*='-ghost'][class*='--wired']::after,
+[class*='Button'][class*='-ghost'][class*='--wired']::after {
 	background-color: transparent;
 }
 
-button[class*='-ghost'][class*='--inversed']:hover,
-button[class*='-ghost'][class*='--inversed']:focus,
-input[type='button'][class*='-ghost'][class*='--inversed']:hover,
-input[type='button'][class*='-ghost'][class*='--inversed']:focus,
-input[type='submit'][class*='-ghost'][class*='--inversed']:hover,
-input[type='submit'][class*='-ghost'][class*='--inversed']:focus,
-input[type='reset'][class*='-ghost'][class*='--inversed']:hover,
-input[type='reset'][class*='-ghost'][class*='--inversed']:focus,
-[class*='Button'][class*='-ghost'][class*='--inversed']:hover,
-[class*='Button'][class*='-ghost'][class*='--inversed']:focus {
+button[class*='-ghost'][class*='--wired']:hover,
+button[class*='-ghost'][class*='--wired']:focus,
+input[type='button'][class*='-ghost'][class*='--wired']:hover,
+input[type='button'][class*='-ghost'][class*='--wired']:focus,
+input[type='submit'][class*='-ghost'][class*='--wired']:hover,
+input[type='submit'][class*='-ghost'][class*='--wired']:focus,
+input[type='reset'][class*='-ghost'][class*='--wired']:hover,
+input[type='reset'][class*='-ghost'][class*='--wired']:focus,
+[class*='Button'][class*='-ghost'][class*='--wired']:hover,
+[class*='Button'][class*='-ghost'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 
@@ -9873,34 +9879,34 @@ input[type='reset'][class*='-green']:focus,
 	color: #0d0d0d;
 }
 
-button[class*='-green'][class*='--inversed'],
-input[type='button'][class*='-green'][class*='--inversed'],
-input[type='submit'][class*='-green'][class*='--inversed'],
-input[type='reset'][class*='-green'][class*='--inversed'],
-[class*='Button'][class*='-green'][class*='--inversed'] {
+button[class*='-green'][class*='--wired'],
+input[type='button'][class*='-green'][class*='--wired'],
+input[type='submit'][class*='-green'][class*='--wired'],
+input[type='reset'][class*='-green'][class*='--wired'],
+[class*='Button'][class*='-green'][class*='--wired'] {
 	color: #74cf61;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #74cf61 inset;
 }
 
-button[class*='-green'][class*='--inversed']::after,
-input[type='button'][class*='-green'][class*='--inversed']::after,
-input[type='submit'][class*='-green'][class*='--inversed']::after,
-input[type='reset'][class*='-green'][class*='--inversed']::after,
-[class*='Button'][class*='-green'][class*='--inversed']::after {
+button[class*='-green'][class*='--wired']::after,
+input[type='button'][class*='-green'][class*='--wired']::after,
+input[type='submit'][class*='-green'][class*='--wired']::after,
+input[type='reset'][class*='-green'][class*='--wired']::after,
+[class*='Button'][class*='-green'][class*='--wired']::after {
 	background-color: #74cf61;
 }
 
-button[class*='-green'][class*='--inversed']:hover,
-button[class*='-green'][class*='--inversed']:focus,
-input[type='button'][class*='-green'][class*='--inversed']:hover,
-input[type='button'][class*='-green'][class*='--inversed']:focus,
-input[type='submit'][class*='-green'][class*='--inversed']:hover,
-input[type='submit'][class*='-green'][class*='--inversed']:focus,
-input[type='reset'][class*='-green'][class*='--inversed']:hover,
-input[type='reset'][class*='-green'][class*='--inversed']:focus,
-[class*='Button'][class*='-green'][class*='--inversed']:hover,
-[class*='Button'][class*='-green'][class*='--inversed']:focus {
+button[class*='-green'][class*='--wired']:hover,
+button[class*='-green'][class*='--wired']:focus,
+input[type='button'][class*='-green'][class*='--wired']:hover,
+input[type='button'][class*='-green'][class*='--wired']:focus,
+input[type='submit'][class*='-green'][class*='--wired']:hover,
+input[type='submit'][class*='-green'][class*='--wired']:focus,
+input[type='reset'][class*='-green'][class*='--wired']:hover,
+input[type='reset'][class*='-green'][class*='--wired']:focus,
+[class*='Button'][class*='-green'][class*='--wired']:hover,
+[class*='Button'][class*='-green'][class*='--wired']:focus {
 	color: #0d0d0d;
 }
 
@@ -9935,34 +9941,34 @@ input[type='reset'][class*='-light-blue']:focus,
 	color: #0d0d0d;
 }
 
-button[class*='-light-blue'][class*='--inversed'],
-input[type='button'][class*='-light-blue'][class*='--inversed'],
-input[type='submit'][class*='-light-blue'][class*='--inversed'],
-input[type='reset'][class*='-light-blue'][class*='--inversed'],
-[class*='Button'][class*='-light-blue'][class*='--inversed'] {
+button[class*='-light-blue'][class*='--wired'],
+input[type='button'][class*='-light-blue'][class*='--wired'],
+input[type='submit'][class*='-light-blue'][class*='--wired'],
+input[type='reset'][class*='-light-blue'][class*='--wired'],
+[class*='Button'][class*='-light-blue'][class*='--wired'] {
 	color: #74c0cd;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #74c0cd inset;
 }
 
-button[class*='-light-blue'][class*='--inversed']::after,
-input[type='button'][class*='-light-blue'][class*='--inversed']::after,
-input[type='submit'][class*='-light-blue'][class*='--inversed']::after,
-input[type='reset'][class*='-light-blue'][class*='--inversed']::after,
-[class*='Button'][class*='-light-blue'][class*='--inversed']::after {
+button[class*='-light-blue'][class*='--wired']::after,
+input[type='button'][class*='-light-blue'][class*='--wired']::after,
+input[type='submit'][class*='-light-blue'][class*='--wired']::after,
+input[type='reset'][class*='-light-blue'][class*='--wired']::after,
+[class*='Button'][class*='-light-blue'][class*='--wired']::after {
 	background-color: #74c0cd;
 }
 
-button[class*='-light-blue'][class*='--inversed']:hover,
-button[class*='-light-blue'][class*='--inversed']:focus,
-input[type='button'][class*='-light-blue'][class*='--inversed']:hover,
-input[type='button'][class*='-light-blue'][class*='--inversed']:focus,
-input[type='submit'][class*='-light-blue'][class*='--inversed']:hover,
-input[type='submit'][class*='-light-blue'][class*='--inversed']:focus,
-input[type='reset'][class*='-light-blue'][class*='--inversed']:hover,
-input[type='reset'][class*='-light-blue'][class*='--inversed']:focus,
-[class*='Button'][class*='-light-blue'][class*='--inversed']:hover,
-[class*='Button'][class*='-light-blue'][class*='--inversed']:focus {
+button[class*='-light-blue'][class*='--wired']:hover,
+button[class*='-light-blue'][class*='--wired']:focus,
+input[type='button'][class*='-light-blue'][class*='--wired']:hover,
+input[type='button'][class*='-light-blue'][class*='--wired']:focus,
+input[type='submit'][class*='-light-blue'][class*='--wired']:hover,
+input[type='submit'][class*='-light-blue'][class*='--wired']:focus,
+input[type='reset'][class*='-light-blue'][class*='--wired']:hover,
+input[type='reset'][class*='-light-blue'][class*='--wired']:focus,
+[class*='Button'][class*='-light-blue'][class*='--wired']:hover,
+[class*='Button'][class*='-light-blue'][class*='--wired']:focus {
 	color: #0d0d0d;
 }
 
@@ -9997,34 +10003,34 @@ input[type='reset'][class*='-orange']:focus,
 	color: #f2f2f2;
 }
 
-button[class*='-orange'][class*='--inversed'],
-input[type='button'][class*='-orange'][class*='--inversed'],
-input[type='submit'][class*='-orange'][class*='--inversed'],
-input[type='reset'][class*='-orange'][class*='--inversed'],
-[class*='Button'][class*='-orange'][class*='--inversed'] {
+button[class*='-orange'][class*='--wired'],
+input[type='button'][class*='-orange'][class*='--wired'],
+input[type='submit'][class*='-orange'][class*='--wired'],
+input[type='reset'][class*='-orange'][class*='--wired'],
+[class*='Button'][class*='-orange'][class*='--wired'] {
 	color: #d9831e;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #d9831e inset;
 }
 
-button[class*='-orange'][class*='--inversed']::after,
-input[type='button'][class*='-orange'][class*='--inversed']::after,
-input[type='submit'][class*='-orange'][class*='--inversed']::after,
-input[type='reset'][class*='-orange'][class*='--inversed']::after,
-[class*='Button'][class*='-orange'][class*='--inversed']::after {
+button[class*='-orange'][class*='--wired']::after,
+input[type='button'][class*='-orange'][class*='--wired']::after,
+input[type='submit'][class*='-orange'][class*='--wired']::after,
+input[type='reset'][class*='-orange'][class*='--wired']::after,
+[class*='Button'][class*='-orange'][class*='--wired']::after {
 	background-color: #d9831e;
 }
 
-button[class*='-orange'][class*='--inversed']:hover,
-button[class*='-orange'][class*='--inversed']:focus,
-input[type='button'][class*='-orange'][class*='--inversed']:hover,
-input[type='button'][class*='-orange'][class*='--inversed']:focus,
-input[type='submit'][class*='-orange'][class*='--inversed']:hover,
-input[type='submit'][class*='-orange'][class*='--inversed']:focus,
-input[type='reset'][class*='-orange'][class*='--inversed']:hover,
-input[type='reset'][class*='-orange'][class*='--inversed']:focus,
-[class*='Button'][class*='-orange'][class*='--inversed']:hover,
-[class*='Button'][class*='-orange'][class*='--inversed']:focus {
+button[class*='-orange'][class*='--wired']:hover,
+button[class*='-orange'][class*='--wired']:focus,
+input[type='button'][class*='-orange'][class*='--wired']:hover,
+input[type='button'][class*='-orange'][class*='--wired']:focus,
+input[type='submit'][class*='-orange'][class*='--wired']:hover,
+input[type='submit'][class*='-orange'][class*='--wired']:focus,
+input[type='reset'][class*='-orange'][class*='--wired']:hover,
+input[type='reset'][class*='-orange'][class*='--wired']:focus,
+[class*='Button'][class*='-orange'][class*='--wired']:hover,
+[class*='Button'][class*='-orange'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 
@@ -10059,34 +10065,34 @@ input[type='reset'][class*='-red']:focus,
 	color: #f2f2f2;
 }
 
-button[class*='-red'][class*='--inversed'],
-input[type='button'][class*='-red'][class*='--inversed'],
-input[type='submit'][class*='-red'][class*='--inversed'],
-input[type='reset'][class*='-red'][class*='--inversed'],
-[class*='Button'][class*='-red'][class*='--inversed'] {
+button[class*='-red'][class*='--wired'],
+input[type='button'][class*='-red'][class*='--wired'],
+input[type='submit'][class*='-red'][class*='--wired'],
+input[type='reset'][class*='-red'][class*='--wired'],
+[class*='Button'][class*='-red'][class*='--wired'] {
 	color: #d94d4d;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #d94d4d inset;
 }
 
-button[class*='-red'][class*='--inversed']::after,
-input[type='button'][class*='-red'][class*='--inversed']::after,
-input[type='submit'][class*='-red'][class*='--inversed']::after,
-input[type='reset'][class*='-red'][class*='--inversed']::after,
-[class*='Button'][class*='-red'][class*='--inversed']::after {
+button[class*='-red'][class*='--wired']::after,
+input[type='button'][class*='-red'][class*='--wired']::after,
+input[type='submit'][class*='-red'][class*='--wired']::after,
+input[type='reset'][class*='-red'][class*='--wired']::after,
+[class*='Button'][class*='-red'][class*='--wired']::after {
 	background-color: #d94d4d;
 }
 
-button[class*='-red'][class*='--inversed']:hover,
-button[class*='-red'][class*='--inversed']:focus,
-input[type='button'][class*='-red'][class*='--inversed']:hover,
-input[type='button'][class*='-red'][class*='--inversed']:focus,
-input[type='submit'][class*='-red'][class*='--inversed']:hover,
-input[type='submit'][class*='-red'][class*='--inversed']:focus,
-input[type='reset'][class*='-red'][class*='--inversed']:hover,
-input[type='reset'][class*='-red'][class*='--inversed']:focus,
-[class*='Button'][class*='-red'][class*='--inversed']:hover,
-[class*='Button'][class*='-red'][class*='--inversed']:focus {
+button[class*='-red'][class*='--wired']:hover,
+button[class*='-red'][class*='--wired']:focus,
+input[type='button'][class*='-red'][class*='--wired']:hover,
+input[type='button'][class*='-red'][class*='--wired']:focus,
+input[type='submit'][class*='-red'][class*='--wired']:hover,
+input[type='submit'][class*='-red'][class*='--wired']:focus,
+input[type='reset'][class*='-red'][class*='--wired']:hover,
+input[type='reset'][class*='-red'][class*='--wired']:focus,
+[class*='Button'][class*='-red'][class*='--wired']:hover,
+[class*='Button'][class*='-red'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 
@@ -10121,34 +10127,34 @@ input[type='reset'][class*='-yellow']:focus,
 	color: #0d0d0d;
 }
 
-button[class*='-yellow'][class*='--inversed'],
-input[type='button'][class*='-yellow'][class*='--inversed'],
-input[type='submit'][class*='-yellow'][class*='--inversed'],
-input[type='reset'][class*='-yellow'][class*='--inversed'],
-[class*='Button'][class*='-yellow'][class*='--inversed'] {
+button[class*='-yellow'][class*='--wired'],
+input[type='button'][class*='-yellow'][class*='--wired'],
+input[type='submit'][class*='-yellow'][class*='--wired'],
+input[type='reset'][class*='-yellow'][class*='--wired'],
+[class*='Button'][class*='-yellow'][class*='--wired'] {
 	color: #fff46c;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #fff46c inset;
 }
 
-button[class*='-yellow'][class*='--inversed']::after,
-input[type='button'][class*='-yellow'][class*='--inversed']::after,
-input[type='submit'][class*='-yellow'][class*='--inversed']::after,
-input[type='reset'][class*='-yellow'][class*='--inversed']::after,
-[class*='Button'][class*='-yellow'][class*='--inversed']::after {
+button[class*='-yellow'][class*='--wired']::after,
+input[type='button'][class*='-yellow'][class*='--wired']::after,
+input[type='submit'][class*='-yellow'][class*='--wired']::after,
+input[type='reset'][class*='-yellow'][class*='--wired']::after,
+[class*='Button'][class*='-yellow'][class*='--wired']::after {
 	background-color: #fff46c;
 }
 
-button[class*='-yellow'][class*='--inversed']:hover,
-button[class*='-yellow'][class*='--inversed']:focus,
-input[type='button'][class*='-yellow'][class*='--inversed']:hover,
-input[type='button'][class*='-yellow'][class*='--inversed']:focus,
-input[type='submit'][class*='-yellow'][class*='--inversed']:hover,
-input[type='submit'][class*='-yellow'][class*='--inversed']:focus,
-input[type='reset'][class*='-yellow'][class*='--inversed']:hover,
-input[type='reset'][class*='-yellow'][class*='--inversed']:focus,
-[class*='Button'][class*='-yellow'][class*='--inversed']:hover,
-[class*='Button'][class*='-yellow'][class*='--inversed']:focus {
+button[class*='-yellow'][class*='--wired']:hover,
+button[class*='-yellow'][class*='--wired']:focus,
+input[type='button'][class*='-yellow'][class*='--wired']:hover,
+input[type='button'][class*='-yellow'][class*='--wired']:focus,
+input[type='submit'][class*='-yellow'][class*='--wired']:hover,
+input[type='submit'][class*='-yellow'][class*='--wired']:focus,
+input[type='reset'][class*='-yellow'][class*='--wired']:hover,
+input[type='reset'][class*='-yellow'][class*='--wired']:focus,
+[class*='Button'][class*='-yellow'][class*='--wired']:hover,
+[class*='Button'][class*='-yellow'][class*='--wired']:focus {
 	color: #0d0d0d;
 }
 
@@ -10183,34 +10189,34 @@ input[type='reset'][class*='-blue']:focus,
 	color: #f2f2f2;
 }
 
-button[class*='-blue'][class*='--inversed'],
-input[type='button'][class*='-blue'][class*='--inversed'],
-input[type='submit'][class*='-blue'][class*='--inversed'],
-input[type='reset'][class*='-blue'][class*='--inversed'],
-[class*='Button'][class*='-blue'][class*='--inversed'] {
+button[class*='-blue'][class*='--wired'],
+input[type='button'][class*='-blue'][class*='--wired'],
+input[type='submit'][class*='-blue'][class*='--wired'],
+input[type='reset'][class*='-blue'][class*='--wired'],
+[class*='Button'][class*='-blue'][class*='--wired'] {
 	color: #3935cd;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #3935cd inset;
 }
 
-button[class*='-blue'][class*='--inversed']::after,
-input[type='button'][class*='-blue'][class*='--inversed']::after,
-input[type='submit'][class*='-blue'][class*='--inversed']::after,
-input[type='reset'][class*='-blue'][class*='--inversed']::after,
-[class*='Button'][class*='-blue'][class*='--inversed']::after {
+button[class*='-blue'][class*='--wired']::after,
+input[type='button'][class*='-blue'][class*='--wired']::after,
+input[type='submit'][class*='-blue'][class*='--wired']::after,
+input[type='reset'][class*='-blue'][class*='--wired']::after,
+[class*='Button'][class*='-blue'][class*='--wired']::after {
 	background-color: #3935cd;
 }
 
-button[class*='-blue'][class*='--inversed']:hover,
-button[class*='-blue'][class*='--inversed']:focus,
-input[type='button'][class*='-blue'][class*='--inversed']:hover,
-input[type='button'][class*='-blue'][class*='--inversed']:focus,
-input[type='submit'][class*='-blue'][class*='--inversed']:hover,
-input[type='submit'][class*='-blue'][class*='--inversed']:focus,
-input[type='reset'][class*='-blue'][class*='--inversed']:hover,
-input[type='reset'][class*='-blue'][class*='--inversed']:focus,
-[class*='Button'][class*='-blue'][class*='--inversed']:hover,
-[class*='Button'][class*='-blue'][class*='--inversed']:focus {
+button[class*='-blue'][class*='--wired']:hover,
+button[class*='-blue'][class*='--wired']:focus,
+input[type='button'][class*='-blue'][class*='--wired']:hover,
+input[type='button'][class*='-blue'][class*='--wired']:focus,
+input[type='submit'][class*='-blue'][class*='--wired']:hover,
+input[type='submit'][class*='-blue'][class*='--wired']:focus,
+input[type='reset'][class*='-blue'][class*='--wired']:hover,
+input[type='reset'][class*='-blue'][class*='--wired']:focus,
+[class*='Button'][class*='-blue'][class*='--wired']:hover,
+[class*='Button'][class*='-blue'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 
@@ -10245,34 +10251,34 @@ input[type='reset'][class*='-purple']:focus,
 	color: #0d0d0d;
 }
 
-button[class*='-purple'][class*='--inversed'],
-input[type='button'][class*='-purple'][class*='--inversed'],
-input[type='submit'][class*='-purple'][class*='--inversed'],
-input[type='reset'][class*='-purple'][class*='--inversed'],
-[class*='Button'][class*='-purple'][class*='--inversed'] {
+button[class*='-purple'][class*='--wired'],
+input[type='button'][class*='-purple'][class*='--wired'],
+input[type='submit'][class*='-purple'][class*='--wired'],
+input[type='reset'][class*='-purple'][class*='--wired'],
+[class*='Button'][class*='-purple'][class*='--wired'] {
 	color: #aa80d9;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #aa80d9 inset;
 }
 
-button[class*='-purple'][class*='--inversed']::after,
-input[type='button'][class*='-purple'][class*='--inversed']::after,
-input[type='submit'][class*='-purple'][class*='--inversed']::after,
-input[type='reset'][class*='-purple'][class*='--inversed']::after,
-[class*='Button'][class*='-purple'][class*='--inversed']::after {
+button[class*='-purple'][class*='--wired']::after,
+input[type='button'][class*='-purple'][class*='--wired']::after,
+input[type='submit'][class*='-purple'][class*='--wired']::after,
+input[type='reset'][class*='-purple'][class*='--wired']::after,
+[class*='Button'][class*='-purple'][class*='--wired']::after {
 	background-color: #aa80d9;
 }
 
-button[class*='-purple'][class*='--inversed']:hover,
-button[class*='-purple'][class*='--inversed']:focus,
-input[type='button'][class*='-purple'][class*='--inversed']:hover,
-input[type='button'][class*='-purple'][class*='--inversed']:focus,
-input[type='submit'][class*='-purple'][class*='--inversed']:hover,
-input[type='submit'][class*='-purple'][class*='--inversed']:focus,
-input[type='reset'][class*='-purple'][class*='--inversed']:hover,
-input[type='reset'][class*='-purple'][class*='--inversed']:focus,
-[class*='Button'][class*='-purple'][class*='--inversed']:hover,
-[class*='Button'][class*='-purple'][class*='--inversed']:focus {
+button[class*='-purple'][class*='--wired']:hover,
+button[class*='-purple'][class*='--wired']:focus,
+input[type='button'][class*='-purple'][class*='--wired']:hover,
+input[type='button'][class*='-purple'][class*='--wired']:focus,
+input[type='submit'][class*='-purple'][class*='--wired']:hover,
+input[type='submit'][class*='-purple'][class*='--wired']:focus,
+input[type='reset'][class*='-purple'][class*='--wired']:hover,
+input[type='reset'][class*='-purple'][class*='--wired']:focus,
+[class*='Button'][class*='-purple'][class*='--wired']:hover,
+[class*='Button'][class*='-purple'][class*='--wired']:focus {
 	color: #0d0d0d;
 }
 
@@ -10307,38 +10313,38 @@ input[type='reset'][class*='-brown']:focus,
 	color: #f2f2f2;
 }
 
-button[class*='-brown'][class*='--inversed'],
-input[type='button'][class*='-brown'][class*='--inversed'],
-input[type='submit'][class*='-brown'][class*='--inversed'],
-input[type='reset'][class*='-brown'][class*='--inversed'],
-[class*='Button'][class*='-brown'][class*='--inversed'] {
+button[class*='-brown'][class*='--wired'],
+input[type='button'][class*='-brown'][class*='--wired'],
+input[type='submit'][class*='-brown'][class*='--wired'],
+input[type='reset'][class*='-brown'][class*='--wired'],
+[class*='Button'][class*='-brown'][class*='--wired'] {
 	color: #835611;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #835611 inset;
 }
 
-button[class*='-brown'][class*='--inversed']::after,
-input[type='button'][class*='-brown'][class*='--inversed']::after,
-input[type='submit'][class*='-brown'][class*='--inversed']::after,
-input[type='reset'][class*='-brown'][class*='--inversed']::after,
-[class*='Button'][class*='-brown'][class*='--inversed']::after {
+button[class*='-brown'][class*='--wired']::after,
+input[type='button'][class*='-brown'][class*='--wired']::after,
+input[type='submit'][class*='-brown'][class*='--wired']::after,
+input[type='reset'][class*='-brown'][class*='--wired']::after,
+[class*='Button'][class*='-brown'][class*='--wired']::after {
 	background-color: #835611;
 }
 
-button[class*='-brown'][class*='--inversed']:hover,
-button[class*='-brown'][class*='--inversed']:focus,
-input[type='button'][class*='-brown'][class*='--inversed']:hover,
-input[type='button'][class*='-brown'][class*='--inversed']:focus,
-input[type='submit'][class*='-brown'][class*='--inversed']:hover,
-input[type='submit'][class*='-brown'][class*='--inversed']:focus,
-input[type='reset'][class*='-brown'][class*='--inversed']:hover,
-input[type='reset'][class*='-brown'][class*='--inversed']:focus,
-[class*='Button'][class*='-brown'][class*='--inversed']:hover,
-[class*='Button'][class*='-brown'][class*='--inversed']:focus {
+button[class*='-brown'][class*='--wired']:hover,
+button[class*='-brown'][class*='--wired']:focus,
+input[type='button'][class*='-brown'][class*='--wired']:hover,
+input[type='button'][class*='-brown'][class*='--wired']:focus,
+input[type='submit'][class*='-brown'][class*='--wired']:hover,
+input[type='submit'][class*='-brown'][class*='--wired']:focus,
+input[type='reset'][class*='-brown'][class*='--wired']:hover,
+input[type='reset'][class*='-brown'][class*='--wired']:focus,
+[class*='Button'][class*='-brown'][class*='--wired']:hover,
+[class*='Button'][class*='-brown'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 
-[class*='Button'][class*='--inversed'] {
+[class*='Button'][class*='--wired'] {
 	transition-timing-function: ease;
 	transition-duration: .2s;
 	transition-property: color;
@@ -10347,16 +10353,16 @@ input[type='reset'][class*='-brown'][class*='--inversed']:focus,
 	box-shadow: 0 0 0 1px var(--components-background) inset;
 }
 
-[class*='Button'][class*='--inversed']::after {
+[class*='Button'][class*='--wired']::after {
 	background-color: var(--components-background);
 }
 
-[class*='Button'][class*='--inversed']:active::after {
+[class*='Button'][class*='--wired']:active::after {
 	opacity: .8;
 }
 
-[class*='Button'][class*='--inversed']:hover,
-[class*='Button'][class*='--inversed']:focus {
+[class*='Button'][class*='--wired']:hover,
+[class*='Button'][class*='--wired']:focus {
 	color: var(--components-color);
 }
 
@@ -10408,14 +10414,27 @@ a[class*='Tag']:focus {
 	color: var(--components-color);
 }
 
+[class*='Tag'][class*='-inversed'],
+a[class*='Tag'][class*='-inversed'] {
+	color: var(--components-color-inversed);
+	background: var(--components-background-inversed);
+}
+
+[class*='Tag'][class*='-inversed'][class*='--wired'],
+a[class*='Tag'][class*='-inversed'][class*='--wired'] {
+	color: var(--components-background-inversed);
+	background-color: transparent;
+	box-shadow: 0 0 0 1px var(--components-background-inversed) inset;
+}
+
 [class*='Tag'][class*='-success'],
 a[class*='Tag'][class*='-success'] {
 	color: #0d0d0d;
 	background: #74cf61;
 }
 
-[class*='Tag'][class*='-success'][class*='--inversed'],
-a[class*='Tag'][class*='-success'][class*='--inversed'] {
+[class*='Tag'][class*='-success'][class*='--wired'],
+a[class*='Tag'][class*='-success'][class*='--wired'] {
 	color: #74cf61;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #74cf61 inset;
@@ -10427,8 +10446,8 @@ a[class*='Tag'][class*='-info'] {
 	background: #74c0cd;
 }
 
-[class*='Tag'][class*='-info'][class*='--inversed'],
-a[class*='Tag'][class*='-info'][class*='--inversed'] {
+[class*='Tag'][class*='-info'][class*='--wired'],
+a[class*='Tag'][class*='-info'][class*='--wired'] {
 	color: #74c0cd;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #74c0cd inset;
@@ -10440,8 +10459,8 @@ a[class*='Tag'][class*='-warning'] {
 	background: #d9831e;
 }
 
-[class*='Tag'][class*='-warning'][class*='--inversed'],
-a[class*='Tag'][class*='-warning'][class*='--inversed'] {
+[class*='Tag'][class*='-warning'][class*='--wired'],
+a[class*='Tag'][class*='-warning'][class*='--wired'] {
 	color: #d9831e;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #d9831e inset;
@@ -10453,8 +10472,8 @@ a[class*='Tag'][class*='-danger'] {
 	background: #d94d4d;
 }
 
-[class*='Tag'][class*='-danger'][class*='--inversed'],
-a[class*='Tag'][class*='-danger'][class*='--inversed'] {
+[class*='Tag'][class*='-danger'][class*='--wired'],
+a[class*='Tag'][class*='-danger'][class*='--wired'] {
 	color: #d94d4d;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #d94d4d inset;
@@ -10466,8 +10485,8 @@ a[class*='Tag'][class*='-white'] {
 	background: #fff;
 }
 
-[class*='Tag'][class*='-white'][class*='--inversed'],
-a[class*='Tag'][class*='-white'][class*='--inversed'] {
+[class*='Tag'][class*='-white'][class*='--wired'],
+a[class*='Tag'][class*='-white'][class*='--wired'] {
 	color: #fff;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #fff inset;
@@ -10479,8 +10498,8 @@ a[class*='Tag'][class*='-ghost'] {
 	background: transparent;
 }
 
-[class*='Tag'][class*='-ghost'][class*='--inversed'],
-a[class*='Tag'][class*='-ghost'][class*='--inversed'] {
+[class*='Tag'][class*='-ghost'][class*='--wired'],
+a[class*='Tag'][class*='-ghost'][class*='--wired'] {
 	color: transparent;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px transparent inset;
@@ -10492,8 +10511,8 @@ a[class*='Tag'][class*='-green'] {
 	background: #74cf61;
 }
 
-[class*='Tag'][class*='-green'][class*='--inversed'],
-a[class*='Tag'][class*='-green'][class*='--inversed'] {
+[class*='Tag'][class*='-green'][class*='--wired'],
+a[class*='Tag'][class*='-green'][class*='--wired'] {
 	color: #74cf61;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #74cf61 inset;
@@ -10505,8 +10524,8 @@ a[class*='Tag'][class*='-light-blue'] {
 	background: #74c0cd;
 }
 
-[class*='Tag'][class*='-light-blue'][class*='--inversed'],
-a[class*='Tag'][class*='-light-blue'][class*='--inversed'] {
+[class*='Tag'][class*='-light-blue'][class*='--wired'],
+a[class*='Tag'][class*='-light-blue'][class*='--wired'] {
 	color: #74c0cd;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #74c0cd inset;
@@ -10518,8 +10537,8 @@ a[class*='Tag'][class*='-orange'] {
 	background: #d9831e;
 }
 
-[class*='Tag'][class*='-orange'][class*='--inversed'],
-a[class*='Tag'][class*='-orange'][class*='--inversed'] {
+[class*='Tag'][class*='-orange'][class*='--wired'],
+a[class*='Tag'][class*='-orange'][class*='--wired'] {
 	color: #d9831e;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #d9831e inset;
@@ -10531,8 +10550,8 @@ a[class*='Tag'][class*='-red'] {
 	background: #d94d4d;
 }
 
-[class*='Tag'][class*='-red'][class*='--inversed'],
-a[class*='Tag'][class*='-red'][class*='--inversed'] {
+[class*='Tag'][class*='-red'][class*='--wired'],
+a[class*='Tag'][class*='-red'][class*='--wired'] {
 	color: #d94d4d;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #d94d4d inset;
@@ -10544,8 +10563,8 @@ a[class*='Tag'][class*='-yellow'] {
 	background: #fff46c;
 }
 
-[class*='Tag'][class*='-yellow'][class*='--inversed'],
-a[class*='Tag'][class*='-yellow'][class*='--inversed'] {
+[class*='Tag'][class*='-yellow'][class*='--wired'],
+a[class*='Tag'][class*='-yellow'][class*='--wired'] {
 	color: #fff46c;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #fff46c inset;
@@ -10557,8 +10576,8 @@ a[class*='Tag'][class*='-blue'] {
 	background: #3935cd;
 }
 
-[class*='Tag'][class*='-blue'][class*='--inversed'],
-a[class*='Tag'][class*='-blue'][class*='--inversed'] {
+[class*='Tag'][class*='-blue'][class*='--wired'],
+a[class*='Tag'][class*='-blue'][class*='--wired'] {
 	color: #3935cd;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #3935cd inset;
@@ -10570,8 +10589,8 @@ a[class*='Tag'][class*='-purple'] {
 	background: #aa80d9;
 }
 
-[class*='Tag'][class*='-purple'][class*='--inversed'],
-a[class*='Tag'][class*='-purple'][class*='--inversed'] {
+[class*='Tag'][class*='-purple'][class*='--wired'],
+a[class*='Tag'][class*='-purple'][class*='--wired'] {
 	color: #aa80d9;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #aa80d9 inset;
@@ -10583,15 +10602,15 @@ a[class*='Tag'][class*='-brown'] {
 	background: #835611;
 }
 
-[class*='Tag'][class*='-brown'][class*='--inversed'],
-a[class*='Tag'][class*='-brown'][class*='--inversed'] {
+[class*='Tag'][class*='-brown'][class*='--wired'],
+a[class*='Tag'][class*='-brown'][class*='--wired'] {
 	color: #835611;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #835611 inset;
 }
 
-[class*='Tag'][class*='--inversed'],
-a[class*='Tag'][class*='--inversed'] {
+[class*='Tag'][class*='--wired'],
+a[class*='Tag'][class*='--wired'] {
 	color: var(--components-background);
 	background-color: transparent;
 	box-shadow: 0 0 0 1px var(--components-background) inset;
@@ -10648,16 +10667,46 @@ a[class*='Tag']:active::after {
 	opacity: 0;
 }
 
-a[class*='Tag'][class*='--inversed']::after {
+a[class*='Tag'][class*='-inversed'] {
+	color: var(--components-color-inversed);
+	background: var(--components-background-inversed);
+}
+
+a[class*='Tag'][class*='-inversed']::after {
+	background-color: var(--components-background-hover-inversed);
+}
+
+a[class*='Tag'][class*='-inversed']:hover,
+a[class*='Tag'][class*='-inversed']:focus {
+	text-decoration: none;
+	color: var(--components-color-inversed);
+}
+
+a[class*='Tag'][class*='-inversed'][class*='--wired'] {
+	color: var(--components-background-inversed);
+	background-color: transparent;
+	box-shadow: 0 0 0 1px var(--components-background-inversed) inset;
+}
+
+a[class*='Tag'][class*='-inversed'][class*='--wired']::after {
+	background-color: var(--components-background-inversed);
+}
+
+a[class*='Tag'][class*='-inversed'][class*='--wired']:hover,
+a[class*='Tag'][class*='-inversed'][class*='--wired']:focus {
+	color: var(--components-color-inversed);
+}
+
+a[class*='Tag'][class*='--wired']::after {
 	background-color: var(--components-background);
 }
 
-a[class*='Tag'][class*='--inversed']:active::after {
+a[class*='Tag'][class*='--wired']:active::after {
 	opacity: .8;
 }
 
-a[class*='Tag'][class*='--inversed']:hover,
-a[class*='Tag'][class*='--inversed']:focus {
+a[class*='Tag'][class*='--wired']:hover,
+a[class*='Tag'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 
@@ -10676,18 +10725,18 @@ a[class*='Tag'][class*='-success']:focus {
 	color: #0d0d0d;
 }
 
-a[class*='Tag'][class*='-success'][class*='--inversed'] {
+a[class*='Tag'][class*='-success'][class*='--wired'] {
 	color: #74cf61;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #74cf61 inset;
 }
 
-a[class*='Tag'][class*='-success'][class*='--inversed']::after {
+a[class*='Tag'][class*='-success'][class*='--wired']::after {
 	background-color: #74cf61;
 }
 
-a[class*='Tag'][class*='-success'][class*='--inversed']:hover,
-a[class*='Tag'][class*='-success'][class*='--inversed']:focus {
+a[class*='Tag'][class*='-success'][class*='--wired']:hover,
+a[class*='Tag'][class*='-success'][class*='--wired']:focus {
 	color: #0d0d0d;
 }
 
@@ -10706,18 +10755,18 @@ a[class*='Tag'][class*='-info']:focus {
 	color: #0d0d0d;
 }
 
-a[class*='Tag'][class*='-info'][class*='--inversed'] {
+a[class*='Tag'][class*='-info'][class*='--wired'] {
 	color: #74c0cd;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #74c0cd inset;
 }
 
-a[class*='Tag'][class*='-info'][class*='--inversed']::after {
+a[class*='Tag'][class*='-info'][class*='--wired']::after {
 	background-color: #74c0cd;
 }
 
-a[class*='Tag'][class*='-info'][class*='--inversed']:hover,
-a[class*='Tag'][class*='-info'][class*='--inversed']:focus {
+a[class*='Tag'][class*='-info'][class*='--wired']:hover,
+a[class*='Tag'][class*='-info'][class*='--wired']:focus {
 	color: #0d0d0d;
 }
 
@@ -10736,18 +10785,18 @@ a[class*='Tag'][class*='-warning']:focus {
 	color: #f2f2f2;
 }
 
-a[class*='Tag'][class*='-warning'][class*='--inversed'] {
+a[class*='Tag'][class*='-warning'][class*='--wired'] {
 	color: #d9831e;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #d9831e inset;
 }
 
-a[class*='Tag'][class*='-warning'][class*='--inversed']::after {
+a[class*='Tag'][class*='-warning'][class*='--wired']::after {
 	background-color: #d9831e;
 }
 
-a[class*='Tag'][class*='-warning'][class*='--inversed']:hover,
-a[class*='Tag'][class*='-warning'][class*='--inversed']:focus {
+a[class*='Tag'][class*='-warning'][class*='--wired']:hover,
+a[class*='Tag'][class*='-warning'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 
@@ -10766,18 +10815,18 @@ a[class*='Tag'][class*='-danger']:focus {
 	color: #f2f2f2;
 }
 
-a[class*='Tag'][class*='-danger'][class*='--inversed'] {
+a[class*='Tag'][class*='-danger'][class*='--wired'] {
 	color: #d94d4d;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #d94d4d inset;
 }
 
-a[class*='Tag'][class*='-danger'][class*='--inversed']::after {
+a[class*='Tag'][class*='-danger'][class*='--wired']::after {
 	background-color: #d94d4d;
 }
 
-a[class*='Tag'][class*='-danger'][class*='--inversed']:hover,
-a[class*='Tag'][class*='-danger'][class*='--inversed']:focus {
+a[class*='Tag'][class*='-danger'][class*='--wired']:hover,
+a[class*='Tag'][class*='-danger'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 
@@ -10796,18 +10845,18 @@ a[class*='Tag'][class*='-white']:focus {
 	color: #0d0d0d;
 }
 
-a[class*='Tag'][class*='-white'][class*='--inversed'] {
+a[class*='Tag'][class*='-white'][class*='--wired'] {
 	color: #fff;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #fff inset;
 }
 
-a[class*='Tag'][class*='-white'][class*='--inversed']::after {
+a[class*='Tag'][class*='-white'][class*='--wired']::after {
 	background-color: #fff;
 }
 
-a[class*='Tag'][class*='-white'][class*='--inversed']:hover,
-a[class*='Tag'][class*='-white'][class*='--inversed']:focus {
+a[class*='Tag'][class*='-white'][class*='--wired']:hover,
+a[class*='Tag'][class*='-white'][class*='--wired']:focus {
 	color: #0d0d0d;
 }
 
@@ -10826,18 +10875,18 @@ a[class*='Tag'][class*='-ghost']:focus {
 	color: #f2f2f2;
 }
 
-a[class*='Tag'][class*='-ghost'][class*='--inversed'] {
+a[class*='Tag'][class*='-ghost'][class*='--wired'] {
 	color: transparent;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px transparent inset;
 }
 
-a[class*='Tag'][class*='-ghost'][class*='--inversed']::after {
+a[class*='Tag'][class*='-ghost'][class*='--wired']::after {
 	background-color: transparent;
 }
 
-a[class*='Tag'][class*='-ghost'][class*='--inversed']:hover,
-a[class*='Tag'][class*='-ghost'][class*='--inversed']:focus {
+a[class*='Tag'][class*='-ghost'][class*='--wired']:hover,
+a[class*='Tag'][class*='-ghost'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 
@@ -10856,18 +10905,18 @@ a[class*='Tag'][class*='-green']:focus {
 	color: #0d0d0d;
 }
 
-a[class*='Tag'][class*='-green'][class*='--inversed'] {
+a[class*='Tag'][class*='-green'][class*='--wired'] {
 	color: #74cf61;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #74cf61 inset;
 }
 
-a[class*='Tag'][class*='-green'][class*='--inversed']::after {
+a[class*='Tag'][class*='-green'][class*='--wired']::after {
 	background-color: #74cf61;
 }
 
-a[class*='Tag'][class*='-green'][class*='--inversed']:hover,
-a[class*='Tag'][class*='-green'][class*='--inversed']:focus {
+a[class*='Tag'][class*='-green'][class*='--wired']:hover,
+a[class*='Tag'][class*='-green'][class*='--wired']:focus {
 	color: #0d0d0d;
 }
 
@@ -10886,18 +10935,18 @@ a[class*='Tag'][class*='-light-blue']:focus {
 	color: #0d0d0d;
 }
 
-a[class*='Tag'][class*='-light-blue'][class*='--inversed'] {
+a[class*='Tag'][class*='-light-blue'][class*='--wired'] {
 	color: #74c0cd;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #74c0cd inset;
 }
 
-a[class*='Tag'][class*='-light-blue'][class*='--inversed']::after {
+a[class*='Tag'][class*='-light-blue'][class*='--wired']::after {
 	background-color: #74c0cd;
 }
 
-a[class*='Tag'][class*='-light-blue'][class*='--inversed']:hover,
-a[class*='Tag'][class*='-light-blue'][class*='--inversed']:focus {
+a[class*='Tag'][class*='-light-blue'][class*='--wired']:hover,
+a[class*='Tag'][class*='-light-blue'][class*='--wired']:focus {
 	color: #0d0d0d;
 }
 
@@ -10916,18 +10965,18 @@ a[class*='Tag'][class*='-orange']:focus {
 	color: #f2f2f2;
 }
 
-a[class*='Tag'][class*='-orange'][class*='--inversed'] {
+a[class*='Tag'][class*='-orange'][class*='--wired'] {
 	color: #d9831e;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #d9831e inset;
 }
 
-a[class*='Tag'][class*='-orange'][class*='--inversed']::after {
+a[class*='Tag'][class*='-orange'][class*='--wired']::after {
 	background-color: #d9831e;
 }
 
-a[class*='Tag'][class*='-orange'][class*='--inversed']:hover,
-a[class*='Tag'][class*='-orange'][class*='--inversed']:focus {
+a[class*='Tag'][class*='-orange'][class*='--wired']:hover,
+a[class*='Tag'][class*='-orange'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 
@@ -10946,18 +10995,18 @@ a[class*='Tag'][class*='-red']:focus {
 	color: #f2f2f2;
 }
 
-a[class*='Tag'][class*='-red'][class*='--inversed'] {
+a[class*='Tag'][class*='-red'][class*='--wired'] {
 	color: #d94d4d;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #d94d4d inset;
 }
 
-a[class*='Tag'][class*='-red'][class*='--inversed']::after {
+a[class*='Tag'][class*='-red'][class*='--wired']::after {
 	background-color: #d94d4d;
 }
 
-a[class*='Tag'][class*='-red'][class*='--inversed']:hover,
-a[class*='Tag'][class*='-red'][class*='--inversed']:focus {
+a[class*='Tag'][class*='-red'][class*='--wired']:hover,
+a[class*='Tag'][class*='-red'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 
@@ -10976,18 +11025,18 @@ a[class*='Tag'][class*='-yellow']:focus {
 	color: #0d0d0d;
 }
 
-a[class*='Tag'][class*='-yellow'][class*='--inversed'] {
+a[class*='Tag'][class*='-yellow'][class*='--wired'] {
 	color: #fff46c;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #fff46c inset;
 }
 
-a[class*='Tag'][class*='-yellow'][class*='--inversed']::after {
+a[class*='Tag'][class*='-yellow'][class*='--wired']::after {
 	background-color: #fff46c;
 }
 
-a[class*='Tag'][class*='-yellow'][class*='--inversed']:hover,
-a[class*='Tag'][class*='-yellow'][class*='--inversed']:focus {
+a[class*='Tag'][class*='-yellow'][class*='--wired']:hover,
+a[class*='Tag'][class*='-yellow'][class*='--wired']:focus {
 	color: #0d0d0d;
 }
 
@@ -11006,18 +11055,18 @@ a[class*='Tag'][class*='-blue']:focus {
 	color: #f2f2f2;
 }
 
-a[class*='Tag'][class*='-blue'][class*='--inversed'] {
+a[class*='Tag'][class*='-blue'][class*='--wired'] {
 	color: #3935cd;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #3935cd inset;
 }
 
-a[class*='Tag'][class*='-blue'][class*='--inversed']::after {
+a[class*='Tag'][class*='-blue'][class*='--wired']::after {
 	background-color: #3935cd;
 }
 
-a[class*='Tag'][class*='-blue'][class*='--inversed']:hover,
-a[class*='Tag'][class*='-blue'][class*='--inversed']:focus {
+a[class*='Tag'][class*='-blue'][class*='--wired']:hover,
+a[class*='Tag'][class*='-blue'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 
@@ -11036,18 +11085,18 @@ a[class*='Tag'][class*='-purple']:focus {
 	color: #0d0d0d;
 }
 
-a[class*='Tag'][class*='-purple'][class*='--inversed'] {
+a[class*='Tag'][class*='-purple'][class*='--wired'] {
 	color: #aa80d9;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #aa80d9 inset;
 }
 
-a[class*='Tag'][class*='-purple'][class*='--inversed']::after {
+a[class*='Tag'][class*='-purple'][class*='--wired']::after {
 	background-color: #aa80d9;
 }
 
-a[class*='Tag'][class*='-purple'][class*='--inversed']:hover,
-a[class*='Tag'][class*='-purple'][class*='--inversed']:focus {
+a[class*='Tag'][class*='-purple'][class*='--wired']:hover,
+a[class*='Tag'][class*='-purple'][class*='--wired']:focus {
 	color: #0d0d0d;
 }
 
@@ -11066,18 +11115,18 @@ a[class*='Tag'][class*='-brown']:focus {
 	color: #f2f2f2;
 }
 
-a[class*='Tag'][class*='-brown'][class*='--inversed'] {
+a[class*='Tag'][class*='-brown'][class*='--wired'] {
 	color: #835611;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px #835611 inset;
 }
 
-a[class*='Tag'][class*='-brown'][class*='--inversed']::after {
+a[class*='Tag'][class*='-brown'][class*='--wired']::after {
 	background-color: #835611;
 }
 
-a[class*='Tag'][class*='-brown'][class*='--inversed']:hover,
-a[class*='Tag'][class*='-brown'][class*='--inversed']:focus {
+a[class*='Tag'][class*='-brown'][class*='--wired']:hover,
+a[class*='Tag'][class*='-brown'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 

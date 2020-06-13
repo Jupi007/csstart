@@ -18,12 +18,23 @@
         text-decoration: none;
     }
 
+    &[class*="-inversed"] {
+        background: var(--components-background-inversed);
+    	color: var(--components-color-inversed);
+
+        &[class*="--wired"] {
+            background-color: transparent;
+            color: var(--components-background-inversed);
+            box-shadow: 0 0 0 $buttons-inversed-border-width var(--components-background-inversed) inset;
+        }
+    }
+
 	@each $component, $bg in $components {
 		&[class*="-#{$component}"] {
 			background: $bg;
 			color: contrast($bg, $color-base, $color-dark);
 
-			&[class*="--inversed"] {
+			&[class*="--wired"] {
 				background-color: transparent;
 				color: $bg;
 				box-shadow: 0 0 0 $buttons-inversed-border-width $bg inset;
@@ -31,7 +42,7 @@
 		}
 	}
 
-	&[class*="--inversed"] {
+	&[class*="--wired"] {
 		background-color: transparent;
 		color: var(--components-background);
 		box-shadow: 0 0 0 $buttons-inversed-border-width var(--components-background) inset;
@@ -85,7 +96,35 @@ a[class*="Tag"] {
         }
     }
 
-    &[class*="--inversed"] {
+    &[class*="-inversed"] {
+        background: var(--components-background-inversed);
+        color: var(--components-color-inversed);
+
+        &::after {
+            background-color: var(--components-background-hover-inversed);
+        }
+
+        &:hover, &:focus {
+            color: var(--components-color-inversed);
+            text-decoration: none;
+        }
+
+        &[class*="--wired"] {
+            background-color: transparent;
+            color: var(--components-background-inversed);
+            box-shadow: 0 0 0 $buttons-inversed-border-width var(--components-background-inversed) inset;
+
+            &::after {
+                background-color: var(--components-background-inversed);
+            }
+
+            &:hover, &:focus {
+                color: var(--components-color-inversed);
+            }
+        }
+    }
+
+    &[class*="--wired"] {
 		&::after {
             background-color: var(--components-background);
         }
@@ -115,7 +154,7 @@ a[class*="Tag"] {
                 text-decoration: none;
             }
 
-			&[class*="--inversed"] {
+			&[class*="--wired"] {
 				background-color: transparent;
 				color: $bg;
 				box-shadow: 0 0 0 $buttons-inversed-border-width $bg inset;

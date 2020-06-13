@@ -203,9 +203,13 @@ $figures-max-height-image: 60vh;
     :root {
         --body-bg-color: #{$body-bg};
         --color: #{$color-base};
+
         --components-background: #{$components-background-base};
         --components-background-hover: #{darken($components-background-base, $components-hover-base)};
         --components-color: #{$components-color-base};
+        --components-background-inversed: #{$components-background-dark};
+        --components-background-hover-inversed: #{darken($components-background-dark, $components-hover-dark)};
+        --components-color-inversed: #{$components-color-dark};
 
         --tables-border-color: #{$tables-border-color};
         --tables-cells-border-color: #{$tables-cells-border-color};
@@ -220,9 +224,13 @@ $figures-max-height-image: 60vh;
     :root {
         --body-bg-color: #{$body-bg-dark};
         --color: #{$color-dark};
+
         --components-background: #{$components-background-dark};
         --components-background-hover: #{darken($components-background-dark, $components-hover-dark)};
         --components-color: #{$components-color-dark};
+        --components-background-inversed: #{$components-background-base};
+        --components-background-hover-inversed: #{darken($components-background-base, $components-hover-base)};
+        --components-color-inversed: #{$components-color-base};
 
         --tables-border-color: #{$tables-dark-border-color};
         --tables-cells-border-color: #{$tables-dark-cells-border-color};

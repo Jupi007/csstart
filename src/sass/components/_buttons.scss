@@ -64,7 +64,7 @@ input[type="reset"],
                 text-decoration: none;
             }
 
-			&[class*="--inversed"] {
+			&[class*="--wired"] {
 				background-color: transparent;
 				color: $bg;
 				box-shadow: 0 0 0 $buttons-inversed-border-width $bg inset;
@@ -82,7 +82,7 @@ input[type="reset"],
 }
 
 [class*="Button"] {
-	&[class*="--inversed"] {
+	&[class*="--wired"] {
 		background-color: transparent;
 		color: var(--components-background);
 		box-shadow: 0 0 0 $buttons-inversed-border-width var(--components-background) inset;
