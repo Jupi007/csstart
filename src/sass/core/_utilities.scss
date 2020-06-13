@@ -84,14 +84,14 @@
 }
 
 .fl { float: left !important; }
-img.fl { margin-right: $spacer-base !important; }
+img.fl { margin-right: spacer($margin-base) !important; }
 
 .fr { float: right !important; }
-img.fr { margin-left: $spacer-base !important; }
+img.fr { margin-left: spacer($margin-base) !important; }
 
 img.fl,
 img.fr {
-	margin-bottom: $spacer-base !important;
+	margin-bottom: spacer($margin-base) !important;
 }
 
 .clear { clear: both !important; }
@@ -179,18 +179,18 @@ img.fr {
 	}
 
 	.#{$prefix}m {
-		& { margin: $spacer-base !important; }
-		&t { margin-top: $spacer-base !important; }
-		&r { margin-right: $spacer-base !important; }
-		&b { margin-bottom: $spacer-base !important; }
-		&l { margin-left: $spacer-base !important; }
+		& { margin: spacer($margin-base) !important; }
+		&t { margin-top: spacer($margin-base) !important; }
+		&r { margin-right: spacer($margin-base) !important; }
+		&b { margin-bottom: spacer($margin-base) !important; }
+		&l { margin-left: spacer($margin-base) !important; }
 		&y {
-			margin-top: $spacer-base !important;
-			margin-bottom: $spacer-base !important;
+			margin-top: spacer($margin-base) !important;
+			margin-bottom: spacer($margin-base) !important;
 		}
 		&x {
-			margin-left: $spacer-base !important;
-			margin-right: $spacer-base !important;
+			margin-left: spacer($margin-base) !important;
+			margin-right: spacer($margin-base) !important;
 		}
 
 		&-0 { margin: 0 !important; }
@@ -239,18 +239,18 @@ img.fr {
 	}
 
 	.#{$prefix}p {
-		& { padding: $spacer-base !important; }
-		&t { padding-top: $spacer-base !important; }
-		&r { padding-right: $spacer-base !important; }
-		&b { padding-bottom: $spacer-base !important; }
-		&l { padding-left: $spacer-base !important; }
+		& { padding: spacer($margin-base) !important; }
+		&t { padding-top: spacer($margin-base) !important; }
+		&r { padding-right: spacer($margin-base) !important; }
+		&b { padding-bottom: spacer($margin-base) !important; }
+		&l { padding-left: spacer($margin-base) !important; }
 		&y {
-			padding-top: $spacer-base !important;
-			padding-bottom: $spacer-base !important;
+			padding-top: spacer($margin-base) !important;
+			padding-bottom: spacer($margin-base) !important;
 		}
 		&x {
-			padding-left: $spacer-base !important;
-			padding-right: $spacer-base !important;
+			padding-left: spacer($margin-base) !important;
+			padding-right: spacer($margin-base) !important;
 		}
 
 		&-0 { padding: 0 !important; }

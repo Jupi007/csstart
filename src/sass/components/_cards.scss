@@ -11,7 +11,7 @@
 
 [class*="Card"][class*="--link"], a[class*="Card"] {
 	cursor: pointer;
-	color: $color-base;
+	color: var(--color);
     text-decoration: none;
 
     @include transition("box-shadow");

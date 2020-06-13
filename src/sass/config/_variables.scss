@@ -2,13 +2,32 @@
 //-*-*-*-*-*-*-*-*-*-*-*-*Core variables-*-*-*-*-*-*-*-*-*-*-*-*-*
 //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
+@media (prefers-color-scheme: light) {
+    :root {
+        --body-bg-color: #{$body-bg};
+        --color: #{$color-base};
+        --components-background: #{$components-background-base};
+        --components-background-hover: #{darken($components-background-base, $components-hover-base)};
+        --components-color: #{$components-color-base};
+    }
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --body-bg-color: #{$body-bg-dark};
+        --color: #{$color-dark};
+        --components-background: #{$components-background-dark};
+        --components-background-hover: #{darken($components-background-dark, $components-hover-dark)};
+        --components-color: #{$components-color-dark};
+    }
+}
+
 $headings: "h1, h2, h3, h4, h5, h6";
 
-$headings-margin-bottom : $margin-base / 2;
-$paragraph-margin-bottom: $margin-base;
-$separator-margins: $margin-base * 1.5;
+$headings-margin-bottom : spacer($margin-base, .5);
+$paragraph-margin-bottom: spacer($margin-base);
+$separator-margins: spacer($margin-base, 1.5);
 
-$lists-margin-bottom: $margin-base;
+$lists-margin-bottom: spacer($margin-base);
 $lists-padding-left: spacer("xx-large");
 
 $dt-font-weight: font-weight("bold");
@@ -75,7 +94,6 @@ $meter-sub-sub-optimum-background: color("success");
 $buttons-padding: spacer("tiny-plus") spacer("medium");
 $buttons-font-size: .9em;
 $buttons-border-radius: $border-radius-base;
-$buttons-hover-darken: 10%;
 $buttons-inversed-border-width: 1px;
 
 $buttons-large-padding: spacer("small") spacer("medium-plus");
@@ -148,8 +166,8 @@ $tables-border-color: grey(85);
 $tables-cells-border-color: grey(50);
 $tables-border-width: 1px;
 $tables-cells-padding: spacer("small-plus");
-$tables-margin-top: $paragraph-margin-bottom*2;
-$tables-margin-bottom: $paragraph-margin-bottom*2;
+$tables-margin-top: calc(#{$paragraph-margin-bottom} * 2);
+$tables-margin-bottom: calc(#{$paragraph-margin-bottom} * 2);
 $tables-slim-cells-padding: spacer("tiny") spacer("tiny-plus");
 $tables-headings-cells-background: grey(10);
 $tables-zebra-cells-background: grey(5);
@@ -170,8 +188,8 @@ $captions-font-style: italic;
 // -----------
 
 $blockquotes-padding: spacer("x-large");
-$blockquotes-margin-top: $paragraph-margin-bottom*2;
-$blockquotes-margin-bottom: $paragraph-margin-bottom*2;
+$blockquotes-margin-top: calc(#{$paragraph-margin-bottom} * 2);
+$blockquotes-margin-bottom: calc(#{$paragraph-margin-bottom} * 2);
 $blockquotes-background: grey(10);
 $blockquotes-border-radius: 10px;
 $blockquotes-quote-color: grey(30);
@@ -185,8 +203,8 @@ $blockquotes-cite-text-align: right;
 $figures-background: grey(80);
 $figures-border-radius: $border-radius-base;
 $figures-padding: spacer("large-plus");
-$figures-margin-top: $paragraph-margin-bottom*2;
-$figures-margin-bottom: $paragraph-margin-bottom*2;
+$figures-margin-top: calc(#{$paragraph-margin-bottom} * 2);
+$figures-margin-bottom: calc(#{$paragraph-margin-bottom} * 2);
 $figures-figcaption-color: grey(15);
 $figures-light-background: grey(10);
 $figures-light-figcaption-color: grey(75);

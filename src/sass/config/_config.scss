@@ -33,23 +33,30 @@ $breakpoints: (
 $border-radius-base: 3px;
 
 $body-bg: color('white');
+$body-bg-dark: grey(85);
 
 $link-color: color('blue');
 $link-decoration: underline;
 $link-hover-color: darken( color('blue') , 15% );
 $link-hover-decoration: underline;
 
-$margin-base: spacer('medium-plus');
+$margin-base: 'medium-plus';
 
 $components-background-base: grey(80);
-$components-color-base: color('white');
+$components-color-base: $color-dark;
+$components-hover-base: 10%;
+
+$components-background-dark: color('white');
+$components-color-dark: $color-base;
+$components-hover-dark: 10%;
 
 $components: (
 	('success', color('success')),
 	('info', color('info')),
 	('warning', color('warning')),
 	('danger', color('danger')),
-	('ghost', color('white'), $color-base),
+	('white', color('white'), $color-base),
+	('ghost', transparent, $color-base),
 
     ('green', color('green')),
     ('light-blue', color('light-blue')),
