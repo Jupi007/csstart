@@ -9,6 +9,11 @@
     background-color: transparent;
 	color: var(--color);
 
+    &[class*="-inversed"] {
+        border: $alerts-border-width solid var(--components-background-inversed);
+    	color: var(--components-color);
+    }
+
 	@each $component, $bg, $color in $components {
 		&[class*="-#{$component}"] {
 			border-color: $bg;

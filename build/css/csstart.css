@@ -11202,6 +11202,11 @@ a[class*='Tag'][class*='-brown'][class*='--wired']:focus {
 	background-color: transparent;
 }
 
+[class*='Alert'][class*='-inversed'] {
+	color: var(--components-color);
+	border: 1px solid var(--components-background-inversed);
+}
+
 [class*='Alert'][class*='-success'] {
 	color: #74cf61;
 	border-color: #74cf61;
