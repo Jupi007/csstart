@@ -8985,6 +8985,7 @@ input[type='radio'][disabled] {
 
 input[type='file'] {
 	border: none;
+	background: transparent;
 }
 
 input[type='color'] {
@@ -9150,6 +9151,7 @@ input[type='radio']:indeterminate::after {
 input[type='range'] {
 	cursor: pointer;
 	border: 0;
+	background: transparent;
 	-webkit-appearance: none;
 	   -moz-appearance: none;
 	        appearance: none;

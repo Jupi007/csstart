@@ -28,6 +28,7 @@ input[type="range"] {
 	cursor: pointer;
 	appearance: none;
     border: 0;
+    background: transparent;
 
     &:focus {
         outline: none;
