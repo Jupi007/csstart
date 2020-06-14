@@ -9538,6 +9538,130 @@ input[type='reset'][class*='-inversed'][class*='--wired']:focus,
 	color: var(--components-color-inversed);
 }
 
+button[class*='-light'],
+input[type='button'][class*='-light'],
+input[type='submit'][class*='-light'],
+input[type='reset'][class*='-light'],
+[class*='Button'][class*='-light'] {
+	color: #0d0d0d;
+	background: #fff;
+}
+
+button[class*='-light']::after,
+input[type='button'][class*='-light']::after,
+input[type='submit'][class*='-light']::after,
+input[type='reset'][class*='-light']::after,
+[class*='Button'][class*='-light']::after {
+	background-color: #e6e6e6;
+}
+
+button[class*='-light']:hover,
+button[class*='-light']:focus,
+input[type='button'][class*='-light']:hover,
+input[type='button'][class*='-light']:focus,
+input[type='submit'][class*='-light']:hover,
+input[type='submit'][class*='-light']:focus,
+input[type='reset'][class*='-light']:hover,
+input[type='reset'][class*='-light']:focus,
+[class*='Button'][class*='-light']:hover,
+[class*='Button'][class*='-light']:focus {
+	text-decoration: none;
+	color: #0d0d0d;
+}
+
+button[class*='-light'][class*='--wired'],
+input[type='button'][class*='-light'][class*='--wired'],
+input[type='submit'][class*='-light'][class*='--wired'],
+input[type='reset'][class*='-light'][class*='--wired'],
+[class*='Button'][class*='-light'][class*='--wired'] {
+	color: #fff;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #fff inset;
+}
+
+button[class*='-light'][class*='--wired']::after,
+input[type='button'][class*='-light'][class*='--wired']::after,
+input[type='submit'][class*='-light'][class*='--wired']::after,
+input[type='reset'][class*='-light'][class*='--wired']::after,
+[class*='Button'][class*='-light'][class*='--wired']::after {
+	background-color: #fff;
+}
+
+button[class*='-light'][class*='--wired']:hover,
+button[class*='-light'][class*='--wired']:focus,
+input[type='button'][class*='-light'][class*='--wired']:hover,
+input[type='button'][class*='-light'][class*='--wired']:focus,
+input[type='submit'][class*='-light'][class*='--wired']:hover,
+input[type='submit'][class*='-light'][class*='--wired']:focus,
+input[type='reset'][class*='-light'][class*='--wired']:hover,
+input[type='reset'][class*='-light'][class*='--wired']:focus,
+[class*='Button'][class*='-light'][class*='--wired']:hover,
+[class*='Button'][class*='-light'][class*='--wired']:focus {
+	color: #0d0d0d;
+}
+
+button[class*='-dark'],
+input[type='button'][class*='-dark'],
+input[type='submit'][class*='-dark'],
+input[type='reset'][class*='-dark'],
+[class*='Button'][class*='-dark'] {
+	color: #f2f2f2;
+	background: #333;
+}
+
+button[class*='-dark']::after,
+input[type='button'][class*='-dark']::after,
+input[type='submit'][class*='-dark']::after,
+input[type='reset'][class*='-dark']::after,
+[class*='Button'][class*='-dark']::after {
+	background-color: #1a1a1a;
+}
+
+button[class*='-dark']:hover,
+button[class*='-dark']:focus,
+input[type='button'][class*='-dark']:hover,
+input[type='button'][class*='-dark']:focus,
+input[type='submit'][class*='-dark']:hover,
+input[type='submit'][class*='-dark']:focus,
+input[type='reset'][class*='-dark']:hover,
+input[type='reset'][class*='-dark']:focus,
+[class*='Button'][class*='-dark']:hover,
+[class*='Button'][class*='-dark']:focus {
+	text-decoration: none;
+	color: #f2f2f2;
+}
+
+button[class*='-dark'][class*='--wired'],
+input[type='button'][class*='-dark'][class*='--wired'],
+input[type='submit'][class*='-dark'][class*='--wired'],
+input[type='reset'][class*='-dark'][class*='--wired'],
+[class*='Button'][class*='-dark'][class*='--wired'] {
+	color: #333;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #333 inset;
+}
+
+button[class*='-dark'][class*='--wired']::after,
+input[type='button'][class*='-dark'][class*='--wired']::after,
+input[type='submit'][class*='-dark'][class*='--wired']::after,
+input[type='reset'][class*='-dark'][class*='--wired']::after,
+[class*='Button'][class*='-dark'][class*='--wired']::after {
+	background-color: #333;
+}
+
+button[class*='-dark'][class*='--wired']:hover,
+button[class*='-dark'][class*='--wired']:focus,
+input[type='button'][class*='-dark'][class*='--wired']:hover,
+input[type='button'][class*='-dark'][class*='--wired']:focus,
+input[type='submit'][class*='-dark'][class*='--wired']:hover,
+input[type='submit'][class*='-dark'][class*='--wired']:focus,
+input[type='reset'][class*='-dark'][class*='--wired']:hover,
+input[type='reset'][class*='-dark'][class*='--wired']:focus,
+[class*='Button'][class*='-dark'][class*='--wired']:hover,
+[class*='Button'][class*='-dark'][class*='--wired']:focus {
+	color: #f2f2f2;
+}
+
 button[class*='-ghost'],
 input[type='button'][class*='-ghost'],
 input[type='submit'][class*='-ghost'],
@@ -9597,378 +9721,6 @@ input[type='reset'][class*='-ghost'][class*='--wired']:hover,
 input[type='reset'][class*='-ghost'][class*='--wired']:focus,
 [class*='Button'][class*='-ghost'][class*='--wired']:hover,
 [class*='Button'][class*='-ghost'][class*='--wired']:focus {
-	color: #f2f2f2;
-}
-
-button[class*='-success'],
-input[type='button'][class*='-success'],
-input[type='submit'][class*='-success'],
-input[type='reset'][class*='-success'],
-[class*='Button'][class*='-success'] {
-	color: #0d0d0d;
-	background: #74cf61;
-}
-
-button[class*='-success']::after,
-input[type='button'][class*='-success']::after,
-input[type='submit'][class*='-success']::after,
-input[type='reset'][class*='-success']::after,
-[class*='Button'][class*='-success']::after {
-	background-color: #52c23b;
-}
-
-button[class*='-success']:hover,
-button[class*='-success']:focus,
-input[type='button'][class*='-success']:hover,
-input[type='button'][class*='-success']:focus,
-input[type='submit'][class*='-success']:hover,
-input[type='submit'][class*='-success']:focus,
-input[type='reset'][class*='-success']:hover,
-input[type='reset'][class*='-success']:focus,
-[class*='Button'][class*='-success']:hover,
-[class*='Button'][class*='-success']:focus {
-	text-decoration: none;
-	color: #0d0d0d;
-}
-
-button[class*='-success'][class*='--wired'],
-input[type='button'][class*='-success'][class*='--wired'],
-input[type='submit'][class*='-success'][class*='--wired'],
-input[type='reset'][class*='-success'][class*='--wired'],
-[class*='Button'][class*='-success'][class*='--wired'] {
-	color: #74cf61;
-	background-color: transparent;
-	box-shadow: 0 0 0 1px #74cf61 inset;
-}
-
-button[class*='-success'][class*='--wired']::after,
-input[type='button'][class*='-success'][class*='--wired']::after,
-input[type='submit'][class*='-success'][class*='--wired']::after,
-input[type='reset'][class*='-success'][class*='--wired']::after,
-[class*='Button'][class*='-success'][class*='--wired']::after {
-	background-color: #74cf61;
-}
-
-button[class*='-success'][class*='--wired']:hover,
-button[class*='-success'][class*='--wired']:focus,
-input[type='button'][class*='-success'][class*='--wired']:hover,
-input[type='button'][class*='-success'][class*='--wired']:focus,
-input[type='submit'][class*='-success'][class*='--wired']:hover,
-input[type='submit'][class*='-success'][class*='--wired']:focus,
-input[type='reset'][class*='-success'][class*='--wired']:hover,
-input[type='reset'][class*='-success'][class*='--wired']:focus,
-[class*='Button'][class*='-success'][class*='--wired']:hover,
-[class*='Button'][class*='-success'][class*='--wired']:focus {
-	color: #0d0d0d;
-}
-
-button[class*='-info'],
-input[type='button'][class*='-info'],
-input[type='submit'][class*='-info'],
-input[type='reset'][class*='-info'],
-[class*='Button'][class*='-info'] {
-	color: #0d0d0d;
-	background: #74c0cd;
-}
-
-button[class*='-info']::after,
-input[type='button'][class*='-info']::after,
-input[type='submit'][class*='-info']::after,
-input[type='reset'][class*='-info']::after,
-[class*='Button'][class*='-info']::after {
-	background-color: #4eafc0;
-}
-
-button[class*='-info']:hover,
-button[class*='-info']:focus,
-input[type='button'][class*='-info']:hover,
-input[type='button'][class*='-info']:focus,
-input[type='submit'][class*='-info']:hover,
-input[type='submit'][class*='-info']:focus,
-input[type='reset'][class*='-info']:hover,
-input[type='reset'][class*='-info']:focus,
-[class*='Button'][class*='-info']:hover,
-[class*='Button'][class*='-info']:focus {
-	text-decoration: none;
-	color: #0d0d0d;
-}
-
-button[class*='-info'][class*='--wired'],
-input[type='button'][class*='-info'][class*='--wired'],
-input[type='submit'][class*='-info'][class*='--wired'],
-input[type='reset'][class*='-info'][class*='--wired'],
-[class*='Button'][class*='-info'][class*='--wired'] {
-	color: #74c0cd;
-	background-color: transparent;
-	box-shadow: 0 0 0 1px #74c0cd inset;
-}
-
-button[class*='-info'][class*='--wired']::after,
-input[type='button'][class*='-info'][class*='--wired']::after,
-input[type='submit'][class*='-info'][class*='--wired']::after,
-input[type='reset'][class*='-info'][class*='--wired']::after,
-[class*='Button'][class*='-info'][class*='--wired']::after {
-	background-color: #74c0cd;
-}
-
-button[class*='-info'][class*='--wired']:hover,
-button[class*='-info'][class*='--wired']:focus,
-input[type='button'][class*='-info'][class*='--wired']:hover,
-input[type='button'][class*='-info'][class*='--wired']:focus,
-input[type='submit'][class*='-info'][class*='--wired']:hover,
-input[type='submit'][class*='-info'][class*='--wired']:focus,
-input[type='reset'][class*='-info'][class*='--wired']:hover,
-input[type='reset'][class*='-info'][class*='--wired']:focus,
-[class*='Button'][class*='-info'][class*='--wired']:hover,
-[class*='Button'][class*='-info'][class*='--wired']:focus {
-	color: #0d0d0d;
-}
-
-button[class*='-warning'],
-input[type='button'][class*='-warning'],
-input[type='submit'][class*='-warning'],
-input[type='reset'][class*='-warning'],
-[class*='Button'][class*='-warning'] {
-	color: #f2f2f2;
-	background: #d9831e;
-}
-
-button[class*='-warning']::after,
-input[type='button'][class*='-warning']::after,
-input[type='submit'][class*='-warning']::after,
-input[type='reset'][class*='-warning']::after,
-[class*='Button'][class*='-warning']::after {
-	background-color: #ac6818;
-}
-
-button[class*='-warning']:hover,
-button[class*='-warning']:focus,
-input[type='button'][class*='-warning']:hover,
-input[type='button'][class*='-warning']:focus,
-input[type='submit'][class*='-warning']:hover,
-input[type='submit'][class*='-warning']:focus,
-input[type='reset'][class*='-warning']:hover,
-input[type='reset'][class*='-warning']:focus,
-[class*='Button'][class*='-warning']:hover,
-[class*='Button'][class*='-warning']:focus {
-	text-decoration: none;
-	color: #f2f2f2;
-}
-
-button[class*='-warning'][class*='--wired'],
-input[type='button'][class*='-warning'][class*='--wired'],
-input[type='submit'][class*='-warning'][class*='--wired'],
-input[type='reset'][class*='-warning'][class*='--wired'],
-[class*='Button'][class*='-warning'][class*='--wired'] {
-	color: #d9831e;
-	background-color: transparent;
-	box-shadow: 0 0 0 1px #d9831e inset;
-}
-
-button[class*='-warning'][class*='--wired']::after,
-input[type='button'][class*='-warning'][class*='--wired']::after,
-input[type='submit'][class*='-warning'][class*='--wired']::after,
-input[type='reset'][class*='-warning'][class*='--wired']::after,
-[class*='Button'][class*='-warning'][class*='--wired']::after {
-	background-color: #d9831e;
-}
-
-button[class*='-warning'][class*='--wired']:hover,
-button[class*='-warning'][class*='--wired']:focus,
-input[type='button'][class*='-warning'][class*='--wired']:hover,
-input[type='button'][class*='-warning'][class*='--wired']:focus,
-input[type='submit'][class*='-warning'][class*='--wired']:hover,
-input[type='submit'][class*='-warning'][class*='--wired']:focus,
-input[type='reset'][class*='-warning'][class*='--wired']:hover,
-input[type='reset'][class*='-warning'][class*='--wired']:focus,
-[class*='Button'][class*='-warning'][class*='--wired']:hover,
-[class*='Button'][class*='-warning'][class*='--wired']:focus {
-	color: #f2f2f2;
-}
-
-button[class*='-danger'],
-input[type='button'][class*='-danger'],
-input[type='submit'][class*='-danger'],
-input[type='reset'][class*='-danger'],
-[class*='Button'][class*='-danger'] {
-	color: #f2f2f2;
-	background: #d94d4d;
-}
-
-button[class*='-danger']::after,
-input[type='button'][class*='-danger']::after,
-input[type='submit'][class*='-danger']::after,
-input[type='reset'][class*='-danger']::after,
-[class*='Button'][class*='-danger']::after {
-	background-color: #c82b2b;
-}
-
-button[class*='-danger']:hover,
-button[class*='-danger']:focus,
-input[type='button'][class*='-danger']:hover,
-input[type='button'][class*='-danger']:focus,
-input[type='submit'][class*='-danger']:hover,
-input[type='submit'][class*='-danger']:focus,
-input[type='reset'][class*='-danger']:hover,
-input[type='reset'][class*='-danger']:focus,
-[class*='Button'][class*='-danger']:hover,
-[class*='Button'][class*='-danger']:focus {
-	text-decoration: none;
-	color: #f2f2f2;
-}
-
-button[class*='-danger'][class*='--wired'],
-input[type='button'][class*='-danger'][class*='--wired'],
-input[type='submit'][class*='-danger'][class*='--wired'],
-input[type='reset'][class*='-danger'][class*='--wired'],
-[class*='Button'][class*='-danger'][class*='--wired'] {
-	color: #d94d4d;
-	background-color: transparent;
-	box-shadow: 0 0 0 1px #d94d4d inset;
-}
-
-button[class*='-danger'][class*='--wired']::after,
-input[type='button'][class*='-danger'][class*='--wired']::after,
-input[type='submit'][class*='-danger'][class*='--wired']::after,
-input[type='reset'][class*='-danger'][class*='--wired']::after,
-[class*='Button'][class*='-danger'][class*='--wired']::after {
-	background-color: #d94d4d;
-}
-
-button[class*='-danger'][class*='--wired']:hover,
-button[class*='-danger'][class*='--wired']:focus,
-input[type='button'][class*='-danger'][class*='--wired']:hover,
-input[type='button'][class*='-danger'][class*='--wired']:focus,
-input[type='submit'][class*='-danger'][class*='--wired']:hover,
-input[type='submit'][class*='-danger'][class*='--wired']:focus,
-input[type='reset'][class*='-danger'][class*='--wired']:hover,
-input[type='reset'][class*='-danger'][class*='--wired']:focus,
-[class*='Button'][class*='-danger'][class*='--wired']:hover,
-[class*='Button'][class*='-danger'][class*='--wired']:focus {
-	color: #f2f2f2;
-}
-
-button[class*='-white'],
-input[type='button'][class*='-white'],
-input[type='submit'][class*='-white'],
-input[type='reset'][class*='-white'],
-[class*='Button'][class*='-white'] {
-	color: #0d0d0d;
-	background: #fff;
-}
-
-button[class*='-white']::after,
-input[type='button'][class*='-white']::after,
-input[type='submit'][class*='-white']::after,
-input[type='reset'][class*='-white']::after,
-[class*='Button'][class*='-white']::after {
-	background-color: #e6e6e6;
-}
-
-button[class*='-white']:hover,
-button[class*='-white']:focus,
-input[type='button'][class*='-white']:hover,
-input[type='button'][class*='-white']:focus,
-input[type='submit'][class*='-white']:hover,
-input[type='submit'][class*='-white']:focus,
-input[type='reset'][class*='-white']:hover,
-input[type='reset'][class*='-white']:focus,
-[class*='Button'][class*='-white']:hover,
-[class*='Button'][class*='-white']:focus {
-	text-decoration: none;
-	color: #0d0d0d;
-}
-
-button[class*='-white'][class*='--wired'],
-input[type='button'][class*='-white'][class*='--wired'],
-input[type='submit'][class*='-white'][class*='--wired'],
-input[type='reset'][class*='-white'][class*='--wired'],
-[class*='Button'][class*='-white'][class*='--wired'] {
-	color: #fff;
-	background-color: transparent;
-	box-shadow: 0 0 0 1px #fff inset;
-}
-
-button[class*='-white'][class*='--wired']::after,
-input[type='button'][class*='-white'][class*='--wired']::after,
-input[type='submit'][class*='-white'][class*='--wired']::after,
-input[type='reset'][class*='-white'][class*='--wired']::after,
-[class*='Button'][class*='-white'][class*='--wired']::after {
-	background-color: #fff;
-}
-
-button[class*='-white'][class*='--wired']:hover,
-button[class*='-white'][class*='--wired']:focus,
-input[type='button'][class*='-white'][class*='--wired']:hover,
-input[type='button'][class*='-white'][class*='--wired']:focus,
-input[type='submit'][class*='-white'][class*='--wired']:hover,
-input[type='submit'][class*='-white'][class*='--wired']:focus,
-input[type='reset'][class*='-white'][class*='--wired']:hover,
-input[type='reset'][class*='-white'][class*='--wired']:focus,
-[class*='Button'][class*='-white'][class*='--wired']:hover,
-[class*='Button'][class*='-white'][class*='--wired']:focus {
-	color: #0d0d0d;
-}
-
-button[class*='-black'],
-input[type='button'][class*='-black'],
-input[type='submit'][class*='-black'],
-input[type='reset'][class*='-black'],
-[class*='Button'][class*='-black'] {
-	color: #f2f2f2;
-	background: #000;
-}
-
-button[class*='-black']::after,
-input[type='button'][class*='-black']::after,
-input[type='submit'][class*='-black']::after,
-input[type='reset'][class*='-black']::after,
-[class*='Button'][class*='-black']::after {
-	background-color: black;
-}
-
-button[class*='-black']:hover,
-button[class*='-black']:focus,
-input[type='button'][class*='-black']:hover,
-input[type='button'][class*='-black']:focus,
-input[type='submit'][class*='-black']:hover,
-input[type='submit'][class*='-black']:focus,
-input[type='reset'][class*='-black']:hover,
-input[type='reset'][class*='-black']:focus,
-[class*='Button'][class*='-black']:hover,
-[class*='Button'][class*='-black']:focus {
-	text-decoration: none;
-	color: #f2f2f2;
-}
-
-button[class*='-black'][class*='--wired'],
-input[type='button'][class*='-black'][class*='--wired'],
-input[type='submit'][class*='-black'][class*='--wired'],
-input[type='reset'][class*='-black'][class*='--wired'],
-[class*='Button'][class*='-black'][class*='--wired'] {
-	color: #000;
-	background-color: transparent;
-	box-shadow: 0 0 0 1px #000 inset;
-}
-
-button[class*='-black'][class*='--wired']::after,
-input[type='button'][class*='-black'][class*='--wired']::after,
-input[type='submit'][class*='-black'][class*='--wired']::after,
-input[type='reset'][class*='-black'][class*='--wired']::after,
-[class*='Button'][class*='-black'][class*='--wired']::after {
-	background-color: #000;
-}
-
-button[class*='-black'][class*='--wired']:hover,
-button[class*='-black'][class*='--wired']:focus,
-input[type='button'][class*='-black'][class*='--wired']:hover,
-input[type='button'][class*='-black'][class*='--wired']:focus,
-input[type='submit'][class*='-black'][class*='--wired']:hover,
-input[type='submit'][class*='-black'][class*='--wired']:focus,
-input[type='reset'][class*='-black'][class*='--wired']:hover,
-input[type='reset'][class*='-black'][class*='--wired']:focus,
-[class*='Button'][class*='-black'][class*='--wired']:hover,
-[class*='Button'][class*='-black'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 
@@ -10468,6 +10220,254 @@ input[type='reset'][class*='-brown'][class*='--wired']:focus,
 	color: #f2f2f2;
 }
 
+button[class*='-success'],
+input[type='button'][class*='-success'],
+input[type='submit'][class*='-success'],
+input[type='reset'][class*='-success'],
+[class*='Button'][class*='-success'] {
+	color: #0d0d0d;
+	background: #74cf61;
+}
+
+button[class*='-success']::after,
+input[type='button'][class*='-success']::after,
+input[type='submit'][class*='-success']::after,
+input[type='reset'][class*='-success']::after,
+[class*='Button'][class*='-success']::after {
+	background-color: #52c23b;
+}
+
+button[class*='-success']:hover,
+button[class*='-success']:focus,
+input[type='button'][class*='-success']:hover,
+input[type='button'][class*='-success']:focus,
+input[type='submit'][class*='-success']:hover,
+input[type='submit'][class*='-success']:focus,
+input[type='reset'][class*='-success']:hover,
+input[type='reset'][class*='-success']:focus,
+[class*='Button'][class*='-success']:hover,
+[class*='Button'][class*='-success']:focus {
+	text-decoration: none;
+	color: #0d0d0d;
+}
+
+button[class*='-success'][class*='--wired'],
+input[type='button'][class*='-success'][class*='--wired'],
+input[type='submit'][class*='-success'][class*='--wired'],
+input[type='reset'][class*='-success'][class*='--wired'],
+[class*='Button'][class*='-success'][class*='--wired'] {
+	color: #74cf61;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #74cf61 inset;
+}
+
+button[class*='-success'][class*='--wired']::after,
+input[type='button'][class*='-success'][class*='--wired']::after,
+input[type='submit'][class*='-success'][class*='--wired']::after,
+input[type='reset'][class*='-success'][class*='--wired']::after,
+[class*='Button'][class*='-success'][class*='--wired']::after {
+	background-color: #74cf61;
+}
+
+button[class*='-success'][class*='--wired']:hover,
+button[class*='-success'][class*='--wired']:focus,
+input[type='button'][class*='-success'][class*='--wired']:hover,
+input[type='button'][class*='-success'][class*='--wired']:focus,
+input[type='submit'][class*='-success'][class*='--wired']:hover,
+input[type='submit'][class*='-success'][class*='--wired']:focus,
+input[type='reset'][class*='-success'][class*='--wired']:hover,
+input[type='reset'][class*='-success'][class*='--wired']:focus,
+[class*='Button'][class*='-success'][class*='--wired']:hover,
+[class*='Button'][class*='-success'][class*='--wired']:focus {
+	color: #0d0d0d;
+}
+
+button[class*='-info'],
+input[type='button'][class*='-info'],
+input[type='submit'][class*='-info'],
+input[type='reset'][class*='-info'],
+[class*='Button'][class*='-info'] {
+	color: #0d0d0d;
+	background: #74c0cd;
+}
+
+button[class*='-info']::after,
+input[type='button'][class*='-info']::after,
+input[type='submit'][class*='-info']::after,
+input[type='reset'][class*='-info']::after,
+[class*='Button'][class*='-info']::after {
+	background-color: #4eafc0;
+}
+
+button[class*='-info']:hover,
+button[class*='-info']:focus,
+input[type='button'][class*='-info']:hover,
+input[type='button'][class*='-info']:focus,
+input[type='submit'][class*='-info']:hover,
+input[type='submit'][class*='-info']:focus,
+input[type='reset'][class*='-info']:hover,
+input[type='reset'][class*='-info']:focus,
+[class*='Button'][class*='-info']:hover,
+[class*='Button'][class*='-info']:focus {
+	text-decoration: none;
+	color: #0d0d0d;
+}
+
+button[class*='-info'][class*='--wired'],
+input[type='button'][class*='-info'][class*='--wired'],
+input[type='submit'][class*='-info'][class*='--wired'],
+input[type='reset'][class*='-info'][class*='--wired'],
+[class*='Button'][class*='-info'][class*='--wired'] {
+	color: #74c0cd;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #74c0cd inset;
+}
+
+button[class*='-info'][class*='--wired']::after,
+input[type='button'][class*='-info'][class*='--wired']::after,
+input[type='submit'][class*='-info'][class*='--wired']::after,
+input[type='reset'][class*='-info'][class*='--wired']::after,
+[class*='Button'][class*='-info'][class*='--wired']::after {
+	background-color: #74c0cd;
+}
+
+button[class*='-info'][class*='--wired']:hover,
+button[class*='-info'][class*='--wired']:focus,
+input[type='button'][class*='-info'][class*='--wired']:hover,
+input[type='button'][class*='-info'][class*='--wired']:focus,
+input[type='submit'][class*='-info'][class*='--wired']:hover,
+input[type='submit'][class*='-info'][class*='--wired']:focus,
+input[type='reset'][class*='-info'][class*='--wired']:hover,
+input[type='reset'][class*='-info'][class*='--wired']:focus,
+[class*='Button'][class*='-info'][class*='--wired']:hover,
+[class*='Button'][class*='-info'][class*='--wired']:focus {
+	color: #0d0d0d;
+}
+
+button[class*='-warning'],
+input[type='button'][class*='-warning'],
+input[type='submit'][class*='-warning'],
+input[type='reset'][class*='-warning'],
+[class*='Button'][class*='-warning'] {
+	color: #f2f2f2;
+	background: #d9831e;
+}
+
+button[class*='-warning']::after,
+input[type='button'][class*='-warning']::after,
+input[type='submit'][class*='-warning']::after,
+input[type='reset'][class*='-warning']::after,
+[class*='Button'][class*='-warning']::after {
+	background-color: #ac6818;
+}
+
+button[class*='-warning']:hover,
+button[class*='-warning']:focus,
+input[type='button'][class*='-warning']:hover,
+input[type='button'][class*='-warning']:focus,
+input[type='submit'][class*='-warning']:hover,
+input[type='submit'][class*='-warning']:focus,
+input[type='reset'][class*='-warning']:hover,
+input[type='reset'][class*='-warning']:focus,
+[class*='Button'][class*='-warning']:hover,
+[class*='Button'][class*='-warning']:focus {
+	text-decoration: none;
+	color: #f2f2f2;
+}
+
+button[class*='-warning'][class*='--wired'],
+input[type='button'][class*='-warning'][class*='--wired'],
+input[type='submit'][class*='-warning'][class*='--wired'],
+input[type='reset'][class*='-warning'][class*='--wired'],
+[class*='Button'][class*='-warning'][class*='--wired'] {
+	color: #d9831e;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #d9831e inset;
+}
+
+button[class*='-warning'][class*='--wired']::after,
+input[type='button'][class*='-warning'][class*='--wired']::after,
+input[type='submit'][class*='-warning'][class*='--wired']::after,
+input[type='reset'][class*='-warning'][class*='--wired']::after,
+[class*='Button'][class*='-warning'][class*='--wired']::after {
+	background-color: #d9831e;
+}
+
+button[class*='-warning'][class*='--wired']:hover,
+button[class*='-warning'][class*='--wired']:focus,
+input[type='button'][class*='-warning'][class*='--wired']:hover,
+input[type='button'][class*='-warning'][class*='--wired']:focus,
+input[type='submit'][class*='-warning'][class*='--wired']:hover,
+input[type='submit'][class*='-warning'][class*='--wired']:focus,
+input[type='reset'][class*='-warning'][class*='--wired']:hover,
+input[type='reset'][class*='-warning'][class*='--wired']:focus,
+[class*='Button'][class*='-warning'][class*='--wired']:hover,
+[class*='Button'][class*='-warning'][class*='--wired']:focus {
+	color: #f2f2f2;
+}
+
+button[class*='-danger'],
+input[type='button'][class*='-danger'],
+input[type='submit'][class*='-danger'],
+input[type='reset'][class*='-danger'],
+[class*='Button'][class*='-danger'] {
+	color: #f2f2f2;
+	background: #d94d4d;
+}
+
+button[class*='-danger']::after,
+input[type='button'][class*='-danger']::after,
+input[type='submit'][class*='-danger']::after,
+input[type='reset'][class*='-danger']::after,
+[class*='Button'][class*='-danger']::after {
+	background-color: #c82b2b;
+}
+
+button[class*='-danger']:hover,
+button[class*='-danger']:focus,
+input[type='button'][class*='-danger']:hover,
+input[type='button'][class*='-danger']:focus,
+input[type='submit'][class*='-danger']:hover,
+input[type='submit'][class*='-danger']:focus,
+input[type='reset'][class*='-danger']:hover,
+input[type='reset'][class*='-danger']:focus,
+[class*='Button'][class*='-danger']:hover,
+[class*='Button'][class*='-danger']:focus {
+	text-decoration: none;
+	color: #f2f2f2;
+}
+
+button[class*='-danger'][class*='--wired'],
+input[type='button'][class*='-danger'][class*='--wired'],
+input[type='submit'][class*='-danger'][class*='--wired'],
+input[type='reset'][class*='-danger'][class*='--wired'],
+[class*='Button'][class*='-danger'][class*='--wired'] {
+	color: #d94d4d;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #d94d4d inset;
+}
+
+button[class*='-danger'][class*='--wired']::after,
+input[type='button'][class*='-danger'][class*='--wired']::after,
+input[type='submit'][class*='-danger'][class*='--wired']::after,
+input[type='reset'][class*='-danger'][class*='--wired']::after,
+[class*='Button'][class*='-danger'][class*='--wired']::after {
+	background-color: #d94d4d;
+}
+
+button[class*='-danger'][class*='--wired']:hover,
+button[class*='-danger'][class*='--wired']:focus,
+input[type='button'][class*='-danger'][class*='--wired']:hover,
+input[type='button'][class*='-danger'][class*='--wired']:focus,
+input[type='submit'][class*='-danger'][class*='--wired']:hover,
+input[type='submit'][class*='-danger'][class*='--wired']:focus,
+input[type='reset'][class*='-danger'][class*='--wired']:hover,
+input[type='reset'][class*='-danger'][class*='--wired']:focus,
+[class*='Button'][class*='-danger'][class*='--wired']:hover,
+[class*='Button'][class*='-danger'][class*='--wired']:focus {
+	color: #f2f2f2;
+}
+
 [class*='Button'][class*='--wired'] {
 	transition-timing-function: ease;
 	transition-duration: .2s;
@@ -10551,6 +10551,32 @@ a[class*='Tag'][class*='-inversed'][class*='--wired'] {
 	box-shadow: 0 0 0 1px var(--components-background-inversed) inset;
 }
 
+[class*='Tag'][class*='-light'],
+a[class*='Tag'][class*='-light'] {
+	color: #0d0d0d;
+	background: #fff;
+}
+
+[class*='Tag'][class*='-light'][class*='--wired'],
+a[class*='Tag'][class*='-light'][class*='--wired'] {
+	color: #fff;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #fff inset;
+}
+
+[class*='Tag'][class*='-dark'],
+a[class*='Tag'][class*='-dark'] {
+	color: #f2f2f2;
+	background: #333;
+}
+
+[class*='Tag'][class*='-dark'][class*='--wired'],
+a[class*='Tag'][class*='-dark'][class*='--wired'] {
+	color: #333;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #333 inset;
+}
+
 [class*='Tag'][class*='-ghost'],
 a[class*='Tag'][class*='-ghost'] {
 	color: var(--color);
@@ -10562,84 +10588,6 @@ a[class*='Tag'][class*='-ghost'][class*='--wired'] {
 	color: transparent;
 	background-color: transparent;
 	box-shadow: 0 0 0 1px transparent inset;
-}
-
-[class*='Tag'][class*='-success'],
-a[class*='Tag'][class*='-success'] {
-	color: #0d0d0d;
-	background: #74cf61;
-}
-
-[class*='Tag'][class*='-success'][class*='--wired'],
-a[class*='Tag'][class*='-success'][class*='--wired'] {
-	color: #74cf61;
-	background-color: transparent;
-	box-shadow: 0 0 0 1px #74cf61 inset;
-}
-
-[class*='Tag'][class*='-info'],
-a[class*='Tag'][class*='-info'] {
-	color: #0d0d0d;
-	background: #74c0cd;
-}
-
-[class*='Tag'][class*='-info'][class*='--wired'],
-a[class*='Tag'][class*='-info'][class*='--wired'] {
-	color: #74c0cd;
-	background-color: transparent;
-	box-shadow: 0 0 0 1px #74c0cd inset;
-}
-
-[class*='Tag'][class*='-warning'],
-a[class*='Tag'][class*='-warning'] {
-	color: #f2f2f2;
-	background: #d9831e;
-}
-
-[class*='Tag'][class*='-warning'][class*='--wired'],
-a[class*='Tag'][class*='-warning'][class*='--wired'] {
-	color: #d9831e;
-	background-color: transparent;
-	box-shadow: 0 0 0 1px #d9831e inset;
-}
-
-[class*='Tag'][class*='-danger'],
-a[class*='Tag'][class*='-danger'] {
-	color: #f2f2f2;
-	background: #d94d4d;
-}
-
-[class*='Tag'][class*='-danger'][class*='--wired'],
-a[class*='Tag'][class*='-danger'][class*='--wired'] {
-	color: #d94d4d;
-	background-color: transparent;
-	box-shadow: 0 0 0 1px #d94d4d inset;
-}
-
-[class*='Tag'][class*='-white'],
-a[class*='Tag'][class*='-white'] {
-	color: #0d0d0d;
-	background: #fff;
-}
-
-[class*='Tag'][class*='-white'][class*='--wired'],
-a[class*='Tag'][class*='-white'][class*='--wired'] {
-	color: #fff;
-	background-color: transparent;
-	box-shadow: 0 0 0 1px #fff inset;
-}
-
-[class*='Tag'][class*='-black'],
-a[class*='Tag'][class*='-black'] {
-	color: #f2f2f2;
-	background: #000;
-}
-
-[class*='Tag'][class*='-black'][class*='--wired'],
-a[class*='Tag'][class*='-black'][class*='--wired'] {
-	color: #000;
-	background-color: transparent;
-	box-shadow: 0 0 0 1px #000 inset;
 }
 
 [class*='Tag'][class*='-red'],
@@ -10746,6 +10694,58 @@ a[class*='Tag'][class*='-brown'][class*='--wired'] {
 	box-shadow: 0 0 0 1px #835611 inset;
 }
 
+[class*='Tag'][class*='-success'],
+a[class*='Tag'][class*='-success'] {
+	color: #0d0d0d;
+	background: #74cf61;
+}
+
+[class*='Tag'][class*='-success'][class*='--wired'],
+a[class*='Tag'][class*='-success'][class*='--wired'] {
+	color: #74cf61;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #74cf61 inset;
+}
+
+[class*='Tag'][class*='-info'],
+a[class*='Tag'][class*='-info'] {
+	color: #0d0d0d;
+	background: #74c0cd;
+}
+
+[class*='Tag'][class*='-info'][class*='--wired'],
+a[class*='Tag'][class*='-info'][class*='--wired'] {
+	color: #74c0cd;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #74c0cd inset;
+}
+
+[class*='Tag'][class*='-warning'],
+a[class*='Tag'][class*='-warning'] {
+	color: #f2f2f2;
+	background: #d9831e;
+}
+
+[class*='Tag'][class*='-warning'][class*='--wired'],
+a[class*='Tag'][class*='-warning'][class*='--wired'] {
+	color: #d9831e;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #d9831e inset;
+}
+
+[class*='Tag'][class*='-danger'],
+a[class*='Tag'][class*='-danger'] {
+	color: #f2f2f2;
+	background: #d94d4d;
+}
+
+[class*='Tag'][class*='-danger'][class*='--wired'],
+a[class*='Tag'][class*='-danger'][class*='--wired'] {
+	color: #d94d4d;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #d94d4d inset;
+}
+
 [class*='Tag'][class*='--wired'],
 a[class*='Tag'][class*='--wired'] {
 	color: var(--components-background);
@@ -10847,6 +10847,66 @@ a[class*='Tag'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 
+a[class*='Tag'][class*='-light'] {
+	color: #0d0d0d;
+	background: #fff;
+}
+
+a[class*='Tag'][class*='-light']::after {
+	background-color: #e6e6e6;
+}
+
+a[class*='Tag'][class*='-light']:hover,
+a[class*='Tag'][class*='-light']:focus {
+	text-decoration: none;
+	color: #0d0d0d;
+}
+
+a[class*='Tag'][class*='-light'][class*='--wired'] {
+	color: #fff;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #fff inset;
+}
+
+a[class*='Tag'][class*='-light'][class*='--wired']::after {
+	background-color: #fff;
+}
+
+a[class*='Tag'][class*='-light'][class*='--wired']:hover,
+a[class*='Tag'][class*='-light'][class*='--wired']:focus {
+	color: #0d0d0d;
+}
+
+a[class*='Tag'][class*='-dark'] {
+	color: #f2f2f2;
+	background: #333;
+}
+
+a[class*='Tag'][class*='-dark']::after {
+	background-color: #1a1a1a;
+}
+
+a[class*='Tag'][class*='-dark']:hover,
+a[class*='Tag'][class*='-dark']:focus {
+	text-decoration: none;
+	color: #f2f2f2;
+}
+
+a[class*='Tag'][class*='-dark'][class*='--wired'] {
+	color: #333;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #333 inset;
+}
+
+a[class*='Tag'][class*='-dark'][class*='--wired']::after {
+	background-color: #333;
+}
+
+a[class*='Tag'][class*='-dark'][class*='--wired']:hover,
+a[class*='Tag'][class*='-dark'][class*='--wired']:focus {
+	color: #f2f2f2;
+}
+
 a[class*='Tag'][class*='-ghost'] {
 	color: var(--color);
 	background: transparent;
@@ -10874,186 +10934,6 @@ a[class*='Tag'][class*='-ghost'][class*='--wired']::after {
 
 a[class*='Tag'][class*='-ghost'][class*='--wired']:hover,
 a[class*='Tag'][class*='-ghost'][class*='--wired']:focus {
-	color: #f2f2f2;
-}
-
-a[class*='Tag'][class*='-success'] {
-	color: #0d0d0d;
-	background: #74cf61;
-}
-
-a[class*='Tag'][class*='-success']::after {
-	background-color: #52c23b;
-}
-
-a[class*='Tag'][class*='-success']:hover,
-a[class*='Tag'][class*='-success']:focus {
-	text-decoration: none;
-	color: #0d0d0d;
-}
-
-a[class*='Tag'][class*='-success'][class*='--wired'] {
-	color: #74cf61;
-	background-color: transparent;
-	box-shadow: 0 0 0 1px #74cf61 inset;
-}
-
-a[class*='Tag'][class*='-success'][class*='--wired']::after {
-	background-color: #74cf61;
-}
-
-a[class*='Tag'][class*='-success'][class*='--wired']:hover,
-a[class*='Tag'][class*='-success'][class*='--wired']:focus {
-	color: #0d0d0d;
-}
-
-a[class*='Tag'][class*='-info'] {
-	color: #0d0d0d;
-	background: #74c0cd;
-}
-
-a[class*='Tag'][class*='-info']::after {
-	background-color: #4eafc0;
-}
-
-a[class*='Tag'][class*='-info']:hover,
-a[class*='Tag'][class*='-info']:focus {
-	text-decoration: none;
-	color: #0d0d0d;
-}
-
-a[class*='Tag'][class*='-info'][class*='--wired'] {
-	color: #74c0cd;
-	background-color: transparent;
-	box-shadow: 0 0 0 1px #74c0cd inset;
-}
-
-a[class*='Tag'][class*='-info'][class*='--wired']::after {
-	background-color: #74c0cd;
-}
-
-a[class*='Tag'][class*='-info'][class*='--wired']:hover,
-a[class*='Tag'][class*='-info'][class*='--wired']:focus {
-	color: #0d0d0d;
-}
-
-a[class*='Tag'][class*='-warning'] {
-	color: #f2f2f2;
-	background: #d9831e;
-}
-
-a[class*='Tag'][class*='-warning']::after {
-	background-color: #ac6818;
-}
-
-a[class*='Tag'][class*='-warning']:hover,
-a[class*='Tag'][class*='-warning']:focus {
-	text-decoration: none;
-	color: #f2f2f2;
-}
-
-a[class*='Tag'][class*='-warning'][class*='--wired'] {
-	color: #d9831e;
-	background-color: transparent;
-	box-shadow: 0 0 0 1px #d9831e inset;
-}
-
-a[class*='Tag'][class*='-warning'][class*='--wired']::after {
-	background-color: #d9831e;
-}
-
-a[class*='Tag'][class*='-warning'][class*='--wired']:hover,
-a[class*='Tag'][class*='-warning'][class*='--wired']:focus {
-	color: #f2f2f2;
-}
-
-a[class*='Tag'][class*='-danger'] {
-	color: #f2f2f2;
-	background: #d94d4d;
-}
-
-a[class*='Tag'][class*='-danger']::after {
-	background-color: #c82b2b;
-}
-
-a[class*='Tag'][class*='-danger']:hover,
-a[class*='Tag'][class*='-danger']:focus {
-	text-decoration: none;
-	color: #f2f2f2;
-}
-
-a[class*='Tag'][class*='-danger'][class*='--wired'] {
-	color: #d94d4d;
-	background-color: transparent;
-	box-shadow: 0 0 0 1px #d94d4d inset;
-}
-
-a[class*='Tag'][class*='-danger'][class*='--wired']::after {
-	background-color: #d94d4d;
-}
-
-a[class*='Tag'][class*='-danger'][class*='--wired']:hover,
-a[class*='Tag'][class*='-danger'][class*='--wired']:focus {
-	color: #f2f2f2;
-}
-
-a[class*='Tag'][class*='-white'] {
-	color: #0d0d0d;
-	background: #fff;
-}
-
-a[class*='Tag'][class*='-white']::after {
-	background-color: #e6e6e6;
-}
-
-a[class*='Tag'][class*='-white']:hover,
-a[class*='Tag'][class*='-white']:focus {
-	text-decoration: none;
-	color: #0d0d0d;
-}
-
-a[class*='Tag'][class*='-white'][class*='--wired'] {
-	color: #fff;
-	background-color: transparent;
-	box-shadow: 0 0 0 1px #fff inset;
-}
-
-a[class*='Tag'][class*='-white'][class*='--wired']::after {
-	background-color: #fff;
-}
-
-a[class*='Tag'][class*='-white'][class*='--wired']:hover,
-a[class*='Tag'][class*='-white'][class*='--wired']:focus {
-	color: #0d0d0d;
-}
-
-a[class*='Tag'][class*='-black'] {
-	color: #f2f2f2;
-	background: #000;
-}
-
-a[class*='Tag'][class*='-black']::after {
-	background-color: black;
-}
-
-a[class*='Tag'][class*='-black']:hover,
-a[class*='Tag'][class*='-black']:focus {
-	text-decoration: none;
-	color: #f2f2f2;
-}
-
-a[class*='Tag'][class*='-black'][class*='--wired'] {
-	color: #000;
-	background-color: transparent;
-	box-shadow: 0 0 0 1px #000 inset;
-}
-
-a[class*='Tag'][class*='-black'][class*='--wired']::after {
-	background-color: #000;
-}
-
-a[class*='Tag'][class*='-black'][class*='--wired']:hover,
-a[class*='Tag'][class*='-black'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 
@@ -11297,6 +11177,126 @@ a[class*='Tag'][class*='-brown'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 
+a[class*='Tag'][class*='-success'] {
+	color: #0d0d0d;
+	background: #74cf61;
+}
+
+a[class*='Tag'][class*='-success']::after {
+	background-color: #52c23b;
+}
+
+a[class*='Tag'][class*='-success']:hover,
+a[class*='Tag'][class*='-success']:focus {
+	text-decoration: none;
+	color: #0d0d0d;
+}
+
+a[class*='Tag'][class*='-success'][class*='--wired'] {
+	color: #74cf61;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #74cf61 inset;
+}
+
+a[class*='Tag'][class*='-success'][class*='--wired']::after {
+	background-color: #74cf61;
+}
+
+a[class*='Tag'][class*='-success'][class*='--wired']:hover,
+a[class*='Tag'][class*='-success'][class*='--wired']:focus {
+	color: #0d0d0d;
+}
+
+a[class*='Tag'][class*='-info'] {
+	color: #0d0d0d;
+	background: #74c0cd;
+}
+
+a[class*='Tag'][class*='-info']::after {
+	background-color: #4eafc0;
+}
+
+a[class*='Tag'][class*='-info']:hover,
+a[class*='Tag'][class*='-info']:focus {
+	text-decoration: none;
+	color: #0d0d0d;
+}
+
+a[class*='Tag'][class*='-info'][class*='--wired'] {
+	color: #74c0cd;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #74c0cd inset;
+}
+
+a[class*='Tag'][class*='-info'][class*='--wired']::after {
+	background-color: #74c0cd;
+}
+
+a[class*='Tag'][class*='-info'][class*='--wired']:hover,
+a[class*='Tag'][class*='-info'][class*='--wired']:focus {
+	color: #0d0d0d;
+}
+
+a[class*='Tag'][class*='-warning'] {
+	color: #f2f2f2;
+	background: #d9831e;
+}
+
+a[class*='Tag'][class*='-warning']::after {
+	background-color: #ac6818;
+}
+
+a[class*='Tag'][class*='-warning']:hover,
+a[class*='Tag'][class*='-warning']:focus {
+	text-decoration: none;
+	color: #f2f2f2;
+}
+
+a[class*='Tag'][class*='-warning'][class*='--wired'] {
+	color: #d9831e;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #d9831e inset;
+}
+
+a[class*='Tag'][class*='-warning'][class*='--wired']::after {
+	background-color: #d9831e;
+}
+
+a[class*='Tag'][class*='-warning'][class*='--wired']:hover,
+a[class*='Tag'][class*='-warning'][class*='--wired']:focus {
+	color: #f2f2f2;
+}
+
+a[class*='Tag'][class*='-danger'] {
+	color: #f2f2f2;
+	background: #d94d4d;
+}
+
+a[class*='Tag'][class*='-danger']::after {
+	background-color: #c82b2b;
+}
+
+a[class*='Tag'][class*='-danger']:hover,
+a[class*='Tag'][class*='-danger']:focus {
+	text-decoration: none;
+	color: #f2f2f2;
+}
+
+a[class*='Tag'][class*='-danger'][class*='--wired'] {
+	color: #d94d4d;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #d94d4d inset;
+}
+
+a[class*='Tag'][class*='-danger'][class*='--wired']::after {
+	background-color: #d94d4d;
+}
+
+a[class*='Tag'][class*='-danger'][class*='--wired']:hover,
+a[class*='Tag'][class*='-danger'][class*='--wired']:focus {
+	color: #f2f2f2;
+}
+
 [class*='Alert'] {
 	margin-bottom: calc(var(--spacer-base) * 1.5);
 	padding: calc(var(--spacer-base) * 1);
@@ -11312,39 +11312,19 @@ a[class*='Tag'][class*='-brown'][class*='--wired']:focus {
 	border: 1px solid var(--components-background-inversed);
 }
 
-[class*='Alert'][class*='-ghost'] {
-	color: var(--color);
-	border-color: transparent;
-}
-
-[class*='Alert'][class*='-success'] {
-	color: #74cf61;
-	border-color: #74cf61;
-}
-
-[class*='Alert'][class*='-info'] {
-	color: #74c0cd;
-	border-color: #74c0cd;
-}
-
-[class*='Alert'][class*='-warning'] {
-	color: #d9831e;
-	border-color: #d9831e;
-}
-
-[class*='Alert'][class*='-danger'] {
-	color: #d94d4d;
-	border-color: #d94d4d;
-}
-
-[class*='Alert'][class*='-white'] {
+[class*='Alert'][class*='-light'] {
 	color: #fff;
 	border-color: #fff;
 }
 
-[class*='Alert'][class*='-black'] {
-	color: #000;
-	border-color: #000;
+[class*='Alert'][class*='-dark'] {
+	color: #333;
+	border-color: #333;
+}
+
+[class*='Alert'][class*='-ghost'] {
+	color: var(--color);
+	border-color: transparent;
 }
 
 [class*='Alert'][class*='-red'] {
@@ -11385,6 +11365,26 @@ a[class*='Tag'][class*='-brown'][class*='--wired']:focus {
 [class*='Alert'][class*='-brown'] {
 	color: #835611;
 	border-color: #835611;
+}
+
+[class*='Alert'][class*='-success'] {
+	color: #74cf61;
+	border-color: #74cf61;
+}
+
+[class*='Alert'][class*='-info'] {
+	color: #74c0cd;
+	border-color: #74c0cd;
+}
+
+[class*='Alert'][class*='-warning'] {
+	color: #d9831e;
+	border-color: #d9831e;
+}
+
+[class*='Alert'][class*='-danger'] {
+	color: #d94d4d;
+	border-color: #d94d4d;
 }
 
 [class*='Alert'] h1,
