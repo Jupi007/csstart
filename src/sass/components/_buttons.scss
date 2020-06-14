@@ -49,36 +49,63 @@ input[type="reset"],
             opacity: 0;
         }
     }
-
-    @each $component, $bg, $color in $components {
-		&[class*="-#{$component}"] {
-			background: $bg;
-			color: contrast($bg, $color-base, $color-dark);
+        &[class*="-inversed"] {
+            background: var(--components-background-inversed);
+            color: var(--components-color-inversed);
 
             &::after {
-                background-color: darken($bg, $components-hover-base);
+                background-color: var(--components-background-hover-inversed);
             }
 
             &:hover, &:focus {
-                color: contrast($bg, $color-base, $color-dark);
+                color: var(--components-color-inversed);
                 text-decoration: none;
             }
 
-			&[class*="--wired"] {
-				background-color: transparent;
-				color: $bg;
-				box-shadow: 0 0 0 $buttons-inversed-border-width $bg inset;
+            &[class*="--wired"] {
+                background-color: transparent;
+                color: var(--components-background-inversed);
+                box-shadow: 0 0 0 $buttons-inversed-border-width var(--components-background-inversed) inset;
 
                 &::after {
-                    background-color: $bg;
+                    background-color: var(--components-background-inversed);
                 }
 
-				&:hover, &:focus {
-					color: contrast($bg, $color-base, $color-dark);
-				}
-			}
-		}
-	}
+                &:hover, &:focus {
+                    color: var(--components-color-inversed);
+                }
+            }
+        }
+
+        @each $component, $bg, $color in $components {
+            &[class*="-#{$component}"] {
+                background: $bg;
+                color: contrast($bg, $color-base, $color-dark);
+
+                &::after {
+                    background-color: darken($bg, $components-hover-base);
+                }
+
+                &:hover, &:focus {
+                    color: contrast($bg, $color-base, $color-dark);
+                    text-decoration: none;
+                }
+
+                &[class*="--wired"] {
+                    background-color: transparent;
+                    color: $bg;
+                    box-shadow: 0 0 0 $buttons-inversed-border-width $bg inset;
+
+                    &::after {
+                        background-color: $bg;
+                    }
+
+                    &:hover, &:focus {
+                        color: contrast($bg, $color-base, $color-dark);
+                    }
+                }
+            }
+        }
 }
 
 [class*="Button"] {

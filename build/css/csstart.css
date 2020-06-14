@@ -9476,6 +9476,68 @@ input[type='reset']:active::after,
 	opacity: 0;
 }
 
+button[class*='-inversed'],
+input[type='button'][class*='-inversed'],
+input[type='submit'][class*='-inversed'],
+input[type='reset'][class*='-inversed'],
+[class*='Button'][class*='-inversed'] {
+	color: var(--components-color-inversed);
+	background: var(--components-background-inversed);
+}
+
+button[class*='-inversed']::after,
+input[type='button'][class*='-inversed']::after,
+input[type='submit'][class*='-inversed']::after,
+input[type='reset'][class*='-inversed']::after,
+[class*='Button'][class*='-inversed']::after {
+	background-color: var(--components-background-hover-inversed);
+}
+
+button[class*='-inversed']:hover,
+button[class*='-inversed']:focus,
+input[type='button'][class*='-inversed']:hover,
+input[type='button'][class*='-inversed']:focus,
+input[type='submit'][class*='-inversed']:hover,
+input[type='submit'][class*='-inversed']:focus,
+input[type='reset'][class*='-inversed']:hover,
+input[type='reset'][class*='-inversed']:focus,
+[class*='Button'][class*='-inversed']:hover,
+[class*='Button'][class*='-inversed']:focus {
+	text-decoration: none;
+	color: var(--components-color-inversed);
+}
+
+button[class*='-inversed'][class*='--wired'],
+input[type='button'][class*='-inversed'][class*='--wired'],
+input[type='submit'][class*='-inversed'][class*='--wired'],
+input[type='reset'][class*='-inversed'][class*='--wired'],
+[class*='Button'][class*='-inversed'][class*='--wired'] {
+	color: var(--components-background-inversed);
+	background-color: transparent;
+	box-shadow: 0 0 0 1px var(--components-background-inversed) inset;
+}
+
+button[class*='-inversed'][class*='--wired']::after,
+input[type='button'][class*='-inversed'][class*='--wired']::after,
+input[type='submit'][class*='-inversed'][class*='--wired']::after,
+input[type='reset'][class*='-inversed'][class*='--wired']::after,
+[class*='Button'][class*='-inversed'][class*='--wired']::after {
+	background-color: var(--components-background-inversed);
+}
+
+button[class*='-inversed'][class*='--wired']:hover,
+button[class*='-inversed'][class*='--wired']:focus,
+input[type='button'][class*='-inversed'][class*='--wired']:hover,
+input[type='button'][class*='-inversed'][class*='--wired']:focus,
+input[type='submit'][class*='-inversed'][class*='--wired']:hover,
+input[type='submit'][class*='-inversed'][class*='--wired']:focus,
+input[type='reset'][class*='-inversed'][class*='--wired']:hover,
+input[type='reset'][class*='-inversed'][class*='--wired']:focus,
+[class*='Button'][class*='-inversed'][class*='--wired']:hover,
+[class*='Button'][class*='-inversed'][class*='--wired']:focus {
+	color: var(--components-color-inversed);
+}
+
 button[class*='-success'],
 input[type='button'][class*='-success'],
 input[type='submit'][class*='-success'],
