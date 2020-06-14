@@ -80,7 +80,7 @@ input[type="reset"],
         @each $component, $bg, $color in $components {
             &[class*="-#{$component}"] {
                 background: $bg;
-                color: contrast($bg, $color-base, $color-dark);
+                color: contrast($bg, $color-base, $color-base);
 
                 &::after {
                     background-color: darken($bg, $components-hover-base);

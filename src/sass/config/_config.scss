@@ -51,22 +51,9 @@ $components-color-dark: $color-base;
 $components-hover-dark: 10%;
 
 $components: (
-	('success', color('success')),
-	('info', color('info')),
-	('warning', color('warning')),
-	('danger', color('danger')),
-	('white', color('white'), $color-base),
-	('ghost', transparent, $color-base),
-
-    ('green', color('green')),
-    ('light-blue', color('light-blue')),
-    ('orange', color('orange')),
-    ('red', color('red')),
-    ('yellow', color('yellow')),
-    ('blue', color('blue')),
-    ('purple', color('purple')),
-    ('brown', color('brown')),
+	'ghost': transparent,
 );
+$components: map-merge($components, $colors);
 
 $gutters: (
 	'': spacer('medium'),
