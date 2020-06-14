@@ -9543,7 +9543,7 @@ input[type='button'][class*='-ghost'],
 input[type='submit'][class*='-ghost'],
 input[type='reset'][class*='-ghost'],
 [class*='Button'][class*='-ghost'] {
-	color: #0d0d0d;
+	color: var(--color);
 	background: transparent;
 }
 
@@ -9729,7 +9729,7 @@ input[type='button'][class*='-warning'],
 input[type='submit'][class*='-warning'],
 input[type='reset'][class*='-warning'],
 [class*='Button'][class*='-warning'] {
-	color: #0d0d0d;
+	color: #f2f2f2;
 	background: #d9831e;
 }
 
@@ -9791,7 +9791,7 @@ input[type='button'][class*='-danger'],
 input[type='submit'][class*='-danger'],
 input[type='reset'][class*='-danger'],
 [class*='Button'][class*='-danger'] {
-	color: #0d0d0d;
+	color: #f2f2f2;
 	background: #d94d4d;
 }
 
@@ -9915,7 +9915,7 @@ input[type='button'][class*='-black'],
 input[type='submit'][class*='-black'],
 input[type='reset'][class*='-black'],
 [class*='Button'][class*='-black'] {
-	color: #0d0d0d;
+	color: #f2f2f2;
 	background: #000;
 }
 
@@ -9977,7 +9977,7 @@ input[type='button'][class*='-red'],
 input[type='submit'][class*='-red'],
 input[type='reset'][class*='-red'],
 [class*='Button'][class*='-red'] {
-	color: #0d0d0d;
+	color: #f2f2f2;
 	background: #d94d4d;
 }
 
@@ -10039,7 +10039,7 @@ input[type='button'][class*='-orange'],
 input[type='submit'][class*='-orange'],
 input[type='reset'][class*='-orange'],
 [class*='Button'][class*='-orange'] {
-	color: #0d0d0d;
+	color: #f2f2f2;
 	background: #d9831e;
 }
 
@@ -10225,7 +10225,7 @@ input[type='button'][class*='-blue'],
 input[type='submit'][class*='-blue'],
 input[type='reset'][class*='-blue'],
 [class*='Button'][class*='-blue'] {
-	color: #0d0d0d;
+	color: #f2f2f2;
 	background: #3935cd;
 }
 
@@ -10411,7 +10411,7 @@ input[type='button'][class*='-brown'],
 input[type='submit'][class*='-brown'],
 input[type='reset'][class*='-brown'],
 [class*='Button'][class*='-brown'] {
-	color: #0d0d0d;
+	color: #f2f2f2;
 	background: #835611;
 }
 
@@ -10553,7 +10553,7 @@ a[class*='Tag'][class*='-inversed'][class*='--wired'] {
 
 [class*='Tag'][class*='-ghost'],
 a[class*='Tag'][class*='-ghost'] {
-	color: #f2f2f2;
+	color: var(--color);
 	background: transparent;
 }
 
@@ -10848,7 +10848,7 @@ a[class*='Tag'][class*='--wired']:focus {
 }
 
 a[class*='Tag'][class*='-ghost'] {
-	color: #f2f2f2;
+	color: var(--color);
 	background: transparent;
 }
 
@@ -10859,7 +10859,7 @@ a[class*='Tag'][class*='-ghost']::after {
 a[class*='Tag'][class*='-ghost']:hover,
 a[class*='Tag'][class*='-ghost']:focus {
 	text-decoration: none;
-	color: #f2f2f2;
+	color: var(--color);
 }
 
 a[class*='Tag'][class*='-ghost'][class*='--wired'] {
@@ -11313,7 +11313,7 @@ a[class*='Tag'][class*='-brown'][class*='--wired']:focus {
 }
 
 [class*='Alert'][class*='-ghost'] {
-	color: transparent;
+	color: var(--color);
 	border-color: transparent;
 }
 

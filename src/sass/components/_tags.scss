@@ -32,7 +32,12 @@
 	@each $component, $bg in $components {
 		&[class*="-#{$component}"] {
 			background: $bg;
-			color: contrast($bg, $color-base, $color-dark);
+
+            @if ($bg == transparent) {
+                color: var(--color);
+            } @else {
+                color: contrast($bg, $color-base, $color-dark);
+            }
 
 			&[class*="--wired"] {
 				background-color: transparent;
@@ -140,17 +145,26 @@ a[class*="Tag"] {
 		}
 	}
 
-    @each $component, $bg, $color in $components {
+    @each $component, $bg in $components {
 		&[class*="-#{$component}"] {
+            @if ($bg == transparent) {
+                color: var(--color);
+            } @else {
+                color: contrast($bg, $color-base, $color-dark);
+            }
+
 			background: $bg;
-			color: contrast($bg, $color-base, $color-dark);
 
             &::after {
                 background-color: darken($bg, $components-hover-base);
             }
 
             &:hover, &:focus {
-                color: contrast($bg, $color-base, $color-dark);
+                @if ($bg == transparent) {
+                    color: var(--color);
+                } @else {
+                    color: contrast($bg, $color-base, $color-dark);
+                }
                 text-decoration: none;
             }
 

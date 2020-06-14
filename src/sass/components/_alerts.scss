@@ -14,10 +14,15 @@
     	color: var(--components-color);
     }
 
-	@each $component, $bg, $color in $components {
+	@each $component, $bg in $components {
 		&[class*="-#{$component}"] {
 			border-color: $bg;
-            color: $bg;
+
+            @if ($bg == transparent) {
+                color: var(--color);
+            } @else {
+                color: $bg;
+            }
 		}
 	}
 
