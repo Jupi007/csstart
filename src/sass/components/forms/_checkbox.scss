@@ -11,34 +11,38 @@ input[type="radio"] {
     @include transition("background, border");
 
 	&:active {
-		background-color: $checkbox-active-background;
+		background-color: var(--checkbox-active-background);
 	}
 
 	&:checked, &:indeterminate {
-		background-color: $checkbox-checked-background;
-		border-color: $checkbox-checked-background;
+		background-color: var(--checkbox-checked-background);
+		border-color: var(--checkbox-checked-background);
+        &::before, &::after {
+            opacity: 1;
+        }
 	}
 
     &::before, &::after {
+        opacity: 0;
         content: "";
         display: block;
         position: absolute;
-		background: $checkbox-checked-icon-color;
+		background: var(--checkbox-checked-icon-color);
 		border-radius: 1px;
     }
 
 	&[disabled] {
-		border-color: $checkbox-disabled-border-color;
-		background-color: $checkbox-disabled-background;
+		border-color: var(--checkbox-disabled-border-color);
+		background-color: var(--checkbox-disabled-background);
 
-		&:hover, &:focus { border-color: $checkbox-disabled-border-color; }
+		&:hover, &:focus { border-color: var(--checkbox-disabled-border-color); }
 
         &::before, &::after {
-    		background: $checkbox-disabled-background;
+    		background: var(--checkbox-disabled-background);
         }
 
 		&:checked, &:indeterminate {
-			background-color: $checkbox-disabled-border-color;
+			background-color: var(--checkbox-disabled-border-color);
 		}
 	}
 

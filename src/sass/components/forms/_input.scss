@@ -4,11 +4,11 @@ input,
 textarea,
 select {
 	appearance: none;
-	border: $input-border-width solid $input-border-color;
+	border: $input-border-width solid var(--input-border-color);
 	border-radius: $border-radius-base;
 	padding: $input-padding-vertical $input-padding-horizontal;
 	box-shadow: none;
-	background-color: $input-background;
+	background-color: var(--input-background);
 	outline: none;
     vertical-align: middle;
     vertical-align: -webkit-baseline-middle;
@@ -16,9 +16,10 @@ select {
     margin-left: spacer('medium');
     margin-bottom: spacer('medium');
     filter: none;
+    color: var(--color);
 
     @include transition("border");
-	&:hover, &:focus { border-color: $input-hover-focus-border-color; }
+	&:hover, &:focus { border-color: var(--input-hover-focus-border-color); }
 
     &:invalid:focus {
         border-color: $input-border-color-invalid;
@@ -26,10 +27,10 @@ select {
 
 	&[disabled] {
 		cursor: not-allowed;
-		border-color: $input-border-color;
-		background: $input-disabled-background;
+		border-color: var(--input-border-color);
+		background: var(--input-disabled-background);
 
-		&:hover, &:focus { border-color: $input-border-color; }
+		&:hover, &:focus { border-color: var(--input-border-color); }
 	}
 }
 
