@@ -219,6 +219,9 @@ $figures-max-height-image: 60vh;
         --body-bg-color: #{$body-bg};
         --color: #{$color-base};
 
+        --link-color: #{$link-color};
+        --link-hover-color: #{$link-hover-color};
+
         --components-background: #{$components-background-base};
         --components-background-hover: #{darken($components-background-base, $components-hover-base)};
         --components-color: #{$components-color-base};
@@ -254,6 +257,9 @@ $figures-max-height-image: 60vh;
     :root {
         --body-bg-color: #{$body-bg-dark};
         --color: #{$color-dark};
+
+        --link-color: #{$link-color-dark};
+        --link-hover-color: #{$link-hover-color-dark};
 
         --components-background: #{$components-background-dark};
         --components-background-hover: #{darken($components-background-dark, $components-hover-dark)};

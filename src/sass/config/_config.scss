@@ -37,8 +37,11 @@ $body-bg-dark: grey(85);
 
 $link-color: color('blue');
 $link-decoration: underline;
-$link-hover-color: darken( color('blue') , 15% );
+$link-hover-color: darken( $link-color , 15% );
 $link-hover-decoration: underline;
+
+$link-color-dark: color('light-blue');
+$link-hover-color-dark: darken( $link-color-dark , 15% );
 
 $margin-base: 'medium-plus';
 

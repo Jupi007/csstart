@@ -6,6 +6,8 @@
 	:root {
 		--body-bg-color: #fff;
 		--color: #0d0d0d;
+		--link-color: #3935cd;
+		--link-hover-color: #272491;
 		--components-background: #333;
 		--components-background-hover: #1a1a1a;
 		--components-color: #f2f2f2;
@@ -40,6 +42,8 @@
 	:root {
 		--body-bg-color: #262626;
 		--color: #f2f2f2;
+		--link-color: #74c0cd;
+		--link-hover-color: #41a3b4;
 		--components-background: #fff;
 		--components-background-hover: #e6e6e6;
 		--components-color: #0d0d0d;
@@ -290,14 +294,14 @@ a:visited {
 	transition-duration: .2s;
 	transition-property: color;
 	text-decoration: underline;
-	color: #3935cd;
+	color: var(--link-color);
 	background-color: transparent;
 }
 
 a:hover,
 a:visited:hover {
 	text-decoration: underline;
-	color: #272491;
+	color: var(--link-hover-color);
 }
 
 a:not([href]):not([tabindex]) {

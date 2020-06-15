@@ -173,14 +173,14 @@ sub { bottom: -.25em; }
 sup { top: -.5em; }
 
 a, a:visited{
-	color: $link-color;
+	color: var(--link-color);
 	text-decoration: $link-decoration;
 	background-color: transparent;
 
     @include transition("color");
 
 	&:hover {
-		color: $link-hover-color;
+		color: var(--link-hover-color);
 		text-decoration: $link-hover-decoration;
 	}
 }
