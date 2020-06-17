@@ -11,12 +11,12 @@ $options: (
 
     "alerts": true,
 	"blockquotes": true,
-	"buttons": true,
+	"tags": true,
+	"buttons": true, // Need tags
 	"cards": true,
 	"figures": true,
 	"media": true,
 	"tables": true,
-	"tags": true,
 );
 
 $transition-duration-base:  .2s;

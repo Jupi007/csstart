@@ -1,7 +1,13 @@
 @include option("tags") {
 
-[class*="Tag"], a[class*="Tag"] {
-    outline: 0;
+[class*="Tag"],
+a[class*="Tag"],
+[class*="Button"],
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"]
+{
 	display: inline-block;
 	background: var(--components-background);
 	color: var(--components-color);
@@ -12,12 +18,11 @@
 	line-height: 1;
 	vertical-align: middle;
     text-decoration: none;
+}
 
-    &:hover, &:focus {
-        color: var(--components-color);
-        text-decoration: none;
-    }
-
+[class*="Tag"],
+[class*="Button"]
+{
     &[class*="-inversed"] {
         background: var(--components-background-inversed);
     	color: var(--components-color-inversed);
@@ -52,23 +57,19 @@
 		color: var(--components-background);
 		box-shadow: 0 0 0 $buttons-inversed-border-width var(--components-background) inset;
 	}
-
-	&[class*="--l"] {
-		padding: $tags-large-padding;
-		font-size: $tags-large-font-size;
-	}
-
-	&[class*="--xl"] {
-		padding: $tags-extra-large-padding;
-		font-size: $tags-extra-large-font-size;
-	}
 }
 
-a[class*="Tag"] {
+a[class*="Tag"],
+[class*="Button"],
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"]
+{
     position: relative;
     z-index: 1;
-    text-decoration: none;
 	color: var(--components-color);
+    cursor: pointer;
 
     &::after {
         content: "";
@@ -100,7 +101,12 @@ a[class*="Tag"] {
             opacity: 0;
         }
     }
+}
 
+a[class*="Tag"],
+button[class*="Tag"],
+[class*="Button"]
+{
     &[class*="-inversed"] {
         background: var(--components-background-inversed);
         color: var(--components-color-inversed);
@@ -130,6 +136,8 @@ a[class*="Tag"] {
     }
 
     &[class*="--wired"] {
+        @include transition("color");
+
 		&::after {
             background-color: var(--components-background);
         }
@@ -182,6 +190,18 @@ a[class*="Tag"] {
 				}
 			}
 		}
+	}
+}
+
+[class*="Tag"] {
+    &[class*="--l"] {
+		padding: $tags-large-padding;
+		font-size: $tags-large-font-size;
+	}
+
+	&[class*="--xl"] {
+		padding: $tags-extra-large-padding;
+		font-size: $tags-extra-large-font-size;
 	}
 }
 

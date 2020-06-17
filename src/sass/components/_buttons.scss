@@ -6,134 +6,15 @@ input[type="submit"],
 input[type="reset"],
 [class*="Button"] {
     position: relative;
-	display: inline-block;
-	background: var(--components-background);
-	color: var(--components-color);
     font-size: $buttons-font-size;
-	border: none;
 	padding: $buttons-padding;
 	border-radius: $buttons-border-radius;
-    text-decoration: none;
-	cursor: pointer;
-	user-select: none;
-    vertical-align: middle;
-    z-index: 1;
-
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: var(--components-background-hover);
-    	border-radius: $buttons-border-radius;
-        opacity: 0;
-        z-index: -1;
-
-        @include transition("opacity");
-    }
-
-	&:hover, &:focus {
-        color: var(--components-color);
-        text-decoration: none;
-    	outline: 0;
-
-        &::after {
-            opacity: 1;
-        }
-    }
-
-	&:active {
-        &::after {
-            opacity: 0;
-        }
-    }
-
-    &[class*="-inversed"] {
-        background: var(--components-background-inversed);
-        color: var(--components-color-inversed);
-
-        &::after {
-            background-color: var(--components-background-hover-inversed);
-        }
-
-        &:hover, &:focus {
-            color: var(--components-color-inversed);
-            text-decoration: none;
-        }
-
-        &[class*="--wired"] {
-            background-color: transparent;
-            color: var(--components-background-inversed);
-            box-shadow: 0 0 0 $buttons-inversed-border-width var(--components-background-inversed) inset;
-
-            &::after {
-                background-color: var(--components-background-inversed);
-            }
-
-            &:hover, &:focus {
-                color: var(--components-color-inversed);
-            }
-        }
-    }
-
-    @each $component, $bg in $components {
-        &[class*="-#{$component}"] {
-            background: $bg;
-            
-            @if ($bg == transparent) {
-                color: var(--color);
-            } @else {
-                color: contrast($bg, $color-base, $color-dark);
-            }
-
-            &::after {
-                background-color: darken($bg, $components-hover-base);
-            }
-
-            &:hover, &:focus {
-                color: contrast($bg, $color-base, $color-dark);
-                text-decoration: none;
-            }
-
-            &[class*="--wired"] {
-                background-color: transparent;
-                color: $bg;
-                box-shadow: 0 0 0 $buttons-inversed-border-width $bg inset;
-
-                &::after {
-                    background-color: $bg;
-                }
-
-                &:hover, &:focus {
-                    color: contrast($bg, $color-base, $color-dark);
-                }
-            }
-        }
-    }
+    line-height: inherit;
 }
 
 [class*="Button"] {
 	&[class*="--wired"] {
-		background-color: transparent;
-		color: var(--components-background);
 		box-shadow: 0 0 0 $buttons-inversed-border-width var(--components-background) inset;
-        @include transition("color");
-
-        &::after {
-            background-color: var(--components-background);
-        }
-
-        &:active {
-            &::after {
-                opacity: .8;
-            }
-        }
-
-		&:hover, &:focus {
-			color: var(--components-color);
-		}
 	}
 
 	&[class*="--large"] {
