@@ -2,8 +2,8 @@
 
 [class*="Blockquote"],  [class*="Afb"] blockquote,{
 	padding: $blockquotes-padding;
-	background-color: $blockquotes-background;
-    color: $blockquotes-color;
+	background-color: var(--blockquotes-background);
+    color: var(--blockquotes-color);
 	border-radius: $blockquotes-border-radius;
 	position: relative;
 	padding-left: 80px;
@@ -18,7 +18,7 @@
 		font-family: georgia, serif;
 		font-size: 7em;
 		line-height: .9;
-		color: $blockquotes-quote-color;
+		color: var(--blockquotes-quote-color);
 	}
 
 	> *:last-child {
@@ -27,7 +27,7 @@
 
 	cite {
 		display: block;
-		color: $blockquotes-cite-color;
+		color: var(--blockquotes-cite-color);
 		text-align: $blockquotes-cite-text-align;
 
 		&:before {

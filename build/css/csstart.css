@@ -35,6 +35,10 @@
 		--range-thumb-color: #ccc;
 		--range-thumb-color-hover: #b3b3b3;
 		--progress-background: #ccc;
+		--blockquotes-background: #e6e6e6;
+		--blockquotes-color: #0d0d0d;
+		--blockquotes-cite-color: #4d4d4d;
+		--blockquotes-quote-color: #b3b3b3;
 	}
 }
 
@@ -71,6 +75,10 @@
 		--range-thumb-color: #fff;
 		--range-thumb-color-hover: #e6e6e6;
 		--progress-background: #ccc;
+		--blockquotes-background: #333;
+		--blockquotes-color: #f2f2f2;
+		--blockquotes-cite-color: #999;
+		--blockquotes-quote-color: #666;
 	}
 }
 
@@ -11761,9 +11769,9 @@ a[class*='Card']:focus {
 	margin-bottom: calc(calc(var(--spacer-base) * 1.5) * 2);
 	padding: calc(var(--spacer-base) * 3);
 	padding-left: 80px;
-	color: #0d0d0d;
+	color: var(--blockquotes-color);
 	border-radius: 10px;
-	background-color: #e6e6e6;
+	background-color: var(--blockquotes-background);
 }
 
 [class*='Blockquote']:before,
@@ -11775,7 +11783,7 @@ a[class*='Card']:focus {
 	top: 15px;
 	left: 15px;
 	content: '\201C';
-	color: #b3b3b3;
+	color: var(--blockquotes-quote-color);
 }
 
 [class*='Blockquote'] > *:last-child,
@@ -11787,7 +11795,7 @@ a[class*='Card']:focus {
 [class*='Afb'] blockquote cite {
 	display: block;
 	text-align: right;
-	color: #4d4d4d;
+	color: var(--blockquotes-cite-color);
 }
 
 [class*='Blockquote'] cite:before,

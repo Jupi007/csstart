@@ -39,6 +39,11 @@
         --range-thumb-color: #{$range-thumb-color};
         --range-thumb-color-hover: #{$range-thumb-color-hover};
         --progress-background: #{$progress-background};
+
+        --blockquotes-background: #{$blockquotes-background};
+        --blockquotes-color: #{$blockquotes-color};
+        --blockquotes-cite-color: #{$blockquotes-cite-color};
+        --blockquotes-quote-color: #{$blockquotes-quote-color};
     }
 }
 @media (prefers-color-scheme: dark) {
@@ -78,5 +83,10 @@
         --range-thumb-color: #{$range-thumb-color-dark};
         --range-thumb-color-hover: #{$range-thumb-color-hover-dark};
         --progress-background: #{$progress-background-dark};
+
+        --blockquotes-background: #{$blockquotes-background-dark};
+        --blockquotes-color: #{$blockquotes-color-dark};
+        --blockquotes-cite-color: #{$blockquotes-cite-color-dark};
+        --blockquotes-quote-color: #{$blockquotes-quote-color-dark};
     }
 }
