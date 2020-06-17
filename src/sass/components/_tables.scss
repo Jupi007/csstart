@@ -125,6 +125,14 @@
                 background: $tables-dark-cells-hover-background;
             }
         }
+
+        a {
+            color: $link-color-dark;
+
+            &:hover {
+                color: $link-hover-color-dark;
+            }
+        }
 	}
 
 	caption {

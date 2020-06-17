@@ -8,6 +8,8 @@
 		--color: #0d0d0d;
 		--link-color: #3935cd;
 		--link-hover-color: #272491;
+		--link-color-inversed: #74c0cd;
+		--link-hover-color-inversed: #41a3b4;
 		--components-background: #333;
 		--components-background-hover: #1a1a1a;
 		--components-color: #f2f2f2;
@@ -48,6 +50,8 @@
 		--color: #f2f2f2;
 		--link-color: #74c0cd;
 		--link-hover-color: #41a3b4;
+		--link-color-inversed: #3935cd;
+		--link-hover-color-inversed: #272491;
 		--components-background: #fff;
 		--components-background-hover: #e6e6e6;
 		--components-color: #0d0d0d;
@@ -10978,6 +10982,16 @@ a[class*='Card']:focus {
 [class*='Table'][class*='--dark'][class*='--hover'] tbody tr:hover,
 [class*='Afb'] table[class*='--dark'][class*='--hover'] tbody tr:hover {
 	background: #262626;
+}
+
+[class*='Table'][class*='--dark'] a,
+[class*='Afb'] table[class*='--dark'] a {
+	color: #74c0cd;
+}
+
+[class*='Table'][class*='--dark'] a:hover,
+[class*='Afb'] table[class*='--dark'] a:hover {
+	color: #41a3b4;
 }
 
 [class*='Table'] caption,
