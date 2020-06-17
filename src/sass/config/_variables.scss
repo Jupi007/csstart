@@ -4,11 +4,11 @@
 
 $headings: "h1, h2, h3, h4, h5, h6";
 
-$headings-margin-bottom : $margin-base / 2;
-$paragraph-margin-bottom: $margin-base;
-$separator-margins: $margin-base * 1.5;
+$headings-margin-bottom : spacer($margin-base, .5);
+$paragraph-margin-bottom: spacer($margin-base);
+$separator-margins: spacer($margin-base, 1.5);
 
-$lists-margin-bottom: $margin-base;
+$lists-margin-bottom: spacer($margin-base);
 $lists-padding-left: spacer("xx-large");
 
 $dt-font-weight: font-weight("bold");
@@ -54,8 +54,8 @@ $checkbox-disabled-background: grey(10);
 
 $range-track-color: grey(70);
 $range-track-disabled-color: grey(60);
-
 $range-thumb-color: grey(20);
+$range-thumb-color-hover: grey(30);
 
 $progress-height: spacer("large-plus");
 $progress-background: grey(20);
@@ -68,6 +68,21 @@ $meter-optimum-background: color("danger");
 $meter-sub-optimum-background: color("warning");
 $meter-sub-sub-optimum-background: color("success");
 
+$input-border-color-dark: grey(50);
+$input-hover-focus-border-color-dark: grey(20);
+$input-background-dark: grey(80);
+$input-disabled-background-dark: grey(30);
+$checkbox-active-background-dark: grey(60);
+$checkbox-checked-background-dark: grey(10);
+$checkbox-checked-icon-color-dark: grey(90);
+$checkbox-disabled-border-color-dark: grey(30);
+$checkbox-disabled-background-dark: grey(60);
+$range-track-color-dark: grey(50);
+$range-track-disabled-color-dark: grey(30);
+$range-thumb-color-dark: color("white");
+$range-thumb-color-hover-dark: grey(10);
+$progress-background-dark: grey(20);
+
 // -------
 // Buttons
 // -------
@@ -75,7 +90,6 @@ $meter-sub-sub-optimum-background: color("success");
 $buttons-padding: spacer("tiny-plus") spacer("medium");
 $buttons-font-size: .9em;
 $buttons-border-radius: $border-radius-base;
-$buttons-hover-darken: 10%;
 $buttons-inversed-border-width: 1px;
 
 $buttons-large-padding: spacer("small") spacer("medium-plus");
@@ -143,22 +157,25 @@ $flex-align-items-base: stretch;
 // Tables
 // ------
 
+$tables-background: $body-bg;
 $tables-border-radius: $border-radius-base;
 $tables-border-color: grey(85);
 $tables-cells-border-color: grey(50);
 $tables-border-width: 1px;
 $tables-cells-padding: spacer("small-plus");
-$tables-margin-top: $paragraph-margin-bottom*2;
-$tables-margin-bottom: $paragraph-margin-bottom*2;
+$tables-margin-top: calc(#{$paragraph-margin-bottom} * 2);
+$tables-margin-bottom: calc(#{$paragraph-margin-bottom} * 2);
 $tables-slim-cells-padding: spacer("tiny") spacer("tiny-plus");
 $tables-headings-cells-background: grey(10);
 $tables-zebra-cells-background: grey(5);
 $tables-zebra-headings-cells-background: grey(20);
 $tables-cells-hover-background: grey(10);
 
+$tables-dark-border-color: grey(70);
+$tables-dark-cells-border-color: grey(50);
 $tables-dark-background: grey(80);
-$tables-dark-color: color("white");
 $tables-dark-headings-cells-background: grey(90);
+$tables-dark-zebra-headings-cells-background: grey(90);
 $tables-dark-zebra-cells-background: grey(75);
 $tables-dark-cells-hover-background: grey(85);
 
@@ -170,13 +187,19 @@ $captions-font-style: italic;
 // -----------
 
 $blockquotes-padding: spacer("x-large");
-$blockquotes-margin-top: $paragraph-margin-bottom*2;
-$blockquotes-margin-bottom: $paragraph-margin-bottom*2;
+$blockquotes-margin-top: calc(#{$paragraph-margin-bottom} * 2);
+$blockquotes-margin-bottom: calc(#{$paragraph-margin-bottom} * 2);
 $blockquotes-background: grey(10);
+$blockquotes-color: $color-base;
 $blockquotes-border-radius: 10px;
 $blockquotes-quote-color: grey(30);
 $blockquotes-cite-color: grey(70);
 $blockquotes-cite-text-align: right;
+
+$blockquotes-background-dark: grey(80);
+$blockquotes-color-dark: $color-dark;
+$blockquotes-quote-color-dark: grey(60);
+$blockquotes-cite-color-dark: grey(40);
 
 // -------
 // Figures
@@ -185,8 +208,8 @@ $blockquotes-cite-text-align: right;
 $figures-background: grey(80);
 $figures-border-radius: $border-radius-base;
 $figures-padding: spacer("large-plus");
-$figures-margin-top: $paragraph-margin-bottom*2;
-$figures-margin-bottom: $paragraph-margin-bottom*2;
+$figures-margin-top: calc(#{$paragraph-margin-bottom} * 2);
+$figures-margin-bottom: calc(#{$paragraph-margin-bottom} * 2);
 $figures-figcaption-color: grey(15);
 $figures-light-background: grey(10);
 $figures-light-figcaption-color: grey(75);

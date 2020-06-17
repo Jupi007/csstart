@@ -7,8 +7,8 @@ input[type="reset"],
 [class*="Button"] {
     position: relative;
 	display: inline-block;
-	background: $components-background-base;
-	color: $components-color-base;
+	background: var(--components-background);
+	color: var(--components-color);
     font-size: $buttons-font-size;
 	border: none;
 	padding: $buttons-padding;
@@ -26,7 +26,7 @@ input[type="reset"],
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: darken($components-background-base, $buttons-hover-darken);
+        background-color: var(--components-background-hover);
     	border-radius: $buttons-border-radius;
         opacity: 0;
         z-index: -1;
@@ -35,7 +35,7 @@ input[type="reset"],
     }
 
 	&:hover, &:focus {
-        color: $components-color-base;
+        color: var(--components-color);
         text-decoration: none;
     	outline: 0;
 
@@ -50,46 +50,79 @@ input[type="reset"],
         }
     }
 
-    @each $component, $bg, $color in $components {
-		&[class*="-#{$component}"] {
-			background: $bg;
-			color: contrast($bg, $color-base, $color-base-light);
+    &[class*="-inversed"] {
+        background: var(--components-background-inversed);
+        color: var(--components-color-inversed);
+
+        &::after {
+            background-color: var(--components-background-hover-inversed);
+        }
+
+        &:hover, &:focus {
+            color: var(--components-color-inversed);
+            text-decoration: none;
+        }
+
+        &[class*="--wired"] {
+            background-color: transparent;
+            color: var(--components-background-inversed);
+            box-shadow: 0 0 0 $buttons-inversed-border-width var(--components-background-inversed) inset;
 
             &::after {
-                background-color: darken($bg, $buttons-hover-darken);
+                background-color: var(--components-background-inversed);
             }
 
             &:hover, &:focus {
-                color: contrast($bg, $color-base, $color-base-light);
+                color: var(--components-color-inversed);
+            }
+        }
+    }
+
+    @each $component, $bg in $components {
+        &[class*="-#{$component}"] {
+            background: $bg;
+            
+            @if ($bg == transparent) {
+                color: var(--color);
+            } @else {
+                color: contrast($bg, $color-base, $color-dark);
+            }
+
+            &::after {
+                background-color: darken($bg, $components-hover-base);
+            }
+
+            &:hover, &:focus {
+                color: contrast($bg, $color-base, $color-dark);
                 text-decoration: none;
             }
 
-			&[class*="--inversed"] {
-				background-color: transparent;
-				color: $bg;
-				box-shadow: 0 0 0 $buttons-inversed-border-width $bg inset;
+            &[class*="--wired"] {
+                background-color: transparent;
+                color: $bg;
+                box-shadow: 0 0 0 $buttons-inversed-border-width $bg inset;
 
                 &::after {
                     background-color: $bg;
                 }
 
-				&:hover, &:focus {
-					color: contrast($bg, $color-base, $color-base-light);
-				}
-			}
-		}
-	}
+                &:hover, &:focus {
+                    color: contrast($bg, $color-base, $color-dark);
+                }
+            }
+        }
+    }
 }
 
 [class*="Button"] {
-	&[class*="--inversed"] {
+	&[class*="--wired"] {
 		background-color: transparent;
-		color: $components-background-base;
-		box-shadow: 0 0 0 $buttons-inversed-border-width $components-background-base inset;
+		color: var(--components-background);
+		box-shadow: 0 0 0 $buttons-inversed-border-width var(--components-background) inset;
         @include transition("color");
 
         &::after {
-            background-color: $components-background-base;
+            background-color: var(--components-background);
         }
 
         &:active {
@@ -99,7 +132,7 @@ input[type="reset"],
         }
 
 		&:hover, &:focus {
-			color: $components-color-base;
+			color: var(--components-color);
 		}
 	}
 

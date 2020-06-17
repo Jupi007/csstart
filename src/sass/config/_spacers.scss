@@ -1,16 +1,18 @@
-$spacer-base: 1rem;
+:root {
+    --spacer-base: 1rem;
+}
 
 $spacers: (
-	'tiny': $spacer-base * .25,
-	'tiny-plus': $spacer-base * .5,
-	'small': $spacer-base * .75,
-	'small-plus': $spacer-base * .9,
-	'medium': $spacer-base,
-	'medium-plus': $spacer-base * 1.5,
-	'large': $spacer-base * 2,
-	'large-plus': $spacer-base * 2.5,
-	'x-large': $spacer-base * 3,
-	'x-large-plus': $spacer-base * 3.5,
-	'xx-large': $spacer-base * 4,
-	'xx-large-plus': $spacer-base * 4.5,
+	'tiny': .25,
+	'tiny-plus': .5,
+	'small': .75,
+	'small-plus': .9,
+	'medium': 1,
+	'medium-plus': 1.5,
+	'large': 2,
+	'large-plus': 2.5,
+	'x-large': 3,
+	'x-large-plus': 3.5,
+	'xx-large': 4,
+	'xx-large-plus': 4.5,
 );

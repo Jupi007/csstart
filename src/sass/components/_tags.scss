@@ -3,8 +3,8 @@
 [class*="Tag"], a[class*="Tag"] {
     outline: 0;
 	display: inline-block;
-	background: $components-background-base;
-	color: $components-color-base;
+	background: var(--components-background);
+	color: var(--components-color);
 	border: none;
 	border-radius: $tags-border-radius;
 	padding: $tags-padding;
@@ -13,17 +13,33 @@
 	vertical-align: middle;
     text-decoration: none;
 
-    &:hover() {
+    &:hover, &:focus {
+        color: var(--components-color);
         text-decoration: none;
-        color: $components-color-base;
+    }
+
+    &[class*="-inversed"] {
+        background: var(--components-background-inversed);
+    	color: var(--components-color-inversed);
+
+        &[class*="--wired"] {
+            background-color: transparent;
+            color: var(--components-background-inversed);
+            box-shadow: 0 0 0 $buttons-inversed-border-width var(--components-background-inversed) inset;
+        }
     }
 
 	@each $component, $bg in $components {
 		&[class*="-#{$component}"] {
 			background: $bg;
-			color: contrast($bg, $color-base, $color-base-light);
 
-			&[class*="--inversed"] {
+            @if ($bg == transparent) {
+                color: var(--color);
+            } @else {
+                color: contrast($bg, $color-base, $color-dark);
+            }
+
+			&[class*="--wired"] {
 				background-color: transparent;
 				color: $bg;
 				box-shadow: 0 0 0 $buttons-inversed-border-width $bg inset;
@@ -31,10 +47,10 @@
 		}
 	}
 
-	&[class*="--inversed"] {
+	&[class*="--wired"] {
 		background-color: transparent;
-		color: $components-background-base;
-		box-shadow: 0 0 0 $buttons-inversed-border-width $components-background-base inset;
+		color: var(--components-background);
+		box-shadow: 0 0 0 $buttons-inversed-border-width var(--components-background) inset;
 	}
 
 	&[class*="--l"] {
@@ -52,7 +68,7 @@ a[class*="Tag"] {
     position: relative;
     z-index: 1;
     text-decoration: none;
-	color: $components-color-base;
+	color: var(--components-color);
 
     &::after {
         content: "";
@@ -61,7 +77,7 @@ a[class*="Tag"] {
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: darken($components-background-base, $buttons-hover-darken);
+        background-color: var(--components-background-hover);
     	border-radius: $buttons-border-radius;
         opacity: 0;
         z-index: -1;
@@ -70,7 +86,7 @@ a[class*="Tag"] {
     }
 
 	&:hover, &:focus {
-        color: $components-color-base;
+        color: var(--components-color);
         text-decoration: none;
     	outline: 0;
 
@@ -85,9 +101,37 @@ a[class*="Tag"] {
         }
     }
 
-    &[class*="--inversed"] {
+    &[class*="-inversed"] {
+        background: var(--components-background-inversed);
+        color: var(--components-color-inversed);
+
+        &::after {
+            background-color: var(--components-background-hover-inversed);
+        }
+
+        &:hover, &:focus {
+            color: var(--components-color-inversed);
+            text-decoration: none;
+        }
+
+        &[class*="--wired"] {
+            background-color: transparent;
+            color: var(--components-background-inversed);
+            box-shadow: 0 0 0 $buttons-inversed-border-width var(--components-background-inversed) inset;
+
+            &::after {
+                background-color: var(--components-background-inversed);
+            }
+
+            &:hover, &:focus {
+                color: var(--components-color-inversed);
+            }
+        }
+    }
+
+    &[class*="--wired"] {
 		&::after {
-            background-color: $components-background-base;
+            background-color: var(--components-background);
         }
 
         &:active {
@@ -101,21 +145,30 @@ a[class*="Tag"] {
 		}
 	}
 
-    @each $component, $bg, $color in $components {
+    @each $component, $bg in $components {
 		&[class*="-#{$component}"] {
+            @if ($bg == transparent) {
+                color: var(--color);
+            } @else {
+                color: contrast($bg, $color-base, $color-dark);
+            }
+
 			background: $bg;
-			color: contrast($bg, $color-base, $color-base-light);
 
             &::after {
-                background-color: darken($bg, $buttons-hover-darken);
+                background-color: darken($bg, $components-hover-base);
             }
 
             &:hover, &:focus {
-                color: contrast($bg, $color-base, $color-base-light);
+                @if ($bg == transparent) {
+                    color: var(--color);
+                } @else {
+                    color: contrast($bg, $color-base, $color-dark);
+                }
                 text-decoration: none;
             }
 
-			&[class*="--inversed"] {
+			&[class*="--wired"] {
 				background-color: transparent;
 				color: $bg;
 				box-shadow: 0 0 0 $buttons-inversed-border-width $bg inset;
@@ -125,7 +178,7 @@ a[class*="Tag"] {
                 }
 
 				&:hover, &:focus {
-					color: contrast($bg, $color-base, $color-base-light);
+					color: contrast($bg, $color-base, $color-dark);
 				}
 			}
 		}

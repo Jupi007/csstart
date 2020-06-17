@@ -55,9 +55,9 @@ body {
 
 	font-weight: $font-weight-base;
 	line-height: $line-height-base;
-	color: $color-base;
+	color: var(--color);
 	text-align: left;
-	background-color: $body-bg;
+	background-color: var(--body-bg-color);
 
     @include option("smooth-scroll") {
         scroll-behavior: smooth;
@@ -173,14 +173,14 @@ sub { bottom: -.25em; }
 sup { top: -.5em; }
 
 a, a:visited{
-	color: $link-color;
+	color: var(--link-color);
 	text-decoration: $link-decoration;
 	background-color: transparent;
 
     @include transition("color");
 
 	&:hover {
-		color: $link-hover-color;
+		color: var(--link-hover-color);
 		text-decoration: $link-hover-decoration;
 	}
 }

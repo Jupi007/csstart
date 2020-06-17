@@ -2,18 +2,27 @@
 
 [class*="Alert"] {
 	padding: $alerts-padding;
-	border: $alerts-border-width solid $components-background-base;
+	border: $alerts-border-width solid var(--components-background);
 	border-left-width: $alerts-border-left-width;
 	border-radius: $alerts-border-radius;
 	margin-bottom: $alerts-margin-bottom;
-    background-color: transparentize($components-background-base, $alerts-background-transparency);
-	color: darken($components-background-base, $buttons-color-darken);
+    background-color: transparent;
+	color: var(--color);
 
-	@each $component, $bg, $color in $components {
+    &[class*="-inversed"] {
+        border: $alerts-border-width solid var(--components-background-inversed);
+    	color: var(--components-color);
+    }
+
+	@each $component, $bg in $components {
 		&[class*="-#{$component}"] {
 			border-color: $bg;
-            background-color: transparentize($bg, $alerts-background-transparency);
-            color: darken($bg, $buttons-color-darken);
+
+            @if ($bg == transparent) {
+                color: var(--color);
+            } @else {
+                color: $bg;
+            }
 		}
 	}
 

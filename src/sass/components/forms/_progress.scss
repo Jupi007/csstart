@@ -1,7 +1,7 @@
 @include option("forms") {
 
 meter, progress {
-	background: $progress-background;
+	background: var(--progress-background);
 	border: none;
 	height: $progress-height;
 	border-radius: $progress-border-radius;
@@ -11,7 +11,7 @@ meter, progress {
 
 ::-webkit-progress-bar,
 ::-webkit-meter-bar {
-	background: $progress-background;
+	background: var(--progress-background);
 	border: none;
 	height: $progress-height;
 	border-radius: $progress-border-radius;

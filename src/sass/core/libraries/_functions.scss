@@ -16,8 +16,8 @@
 	@return getter($font-weights, $name);
 }
 
-@function spacer($name) {
-	@return getter($spacers, $name);
+@function spacer($name, $coefficient: 1) {
+	@return calc(var(--spacer-base) * #{getter($spacers, $name) * $coefficient});
 }
 
 @function grey($percentage) {
