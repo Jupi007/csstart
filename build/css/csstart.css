@@ -9847,7 +9847,7 @@ button[class*='Tag'][class*='--wired']:hover,
 button[class*='Tag'][class*='--wired']:focus,
 [class*='Button'][class*='--wired']:hover,
 [class*='Button'][class*='--wired']:focus {
-	color: #f2f2f2;
+	color: var(--components-color);
 }
 
 a[class*='Tag'][class*='-light'],

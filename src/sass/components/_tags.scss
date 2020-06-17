@@ -149,7 +149,7 @@ button[class*="Tag"],
         }
 
 		&:hover, &:focus {
-			color: $components-color-base;
+			color: var(--components-color);
 		}
 	}
 
