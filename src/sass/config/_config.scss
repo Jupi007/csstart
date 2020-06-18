@@ -17,10 +17,10 @@ $options: (
 	"figures": true,
 	"media": true,
 	"tables": true,
-);
+) !default;
 
-$transition-duration-base:  .2s;
-$transition-timing-function-base: ease;
+$transition-duration-base:  .2s !default;
+$transition-timing-function-base: ease !default;
 
 $breakpoints: (
 	'tiny'        : 480px,
@@ -28,30 +28,30 @@ $breakpoints: (
 	'medium'      : 768px,
 	'large'       : 992px,
 	'extraLarge' : 1500px,
-);
+) !default;
 
-$border-radius-base: 3px;
+$border-radius-base: 3px !default;
 
-$body-bg: color('white');
-$body-bg-dark: grey(85);
+$body-bg: color('white') !default;
+$body-bg-dark: grey(85) !default;
 
-$link-color: color('blue');
-$link-decoration: underline;
-$link-hover-color: darken( $link-color , 15% );
-$link-hover-decoration: underline;
+$link-color: color('blue') !default;
+$link-decoration: underline !default;
+$link-hover-color: darken( $link-color , 15% ) !default;
+$link-hover-decoration: underline !default;
 
-$link-color-dark: color('light-blue');
-$link-hover-color-dark: darken( $link-color-dark , 15% );
+$link-color-dark: color('light-blue') !default;
+$link-hover-color-dark: darken( $link-color-dark , 15% ) !default;
 
-$margin-base: 'medium-plus';
+$margin-base: 'medium-plus' !default;
 
-$components-background-base: grey(80);
-$components-color-base: $color-dark;
-$components-hover-base: 10%;
+$components-background-base: grey(80) !default;
+$components-color-base: $color-dark !default;
+$components-hover-base: 10% !default;
 
-$components-background-dark: color('white');
-$components-color-dark: $color-base;
-$components-hover-dark: 10%;
+$components-background-dark: color('white') !default;
+$components-color-dark: $color-base !default;
+$components-hover-dark: 10% !default;
 
 $components: (
     'light': $components-background-dark,
@@ -71,13 +71,13 @@ $components: (
 	'info': color('info'),
 	'warning': color('warning'),
 	'danger': color('danger'),
-);
+) !default;
 
 $gutters: (
 	'': spacer('medium'),
 	'-l': spacer('large'),
 	'-xl': spacer('large-plus'),
-);
+) !default;
 
-$min-grid-breakpoint: "small";
-$max-grid-cols: 12;
+$min-grid-breakpoint: "small" !default;
+$max-grid-cols: 12 !default;

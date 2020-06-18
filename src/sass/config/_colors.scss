@@ -1,22 +1,24 @@
-$colors: (
-	'white': #ffffff,
-	'black': #000000,
-	'red': rgb(217, 77, 77),
-	'orange': rgb(217, 131, 30),
-	'yellow': rgb(255, 244, 108),
-	'green': rgb(116, 207, 97),
-	'blue': rgb(57, 53, 205),
-	'light-blue': rgb(116, 192, 205),
-	'purple': rgb(170, 128, 217),
-	'brown': rgb(131, 86, 17)
-);
+@if not variable-exists(colors) {
+    $colors: (
+    	'white': #ffffff,
+    	'black': #000000,
+    	'red': rgb(217, 77, 77),
+    	'orange': rgb(217, 131, 30),
+    	'yellow': rgb(255, 244, 108),
+    	'green': rgb(116, 207, 97),
+    	'blue': rgb(57, 53, 205),
+    	'light-blue': rgb(116, 192, 205),
+    	'purple': rgb(170, 128, 217),
+    	'brown': rgb(131, 86, 17)
+    ) !global;
 
-$colors: map-merge(
-  (
-	'success': color('green'),
-	'info': color('light-blue'),
-	'warning': color('orange'),
-	'danger': color('red'),
-  ),
-  $colors
-);
+    $colors: map-merge(
+      (
+    	'success': color('green'),
+    	'info': color('light-blue'),
+    	'warning': color('orange'),
+    	'danger': color('red'),
+      ),
+      $colors
+    );
+}

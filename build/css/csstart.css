@@ -1,5 +1,5 @@
 :root {
-	--spacer-base: 1rem;
+	--spacer-base: $spacer-base;
 }
 
 @media (prefers-color-scheme: light) {

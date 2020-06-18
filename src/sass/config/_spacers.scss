@@ -1,5 +1,7 @@
+$spacer-base: 1rem;
+
 :root {
-    --spacer-base: 1rem;
+    --spacer-base: $spacer-base;
 }
 
 $spacers: (
