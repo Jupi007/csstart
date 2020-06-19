@@ -1,7 +1,7 @@
-$spacer-base: 1rem;
+$spacer-base: 1rem !default;
 
 :root {
-    --spacer-base: $spacer-base;
+    --spacer-base: #{$spacer-base};
 }
 
 $spacers: (
