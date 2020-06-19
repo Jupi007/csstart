@@ -2,54 +2,54 @@
 // CSS Variables (for dynamic light and dark variants)
 // ---------------------------------------------------
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --body-bg-color: #{$body-bg};
-        --color: #{$color-base};
 
-        --link-color: #{$link-color};
-        --link-hover-color: #{$link-hover-color};
-        --link-color-inversed: #{$link-color-dark};
-        --link-hover-color-inversed: #{$link-hover-color-dark};
+:root {
+    --body-bg-color: #{$body-bg};
+    --color: #{$color-base};
 
-        --components-background: #{$components-background-base};
-        --components-background-hover: #{darken($components-background-base, $components-hover-base)};
-        --components-color: #{$components-color-base};
-        --components-background-inversed: #{$components-background-dark};
-        --components-background-hover-inversed: #{darken($components-background-dark, $components-hover-dark)};
-        --components-color-inversed: #{$components-color-dark};
+    --link-color: #{$link-color};
+    --link-hover-color: #{$link-hover-color};
+    --link-color-inversed: #{$link-color-dark};
+    --link-hover-color-inversed: #{$link-hover-color-dark};
 
-        --tables-border-color: #{$tables-border-color};
-        --tables-cells-border-color: #{$tables-cells-border-color};
-        --tables-background: #{$tables-background};
-        --tables-headings-cells-background: #{$tables-headings-cells-background};
-        --tables-zebra-headings-cells-background: #{$tables-zebra-headings-cells-background};
-        --tables-zebra-cells-background: #{$tables-zebra-cells-background};
-        --tables-cells-hover-background: #{$tables-cells-hover-background};
+    --components-background: #{$components-background-base};
+    --components-background-hover: #{darken($components-background-base, $components-hover-base)};
+    --components-color: #{$components-color-base};
+    --components-background-inversed: #{$components-background-dark};
+    --components-background-hover-inversed: #{darken($components-background-dark, $components-hover-dark)};
+    --components-color-inversed: #{$components-color-dark};
 
-        --input-border-color: #{$input-border-color};
-        --input-hover-focus-border-color: #{$input-hover-focus-border-color};
-        --input-background: #{$input-background};
-        --input-disabled-background: #{$input-disabled-background};
-        --checkbox-active-background: #{$checkbox-active-background};
-        --checkbox-checked-background: #{$checkbox-checked-background};
-        --checkbox-checked-icon-color: #{$checkbox-checked-icon-color};
-        --checkbox-disabled-border-color: #{$checkbox-disabled-border-color};
-        --checkbox-disabled-background: #{$checkbox-disabled-background};
-        --range-track-color: #{$range-track-color};
-        --range-track-disabled-color: #{$range-track-disabled-color};
-        --range-thumb-color: #{$range-thumb-color};
-        --range-thumb-color-hover: #{$range-thumb-color-hover};
-        --progress-background: #{$progress-background};
+    --tables-border-color: #{$tables-border-color};
+    --tables-cells-border-color: #{$tables-cells-border-color};
+    --tables-background: #{$tables-background};
+    --tables-headings-cells-background: #{$tables-headings-cells-background};
+    --tables-zebra-headings-cells-background: #{$tables-zebra-headings-cells-background};
+    --tables-zebra-cells-background: #{$tables-zebra-cells-background};
+    --tables-cells-hover-background: #{$tables-cells-hover-background};
 
-        --blockquotes-background: #{$blockquotes-background};
-        --blockquotes-color: #{$blockquotes-color};
-        --blockquotes-cite-color: #{$blockquotes-cite-color};
-        --blockquotes-quote-color: #{$blockquotes-quote-color};
+    --input-border-color: #{$input-border-color};
+    --input-hover-focus-border-color: #{$input-hover-focus-border-color};
+    --input-background: #{$input-background};
+    --input-disabled-background: #{$input-disabled-background};
+    --checkbox-active-background: #{$checkbox-active-background};
+    --checkbox-checked-background: #{$checkbox-checked-background};
+    --checkbox-checked-icon-color: #{$checkbox-checked-icon-color};
+    --checkbox-disabled-border-color: #{$checkbox-disabled-border-color};
+    --checkbox-disabled-background: #{$checkbox-disabled-background};
+    --range-track-color: #{$range-track-color};
+    --range-track-disabled-color: #{$range-track-disabled-color};
+    --range-thumb-color: #{$range-thumb-color};
+    --range-thumb-color-hover: #{$range-thumb-color-hover};
+    --progress-background: #{$progress-background};
 
-        --cards-subtitle-color: #{$cards-subtitle-color};
-    }
+    --blockquotes-background: #{$blockquotes-background};
+    --blockquotes-color: #{$blockquotes-color};
+    --blockquotes-cite-color: #{$blockquotes-cite-color};
+    --blockquotes-quote-color: #{$blockquotes-quote-color};
+
+    --cards-subtitle-color: #{$cards-subtitle-color};
 }
+
 @media (prefers-color-scheme: dark) {
     :root {
         --body-bg-color: #{$body-bg-dark};

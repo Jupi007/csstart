@@ -2,47 +2,45 @@
 	--spacer-base: 1rem;
 }
 
-@media (prefers-color-scheme: light) {
-	:root {
-		--body-bg-color: #fff;
-		--color: #0d0d0d;
-		--link-color: #3935cd;
-		--link-hover-color: #272491;
-		--link-color-inversed: #74c0cd;
-		--link-hover-color-inversed: #41a3b4;
-		--components-background: #333;
-		--components-background-hover: #1a1a1a;
-		--components-color: #f2f2f2;
-		--components-background-inversed: #fff;
-		--components-background-hover-inversed: #e6e6e6;
-		--components-color-inversed: #0d0d0d;
-		--tables-border-color: #262626;
-		--tables-cells-border-color: gray;
-		--tables-background: #fff;
-		--tables-headings-cells-background: #e6e6e6;
-		--tables-zebra-headings-cells-background: #ccc;
-		--tables-zebra-cells-background: #f2f2f2;
-		--tables-cells-hover-background: #e6e6e6;
-		--input-border-color: #ccc;
-		--input-hover-focus-border-color: gray;
-		--input-background: #fff;
-		--input-disabled-background: #e6e6e6;
-		--checkbox-active-background: #ccc;
-		--checkbox-checked-background: black;
-		--checkbox-checked-icon-color: #fff;
-		--checkbox-disabled-border-color: #b3b3b3;
-		--checkbox-disabled-background: #e6e6e6;
-		--range-track-color: #4d4d4d;
-		--range-track-disabled-color: #666;
-		--range-thumb-color: #ccc;
-		--range-thumb-color-hover: #b3b3b3;
-		--progress-background: #ccc;
-		--blockquotes-background: #e6e6e6;
-		--blockquotes-color: #0d0d0d;
-		--blockquotes-cite-color: #4d4d4d;
-		--blockquotes-quote-color: #b3b3b3;
-		--cards-subtitle-color: #666;
-	}
+:root {
+	--body-bg-color: #fff;
+	--color: #0d0d0d;
+	--link-color: #3935cd;
+	--link-hover-color: #272491;
+	--link-color-inversed: #74c0cd;
+	--link-hover-color-inversed: #41a3b4;
+	--components-background: #333;
+	--components-background-hover: #1a1a1a;
+	--components-color: #f2f2f2;
+	--components-background-inversed: #fff;
+	--components-background-hover-inversed: #e6e6e6;
+	--components-color-inversed: #0d0d0d;
+	--tables-border-color: #262626;
+	--tables-cells-border-color: gray;
+	--tables-background: #fff;
+	--tables-headings-cells-background: #e6e6e6;
+	--tables-zebra-headings-cells-background: #ccc;
+	--tables-zebra-cells-background: #f2f2f2;
+	--tables-cells-hover-background: #e6e6e6;
+	--input-border-color: #ccc;
+	--input-hover-focus-border-color: gray;
+	--input-background: #fff;
+	--input-disabled-background: #e6e6e6;
+	--checkbox-active-background: #ccc;
+	--checkbox-checked-background: black;
+	--checkbox-checked-icon-color: #fff;
+	--checkbox-disabled-border-color: #b3b3b3;
+	--checkbox-disabled-background: #e6e6e6;
+	--range-track-color: #4d4d4d;
+	--range-track-disabled-color: #666;
+	--range-thumb-color: #ccc;
+	--range-thumb-color-hover: #b3b3b3;
+	--progress-background: #ccc;
+	--blockquotes-background: #e6e6e6;
+	--blockquotes-color: #0d0d0d;
+	--blockquotes-cite-color: #4d4d4d;
+	--blockquotes-quote-color: #b3b3b3;
+	--cards-subtitle-color: #666;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -9088,10 +9086,8 @@ select:not([multiple]) {
 	background-size: 1.2rem;
 }
 
-@media (prefers-color-scheme: light) {
-	select:not([multiple]) {
-		background-image: url('data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20standalone%3D%22no%22%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20style%3D%22isolation%3Aisolate%22%20viewBox%3D%220%200%2020%2020%22%20width%3D%2220%22%20height%3D%2220%22%3E%3Cpath%20d%3D%22%20M%209.96%2011.966%20L%203.523%205.589%20C%202.464%204.627%200.495%206.842%201.505%207.771%20L%201.505%207.771%20L%208.494%2014.763%20C%209.138%2015.35%2010.655%2015.369%2011.29%2014.763%20L%2011.29%2014.763%20L%2018.49%207.771%20C%2019.557%206.752%2017.364%204.68%2016.262%205.725%20L%2016.262%205.725%20L%209.96%2011.966%20Z%20%22%20fill%3D%22000%22%2F%3E%3C%2Fsvg%3E');
-	}
+select:not([multiple]) {
+	background-image: url('data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20standalone%3D%22no%22%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20style%3D%22isolation%3Aisolate%22%20viewBox%3D%220%200%2020%2020%22%20width%3D%2220%22%20height%3D%2220%22%3E%3Cpath%20d%3D%22%20M%209.96%2011.966%20L%203.523%205.589%20C%202.464%204.627%200.495%206.842%201.505%207.771%20L%201.505%207.771%20L%208.494%2014.763%20C%209.138%2015.35%2010.655%2015.369%2011.29%2014.763%20L%2011.29%2014.763%20L%2018.49%207.771%20C%2019.557%206.752%2017.364%204.68%2016.262%205.725%20L%2016.262%205.725%20L%209.96%2011.966%20Z%20%22%20fill%3D%22000%22%2F%3E%3C%2Fsvg%3E');
 }
 
 @media (prefers-color-scheme: dark) {
