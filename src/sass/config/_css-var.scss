@@ -46,6 +46,8 @@
         --blockquotes-color: #{$blockquotes-color};
         --blockquotes-cite-color: #{$blockquotes-cite-color};
         --blockquotes-quote-color: #{$blockquotes-quote-color};
+
+        --cards-subtitle-color: #{$cards-subtitle-color};
     }
 }
 @media (prefers-color-scheme: dark) {
@@ -92,5 +94,7 @@
         --blockquotes-color: #{$blockquotes-color-dark};
         --blockquotes-cite-color: #{$blockquotes-cite-color-dark};
         --blockquotes-quote-color: #{$blockquotes-quote-color-dark};
+
+        --cards-subtitle-color: #{$cards-subtitle-color-dark};
     }
 }

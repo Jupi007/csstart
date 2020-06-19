@@ -34,7 +34,7 @@
 .card-subtitle {
 	display: block;
 	font-size: $cards-subtitle-font-size;
-	color: $cards-subtitle-color;
+	color: var(--cards-subtitle-color);
 }
 
 [class*="card-body"] {

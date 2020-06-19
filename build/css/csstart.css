@@ -41,6 +41,7 @@
 		--blockquotes-color: #0d0d0d;
 		--blockquotes-cite-color: #4d4d4d;
 		--blockquotes-quote-color: #b3b3b3;
+		--cards-subtitle-color: #666;
 	}
 }
 
@@ -83,6 +84,7 @@
 		--blockquotes-color: #f2f2f2;
 		--blockquotes-cite-color: #999;
 		--blockquotes-quote-color: #666;
+		--cards-subtitle-color: #8c8c8c;
 	}
 }
 
@@ -10774,7 +10776,7 @@ a[class*='Card']:focus {
 .card-subtitle {
 	font-size: .9em;
 	display: block;
-	color: #666;
+	color: var(--cards-subtitle-color);
 }
 
 [class*='card-body'] {
