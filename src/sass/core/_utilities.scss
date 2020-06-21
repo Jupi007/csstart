@@ -69,6 +69,10 @@
 	.border-grey#{$i * 5} { border: 1px solid grey($i * 5) !important; }
 }
 
+.border-none {
+    border: none !important;
+}
+
 // Flex utilities
     .centered-children {
         display: flex;

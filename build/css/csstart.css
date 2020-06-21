@@ -1056,6 +1056,10 @@ template {
 	border: 1px solid black !important;
 }
 
+.border-none {
+	border: none !important;
+}
+
 .centered-children {
 	display: flex;
 	align-items: center;
