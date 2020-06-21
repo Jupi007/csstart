@@ -116,7 +116,7 @@ img.fr {
 }
 
 @mixin responsive-utilities($prefix: "") {
-	.#{$prefix}display {
+	.#{$prefix}d {
 		&-none { display: none !important; }
 		&-inline { display: inline !important; }
 		&-inline-block { display: inline-block !important; }
