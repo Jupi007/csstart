@@ -51,22 +51,22 @@
 	}
 }
 
-[class*="border"] {
+.border {
 	border: 1px solid $color-base !important;
 
-	&[class*="--radius"] {
+	&-radius {
 		border-radius: $border-radius-base !important;
 	}
 }
 
 @each $name, $color in $colors {
 	.background-#{$name} { background-color: $color !important; }
-	[class*="border-#{$name}"] { border: 1px solid $color !important; }
+	.border-#{$name} { border: 1px solid $color !important; }
 }
 
 @for $i from 1 through 20 {
 	.background-grey#{$i * 5} { background-color: grey($i * 5) !important; }
-	[class*="border-grey#{$i * 5}"] { border: 1px solid grey($i * 5) !important; }
+	.border-grey#{$i * 5} { border: 1px solid grey($i * 5) !important; }
 }
 
 // Flex utilities
