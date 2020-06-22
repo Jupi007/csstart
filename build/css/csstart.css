@@ -3517,139 +3517,139 @@ img.fr {
 		align-self: stretch;
 	}
 
-	[class*='Grid--'][class*='--tiny-2'] {
+	[class*='Grid'][class*='--tiny-2'] {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	[class*='Grid--'] [class*='tiny--col-2'] {
+	[class*='Grid'] [class*='tiny--col-2'] {
 		grid-column: auto/span 2;
 	}
 
-	[class*='Grid--'] [class*='tiny--row-2'] {
+	[class*='Grid'] [class*='tiny--row-2'] {
 		grid-row: auto/span 2;
 	}
 
-	[class*='Grid--'][class*='--tiny-3'] {
+	[class*='Grid'][class*='--tiny-3'] {
 		grid-template-columns: repeat(3, 1fr);
 	}
 
-	[class*='Grid--'] [class*='tiny--col-3'] {
+	[class*='Grid'] [class*='tiny--col-3'] {
 		grid-column: auto/span 3;
 	}
 
-	[class*='Grid--'] [class*='tiny--row-3'] {
+	[class*='Grid'] [class*='tiny--row-3'] {
 		grid-row: auto/span 3;
 	}
 
-	[class*='Grid--'][class*='--tiny-4'] {
+	[class*='Grid'][class*='--tiny-4'] {
 		grid-template-columns: repeat(4, 1fr);
 	}
 
-	[class*='Grid--'] [class*='tiny--col-4'] {
+	[class*='Grid'] [class*='tiny--col-4'] {
 		grid-column: auto/span 4;
 	}
 
-	[class*='Grid--'] [class*='tiny--row-4'] {
+	[class*='Grid'] [class*='tiny--row-4'] {
 		grid-row: auto/span 4;
 	}
 
-	[class*='Grid--'][class*='--tiny-5'] {
+	[class*='Grid'][class*='--tiny-5'] {
 		grid-template-columns: repeat(5, 1fr);
 	}
 
-	[class*='Grid--'] [class*='tiny--col-5'] {
+	[class*='Grid'] [class*='tiny--col-5'] {
 		grid-column: auto/span 5;
 	}
 
-	[class*='Grid--'] [class*='tiny--row-5'] {
+	[class*='Grid'] [class*='tiny--row-5'] {
 		grid-row: auto/span 5;
 	}
 
-	[class*='Grid--'][class*='--tiny-6'] {
+	[class*='Grid'][class*='--tiny-6'] {
 		grid-template-columns: repeat(6, 1fr);
 	}
 
-	[class*='Grid--'] [class*='tiny--col-6'] {
+	[class*='Grid'] [class*='tiny--col-6'] {
 		grid-column: auto/span 6;
 	}
 
-	[class*='Grid--'] [class*='tiny--row-6'] {
+	[class*='Grid'] [class*='tiny--row-6'] {
 		grid-row: auto/span 6;
 	}
 
-	[class*='Grid--'][class*='--tiny-7'] {
+	[class*='Grid'][class*='--tiny-7'] {
 		grid-template-columns: repeat(7, 1fr);
 	}
 
-	[class*='Grid--'] [class*='tiny--col-7'] {
+	[class*='Grid'] [class*='tiny--col-7'] {
 		grid-column: auto/span 7;
 	}
 
-	[class*='Grid--'] [class*='tiny--row-7'] {
+	[class*='Grid'] [class*='tiny--row-7'] {
 		grid-row: auto/span 7;
 	}
 
-	[class*='Grid--'][class*='--tiny-8'] {
+	[class*='Grid'][class*='--tiny-8'] {
 		grid-template-columns: repeat(8, 1fr);
 	}
 
-	[class*='Grid--'] [class*='tiny--col-8'] {
+	[class*='Grid'] [class*='tiny--col-8'] {
 		grid-column: auto/span 8;
 	}
 
-	[class*='Grid--'] [class*='tiny--row-8'] {
+	[class*='Grid'] [class*='tiny--row-8'] {
 		grid-row: auto/span 8;
 	}
 
-	[class*='Grid--'][class*='--tiny-9'] {
+	[class*='Grid'][class*='--tiny-9'] {
 		grid-template-columns: repeat(9, 1fr);
 	}
 
-	[class*='Grid--'] [class*='tiny--col-9'] {
+	[class*='Grid'] [class*='tiny--col-9'] {
 		grid-column: auto/span 9;
 	}
 
-	[class*='Grid--'] [class*='tiny--row-9'] {
+	[class*='Grid'] [class*='tiny--row-9'] {
 		grid-row: auto/span 9;
 	}
 
-	[class*='Grid--'][class*='--tiny-10'] {
+	[class*='Grid'][class*='--tiny-10'] {
 		grid-template-columns: repeat(10, 1fr);
 	}
 
-	[class*='Grid--'] [class*='tiny--col-10'] {
+	[class*='Grid'] [class*='tiny--col-10'] {
 		grid-column: auto/span 10;
 	}
 
-	[class*='Grid--'] [class*='tiny--row-10'] {
+	[class*='Grid'] [class*='tiny--row-10'] {
 		grid-row: auto/span 10;
 	}
 
-	[class*='Grid--'][class*='--tiny-11'] {
+	[class*='Grid'][class*='--tiny-11'] {
 		grid-template-columns: repeat(11, 1fr);
 	}
 
-	[class*='Grid--'] [class*='tiny--col-11'] {
+	[class*='Grid'] [class*='tiny--col-11'] {
 		grid-column: auto/span 11;
 	}
 
-	[class*='Grid--'] [class*='tiny--row-11'] {
+	[class*='Grid'] [class*='tiny--row-11'] {
 		grid-row: auto/span 11;
 	}
 
-	[class*='Grid--'][class*='--tiny-12'] {
+	[class*='Grid'][class*='--tiny-12'] {
 		grid-template-columns: repeat(12, 1fr);
 	}
 
-	[class*='Grid--'] [class*='tiny--col-12'] {
+	[class*='Grid'] [class*='tiny--col-12'] {
 		grid-column: auto/span 12;
 	}
 
-	[class*='Grid--'] [class*='tiny--row-12'] {
+	[class*='Grid'] [class*='tiny--row-12'] {
 		grid-row: auto/span 12;
 	}
 
-	[class*='Grid--'][class*='--tiny-auto'] {
+	[class*='Grid'][class*='--tiny-auto'] {
 		grid-auto-flow: column;
 		grid-auto-columns: 1fr;
 		grid-template-columns: none;
@@ -4772,139 +4772,139 @@ img.fr {
 		align-self: stretch;
 	}
 
-	[class*='Grid--'][class*='--small-2'] {
+	[class*='Grid'][class*='--small-2'] {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	[class*='Grid--'] [class*='small--col-2'] {
+	[class*='Grid'] [class*='small--col-2'] {
 		grid-column: auto/span 2;
 	}
 
-	[class*='Grid--'] [class*='small--row-2'] {
+	[class*='Grid'] [class*='small--row-2'] {
 		grid-row: auto/span 2;
 	}
 
-	[class*='Grid--'][class*='--small-3'] {
+	[class*='Grid'][class*='--small-3'] {
 		grid-template-columns: repeat(3, 1fr);
 	}
 
-	[class*='Grid--'] [class*='small--col-3'] {
+	[class*='Grid'] [class*='small--col-3'] {
 		grid-column: auto/span 3;
 	}
 
-	[class*='Grid--'] [class*='small--row-3'] {
+	[class*='Grid'] [class*='small--row-3'] {
 		grid-row: auto/span 3;
 	}
 
-	[class*='Grid--'][class*='--small-4'] {
+	[class*='Grid'][class*='--small-4'] {
 		grid-template-columns: repeat(4, 1fr);
 	}
 
-	[class*='Grid--'] [class*='small--col-4'] {
+	[class*='Grid'] [class*='small--col-4'] {
 		grid-column: auto/span 4;
 	}
 
-	[class*='Grid--'] [class*='small--row-4'] {
+	[class*='Grid'] [class*='small--row-4'] {
 		grid-row: auto/span 4;
 	}
 
-	[class*='Grid--'][class*='--small-5'] {
+	[class*='Grid'][class*='--small-5'] {
 		grid-template-columns: repeat(5, 1fr);
 	}
 
-	[class*='Grid--'] [class*='small--col-5'] {
+	[class*='Grid'] [class*='small--col-5'] {
 		grid-column: auto/span 5;
 	}
 
-	[class*='Grid--'] [class*='small--row-5'] {
+	[class*='Grid'] [class*='small--row-5'] {
 		grid-row: auto/span 5;
 	}
 
-	[class*='Grid--'][class*='--small-6'] {
+	[class*='Grid'][class*='--small-6'] {
 		grid-template-columns: repeat(6, 1fr);
 	}
 
-	[class*='Grid--'] [class*='small--col-6'] {
+	[class*='Grid'] [class*='small--col-6'] {
 		grid-column: auto/span 6;
 	}
 
-	[class*='Grid--'] [class*='small--row-6'] {
+	[class*='Grid'] [class*='small--row-6'] {
 		grid-row: auto/span 6;
 	}
 
-	[class*='Grid--'][class*='--small-7'] {
+	[class*='Grid'][class*='--small-7'] {
 		grid-template-columns: repeat(7, 1fr);
 	}
 
-	[class*='Grid--'] [class*='small--col-7'] {
+	[class*='Grid'] [class*='small--col-7'] {
 		grid-column: auto/span 7;
 	}
 
-	[class*='Grid--'] [class*='small--row-7'] {
+	[class*='Grid'] [class*='small--row-7'] {
 		grid-row: auto/span 7;
 	}
 
-	[class*='Grid--'][class*='--small-8'] {
+	[class*='Grid'][class*='--small-8'] {
 		grid-template-columns: repeat(8, 1fr);
 	}
 
-	[class*='Grid--'] [class*='small--col-8'] {
+	[class*='Grid'] [class*='small--col-8'] {
 		grid-column: auto/span 8;
 	}
 
-	[class*='Grid--'] [class*='small--row-8'] {
+	[class*='Grid'] [class*='small--row-8'] {
 		grid-row: auto/span 8;
 	}
 
-	[class*='Grid--'][class*='--small-9'] {
+	[class*='Grid'][class*='--small-9'] {
 		grid-template-columns: repeat(9, 1fr);
 	}
 
-	[class*='Grid--'] [class*='small--col-9'] {
+	[class*='Grid'] [class*='small--col-9'] {
 		grid-column: auto/span 9;
 	}
 
-	[class*='Grid--'] [class*='small--row-9'] {
+	[class*='Grid'] [class*='small--row-9'] {
 		grid-row: auto/span 9;
 	}
 
-	[class*='Grid--'][class*='--small-10'] {
+	[class*='Grid'][class*='--small-10'] {
 		grid-template-columns: repeat(10, 1fr);
 	}
 
-	[class*='Grid--'] [class*='small--col-10'] {
+	[class*='Grid'] [class*='small--col-10'] {
 		grid-column: auto/span 10;
 	}
 
-	[class*='Grid--'] [class*='small--row-10'] {
+	[class*='Grid'] [class*='small--row-10'] {
 		grid-row: auto/span 10;
 	}
 
-	[class*='Grid--'][class*='--small-11'] {
+	[class*='Grid'][class*='--small-11'] {
 		grid-template-columns: repeat(11, 1fr);
 	}
 
-	[class*='Grid--'] [class*='small--col-11'] {
+	[class*='Grid'] [class*='small--col-11'] {
 		grid-column: auto/span 11;
 	}
 
-	[class*='Grid--'] [class*='small--row-11'] {
+	[class*='Grid'] [class*='small--row-11'] {
 		grid-row: auto/span 11;
 	}
 
-	[class*='Grid--'][class*='--small-12'] {
+	[class*='Grid'][class*='--small-12'] {
 		grid-template-columns: repeat(12, 1fr);
 	}
 
-	[class*='Grid--'] [class*='small--col-12'] {
+	[class*='Grid'] [class*='small--col-12'] {
 		grid-column: auto/span 12;
 	}
 
-	[class*='Grid--'] [class*='small--row-12'] {
+	[class*='Grid'] [class*='small--row-12'] {
 		grid-row: auto/span 12;
 	}
 
-	[class*='Grid--'][class*='--small-auto'] {
+	[class*='Grid'][class*='--small-auto'] {
 		grid-auto-flow: column;
 		grid-auto-columns: 1fr;
 		grid-template-columns: none;
@@ -6027,139 +6027,139 @@ img.fr {
 		align-self: stretch;
 	}
 
-	[class*='Grid--'][class*='--medium-2'] {
+	[class*='Grid'][class*='--medium-2'] {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	[class*='Grid--'] [class*='medium--col-2'] {
+	[class*='Grid'] [class*='medium--col-2'] {
 		grid-column: auto/span 2;
 	}
 
-	[class*='Grid--'] [class*='medium--row-2'] {
+	[class*='Grid'] [class*='medium--row-2'] {
 		grid-row: auto/span 2;
 	}
 
-	[class*='Grid--'][class*='--medium-3'] {
+	[class*='Grid'][class*='--medium-3'] {
 		grid-template-columns: repeat(3, 1fr);
 	}
 
-	[class*='Grid--'] [class*='medium--col-3'] {
+	[class*='Grid'] [class*='medium--col-3'] {
 		grid-column: auto/span 3;
 	}
 
-	[class*='Grid--'] [class*='medium--row-3'] {
+	[class*='Grid'] [class*='medium--row-3'] {
 		grid-row: auto/span 3;
 	}
 
-	[class*='Grid--'][class*='--medium-4'] {
+	[class*='Grid'][class*='--medium-4'] {
 		grid-template-columns: repeat(4, 1fr);
 	}
 
-	[class*='Grid--'] [class*='medium--col-4'] {
+	[class*='Grid'] [class*='medium--col-4'] {
 		grid-column: auto/span 4;
 	}
 
-	[class*='Grid--'] [class*='medium--row-4'] {
+	[class*='Grid'] [class*='medium--row-4'] {
 		grid-row: auto/span 4;
 	}
 
-	[class*='Grid--'][class*='--medium-5'] {
+	[class*='Grid'][class*='--medium-5'] {
 		grid-template-columns: repeat(5, 1fr);
 	}
 
-	[class*='Grid--'] [class*='medium--col-5'] {
+	[class*='Grid'] [class*='medium--col-5'] {
 		grid-column: auto/span 5;
 	}
 
-	[class*='Grid--'] [class*='medium--row-5'] {
+	[class*='Grid'] [class*='medium--row-5'] {
 		grid-row: auto/span 5;
 	}
 
-	[class*='Grid--'][class*='--medium-6'] {
+	[class*='Grid'][class*='--medium-6'] {
 		grid-template-columns: repeat(6, 1fr);
 	}
 
-	[class*='Grid--'] [class*='medium--col-6'] {
+	[class*='Grid'] [class*='medium--col-6'] {
 		grid-column: auto/span 6;
 	}
 
-	[class*='Grid--'] [class*='medium--row-6'] {
+	[class*='Grid'] [class*='medium--row-6'] {
 		grid-row: auto/span 6;
 	}
 
-	[class*='Grid--'][class*='--medium-7'] {
+	[class*='Grid'][class*='--medium-7'] {
 		grid-template-columns: repeat(7, 1fr);
 	}
 
-	[class*='Grid--'] [class*='medium--col-7'] {
+	[class*='Grid'] [class*='medium--col-7'] {
 		grid-column: auto/span 7;
 	}
 
-	[class*='Grid--'] [class*='medium--row-7'] {
+	[class*='Grid'] [class*='medium--row-7'] {
 		grid-row: auto/span 7;
 	}
 
-	[class*='Grid--'][class*='--medium-8'] {
+	[class*='Grid'][class*='--medium-8'] {
 		grid-template-columns: repeat(8, 1fr);
 	}
 
-	[class*='Grid--'] [class*='medium--col-8'] {
+	[class*='Grid'] [class*='medium--col-8'] {
 		grid-column: auto/span 8;
 	}
 
-	[class*='Grid--'] [class*='medium--row-8'] {
+	[class*='Grid'] [class*='medium--row-8'] {
 		grid-row: auto/span 8;
 	}
 
-	[class*='Grid--'][class*='--medium-9'] {
+	[class*='Grid'][class*='--medium-9'] {
 		grid-template-columns: repeat(9, 1fr);
 	}
 
-	[class*='Grid--'] [class*='medium--col-9'] {
+	[class*='Grid'] [class*='medium--col-9'] {
 		grid-column: auto/span 9;
 	}
 
-	[class*='Grid--'] [class*='medium--row-9'] {
+	[class*='Grid'] [class*='medium--row-9'] {
 		grid-row: auto/span 9;
 	}
 
-	[class*='Grid--'][class*='--medium-10'] {
+	[class*='Grid'][class*='--medium-10'] {
 		grid-template-columns: repeat(10, 1fr);
 	}
 
-	[class*='Grid--'] [class*='medium--col-10'] {
+	[class*='Grid'] [class*='medium--col-10'] {
 		grid-column: auto/span 10;
 	}
 
-	[class*='Grid--'] [class*='medium--row-10'] {
+	[class*='Grid'] [class*='medium--row-10'] {
 		grid-row: auto/span 10;
 	}
 
-	[class*='Grid--'][class*='--medium-11'] {
+	[class*='Grid'][class*='--medium-11'] {
 		grid-template-columns: repeat(11, 1fr);
 	}
 
-	[class*='Grid--'] [class*='medium--col-11'] {
+	[class*='Grid'] [class*='medium--col-11'] {
 		grid-column: auto/span 11;
 	}
 
-	[class*='Grid--'] [class*='medium--row-11'] {
+	[class*='Grid'] [class*='medium--row-11'] {
 		grid-row: auto/span 11;
 	}
 
-	[class*='Grid--'][class*='--medium-12'] {
+	[class*='Grid'][class*='--medium-12'] {
 		grid-template-columns: repeat(12, 1fr);
 	}
 
-	[class*='Grid--'] [class*='medium--col-12'] {
+	[class*='Grid'] [class*='medium--col-12'] {
 		grid-column: auto/span 12;
 	}
 
-	[class*='Grid--'] [class*='medium--row-12'] {
+	[class*='Grid'] [class*='medium--row-12'] {
 		grid-row: auto/span 12;
 	}
 
-	[class*='Grid--'][class*='--medium-auto'] {
+	[class*='Grid'][class*='--medium-auto'] {
 		grid-auto-flow: column;
 		grid-auto-columns: 1fr;
 		grid-template-columns: none;
@@ -7282,139 +7282,139 @@ img.fr {
 		align-self: stretch;
 	}
 
-	[class*='Grid--'][class*='--large-2'] {
+	[class*='Grid'][class*='--large-2'] {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	[class*='Grid--'] [class*='large--col-2'] {
+	[class*='Grid'] [class*='large--col-2'] {
 		grid-column: auto/span 2;
 	}
 
-	[class*='Grid--'] [class*='large--row-2'] {
+	[class*='Grid'] [class*='large--row-2'] {
 		grid-row: auto/span 2;
 	}
 
-	[class*='Grid--'][class*='--large-3'] {
+	[class*='Grid'][class*='--large-3'] {
 		grid-template-columns: repeat(3, 1fr);
 	}
 
-	[class*='Grid--'] [class*='large--col-3'] {
+	[class*='Grid'] [class*='large--col-3'] {
 		grid-column: auto/span 3;
 	}
 
-	[class*='Grid--'] [class*='large--row-3'] {
+	[class*='Grid'] [class*='large--row-3'] {
 		grid-row: auto/span 3;
 	}
 
-	[class*='Grid--'][class*='--large-4'] {
+	[class*='Grid'][class*='--large-4'] {
 		grid-template-columns: repeat(4, 1fr);
 	}
 
-	[class*='Grid--'] [class*='large--col-4'] {
+	[class*='Grid'] [class*='large--col-4'] {
 		grid-column: auto/span 4;
 	}
 
-	[class*='Grid--'] [class*='large--row-4'] {
+	[class*='Grid'] [class*='large--row-4'] {
 		grid-row: auto/span 4;
 	}
 
-	[class*='Grid--'][class*='--large-5'] {
+	[class*='Grid'][class*='--large-5'] {
 		grid-template-columns: repeat(5, 1fr);
 	}
 
-	[class*='Grid--'] [class*='large--col-5'] {
+	[class*='Grid'] [class*='large--col-5'] {
 		grid-column: auto/span 5;
 	}
 
-	[class*='Grid--'] [class*='large--row-5'] {
+	[class*='Grid'] [class*='large--row-5'] {
 		grid-row: auto/span 5;
 	}
 
-	[class*='Grid--'][class*='--large-6'] {
+	[class*='Grid'][class*='--large-6'] {
 		grid-template-columns: repeat(6, 1fr);
 	}
 
-	[class*='Grid--'] [class*='large--col-6'] {
+	[class*='Grid'] [class*='large--col-6'] {
 		grid-column: auto/span 6;
 	}
 
-	[class*='Grid--'] [class*='large--row-6'] {
+	[class*='Grid'] [class*='large--row-6'] {
 		grid-row: auto/span 6;
 	}
 
-	[class*='Grid--'][class*='--large-7'] {
+	[class*='Grid'][class*='--large-7'] {
 		grid-template-columns: repeat(7, 1fr);
 	}
 
-	[class*='Grid--'] [class*='large--col-7'] {
+	[class*='Grid'] [class*='large--col-7'] {
 		grid-column: auto/span 7;
 	}
 
-	[class*='Grid--'] [class*='large--row-7'] {
+	[class*='Grid'] [class*='large--row-7'] {
 		grid-row: auto/span 7;
 	}
 
-	[class*='Grid--'][class*='--large-8'] {
+	[class*='Grid'][class*='--large-8'] {
 		grid-template-columns: repeat(8, 1fr);
 	}
 
-	[class*='Grid--'] [class*='large--col-8'] {
+	[class*='Grid'] [class*='large--col-8'] {
 		grid-column: auto/span 8;
 	}
 
-	[class*='Grid--'] [class*='large--row-8'] {
+	[class*='Grid'] [class*='large--row-8'] {
 		grid-row: auto/span 8;
 	}
 
-	[class*='Grid--'][class*='--large-9'] {
+	[class*='Grid'][class*='--large-9'] {
 		grid-template-columns: repeat(9, 1fr);
 	}
 
-	[class*='Grid--'] [class*='large--col-9'] {
+	[class*='Grid'] [class*='large--col-9'] {
 		grid-column: auto/span 9;
 	}
 
-	[class*='Grid--'] [class*='large--row-9'] {
+	[class*='Grid'] [class*='large--row-9'] {
 		grid-row: auto/span 9;
 	}
 
-	[class*='Grid--'][class*='--large-10'] {
+	[class*='Grid'][class*='--large-10'] {
 		grid-template-columns: repeat(10, 1fr);
 	}
 
-	[class*='Grid--'] [class*='large--col-10'] {
+	[class*='Grid'] [class*='large--col-10'] {
 		grid-column: auto/span 10;
 	}
 
-	[class*='Grid--'] [class*='large--row-10'] {
+	[class*='Grid'] [class*='large--row-10'] {
 		grid-row: auto/span 10;
 	}
 
-	[class*='Grid--'][class*='--large-11'] {
+	[class*='Grid'][class*='--large-11'] {
 		grid-template-columns: repeat(11, 1fr);
 	}
 
-	[class*='Grid--'] [class*='large--col-11'] {
+	[class*='Grid'] [class*='large--col-11'] {
 		grid-column: auto/span 11;
 	}
 
-	[class*='Grid--'] [class*='large--row-11'] {
+	[class*='Grid'] [class*='large--row-11'] {
 		grid-row: auto/span 11;
 	}
 
-	[class*='Grid--'][class*='--large-12'] {
+	[class*='Grid'][class*='--large-12'] {
 		grid-template-columns: repeat(12, 1fr);
 	}
 
-	[class*='Grid--'] [class*='large--col-12'] {
+	[class*='Grid'] [class*='large--col-12'] {
 		grid-column: auto/span 12;
 	}
 
-	[class*='Grid--'] [class*='large--row-12'] {
+	[class*='Grid'] [class*='large--row-12'] {
 		grid-row: auto/span 12;
 	}
 
-	[class*='Grid--'][class*='--large-auto'] {
+	[class*='Grid'][class*='--large-auto'] {
 		grid-auto-flow: column;
 		grid-auto-columns: 1fr;
 		grid-template-columns: none;
@@ -8537,139 +8537,139 @@ img.fr {
 		align-self: stretch;
 	}
 
-	[class*='Grid--'][class*='--extraLarge-2'] {
+	[class*='Grid'][class*='--extraLarge-2'] {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	[class*='Grid--'] [class*='extraLarge--col-2'] {
+	[class*='Grid'] [class*='extraLarge--col-2'] {
 		grid-column: auto/span 2;
 	}
 
-	[class*='Grid--'] [class*='extraLarge--row-2'] {
+	[class*='Grid'] [class*='extraLarge--row-2'] {
 		grid-row: auto/span 2;
 	}
 
-	[class*='Grid--'][class*='--extraLarge-3'] {
+	[class*='Grid'][class*='--extraLarge-3'] {
 		grid-template-columns: repeat(3, 1fr);
 	}
 
-	[class*='Grid--'] [class*='extraLarge--col-3'] {
+	[class*='Grid'] [class*='extraLarge--col-3'] {
 		grid-column: auto/span 3;
 	}
 
-	[class*='Grid--'] [class*='extraLarge--row-3'] {
+	[class*='Grid'] [class*='extraLarge--row-3'] {
 		grid-row: auto/span 3;
 	}
 
-	[class*='Grid--'][class*='--extraLarge-4'] {
+	[class*='Grid'][class*='--extraLarge-4'] {
 		grid-template-columns: repeat(4, 1fr);
 	}
 
-	[class*='Grid--'] [class*='extraLarge--col-4'] {
+	[class*='Grid'] [class*='extraLarge--col-4'] {
 		grid-column: auto/span 4;
 	}
 
-	[class*='Grid--'] [class*='extraLarge--row-4'] {
+	[class*='Grid'] [class*='extraLarge--row-4'] {
 		grid-row: auto/span 4;
 	}
 
-	[class*='Grid--'][class*='--extraLarge-5'] {
+	[class*='Grid'][class*='--extraLarge-5'] {
 		grid-template-columns: repeat(5, 1fr);
 	}
 
-	[class*='Grid--'] [class*='extraLarge--col-5'] {
+	[class*='Grid'] [class*='extraLarge--col-5'] {
 		grid-column: auto/span 5;
 	}
 
-	[class*='Grid--'] [class*='extraLarge--row-5'] {
+	[class*='Grid'] [class*='extraLarge--row-5'] {
 		grid-row: auto/span 5;
 	}
 
-	[class*='Grid--'][class*='--extraLarge-6'] {
+	[class*='Grid'][class*='--extraLarge-6'] {
 		grid-template-columns: repeat(6, 1fr);
 	}
 
-	[class*='Grid--'] [class*='extraLarge--col-6'] {
+	[class*='Grid'] [class*='extraLarge--col-6'] {
 		grid-column: auto/span 6;
 	}
 
-	[class*='Grid--'] [class*='extraLarge--row-6'] {
+	[class*='Grid'] [class*='extraLarge--row-6'] {
 		grid-row: auto/span 6;
 	}
 
-	[class*='Grid--'][class*='--extraLarge-7'] {
+	[class*='Grid'][class*='--extraLarge-7'] {
 		grid-template-columns: repeat(7, 1fr);
 	}
 
-	[class*='Grid--'] [class*='extraLarge--col-7'] {
+	[class*='Grid'] [class*='extraLarge--col-7'] {
 		grid-column: auto/span 7;
 	}
 
-	[class*='Grid--'] [class*='extraLarge--row-7'] {
+	[class*='Grid'] [class*='extraLarge--row-7'] {
 		grid-row: auto/span 7;
 	}
 
-	[class*='Grid--'][class*='--extraLarge-8'] {
+	[class*='Grid'][class*='--extraLarge-8'] {
 		grid-template-columns: repeat(8, 1fr);
 	}
 
-	[class*='Grid--'] [class*='extraLarge--col-8'] {
+	[class*='Grid'] [class*='extraLarge--col-8'] {
 		grid-column: auto/span 8;
 	}
 
-	[class*='Grid--'] [class*='extraLarge--row-8'] {
+	[class*='Grid'] [class*='extraLarge--row-8'] {
 		grid-row: auto/span 8;
 	}
 
-	[class*='Grid--'][class*='--extraLarge-9'] {
+	[class*='Grid'][class*='--extraLarge-9'] {
 		grid-template-columns: repeat(9, 1fr);
 	}
 
-	[class*='Grid--'] [class*='extraLarge--col-9'] {
+	[class*='Grid'] [class*='extraLarge--col-9'] {
 		grid-column: auto/span 9;
 	}
 
-	[class*='Grid--'] [class*='extraLarge--row-9'] {
+	[class*='Grid'] [class*='extraLarge--row-9'] {
 		grid-row: auto/span 9;
 	}
 
-	[class*='Grid--'][class*='--extraLarge-10'] {
+	[class*='Grid'][class*='--extraLarge-10'] {
 		grid-template-columns: repeat(10, 1fr);
 	}
 
-	[class*='Grid--'] [class*='extraLarge--col-10'] {
+	[class*='Grid'] [class*='extraLarge--col-10'] {
 		grid-column: auto/span 10;
 	}
 
-	[class*='Grid--'] [class*='extraLarge--row-10'] {
+	[class*='Grid'] [class*='extraLarge--row-10'] {
 		grid-row: auto/span 10;
 	}
 
-	[class*='Grid--'][class*='--extraLarge-11'] {
+	[class*='Grid'][class*='--extraLarge-11'] {
 		grid-template-columns: repeat(11, 1fr);
 	}
 
-	[class*='Grid--'] [class*='extraLarge--col-11'] {
+	[class*='Grid'] [class*='extraLarge--col-11'] {
 		grid-column: auto/span 11;
 	}
 
-	[class*='Grid--'] [class*='extraLarge--row-11'] {
+	[class*='Grid'] [class*='extraLarge--row-11'] {
 		grid-row: auto/span 11;
 	}
 
-	[class*='Grid--'][class*='--extraLarge-12'] {
+	[class*='Grid'][class*='--extraLarge-12'] {
 		grid-template-columns: repeat(12, 1fr);
 	}
 
-	[class*='Grid--'] [class*='extraLarge--col-12'] {
+	[class*='Grid'] [class*='extraLarge--col-12'] {
 		grid-column: auto/span 12;
 	}
 
-	[class*='Grid--'] [class*='extraLarge--row-12'] {
+	[class*='Grid'] [class*='extraLarge--row-12'] {
 		grid-row: auto/span 12;
 	}
 
-	[class*='Grid--'][class*='--extraLarge-auto'] {
+	[class*='Grid'][class*='--extraLarge-auto'] {
 		grid-auto-flow: column;
 		grid-auto-columns: 1fr;
 		grid-template-columns: none;

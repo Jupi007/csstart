@@ -36,7 +36,7 @@
 }
 
 @mixin media-grid($prefix: "") {
-	[class*="Grid--"] {
+	[class*="Grid"] {
 		@for $i from 2 through $max-grid-cols {
 			&[class*="--#{$prefix}#{$i}"] {
 				grid-template-columns: repeat(#{$i}, 1fr);
