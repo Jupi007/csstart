@@ -128,8 +128,10 @@ $alerts-border-left-width: 5px !default;
 $alerts-border-radius: $border-radius-base !default;
 $alerts-margin-bottom: $paragraph-margin-bottom !default;
 $alerts-title-font-size: 1.5em !default;
-$alerts-background-transparency: 0.9 !default;
-$buttons-color-darken: 20% !default;
+$alerts-background-transparency: .8;
+$alerts-background: transparentize($components-background-base, $alerts-background-transparency) !default;
+
+$alerts-background-dark: transparentize($components-background-dark, $alerts-background-transparency) !default;
 
 // -----
 // Cards

@@ -15,6 +15,7 @@
 	--components-background-inversed: #fff;
 	--components-background-hover-inversed: #e6e6e6;
 	--components-color-inversed: #0d0d0d;
+	--alerts-background: rgba(51, 51, 51, .2);
 	--tables-border-color: #262626;
 	--tables-cells-border-color: gray;
 	--tables-background: #fff;
@@ -57,6 +58,7 @@
 		--components-background-inversed: #333;
 		--components-background-hover-inversed: #1a1a1a;
 		--components-color-inversed: #f2f2f2;
+		--alerts-background: rgba(255, 255, 255, .2);
 		--tables-border-color: #4d4d4d;
 		--tables-cells-border-color: gray;
 		--tables-background: #333;
@@ -10932,7 +10934,7 @@ input[type='reset'],
 	border: 1px solid var(--components-background);
 	border-left-width: 5px;
 	border-radius: 3px;
-	background-color: transparent;
+	background-color: var(--alerts-background);
 }
 
 [class*='Alert'][class*='-inversed'] {
@@ -10941,78 +10943,78 @@ input[type='reset'],
 }
 
 [class*='Alert'][class*='-light'] {
-	color: #fff;
 	border-color: #fff;
+	background: rgba(255, 255, 255, .2);
 }
 
 [class*='Alert'][class*='-dark'] {
-	color: #333;
 	border-color: #333;
+	background: rgba(51, 51, 51, .2);
 }
 
 [class*='Alert'][class*='-ghost'] {
-	color: var(--color);
 	border-color: transparent;
+	background: rgba(0, 0, 0, 0);
 }
 
 [class*='Alert'][class*='-red'] {
-	color: #d94d4d;
 	border-color: #d94d4d;
+	background: rgba(217, 77, 77, .2);
 }
 
 [class*='Alert'][class*='-orange'] {
-	color: #d9831e;
 	border-color: #d9831e;
+	background: rgba(217, 131, 30, .2);
 }
 
 [class*='Alert'][class*='-yellow'] {
-	color: #fff46c;
 	border-color: #fff46c;
+	background: rgba(255, 244, 108, .2);
 }
 
 [class*='Alert'][class*='-green'] {
-	color: #74cf61;
 	border-color: #74cf61;
+	background: rgba(116, 207, 97, .2);
 }
 
 [class*='Alert'][class*='-blue'] {
-	color: #3935cd;
 	border-color: #3935cd;
+	background: rgba(57, 53, 205, .2);
 }
 
 [class*='Alert'][class*='-light-blue'] {
-	color: #74c0cd;
 	border-color: #74c0cd;
+	background: rgba(116, 192, 205, .2);
 }
 
 [class*='Alert'][class*='-purple'] {
-	color: #aa80d9;
 	border-color: #aa80d9;
+	background: rgba(170, 128, 217, .2);
 }
 
 [class*='Alert'][class*='-brown'] {
-	color: #835611;
 	border-color: #835611;
+	background: rgba(131, 86, 17, .2);
 }
 
 [class*='Alert'][class*='-success'] {
-	color: #74cf61;
 	border-color: #74cf61;
+	background: rgba(116, 207, 97, .2);
 }
 
 [class*='Alert'][class*='-info'] {
-	color: #74c0cd;
 	border-color: #74c0cd;
+	background: rgba(116, 192, 205, .2);
 }
 
 [class*='Alert'][class*='-warning'] {
-	color: #d9831e;
 	border-color: #d9831e;
+	background: rgba(217, 131, 30, .2);
 }
 
 [class*='Alert'][class*='-danger'] {
-	color: #d94d4d;
 	border-color: #d94d4d;
+	background: rgba(217, 77, 77, .2);
 }
 
 [class*='Alert'] h1,

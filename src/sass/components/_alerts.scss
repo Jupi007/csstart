@@ -6,7 +6,7 @@
 	border-left-width: $alerts-border-left-width;
 	border-radius: $alerts-border-radius;
 	margin-bottom: $alerts-margin-bottom;
-    background-color: transparent;
+    background-color: var(--alerts-background);
 	color: var(--color);
 
     &[class*="-inversed"] {
@@ -17,12 +17,7 @@
 	@each $component, $bg in $components {
 		&[class*="-#{$component}"] {
 			border-color: $bg;
-
-            @if ($bg == transparent) {
-                color: var(--color);
-            } @else {
-                color: $bg;
-            }
+            background: transparentize($bg, $alerts-background-transparency);
 		}
 	}
 
