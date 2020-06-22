@@ -35,7 +35,7 @@
 	}
 }
 
-@mixin responsive-grid($prefix: "") {
+@mixin media-grid($prefix: "") {
 	[class*="Grid--"] {
 		@for $i from 2 through $max-grid-cols {
 			&[class*="--#{$prefix}#{$i}"] {

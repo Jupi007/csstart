@@ -1,9 +1,22 @@
 @each $name, $value in $breakpoints {
 	@include respond-to($name, "up") {
-		@include responsive-utilities($name + "-");
-		@include responsive-flex($name + "-");
-		@include responsive-grid($name + "-");
+        //@include media-border-utilities();
+        //@include media-color-utilities();
+        @include media-size-utilities($name + "-");
+        @include media-display-utilities($name + "-");
+        @include media-align-utilities($name + "-");
+        @include media-margin-utilities($name + "-");
+        @include media-padding-utilities($name + "-");
+        @include media-visibility-utilities($name + "-");
+        @include media-order-utilities($name + "-");
+		@include media-flex($name + "-");
+		@include media-grid($name + "-");
 	}
+}
+
+@media (prefers-color-scheme: dark) {
+    @include media-border-utilities("dark-");
+    @include media-color-utilities("dark-");
 }
 
 // Media Print reset and utilities based on Gutenberg (https://github.com/BafS/Gutenberg)
@@ -144,19 +157,8 @@
             max-width: 100%!important;
             min-width: auto!important;
         }
-
-		&-d-none { display: none!important; }
-		&-d-inline { display: inline!important; }
-		&-d-inline-block { display: inline-block!important; }
-		&-d-block { display: block!important; }
-		&-d-table { display: table!important; }
-		&-d-table-cell { display: table-cell!important; }
-		&-d-table-row { display: table-row!important; }
-		&-d-flex { display: flex!important; }
-		&-d-inline-flex { display: inline-flex!important; }
-		&-d-grid { display: grid!important; }
-
-		&-visible { visibility: visible!important; }
-		&-hidden { visibility: hidden!important; }
 	}
+
+    @include media-display-utilities("print-");
+    @include media-visibility-utilities("print-");
 }

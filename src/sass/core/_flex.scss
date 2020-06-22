@@ -6,7 +6,7 @@
 	align-items: $flex-align-items-base;
 }
 
-@mixin responsive-flex($prefix: "") {
+@mixin media-flex($prefix: "") {
 	&.#{$prefix}inline { display: inline-flex; }
 
 	&.#{$prefix}dir {
@@ -58,4 +58,4 @@
 	}
 }
 
-@include responsive-flex();
+@include media-flex();

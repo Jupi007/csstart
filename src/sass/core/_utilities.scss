@@ -41,45 +41,49 @@
 	@each $name, $weight in $font-weights {
 		&-weight-#{$name} { font-weight: $weight !important; }
 	}
-
-	@each $name, $color in $colors {
-		&-#{$name} { color: $color !important; }
-	}
-
-	@for $i from 1 through 20 {
-		&-grey#{$i * 5} { color: grey($i * 5) !important; }
-	}
 }
 
-.border {
-	border: 1px solid $color-base !important;
+@mixin media-border-utilities($prefix: "") {
+    .#{$prefix}b {
+    	border: 1px solid $color-base !important;
 
-	&-radius {
-		border-radius: $border-radius-base !important;
-	}
-}
-
-@each $name, $color in $colors {
-	.background-#{$name} { background-color: $color !important; }
-	.border-#{$name} { border: 1px solid $color !important; }
-}
-
-@for $i from 1 through 20 {
-	.background-grey#{$i * 5} { background-color: grey($i * 5) !important; }
-	.border-grey#{$i * 5} { border: 1px solid grey($i * 5) !important; }
-}
-
-.border-none {
-    border: none !important;
-}
-
-// Flex utilities
-    .centered-children {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    	&r {
+    		border-radius: $border-radius-base !important;
+    	}
     }
-// End flex utilities
+
+    .#{$prefix}b-none {
+        border: none !important;
+    }
+
+    @each $name, $color in $colors {
+    	.#{$prefix}b-#{$name} { border: 1px solid $color !important; }
+    }
+
+    @for $i from 1 through 20 {
+    	.#{$prefix}b-grey#{$i * 5} { border: 1px solid grey($i * 5) !important; }
+    }
+}
+
+@mixin media-color-utilities($prefix: "") {
+    .#{$prefix}txt {
+        @each $name, $color in $colors {
+            &-#{$name} { color: $color !important; }
+        }
+
+        @for $i from 1 through 20 {
+            &-grey#{$i * 5} { color: grey($i * 5) !important; }
+        }
+    }
+
+    @each $name, $color in $colors {
+    	.#{$prefix}bg-#{$name} { background-color: $color !important; }
+    }
+
+    @for $i from 1 through 20 {
+    	.#{$prefix}bg-grey#{$i * 5} { background-color: grey($i * 5) !important; }
+    }
+}
 
 .floatbox::after {
 	content: "" !important;
@@ -115,20 +119,22 @@ img.fr {
 	clip: rect(0, 0, 0, 0) !important;
 }
 
-@mixin responsive-utilities($prefix: "") {
+@mixin media-display-utilities($prefix: "") {
 	.#{$prefix}d {
 		&-none { display: none !important; }
 		&-inline { display: inline !important; }
 		&-inline-block { display: inline-block !important; }
 		&-block { display: block !important; }
-		&-table { display: table !important; }
-		&-table-cell { display: table-cell !important; }
-		&-table-row { display: table-row !important; }
+		//&-table { display: table !important; }
+		//&-table-cell { display: table-cell !important; }
+		//&-table-row { display: table-row !important; }
 		&-flex { display: flex !important; }
 		&-inline-flex { display: inline-flex !important; }
 		&-grid { display: grid !important; }
 	}
+}
 
+@mixin media-size-utilities($prefix: "") {
 	.#{$prefix}w {
 		&-auto {
             max-width: auto !important;
@@ -174,14 +180,19 @@ img.fr {
 		&1\/3 { height: calc(100% / 3) !important; }
 		&2\/3 { height: calc((100% / 3) * 2) !important; }
 	}
+}
 
+@mixin media-align-utilities($prefix: "") {
 	.#{$prefix}left { margin-right: auto !important; }
 	.#{$prefix}right { margin-left: auto !important; }
 	.#{$prefix}center {
 		margin-left: auto !important;
 		margin-right: auto !important;
 	}
+    .#{$prefix}centered { margin: auto; }
+}
 
+@mixin media-margin-utilities($prefix: "") {
 	.#{$prefix}m {
 		& { margin: spacer($margin-base) !important; }
 		&t { margin-top: spacer($margin-base) !important; }
@@ -241,7 +252,9 @@ img.fr {
 			}
 		}
 	}
+}
 
+@mixin media-padding-utilities($prefix: "") {
 	.#{$prefix}p {
 		& { padding: spacer($margin-base) !important; }
 		&t { padding-top: spacer($margin-base) !important; }
@@ -287,13 +300,24 @@ img.fr {
 			}
 		}
 	}
-
-	.#{$prefix}visible { visibility: visible !important; }
-	.#{$prefix}hidden { visibility: hidden !important; }
-
-	.#{$prefix}item-first { order: -1 !important; }
-	.#{$prefix}item-last { order: 1 !important; }
-	.#{$prefix}item-centered { margin: auto !important; }
 }
 
-@include responsive-utilities();
+@mixin media-visibility-utilities($prefix: "") {
+	.#{$prefix}visible { visibility: visible !important; }
+	.#{$prefix}hidden { visibility: hidden !important; }
+}
+
+@mixin media-order-utilities($prefix: "") {
+	.#{$prefix}item-first { order: -1 !important; }
+	.#{$prefix}item-last { order: 1 !important; }
+}
+
+@include media-border-utilities();
+@include media-color-utilities();
+@include media-size-utilities();
+@include media-display-utilities();
+@include media-align-utilities();
+@include media-margin-utilities();
+@include media-padding-utilities();
+@include media-visibility-utilities();
+@include media-order-utilities();
