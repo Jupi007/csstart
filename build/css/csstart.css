@@ -10066,7 +10066,7 @@ input[type='reset']::after {
 	transition-duration: .2s;
 	transition-property: opacity;
 	opacity: 0;
-	border-radius: 3px;
+	border-radius: inherit;
 	background: var(--components-background-hover);
 }
 

@@ -79,7 +79,7 @@ input[type="reset"]
         bottom: 0;
         left: 0;
         background: var(--components-background-hover);
-    	border-radius: $buttons-border-radius;
+    	border-radius: inherit;
         opacity: 0;
         z-index: -1;
 
