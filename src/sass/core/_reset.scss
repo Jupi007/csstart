@@ -57,7 +57,7 @@ body {
 	line-height: $line-height-base;
 	color: var(--color);
 	text-align: left;
-	background-color: var(--body-bg-color);
+	background: var(--body-bg-color);
 
     @include option("smooth-scroll") {
         scroll-behavior: smooth;
@@ -175,7 +175,7 @@ sup { top: -.5em; }
 a, a:visited{
 	color: var(--link-color);
 	text-decoration: $link-decoration;
-	background-color: transparent;
+	background: transparent;
 
     @include transition("color");
 
@@ -240,7 +240,7 @@ kbd {
 mark {
 	border-radius: $mark-border-radius;
 	padding: $mark-padding;
-	background-color: $mark-background;
+	background: $mark-background;
 }
 
 figure {

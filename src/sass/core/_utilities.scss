@@ -77,11 +77,11 @@
     }
 
     @each $name, $color in $colors {
-    	.#{$prefix}bg-#{$name} { background-color: $color !important; }
+    	.#{$prefix}bg-#{$name} { background: $color !important; }
     }
 
     @for $i from 1 through 20 {
-    	.#{$prefix}bg-grey#{$i * 5} { background-color: grey($i * 5) !important; }
+    	.#{$prefix}bg-grey#{$i * 5} { background: grey($i * 5) !important; }
     }
 }
 

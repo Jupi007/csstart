@@ -5,7 +5,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: $figures-background;
+	background: $figures-background;
 	border-radius: $figures-border-radius;
 	padding: $figures-padding;
     margin-top: $figures-margin-top;
@@ -22,7 +22,7 @@
     }
 
 	&[class*="--light"] {
-		background-color: $figures-light-background;
+		background: $figures-light-background;
 
 		figcaption {
 			color: $figures-light-figcaption-color;

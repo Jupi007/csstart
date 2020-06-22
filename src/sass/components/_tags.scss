@@ -28,7 +28,7 @@ input[type="reset"]
     	color: var(--components-color-inversed);
 
         &[class*="--wired"] {
-            background-color: transparent;
+            background: transparent;
             color: var(--components-background-inversed);
             box-shadow: 0 0 0 $buttons-inversed-border-width var(--components-background-inversed) inset;
         }
@@ -45,7 +45,7 @@ input[type="reset"]
             }
 
 			&[class*="--wired"] {
-				background-color: transparent;
+				background: transparent;
 				color: $bg;
 				box-shadow: 0 0 0 $buttons-inversed-border-width $bg inset;
 			}
@@ -53,7 +53,7 @@ input[type="reset"]
 	}
 
 	&[class*="--wired"] {
-		background-color: transparent;
+		background: transparent;
 		color: var(--components-background);
 		box-shadow: 0 0 0 $buttons-inversed-border-width var(--components-background) inset;
 	}
@@ -78,7 +78,7 @@ input[type="reset"]
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: var(--components-background-hover);
+        background: var(--components-background-hover);
     	border-radius: $buttons-border-radius;
         opacity: 0;
         z-index: -1;
@@ -112,7 +112,7 @@ button[class*="Tag"],
         color: var(--components-color-inversed);
 
         &::after {
-            background-color: var(--components-background-hover-inversed);
+            background: var(--components-background-hover-inversed);
         }
 
         &:hover, &:focus {
@@ -121,12 +121,12 @@ button[class*="Tag"],
         }
 
         &[class*="--wired"] {
-            background-color: transparent;
+            background: transparent;
             color: var(--components-background-inversed);
             box-shadow: 0 0 0 $buttons-inversed-border-width var(--components-background-inversed) inset;
 
             &::after {
-                background-color: var(--components-background-inversed);
+                background: var(--components-background-inversed);
             }
 
             &:hover, &:focus {
@@ -139,7 +139,7 @@ button[class*="Tag"],
         @include transition("color");
 
 		&::after {
-            background-color: var(--components-background);
+            background: var(--components-background);
         }
 
         &:active {
@@ -164,7 +164,7 @@ button[class*="Tag"],
 			background: $bg;
 
             &::after {
-                background-color: darken($bg, $components-hover-base);
+                background: darken($bg, $components-hover-base);
             }
 
             &:hover, &:focus {
@@ -177,12 +177,12 @@ button[class*="Tag"],
             }
 
 			&[class*="--wired"] {
-				background-color: transparent;
+				background: transparent;
 				color: $bg;
 				box-shadow: 0 0 0 $buttons-inversed-border-width $bg inset;
 
                 &::after {
-                    background-color: $bg;
+                    background: $bg;
                 }
 
 				&:hover, &:focus {

@@ -8,7 +8,7 @@ select {
 	border-radius: $border-radius-base;
 	padding: $input-padding-vertical $input-padding-horizontal;
 	box-shadow: none;
-	background-color: var(--input-background);
+	background: var(--input-background);
 	outline: none;
     vertical-align: middle;
     vertical-align: -webkit-baseline-middle;

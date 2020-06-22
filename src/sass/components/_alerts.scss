@@ -6,7 +6,7 @@
 	border-left-width: $alerts-border-left-width;
 	border-radius: $alerts-border-radius;
 	margin-bottom: $alerts-margin-bottom;
-    background-color: var(--alerts-background);
+    background: var(--alerts-background);
 	color: var(--color);
 
     &[class*="-inversed"] {
