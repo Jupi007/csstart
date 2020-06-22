@@ -393,6 +393,14 @@ output {
 	display: inline-block;
 }
 
+details {
+    margin-bottom: $paragraph-margin-bottom;
+    
+    #{$headings} {
+        display: inline-block;
+    }
+}
+
 summary {
 	display: list-item;
 	cursor: pointer;
