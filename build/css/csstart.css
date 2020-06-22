@@ -9161,6 +9161,34 @@ img.fr {
 	.dark-bg-grey100 {
 		background: black !important;
 	}
+
+	.dark-d-none {
+		display: none !important;
+	}
+
+	.dark-d-inline {
+		display: inline !important;
+	}
+
+	.dark-d-inline-block {
+		display: inline-block !important;
+	}
+
+	.dark-d-block {
+		display: block !important;
+	}
+
+	.dark-d-flex {
+		display: flex !important;
+	}
+
+	.dark-d-inline-flex {
+		display: inline-flex !important;
+	}
+
+	.dark-d-grid {
+		display: grid !important;
+	}
 }
 
 @media print {

@@ -17,6 +17,7 @@
 @media (prefers-color-scheme: dark) {
     @include media-border-utilities("dark-");
     @include media-color-utilities("dark-");
+    @include media-display-utilities("dark-");
 }
 
 // Media Print reset and utilities based on Gutenberg (https://github.com/BafS/Gutenberg)
