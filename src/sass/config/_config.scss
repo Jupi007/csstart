@@ -36,12 +36,16 @@ $body-bg: color('white') !default;
 $body-bg-dark: grey(85) !default;
 
 $link-color: color('blue') !default;
+$link-visited-color: darken( color('purple') , 15% ) !default;
 $link-decoration: underline !default;
 $link-hover-color: darken( $link-color , 15% ) !default;
+$link-visited-hover-color: darken( $link-visited-color , 15% ) !default;
 $link-hover-decoration: underline !default;
 
 $link-color-dark: color('light-blue') !default;
 $link-hover-color-dark: darken( $link-color-dark , 15% ) !default;
+$link-visited-color-dark: color('purple') !default;
+$link-visited-hover-color-dark: darken( $link-visited-color-dark , 15% ) !default;
 
 $margin-base: 'medium-plus' !default;
 

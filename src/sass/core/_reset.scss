@@ -174,7 +174,7 @@ sup {
 sub { bottom: -.25em; }
 sup { top: -.5em; }
 
-a, a:visited{
+a {
 	color: var(--link-color);
 	text-decoration: $link-decoration;
 	background: transparent;
@@ -185,6 +185,14 @@ a, a:visited{
 		color: var(--link-hover-color);
 		text-decoration: $link-hover-decoration;
 	}
+
+    &:visited {
+        color: var(--link-visited-color);
+
+        &:hover {
+            color: var(--link-visited-hover-color);
+        }
+    }
 }
 
 a:not([href]):not([tabindex]) {

@@ -7,8 +7,12 @@
 	--color: #0d0d0d;
 	--link-color: #3935cd;
 	--link-hover-color: #272491;
+	--link-visited-color: #8345c7;
+	--link-visited-hover-color: #5d2c94;
 	--link-color-inversed: #74c0cd;
 	--link-hover-color-inversed: #41a3b4;
+	--link-visited-color-inversed: #aa80d9;
+	--link-visited-hover-color-inversed: #8345c7;
 	--components-background: #333;
 	--components-background-hover: #1a1a1a;
 	--components-color: #f2f2f2;
@@ -50,8 +54,12 @@
 		--color: #f2f2f2;
 		--link-color: #74c0cd;
 		--link-hover-color: #41a3b4;
+		--link-visited-color: #aa80d9;
+		--link-visited-hover-color: #8345c7;
 		--link-color-inversed: #3935cd;
 		--link-hover-color-inversed: #272491;
+		--link-visited-color-inversed: #8345c7;
+		--link-visited-hover-color-inversed: #5d2c94;
 		--components-background: #fff;
 		--components-background-hover: #e6e6e6;
 		--components-color: #0d0d0d;
@@ -303,8 +311,7 @@ sup {
 	top: -.5em;
 }
 
-a,
-a:visited {
+a {
 	transition-timing-function: ease;
 	transition-duration: .2s;
 	transition-property: color;
@@ -313,10 +320,17 @@ a:visited {
 	background: transparent;
 }
 
-a:hover,
-a:visited:hover {
+a:hover {
 	text-decoration: underline;
 	color: var(--link-hover-color);
+}
+
+a:visited {
+	color: var(--link-visited-color);
+}
+
+a:visited:hover {
+	color: var(--link-visited-hover-color);
 }
 
 a:not([href]):not([tabindex]),

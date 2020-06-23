@@ -9,8 +9,13 @@
 
     --link-color: #{$link-color};
     --link-hover-color: #{$link-hover-color};
+    --link-visited-color: #{$link-visited-color};
+    --link-visited-hover-color: #{$link-visited-hover-color};
+
     --link-color-inversed: #{$link-color-dark};
     --link-hover-color-inversed: #{$link-hover-color-dark};
+    --link-visited-color-inversed: #{$link-visited-color-dark};
+    --link-visited-hover-color-inversed: #{$link-visited-hover-color-dark};
 
     --components-background: #{$components-background-base};
     --components-background-hover: #{darken($components-background-base, $components-hover-base)};
@@ -59,8 +64,13 @@
 
         --link-color: #{$link-color-dark};
         --link-hover-color: #{$link-hover-color-dark};
+        --link-visited-color: #{$link-visited-color-dark};
+        --link-visited-hover-color: #{$link-visited-hover-color-dark};
+
         --link-color-inversed: #{$link-color};
         --link-hover-color-inversed: #{$link-hover-color};
+        --link-visited-color-inversed: #{$link-visited-color};
+        --link-visited-hover-color-inversed: #{$link-visited-hover-color};
 
         --components-background: #{$components-background-dark};
         --components-background-hover: #{darken($components-background-dark, $components-hover-dark)};
