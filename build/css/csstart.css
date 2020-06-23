@@ -27,6 +27,7 @@
 	--tables-zebra-headings-cells-background: #ccc;
 	--tables-zebra-cells-background: #f2f2f2;
 	--tables-cells-hover-background: #e6e6e6;
+	--captions-color: #4d4d4d;
 	--input-border-color: #ccc;
 	--input-hover-focus-border-color: gray;
 	--input-background: #fff;
@@ -74,6 +75,7 @@
 		--tables-zebra-headings-cells-background: #1a1a1a;
 		--tables-zebra-cells-background: #404040;
 		--tables-cells-hover-background: #262626;
+		--captions-color: #b3b3b3;
 		--input-border-color: gray;
 		--input-hover-focus-border-color: #ccc;
 		--input-background: #333;
@@ -11440,7 +11442,7 @@ a[class*='Card']:focus {
 [class*='Table'] caption,
 [class*='Afb'] table caption {
 	font-style: italic;
-	color: #4d4d4d;
+	color: var(--captions-color);
 }
 
 [class*='Blockquote'],

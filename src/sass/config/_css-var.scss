@@ -34,6 +34,8 @@
     --tables-zebra-cells-background: #{$tables-zebra-cells-background};
     --tables-cells-hover-background: #{$tables-cells-hover-background};
 
+    --captions-color: #{$captions-color};
+
     --input-border-color: #{$input-border-color};
     --input-hover-focus-border-color: #{$input-hover-focus-border-color};
     --input-background: #{$input-background};
@@ -88,6 +90,8 @@
         --tables-zebra-headings-cells-background: #{$tables-dark-zebra-headings-cells-background};
         --tables-zebra-cells-background: #{$tables-dark-zebra-cells-background};
         --tables-cells-hover-background: #{$tables-dark-cells-hover-background};
+
+        --captions-color: #{$captions-color-dark};
 
         --input-border-color: #{$input-border-color-dark};
         --input-hover-focus-border-color: #{$input-hover-focus-border-color-dark};

@@ -136,7 +136,7 @@
 	}
 
 	caption {
-		color: $captions-color;
+		color: var(--captions-color);
 		font-style: $captions-font-style;
 	}
 }
