@@ -1,0 +1,28 @@
+$map: (
+    'test-name': 'test-value'
+);
+
+$colors: (
+    'white': #ffffff
+);
+
+$font-weights: (
+    'normal': 400
+);
+
+$spacers: (
+    'large': 2
+);
+
+$options: (
+    'transitions': true,
+	'enabled-option': true,
+    'disabled-option': false
+);
+
+$transition-duration-base:  .2s;
+$transition-timing-function-base: ease;
+
+$breakpoints: (
+	'medium': 768px
+);

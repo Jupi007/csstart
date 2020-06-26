@@ -17,12 +17,18 @@
 }
 
 @function spacer($name, $coefficient: 1) {
-	@return calc(var(--spacer-base) * #{getter($spacers, $name) * $coefficient});
+    $spacer: getter($spacers, $name);
+
+    @if $spacer != null {
+        @return calc(var(--spacer-base) * #{$spacer * $coefficient});
+    }
+
+    @return $spacer;
 }
 
 @function grey($percentage) {
 	@if $percentage >= 0 and $percentage <= 100 {
-		@return(darken(color("white"), $percentage));
+		@return(darken(#fff, $percentage));
 	}
 	@else {
 		@warn "Unfortunately, `#{$percentage}` value is not valid. It should be between 0 and 100.";
@@ -31,13 +37,28 @@
 }
 
 @function brightness($color) {
-  @return (red($color) + green($color) + blue($color)) / (255 * 3);
+    @if type-of($color) != color {
+        @warn "Unfortunately, `#{$color}` value is not valid. It should be a color.";
+		@return null;
+    }
+
+    @return (red($color) + green($color) + blue($color)) / (255 * 3);
 }
 
 @function brightness_ratio($base, $color) {
-  @return abs(brightness($base) - brightness($color));
+    @if type-of($color) != color or type-of($base) != color {
+        @warn "Unfortunately, one or more of the values is not valid. It should be a color.";
+		@return null;
+    }
+
+    @return abs(brightness($base) - brightness($color));
 }
 
 @function contrast($base, $color1, $color2) {
-  @return if(brightness_ratio($base, $color1) > brightness_ratio($base, $color2), $color1, $color2);
+    @if type-of($color1) != color or type-of($base) != color or type-of($color2) != color {
+        @warn "Unfortunately, one or more of the values is not valid. It should be a color.";
+		@return null;
+    }
+
+    @return if(brightness_ratio($base, $color1) > brightness_ratio($base, $color2), $color1, $color2);
 }

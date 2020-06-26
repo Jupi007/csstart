@@ -9,7 +9,7 @@
         transition-property: #{$property};
 		transition-duration: $duration;
 		transition-timing-function: $timing-function;
-        @if $delay != 0 {
+        @if $delay > 0 {
             transition-delay: $delay;
         }
 	}

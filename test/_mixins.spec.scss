@@ -1,0 +1,136 @@
+@include describe('@mixin option()') {
+    @include it('Check if the given option is enable') {
+        @include assert {
+            @include output {
+                @include option('enabled-option') {
+                    @debug $options;
+                    display: block;
+                }
+            }
+
+            @include expect {
+                display: block;
+            }
+        }
+    }
+    @include it('Check if the given option is disable') {
+        @include assert {
+            @include output {
+                @include option('disabled-option') {
+                    display: none;
+                }
+            }
+
+            @include expect {}
+        }
+    }
+}
+
+@include describe('@mixin transition()') {
+    @include it('Return a set of transition properties based on given parameters (without delay)') {
+        @include assert {
+            @include output {
+                @include transition(color, 1s, ease-in);
+            }
+
+            @include expect {
+                transition-property: color;
+        		transition-duration: 1s;
+        		transition-timing-function: ease-in;
+            }
+        }
+    }
+
+    @include it('Return a set of transition properties based on given parameters (with delay)') {
+        @include assert {
+            @include output {
+                @include transition(color, 1s, ease-in, 0.5s);
+            }
+
+            @include expect {
+                transition-property: color;
+        		transition-duration: 1s;
+        		transition-timing-function: ease-in;
+                transition-delay: 0.5s;
+            }
+        }
+    }
+
+    @include it('Return a set of transition properties based on default values') {
+        @include assert {
+            @include output {
+                @include transition(opacity);
+            }
+
+            @include expect {
+                transition-property: opacity;
+        		transition-duration: 0.2s;
+        		transition-timing-function: ease;
+            }
+        }
+    }
+}
+
+@include describe('@mixin respond-to()') {
+    @include it('Return content into a @media block (to up)') {
+        @include assert {
+            @include output {
+                @include respond-to('medium', 'up') {
+                    display: block;
+                }
+            }
+
+            @include expect {
+                @media (min-width: 768px) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @include it('Return content into a @media block (to down)') {
+        @include assert {
+            @include output {
+                @include respond-to('medium', 'down') {
+                    display: block;
+                }
+            }
+
+            @include expect {
+                @media (max-width: 767px) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @include it('Return an error') {
+        @include assert {
+            @include output {
+                @include respond-to("wrong-breakpoint") {
+                    display: none;
+                }
+            }
+
+            @include expect {}
+        }
+    }
+}
+
+@include describe('@mixin option()') {
+    @include it('Return content into a @media print block') {
+        @include assert {
+            @include output {
+                @include print {
+                    display: block;
+                }
+            }
+
+            @include expect {
+                @media print {
+                    display: block;
+                }
+            }
+        }
+    }
+}
