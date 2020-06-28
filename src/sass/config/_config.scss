@@ -12,14 +12,14 @@ $options: (
     "alerts": true,
 	"blockquotes": true,
 	"tags": true,
-	"buttons": true, // Need tags
+	"buttons": true, // Need tags enable
 	"cards": true,
 	"figures": true,
 	"media": true,
 	"tables": true,
 ) !default;
 
-$transition-duration-base:  .2s !default;
+$transition-duration-base: .2s !default;
 $transition-timing-function-base: ease !default;
 
 $breakpoints: (
@@ -49,17 +49,17 @@ $link-visited-hover-color-dark: darken( $link-visited-color-dark , 15% ) !defaul
 
 $margin-base: 'medium-plus' !default;
 
-$components-background-base: grey(80) !default;
-$components-color-base: $color-dark !default;
-$components-hover-base: 10% !default;
+$components-background: grey(80) !default;
+$components-color: $body-color-dark !default;
+$components-hover-darken-darken: 10% !default;
 
 $components-background-dark: color('white') !default;
-$components-color-dark: $color-base !default;
-$components-hover-dark: 10% !default;
+$components-color-dark: $body-color !default;
+$components-hover-darken-dark: 10% !default;
 
 $components: (
     'light': $components-background-dark,
-    'dark': $components-background-base,
+    'dark': $components-background,
     'ghost': transparent,
 
     'red': color('red'),
@@ -83,5 +83,5 @@ $gutters: (
 	'-xl': spacer('large-plus'),
 ) !default;
 
-$min-grid-breakpoint: "small" !default;
-$max-grid-cols: 12 !default;
+$grid-min-breakpoint: "small" !default;
+$grid-max-cols: 12 !default;

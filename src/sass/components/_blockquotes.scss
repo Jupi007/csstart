@@ -1,14 +1,14 @@
 @include option("blockquotes") {
 
 [class*="Blockquote"],  [class*="Afb"] blockquote,{
-	padding: $blockquotes-padding;
-	background: var(--blockquotes-background);
-    color: var(--blockquotes-color);
-	border-radius: $blockquotes-border-radius;
+	padding: $blockquote-padding;
+	background: var(--blockquote-background);
+    color: var(--blockquote-color);
+	border-radius: $blockquote-border-radius;
 	position: relative;
 	padding-left: 80px;
-    margin-top: $blockquotes-margin-top;
-    margin-bottom: $blockquotes-margin-bottom;
+    margin-top: $blockquote-margin-top;
+    margin-bottom: $blockquote-margin-bottom;
 
 	&:before {
 		content: "\201C";
@@ -18,7 +18,7 @@
 		font-family: georgia, serif;
 		font-size: 7em;
 		line-height: .9;
-		color: var(--blockquotes-quote-color);
+		color: var(--blockquote-quote-color);
 	}
 
 	> *:last-child {
@@ -27,8 +27,8 @@
 
 	cite {
 		display: block;
-		color: var(--blockquotes-cite-color);
-		text-align: $blockquotes-cite-text-align;
+		color: var(--blockquote-cite-color);
+		text-align: $blockquote-cite-text-align;
 
 		&:before {
 			content: "- ";

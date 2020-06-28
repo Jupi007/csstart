@@ -6,35 +6,35 @@ input[type="submit"],
 input[type="reset"],
 [class*="Button"] {
     position: relative;
-    font-size: $buttons-font-size;
-	padding: $buttons-padding;
-	border-radius: $buttons-border-radius;
+    font-size: $button-font-size;
+	padding: $button-padding;
+	border-radius: $button-border-radius;
     line-height: inherit;
 }
 
 [class*="Button"] {
 	&[class*="--wired"] {
-		box-shadow: 0 0 0 $buttons-inversed-border-width var(--components-background) inset;
+		box-shadow: 0 0 0 $button-inversed-border-width var(--components-background) inset;
 	}
 
 	&[class*="--large"] {
-		padding: $buttons-large-padding;
-		font-size: $buttons-large-font-size;
+		padding: $button-padding-large;
+		font-size: $button-font-size-large;
 	}
 
 	&[class*="--xlarge"] {
-		padding: $buttons-extra-large-padding;
-		font-size: $buttons-extra-large-font-size;
+		padding: $button-padding-extra-large;
+		font-size: $button-font-size-extra-large;
 	}
 
 	&[class*="--small"] {
-		padding: $buttons-small-padding;
-		font-size: $buttons-small-font-size;
+		padding: $button-padding-small;
+		font-size: $button-font-size-small;
 	}
 
 	&[class*="--xsmall"] {
-		padding: $buttons-extra-small-padding;
-		font-size: $buttons-extra-small-font-size;
+		padding: $button-padding-extra-small;
+		font-size: $button-font-size-extra-small;
 	}
 
     &[class*="--block"] {

@@ -6,10 +6,10 @@ $headings: "h1, h2, h3, h4, h5, h6" !default;
 
 $headings-margin-bottom : spacer($margin-base, .5) !default;
 $paragraph-margin-bottom: spacer($margin-base) !default;
-$separator-margins: spacer($margin-base, 1.5) !default;
+$separator-margin: spacer($margin-base, 1.5) 0 !default;
 
-$lists-margin-bottom: spacer($margin-base) !default;
-$lists-padding-left: spacer("xx-large") !default;
+$list-margin-bottom: spacer($margin-base) !default;
+$list-padding-left: spacer("xx-large") !default;
 
 $dt-font-weight: font-weight("bold") !default;
 
@@ -21,9 +21,6 @@ $mark-border-radius: $border-radius-base !default;
 $mark-padding: 1px !default;
 $mark-background: color("yellow") !default;
 
-$table-cell-padding: spacer("small") !default;
-$table-caption-color: $color-base !default;
-
 // -----
 // Forms
 // -----
@@ -34,7 +31,7 @@ $input-border-width: 1px !default;
 $input-border-color: grey(20) !default;
 $input-hover-focus-border-color: grey(50) !default;
 $input-border-radius: $border-radius-base !default;
-$input-border-color-invalid: color('danger') !default;
+$input-invalid-border-color: color('danger') !default;
 $input-padding-vertical: spacer("tiny-plus") !default;
 $input-padding-horizontal: spacer("medium") !default;
 $input-background: color("white") !default;
@@ -55,7 +52,7 @@ $checkbox-disabled-background: grey(10) !default;
 $range-track-color: grey(70) !default;
 $range-track-disabled-color: grey(60) !default;
 $range-thumb-color: grey(20) !default;
-$range-thumb-color-hover: grey(30) !default;
+$range-thumb-hover-color: grey(30) !default;
 
 $progress-height: spacer("large-plus") !default;
 $progress-background: grey(20) !default;
@@ -80,73 +77,73 @@ $checkbox-disabled-background-dark: grey(60) !default;
 $range-track-color-dark: grey(50) !default;
 $range-track-disabled-color-dark: grey(30) !default;
 $range-thumb-color-dark: color("white") !default;
-$range-thumb-color-hover-dark: grey(10) !default;
+$range-thumb-hover-color-dark: grey(10) !default;
 $progress-background-dark: grey(20) !default;
 
 // -------
 // Buttons
 // -------
 
-$buttons-padding: spacer("tiny-plus") spacer("medium") !default;
-$buttons-font-size: .9em !default;
-$buttons-border-radius: $border-radius-base !default;
-$buttons-inversed-border-width: 1px !default;
+$button-padding: spacer("tiny-plus") spacer("medium") !default;
+$button-font-size: .9em !default;
+$button-border-radius: $border-radius-base !default;
+$button-inversed-border-width: 1px !default;
 
-$buttons-large-padding: spacer("small") spacer("medium-plus") !default;
-$buttons-large-font-size: 1em !default;
+$button-padding-large: spacer("small") spacer("medium-plus") !default;
+$button-font-size-large: 1em !default;
 
-$buttons-extra-large-padding: spacer("small-plus") spacer("large") !default;
-$buttons-extra-large-font-size: 1.2em !default;
+$button-padding-extra-large: spacer("small-plus") spacer("large") !default;
+$button-font-size-extra-large: 1.2em !default;
 
-$buttons-small-padding: spacer("tiny") spacer("small") !default;
-$buttons-small-font-size: .8em !default;
+$button-padding-small: spacer("tiny") spacer("small") !default;
+$button-font-size-small: .8em !default;
 
-$buttons-extra-small-padding: spacer("tiny") spacer("tiny-plus") !default;
-$buttons-extra-small-font-size: .7em !default;
+$button-padding-extra-small: spacer("tiny") spacer("tiny-plus") !default;
+$button-font-size-extra-small: .7em !default;
 
 // ----
 // Tags
 // ----
 
-$tags-border-radius: $border-radius-base !default;
-$tags-padding: spacer("tiny") spacer("tiny-plus") !default;
-$tags-font-size: .8em !default;
+$tag-border-radius: $border-radius-base !default;
+$tag-padding: spacer("tiny") spacer("tiny-plus") !default;
+$tag-font-size: .8em !default;
 
-$tags-large-padding: spacer("tiny-plus") spacer("small") !default;
-$tags-large-font-size: .85em !default;
+$tag-padding-large: spacer("tiny-plus") spacer("small") !default;
+$tag-font-size-large: .85em !default;
 
-$tags-extra-large-padding: spacer("small") spacer("small-plus") !default;
-$tags-extra-large-font-size: .9em !default;
+$tag-padding-extra-large: spacer("small") spacer("small-plus") !default;
+$tag-font-size-extra-large: .9em !default;
 
 // ------
 // Alerts
 // ------
 
-$alerts-padding: spacer("medium") !default;
-$alerts-border-width: 1px !default;
-$alerts-border-left-width: 5px !default;
-$alerts-border-radius: $border-radius-base !default;
-$alerts-margin-bottom: $paragraph-margin-bottom !default;
-$alerts-title-font-size: 1.5em !default;
-$alerts-background-transparency: .8;
-$alerts-background: transparentize($components-background-base, $alerts-background-transparency) !default;
+$alert-padding: spacer("medium") !default;
+$alert-border-width: 1px !default;
+$alert-border-left-width: 5px !default;
+$alert-border-radius: $border-radius-base !default;
+$alert-margin-bottom: $paragraph-margin-bottom !default;
+$alert-title-font-size: 1.5em !default;
+$alert-background-transparency-amount: .8;
+$alert-background: transparentize($components-background, $alert-background-transparency-amount) !default;
 
-$alerts-background-dark: transparentize($components-background-dark, $alerts-background-transparency) !default;
+$alert-background-dark: transparentize($components-background-dark, $alert-background-transparency-amount) !default;
 
 // -----
 // Cards
 // -----
 
-$cards-border-width: 1px !default;
-$cards-border-color: grey(50) !default;
-$cards-border-radius: $border-radius-base !default;
-$cards-title-font-size: 1.4em !default;
-$cards-subtitle-font-size: .9em !default;
-$cards-subtitle-color: grey(60) !default;
-$cards-body-padding: spacer("medium") !default;
-$cards-hover-box-shadow-width: 2px !default;
+$card-border-width: 1px !default;
+$card-border-color: grey(50) !default;
+$card-border-radius: $border-radius-base !default;
+$card-title-font-size: 1.4em !default;
+$card-subtitle-font-size: .9em !default;
+$card-subtitle-color: grey(60) !default;
+$card-body-padding: spacer("medium") !default;
+$card-hover-box-shadow-width: 2px !default;
 
-$cards-subtitle-color-dark: grey(40);
+$card-subtitle-color-dark: grey(40);
 
 // ----
 // Flex
@@ -161,62 +158,62 @@ $flex-align-items-base: stretch !default;
 // Tables
 // ------
 
-$tables-background: $body-bg !default;
-$tables-border-radius: $border-radius-base !default;
-$tables-border-color: grey(85) !default;
-$tables-cells-border-color: grey(50) !default;
-$tables-border-width: 1px !default;
-$tables-cells-padding: spacer("small-plus") !default;
-$tables-margin-top: calc(#{$paragraph-margin-bottom} * 2) !default;
-$tables-margin-bottom: calc(#{$paragraph-margin-bottom} * 2) !default;
-$tables-slim-cells-padding: spacer("tiny") spacer("tiny-plus") !default;
-$tables-headings-cells-background: grey(10) !default;
-$tables-zebra-cells-background: grey(5) !default;
-$tables-zebra-headings-cells-background: grey(20) !default;
-$tables-cells-hover-background: grey(10) !default;
+$table-background: $body-bg !default;
+$table-border-radius: $border-radius-base !default;
+$table-border-color: grey(85) !default;
+$table-cell-border-color: grey(50) !default;
+$table-border-width: 1px !default;
+$table-cell-padding: spacer("small-plus") !default;
+$table-margin-top: calc(#{$paragraph-margin-bottom} * 2) !default;
+$table-margin-bottom: calc(#{$paragraph-margin-bottom} * 2) !default;
+$table-slim-cell-padding: spacer("tiny") spacer("tiny-plus") !default;
+$table-headings-cell-background: grey(10) !default;
+$table-zebra-cell-background: grey(5) !default;
+$table-zebra-headings-cell-background: grey(20) !default;
+$table-cell-hover-background: grey(10) !default;
 
-$tables-dark-border-color: grey(70) !default;
-$tables-dark-cells-border-color: grey(50) !default;
-$tables-dark-background: grey(80) !default;
-$tables-dark-headings-cells-background: grey(90) !default;
-$tables-dark-zebra-headings-cells-background: grey(90) !default;
-$tables-dark-zebra-cells-background: grey(75) !default;
-$tables-dark-cells-hover-background: grey(85) !default;
+$table-border-color-dark: grey(70) !default;
+$table-cell-border-color-dark: grey(50) !default;
+$table-background-dark: grey(80) !default;
+$table-heading-cell-background-dark: grey(90) !default;
+$table-zebra-heading-cell-background-dark: grey(90) !default;
+$table-zebra-cell-background-dark: grey(75) !default;
+$table-cell-hover-background-dark: grey(85) !default;
 
-$captions-color: grey(70) !default;
-$captions-font-style: italic !default;
+$table-caption-color: grey(70) !default;
+$table-caption-font-style: italic !default;
 
-$captions-color-dark: grey(30) !default;
+$table-caption-color-dark: grey(30) !default;
 
 // -----------
 // Blockquotes
 // -----------
 
-$blockquotes-padding: spacer("x-large") !default;
-$blockquotes-margin-top: calc(#{$paragraph-margin-bottom} * 2) !default;
-$blockquotes-margin-bottom: calc(#{$paragraph-margin-bottom} * 2) !default;
-$blockquotes-background: grey(10) !default;
-$blockquotes-color: $color-base !default;
-$blockquotes-border-radius: 10px !default;
-$blockquotes-quote-color: grey(30) !default;
-$blockquotes-cite-color: grey(70) !default;
-$blockquotes-cite-text-align: right !default;
+$blockquote-padding: spacer("x-large") !default;
+$blockquote-margin-top: calc(#{$paragraph-margin-bottom} * 2) !default;
+$blockquote-margin-bottom: calc(#{$paragraph-margin-bottom} * 2) !default;
+$blockquote-background: grey(10) !default;
+$blockquote-color: $body-color !default;
+$blockquote-border-radius: 10px !default;
+$blockquote-quote-color: grey(30) !default;
+$blockquote-cite-color: grey(70) !default;
+$blockquote-cite-text-align: right !default;
 
-$blockquotes-background-dark: grey(80) !default;
-$blockquotes-color-dark: $color-dark !default;
-$blockquotes-quote-color-dark: grey(60) !default;
-$blockquotes-cite-color-dark: grey(40) !default;
+$blockquote-background-dark: grey(80) !default;
+$blockquote-color-dark: $body-color-dark !default;
+$blockquote-quote-color-dark: grey(60) !default;
+$blockquote-cite-color-dark: grey(40) !default;
 
 // -------
 // Figures
 // -------
 
-$figures-background: grey(80) !default;
-$figures-border-radius: $border-radius-base !default;
-$figures-padding: spacer("large-plus") !default;
-$figures-margin-top: calc(#{$paragraph-margin-bottom} * 2) !default;
-$figures-margin-bottom: calc(#{$paragraph-margin-bottom} * 2) !default;
-$figures-figcaption-color: grey(15) !default;
-$figures-light-background: grey(10) !default;
-$figures-light-figcaption-color: grey(75) !default;
-$figures-max-height-image: 60vh !default;
+$figure-background: grey(80) !default;
+$figure-border-radius: $border-radius-base !default;
+$figure-padding: spacer("large-plus") !default;
+$figure-margin-top: calc(#{$paragraph-margin-bottom} * 2) !default;
+$figure-margin-bottom: calc(#{$paragraph-margin-bottom} * 2) !default;
+$figure-figcaption-color: grey(15) !default;
+$figure-light-background: grey(10) !default;
+$figure-light-figcaption-color: grey(75) !default;
+$figure-max-height-image: 60vh !default;

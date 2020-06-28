@@ -46,8 +46,8 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
 	margin: 0;
-	font-family: $font-family-base;
-	font-size: $font-size-mobile-base;
+	font-family: $font-family-sans-serif;
+	font-size: $mobile-font-size;
 
 	@include respond-to("small", "up") {
 		font-size: $font-size-base;
@@ -55,7 +55,7 @@ body {
 
 	font-weight: $font-weight-base;
 	line-height: $line-height-base;
-	color: var(--color);
+	color: var(--body-color);
 	text-align: left;
 	background: var(--body-bg-color);
 
@@ -79,8 +79,7 @@ hr {
 	height: 0;
     width: 100%;
 	overflow: visible;
-	margin-top: $separator-margins;
-	margin-bottom: $separator-margins;
+	margin: $separator-margin;
 }
 
 #{$headings} {
@@ -119,7 +118,7 @@ address {
 
 ol,
 ul {
-	padding-left: $lists-padding-left;
+	padding-left: $list-padding-left;
 
 	&.unstyled {
 		list-style: none;
@@ -131,7 +130,7 @@ ol,
 ul,
 dl {
 	margin-top: 0;
-	margin-bottom: $lists-margin-bottom;
+	margin-bottom: $list-margin-bottom;
 }
 
 ol ol,
@@ -228,7 +227,7 @@ pre {
 }
 
 kbd {
-	border: 1px solid $color-base;
+	border: 1px solid $body-color;
 	border-radius: $kbd-border-radius;
 	padding: $kbd-padding;
 	font-size: $kbd-font-size;

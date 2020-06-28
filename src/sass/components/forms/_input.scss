@@ -16,13 +16,13 @@ select {
     margin-left: spacer('medium');
     margin-bottom: spacer('medium');
     filter: none;
-    color: var(--color);
+    color: var(--body-color);
 
     @include transition("border");
 	&:hover, &:focus { border-color: var(--input-hover-focus-border-color); }
 
     &:invalid:focus {
-        border-color: $input-border-color-invalid;
+        border-color: $input-invalid-border-color;
     }
 
 	&[disabled] {

@@ -2,9 +2,9 @@
 // Font families
 // -------------
 
-$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", 'ubuntu-mono', monospace !default;
-$headings-font-family: $font-family-base !default;
+$headings-font-family: $font-family-sans-serif !default;
 
 // ------------
 // Line heights
@@ -17,8 +17,8 @@ $headings-line-height: 1.5 !default;
 // Text color
 // ----------
 
-$color-base: grey(95) !default;
-$color-dark: grey(5) !default;
+$body-color: grey(95) !default;
+$body-color-dark: grey(5) !default;
 
 // ----------
 // Text align
@@ -32,16 +32,16 @@ $headings-text-align: left !default;
 // ----------
 
 $font-size-base: 1.6rem !default;
-$font-size-mobile-base: 1.4rem !default;
-$headings-font-size-base: 1em !default;
+$mobile-font-size: 1.4rem !default;
+$headings-font-size: 1em !default;
 
 $headings-font-sizes: (
-	h1: $headings-font-size-base + 1.4,
-	h2: $headings-font-size-base + 1.0,
-	h3: $headings-font-size-base + 0.8,
-	h4: $headings-font-size-base + 0.4,
-	h5: $headings-font-size-base + 0.2,
-	h6: $headings-font-size-base + 0.1,
+	h1: $headings-font-size + 1.4,
+	h2: $headings-font-size + 1.0,
+	h3: $headings-font-size + 0.8,
+	h4: $headings-font-size + 0.4,
+	h5: $headings-font-size + 0.2,
+	h6: $headings-font-size + 0.1,
 ) !default;
 
 // ------------

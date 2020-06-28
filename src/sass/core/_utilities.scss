@@ -45,7 +45,7 @@
 
 @mixin media-border-utilities($prefix: "") {
     .#{$prefix}b {
-    	border: 1px solid $color-base !important;
+    	border: 1px solid $body-color !important;
 
     	&r {
     		border-radius: $border-radius-base !important;

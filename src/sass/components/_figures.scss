@@ -5,27 +5,27 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background: $figures-background;
-	border-radius: $figures-border-radius;
-	padding: $figures-padding;
-    margin-top: $figures-margin-top;
-    margin-bottom: $figures-margin-bottom;
+	background: $figure-background;
+	border-radius: $figure-border-radius;
+	padding: $figure-padding;
+    margin-top: $figure-margin-top;
+    margin-bottom: $figure-margin-bottom;
 
 	figcaption {
-		margin-top: $figures-padding;
-		color: $figures-figcaption-color;
+		margin-top: $figure-padding;
+		color: $figure-figcaption-color;
         text-align: center;
 	}
 
     img {
-        max-height: $figures-max-height-image;
+        max-height: $figure-max-height-image;
     }
 
 	&[class*="--light"] {
-		background: $figures-light-background;
+		background: $figure-light-background;
 
 		figcaption {
-			color: $figures-light-figcaption-color;
+			color: $figure-light-figcaption-color;
 		}
 	}
 }

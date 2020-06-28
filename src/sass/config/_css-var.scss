@@ -5,7 +5,7 @@
 
 :root {
     --body-bg-color: #{$body-bg};
-    --color: #{$color-base};
+    --body-color: #{$body-color};
 
     --link-color: #{$link-color};
     --link-hover-color: #{$link-hover-color};
@@ -17,24 +17,24 @@
     --link-visited-color-inversed: #{$link-visited-color-dark};
     --link-visited-hover-color-inversed: #{$link-visited-hover-color-dark};
 
-    --components-background: #{$components-background-base};
-    --components-background-hover: #{darken($components-background-base, $components-hover-base)};
-    --components-color: #{$components-color-base};
+    --components-background: #{$components-background};
+    --components-background-hover: #{darken($components-background, $components-hover-darken-darken)};
+    --components-color: #{$components-color};
     --components-background-inversed: #{$components-background-dark};
-    --components-background-hover-inversed: #{darken($components-background-dark, $components-hover-dark)};
+    --components-background-hover-inversed: #{darken($components-background-dark, $components-hover-darken-dark)};
     --components-color-inversed: #{$components-color-dark};
 
-    --alerts-background: #{$alerts-background};
+    --alert-background: #{$alert-background};
 
-    --tables-border-color: #{$tables-border-color};
-    --tables-cells-border-color: #{$tables-cells-border-color};
-    --tables-background: #{$tables-background};
-    --tables-headings-cells-background: #{$tables-headings-cells-background};
-    --tables-zebra-headings-cells-background: #{$tables-zebra-headings-cells-background};
-    --tables-zebra-cells-background: #{$tables-zebra-cells-background};
-    --tables-cells-hover-background: #{$tables-cells-hover-background};
+    --table-border-color: #{$table-border-color};
+    --table-cell-border-color: #{$table-cell-border-color};
+    --table-background: #{$table-background};
+    --table-headings-cell-background: #{$table-headings-cell-background};
+    --table-zebra-headings-cell-background: #{$table-zebra-headings-cell-background};
+    --table-zebra-cell-background: #{$table-zebra-cell-background};
+    --table-cell-hover-background: #{$table-cell-hover-background};
 
-    --captions-color: #{$captions-color};
+    --table-caption-color: #{$table-caption-color};
 
     --input-border-color: #{$input-border-color};
     --input-hover-focus-border-color: #{$input-hover-focus-border-color};
@@ -48,21 +48,21 @@
     --range-track-color: #{$range-track-color};
     --range-track-disabled-color: #{$range-track-disabled-color};
     --range-thumb-color: #{$range-thumb-color};
-    --range-thumb-color-hover: #{$range-thumb-color-hover};
+    --range-thumb-hover-color: #{$range-thumb-hover-color};
     --progress-background: #{$progress-background};
 
-    --blockquotes-background: #{$blockquotes-background};
-    --blockquotes-color: #{$blockquotes-color};
-    --blockquotes-cite-color: #{$blockquotes-cite-color};
-    --blockquotes-quote-color: #{$blockquotes-quote-color};
+    --blockquote-background: #{$blockquote-background};
+    --blockquote-color: #{$blockquote-color};
+    --blockquote-cite-color: #{$blockquote-cite-color};
+    --blockquote-quote-color: #{$blockquote-quote-color};
 
-    --cards-subtitle-color: #{$cards-subtitle-color};
+    --card-subtitle-color: #{$card-subtitle-color};
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --body-bg-color: #{$body-bg-dark};
-        --color: #{$color-dark};
+        --body-color: #{$body-color-dark};
 
         --link-color: #{$link-color-dark};
         --link-hover-color: #{$link-hover-color-dark};
@@ -75,23 +75,23 @@
         --link-visited-hover-color-inversed: #{$link-visited-hover-color};
 
         --components-background: #{$components-background-dark};
-        --components-background-hover: #{darken($components-background-dark, $components-hover-dark)};
+        --components-background-hover: #{darken($components-background-dark, $components-hover-darken-dark)};
         --components-color: #{$components-color-dark};
-        --components-background-inversed: #{$components-background-base};
-        --components-background-hover-inversed: #{darken($components-background-base, $components-hover-base)};
-        --components-color-inversed: #{$components-color-base};
+        --components-background-inversed: #{$components-background};
+        --components-background-hover-inversed: #{darken($components-background, $components-hover-darken-darken)};
+        --components-color-inversed: #{$components-color};
 
-        --alerts-background: #{$alerts-background-dark};
+        --alert-background: #{$alert-background-dark};
 
-        --tables-border-color: #{$tables-dark-border-color};
-        --tables-cells-border-color: #{$tables-dark-cells-border-color};
-        --tables-background: #{$tables-dark-background};
-        --tables-headings-cells-background: #{$tables-dark-headings-cells-background};
-        --tables-zebra-headings-cells-background: #{$tables-dark-zebra-headings-cells-background};
-        --tables-zebra-cells-background: #{$tables-dark-zebra-cells-background};
-        --tables-cells-hover-background: #{$tables-dark-cells-hover-background};
+        --table-border-color: #{$table-border-color-dark};
+        --table-cell-border-color: #{$table-cell-border-color-dark};
+        --table-background: #{$table-background-dark};
+        --table-headings-cell-background: #{$table-heading-cell-background-dark};
+        --table-zebra-headings-cell-background: #{$table-zebra-heading-cell-background-dark};
+        --table-zebra-cell-background: #{$table-zebra-cell-background-dark};
+        --table-cell-hover-background: #{$table-cell-hover-background-dark};
 
-        --captions-color: #{$captions-color-dark};
+        --table-caption-color: #{$table-caption-color-dark};
 
         --input-border-color: #{$input-border-color-dark};
         --input-hover-focus-border-color: #{$input-hover-focus-border-color-dark};
@@ -105,14 +105,14 @@
         --range-track-color: #{$range-track-color-dark};
         --range-track-disabled-color: #{$range-track-disabled-color-dark};
         --range-thumb-color: #{$range-thumb-color-dark};
-        --range-thumb-color-hover: #{$range-thumb-color-hover-dark};
+        --range-thumb-hover-color: #{$range-thumb-hover-color-dark};
         --progress-background: #{$progress-background-dark};
 
-        --blockquotes-background: #{$blockquotes-background-dark};
-        --blockquotes-color: #{$blockquotes-color-dark};
-        --blockquotes-cite-color: #{$blockquotes-cite-color-dark};
-        --blockquotes-quote-color: #{$blockquotes-quote-color-dark};
+        --blockquote-background: #{$blockquote-background-dark};
+        --blockquote-color: #{$blockquote-color-dark};
+        --blockquote-cite-color: #{$blockquote-cite-color-dark};
+        --blockquote-quote-color: #{$blockquote-quote-color-dark};
 
-        --cards-subtitle-color: #{$cards-subtitle-color-dark};
+        --card-subtitle-color: #{$card-subtitle-color-dark};
     }
 }

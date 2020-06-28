@@ -1,28 +1,28 @@
 @include option("alerts") {
 
 [class*="Alert"] {
-	padding: $alerts-padding;
-	border: $alerts-border-width solid var(--components-background);
-	border-left-width: $alerts-border-left-width;
-	border-radius: $alerts-border-radius;
-	margin-bottom: $alerts-margin-bottom;
-    background: var(--alerts-background);
-	color: var(--color);
+	padding: $alert-padding;
+	border: $alert-border-width solid var(--components-background);
+	border-left-width: $alert-border-left-width;
+	border-radius: $alert-border-radius;
+	margin-bottom: $alert-margin-bottom;
+    background: var(--alert-background);
+	color: var(--body-color);
 
     &[class*="-inversed"] {
-        border: $alerts-border-width solid var(--components-background-inversed);
+        border: $alert-border-width solid var(--components-background-inversed);
     	color: var(--components-color);
     }
 
 	@each $component, $bg in $components {
 		&[class*="-#{$component}"] {
 			border-color: $bg;
-            background: transparentize($bg, $alerts-background-transparency);
+            background: transparentize($bg, $alert-background-transparency-amount);
 		}
 	}
 
 	#{$headings} {
-		font-size: $alerts-title-font-size;
+		font-size: $alert-title-font-size;
 	}
 }
 

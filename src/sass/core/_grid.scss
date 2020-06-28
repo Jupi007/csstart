@@ -10,10 +10,10 @@
 		}
 	}
 
-	@include respond-to($min-grid-breakpoint, "up") {
+	@include respond-to($grid-min-breakpoint, "up") {
 		grid-auto-flow: dense;
 
-		@for $i from 2 through $max-grid-cols {
+		@for $i from 2 through $grid-max-cols {
 			&[class*="-#{$i}"] {
 				grid-template-columns: repeat(#{$i}, 1fr);
 			}
@@ -37,7 +37,7 @@
 
 @mixin media-grid($prefix: "") {
 	[class*="Grid"] {
-		@for $i from 2 through $max-grid-cols {
+		@for $i from 2 through $grid-max-cols {
 			&[class*="--#{$prefix}#{$i}"] {
 				grid-template-columns: repeat(#{$i}, 1fr);
 			}

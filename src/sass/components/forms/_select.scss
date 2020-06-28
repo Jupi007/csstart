@@ -11,7 +11,7 @@ select {
         scrollbar-color: initial;
 
         &:active {
-            color: var(--color);
+            color: var(--body-color);
         }
 
 		option{
@@ -31,7 +31,7 @@ select {
 }
 select:not([multiple]) {
     padding-right: 2.5rem;
-    color: var(--color);
+    color: var(--body-color);
     background-position: right 1rem center;
     background-repeat: no-repeat;
     background-size: 1.2rem;

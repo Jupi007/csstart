@@ -4,20 +4,20 @@
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	border: $cards-border-width solid $cards-border-color;
-	border-radius: $cards-border-radius;
+	border: $card-border-width solid $card-border-color;
+	border-radius: $card-border-radius;
 	word-wrap: break-word;
 }
 
 [class*="Card"][class*="--link"], a[class*="Card"] {
 	cursor: pointer;
-	color: var(--color);
+	color: var(--body-color);
     text-decoration: none;
 
     @include transition("box-shadow");
 
 	&:hover, &:focus {
-		box-shadow: 0 0 $cards-hover-box-shadow-width $cards-hover-box-shadow-width $cards-border-color;
+		box-shadow: 0 0 $card-hover-box-shadow-width $card-hover-box-shadow-width $card-border-color;
         text-decoration: none;
 	}
 }
@@ -28,17 +28,17 @@
 }
 
 .card-title {
-	font-size: $cards-title-font-size;
+	font-size: $card-title-font-size;
 }
 
 .card-subtitle {
 	display: block;
-	font-size: $cards-subtitle-font-size;
-	color: var(--cards-subtitle-color);
+	font-size: $card-subtitle-font-size;
+	color: var(--card-subtitle-color);
 }
 
 [class*="card-body"] {
-	padding: $cards-body-padding;
+	padding: $card-body-padding;
 
 	> *:last-child {
 		margin-bottom: 0;
@@ -74,12 +74,12 @@
 			margin: 0;
 
 			&:first-child {
-				border-radius: $cards-border-radius 0 0 $cards-border-radius;
-				border-left-width: $cards-border-width;
+				border-radius: $card-border-radius 0 0 $card-border-radius;
+				border-left-width: $card-border-width;
 			}
 
 			&:last-child {
-				border-radius: 0 $cards-border-radius $cards-border-radius 0;
+				border-radius: 0 $card-border-radius $card-border-radius 0;
 			}
 		}
 	}
@@ -97,12 +97,12 @@
 		margin: 0;
 
 		&:first-child {
-			border-radius: $cards-border-radius $cards-border-radius 0 0;
+			border-radius: $card-border-radius $card-border-radius 0 0;
 		}
 
 		&:last-child {
-			border-radius: 0 0 $cards-border-radius $cards-border-radius;
-			border-bottom-width: $cards-border-width;
+			border-radius: 0 0 $card-border-radius $card-border-radius;
+			border-bottom-width: $card-border-width;
 		}
 	}
 }
