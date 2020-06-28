@@ -1,10 +1,4 @@
-.Flex {
-	display: flex;
-	flex-direction: $flex-direction-base;
-	flex-wrap: $flex-wrap-base;
-	justify-content: $flex-justify-content-base;
-	align-items: $flex-align-items-base;
-}
+
 
 @mixin media-flex($prefix: "") {
 	&.#{$prefix}inline { display: inline-flex; }
@@ -58,4 +52,14 @@
 	}
 }
 
-@include media-flex();
+@include option("flex") {
+    .Flex {
+    	display: flex;
+    	flex-direction: $flex-direction-base;
+    	flex-wrap: $flex-wrap-base;
+    	justify-content: $flex-justify-content-base;
+    	align-items: $flex-align-items-base;
+    }
+
+    @include media-flex();
+}

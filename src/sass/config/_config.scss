@@ -7,8 +7,9 @@ $options: (
 
     "smooth-scroll": true,
 
-    "forms": true,
+    "dark-theme": true,
 
+    "forms": true,
     "alerts": true,
 	"blockquotes": true,
 	"tags": true,
@@ -17,6 +18,14 @@ $options: (
 	"figures": true,
 	"media": true,
 	"tables": true,
+
+    "grid": true,
+    "flex": true,
+    "utilities": true,
+
+    "dark-theme-utilities": true,
+    "print-utilities": true,
+    "responsive-utilities": true,
 ) !default;
 
 $transition-duration-base: .2s !default;

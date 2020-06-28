@@ -1,8 +1,6 @@
 // ---------------------------------------------------
 // CSS Variables (for dynamic light and dark variants)
 // ---------------------------------------------------
-
-
 :root {
     --body-bg-color: #{$body-bg};
     --body-color: #{$body-color};
@@ -59,60 +57,63 @@
     --card-subtitle-color: #{$card-subtitle-color};
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --body-bg-color: #{$body-bg-dark};
-        --body-color: #{$body-color-dark};
+@include option("dark-theme") {
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --body-bg-color: #{$body-bg-dark};
+            --body-color: #{$body-color-dark};
 
-        --link-color: #{$link-color-dark};
-        --link-hover-color: #{$link-hover-color-dark};
-        --link-visited-color: #{$link-visited-color-dark};
-        --link-visited-hover-color: #{$link-visited-hover-color-dark};
+            --link-color: #{$link-color-dark};
+            --link-hover-color: #{$link-hover-color-dark};
+            --link-visited-color: #{$link-visited-color-dark};
+            --link-visited-hover-color: #{$link-visited-hover-color-dark};
 
-        --link-color-inversed: #{$link-color};
-        --link-hover-color-inversed: #{$link-hover-color};
-        --link-visited-color-inversed: #{$link-visited-color};
-        --link-visited-hover-color-inversed: #{$link-visited-hover-color};
+            --link-color-inversed: #{$link-color};
+            --link-hover-color-inversed: #{$link-hover-color};
+            --link-visited-color-inversed: #{$link-visited-color};
+            --link-visited-hover-color-inversed: #{$link-visited-hover-color};
 
-        --components-background: #{$components-background-dark};
-        --components-background-hover: #{darken($components-background-dark, $components-hover-darken-dark)};
-        --components-color: #{$components-color-dark};
-        --components-background-inversed: #{$components-background};
-        --components-background-hover-inversed: #{darken($components-background, $components-hover-darken-darken)};
-        --components-color-inversed: #{$components-color};
+            --components-background: #{$components-background-dark};
+            --components-background-hover: #{darken($components-background-dark, $components-hover-darken-dark)};
+            --components-color: #{$components-color-dark};
+            --components-background-inversed: #{$components-background};
+            --components-background-hover-inversed: #{darken($components-background, $components-hover-darken-darken)};
+            --components-color-inversed: #{$components-color};
 
-        --alert-background: #{$alert-background-dark};
+            --alert-background: #{$alert-background-dark};
 
-        --table-border-color: #{$table-border-color-dark};
-        --table-cell-border-color: #{$table-cell-border-color-dark};
-        --table-background: #{$table-background-dark};
-        --table-headings-cell-background: #{$table-heading-cell-background-dark};
-        --table-zebra-headings-cell-background: #{$table-zebra-heading-cell-background-dark};
-        --table-zebra-cell-background: #{$table-zebra-cell-background-dark};
-        --table-cell-hover-background: #{$table-cell-hover-background-dark};
+            --table-border-color: #{$table-border-color-dark};
+            --table-cell-border-color: #{$table-cell-border-color-dark};
+            --table-background: #{$table-background-dark};
+            --table-headings-cell-background: #{$table-heading-cell-background-dark};
+            --table-zebra-headings-cell-background: #{$table-zebra-heading-cell-background-dark};
+            --table-zebra-cell-background: #{$table-zebra-cell-background-dark};
+            --table-cell-hover-background: #{$table-cell-hover-background-dark};
 
-        --table-caption-color: #{$table-caption-color-dark};
+            --table-caption-color: #{$table-caption-color-dark};
 
-        --input-border-color: #{$input-border-color-dark};
-        --input-hover-focus-border-color: #{$input-hover-focus-border-color-dark};
-        --input-background: #{$input-background-dark};
-        --input-disabled-background: #{$input-disabled-background-dark};
-        --checkbox-active-background: #{$checkbox-active-background-dark};
-        --checkbox-checked-background: #{$checkbox-checked-background-dark};
-        --checkbox-checked-icon-color: #{$checkbox-checked-icon-color-dark};
-        --checkbox-disabled-border-color: #{$checkbox-disabled-border-color-dark};
-        --checkbox-disabled-background: #{$checkbox-disabled-background-dark};
-        --range-track-color: #{$range-track-color-dark};
-        --range-track-disabled-color: #{$range-track-disabled-color-dark};
-        --range-thumb-color: #{$range-thumb-color-dark};
-        --range-thumb-hover-color: #{$range-thumb-hover-color-dark};
-        --progress-background: #{$progress-background-dark};
+            --input-border-color: #{$input-border-color-dark};
+            --input-hover-focus-border-color: #{$input-hover-focus-border-color-dark};
+            --input-background: #{$input-background-dark};
+            --input-disabled-background: #{$input-disabled-background-dark};
+            --checkbox-active-background: #{$checkbox-active-background-dark};
+            --checkbox-checked-background: #{$checkbox-checked-background-dark};
+            --checkbox-checked-icon-color: #{$checkbox-checked-icon-color-dark};
+            --checkbox-disabled-border-color: #{$checkbox-disabled-border-color-dark};
+            --checkbox-disabled-background: #{$checkbox-disabled-background-dark};
+            --range-track-color: #{$range-track-color-dark};
+            --range-track-disabled-color: #{$range-track-disabled-color-dark};
+            --range-thumb-color: #{$range-thumb-color-dark};
+            --range-thumb-hover-color: #{$range-thumb-hover-color-dark};
+            --progress-background: #{$progress-background-dark};
 
-        --blockquote-background: #{$blockquote-background-dark};
-        --blockquote-color: #{$blockquote-color-dark};
-        --blockquote-cite-color: #{$blockquote-cite-color-dark};
-        --blockquote-quote-color: #{$blockquote-quote-color-dark};
+            --blockquote-background: #{$blockquote-background-dark};
+            --blockquote-color: #{$blockquote-color-dark};
+            --blockquote-cite-color: #{$blockquote-cite-color-dark};
+            --blockquote-quote-color: #{$blockquote-quote-color-dark};
 
-        --card-subtitle-color: #{$card-subtitle-color-dark};
+            --card-subtitle-color: #{$card-subtitle-color-dark};
+        }
     }
+
 }

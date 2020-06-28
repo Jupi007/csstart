@@ -1,165 +1,176 @@
-@each $name, $value in $breakpoints {
-	@include respond-to($name, "up") {
-        //@include media-border-utilities();
-        //@include media-color-utilities();
-        @include media-size-utilities($name + "-");
-        @include media-display-utilities($name + "-");
-        @include media-align-utilities($name + "-");
-        @include media-margin-utilities($name + "-");
-        @include media-padding-utilities($name + "-");
-        @include media-visibility-utilities($name + "-");
-        @include media-order-utilities($name + "-");
-		@include media-flex($name + "-");
-		@include media-grid($name + "-");
-	}
+@include option("responsive-utilities") {
+    @each $name, $value in $breakpoints {
+    	@include respond-to($name, "up") {
+            @include option("utilities") {
+                @include media-size-utilities($name + "-");
+                @include media-display-utilities($name + "-");
+                @include media-align-utilities($name + "-");
+                @include media-margin-utilities($name + "-");
+                @include media-padding-utilities($name + "-");
+                @include media-visibility-utilities($name + "-");
+                @include media-order-utilities($name + "-");
+            }
+            @include option("flex") {
+                @include media-flex($name + "-");
+            }
+            @include option("grid") {
+    		    @include media-grid($name + "-");
+            }
+    	}
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-    @include media-border-utilities("dark-");
-    @include media-color-utilities("dark-");
-    @include media-display-utilities("dark-");
+@include option("dark-theme-utilities") {
+    @media (prefers-color-scheme: dark) {
+        @include media-border-utilities("dark-");
+        @include media-color-utilities("dark-");
+        @include media-display-utilities("dark-");
+    }
 }
+
 
 // Media Print reset and utilities based on Gutenberg (https://github.com/BafS/Gutenberg)
-@include print {
-	*,
-	*:before,
-	*:after,
-	p:first-letter,
-	div:first-letter,
-	blockquote:first-letter,
-	li:first-letter,
-	p:first-line,
-	div:first-line,
-	blockquote:first-line,
-	li:first-line {
-		background: transparent !important;
-		box-shadow: none !important;
-		text-shadow: none !important;
-	}
+@include option("print-utilities") {
+    @include print {
+    	*,
+    	*:before,
+    	*:after,
+    	p:first-letter,
+    	div:first-letter,
+    	blockquote:first-letter,
+    	li:first-letter,
+    	p:first-line,
+    	div:first-line,
+    	blockquote:first-line,
+    	li:first-line {
+    		background: transparent !important;
+    		box-shadow: none !important;
+    		text-shadow: none !important;
+    	}
 
-	body {
-		font-size: 12pt;
-		background: white;
-		font-smooth: always;
-		-moz-osx-font-smoothing: grayscale;
-		-webkit-font-smoothing: antialiased;
-		text-rendering: optimizeLegibility;
-	}
+    	body {
+    		font-size: 12pt;
+    		background: white;
+    		font-smooth: always;
+    		-moz-osx-font-smoothing: grayscale;
+    		-webkit-font-smoothing: antialiased;
+    		text-rendering: optimizeLegibility;
+    	}
 
-	table,
-	blockquote,
-	pre,
-	code,
-	figure,
-	li,
-	hr,
-	ul,
-	ol,
-	a,
-	tr {
-		page-break-inside: avoid;
-	}
+    	table,
+    	blockquote,
+    	pre,
+    	code,
+    	figure,
+    	li,
+    	hr,
+    	ul,
+    	ol,
+    	a,
+    	tr {
+    		page-break-inside: avoid;
+    	}
 
-	#{$headings},
-	p,
-	a {
-		orphans: 3;
-		widows: 3;
-	}
+    	#{$headings},
+    	p,
+    	a {
+    		orphans: 3;
+    		widows: 3;
+    	}
 
-	#{$headings} {
-		page-break-after: avoid;
-		page-break-inside: avoid;
+    	#{$headings} {
+    		page-break-after: avoid;
+    		page-break-inside: avoid;
 
-		& + p {
-			page-break-before: avoid;
-		}
-	}
+    		& + p {
+    			page-break-before: avoid;
+    		}
+    	}
 
-	img {
-		page-break-after: auto;
-		page-break-before: auto;
-		page-break-inside: avoid;
-	}
+    	img {
+    		page-break-after: auto;
+    		page-break-before: auto;
+    		page-break-inside: avoid;
+    	}
 
-	pre {
-		white-space: pre-wrap !important;
-		word-wrap: break-word;
-	}
+    	pre {
+    		white-space: pre-wrap !important;
+    		word-wrap: break-word;
+    	}
 
-	a {
-		&[href^='http'],
-		&[href^='ftp'] {
-			&:after {
-				content: ' (' attr(href) ')';
-				font-size: 80%;
-			}
-		}
+    	a {
+    		&[href^='http'],
+    		&[href^='ftp'] {
+    			&:after {
+    				content: ' (' attr(href) ')';
+    				font-size: 80%;
+    			}
+    		}
 
-		&[href$='.jpg'],
-		&[href$='.jpeg'],
-		&[href$='.gif'],
-		&[href$='.png'] {
-			&:after {
-				display: none;
-			}
-		}
-	}
+    		&[href$='.jpg'],
+    		&[href$='.jpeg'],
+    		&[href$='.gif'],
+    		&[href$='.png'] {
+    			&:after {
+    				display: none;
+    			}
+    		}
+    	}
 
-	abbr[title],
-	acronym[title] {
-		&:after {
-			content: ' (' attr(title) ')';
-		}
-	}
+    	abbr[title],
+    	acronym[title] {
+    		&:after {
+    			content: ' (' attr(title) ')';
+    		}
+    	}
 
-	a {
-		&.no-reformat:after { content: ''; }
-	}
+    	a {
+    		&.no-reformat:after { content: ''; }
+    	}
 
-	abbr,
-	acronym {
-		&[title] {
-			&.no-reformat:after { content: ''; }
-		}
-	}
+    	abbr,
+    	acronym {
+    		&[title] {
+    			&.no-reformat:after { content: ''; }
+    		}
+    	}
 
-	.no-reformat {
-		abbr,
-		acronym,
-		a {
-			&:after { content: ''; }
-		}
-	}
+    	.no-reformat {
+    		abbr,
+    		acronym,
+    		a {
+    			&:after { content: ''; }
+    		}
+    	}
 
-	::placeholder {
-		color: transparent;
-	}
+    	::placeholder {
+    		color: transparent;
+    	}
 
-	.print {
-        &-main {
-            margin: 0!important;
-            background: transparent!important;
-            border: 0!important;
-        }
-		&-break,
-		&-break-before {
-			page-break-before: always!important;
-		}
+    	.print {
+            &-main {
+                margin: 0!important;
+                background: transparent!important;
+                border: 0!important;
+            }
+    		&-break,
+    		&-break-before {
+    			page-break-before: always!important;
+    		}
 
-		&-break-after{
-			page-break-after: always!important;
-		}
+    		&-break-after{
+    			page-break-after: always!important;
+    		}
 
-        &-m0 { margin: 0!important;}
-        &-wauto {
-            width: auto!important;
-            max-width: 100%!important;
-            min-width: auto!important;
-        }
-	}
+            &-m0 { margin: 0!important;}
+            &-wauto {
+                width: auto!important;
+                max-width: 100%!important;
+                min-width: auto!important;
+            }
+    	}
 
-    @include media-display-utilities("print-");
-    @include media-visibility-utilities("print-");
+        @include media-display-utilities("print-");
+        @include media-visibility-utilities("print-");
+    }
 }
