@@ -126,6 +126,7 @@ $alert-border-radius: $border-radius-base !default;
 $alert-margin-bottom: $paragraph-margin-bottom !default;
 $alert-title-font-size: 1.5em !default;
 $alert-background-transparency-amount: .8;
+$alert-color-brightness: 20%;
 $alert-background: transparentize($components-background, $alert-background-transparency-amount) !default;
 
 $alert-background-dark: transparentize($components-background-dark, $alert-background-transparency-amount) !default;

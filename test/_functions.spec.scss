@@ -87,3 +87,18 @@
         @include assert-equal(contrast("wrong-color", "wrong-color", "wrong-color"), null);
     }
 }
+
+@include describe('set-brightness()') {
+    @include it('Returns dark color') {
+        @include assert-equal(set-brightness(#4aba73, 0%), #000000);
+    }
+    @include it('Returns white color') {
+        @include assert-equal(set-brightness(#4aba73, 100%), white, $inspect: true);
+    }
+    @include it('Returns the color corresponding to given color and brightness') {
+        @include assert-equal(set-brightness(#4aba73, 25%), #235c38, $inspect: true);
+    }
+    @include it('Returns an error') {
+        @include assert-equal(set-brightness("wrong-color", 50%), null);
+    }
+}

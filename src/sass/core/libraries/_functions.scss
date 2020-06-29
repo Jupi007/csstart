@@ -45,7 +45,7 @@
     @return (red($color) + green($color) + blue($color)) / (255 * 3);
 }
 
-@function brightness_ratio($base, $color) {
+@function brightness-ratio($base, $color) {
     @if type-of($color) != color or type-of($base) != color {
         @warn "Unfortunately, one or more of the values is not valid. It should be a color.";
 		@return null;
@@ -60,5 +60,18 @@
 		@return null;
     }
 
-    @return if(brightness_ratio($base, $color1) > brightness_ratio($base, $color2), $color1, $color2);
+    @return if(brightness-ratio($base, $color1) > brightness-ratio($base, $color2), $color1, $color2);
+}
+
+@function set-brightness($color, $brightness) {
+    @if type-of($color) != color {
+        @warn "Unfortunately, `#{$color}` value is not valid. It should be a color.";
+		@return null;
+    }
+
+    @return hsl(
+        hue($color),
+        saturation($color),
+        $brightness
+    );
 }

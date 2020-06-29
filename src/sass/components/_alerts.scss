@@ -18,6 +18,10 @@
 		&[class*="-#{$component}"] {
 			border-color: $bg;
             background: transparentize($bg, $alert-background-transparency-amount);
+
+            @if $bg != transparent {
+                color: set-brightness($bg, $alert-color-brightness);
+            }
 		}
 	}
 

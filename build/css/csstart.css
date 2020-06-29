@@ -11051,11 +11051,13 @@ input[type='reset'],
 }
 
 [class*='Alert'][class*='-light'] {
+	color: #333;
 	border-color: #fff;
 	background: rgba(255, 255, 255, .2);
 }
 
 [class*='Alert'][class*='-dark'] {
+	color: #333;
 	border-color: #333;
 	background: rgba(51, 51, 51, .2);
 }
@@ -11066,61 +11068,73 @@ input[type='reset'],
 }
 
 [class*='Alert'][class*='-red'] {
+	color: #541212;
 	border-color: #d94d4d;
 	background: rgba(217, 77, 77, .2);
 }
 
 [class*='Alert'][class*='-orange'] {
+	color: #5a360c;
 	border-color: #d9831e;
 	background: rgba(217, 131, 30, .2);
 }
 
 [class*='Alert'][class*='-yellow'] {
+	color: #665e00;
 	border-color: #fff46c;
 	background: rgba(255, 244, 108, .2);
 }
 
 [class*='Alert'][class*='-green'] {
+	color: #214e18;
 	border-color: #74cf61;
 	background: rgba(116, 207, 97, .2);
 }
 
 [class*='Alert'][class*='-blue'] {
+	color: #161452;
 	border-color: #3935cd;
 	background: rgba(57, 53, 205, .2);
 }
 
 [class*='Alert'][class*='-light-blue'] {
+	color: #1b444b;
 	border-color: #74c0cd;
 	background: rgba(116, 192, 205, .2);
 }
 
 [class*='Alert'][class*='-purple'] {
+	color: #31174f;
 	border-color: #aa80d9;
 	background: rgba(170, 128, 217, .2);
 }
 
 [class*='Alert'][class*='-brown'] {
+	color: #5a3b0c;
 	border-color: #835611;
 	background: rgba(131, 86, 17, .2);
 }
 
 [class*='Alert'][class*='-success'] {
+	color: #214e18;
 	border-color: #74cf61;
 	background: rgba(116, 207, 97, .2);
 }
 
 [class*='Alert'][class*='-info'] {
+	color: #1b444b;
 	border-color: #74c0cd;
 	background: rgba(116, 192, 205, .2);
 }
 
 [class*='Alert'][class*='-warning'] {
+	color: #5a360c;
 	border-color: #d9831e;
 	background: rgba(217, 131, 30, .2);
 }
 
 [class*='Alert'][class*='-danger'] {
+	color: #541212;
 	border-color: #d94d4d;
 	background: rgba(217, 77, 77, .2);
 }
