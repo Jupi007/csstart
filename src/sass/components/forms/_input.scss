@@ -5,7 +5,7 @@ textarea,
 select {
 	appearance: none;
 	border: $input-border-width solid var(--input-border-color);
-	border-radius: $border-radius-base;
+	border-radius: $input-border-radius;
 	padding: $input-padding-vertical $input-padding-horizontal;
 	box-shadow: none;
 	background: var(--input-background);
