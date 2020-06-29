@@ -9552,6 +9552,7 @@ input[type='radio'] {
 	transition-duration: .2s;
 	transition-property: background, border;
 	vertical-align: middle;
+	border-radius: 3px;
 }
 
 input[type='checkbox']:active,
