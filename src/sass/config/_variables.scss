@@ -58,7 +58,7 @@ $range-thumb-hover-color: grey(30) !default;
 $progress-height: spacer("large-plus") !default;
 $progress-background: grey(20) !default;
 $progress-bar-background: color("blue") !default;
-$progress-border-radius: $border-radius-base !default;
+$progress-border-radius: $input-border-radius !default;
 $progress-indeterminate-animation: true !default;
 $progress-indeterminate-animation-duration: .4s !default;
 
