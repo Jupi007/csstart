@@ -11318,10 +11318,6 @@ a[class*='Card']:focus {
 	flex-wrap: nowrap;
 }
 
-.card-group--column .card-figure {
-	border-radius: 0;
-}
-
 .card-group--column [class*='Card'] {
 	margin: 0;
 	border-bottom-width: 0;
@@ -11329,12 +11325,24 @@ a[class*='Card']:focus {
 	border-radius: 0;
 }
 
+.card-group--column [class*='Card'] .card-figure {
+	border-radius: 0;
+}
+
 .card-group--column [class*='Card']:first-child {
+	border-radius: 3px 3px 0 0;
+}
+
+.card-group--column [class*='Card']:first-child .card-figure:first-child {
 	border-radius: 3px 3px 0 0;
 }
 
 .card-group--column [class*='Card']:last-child {
 	border-bottom-width: 1px;
+	border-radius: 0 0 3px 3px;
+}
+
+.card-group--column [class*='Card']:last-child .card-figure:last-child {
 	border-radius: 0 0 3px 3px;
 }
 
