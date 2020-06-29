@@ -2,7 +2,7 @@
 //-*-*-*-*-*-*-*-*-*-*-*-*Shortcut to CSStart libraries-*-*-*-*-*-*-*-*-*-*-*-*-*
 //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 
-@import
+@use
 
-'core/libraries/functions',
-'core/libraries/mixins';
+'functions',
+'mixins';
