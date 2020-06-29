@@ -11226,6 +11226,14 @@ a[class*='Card']:focus {
 	   object-fit: cover;
 }
 
+.card-figure:first-child {
+	border-radius: 3px 3px 0 0;
+}
+
+.card-figure:last-child {
+	border-radius: 0 0 3px 3px;
+}
+
 .card-title {
 	font-size: 1.4em;
 }
@@ -11274,13 +11282,33 @@ a[class*='Card']:focus {
 		border-radius: 0;
 	}
 
+	.card-group [class*='Card'] .card-figure {
+		border-radius: 0;
+	}
+
 	.card-group [class*='Card']:first-child {
 		border-left-width: 1px;
 		border-radius: 3px 0 0 3px;
 	}
 
+	.card-group [class*='Card']:first-child .card-figure:first-child {
+		border-radius: 3px 0 0 0;
+	}
+
+	.card-group [class*='Card']:first-child .card-figure:last-child {
+		border-radius: 0 0 0 3px;
+	}
+
 	.card-group [class*='Card']:last-child {
 		border-radius: 0 3px 3px 0;
+	}
+
+	.card-group [class*='Card']:last-child .card-figure:first-child {
+		border-radius: 0 3px 0 0;
+	}
+
+	.card-group [class*='Card']:last-child .card-figure:last-child {
+		border-radius: 0 0 3px 0;
 	}
 }
 
@@ -11288,6 +11316,10 @@ a[class*='Card']:focus {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
+}
+
+.card-group--column .card-figure {
+	border-radius: 0;
 }
 
 .card-group--column [class*='Card'] {
