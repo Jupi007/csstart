@@ -2,6 +2,10 @@
 //-*-*-*-*-*-*-*-*-*-*-*-*Config variables-*-*-*-*-*-*-*-*-*-*-*-*-*
 //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
+// ---------------
+// CSStart options
+// ---------------
+
 $options: (
 	"transitions": true,
 
@@ -28,21 +32,32 @@ $options: (
     "responsive-utilities": true,
 ) !default;
 
+// -----------
+// Transitions
+// -----------
+
 $transition-duration-base: .2s !default;
 $transition-timing-function-base: ease !default;
 
-$breakpoints: (
-	'tiny'        : 480px,
-	'small'       : 576px,
-	'medium'      : 768px,
-	'large'       : 992px,
-	'extraLarge' : 1500px,
-) !default;
+// -------------------
+// Some base variables
+// -------------------
 
 $border-radius-base: 3px !default;
+$margin-base: 'medium-plus' !default;
+
+// -----------
+// Body colors
+// -----------
 
 $body-bg: color('white') !default;
 $body-bg-dark: grey(85) !default;
+$body-color: grey(95) !default;
+$body-color-dark: grey(5) !default;
+
+// -----
+// Links
+// -----
 
 $link-color: color('blue') !default;
 $link-visited-color: darken( color('purple') , 15% ) !default;
@@ -56,7 +71,9 @@ $link-hover-color-dark: darken( $link-color-dark , 15% ) !default;
 $link-visited-color-dark: color('purple') !default;
 $link-visited-hover-color-dark: darken( $link-visited-color-dark , 15% ) !default;
 
-$margin-base: 'medium-plus' !default;
+// ----------
+// Components
+// ----------
 
 $components-background: grey(80) !default;
 $components-color: $body-color-dark !default;
@@ -86,6 +103,10 @@ $components: (
 	'danger': color('danger'),
 ) !default;
 
+// ----
+// Grid
+// ----
+
 $gutters: (
 	'': spacer('medium'),
 	'-l': spacer('large'),
@@ -94,3 +115,15 @@ $gutters: (
 
 $grid-min-breakpoint: "small" !default;
 $grid-max-cols: 12 !default;
+
+// -----------
+// Breakpoints
+// -----------
+
+$breakpoints: (
+	'tiny'        : 480px,
+	'small'       : 576px,
+	'medium'      : 768px,
+	'large'       : 992px,
+	'extraLarge' : 1500px,
+) !default;
