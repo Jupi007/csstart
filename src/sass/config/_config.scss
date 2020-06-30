@@ -78,15 +78,15 @@ $link-visited-hover-color-dark: darken( $link-visited-color-dark , 15% ) !defaul
 
 $components-background: grey(80) !default;
 $components-color: $body-color-dark !default;
-$components-hover-darken-darken: 10% !default;
+$components-hover-darken: 10% !default;
+$components-hover-background: darken($components-background, $components-hover-darken) !default;
 
 $components-background-dark: color('white') !default;
 $components-color-dark: $body-color !default;
 $components-hover-darken-dark: 10% !default;
+$components-hover-background-dark: darken($components-background-dark, $components-hover-darken-dark) !default;
 
 $components: (
-    'light': $components-background-dark,
-    'dark': $components-background,
     'ghost': transparent,
 
     'red': color('red'),

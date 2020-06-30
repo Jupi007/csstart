@@ -10,8 +10,21 @@
 	color: var(--body-color);
 
     &[class*="-inversed"] {
-        border: $alert-border-width solid var(--components-background-inversed);
-    	color: var(--components-color);
+        border-color: var(--components-background-inversed);
+    	color: var(--body-color-inversed);
+        background: var(--alert-background-inversed);
+    }
+
+    &[class*="-light"] {
+        border-color: $components-background-dark;
+        color: $body-color-dark;
+        background: $alert-background-dark;
+    }
+
+    &[class*="-dark"] {
+        border-color: $components-background;
+    	color: $body-color;
+        background: $alert-background;
     }
 
 	@each $component, $bg in $components {

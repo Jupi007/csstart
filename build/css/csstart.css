@@ -5,6 +5,8 @@
 :root {
 	--body-bg-color: #fff;
 	--body-color: #0d0d0d;
+	--body-bg-color-inversed: #262626;
+	--body-color-inversed: #f2f2f2;
 	--link-color: #3935cd;
 	--link-hover-color: #272491;
 	--link-visited-color: #8345c7;
@@ -20,6 +22,7 @@
 	--components-background-hover-inversed: #e6e6e6;
 	--components-color-inversed: #0d0d0d;
 	--alert-background: rgba(51, 51, 51, .2);
+	--alert-background-inversed: rgba(255, 255, 255, .2);
 	--table-border-color: #262626;
 	--table-cell-border-color: gray;
 	--table-background: #fff;
@@ -53,6 +56,8 @@
 	:root {
 		--body-bg-color: #262626;
 		--body-color: #f2f2f2;
+		--body-bg-color-inversed: #fff;
+		--body-color-inversed: #0d0d0d;
 		--link-color: #74c0cd;
 		--link-hover-color: #41a3b4;
 		--link-visited-color: #aa80d9;
@@ -68,6 +73,7 @@
 		--components-background-hover-inversed: #1a1a1a;
 		--components-color-inversed: #f2f2f2;
 		--alert-background: rgba(255, 255, 255, .2);
+		--alert-background-inversed: rgba(51, 51, 51, .2);
 		--table-border-color: #4d4d4d;
 		--table-cell-border-color: gray;
 		--table-background: #333;
@@ -9931,19 +9937,6 @@ input[type='reset'] {
 	background: var(--components-background);
 }
 
-[class*='Tag'][class*='-inversed'],
-[class*='Button'][class*='-inversed'] {
-	color: var(--components-color-inversed);
-	background: var(--components-background-inversed);
-}
-
-[class*='Tag'][class*='-inversed'][class*='--wired'],
-[class*='Button'][class*='-inversed'][class*='--wired'] {
-	color: var(--components-background-inversed);
-	background: transparent;
-	box-shadow: 0 0 0 1px var(--components-background-inversed) inset;
-}
-
 [class*='Tag'][class*='-light'],
 [class*='Button'][class*='-light'] {
 	color: #0d0d0d;
@@ -9968,6 +9961,19 @@ input[type='reset'] {
 	color: #333;
 	background: transparent;
 	box-shadow: 0 0 0 1px #333 inset;
+}
+
+[class*='Tag'][class*='-inversed'],
+[class*='Button'][class*='-inversed'] {
+	color: var(--components-color-inversed);
+	background: var(--components-background-inversed);
+}
+
+[class*='Tag'][class*='-inversed'][class*='--wired'],
+[class*='Button'][class*='-inversed'][class*='--wired'] {
+	color: var(--components-background-inversed);
+	background: transparent;
+	box-shadow: 0 0 0 1px var(--components-background-inversed) inset;
 }
 
 [class*='Tag'][class*='-ghost'],
@@ -10220,81 +10226,6 @@ input[type='reset']:active::after {
 	opacity: 0;
 }
 
-a[class*='Tag'][class*='-inversed'],
-button[class*='Tag'][class*='-inversed'],
-[class*='Button'][class*='-inversed'] {
-	color: var(--components-color-inversed);
-	background: var(--components-background-inversed);
-}
-
-a[class*='Tag'][class*='-inversed']::after,
-button[class*='Tag'][class*='-inversed']::after,
-[class*='Button'][class*='-inversed']::after {
-	background: var(--components-background-hover-inversed);
-}
-
-a[class*='Tag'][class*='-inversed']:hover,
-a[class*='Tag'][class*='-inversed']:focus,
-button[class*='Tag'][class*='-inversed']:hover,
-button[class*='Tag'][class*='-inversed']:focus,
-[class*='Button'][class*='-inversed']:hover,
-[class*='Button'][class*='-inversed']:focus {
-	text-decoration: none;
-	color: var(--components-color-inversed);
-}
-
-a[class*='Tag'][class*='-inversed'][class*='--wired'],
-button[class*='Tag'][class*='-inversed'][class*='--wired'],
-[class*='Button'][class*='-inversed'][class*='--wired'] {
-	color: var(--components-background-inversed);
-	background: transparent;
-	box-shadow: 0 0 0 1px var(--components-background-inversed) inset;
-}
-
-a[class*='Tag'][class*='-inversed'][class*='--wired']::after,
-button[class*='Tag'][class*='-inversed'][class*='--wired']::after,
-[class*='Button'][class*='-inversed'][class*='--wired']::after {
-	background: var(--components-background-inversed);
-}
-
-a[class*='Tag'][class*='-inversed'][class*='--wired']:hover,
-a[class*='Tag'][class*='-inversed'][class*='--wired']:focus,
-button[class*='Tag'][class*='-inversed'][class*='--wired']:hover,
-button[class*='Tag'][class*='-inversed'][class*='--wired']:focus,
-[class*='Button'][class*='-inversed'][class*='--wired']:hover,
-[class*='Button'][class*='-inversed'][class*='--wired']:focus {
-	color: var(--components-color-inversed);
-}
-
-a[class*='Tag'][class*='--wired'],
-button[class*='Tag'][class*='--wired'],
-[class*='Button'][class*='--wired'] {
-	transition-timing-function: ease;
-	transition-duration: .2s;
-	transition-property: color;
-}
-
-a[class*='Tag'][class*='--wired']::after,
-button[class*='Tag'][class*='--wired']::after,
-[class*='Button'][class*='--wired']::after {
-	background: var(--components-background);
-}
-
-a[class*='Tag'][class*='--wired']:active::after,
-button[class*='Tag'][class*='--wired']:active::after,
-[class*='Button'][class*='--wired']:active::after {
-	opacity: .8;
-}
-
-a[class*='Tag'][class*='--wired']:hover,
-a[class*='Tag'][class*='--wired']:focus,
-button[class*='Tag'][class*='--wired']:hover,
-button[class*='Tag'][class*='--wired']:focus,
-[class*='Button'][class*='--wired']:hover,
-[class*='Button'][class*='--wired']:focus {
-	color: var(--components-color);
-}
-
 a[class*='Tag'][class*='-light'],
 button[class*='Tag'][class*='-light'],
 [class*='Button'][class*='-light'] {
@@ -10385,6 +10316,81 @@ button[class*='Tag'][class*='-dark'][class*='--wired']:focus,
 [class*='Button'][class*='-dark'][class*='--wired']:hover,
 [class*='Button'][class*='-dark'][class*='--wired']:focus {
 	color: #f2f2f2;
+}
+
+a[class*='Tag'][class*='-inversed'],
+button[class*='Tag'][class*='-inversed'],
+[class*='Button'][class*='-inversed'] {
+	color: var(--components-color-inversed);
+	background: var(--components-background-inversed);
+}
+
+a[class*='Tag'][class*='-inversed']::after,
+button[class*='Tag'][class*='-inversed']::after,
+[class*='Button'][class*='-inversed']::after {
+	background: var(--components-background-hover-inversed);
+}
+
+a[class*='Tag'][class*='-inversed']:hover,
+a[class*='Tag'][class*='-inversed']:focus,
+button[class*='Tag'][class*='-inversed']:hover,
+button[class*='Tag'][class*='-inversed']:focus,
+[class*='Button'][class*='-inversed']:hover,
+[class*='Button'][class*='-inversed']:focus {
+	text-decoration: none;
+	color: var(--components-color-inversed);
+}
+
+a[class*='Tag'][class*='-inversed'][class*='--wired'],
+button[class*='Tag'][class*='-inversed'][class*='--wired'],
+[class*='Button'][class*='-inversed'][class*='--wired'] {
+	color: var(--components-background-inversed);
+	background: transparent;
+	box-shadow: 0 0 0 1px var(--components-background-inversed) inset;
+}
+
+a[class*='Tag'][class*='-inversed'][class*='--wired']::after,
+button[class*='Tag'][class*='-inversed'][class*='--wired']::after,
+[class*='Button'][class*='-inversed'][class*='--wired']::after {
+	background: var(--components-background-inversed);
+}
+
+a[class*='Tag'][class*='-inversed'][class*='--wired']:hover,
+a[class*='Tag'][class*='-inversed'][class*='--wired']:focus,
+button[class*='Tag'][class*='-inversed'][class*='--wired']:hover,
+button[class*='Tag'][class*='-inversed'][class*='--wired']:focus,
+[class*='Button'][class*='-inversed'][class*='--wired']:hover,
+[class*='Button'][class*='-inversed'][class*='--wired']:focus {
+	color: var(--components-color-inversed);
+}
+
+a[class*='Tag'][class*='--wired'],
+button[class*='Tag'][class*='--wired'],
+[class*='Button'][class*='--wired'] {
+	transition-timing-function: ease;
+	transition-duration: .2s;
+	transition-property: color;
+}
+
+a[class*='Tag'][class*='--wired']::after,
+button[class*='Tag'][class*='--wired']::after,
+[class*='Button'][class*='--wired']::after {
+	background: var(--components-background);
+}
+
+a[class*='Tag'][class*='--wired']:active::after,
+button[class*='Tag'][class*='--wired']:active::after,
+[class*='Button'][class*='--wired']:active::after {
+	opacity: .8;
+}
+
+a[class*='Tag'][class*='--wired']:hover,
+a[class*='Tag'][class*='--wired']:focus,
+button[class*='Tag'][class*='--wired']:hover,
+button[class*='Tag'][class*='--wired']:focus,
+[class*='Button'][class*='--wired']:hover,
+[class*='Button'][class*='--wired']:focus {
+	color: var(--components-color);
 }
 
 a[class*='Tag'][class*='-ghost'],
@@ -11047,18 +11053,19 @@ input[type='reset'],
 }
 
 [class*='Alert'][class*='-inversed'] {
-	color: var(--components-color);
-	border: 1px solid var(--components-background-inversed);
+	color: var(--body-color-inversed);
+	border-color: var(--components-background-inversed);
+	background: var(--alert-background-inversed);
 }
 
 [class*='Alert'][class*='-light'] {
-	color: #333;
+	color: #f2f2f2;
 	border-color: #fff;
 	background: rgba(255, 255, 255, .2);
 }
 
 [class*='Alert'][class*='-dark'] {
-	color: #333;
+	color: #0d0d0d;
 	border-color: #333;
 	background: rgba(51, 51, 51, .2);
 }
