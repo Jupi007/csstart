@@ -23,31 +23,9 @@ input[type="reset"]
 [class*="Tag"],
 [class*="Button"]
 {
-    &[class*="-light"] {
-        color: $components-color-dark;
-        background: $components-background-dark;
-
-    	&[class*="--wired"] {
-    		background: transparent;
-    		color: $components-background-dark;
-    		box-shadow: 0 0 0 $button-border-width $components-background-dark inset;
-    	}
-    }
-
-    &[class*="-dark"] {
-        color: $components-color;
-        background: $components-background;
-
-    	&[class*="--wired"] {
-    		background: transparent;
-    		color: $components-background;
-    		box-shadow: 0 0 0 $button-border-width $components-background inset;
-    	}
-    }
-
     &[class*="-inversed"] {
         background: var(--components-background-inversed);
-    	color: var(--components-color-inversed);
+        color: var(--components-color-inversed);
 
         &[class*="--wired"] {
             background: transparent;
@@ -56,9 +34,37 @@ input[type="reset"]
         }
     }
 
-    &[class*="-ghost"] {
-        background: transparent;
-        color: var(--body-color);
+    @include option("components-light") {
+        &[class*="-light"] {
+            color: $components-color-dark;
+            background: $components-background-dark;
+
+        	&[class*="--wired"] {
+        		background: transparent;
+        		color: $components-background-dark;
+        		box-shadow: 0 0 0 $button-border-width $components-background-dark inset;
+        	}
+        }
+    }
+
+    @include option("components-dark") {
+        &[class*="-dark"] {
+            color: $components-color;
+            background: $components-background;
+
+        	&[class*="--wired"] {
+        		background: transparent;
+        		color: $components-background;
+        		box-shadow: 0 0 0 $button-border-width $components-background inset;
+        	}
+        }
+    }
+
+    @include option("components-ghost") {
+        &[class*="-ghost"] {
+            background: transparent;
+            color: var(--body-color);
+        }
     }
 
 	@each $component, $bg in $components {
@@ -138,53 +144,6 @@ button[class*="Tag"],
         text-decoration: none;
     }
 
-    &[class*="-light"] {
-        &::after {
-            background: $components-hover-background-dark;
-        }
-
-        &:hover, &:focus {
-            color: $components-color-dark;
-            text-decoration: none;
-        }
-
-        &[class*="--wired"] {
-            color: $components-background-dark;
-            box-shadow: 0 0 0 $button-border-width $components-background-dark inset;
-
-            &::after {
-                background: $components-background-dark;
-            }
-
-            &:hover, &:focus {
-                color: $components-color-dark;
-            }
-        }
-    }
-
-    &[class*="-dark"] {
-        &::after {
-            background: $components-hover-background;
-        }
-
-        &:hover, &:focus {
-            color: $components-color;
-        }
-
-        &[class*="--wired"] {
-            color: $components-background;
-            box-shadow: 0 0 0 $button-border-width $components-background inset;
-
-            &::after {
-                background: $components-background;
-            }
-
-            &:hover, &:focus {
-                color: $components-color;
-            }
-        }
-    }
-
     &[class*="-inversed"] {
         &::after {
             background: var(--components-background-hover-inversed);
@@ -208,14 +167,67 @@ button[class*="Tag"],
         }
     }
 
-    &[class*="-ghost"] {
-        &::after {
-            background: transparent;
-        }
+    @include option("components-light") {
+        &[class*="-light"] {
+            &::after {
+                background: $components-hover-background-dark;
+            }
 
-		&:hover, &:focus {
-			color: var(--body-color);
-		}
+            &:hover, &:focus {
+                color: $components-color-dark;
+                text-decoration: none;
+            }
+
+            &[class*="--wired"] {
+                color: $components-background-dark;
+                box-shadow: 0 0 0 $button-border-width $components-background-dark inset;
+
+                &::after {
+                    background: $components-background-dark;
+                }
+
+                &:hover, &:focus {
+                    color: $components-color-dark;
+                }
+            }
+        }
+    }
+
+    @include option("components-dark") {
+        &[class*="-dark"] {
+            &::after {
+                background: $components-hover-background;
+            }
+
+            &:hover, &:focus {
+                color: $components-color;
+            }
+
+            &[class*="--wired"] {
+                color: $components-background;
+                box-shadow: 0 0 0 $button-border-width $components-background inset;
+
+                &::after {
+                    background: $components-background;
+                }
+
+                &:hover, &:focus {
+                    color: $components-color;
+                }
+            }
+        }
+    }
+
+    @include option("components-ghost") {
+        &[class*="-ghost"] {
+            &::after {
+                background: transparent;
+            }
+
+    		&:hover, &:focus {
+    			color: var(--body-color);
+    		}
+        }
     }
 
     &[class*="--wired"] {

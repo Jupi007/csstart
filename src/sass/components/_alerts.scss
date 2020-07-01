@@ -15,22 +15,28 @@
         background: var(--alert-background-inversed);
     }
 
-    &[class*="-light"] {
-        border-color: $components-background-dark;
-        color: $body-color-dark;
-        background: $alert-background-dark;
+    @include option("components-light") {
+        &[class*="-light"] {
+            border-color: $components-background-dark;
+            color: $body-color-dark;
+            background: $alert-background-dark;
+        }
     }
 
-    &[class*="-dark"] {
-        border-color: $components-background;
-    	color: $body-color;
-        background: $alert-background;
+    @include option("components-dark") {
+        &[class*="-dark"] {
+            border-color: $components-background;
+        	color: $body-color;
+            background: $alert-background;
+        }
     }
 
-    &[class*="-ghost"] {
-        border-color: transparent;
-    	color: var(--body-color);
-        background: transparent;
+    @include option("components-ghost") {
+        &[class*="-ghost"] {
+            border-color: transparent;
+        	color: var(--body-color);
+            background: transparent;
+        }
     }
 
 	@each $component, $bg in $components {

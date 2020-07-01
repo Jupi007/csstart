@@ -85,55 +85,59 @@
 		}
 	}
 
-	&[class*="--light"] {
-		background: $table-background;
-		color: $body-color;
+    @include option("components-light") {
+    	&[class*="-light"] {
+    		background: $table-background;
+    		color: $body-color;
 
-		th {
-			background: $table-headings-cell-background;
-		}
+    		th {
+    			background: $table-headings-cell-background;
+    		}
 
-		&[class*="--zebra"] {
-			tr:nth-child(even) {
-				background: $table-zebra-cell-background;
-			}
-		}
+    		&[class*="--zebra"] {
+    			tr:nth-child(even) {
+    				background: $table-zebra-cell-background;
+    			}
+    		}
 
-		&[class*="--hover"] tbody tr {
-            &:hover {
-                background: $table-cell-hover-background;
+    		&[class*="--hover"] tbody tr {
+                &:hover {
+                    background: $table-cell-hover-background;
+                }
             }
-        }
-	}
+    	}
+    }
 
-	&[class*="--dark"] {
-		background: $table-background-dark;
-		color: $body-color-dark;
+    @include option("components-dark") {
+    	&[class*="-dark"] {
+    		background: $table-background-dark;
+    		color: $body-color-dark;
 
-		th {
-			background: $table-heading-cell-background-dark;
-		}
+    		th {
+    			background: $table-heading-cell-background-dark;
+    		}
 
-		&[class*="--zebra"] {
-			tr:nth-child(even) {
-				background: $table-zebra-cell-background-dark;
-			}
-		}
+    		&[class*="--zebra"] {
+    			tr:nth-child(even) {
+    				background: $table-zebra-cell-background-dark;
+    			}
+    		}
 
-		&[class*="--hover"] tbody tr {
-            &:hover {
-                background: $table-cell-hover-background-dark;
+    		&[class*="--hover"] tbody tr {
+                &:hover {
+                    background: $table-cell-hover-background-dark;
+                }
             }
-        }
 
-        a {
-            color: $link-color-dark;
+            a {
+                color: $link-color-dark;
 
-            &:hover {
-                color: $link-hover-color-dark;
+                &:hover {
+                    color: $link-hover-color-dark;
+                }
             }
-        }
-	}
+    	}
+    }
 
 	caption {
 		color: var(--table-caption-color);
