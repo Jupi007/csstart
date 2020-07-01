@@ -35,6 +35,13 @@
             @if $bg != transparent {
                 color: set-brightness($bg, $alert-color-brightness);
             }
+            @include option("dark-theme") {
+                @media (prefers-color-scheme: dark) {
+                    @if $bg != transparent {
+                        color: set-brightness($bg, $alert-color-brightness-dark);
+                    }
+                }
+            }
 		}
 	}
 
