@@ -5,7 +5,6 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"],
 [class*="Button"] {
-    position: relative;
     font-size: $button-font-size;
 	padding: $button-padding;
 	border-radius: $button-border-radius;

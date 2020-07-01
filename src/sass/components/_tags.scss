@@ -134,6 +134,10 @@ a[class*="Tag"],
 button[class*="Tag"],
 [class*="Button"]
 {
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+
     &[class*="-light"] {
         &::after {
             background: $components-hover-background-dark;
@@ -145,7 +149,6 @@ button[class*="Tag"],
         }
 
         &[class*="--wired"] {
-            background: transparent;
             color: $components-background-dark;
             box-shadow: 0 0 0 $button-border-width $components-background-dark inset;
 
@@ -166,11 +169,9 @@ button[class*="Tag"],
 
         &:hover, &:focus {
             color: $components-color;
-            text-decoration: none;
         }
 
         &[class*="--wired"] {
-            background: transparent;
             color: $components-background;
             box-shadow: 0 0 0 $button-border-width $components-background inset;
 
@@ -191,11 +192,9 @@ button[class*="Tag"],
 
         &:hover, &:focus {
             color: var(--components-color-inversed);
-            text-decoration: none;
         }
 
         &[class*="--wired"] {
-            background: transparent;
             color: var(--components-background-inversed);
             box-shadow: 0 0 0 $button-border-width var(--components-background-inversed) inset;
 
@@ -220,6 +219,8 @@ button[class*="Tag"],
     }
 
     &[class*="--wired"] {
+        background: transparent;
+
         @include transition("color");
 
 		&::after {
@@ -257,11 +258,9 @@ button[class*="Tag"],
                 } @else {
                     color: contrast($bg, $body-color, $body-color-dark);
                 }
-                text-decoration: none;
             }
 
 			&[class*="--wired"] {
-				background: transparent;
 				color: $bg;
 				box-shadow: 0 0 0 $button-border-width $bg inset;
 
