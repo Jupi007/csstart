@@ -2,6 +2,8 @@
 // CSS Variables (for dynamic light and dark variants)
 // ---------------------------------------------------
 :root {
+    --spacer-base: #{$spacer-base};
+    
     --body-bg-color: #{$body-bg};
     --body-color: #{$body-color};
     --body-bg-color-inversed: #{$body-bg-dark};
