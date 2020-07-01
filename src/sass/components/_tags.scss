@@ -56,6 +56,11 @@ input[type="reset"]
         }
     }
 
+    &[class*="-ghost"] {
+        background: transparent;
+        color: var(--body-color);
+    }
+
 	@each $component, $bg in $components {
 		&[class*="-#{$component}"] {
 			background: $bg;
@@ -130,9 +135,6 @@ button[class*="Tag"],
 [class*="Button"]
 {
     &[class*="-light"] {
-        background: $components-background-dark;
-        color: $components-color-dark;
-
         &::after {
             background: $components-hover-background-dark;
         }
@@ -158,9 +160,6 @@ button[class*="Tag"],
     }
 
     &[class*="-dark"] {
-        background: $components-background;
-        color: $components-color;
-
         &::after {
             background: $components-hover-background;
         }
@@ -186,9 +185,6 @@ button[class*="Tag"],
     }
 
     &[class*="-inversed"] {
-        background: var(--components-background-inversed);
-        color: var(--components-color-inversed);
-
         &::after {
             background: var(--components-background-hover-inversed);
         }
@@ -211,6 +207,16 @@ button[class*="Tag"],
                 color: var(--components-color-inversed);
             }
         }
+    }
+
+    &[class*="-ghost"] {
+        &::after {
+            background: transparent;
+        }
+
+		&:hover, &:focus {
+			color: var(--body-color);
+		}
     }
 
     &[class*="--wired"] {

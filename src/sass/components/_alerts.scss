@@ -27,6 +27,12 @@
         background: $alert-background;
     }
 
+    &[class*="-ghost"] {
+        border-color: transparent;
+    	color: var(--body-color);
+        background: transparent;
+    }
+
 	@each $component, $bg in $components {
 		&[class*="-#{$component}"] {
 			border-color: $bg;

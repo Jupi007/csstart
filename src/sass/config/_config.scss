@@ -87,8 +87,6 @@ $components-hover-darken-dark: 10% !default;
 $components-hover-background-dark: darken($components-background-dark, $components-hover-darken-dark) !default;
 
 $components: (
-    'ghost': transparent,
-
     'red': color('red'),
     'orange': color('orange'),
     'yellow': color('yellow'),

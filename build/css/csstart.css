@@ -9982,13 +9982,6 @@ input[type='reset'] {
 	background: transparent;
 }
 
-[class*='Tag'][class*='-ghost'][class*='--wired'],
-[class*='Button'][class*='-ghost'][class*='--wired'] {
-	color: transparent;
-	background: transparent;
-	box-shadow: 0 0 0 1px transparent inset;
-}
-
 [class*='Tag'][class*='-red'],
 [class*='Button'][class*='-red'] {
 	color: #f2f2f2;
@@ -10226,13 +10219,6 @@ input[type='reset']:active::after {
 	opacity: 0;
 }
 
-a[class*='Tag'][class*='-light'],
-button[class*='Tag'][class*='-light'],
-[class*='Button'][class*='-light'] {
-	color: #0d0d0d;
-	background: #fff;
-}
-
 a[class*='Tag'][class*='-light']::after,
 button[class*='Tag'][class*='-light']::after,
 [class*='Button'][class*='-light']::after {
@@ -10270,13 +10256,6 @@ button[class*='Tag'][class*='-light'][class*='--wired']:focus,
 [class*='Button'][class*='-light'][class*='--wired']:hover,
 [class*='Button'][class*='-light'][class*='--wired']:focus {
 	color: #0d0d0d;
-}
-
-a[class*='Tag'][class*='-dark'],
-button[class*='Tag'][class*='-dark'],
-[class*='Button'][class*='-dark'] {
-	color: #f2f2f2;
-	background: #333;
 }
 
 a[class*='Tag'][class*='-dark']::after,
@@ -10318,13 +10297,6 @@ button[class*='Tag'][class*='-dark'][class*='--wired']:focus,
 	color: #f2f2f2;
 }
 
-a[class*='Tag'][class*='-inversed'],
-button[class*='Tag'][class*='-inversed'],
-[class*='Button'][class*='-inversed'] {
-	color: var(--components-color-inversed);
-	background: var(--components-background-inversed);
-}
-
 a[class*='Tag'][class*='-inversed']::after,
 button[class*='Tag'][class*='-inversed']::after,
 [class*='Button'][class*='-inversed']::after {
@@ -10364,6 +10336,21 @@ button[class*='Tag'][class*='-inversed'][class*='--wired']:focus,
 	color: var(--components-color-inversed);
 }
 
+a[class*='Tag'][class*='-ghost']::after,
+button[class*='Tag'][class*='-ghost']::after,
+[class*='Button'][class*='-ghost']::after {
+	background: transparent;
+}
+
+a[class*='Tag'][class*='-ghost']:hover,
+a[class*='Tag'][class*='-ghost']:focus,
+button[class*='Tag'][class*='-ghost']:hover,
+button[class*='Tag'][class*='-ghost']:focus,
+[class*='Button'][class*='-ghost']:hover,
+[class*='Button'][class*='-ghost']:focus {
+	color: var(--body-color);
+}
+
 a[class*='Tag'][class*='--wired'],
 button[class*='Tag'][class*='--wired'],
 [class*='Button'][class*='--wired'] {
@@ -10391,52 +10378,6 @@ button[class*='Tag'][class*='--wired']:focus,
 [class*='Button'][class*='--wired']:hover,
 [class*='Button'][class*='--wired']:focus {
 	color: var(--components-color);
-}
-
-a[class*='Tag'][class*='-ghost'],
-button[class*='Tag'][class*='-ghost'],
-[class*='Button'][class*='-ghost'] {
-	color: var(--body-color);
-	background: transparent;
-}
-
-a[class*='Tag'][class*='-ghost']::after,
-button[class*='Tag'][class*='-ghost']::after,
-[class*='Button'][class*='-ghost']::after {
-	background: rgba(0, 0, 0, 0);
-}
-
-a[class*='Tag'][class*='-ghost']:hover,
-a[class*='Tag'][class*='-ghost']:focus,
-button[class*='Tag'][class*='-ghost']:hover,
-button[class*='Tag'][class*='-ghost']:focus,
-[class*='Button'][class*='-ghost']:hover,
-[class*='Button'][class*='-ghost']:focus {
-	text-decoration: none;
-	color: var(--body-color);
-}
-
-a[class*='Tag'][class*='-ghost'][class*='--wired'],
-button[class*='Tag'][class*='-ghost'][class*='--wired'],
-[class*='Button'][class*='-ghost'][class*='--wired'] {
-	color: transparent;
-	background: transparent;
-	box-shadow: 0 0 0 1px transparent inset;
-}
-
-a[class*='Tag'][class*='-ghost'][class*='--wired']::after,
-button[class*='Tag'][class*='-ghost'][class*='--wired']::after,
-[class*='Button'][class*='-ghost'][class*='--wired']::after {
-	background: transparent;
-}
-
-a[class*='Tag'][class*='-ghost'][class*='--wired']:hover,
-a[class*='Tag'][class*='-ghost'][class*='--wired']:focus,
-button[class*='Tag'][class*='-ghost'][class*='--wired']:hover,
-button[class*='Tag'][class*='-ghost'][class*='--wired']:focus,
-[class*='Button'][class*='-ghost'][class*='--wired']:hover,
-[class*='Button'][class*='-ghost'][class*='--wired']:focus {
-	color: #f2f2f2;
 }
 
 a[class*='Tag'][class*='-red'],
@@ -11071,8 +11012,9 @@ input[type='reset'],
 }
 
 [class*='Alert'][class*='-ghost'] {
+	color: var(--body-color);
 	border-color: transparent;
-	background: rgba(0, 0, 0, 0);
+	background: transparent;
 }
 
 [class*='Alert'][class*='-red'] {
