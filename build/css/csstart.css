@@ -2,24 +2,24 @@
 	--spacer-base: 1rem;
 	--body-bg-color: #fff;
 	--body-color: #0d0d0d;
-	--body-bg-color-inversed: #262626;
-	--body-color-inversed: #f2f2f2;
+	--body-bg-color-inverted: #262626;
+	--body-color-inverted: #f2f2f2;
 	--link-color: #3935cd;
 	--link-hover-color: #272491;
 	--link-visited-color: #8345c7;
 	--link-visited-hover-color: #5d2c94;
-	--link-color-inversed: #74c0cd;
-	--link-hover-color-inversed: #41a3b4;
-	--link-visited-color-inversed: #aa80d9;
-	--link-visited-hover-color-inversed: #8345c7;
+	--link-color-inverted: #74c0cd;
+	--link-hover-color-inverted: #41a3b4;
+	--link-visited-color-inverted: #aa80d9;
+	--link-visited-hover-color-inverted: #8345c7;
 	--components-background: #333;
 	--components-background-hover: #1a1a1a;
 	--components-color: #f2f2f2;
-	--components-background-inversed: #fff;
-	--components-background-hover-inversed: #e6e6e6;
-	--components-color-inversed: #0d0d0d;
+	--components-background-inverted: #fff;
+	--components-background-hover-inverted: #e6e6e6;
+	--components-color-inverted: #0d0d0d;
 	--alert-background: rgba(51, 51, 51, .2);
-	--alert-background-inversed: rgba(255, 255, 255, .2);
+	--alert-background-inverted: rgba(255, 255, 255, .2);
 	--table-border-color: #262626;
 	--table-cell-border-color: gray;
 	--table-background: #fff;
@@ -53,24 +53,24 @@
 	:root {
 		--body-bg-color: #262626;
 		--body-color: #f2f2f2;
-		--body-bg-color-inversed: #fff;
-		--body-color-inversed: #0d0d0d;
+		--body-bg-color-inverted: #fff;
+		--body-color-inverted: #0d0d0d;
 		--link-color: #74c0cd;
 		--link-hover-color: #41a3b4;
 		--link-visited-color: #aa80d9;
 		--link-visited-hover-color: #8345c7;
-		--link-color-inversed: #3935cd;
-		--link-hover-color-inversed: #272491;
-		--link-visited-color-inversed: #8345c7;
-		--link-visited-hover-color-inversed: #5d2c94;
+		--link-color-inverted: #3935cd;
+		--link-hover-color-inverted: #272491;
+		--link-visited-color-inverted: #8345c7;
+		--link-visited-hover-color-inverted: #5d2c94;
 		--components-background: #fff;
 		--components-background-hover: #e6e6e6;
 		--components-color: #0d0d0d;
-		--components-background-inversed: #333;
-		--components-background-hover-inversed: #1a1a1a;
-		--components-color-inversed: #f2f2f2;
+		--components-background-inverted: #333;
+		--components-background-hover-inverted: #1a1a1a;
+		--components-color-inverted: #f2f2f2;
 		--alert-background: rgba(255, 255, 255, .2);
-		--alert-background-inversed: rgba(51, 51, 51, .2);
+		--alert-background-inverted: rgba(51, 51, 51, .2);
 		--table-border-color: #4d4d4d;
 		--table-cell-border-color: gray;
 		--table-background: #333;
@@ -9934,17 +9934,17 @@ input[type='reset'] {
 	background: var(--components-background);
 }
 
-[class*='Tag'][class*='-inversed'],
-[class*='Button'][class*='-inversed'] {
-	color: var(--components-color-inversed);
-	background: var(--components-background-inversed);
+[class*='Tag'][class*='-inverted'],
+[class*='Button'][class*='-inverted'] {
+	color: var(--components-color-inverted);
+	background: var(--components-background-inverted);
 }
 
-[class*='Tag'][class*='-inversed'][class*='--wired'],
-[class*='Button'][class*='-inversed'][class*='--wired'] {
-	color: var(--components-background-inversed);
+[class*='Tag'][class*='-inverted'][class*='--wired'],
+[class*='Button'][class*='-inverted'][class*='--wired'] {
+	color: var(--components-background-inverted);
 	background: transparent;
-	box-shadow: 0 0 0 1px var(--components-background-inversed) inset;
+	box-shadow: 0 0 0 1px var(--components-background-inverted) inset;
 }
 
 [class*='Tag'][class*='-light'],
@@ -10225,41 +10225,41 @@ button[class*='Tag']:focus,
 	text-decoration: none;
 }
 
-a[class*='Tag'][class*='-inversed']::after,
-button[class*='Tag'][class*='-inversed']::after,
-[class*='Button'][class*='-inversed']::after {
-	background: var(--components-background-hover-inversed);
+a[class*='Tag'][class*='-inverted']::after,
+button[class*='Tag'][class*='-inverted']::after,
+[class*='Button'][class*='-inverted']::after {
+	background: var(--components-background-hover-inverted);
 }
 
-a[class*='Tag'][class*='-inversed']:hover,
-a[class*='Tag'][class*='-inversed']:focus,
-button[class*='Tag'][class*='-inversed']:hover,
-button[class*='Tag'][class*='-inversed']:focus,
-[class*='Button'][class*='-inversed']:hover,
-[class*='Button'][class*='-inversed']:focus {
-	color: var(--components-color-inversed);
+a[class*='Tag'][class*='-inverted']:hover,
+a[class*='Tag'][class*='-inverted']:focus,
+button[class*='Tag'][class*='-inverted']:hover,
+button[class*='Tag'][class*='-inverted']:focus,
+[class*='Button'][class*='-inverted']:hover,
+[class*='Button'][class*='-inverted']:focus {
+	color: var(--components-color-inverted);
 }
 
-a[class*='Tag'][class*='-inversed'][class*='--wired'],
-button[class*='Tag'][class*='-inversed'][class*='--wired'],
-[class*='Button'][class*='-inversed'][class*='--wired'] {
-	color: var(--components-background-inversed);
-	box-shadow: 0 0 0 1px var(--components-background-inversed) inset;
+a[class*='Tag'][class*='-inverted'][class*='--wired'],
+button[class*='Tag'][class*='-inverted'][class*='--wired'],
+[class*='Button'][class*='-inverted'][class*='--wired'] {
+	color: var(--components-background-inverted);
+	box-shadow: 0 0 0 1px var(--components-background-inverted) inset;
 }
 
-a[class*='Tag'][class*='-inversed'][class*='--wired']::after,
-button[class*='Tag'][class*='-inversed'][class*='--wired']::after,
-[class*='Button'][class*='-inversed'][class*='--wired']::after {
-	background: var(--components-background-inversed);
+a[class*='Tag'][class*='-inverted'][class*='--wired']::after,
+button[class*='Tag'][class*='-inverted'][class*='--wired']::after,
+[class*='Button'][class*='-inverted'][class*='--wired']::after {
+	background: var(--components-background-inverted);
 }
 
-a[class*='Tag'][class*='-inversed'][class*='--wired']:hover,
-a[class*='Tag'][class*='-inversed'][class*='--wired']:focus,
-button[class*='Tag'][class*='-inversed'][class*='--wired']:hover,
-button[class*='Tag'][class*='-inversed'][class*='--wired']:focus,
-[class*='Button'][class*='-inversed'][class*='--wired']:hover,
-[class*='Button'][class*='-inversed'][class*='--wired']:focus {
-	color: var(--components-color-inversed);
+a[class*='Tag'][class*='-inverted'][class*='--wired']:hover,
+a[class*='Tag'][class*='-inverted'][class*='--wired']:focus,
+button[class*='Tag'][class*='-inverted'][class*='--wired']:hover,
+button[class*='Tag'][class*='-inverted'][class*='--wired']:focus,
+[class*='Button'][class*='-inverted'][class*='--wired']:hover,
+[class*='Button'][class*='-inverted'][class*='--wired']:focus {
+	color: var(--components-color-inverted);
 }
 
 a[class*='Tag'][class*='-light']::after,
@@ -10970,10 +10970,10 @@ input[type='reset'],
 	background: var(--alert-background);
 }
 
-[class*='Alert'][class*='-inversed'] {
-	color: var(--body-color-inversed);
-	border-color: var(--components-background-inversed);
-	background: var(--alert-background-inversed);
+[class*='Alert'][class*='-inverted'] {
+	color: var(--body-color-inverted);
+	border-color: var(--components-background-inverted);
+	background: var(--alert-background-inverted);
 }
 
 [class*='Alert'][class*='-light'] {

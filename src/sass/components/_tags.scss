@@ -23,14 +23,14 @@ input[type="reset"]
 [class*="Tag"],
 [class*="Button"]
 {
-    &[class*="-inversed"] {
-        background: var(--components-background-inversed);
-        color: var(--components-color-inversed);
+    &[class*="-inverted"] {
+        background: var(--components-background-inverted);
+        color: var(--components-color-inverted);
 
         &[class*="--wired"] {
             background: transparent;
-            color: var(--components-background-inversed);
-            box-shadow: 0 0 0 $button-border-width var(--components-background-inversed) inset;
+            color: var(--components-background-inverted);
+            box-shadow: 0 0 0 $button-border-width var(--components-background-inverted) inset;
         }
     }
 
@@ -144,25 +144,25 @@ button[class*="Tag"],
         text-decoration: none;
     }
 
-    &[class*="-inversed"] {
+    &[class*="-inverted"] {
         &::after {
-            background: var(--components-background-hover-inversed);
+            background: var(--components-background-hover-inverted);
         }
 
         &:hover, &:focus {
-            color: var(--components-color-inversed);
+            color: var(--components-color-inverted);
         }
 
         &[class*="--wired"] {
-            color: var(--components-background-inversed);
-            box-shadow: 0 0 0 $button-border-width var(--components-background-inversed) inset;
+            color: var(--components-background-inverted);
+            box-shadow: 0 0 0 $button-border-width var(--components-background-inverted) inset;
 
             &::after {
-                background: var(--components-background-inversed);
+                background: var(--components-background-inverted);
             }
 
             &:hover, &:focus {
-                color: var(--components-color-inversed);
+                color: var(--components-color-inverted);
             }
         }
     }

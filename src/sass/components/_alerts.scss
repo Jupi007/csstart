@@ -9,10 +9,10 @@
     background: var(--alert-background);
 	color: var(--body-color);
 
-    &[class*="-inversed"] {
-        border-color: var(--components-background-inversed);
-    	color: var(--body-color-inversed);
-        background: var(--alert-background-inversed);
+    &[class*="-inverted"] {
+        border-color: var(--components-background-inverted);
+    	color: var(--body-color-inverted);
+        background: var(--alert-background-inverted);
     }
 
     @include option("components-light") {

@@ -6,28 +6,28 @@
     
     --body-bg-color: #{$body-bg};
     --body-color: #{$body-color};
-    --body-bg-color-inversed: #{$body-bg-dark};
-    --body-color-inversed: #{$body-color-dark};
+    --body-bg-color-inverted: #{$body-bg-dark};
+    --body-color-inverted: #{$body-color-dark};
 
     --link-color: #{$link-color};
     --link-hover-color: #{$link-hover-color};
     --link-visited-color: #{$link-visited-color};
     --link-visited-hover-color: #{$link-visited-hover-color};
 
-    --link-color-inversed: #{$link-color-dark};
-    --link-hover-color-inversed: #{$link-hover-color-dark};
-    --link-visited-color-inversed: #{$link-visited-color-dark};
-    --link-visited-hover-color-inversed: #{$link-visited-hover-color-dark};
+    --link-color-inverted: #{$link-color-dark};
+    --link-hover-color-inverted: #{$link-hover-color-dark};
+    --link-visited-color-inverted: #{$link-visited-color-dark};
+    --link-visited-hover-color-inverted: #{$link-visited-hover-color-dark};
 
     --components-background: #{$components-background};
     --components-background-hover: #{darken($components-background, $components-hover-darken)};
     --components-color: #{$components-color};
-    --components-background-inversed: #{$components-background-dark};
-    --components-background-hover-inversed: #{darken($components-background-dark, $components-hover-darken-dark)};
-    --components-color-inversed: #{$components-color-dark};
+    --components-background-inverted: #{$components-background-dark};
+    --components-background-hover-inverted: #{darken($components-background-dark, $components-hover-darken-dark)};
+    --components-color-inverted: #{$components-color-dark};
 
     --alert-background: #{$alert-background};
-    --alert-background-inversed: #{$alert-background-dark};
+    --alert-background-inverted: #{$alert-background-dark};
 
     --table-border-color: #{$table-border-color};
     --table-cell-border-color: #{$table-cell-border-color};
@@ -67,28 +67,28 @@
         :root {
             --body-bg-color: #{$body-bg-dark};
             --body-color: #{$body-color-dark};
-            --body-bg-color-inversed: #{$body-bg};
-            --body-color-inversed: #{$body-color};
+            --body-bg-color-inverted: #{$body-bg};
+            --body-color-inverted: #{$body-color};
 
             --link-color: #{$link-color-dark};
             --link-hover-color: #{$link-hover-color-dark};
             --link-visited-color: #{$link-visited-color-dark};
             --link-visited-hover-color: #{$link-visited-hover-color-dark};
 
-            --link-color-inversed: #{$link-color};
-            --link-hover-color-inversed: #{$link-hover-color};
-            --link-visited-color-inversed: #{$link-visited-color};
-            --link-visited-hover-color-inversed: #{$link-visited-hover-color};
+            --link-color-inverted: #{$link-color};
+            --link-hover-color-inverted: #{$link-hover-color};
+            --link-visited-color-inverted: #{$link-visited-color};
+            --link-visited-hover-color-inverted: #{$link-visited-hover-color};
 
             --components-background: #{$components-background-dark};
             --components-background-hover: #{darken($components-background-dark, $components-hover-darken-dark)};
             --components-color: #{$components-color-dark};
-            --components-background-inversed: #{$components-background};
-            --components-background-hover-inversed: #{darken($components-background, $components-hover-darken)};
-            --components-color-inversed: #{$components-color};
+            --components-background-inverted: #{$components-background};
+            --components-background-hover-inverted: #{darken($components-background, $components-hover-darken)};
+            --components-color-inverted: #{$components-color};
 
             --alert-background: #{$alert-background-dark};
-            --alert-background-inversed: #{$alert-background};
+            --alert-background-inverted: #{$alert-background};
 
             --table-border-color: #{$table-border-color-dark};
             --table-cell-border-color: #{$table-cell-border-color-dark};
