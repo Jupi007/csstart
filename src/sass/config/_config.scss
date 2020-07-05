@@ -6,7 +6,8 @@
 // CSStart options
 // ---------------
 
-$options: (
+$options: !default;
+$options: map-merge((
 	"transitions": true,
 
     "smooth-scroll": true,
@@ -35,13 +36,14 @@ $options: (
     "dark-theme-utilities": true,
     "print-utilities": true,
     "responsive-utilities": true,
-) !default;
+), $options);
 
 // ------
 // Colors
 // ------
 
-$colors: (
+$colors: !default;
+$colors: map-merge((
     'white': #ffffff,
     'black': #000000,
     'red': rgb(217, 77, 77),
@@ -53,11 +55,11 @@ $colors: (
     'purple': rgb(170, 128, 217),
     'brown': rgb(131, 86, 17),
 
-      'success': 'green',
-      'info': 'light-blue',
-      'warning': 'orange',
-      'danger': 'red',
-) !default;
+    'success': 'green',
+    'info': 'light-blue',
+    'warning': 'orange',
+    'danger': 'red'
+), $colors);
 
 // -------
 // Spacers
@@ -65,7 +67,8 @@ $colors: (
 
 $spacer-base: 1rem !default;
 
-$spacers: (
+$spacers: !default;
+$spacers: map-merge((
 	'tiny': .25,
 	'tiny-plus': .5,
 	'small': .75,
@@ -78,7 +81,7 @@ $spacers: (
 	'x-large-plus': 3.5,
 	'xx-large': 4,
 	'xx-large-plus': 4.5,
-) !default;
+), $spacers);
 
 // -----------
 // Transitions
@@ -133,26 +136,28 @@ $font-size-base: 1.6rem !default;
 $mobile-font-size: 1.4rem !default;
 $headings-font-size: 1em !default;
 
-$headings-font-sizes: (
+$headings-font-sizes: !default;
+$headings-font-sizes: map-merge((
 	h1: $headings-font-size + 1.4,
 	h2: $headings-font-size + 1.0,
 	h3: $headings-font-size + 0.8,
 	h4: $headings-font-size + 0.4,
 	h5: $headings-font-size + 0.2,
 	h6: $headings-font-size + 0.1,
-) !default;
+), $headings-font-sizes);
 
 // ------------
 // Font weights
 // ------------
 
-$font-weights: (
+$font-weights: !default;
+$font-weights: map-merge((
 	'lighter': lighter,
 	'light': 300,
 	'normal': 400,
 	'bold': 700,
 	'bolder': bolder,
-) !default;
+), $font-weights);
 
 $font-weight-base: font-weight('normal') !default;
 $headings-font-weight: font-weight('normal') !default;
@@ -187,7 +192,8 @@ $components-color-dark: $body-color !default;
 $components-hover-darken-dark: 10% !default;
 $components-hover-background-dark: darken($components-background-dark, $components-hover-darken-dark) !default;
 
-$components: (
+$components: !default;
+$components: map-merge((
     'red': color('red'),
     'orange': color('orange'),
     'yellow': color('yellow'),
@@ -201,17 +207,18 @@ $components: (
 	'info': color('info'),
 	'warning': color('warning'),
 	'danger': color('danger'),
-) !default;
+), $components);
 
 // ----
 // Grid
 // ----
 
-$gutters: (
+$gutters: !default;
+$gutters: map-merge((
 	'': spacer('medium'),
 	'-l': spacer('large'),
 	'-xl': spacer('large-plus'),
-) !default;
+), $gutters);
 
 $grid-min-breakpoint: "small" !default;
 $grid-max-cols: 12 !default;
@@ -220,10 +227,11 @@ $grid-max-cols: 12 !default;
 // Breakpoints
 // -----------
 
-$breakpoints: (
+$breakpoints: !default;
+$breakpoints: map-merge((
 	'tiny'        : 480px,
 	'small'       : 576px,
 	'medium'      : 768px,
 	'large'       : 992px,
 	'extraLarge' : 1500px,
-) !default;
+), $breakpoints);
