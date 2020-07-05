@@ -3,7 +3,7 @@
 // ---------------------------------------------------
 :root {
     --spacer-base: #{$spacer-base};
-    
+
     --body-bg-color: #{$body-bg};
     --body-color: #{$body-color};
     --body-bg-color-inverted: #{$body-bg-dark};
@@ -36,8 +36,16 @@
     --table-zebra-headings-cell-background: #{$table-zebra-headings-cell-background};
     --table-zebra-cell-background: #{$table-zebra-cell-background};
     --table-cell-hover-background: #{$table-cell-hover-background};
+    --table-border-color-inverted: #{$table-border-color-dark};
+    --table-cell-border-color-inverted: #{$table-cell-border-color-dark};
+    --table-background-inverted: #{$table-background-dark};
+    --table-headings-cell-background-inverted: #{$table-headings-cell-background-dark};
+    --table-zebra-headings-cell-background-inverted: #{$table-zebra-headings-cell-background-dark};
+    --table-zebra-cell-background-inverted: #{$table-zebra-cell-background-dark};
+    --table-cell-hover-background-inverted: #{$table-cell-hover-background-dark};
 
     --table-caption-color: #{$table-caption-color};
+    --table-caption-color-inverted: #{$table-caption-color-dark};
 
     --input-border-color: #{$input-border-color};
     --input-hover-focus-border-color: #{$input-hover-focus-border-color};
@@ -93,12 +101,20 @@
             --table-border-color: #{$table-border-color-dark};
             --table-cell-border-color: #{$table-cell-border-color-dark};
             --table-background: #{$table-background-dark};
-            --table-headings-cell-background: #{$table-heading-cell-background-dark};
-            --table-zebra-headings-cell-background: #{$table-zebra-heading-cell-background-dark};
+            --table-headings-cell-background: #{$table-headings-cell-background-dark};
+            --table-zebra-headings-cell-background: #{$table-zebra-headings-cell-background-dark};
             --table-zebra-cell-background: #{$table-zebra-cell-background-dark};
             --table-cell-hover-background: #{$table-cell-hover-background-dark};
+            --table-border-color-inverted: #{$table-border-color};
+            --table-cell-border-color-inverted: #{$table-cell-border-color};
+            --table-background-inverted: #{$table-background};
+            --table-headings-cell-background-inverted: #{$table-headings-cell-background};
+            --table-zebra-headings-cell-background-inverted: #{$table-zebra-headings-cell-background};
+            --table-zebra-cell-background-inverted: #{$table-zebra-cell-background};
+            --table-cell-hover-background-inverted: #{$table-cell-hover-background};
 
             --table-caption-color: #{$table-caption-color-dark};
+            --table-caption-color-inverted: #{$table-caption-color};
 
             --input-border-color: #{$input-border-color-dark};
             --input-hover-focus-border-color: #{$input-hover-focus-border-color-dark};

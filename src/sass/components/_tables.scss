@@ -72,35 +72,85 @@
 		}
 	}
 
-	&[class*="--hover"] {
+	&[class*="--hover"] tbody tr {
+        @include transition("background");
+
 		th {
 			background: var(--table-headings-cell-background);
 		}
 
-		tbody tr {
-            @include transition("background");
-            &:hover {
-                background: var(--table-cell-hover-background);
-            }
+		&:hover {
+            background: var(--table-cell-hover-background);
+        }
+	}
+
+	&[class*="-inverted"] {
+		background: var(--table-background-inverted);
+		color: var(--body-color-inverted);
+        border-color: var(--table-border-color-inverted);
+
+        td, th {
+            border-color: var(--table-cell-border-color-inverted);
+        }
+
+		th {
+			background: var(--table-headings-cell-background-inverted);
 		}
+
+		&[class*="--zebra"] {
+			tr:nth-child(even) {
+				background: var(--table-zebra-cell-background-inverted);
+			}
+		}
+
+		&[class*="--hover"] tbody tr {
+    		th {
+    			background: var(--table-headings-cell-background-inverted);
+    		}
+
+            &:hover {
+                background: var(--table-cell-hover-background-inverted);
+            }
+        }
+
+        a {
+            color: var(--link-color-inverted);
+
+            &:hover {
+                color: var(--link-hover-color-inverted);
+            }
+        }
 	}
 
     @include option("components-light") {
     	&[class*="-light"] {
     		background: $table-background;
     		color: $body-color;
+            border-color: $table-border-color;
+
+            td, th {
+                border-color: $table-cell-border-color;
+            }
 
     		th {
     			background: $table-headings-cell-background;
     		}
 
-    		&[class*="--zebra"] {
-    			tr:nth-child(even) {
-    				background: $table-zebra-cell-background;
-    			}
-    		}
+            &[class*="--zebra"] {
+        		th {
+        			background: $table-zebra-headings-cell-background;
+        		}
+
+        		tr:nth-child(even) {
+        			background: $table-zebra-cell-background;
+        		}
+        	}
 
     		&[class*="--hover"] tbody tr {
+        		th {
+        			background: $table-headings-cell-background;
+        		}
+
                 &:hover {
                     background: $table-cell-hover-background;
                 }
@@ -112,18 +162,31 @@
     	&[class*="-dark"] {
     		background: $table-background-dark;
     		color: $body-color-dark;
+            border-color: $table-border-color-dark;
+
+            td, th {
+                border-color: $table-cell-border-color-dark;
+            }
 
     		th {
-    			background: $table-heading-cell-background-dark;
+    			background: $table-headings-cell-background-dark;
     		}
 
-    		&[class*="--zebra"] {
-    			tr:nth-child(even) {
-    				background: $table-zebra-cell-background-dark;
-    			}
-    		}
+            &[class*="--zebra"] {
+        		th {
+        			background: $table-zebra-headings-cell-background-dark;
+        		}
+
+        		tr:nth-child(even) {
+        			background: $table-zebra-cell-background-dark;
+        		}
+        	}
 
     		&[class*="--hover"] tbody tr {
+        		th {
+        			background: $table-headings-cell-background-dark;
+        		}
+
                 &:hover {
                     background: $table-cell-hover-background-dark;
                 }
