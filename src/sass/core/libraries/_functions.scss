@@ -9,7 +9,13 @@
 }
 
 @function color($name) {
-	@return getter($colors, $name);
+    $color: getter($colors, $name);
+
+    @if type-of($color) != color and $color != null {
+        $color: color($color);
+    }
+
+	@return $color;
 }
 
 @function font-weight($name) {

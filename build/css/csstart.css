@@ -790,22 +790,6 @@ img.fr {
 	border: none !important;
 }
 
-.b-success {
-	border: 1px solid #74cf61 !important;
-}
-
-.b-info {
-	border: 1px solid #74c0cd !important;
-}
-
-.b-warning {
-	border: 1px solid #d9831e !important;
-}
-
-.b-danger {
-	border: 1px solid #d94d4d !important;
-}
-
 .b-white {
 	border: 1px solid #fff !important;
 }
@@ -844,6 +828,22 @@ img.fr {
 
 .b-brown {
 	border: 1px solid #835611 !important;
+}
+
+.b-success {
+	border: 1px solid 'green' !important;
+}
+
+.b-info {
+	border: 1px solid 'light-blue' !important;
+}
+
+.b-warning {
+	border: 1px solid 'orange' !important;
+}
+
+.b-danger {
+	border: 1px solid 'red' !important;
 }
 
 .b-grey5 {
@@ -926,22 +926,6 @@ img.fr {
 	border: 1px solid black !important;
 }
 
-.txt-success {
-	color: #74cf61 !important;
-}
-
-.txt-info {
-	color: #74c0cd !important;
-}
-
-.txt-warning {
-	color: #d9831e !important;
-}
-
-.txt-danger {
-	color: #d94d4d !important;
-}
-
 .txt-white {
 	color: #fff !important;
 }
@@ -980,6 +964,22 @@ img.fr {
 
 .txt-brown {
 	color: #835611 !important;
+}
+
+.txt-success {
+	color: 'green' !important;
+}
+
+.txt-info {
+	color: 'light-blue' !important;
+}
+
+.txt-warning {
+	color: 'orange' !important;
+}
+
+.txt-danger {
+	color: 'red' !important;
 }
 
 .txt-grey5 {
@@ -1062,22 +1062,6 @@ img.fr {
 	color: black !important;
 }
 
-.bg-success {
-	background: #74cf61 !important;
-}
-
-.bg-info {
-	background: #74c0cd !important;
-}
-
-.bg-warning {
-	background: #d9831e !important;
-}
-
-.bg-danger {
-	background: #d94d4d !important;
-}
-
 .bg-white {
 	background: #fff !important;
 }
@@ -1116,6 +1100,22 @@ img.fr {
 
 .bg-brown {
 	background: #835611 !important;
+}
+
+.bg-success {
+	background: 'green' !important;
+}
+
+.bg-info {
+	background: 'light-blue' !important;
+}
+
+.bg-warning {
+	background: 'orange' !important;
+}
+
+.bg-danger {
+	background: 'red' !important;
 }
 
 .bg-grey5 {
@@ -8772,22 +8772,6 @@ img.fr {
 		border: none !important;
 	}
 
-	.dark-b-success {
-		border: 1px solid #74cf61 !important;
-	}
-
-	.dark-b-info {
-		border: 1px solid #74c0cd !important;
-	}
-
-	.dark-b-warning {
-		border: 1px solid #d9831e !important;
-	}
-
-	.dark-b-danger {
-		border: 1px solid #d94d4d !important;
-	}
-
 	.dark-b-white {
 		border: 1px solid #fff !important;
 	}
@@ -8826,6 +8810,22 @@ img.fr {
 
 	.dark-b-brown {
 		border: 1px solid #835611 !important;
+	}
+
+	.dark-b-success {
+		border: 1px solid 'green' !important;
+	}
+
+	.dark-b-info {
+		border: 1px solid 'light-blue' !important;
+	}
+
+	.dark-b-warning {
+		border: 1px solid 'orange' !important;
+	}
+
+	.dark-b-danger {
+		border: 1px solid 'red' !important;
 	}
 
 	.dark-b-grey5 {
@@ -8908,22 +8908,6 @@ img.fr {
 		border: 1px solid black !important;
 	}
 
-	.dark-txt-success {
-		color: #74cf61 !important;
-	}
-
-	.dark-txt-info {
-		color: #74c0cd !important;
-	}
-
-	.dark-txt-warning {
-		color: #d9831e !important;
-	}
-
-	.dark-txt-danger {
-		color: #d94d4d !important;
-	}
-
 	.dark-txt-white {
 		color: #fff !important;
 	}
@@ -8962,6 +8946,22 @@ img.fr {
 
 	.dark-txt-brown {
 		color: #835611 !important;
+	}
+
+	.dark-txt-success {
+		color: 'green' !important;
+	}
+
+	.dark-txt-info {
+		color: 'light-blue' !important;
+	}
+
+	.dark-txt-warning {
+		color: 'orange' !important;
+	}
+
+	.dark-txt-danger {
+		color: 'red' !important;
 	}
 
 	.dark-txt-grey5 {
@@ -9044,22 +9044,6 @@ img.fr {
 		color: black !important;
 	}
 
-	.dark-bg-success {
-		background: #74cf61 !important;
-	}
-
-	.dark-bg-info {
-		background: #74c0cd !important;
-	}
-
-	.dark-bg-warning {
-		background: #d9831e !important;
-	}
-
-	.dark-bg-danger {
-		background: #d94d4d !important;
-	}
-
 	.dark-bg-white {
 		background: #fff !important;
 	}
@@ -9098,6 +9082,22 @@ img.fr {
 
 	.dark-bg-brown {
 		background: #835611 !important;
+	}
+
+	.dark-bg-success {
+		background: 'green' !important;
+	}
+
+	.dark-bg-info {
+		background: 'light-blue' !important;
+	}
+
+	.dark-bg-warning {
+		background: 'orange' !important;
+	}
+
+	.dark-bg-danger {
+		background: 'red' !important;
 	}
 
 	.dark-bg-grey5 {
