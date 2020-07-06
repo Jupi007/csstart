@@ -23,14 +23,16 @@ input[type="reset"]
 [class*="Tag"],
 [class*="Button"]
 {
-    &[class*="-inverted"] {
-        background: var(--components-background-inverted);
-        color: var(--components-color-inverted);
+    @include option("components-inverted") {
+        &[class*="-inverted"] {
+            background: var(--components-background-inverted);
+            color: var(--components-color-inverted);
 
-        &[class*="--wired"] {
-            background: transparent;
-            color: var(--components-background-inverted);
-            box-shadow: 0 0 0 $button-border-width var(--components-background-inverted) inset;
+            &[class*="--wired"] {
+                background: transparent;
+                color: var(--components-background-inverted);
+                box-shadow: 0 0 0 $button-border-width var(--components-background-inverted) inset;
+            }
         }
     }
 

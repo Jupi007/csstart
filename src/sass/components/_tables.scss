@@ -84,43 +84,45 @@
         }
 	}
 
-	&[class*="-inverted"] {
-		background: var(--table-background-inverted);
-		color: var(--body-color-inverted);
-        border-color: var(--table-border-color-inverted);
+    @include option("components-inverted") {
+    	&[class*="-inverted"] {
+    		background: var(--table-background-inverted);
+    		color: var(--body-color-inverted);
+            border-color: var(--table-border-color-inverted);
 
-        td, th {
-            border-color: var(--table-cell-border-color-inverted);
-        }
+            td, th {
+                border-color: var(--table-cell-border-color-inverted);
+            }
 
-		th {
-			background: var(--table-headings-cell-background-inverted);
-		}
-
-		&[class*="--zebra"] {
-			tr:nth-child(even) {
-				background: var(--table-zebra-cell-background-inverted);
-			}
-		}
-
-		&[class*="--hover"] tbody tr {
     		th {
     			background: var(--table-headings-cell-background-inverted);
     		}
 
-            &:hover {
-                background: var(--table-cell-hover-background-inverted);
-            }
-        }
+    		&[class*="--zebra"] {
+    			tr:nth-child(even) {
+    				background: var(--table-zebra-cell-background-inverted);
+    			}
+    		}
 
-        a {
-            color: var(--link-color-inverted);
+    		&[class*="--hover"] tbody tr {
+        		th {
+        			background: var(--table-headings-cell-background-inverted);
+        		}
 
-            &:hover {
-                color: var(--link-hover-color-inverted);
+                &:hover {
+                    background: var(--table-cell-hover-background-inverted);
+                }
             }
-        }
-	}
+
+            a {
+                color: var(--link-color-inverted);
+
+                &:hover {
+                    color: var(--link-hover-color-inverted);
+                }
+            }
+    	}
+    }
 
     @include option("components-light") {
     	&[class*="-light"] {
