@@ -1,7 +1,15 @@
-@mixin option($name) {
-	@if getter($options, $name){
-		@content;
-	}
+@mixin option($names...) {
+    $content: true;
+
+    @each $name in $names {
+        @if not getter($options, $name) {
+    		$content: false;
+    	}
+    }
+
+    @if $content {
+        @content;
+    }
 }
 
 @mixin transition($property, $duration: $transition-duration-base, $timing-function: $transition-timing-function-base, $delay: 0) {

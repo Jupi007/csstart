@@ -13,10 +13,38 @@
             }
         }
     }
+
     @include it('Check if the given option is disable') {
         @include assert {
             @include output {
                 @include option('disabled-option') {
+                    display: none;
+                }
+            }
+
+            @include expect {}
+        }
+    }
+
+    @include it('Check if the two given options are both enable') {
+        @include assert {
+            @include output {
+                @include option('enabled-option') {
+                    @debug $options;
+                    display: block;
+                }
+            }
+
+            @include expect {
+                display: block;
+            }
+        }
+    }
+    
+    @include it('Check if one of the two given options is disable') {
+        @include assert {
+            @include output {
+                @include option('enabled-option', 'disabled-option') {
                     display: none;
                 }
             }
@@ -117,7 +145,7 @@
     }
 }
 
-@include describe('@mixin option()') {
+@include describe('@mixin print()') {
     @include it('Return content into a @media print block') {
         @include assert {
             @include output {

@@ -1,4 +1,4 @@
-@include option("buttons") {
+@include option("buttons", "tags") {
 
 button,
 input[type="button"],
