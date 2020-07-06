@@ -40,7 +40,7 @@
             }
         }
     }
-    
+
     @include it('Check if one of the two given options is disable') {
         @include assert {
             @include output {
@@ -55,7 +55,7 @@
 }
 
 @include describe('@mixin transition()') {
-    @include it('Return a set of transition properties based on given parameters (without delay)') {
+    @include it('Returns a set of transition properties based on given parameters (without delay)') {
         @include assert {
             @include output {
                 @include transition(color, 1s, ease-in);
@@ -69,7 +69,7 @@
         }
     }
 
-    @include it('Return a set of transition properties based on given parameters (with delay)') {
+    @include it('Returns a set of transition properties based on given parameters (with delay)') {
         @include assert {
             @include output {
                 @include transition(color, 1s, ease-in, 0.5s);
@@ -84,7 +84,7 @@
         }
     }
 
-    @include it('Return a set of transition properties based on default values') {
+    @include it('Returns a set of transition properties based on default values') {
         @include assert {
             @include output {
                 @include transition(opacity);
@@ -100,7 +100,7 @@
 }
 
 @include describe('@mixin respond-to()') {
-    @include it('Return content into a @media block (to up)') {
+    @include it('Returns content into a @media block (to up)') {
         @include assert {
             @include output {
                 @include respond-to('medium', 'up') {
@@ -116,7 +116,7 @@
         }
     }
 
-    @include it('Return content into a @media block (to down)') {
+    @include it('Returns content into a @media block (to down)') {
         @include assert {
             @include output {
                 @include respond-to('medium', 'down') {
@@ -132,7 +132,7 @@
         }
     }
 
-    @include it('Return an error') {
+    @include it('Returns an error') {
         @include assert {
             @include output {
                 @include respond-to("wrong-breakpoint") {
@@ -143,10 +143,22 @@
             @include expect {}
         }
     }
+
+    @include it('Returns an error') {
+        @include assert {
+            @include output {
+                @include respond-to("medium", "wrong-direction") {
+                    display: none;
+                }
+            }
+
+            @include expect {}
+        }
+    }
 }
 
 @include describe('@mixin print()') {
-    @include it('Return content into a @media print block') {
+    @include it('Returns content into a @media print block') {
         @include assert {
             @include output {
                 @include print {

@@ -36,6 +36,10 @@
 				@content;
 			}
 		}
+
+        @else {
+            @warn "Unfortunately, `#{$direction}` value is not valid. It should be `up` or `down`.";
+        }
 	}
 
 	@else {
