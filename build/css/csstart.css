@@ -11659,13 +11659,13 @@ a[class*='Card']:focus {
 	max-height: 60vh;
 }
 
-[class*='Figure'][class*='--light'],
-[class*='Afb'] figure[class*='--light'] {
+[class*='Figure'][class*='-light'],
+[class*='Afb'] figure[class*='-light'] {
 	background: #e6e6e6;
 }
 
-[class*='Figure'][class*='--light'] figcaption,
-[class*='Afb'] figure[class*='--light'] figcaption {
+[class*='Figure'][class*='-light'] figcaption,
+[class*='Afb'] figure[class*='-light'] figcaption {
 	color: #404040;
 }
 

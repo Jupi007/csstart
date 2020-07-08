@@ -21,7 +21,7 @@
         max-height: $figure-max-height-image;
     }
 
-	&[class*="--light"] {
+	&[class*="-light"] {
 		background: $figure-light-background;
 
 		figcaption {
