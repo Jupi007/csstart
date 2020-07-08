@@ -11177,42 +11177,27 @@ input[type='reset'],
 	align-items: flex-start;
 }
 
-[class*='Media'][class*='--reverse'] {
-	flex-direction: row-reverse;
-}
-
 @media (max-width: 479px) {
 	[class*='Media'][class*='--responsive'] {
 		flex-direction: column;
+		align-items: center;
 	}
 
-	[class*='Media'][class*='--responsive'][class*='--float'] {
-		display: block;
-	}
-
-	[class*='Media'][class*='--responsive'][class*='--float'] [class*='media-figure'] {
-		float: left;
+	[class*='Media'][class*='--responsive'] .media-figure {
+		margin: 0 0 calc(var(--spacer-base) * 1.5) 0;
 	}
 }
 
-[class*='media'][class*='-content'] {
+.media-content {
 	flex: 1;
 }
 
-[class*='media'][class*='-content'][class*='--centered'] {
-	align-self: center;
+.media-figure:not(.item-last) {
+	margin-right: calc(var(--spacer-base) * 1.5);
 }
 
-[class*='media'][class*='-content'][class*='--bottomed'] {
-	align-self: flex-end;
-}
-
-[class*='media'][class*='-figure--centered'] {
-	align-self: center;
-}
-
-[class*='media'][class*='-figure--bottomed'] {
-	align-self: flex-end;
+.media-figure.item-last {
+	margin-left: calc(var(--spacer-base) * 1.5);
 }
 
 [class*='Card'] {

@@ -5,47 +5,31 @@
 	flex-direction: row;
 	align-items: flex-start;
 
-	&[class*="--reverse"] {
-		flex-direction: row-reverse;
-	}
-
-
 	@include respond-to("tiny", "down") {
 		&[class*="--responsive"] {
 			flex-direction: column;
+            align-items: center;
 
-			&[class*="--float"] {
-				display: block;
-
-				[class*="media-figure"] {
-					float: left;
-				}
-			}
+            .media-figure {
+                margin: 0 0 $media-figure-margin-right 0;
+            }
 		}
 
 	}
 }
 
-[class*="media"] {
-	&[class*="-content"] {
-		flex: 1;
+.media-content {
+	flex: 1;
+}
 
-    	&[class*="--centered"] {
-    		align-self: center;
-    	}
+.media-figure {
+    &:not(.item-last) {
+        margin-right: $media-figure-margin-right;
+    }
 
-    	&[class*="--bottomed"] {
-    		align-self: flex-end;
-    	}
-	}
-
-	&[class*="-figure--centered"] {
-		align-self: center;
-	}
-
-	&[class*="-figure--bottomed"] {
-		align-self: flex-end;
-	}
+    &.item-last {
+        margin-left: $media-figure-margin-right;
+    }
 }
 
 }
