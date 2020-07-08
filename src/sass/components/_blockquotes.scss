@@ -35,6 +35,51 @@
 			content: "- ";
 		}
 	}
+
+    @include option("components-inverted") {
+    	&[class*="-inverted"] {
+            background: var(--blockquote-background-inverted);
+            color: var(--blockquote-color-inverted);
+
+            &:before {
+    		    color: var(--blockquote-quote-color-inverted);
+            }
+
+            > cite {
+    		    color: var(--blockquote-cite-color-inverted);
+            }
+        }
+    }
+
+    @include option("components-light") {
+    	&[class*="-light"] {
+            background: $blockquote-background;
+            color: $blockquote-color;
+
+            &:before {
+    		    color: $blockquote-quote-color;
+            }
+
+            > cite {
+    		    color: $blockquote-cite-color;
+            }
+        }
+    }
+
+    @include option("components-dark") {
+    	&[class*="-dark"] {
+            background: $blockquote-background-dark;
+            color: $blockquote-color-dark;
+
+            &:before {
+    		    color: $blockquote-quote-color-dark;
+            }
+
+            > cite {
+    		    color: $blockquote-cite-color-dark;
+            }
+        }
+    }
 }
 
 }

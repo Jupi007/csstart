@@ -54,6 +54,10 @@
 	--blockquote-color: #0d0d0d;
 	--blockquote-cite-color: #4d4d4d;
 	--blockquote-quote-color: #b3b3b3;
+	--blockquote-background-inverted: #333;
+	--blockquote-color-inverted: #f2f2f2;
+	--blockquote-cite-color-inverted: #999;
+	--blockquote-quote-color-inverted: #666;
 	--card-subtitle-color: #666;
 }
 
@@ -113,6 +117,10 @@
 		--blockquote-color: #f2f2f2;
 		--blockquote-cite-color: #999;
 		--blockquote-quote-color: #666;
+		--blockquote-background-inverted: #e6e6e6;
+		--blockquote-color-inverted: #0d0d0d;
+		--blockquote-cite-color-inverted: #4d4d4d;
+		--blockquote-quote-color-inverted: #b3b3b3;
 		--card-subtitle-color: #999;
 	}
 }
@@ -11633,6 +11641,54 @@ a[class*='Card']:focus {
 [class*='Blockquote'] > cite:before,
 [class*='Afb'] blockquote > cite:before {
 	content: '- ';
+}
+
+[class*='Blockquote'][class*='-inverted'],
+[class*='Afb'] blockquote[class*='-inverted'] {
+	color: var(--blockquote-color-inverted);
+	background: var(--blockquote-background-inverted);
+}
+
+[class*='Blockquote'][class*='-inverted']:before,
+[class*='Afb'] blockquote[class*='-inverted']:before {
+	color: var(--blockquote-quote-color-inverted);
+}
+
+[class*='Blockquote'][class*='-inverted'] > cite,
+[class*='Afb'] blockquote[class*='-inverted'] > cite {
+	color: var(--blockquote-cite-color-inverted);
+}
+
+[class*='Blockquote'][class*='-light'],
+[class*='Afb'] blockquote[class*='-light'] {
+	color: #0d0d0d;
+	background: #e6e6e6;
+}
+
+[class*='Blockquote'][class*='-light']:before,
+[class*='Afb'] blockquote[class*='-light']:before {
+	color: #b3b3b3;
+}
+
+[class*='Blockquote'][class*='-light'] > cite,
+[class*='Afb'] blockquote[class*='-light'] > cite {
+	color: #4d4d4d;
+}
+
+[class*='Blockquote'][class*='-dark'],
+[class*='Afb'] blockquote[class*='-dark'] {
+	color: #f2f2f2;
+	background: #333;
+}
+
+[class*='Blockquote'][class*='-dark']:before,
+[class*='Afb'] blockquote[class*='-dark']:before {
+	color: #666;
+}
+
+[class*='Blockquote'][class*='-dark'] > cite,
+[class*='Afb'] blockquote[class*='-dark'] > cite {
+	color: #999;
 }
 
 [class*='Figure'],

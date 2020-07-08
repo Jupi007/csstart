@@ -67,6 +67,11 @@
     --blockquote-cite-color: #{$blockquote-cite-color};
     --blockquote-quote-color: #{$blockquote-quote-color};
 
+    --blockquote-background-inverted: #{$blockquote-background-dark};
+    --blockquote-color-inverted: #{$blockquote-color-dark};
+    --blockquote-cite-color-inverted: #{$blockquote-cite-color-dark};
+    --blockquote-quote-color-inverted: #{$blockquote-quote-color-dark};
+
     --card-subtitle-color: #{$card-subtitle-color};
 }
 
@@ -135,6 +140,11 @@
             --blockquote-color: #{$blockquote-color-dark};
             --blockquote-cite-color: #{$blockquote-cite-color-dark};
             --blockquote-quote-color: #{$blockquote-quote-color-dark};
+
+            --blockquote-background-inverted: #{$blockquote-background};
+            --blockquote-color-inverted: #{$blockquote-color};
+            --blockquote-cite-color-inverted: #{$blockquote-cite-color};
+            --blockquote-quote-color-inverted: #{$blockquote-quote-color};
 
             --card-subtitle-color: #{$card-subtitle-color-dark};
         }
