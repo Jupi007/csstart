@@ -17,11 +17,17 @@
     }
 }
 
-.media-content {
+.media-body {
 	flex: 1;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .media-figure {
+    order: -1;
+
     &:not(.item-last) {
         margin-right: $media-figure-margin-right;
     }

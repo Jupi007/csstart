@@ -11188,8 +11188,16 @@ input[type='reset'],
 	}
 }
 
-.media-content {
+.media-body {
 	flex: 1;
+}
+
+.media-body:last-child {
+	margin-bottom: 0;
+}
+
+.media-figure {
+	order: -1;
 }
 
 .media-figure:not(.item-last) {
