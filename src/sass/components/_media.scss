@@ -5,17 +5,16 @@
 	flex-direction: row;
 	align-items: flex-start;
 
-	@include respond-to("tiny", "down") {
-		&[class*="--responsive"] {
-			flex-direction: column;
+    @include option("media-responsive") {
+        @include respond-to("tiny", "down") {
+    		flex-direction: column;
             align-items: center;
 
             .media-figure {
                 margin: 0 0 $media-figure-margin-right 0;
             }
-		}
-
-	}
+    	}
+    }
 }
 
 .media-content {

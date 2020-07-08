@@ -11178,12 +11178,12 @@ input[type='reset'],
 }
 
 @media (max-width: 479px) {
-	[class*='Media'][class*='--responsive'] {
+	[class*='Media'] {
 		flex-direction: column;
 		align-items: center;
 	}
 
-	[class*='Media'][class*='--responsive'] .media-figure {
+	[class*='Media'] .media-figure {
 		margin: 0 0 calc(var(--spacer-base) * 1.5) 0;
 	}
 }
