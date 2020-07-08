@@ -11622,15 +11622,16 @@ a[class*='Card']:focus {
 	margin-bottom: 0;
 }
 
-[class*='Blockquote'] cite,
-[class*='Afb'] blockquote cite {
+[class*='Blockquote'] > cite,
+[class*='Afb'] blockquote > cite {
 	display: block;
+	margin-bottom: calc(var(--spacer-base) * 1.5);
 	text-align: right;
 	color: var(--blockquote-cite-color);
 }
 
-[class*='Blockquote'] cite:before,
-[class*='Afb'] blockquote cite:before {
+[class*='Blockquote'] > cite:before,
+[class*='Afb'] blockquote > cite:before {
 	content: '- ';
 }
 

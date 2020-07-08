@@ -201,6 +201,7 @@ $blockquote-border-radius: 10px !default;
 $blockquote-quote-color: grey(30) !default;
 $blockquote-cite-color: grey(70) !default;
 $blockquote-cite-text-align: right !default;
+$blockquote-cite-margin-bottom: $paragraph-margin-bottom !default;
 
 $blockquote-background-dark: grey(80) !default;
 $blockquote-color-dark: $body-color-dark !default;

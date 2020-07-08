@@ -25,10 +25,11 @@
 		margin-bottom: 0;
 	}
 
-	cite {
+	> cite {
 		display: block;
 		color: var(--blockquote-cite-color);
 		text-align: $blockquote-cite-text-align;
+        margin-bottom: $blockquote-cite-margin-bottom;
 
 		&:before {
 			content: "- ";
