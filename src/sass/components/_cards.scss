@@ -51,22 +51,6 @@
 	> *:last-child {
 		margin-bottom: 0;
 	}
-
-	&[class*="--overlay"] {
-		z-index: 1;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		color: color("white");
-		text-shadow: 1px 1px 2px color("black");
-		overflow: hidden;
-
-		&[class*="--scroll"] {
-			overflow: scroll;
-		}
-	}
 }
 
 }
