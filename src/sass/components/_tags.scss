@@ -36,8 +36,8 @@ input[type="reset"]
         }
     }
 
-    @include option("components-light") {
-        &[class*="-light"] {
+    @include option("components-dark") {
+        &[class*="-dark"] {
             color: $components-color-dark;
             background: $components-background-dark;
 
@@ -49,8 +49,8 @@ input[type="reset"]
         }
     }
 
-    @include option("components-dark") {
-        &[class*="-dark"] {
+    @include option("components-light") {
+        &[class*="-light"] {
             color: $components-color;
             background: $components-background;
 
@@ -169,8 +169,8 @@ button[class*="Tag"],
         }
     }
 
-    @include option("components-light") {
-        &[class*="-light"] {
+    @include option("components-dark") {
+        &[class*="-dark"] {
             &::after {
                 background: $components-hover-background-dark;
             }
@@ -195,8 +195,8 @@ button[class*="Tag"],
         }
     }
 
-    @include option("components-dark") {
-        &[class*="-dark"] {
+    @include option("components-light") {
+        &[class*="-light"] {
             &::after {
                 background: $components-hover-background;
             }

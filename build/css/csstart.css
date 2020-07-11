@@ -9971,27 +9971,27 @@ input[type='reset'] {
 	box-shadow: 0 0 0 1px var(--components-background-inverted) inset;
 }
 
-[class*='Tag'][class*='-light'],
-[class*='Button'][class*='-light'] {
+[class*='Tag'][class*='-dark'],
+[class*='Button'][class*='-dark'] {
 	color: #0d0d0d;
 	background: #fff;
 }
 
-[class*='Tag'][class*='-light'][class*='--wired'],
-[class*='Button'][class*='-light'][class*='--wired'] {
+[class*='Tag'][class*='-dark'][class*='--wired'],
+[class*='Button'][class*='-dark'][class*='--wired'] {
 	color: #fff;
 	background: transparent;
 	box-shadow: 0 0 0 1px #fff inset;
 }
 
-[class*='Tag'][class*='-dark'],
-[class*='Button'][class*='-dark'] {
+[class*='Tag'][class*='-light'],
+[class*='Button'][class*='-light'] {
 	color: #f2f2f2;
 	background: #333;
 }
 
-[class*='Tag'][class*='-dark'][class*='--wired'],
-[class*='Button'][class*='-dark'][class*='--wired'] {
+[class*='Tag'][class*='-light'][class*='--wired'],
+[class*='Button'][class*='-light'][class*='--wired'] {
 	color: #333;
 	background: transparent;
 	box-shadow: 0 0 0 1px #333 inset;
@@ -10286,48 +10286,10 @@ button[class*='Tag'][class*='-inverted'][class*='--wired']:focus,
 	color: var(--components-color-inverted);
 }
 
-a[class*='Tag'][class*='-light']::after,
-button[class*='Tag'][class*='-light']::after,
-[class*='Button'][class*='-light']::after {
-	background: #e6e6e6;
-}
-
-a[class*='Tag'][class*='-light']:hover,
-a[class*='Tag'][class*='-light']:focus,
-button[class*='Tag'][class*='-light']:hover,
-button[class*='Tag'][class*='-light']:focus,
-[class*='Button'][class*='-light']:hover,
-[class*='Button'][class*='-light']:focus {
-	text-decoration: none;
-	color: #0d0d0d;
-}
-
-a[class*='Tag'][class*='-light'][class*='--wired'],
-button[class*='Tag'][class*='-light'][class*='--wired'],
-[class*='Button'][class*='-light'][class*='--wired'] {
-	color: #fff;
-	box-shadow: 0 0 0 1px #fff inset;
-}
-
-a[class*='Tag'][class*='-light'][class*='--wired']::after,
-button[class*='Tag'][class*='-light'][class*='--wired']::after,
-[class*='Button'][class*='-light'][class*='--wired']::after {
-	background: #fff;
-}
-
-a[class*='Tag'][class*='-light'][class*='--wired']:hover,
-a[class*='Tag'][class*='-light'][class*='--wired']:focus,
-button[class*='Tag'][class*='-light'][class*='--wired']:hover,
-button[class*='Tag'][class*='-light'][class*='--wired']:focus,
-[class*='Button'][class*='-light'][class*='--wired']:hover,
-[class*='Button'][class*='-light'][class*='--wired']:focus {
-	color: #0d0d0d;
-}
-
 a[class*='Tag'][class*='-dark']::after,
 button[class*='Tag'][class*='-dark']::after,
 [class*='Button'][class*='-dark']::after {
-	background: #1a1a1a;
+	background: #e6e6e6;
 }
 
 a[class*='Tag'][class*='-dark']:hover,
@@ -10336,20 +10298,21 @@ button[class*='Tag'][class*='-dark']:hover,
 button[class*='Tag'][class*='-dark']:focus,
 [class*='Button'][class*='-dark']:hover,
 [class*='Button'][class*='-dark']:focus {
-	color: #f2f2f2;
+	text-decoration: none;
+	color: #0d0d0d;
 }
 
 a[class*='Tag'][class*='-dark'][class*='--wired'],
 button[class*='Tag'][class*='-dark'][class*='--wired'],
 [class*='Button'][class*='-dark'][class*='--wired'] {
-	color: #333;
-	box-shadow: 0 0 0 1px #333 inset;
+	color: #fff;
+	box-shadow: 0 0 0 1px #fff inset;
 }
 
 a[class*='Tag'][class*='-dark'][class*='--wired']::after,
 button[class*='Tag'][class*='-dark'][class*='--wired']::after,
 [class*='Button'][class*='-dark'][class*='--wired']::after {
-	background: #333;
+	background: #fff;
 }
 
 a[class*='Tag'][class*='-dark'][class*='--wired']:hover,
@@ -10358,6 +10321,43 @@ button[class*='Tag'][class*='-dark'][class*='--wired']:hover,
 button[class*='Tag'][class*='-dark'][class*='--wired']:focus,
 [class*='Button'][class*='-dark'][class*='--wired']:hover,
 [class*='Button'][class*='-dark'][class*='--wired']:focus {
+	color: #0d0d0d;
+}
+
+a[class*='Tag'][class*='-light']::after,
+button[class*='Tag'][class*='-light']::after,
+[class*='Button'][class*='-light']::after {
+	background: #1a1a1a;
+}
+
+a[class*='Tag'][class*='-light']:hover,
+a[class*='Tag'][class*='-light']:focus,
+button[class*='Tag'][class*='-light']:hover,
+button[class*='Tag'][class*='-light']:focus,
+[class*='Button'][class*='-light']:hover,
+[class*='Button'][class*='-light']:focus {
+	color: #f2f2f2;
+}
+
+a[class*='Tag'][class*='-light'][class*='--wired'],
+button[class*='Tag'][class*='-light'][class*='--wired'],
+[class*='Button'][class*='-light'][class*='--wired'] {
+	color: #333;
+	box-shadow: 0 0 0 1px #333 inset;
+}
+
+a[class*='Tag'][class*='-light'][class*='--wired']::after,
+button[class*='Tag'][class*='-light'][class*='--wired']::after,
+[class*='Button'][class*='-light'][class*='--wired']::after {
+	background: #333;
+}
+
+a[class*='Tag'][class*='-light'][class*='--wired']:hover,
+a[class*='Tag'][class*='-light'][class*='--wired']:focus,
+button[class*='Tag'][class*='-light'][class*='--wired']:hover,
+button[class*='Tag'][class*='-light'][class*='--wired']:focus,
+[class*='Button'][class*='-light'][class*='--wired']:hover,
+[class*='Button'][class*='-light'][class*='--wired']:focus {
 	color: #f2f2f2;
 }
 
@@ -11000,13 +11000,13 @@ input[type='reset'],
 	background: var(--alert-background-inverted);
 }
 
-[class*='Alert'][class*='-light'] {
+[class*='Alert'][class*='-dark'] {
 	color: #f2f2f2;
 	border-color: #fff;
 	background: rgba(255, 255, 255, .2);
 }
 
-[class*='Alert'][class*='-dark'] {
+[class*='Alert'][class*='-light'] {
 	color: #0d0d0d;
 	border-color: #333;
 	background: rgba(51, 51, 51, .2);

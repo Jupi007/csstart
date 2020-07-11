@@ -17,16 +17,16 @@
         }
     }
 
-    @include option("components-light") {
-        &[class*="-light"] {
+    @include option("components-dark") {
+        &[class*="-dark"] {
             border-color: $components-background-dark;
             color: $body-color-dark;
             background: $alert-background-dark;
         }
     }
 
-    @include option("components-dark") {
-        &[class*="-dark"] {
+    @include option("components-light") {
+        &[class*="-light"] {
             border-color: $components-background;
         	color: $body-color;
             background: $alert-background;
