@@ -8,6 +8,7 @@
 
 $options: !default;
 $options: map-merge((
+	"border-radius": true,
 	"transitions": true,
 
     "smooth-scroll": true,

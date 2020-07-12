@@ -6,7 +6,7 @@
 	align-items: center;
 	justify-content: center;
 	background: $figure-background;
-	border-radius: $figure-border-radius;
+	@include border-radius($figure-border-radius);
 	padding: $figure-padding;
     margin-top: $figure-margin-top;
     margin-bottom: $figure-margin-bottom;

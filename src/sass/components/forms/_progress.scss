@@ -4,7 +4,7 @@ meter, progress {
 	background: var(--progress-background);
 	border: none;
 	height: $progress-height;
-	border-radius: $progress-border-radius;
+	@include border-radius($progress-border-radius);
 
     @include transition("all");
 }
@@ -14,7 +14,7 @@ meter, progress {
 	background: var(--progress-background);
 	border: none;
 	height: $progress-height;
-	border-radius: $progress-border-radius;
+	@include border-radius($progress-border-radius);
 }
 
 // ********
@@ -22,12 +22,12 @@ meter, progress {
 // ********
 ::-webkit-progress-value {
 	background: $progress-bar-background;
-	border-radius: $progress-border-radius;
+	@include border-radius($progress-border-radius);
 }
 
 ::-moz-progress-bar {
 	background: $progress-bar-background;
-	border-radius: $progress-border-radius;
+	@include border-radius($progress-border-radius);
 }
 
 progress:indeterminate {
@@ -51,13 +51,13 @@ progress:indeterminate {
 :-moz-meter-optimum::-moz-meter-bar,
 :-moz-meter-sub-optimum::-moz-meter-bar,
 :-moz-meter-sub-sub-optimum::-moz-meter-bar {
-	border-radius: $progress-border-radius;
+    @include border-radius($progress-border-radius);
 }
 
 ::-webkit-meter-optimum-value,
 ::-webkit-meter-suboptimum-value,
 ::-webkit-meter-even-less-good-value {
-	border-radius: $progress-border-radius;
+    @include border-radius($progress-border-radius);
 }
 
 :-moz-meter-optimum::-moz-meter-bar { background: $meter-optimum-background; }

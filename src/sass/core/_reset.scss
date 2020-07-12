@@ -228,7 +228,7 @@ pre {
 
 kbd {
 	border: 1px solid $body-color;
-	border-radius: $kbd-border-radius;
+	@include border-radius($kbd-border-radius);
 	padding: $kbd-padding;
 	font-size: $kbd-font-size;
 
@@ -245,7 +245,7 @@ kbd {
 }
 
 mark {
-	border-radius: $mark-border-radius;
+	@include border-radius($mark-border-radius);
 	padding: $mark-padding;
 	background: $mark-background;
 }

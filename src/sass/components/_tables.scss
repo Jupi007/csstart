@@ -6,7 +6,7 @@
 	table-layout: auto;
 	border-spacing: 0px;
 	border: $table-border-width solid var(--table-border-color);
-	border-radius: $table-border-radius;
+    @include border-radius($table-border-radius);
     margin-top: $table-margin-top;
     margin-bottom: $table-margin-bottom;
     background: var(--table-background);

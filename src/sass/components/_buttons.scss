@@ -7,7 +7,7 @@ input[type="reset"],
 [class*="Button"] {
     font-size: $button-font-size;
 	padding: $button-padding;
-	border-radius: $button-border-radius;
+	@include border-radius($button-border-radius);
     line-height: inherit;
 }
 

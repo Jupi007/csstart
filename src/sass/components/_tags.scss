@@ -12,7 +12,7 @@ input[type="reset"]
 	background: var(--components-background);
 	color: var(--components-color);
 	border: none;
-	border-radius: $tag-border-radius;
+	@include border-radius($tag-border-radius);
 	padding: $tag-padding;
 	font-size: $tag-font-size;
 	line-height: 1;

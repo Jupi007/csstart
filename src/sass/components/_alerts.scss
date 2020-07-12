@@ -4,7 +4,7 @@
 	padding: $alert-padding;
 	border: $alert-border-width solid var(--components-background);
 	border-left-width: $alert-border-left-width;
-	border-radius: $alert-border-radius;
+	@include border-radius($alert-border-radius);
 	margin-bottom: $alert-margin-bottom;
     background: var(--alert-background);
 	color: var(--body-color);

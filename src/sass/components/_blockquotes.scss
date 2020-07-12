@@ -4,7 +4,7 @@
 	padding: $blockquote-padding;
 	background: var(--blockquote-background);
     color: var(--blockquote-color);
-	border-radius: $blockquote-border-radius;
+	@include border-radius($blockquote-border-radius);
 	position: relative;
 	padding-left: 80px;
     margin-top: $blockquote-margin-top;

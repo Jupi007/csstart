@@ -5,7 +5,7 @@
 	flex-direction: column;
 	position: relative;
 	border: $card-border-width solid $card-border-color;
-	border-radius: $card-border-radius;
+	@include border-radius($card-border-radius);
 	word-wrap: break-word;
 }
 
@@ -27,11 +27,11 @@
 	max-height: 100vh;
 
     &:first-child {
-        border-radius: $card-border-radius $card-border-radius 0 0;
+        @include border-radius($card-border-radius $card-border-radius 0 0);
     }
 
     &:last-child {
-        border-radius: 0 0 $card-border-radius $card-border-radius;
+        @include border-radius(0 0 $card-border-radius $card-border-radius);
     }
 }
 

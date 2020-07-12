@@ -3,7 +3,6 @@
         @include assert {
             @include output {
                 @include option('enabled-option') {
-                    @debug $options;
                     display: block;
                 }
             }
@@ -30,7 +29,6 @@
         @include assert {
             @include output {
                 @include option('enabled-option') {
-                    @debug $options;
                     display: block;
                 }
             }
@@ -171,6 +169,37 @@
                     display: block;
                 }
             }
+        }
+    }
+}
+
+@include describe('@mixin border-radius()') {
+    @include it('Check if the border-radius option is enable and return the given border-radius only if it is upper than 0') {
+        @include assert {
+            @include output {
+                @include border-radius(1px);
+                @include border-radius(0 1px);
+                @include border-radius(0 1px 0 0);
+            }
+
+            @include expect {
+                border-radius: 1px;
+                border-radius: 0 1px;
+                border-radius: 0 1px 0 0;
+            }
+        }
+    }
+
+    @include it('Check if the given border-radius is equal to 0') {
+        @include assert {
+            @include output {
+                @include border-radius(0px);
+                @include border-radius(0);
+                @include border-radius(0 0px);
+                @include border-radius(0 0px 0 0);
+            }
+
+            @include expect {}
         }
     }
 }

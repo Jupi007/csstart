@@ -5,7 +5,7 @@ input[type="radio"] {
 	height: $checkbox-size;
 	width: $checkbox-size;
     margin: spacer('tiny-plus') spacer('medium');
-    border-radius: $checkbox-border-radius;
+    @include border-radius($checkbox-border-radius);
 	vertical-align: middle;
 	position: relative;
 
