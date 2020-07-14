@@ -75,3 +75,11 @@
         }
     }
 }
+
+@mixin box-shadow($box-shadow) {
+    @include option("box-shadow") {
+        @if $box-shadow != none {
+            box-shadow: $box-shadow;
+        }
+    }
+}
