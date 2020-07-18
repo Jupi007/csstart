@@ -1,4 +1,4 @@
-@include option("alerts") {
+@include option("alert") {
 
 [class*="Alert"] {
 	padding: $alert-padding;

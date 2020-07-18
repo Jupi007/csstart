@@ -1,4 +1,4 @@
-@include option("blockquotes") {
+@include option("blockquote") {
 
 [class*="Blockquote"],  [class*="Afb"] blockquote,{
 	padding: $blockquote-padding;

@@ -22,7 +22,7 @@
     }
 }
 
-@include option("forms") {
+@include option("form") {
 
 input[type="range"] {
 	cursor: pointer;

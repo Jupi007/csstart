@@ -21,16 +21,16 @@ $options: map-merge((
     "components-light": true,
     "components-ghost": true,
 
-    "forms": true,
-    "alerts": true,
-	"blockquotes": true,
-	"tags": true,
-	"buttons": true, // Need tags enable
-	"cards": true,
-	"figures": true,
+    "form": true,
+    "alert": true,
+	"blockquote": true,
+	"tag": true,
+	"button": true, // Need tags enable
+	"card": true,
+	"figure": true,
 	"media": true,
 	"media-responsive": true,
-	"tables": true,
+	"table": true,
         "table-zebra": true,
         "table-hover": true,
 
