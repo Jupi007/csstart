@@ -52,6 +52,22 @@
 		background: var(--table-headings-cell-background);
 	}
 
+    @include option("table-zebra") {
+        tr:nth-child(even) {
+    		background: var(--table-zebra-cell-background);
+    	}
+    }
+
+    @include option("table-hover") {
+        tbody tr {
+            @include transition("background");
+
+    		&:hover {
+                background: var(--table-cell-hover-background);
+            }
+    	}
+    }
+
 	&[class*="--fixed"] {
 		table-layout: fixed;
 	}
@@ -60,28 +76,6 @@
 		td, th {
 			padding: $table-slim-cell-padding;
 		}
-	}
-
-	&[class*="--zebra"] {
-		th {
-			background: var(--table-zebra-headings-cell-background);
-		}
-
-		tr:nth-child(even) {
-			background: var(--table-zebra-cell-background);
-		}
-	}
-
-	&[class*="--hover"] tbody tr {
-        @include transition("background");
-
-		th {
-			background: var(--table-headings-cell-background);
-		}
-
-		&:hover {
-            background: var(--table-cell-hover-background);
-        }
 	}
 
     @include option("components-inverted") {
@@ -138,22 +132,14 @@
     			background: $table-headings-cell-background;
     		}
 
-            &[class*="--zebra"] {
-        		th {
-        			background: $table-zebra-headings-cell-background;
-        		}
+            @include option("table-zebra") {
+            	tr:nth-child(even) {
+            		background: $table-zebra-cell-background;
+            	}
+            }
 
-        		tr:nth-child(even) {
-        			background: $table-zebra-cell-background;
-        		}
-        	}
-
-    		&[class*="--hover"] tbody tr {
-        		th {
-        			background: $table-headings-cell-background;
-        		}
-
-                &:hover {
+            @include option("table-hover") {
+        		tbody tr:hover {
                     background: $table-cell-hover-background;
                 }
             }
@@ -174,22 +160,14 @@
     			background: $table-headings-cell-background-dark;
     		}
 
-            &[class*="--zebra"] {
-        		th {
-        			background: $table-zebra-headings-cell-background-dark;
-        		}
-
-        		tr:nth-child(even) {
+            @include option("table-zebra") {
+                tr:nth-child(even) {
         			background: $table-zebra-cell-background-dark;
         		}
-        	}
+            }
 
-    		&[class*="--hover"] tbody tr {
-        		th {
-        			background: $table-headings-cell-background-dark;
-        		}
-
-                &:hover {
+            @include option("table-hover") {
+        		tbody tr:hover {
                     background: $table-cell-hover-background-dark;
                 }
             }
