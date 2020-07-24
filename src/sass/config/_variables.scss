@@ -202,7 +202,7 @@ $blockquote-margin-top: calc(#{$paragraph-margin-bottom} * 2) !default;
 $blockquote-margin-bottom: calc(#{$paragraph-margin-bottom} * 2) !default;
 $blockquote-background: grey(10) !default;
 $blockquote-color: $body-color !default;
-$blockquote-border-radius: 10px !default;
+$blockquote-border-radius: $border-radius-big !default;
 $blockquote-quote-color: grey(30) !default;
 $blockquote-cite-color: grey(70) !default;
 $blockquote-cite-text-align: right !default;
@@ -218,7 +218,7 @@ $blockquote-cite-color-dark: grey(40) !default;
 // -------
 
 $figure-background: grey(80) !default;
-$figure-border-radius: $border-radius-base !default;
+$figure-border-radius: $border-radius-big !default;
 $figure-padding: spacer("large-plus") !default;
 $figure-margin-top: calc(#{$paragraph-margin-bottom} * 2) !default;
 $figure-margin-bottom: calc(#{$paragraph-margin-bottom} * 2) !default;
