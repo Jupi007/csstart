@@ -1,6 +1,7 @@
 @include option("blockquote") {
 
-[class*="Blockquote"],  [class*="Afb"] blockquote,{
+[class*="#{class("Blockquote")}"],
+[class*="#{class("Auto-formating-block")}"] blockquote {
 	padding: $blockquote-padding;
 	background: var(--blockquote-background);
     color: var(--blockquote-color);
@@ -37,7 +38,7 @@
 	}
 
     @include option("components-inverted") {
-    	&[class*="-inverted"] {
+    	&[class*="#{class("(Component)-inverted")}"] {
             background: var(--blockquote-background-inverted);
             color: var(--blockquote-color-inverted);
 
@@ -52,7 +53,7 @@
     }
 
     @include option("components-light") {
-    	&[class*="-light"] {
+    	&[class*="#{class("(Component)-inverted")}"] {
             background: $blockquote-background;
             color: $blockquote-color;
 
@@ -67,7 +68,7 @@
     }
 
     @include option("components-dark") {
-    	&[class*="-dark"] {
+    	&[class*="#{class("(Component)-dark")}"] {
             background: $blockquote-background-dark;
             color: $blockquote-color-dark;
 

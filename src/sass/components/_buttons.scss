@@ -4,39 +4,39 @@ button,
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
-[class*="Button"] {
+[class*="#{class("Button")}"] {
     font-size: $button-font-size;
 	padding: $button-padding;
 	@include border-radius($button-border-radius);
     line-height: inherit;
 }
 
-[class*="Button"] {
-	&[class*="--wired"] {
+[class*="#{class("Button")}"] {
+	&[class*="#{class("(Component)--wired")}"] {
 		box-shadow: 0 0 0 $button-border-width var(--components-background) inset;
 	}
 
-	&[class*="--large"] {
+	&[class*="#{class("(Component)--large")}"] {
 		padding: $button-padding-large;
 		font-size: $button-font-size-large;
 	}
 
-	&[class*="--xlarge"] {
+	&[class*="#{class("(Component)--extra-large")}"] {
 		padding: $button-padding-extra-large;
 		font-size: $button-font-size-extra-large;
 	}
 
-	&[class*="--small"] {
+	&[class*="#{class("(Component)--small")}"] {
 		padding: $button-padding-small;
 		font-size: $button-font-size-small;
 	}
 
-	&[class*="--xsmall"] {
+	&[class*="#{class("(Component)--extra-small")}"] {
 		padding: $button-padding-extra-small;
 		font-size: $button-font-size-extra-small;
 	}
 
-    &[class*="--block"] {
+    &[class*="#{class("(Component)--block")}"] {
         display: block;
         width: 100%;
     }

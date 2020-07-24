@@ -1,6 +1,6 @@
 @include option("alert") {
 
-[class*="Alert"] {
+[class*="#{class("Alert")}"] {
 	padding: $alert-padding;
 	border: $alert-border-width solid var(--components-background);
 	border-left-width: $alert-border-left-width;
@@ -10,7 +10,7 @@
 	color: var(--body-color);
 
     @include option("components-inverted") {
-        &[class*="-inverted"] {
+        &[class*="#{class("(Component)-inverted")}"] {
             border-color: var(--components-background-inverted);
         	color: var(--body-color-inverted);
             background: var(--alert-background-inverted);
@@ -18,7 +18,7 @@
     }
 
     @include option("components-dark") {
-        &[class*="-dark"] {
+        &[class*="#{class("(Component)-dark")}"] {
             border-color: $components-background-dark;
             color: $body-color-dark;
             background: $alert-background-dark;
@@ -26,7 +26,7 @@
     }
 
     @include option("components-light") {
-        &[class*="-light"] {
+        &[class*="#{class("(Component)-light")}"] {
             border-color: $components-background;
         	color: $body-color;
             background: $alert-background;
@@ -34,7 +34,7 @@
     }
 
     @include option("components-ghost") {
-        &[class*="-ghost"] {
+        &[class*="#{class("(Component)-ghost")}"] {
             border-color: transparent;
         	color: var(--body-color);
             background: transparent;

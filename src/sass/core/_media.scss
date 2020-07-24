@@ -22,9 +22,9 @@
 
 @include option("dark-theme-utilities") {
     @media (prefers-color-scheme: dark) {
-        @include media-border-utilities("dark-");
-        @include media-color-utilities("dark-");
-        @include media-display-utilities("dark-");
+        @include media-border-utilities(class("dark-theme-utilities-prefix-"));
+        @include media-color-utilities(class("dark-theme-utilities-prefix-"));
+        @include media-display-utilities(class("dark-theme-utilities-prefix-"));
     }
 }
 
@@ -125,17 +125,17 @@
     	}
 
     	a {
-    		&.no-reformat:after { content: ''; }
+    		&.#{class("print-utilities-prefix-")}#{class("(print-)no-reformat")}:after { content: ''; }
     	}
 
     	abbr,
     	acronym {
     		&[title] {
-    			&.no-reformat:after { content: ''; }
+    			&.#{class("print-utilities-prefix-")}#{class("(print-)no-reformat")}:after { content: ''; }
     		}
     	}
 
-    	.no-reformat {
+    	.#{class("print-utilities-prefix-")}#{class("(print-)no-reformat")} {
     		abbr,
     		acronym,
     		a {
@@ -147,30 +147,34 @@
     		color: transparent;
     	}
 
-    	.print {
-            &-main {
+    	.#{class("print-utilities-prefix-")} {
+            &#{class("(print-)main")} {
                 margin: 0!important;
                 background: transparent!important;
                 border: 0!important;
             }
-    		&-break,
-    		&-break-before {
+
+    		&#{class("(print-)page-break")},
+    		&#{class("(print-)page-break-before")} {
     			page-break-before: always!important;
     		}
 
-    		&-break-after{
+    		&#{class("(print-)page-break-after")} {
     			page-break-after: always!important;
     		}
 
-            &-m0 { margin: 0!important;}
-            &-wauto {
+            &#{class("margin")}#{class("(spacer)-0")} {
+                margin: 0!important;
+            }
+
+            &#{class("width")}#{class("(size)-auto")} {
                 width: auto!important;
                 max-width: 100%!important;
                 min-width: auto!important;
             }
     	}
 
-        @include media-display-utilities("print-");
-        @include media-visibility-utilities("print-");
+        @include media-display-utilities(class("print-utilities-prefix-"));
+        @include media-visibility-utilities(class("print-utilities-prefix-"));
     }
 }

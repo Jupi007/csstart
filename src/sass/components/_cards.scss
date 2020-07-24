@@ -1,6 +1,6 @@
 @include option("card") {
 
-[class*="Card"] {
+[class*="#{class("Card")}"] {
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -9,7 +9,8 @@
 	word-wrap: break-word;
 }
 
-[class*="Card"][class*="--link"], a[class*="Card"] {
+[class*="#{class("Card")}"][class*="#{class("(Component)--link")}"],
+a[class*="#{class("Card")}"] {
 	cursor: pointer;
 	color: var(--body-color);
     text-decoration: none;
@@ -22,7 +23,7 @@
 	}
 }
 
-.card-figure {
+.#{class("Card-child")}#{class("(card)-figure")} {
 	object-fit: cover;
 	max-height: 100vh;
 
@@ -35,17 +36,17 @@
     }
 }
 
-.card-title {
+.#{class("Card-child")}#{class("(card)-title")} {
 	font-size: $card-title-font-size;
 }
 
-.card-subtitle {
+.#{class("Card-child")}#{class("(card)-subtitle")} {
 	display: block;
 	font-size: $card-subtitle-font-size;
 	color: var(--card-subtitle-color);
 }
 
-[class*="card-body"] {
+[class*="#{class("Card-child")}#{class("(card)-body")}"] {
 	padding: $card-body-padding;
 
 	> *:last-child {

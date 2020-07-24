@@ -1,6 +1,7 @@
 @include option("table") {
 
-[class*="Table"],  [class*="Afb"] table, {
+[class*="#{class("Table")}"],
+[class*="#{class("Auto-formating-block")}"] table, {
 	width: 100%;
 	max-width: 100%;
 	table-layout: auto;
@@ -68,18 +69,18 @@
     	}
     }
 
-	&[class*="--fixed"] {
+	&[class*="#{class("(Component)--fixed")}"] {
 		table-layout: fixed;
 	}
 
-	&[class*="--slim"] {
+	&[class*="#{class("(Component)--slim")}"] {
 		td, th {
 			padding: $table-slim-cell-padding;
 		}
 	}
 
     @include option("components-inverted") {
-    	&[class*="-inverted"] {
+    	&[class*="#{class("(Component)-inverted")}"] {
     		background: var(--table-background-inverted);
     		color: var(--body-color-inverted);
             border-color: var(--table-border-color-inverted);
@@ -92,18 +93,14 @@
     			background: var(--table-headings-cell-background-inverted);
     		}
 
-    		&[class*="--zebra"] {
+    		@include option("table-zebra") {
     			tr:nth-child(even) {
     				background: var(--table-zebra-cell-background-inverted);
     			}
     		}
 
-    		&[class*="--hover"] tbody tr {
-        		th {
-        			background: var(--table-headings-cell-background-inverted);
-        		}
-
-                &:hover {
+            @include option("table-hover") {
+                tbody tr:hover {
                     background: var(--table-cell-hover-background-inverted);
                 }
             }
@@ -119,7 +116,7 @@
     }
 
     @include option("components-light") {
-    	&[class*="-light"] {
+    	&[class*="#{class("(Component)-light")}"] {
     		background: $table-background;
     		color: $body-color;
             border-color: $table-border-color;
@@ -147,7 +144,7 @@
     }
 
     @include option("components-dark") {
-    	&[class*="-dark"] {
+    	&[class*="#{class("(Component)-dark")}"] {
     		background: $table-background-dark;
     		color: $body-color-dark;
             border-color: $table-border-color-dark;

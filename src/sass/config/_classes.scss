@@ -1,0 +1,176 @@
+//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+//-*-*-*-*-*-*-*-*-*-*-*-*Classes config map to rule them all-*-*-*-*-*-*-*-*-*-*-*-*-*
+//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
+$classes: !default;
+$classes: map-merge((
+    // Components
+    "Alert": "Alert",
+	"Tag": "Tag",
+    "Button": "Button",
+    "Blockquote": "Blockquote",
+    "Card": "Card",
+    "Figure": "Figure",
+    "Media": "Media",
+    "Table": "Table",
+
+    "Auto-formating-block": "Afb",
+
+    // Components children namespace
+    "Card-child": "card",
+    "Media-child": "media",
+
+    // Components children
+    "(card)-figure": "-figure",
+    "(card)-title": "-title",
+    "(card)-subtitle": "-subtitle",
+    "(card)-body": "-body",
+
+    "(media)-body": "-body",
+    "(media)-figure": "-figure",
+
+    // Components variants
+    "(Component)-inverted": "-inverted",
+    "(Component)-dark": "-dark",
+    "(Component)-light": "-light",
+    "(Component)-ghost": "-ghost",
+
+    // Components options
+    "(Component)--wired": "--wired",
+    "(Component)--block": "--block",
+    "(Component)--link": "--link",
+    "(Component)--fixed": "--fixed",
+    "(Component)--slim": "--slim",
+
+    // Components sizes
+    "(Component)--extra-small": "--xs",
+    "(Component)--small": "--s",
+    "(Component)--large": "--l",
+    "(Component)--extra-large": "--xl",
+
+    // Flex
+    "Flex": "Flex",
+
+    "Flex-direction": "dir",
+
+    "Flex-wrap": "wrap",
+    "(Flex-wrap)-reverse": "-r",
+    "Flex-nowrap": "nowrap",
+
+    "Flex-justify-content": "jc",
+    "Flex-align-items": "ai",
+    "Flex-align-content": "ac",
+    "Flex-align-self": "as",
+
+    "(Flex)-row": "-r",
+    "(Flex)-row-reverse": "-rr",
+    "(Flex)-column": "-c",
+    "(Flex)-column-reverse": "-cr",
+    "(Flex)-start": "-s",
+    "(Flex)-end": "-e",
+    "(Flex)-center": "-c",
+    "(Flex)-between": "-b",
+    "(Flex)-around": "-a",
+    "(Flex)-baseline": "-bl",
+    "(Flex)-stretch": "-str",
+
+    // Grid
+    "Grid": "Grid",
+    "column": "col",
+    "row": "row",
+    "(Grid)-auto": "-auto",
+    "Grid-gutter": "has-gutter",
+
+    // Utilities
+    "text": "txt",
+        "(text)-color": "",
+        "(text)-normal": "-normal",
+        "(text)-left": "-left",
+        "(text)-center": "-center",
+        "(text)-right": "-right",
+        "(text)-justify": "-justify",
+        "(text)-wrap": "-wrap",
+        "(text)-nowrap": "-nowrap",
+        "(text)-truncate": "-truncate",
+        "(text)-capitalize": "-capitalize",
+        "(text)-uppercase": "-uppercase",
+        "(text)-lowercase": "-lowercase",
+        "(text)-italic": "-italic",
+        "(text)-underline": "-underline",
+        "(text)-weight": "-weight",
+    "background": "bg",
+    "grey": "grey",
+
+    "border": "b",
+    "(border)-none": "-none",
+    "border-radius": "br",
+
+    "display": "d",
+        "(display)-none": "-none",
+        "(display)-inline": "-inline",
+        "(display)-inline-block": "-inline-block",
+        "(display)-block": "-block",
+        "(display)-table": "-table",
+        "(display)-table-cell": "-table-cell",
+        "(display)-table-row": "-table-row",
+        "(display)-flex": "-flex",
+        "(display)-inline-flex": "-inline-flex",
+        "(display)-grid": "-grid",
+        "(display)-inline-grid": "-inline-grid",
+
+    "width": "w",
+    "height": "h",
+        "(size)-auto": "-auto",
+        "(size)-viewport": "-vp",
+        "(size)-25%": "-25",
+        "(size)-50%": "-50",
+        "(size)-75%": "-75",
+        "(size)-100%": "-100",
+        "(size)-1/3": "-1_3",
+        "(size)-2/3": "-2_3",
+
+    "align": "align",
+        "(align)-right": "-r",
+        "(align)-left": "-l",
+        "(align)-center": "-c",
+        "(align)-auto": "-auto",
+
+    "margin": "m",
+    "padding": "p",
+        "(spacer)-0": "0",
+        "(spacer)-top": "t",
+        "(spacer)-right": "r",
+        "(spacer)-bottom": "b",
+        "(spacer)-left": "l",
+        "(spacer)-x-axis": "x",
+        "(spacer)-y-axis": "y",
+        "(spacer)-auto": "-auto",
+
+    "visible": "visible",
+    "hidden": "hidden",
+
+    "item-first": "item-first",
+    "item-last": "item-last",
+
+    "unstyled": "unstyled",
+
+    "floatbox": "floatbox",
+    "float-left": "fl",
+    "float-right": "fr",
+    "clear": "clear",
+    "clear-right": "clear-r",
+    "clear-left": "clear-l",
+    "block-formatting-context": "bfc",
+
+    "visually-hidden": "visually-hidden",
+
+    // Media
+    "dark-theme-utilities-prefix-": "dark-",
+    "print-utilities-prefix-": "print-",
+
+    "(print-)no-reformat": "no-reformat",
+    "(print-)main": "main",
+    "(print-)page-break": "break",
+    "(print-)page-break-before": "break-before",
+    "(print-)page-break-after": "break-after",
+), $classes);

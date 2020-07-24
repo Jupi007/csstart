@@ -1,6 +1,7 @@
 @include option("figure") {
 
-[class*="Figure"],  [class*="Afb"] figure, {
+[class*="#{class("Figure")}"],
+[class*="#{class("Auto-formating-block")}"] figure {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -21,7 +22,7 @@
         max-height: $figure-max-height-image;
     }
 
-	&[class*="-light"] {
+	&[class*="#{class("(Component)-light")}"] {
 		background: $figure-light-background;
 
 		figcaption {

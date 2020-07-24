@@ -32,6 +32,16 @@
     @return $spacer;
 }
 
+@function class($name) {
+    $class: getter($classes, $name);
+
+    @if $class == null {
+        @return $name;
+    }
+
+    @return $class;
+}
+
 @function grey($percentage) {
 	@if $percentage >= 0 and $percentage <= 100 {
 		@return(darken(#fff, $percentage));

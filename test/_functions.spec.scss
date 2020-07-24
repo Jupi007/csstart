@@ -34,6 +34,15 @@
     }
 }
 
+@include describe('class()') {
+    @include it('Returns the class corresponding to the given name') {
+        @include assert-equal(class('class-name'), "class");
+    }
+    @include it('Returns the given name') {
+        @include assert-equal(class('wrong-class'), 'wrong-class');
+    }
+}
+
 @include describe('grey()') {
     @include it('Returns the shade of gray corresponding to the given percentage') {
         @include assert-equal(grey(77), #3b3b3b, $inspect: true);

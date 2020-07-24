@@ -1,15 +1,9 @@
 @include option("grid") {
-    [class*="Grid"] {
+    [class*="#{class("Grid")}"] {
     	display: grid;
     	grid-auto-flow: row;
     	grid-auto-columns: 1fr;
     	grid-template-columns: none;
-
-    	@each $name, $value in $gutters  {
-    		&.has-gutter#{$name} {
-    			grid-gap: $value;
-    		}
-    	}
 
     	@include respond-to($grid-min-breakpoint, "up") {
     		grid-auto-flow: dense;
@@ -19,41 +13,47 @@
     				grid-template-columns: repeat(#{$i}, 1fr);
     			}
 
-                [class*="col-#{$i}"] {
+                [class*="#{class("column")}-#{$i}"] {
                     grid-column: auto / span #{$i};
                 }
 
-                [class*="row-#{$i}"] {
+                [class*="#{class("row")}-#{$i}"] {
                     grid-row: auto / span #{$i};
                 }
     		}
 
-    		&[class*="-auto"] {
+    		&[class*="#{class("(Grid)-auto")}"] {
     		    grid-auto-flow: column;
     			grid-auto-columns: 1fr;
     			grid-template-columns: none;
     		}
     	}
     }
+
+    @each $name, $value in $gutters  {
+        .#{class("Grid-gutter")}#{$name} {
+            grid-gap: $value;
+        }
+    }
 }
 
 @mixin media-grid($prefix: "") {
-	[class*="Grid"] {
+	[class*="#{class("Grid")}"] {
 		@for $i from 2 through $grid-max-cols {
 			&[class*="--#{$prefix}#{$i}"] {
 				grid-template-columns: repeat(#{$i}, 1fr);
 			}
 
-            [class*="#{$prefix}-col-#{$i}"] {
+            [class*="#{$prefix}#{class("column")}-#{$i}"] {
                 grid-column: auto / span #{$i};
             }
 
-            [class*="#{$prefix}-row-#{$i}"] {
+            [class*="#{$prefix}#{class("row")}-#{$i}"] {
                 grid-row: auto / span #{$i};
             }
 		}
 
-		&[class*="#{$prefix}-auto"] {
+		&[class*="#{$prefix}#{class("(Grid)-auto")}"] {
 		    grid-auto-flow: column;
 			grid-auto-columns: 1fr;
 			grid-template-columns: none;
