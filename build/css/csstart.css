@@ -11337,7 +11337,19 @@ input[type='reset'],
 	display: flex;
 	flex-direction: column;
 	word-wrap: break-word;
-	border: 1px solid gray;
+	border-radius: 3px;
+	border-radius: 3px;
+}
+
+[class*='Card'] > :first-child {
+	border-radius: 3px 3px 0 0;
+}
+
+[class*='Card'] > :last-child {
+	border-radius: 0 0 3px 3px;
+}
+
+[class*='Card'] > :only-child {
 	border-radius: 3px;
 }
 
@@ -11365,14 +11377,6 @@ a[class*='Card']:focus {
 	   object-fit: cover;
 }
 
-.card-figure:first-child {
-	border-radius: 3px 3px 0 0;
-}
-
-.card-figure:last-child {
-	border-radius: 0 0 3px 3px;
-}
-
 .card-title {
 	font-size: 1.4em;
 }
@@ -11384,11 +11388,17 @@ a[class*='Card']:focus {
 }
 
 [class*='card-body'] {
+	height: 100%;
 	padding: calc(var(--spacer-base) * 1);
+	border: 1px solid gray;
 }
 
-[class*='card-body'] > *:last-child {
-	margin-bottom: 0;
+[class*='card-body']:first-child:not(:only-child) {
+	border-bottom: none;
+}
+
+[class*='card-body']:last-child:not(:only-child) {
+	border-top: none;
 }
 
 [class*='Table'],
@@ -11613,8 +11623,8 @@ a[class*='Card']:focus {
 	color: var(--blockquote-quote-color);
 }
 
-[class*='Blockquote'] > *:last-child,
-[class*='Afb'] blockquote > *:last-child {
+[class*='Blockquote'] > :last-child,
+[class*='Afb'] blockquote > :last-child {
 	margin-bottom: 0;
 }
 

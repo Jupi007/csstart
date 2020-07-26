@@ -4,9 +4,21 @@
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	border: $card-border-width solid $card-border-color;
 	@include border-radius($card-border-radius);
 	word-wrap: break-word;
+    border-radius: $card-border-radius;
+
+    > :first-child {
+        @include border-radius($card-border-radius $card-border-radius 0 0);
+    }
+
+    > :last-child {
+        @include border-radius(0 0 $card-border-radius $card-border-radius);
+    }
+
+    > :only-child {
+        @include border-radius($card-border-radius);
+    }
 }
 
 [class*="#{class("Card")}"][class*="#{class("(Component)--link")}"],
@@ -26,14 +38,6 @@ a[class*="#{class("Card")}"] {
 .#{class("Card-child")}#{class("(card)-figure")} {
 	object-fit: cover;
 	max-height: 100vh;
-
-    &:first-child {
-        @include border-radius($card-border-radius $card-border-radius 0 0);
-    }
-
-    &:last-child {
-        @include border-radius(0 0 $card-border-radius $card-border-radius);
-    }
 }
 
 .#{class("Card-child")}#{class("(card)-title")} {
@@ -47,11 +51,17 @@ a[class*="#{class("Card")}"] {
 }
 
 [class*="#{class("Card-child")}#{class("(card)-body")}"] {
+    height: 100%;
 	padding: $card-body-padding;
+	border: $card-border-width solid $card-border-color;
 
-	> *:last-child {
-		margin-bottom: 0;
-	}
+    &:first-child:not(:only-child) {
+        border-bottom: none;
+    }
+
+    &:last-child:not(:only-child) {
+        border-top: none;
+    }
 }
 
 }
