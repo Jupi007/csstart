@@ -142,11 +142,22 @@
 
 @mixin media-margin-utilities($prefix: "") {
 	.#{$prefix}#{class("margin")} {
-		& { margin: spacer($margin-base) !important; }
-		&#{class("(spacer)-right")} { margin-top: spacer($margin-base) !important; }
-		&#{class("(spacer)-right")} { margin-right: spacer($margin-base) !important; }
-		&#{class("(spacer)-bottom")} { margin-bottom: spacer($margin-base) !important; }
-		&#{class("(spacer)-left")} { margin-left: spacer($margin-base) !important; }
+        // Base margin
+		& {
+            margin: spacer($margin-base) !important;
+        }
+		&#{class("(spacer)-top")} {
+            margin-top: spacer($margin-base) !important;
+        }
+		&#{class("(spacer)-right")} {
+            margin-right: spacer($margin-base) !important;
+        }
+		&#{class("(spacer)-bottom")} {
+            margin-bottom: spacer($margin-base) !important;
+        }
+		&#{class("(spacer)-left")} {
+            margin-left: spacer($margin-base) !important;
+        }
 		&#{class("(spacer)-y-axis")} {
 			margin-top: spacer($margin-base) !important;
 			margin-bottom: spacer($margin-base) !important;
@@ -156,11 +167,22 @@
 			margin-right: spacer($margin-base) !important;
 		}
 
-		&#{class("(spacer)-0")} { margin: 0 !important; }
-		&#{class("(spacer)-right")}#{class("(spacer)-0")} { margin-top: 0 !important; }
-		&#{class("(spacer)-right")}#{class("(spacer)-0")} { margin-right: 0 !important; }
-		&#{class("(spacer)-bottom")}#{class("(spacer)-0")} { margin-bottom: 0 !important; }
-		&#{class("(spacer)-left")}#{class("(spacer)-0")} { margin-left: 0 !important; }
+        // Margin 0
+		&#{class("(spacer)-0")} {
+            margin: 0 !important;
+        }
+		&#{class("(spacer)-top")}#{class("(spacer)-0")} {
+            margin-top: 0 !important;
+        }
+		&#{class("(spacer)-right")}#{class("(spacer)-0")} {
+            margin-right: 0 !important;
+        }
+		&#{class("(spacer)-bottom")}#{class("(spacer)-0")} {
+            margin-bottom: 0 !important;
+        }
+		&#{class("(spacer)-left")}#{class("(spacer)-0")} {
+            margin-left: 0 !important;
+        }
 		&#{class("(spacer)-y-axis")}#{class("(spacer)-0")} {
 			margin-top: 0 !important;
 			margin-bottom: 0 !important;
@@ -170,11 +192,22 @@
 			margin-right: 0 !important;
 		}
 
-		&#{class("(spacer)-auto")} { margin: auto !important; }
-		&#{class("(spacer)-top")}#{class("(spacer)-auto")}{ margin-top: auto !important; }
-		&#{class("(spacer)-right")}#{class("(spacer)-auto")} { margin-right: auto !important; }
-		&#{class("(spacer)-bottom")}-#{class("(spacer)-auto")} { margin-bottom: auto !important; }
-		&#{class("(spacer)-left")}#{class("(spacer)-auto")} { margin-left: auto !important; }
+        // Auto margin
+		&#{class("(spacer)-auto")} {
+            margin: auto !important;
+        }
+		&#{class("(spacer)-top")}#{class("(spacer)-auto")} {
+            margin-top: auto !important;
+        }
+		&#{class("(spacer)-right")}#{class("(spacer)-auto")} {
+            margin-right: auto !important;
+        }
+		&#{class("(spacer)-bottom")}-#{class("(spacer)-auto")} {
+            margin-bottom: auto !important;
+        }
+		&#{class("(spacer)-left")}#{class("(spacer)-auto")} {
+            margin-left: auto !important;
+        }
 		&#{class("(spacer)-y-axis")}#{class("(spacer)-auto")} {
 			margin-top: auto !important;
 			margin-bottom: auto !important;
@@ -184,12 +217,23 @@
 			margin-right: auto !important;
 		}
 
+        // Named margins
 		@each $name, $spacer in $spacers {
-			&-#{$name} { margin: spacer($name) !important; }
-			&#{class("(spacer)-right")}-#{$name} { margin-top: spacer($name) !important; }
-			&#{class("(spacer)-right")}-#{$name} { margin-right: spacer($name) !important; }
-			&#{class("(spacer)-bottom")}-#{$name} { margin-bottom: spacer($name) !important; }
-			&#{class("(spacer)-left")}-#{$name} { margin-left: spacer($name) !important; }
+			&-#{$name} {
+                margin: spacer($name) !important;
+            }
+			&#{class("(spacer)-top")}-#{$name} {
+                margin-top: spacer($name) !important;
+            }
+			&#{class("(spacer)-right")}-#{$name} {
+                margin-right: spacer($name) !important;
+            }
+			&#{class("(spacer)-bottom")}-#{$name} {
+                margin-bottom: spacer($name) !important;
+            }
+			&#{class("(spacer)-left")}-#{$name} {
+                margin-left: spacer($name) !important;
+            }
 			&#{class("(spacer)-y-axis")}-#{$name} {
 				margin-top: spacer($name) !important;
 				margin-bottom: spacer($name) !important;
@@ -204,11 +248,22 @@
 
 @mixin media-padding-utilities($prefix: "") {
 	.#{$prefix}#{class("padding")} {
-		& { padding: spacer($margin-base) !important; }
-		&#{class("(spacer)-right")} { padding-top: spacer($margin-base) !important; }
-		&#{class("(spacer)-right")} { padding-right: spacer($margin-base) !important; }
-		&#{class("(spacer)-bottom")} { padding-bottom: spacer($margin-base) !important; }
-		&#{class("(spacer)-left")} { padding-left: spacer($margin-base) !important; }
+        // Base padding
+		& {
+            padding: spacer($margin-base) !important;
+        }
+		&#{class("(spacer)-top")} {
+            padding-top: spacer($margin-base) !important;
+        }
+		&#{class("(spacer)-right")} {
+            padding-right: spacer($margin-base) !important;
+        }
+		&#{class("(spacer)-bottom")} {
+            padding-bottom: spacer($margin-base) !important;
+        }
+		&#{class("(spacer)-left")} {
+            padding-left: spacer($margin-base) !important;
+        }
 		&#{class("(spacer)-y-axis")} {
 			padding-top: spacer($margin-base) !important;
 			padding-bottom: spacer($margin-base) !important;
@@ -218,11 +273,22 @@
 			padding-right: spacer($margin-base) !important;
 		}
 
-		&#{class("(spacer)-0")} { padding: 0 !important; }
-		&#{class("(spacer)-right")}#{class("(spacer)-0")} { padding-top: 0 !important; }
-		&#{class("(spacer)-right")}#{class("(spacer)-0")} { padding-right: 0 !important; }
-		&#{class("(spacer)-bottom")}#{class("(spacer)-0")} { padding-bottom: 0 !important; }
-		&#{class("(spacer)-left")}#{class("(spacer)-0")} { padding-left: 0 !important; }
+        // Padding 0
+		&#{class("(spacer)-0")} {
+            padding: 0 !important;
+        }
+		&#{class("(spacer)-top")}#{class("(spacer)-0")} {
+            padding-top: 0 !important;
+        }
+		&#{class("(spacer)-right")}#{class("(spacer)-0")} {
+            padding-right: 0 !important;
+        }
+		&#{class("(spacer)-bottom")}#{class("(spacer)-0")} {
+            padding-bottom: 0 !important;
+        }
+		&#{class("(spacer)-left")}#{class("(spacer)-0")} {
+            padding-left: 0 !important;
+        }
 		&#{class("(spacer)-y-axis")}#{class("(spacer)-0")} {
 			padding-top: 0 !important;
 			padding-bottom: 0 !important;
@@ -232,12 +298,23 @@
 			padding-right: 0 !important;
 		}
 
+        // Named paddings
 		@each $name, $spacer in $spacers {
-			&-#{$name} { padding: spacer($name) !important; }
-			&#{class("(spacer)-right")}-#{$name} { padding-top: spacer($name) !important; }
-			&#{class("(spacer)-right")}-#{$name} { padding-right: spacer($name) !important; }
-			&#{class("(spacer)-bottom")}-#{$name} { padding-bottom: spacer($name) !important; }
-			&#{class("(spacer)-left")}-#{$name} { padding-left: spacer($name) !important; }
+			&-#{$name} {
+                padding: spacer($name) !important;
+            }
+			&#{class("(spacer)-top")}-#{$name} {
+                padding-top: spacer($name) !important;
+            }
+			&#{class("(spacer)-right")}-#{$name} {
+                padding-right: spacer($name) !important;
+            }
+			&#{class("(spacer)-bottom")}-#{$name} {
+                padding-bottom: spacer($name) !important;
+            }
+			&#{class("(spacer)-left")}-#{$name} {
+                padding-left: spacer($name) !important;
+            }
 			&#{class("(spacer)-y-axis")}-#{$name} {
 				padding-top: spacer($name) !important;
 				padding-bottom: spacer($name) !important;
