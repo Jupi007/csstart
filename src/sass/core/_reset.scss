@@ -175,16 +175,16 @@ a {
 
     @include transition("color");
 
-	&:hover {
-		color: var(--link-hover-color);
-		text-decoration: $link-hover-decoration;
+	&:hover, &:focus {
+		color: var(--link-hover-focus-color);
+		text-decoration: $link-hover-focus-decoration;
 	}
 
     &:visited {
         color: var(--link-visited-color);
 
-        &:hover {
-            color: var(--link-visited-hover-color);
+        &:hover, &:focus {
+            color: var(--link-visited-hover-focus-color);
         }
     }
 }

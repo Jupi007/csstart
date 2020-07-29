@@ -88,7 +88,6 @@ $progress-background-dark: grey(20) !default;
 $button-padding: spacer("tiny-plus") spacer("medium") !default;
 $button-font-size: .9em !default;
 $button-border-radius: $border-radius-base !default;
-$button-border-width: 1px !default;
 
 $button-padding-large: spacer("small") spacer("medium-plus") !default;
 $button-font-size-large: 1em !default;
@@ -109,6 +108,13 @@ $button-font-size-extra-small: .7em !default;
 $tag-border-radius: $border-radius-base !default;
 $tag-padding: spacer("tiny") spacer("tiny-plus") !default;
 $tag-font-size: .8em !default;
+$tag-border-width: 1px !default;
+$tag-focus-outline-color-lighten: 20%;
+$tag-focus-outline-color: lighten($components-background, $tag-focus-outline-color-lighten);
+$tag-focus-outline-size: 3px;
+
+$tag-focus-outline-color-darken-dark: 50%;
+$tag-focus-outline-color-dark: darken($components-background-dark, $tag-focus-outline-color-lighten);
 
 $tag-padding-large: spacer("tiny-plus") spacer("small") !default;
 $tag-font-size-large: .85em !default;

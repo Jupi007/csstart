@@ -109,7 +109,7 @@
                 color: var(--link-color-inverted);
 
                 &:hover {
-                    color: var(--link-hover-color-inverted);
+                    color: var(--link-hover-focus-color-inverted);
                 }
             }
     	}
@@ -138,6 +138,14 @@
             @include option("table-hover") {
         		tbody tr:hover {
                     background: $table-cell-hover-background;
+                }
+            }
+
+            a {
+                color: $link-color;
+
+                &:hover {
+                    color: $link-hover-focus-color;
                 }
             }
     	}
@@ -173,7 +181,7 @@
                 color: $link-color-dark;
 
                 &:hover {
-                    color: $link-hover-color-dark;
+                    color: $link-hover-focus-color-dark;
                 }
             }
     	}

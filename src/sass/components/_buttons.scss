@@ -12,10 +12,6 @@ input[type="reset"],
 }
 
 [class*="#{class("Button")}"] {
-	&[class*="#{class("(Component)--wired")}"] {
-		box-shadow: 0 0 0 $button-border-width var(--components-background) inset;
-	}
-
 	&[class*="#{class("(Component)--large")}"] {
 		padding: $button-padding-large;
 		font-size: $button-font-size-large;

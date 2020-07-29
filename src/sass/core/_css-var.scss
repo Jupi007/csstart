@@ -10,14 +10,14 @@
     --body-color-inverted: #{$body-color-dark};
 
     --link-color: #{$link-color};
-    --link-hover-color: #{$link-hover-color};
+    --link-hover-focus-color: #{$link-hover-focus-color};
     --link-visited-color: #{$link-visited-color};
-    --link-visited-hover-color: #{$link-visited-hover-color};
+    --link-visited-hover-focus-color: #{$link-visited-hover-focus-color};
 
     --link-color-inverted: #{$link-color-dark};
-    --link-hover-color-inverted: #{$link-hover-color-dark};
+    --link-hover-focus-color-inverted: #{$link-hover-focus-color-dark};
     --link-visited-color-inverted: #{$link-visited-color-dark};
-    --link-visited-hover-color-inverted: #{$link-visited-hover-color-dark};
+    --link-visited-hover-focus-color-inverted: #{$link-visited-hover-focus-color-dark};
 
     --components-background: #{$components-background};
     --components-background-hover: #{darken($components-background, $components-hover-darken)};
@@ -25,6 +25,9 @@
     --components-background-inverted: #{$components-background-dark};
     --components-background-hover-inverted: #{darken($components-background-dark, $components-hover-darken-dark)};
     --components-color-inverted: #{$components-color-dark};
+
+    --tag-focus-outline-color: #{$tag-focus-outline-color};
+    --tag-focus-outline-color-inverted: #{$tag-focus-outline-color-dark};
 
     --alert-background: #{$alert-background};
     --alert-background-inverted: #{$alert-background-dark};
@@ -82,14 +85,14 @@
             --body-color-inverted: #{$body-color};
 
             --link-color: #{$link-color-dark};
-            --link-hover-color: #{$link-hover-color-dark};
+            --link-hover-focus-color: #{$link-hover-focus-color-dark};
             --link-visited-color: #{$link-visited-color-dark};
-            --link-visited-hover-color: #{$link-visited-hover-color-dark};
+            --link-visited-hover-focus-color: #{$link-visited-hover-focus-color-dark};
 
             --link-color-inverted: #{$link-color};
-            --link-hover-color-inverted: #{$link-hover-color};
+            --link-hover-focus-color-inverted: #{$link-hover-focus-color};
             --link-visited-color-inverted: #{$link-visited-color};
-            --link-visited-hover-color-inverted: #{$link-visited-hover-color};
+            --link-visited-hover-focus-color-inverted: #{$link-visited-hover-focus-color};
 
             --components-background: #{$components-background-dark};
             --components-background-hover: #{darken($components-background-dark, $components-hover-darken-dark)};
@@ -97,6 +100,9 @@
             --components-background-inverted: #{$components-background};
             --components-background-hover-inverted: #{darken($components-background, $components-hover-darken)};
             --components-color-inverted: #{$components-color};
+
+            --tag-focus-outline-color: #{$tag-focus-outline-color-dark};
+            --tag-focus-outline-color-inverted: #{$tag-focus-outline-color};
 
             --alert-background: #{$alert-background-dark};
             --alert-background-inverted: #{$alert-background};

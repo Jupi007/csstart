@@ -31,7 +31,7 @@ input[type="reset"]
             &[class*="#{class("(Component)--wired")}"] {
                 background: transparent;
                 color: var(--components-background-inverted);
-                box-shadow: 0 0 0 $button-border-width var(--components-background-inverted) inset;
+                box-shadow: 0 0 0 $tag-border-width var(--components-background-inverted) inset;
             }
         }
     }
@@ -44,7 +44,7 @@ input[type="reset"]
         	&[class*="#{class("(Component)--wired")}"] {
         		background: transparent;
         		color: $components-background-dark;
-        		box-shadow: 0 0 0 $button-border-width $components-background-dark inset;
+        		box-shadow: 0 0 0 $tag-border-width $components-background-dark inset;
         	}
         }
     }
@@ -57,7 +57,7 @@ input[type="reset"]
         	&[class*="#{class("(Component)--wired")}"] {
         		background: transparent;
         		color: $components-background;
-        		box-shadow: 0 0 0 $button-border-width $components-background inset;
+        		box-shadow: 0 0 0 $tag-border-width $components-background inset;
         	}
         }
     }
@@ -82,7 +82,7 @@ input[type="reset"]
 			&[class*="#{class("(Component)--wired")}"] {
 				background: transparent;
 				color: $bg;
-				box-shadow: 0 0 0 $button-border-width $bg inset;
+				box-shadow: 0 0 0 $tag-border-width $bg inset;
 			}
 		}
 	}
@@ -90,7 +90,7 @@ input[type="reset"]
 	&[class*="#{class("(Component)--wired")}"] {
 		background: transparent;
 		color: var(--components-background);
-		box-shadow: 0 0 0 $button-border-width var(--components-background) inset;
+		box-shadow: 0 0 0 $tag-border-width var(--components-background) inset;
 	}
 }
 
@@ -121,14 +121,18 @@ input[type="reset"]
         @include transition("opacity");
     }
 
-	&:hover, &:focus {
+	&:hover {
         color: var(--components-color);
         text-decoration: none;
-    	outline: 0;
 
         &::after {
             opacity: 1;
         }
+    }
+
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 $tag-focus-outline-size var(--tag-focus-outline-color);
     }
 
 	&:active {
@@ -146,25 +150,31 @@ button[class*="#{class("Tag")}"],
         text-decoration: none;
     }
 
-    &[class*="#{class("(Component)-inverted")}"] {
-        &::after {
-            background: var(--components-background-hover-inverted);
-        }
-
-        &:hover, &:focus {
-            color: var(--components-color-inverted);
-        }
-
-        &[class*="#{class("(Component)--wired")}"] {
-            color: var(--components-background-inverted);
-            box-shadow: 0 0 0 $button-border-width var(--components-background-inverted) inset;
-
+    @include option("components-inverted") {
+        &[class*="#{class("(Component)-inverted")}"] {
             &::after {
-                background: var(--components-background-inverted);
+                background: var(--components-background-hover-inverted);
             }
 
-            &:hover, &:focus {
+            &:hover {
                 color: var(--components-color-inverted);
+            }
+
+            &[class*="#{class("(Component)--wired")}"] {
+                color: var(--components-background-inverted);
+                box-shadow: 0 0 0 $tag-border-width var(--components-background-inverted) inset;
+
+                &::after {
+                    background: var(--components-background-inverted);
+                }
+
+                &:hover {
+                    color: var(--components-color-inverted);
+                }
+            }
+
+            &:focus {
+                box-shadow: 0 0 0 $tag-focus-outline-size var(--tag-focus-outline-color-inverted);
             }
         }
     }
@@ -175,22 +185,25 @@ button[class*="#{class("Tag")}"],
                 background: $components-hover-background-dark;
             }
 
-            &:hover, &:focus {
+            &:hover {
                 color: $components-color-dark;
-                text-decoration: none;
             }
 
             &[class*="#{class("(Component)--wired")}"] {
                 color: $components-background-dark;
-                box-shadow: 0 0 0 $button-border-width $components-background-dark inset;
+                box-shadow: 0 0 0 $tag-border-width $components-background-dark inset;
 
                 &::after {
                     background: $components-background-dark;
                 }
 
-                &:hover, &:focus {
+                &:hover {
                     color: $components-color-dark;
                 }
+            }
+
+            &:focus {
+                box-shadow: 0 0 0 $tag-focus-outline-size $tag-focus-outline-color-dark;
             }
         }
     }
@@ -201,21 +214,25 @@ button[class*="#{class("Tag")}"],
                 background: $components-hover-background;
             }
 
-            &:hover, &:focus {
+            &:hover {
                 color: $components-color;
             }
 
             &[class*="#{class("(Component)--wired")}"] {
                 color: $components-background;
-                box-shadow: 0 0 0 $button-border-width $components-background inset;
+                box-shadow: 0 0 0 $tag-border-width $components-background inset;
 
                 &::after {
                     background: $components-background;
                 }
 
-                &:hover, &:focus {
+                &:hover {
                     color: $components-color;
                 }
+            }
+
+            &:focus {
+                box-shadow: 0 0 0 $tag-focus-outline-size $tag-focus-outline-color;
             }
         }
     }
@@ -226,7 +243,7 @@ button[class*="#{class("Tag")}"],
                 background: transparent;
             }
 
-    		&:hover, &:focus {
+    		&:hover {
     			color: var(--body-color);
     		}
         }
@@ -247,7 +264,7 @@ button[class*="#{class("Tag")}"],
             }
         }
 
-		&:hover, &:focus {
+		&:hover {
 			color: var(--components-color);
 		}
 	}
@@ -266,7 +283,7 @@ button[class*="#{class("Tag")}"],
                 background: darken($bg, $components-hover-darken);
             }
 
-            &:hover, &:focus {
+            &:hover {
                 @if ($bg == transparent) {
                     color: var(--body-color);
                 } @else {
@@ -276,16 +293,20 @@ button[class*="#{class("Tag")}"],
 
 			&[class*="#{class("(Component)--wired")}"] {
 				color: $bg;
-				box-shadow: 0 0 0 $button-border-width $bg inset;
+				box-shadow: 0 0 0 $tag-border-width $bg inset;
 
                 &::after {
                     background: $bg;
                 }
 
-				&:hover, &:focus {
+				&:hover {
 					color: contrast($bg, $body-color, $body-color-dark);
 				}
 			}
+
+            &:focus {
+                box-shadow: 0 0 0 $tag-focus-outline-size lighten($bg, $tag-focus-outline-color-lighten);
+            }
 		}
 	}
 }
