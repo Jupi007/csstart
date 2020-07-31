@@ -9632,8 +9632,11 @@ input[type='radio'][disabled] {
 }
 
 input[type='file'] {
-	border: none;
 	background: transparent;
+}
+
+input[type='file']:not(:focus) {
+	border-color: transparent;
 }
 
 input[type='color'] {

@@ -47,8 +47,11 @@ input {
 	}
 
 	&[type="file"] {
-		border: none;
         background: transparent;
+
+		&:not(:focus) {
+            border-color: transparent;
+        }
 	}
 
 	&[type="color"] {
