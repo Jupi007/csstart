@@ -27,11 +27,12 @@
 input[type="range"] {
 	cursor: pointer;
 	appearance: none;
-    border: 0;
+    border-color: transparent;
     background: transparent;
 
     &:focus {
         outline: none;
+        border-color: var(--input-hover-focus-border-color);
     }
 
     @include range-track {

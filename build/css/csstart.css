@@ -9820,7 +9820,7 @@ input[type='radio']:indeterminate::after {
 
 input[type='range'] {
 	cursor: pointer;
-	border: 0;
+	border-color: transparent;
 	background: transparent;
 	-webkit-appearance: none;
 	   -moz-appearance: none;
@@ -9828,6 +9828,7 @@ input[type='range'] {
 }
 
 input[type='range']:focus {
+	border-color: var(--input-hover-focus-border-color);
 	outline: none;
 }
 
