@@ -70,7 +70,7 @@
     @return abs(brightness($base) - brightness($color));
 }
 
-@function contrast($base, $color1, $color2) {
+@function best-contrast($base, $color1, $color2) {
     @if type-of($color1) != color or type-of($base) != color or type-of($color2) != color {
         @warn "Unfortunately, one or more of the values is not valid. It should be a color.";
 		@return null;

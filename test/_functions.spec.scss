@@ -88,12 +88,12 @@
     }
 }
 
-@include describe('contrast()') {
+@include describe('best-contrast()') {
     @include it('Returns the best contrast color') {
-        @include assert-equal(contrast(#953636, #ffffff, #000000), #ffffff);
+        @include assert-equal(best-contrast(#953636, #ffffff, #000000), #ffffff);
     }
     @include it('Returns an error') {
-        @include assert-equal(contrast("wrong-color", "wrong-color", "wrong-color"), null);
+        @include assert-equal(best-contrast("wrong-color", "wrong-color", "wrong-color"), null);
     }
 }
 

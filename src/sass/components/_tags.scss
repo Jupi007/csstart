@@ -76,7 +76,7 @@ input[type="reset"]
             @if ($bg == transparent) {
                 color: var(--body-color);
             } @else {
-                color: contrast($bg, $body-color, $body-color-dark);
+                color: best-contrast($bg, $body-color, $body-color-dark);
             }
 
 			&[class*="#{class("(Component)--wired")}"] {
@@ -274,7 +274,7 @@ button[class*="#{class("Tag")}"],
             @if ($bg == transparent) {
                 color: var(--body-color);
             } @else {
-                color: contrast($bg, $body-color, $body-color-dark);
+                color: best-contrast($bg, $body-color, $body-color-dark);
             }
 
 			background: $bg;
@@ -287,7 +287,7 @@ button[class*="#{class("Tag")}"],
                 @if ($bg == transparent) {
                     color: var(--body-color);
                 } @else {
-                    color: contrast($bg, $body-color, $body-color-dark);
+                    color: best-contrast($bg, $body-color, $body-color-dark);
                 }
             }
 
@@ -300,7 +300,7 @@ button[class*="#{class("Tag")}"],
                 }
 
 				&:hover {
-					color: contrast($bg, $body-color, $body-color-dark);
+					color: best-contrast($bg, $body-color, $body-color-dark);
 				}
 			}
 
