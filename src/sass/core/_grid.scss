@@ -28,6 +28,12 @@
     			grid-template-columns: none;
     		}
     	}
+
+        @include option("grid-masonry") {
+            &[class*="#{class("(Grid)--masonry")}"] {
+                grid-template-rows: masonry;
+            }
+        }
     }
 
     @each $name, $value in $gutters  {
