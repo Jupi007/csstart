@@ -222,10 +222,11 @@ pre {
 }
 
 kbd {
-	border: 1px solid $body-color;
+	border: 1px solid var(--body-color);
 	@include border-radius($kbd-border-radius);
 	padding: $kbd-padding;
 	font-size: $kbd-font-size;
+    vertical-align: middle;
 
 	> kbd {
 		border: none;
