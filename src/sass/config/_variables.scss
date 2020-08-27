@@ -89,17 +89,14 @@ $button-padding: spacer("tiny-plus") spacer("medium") !default;
 $button-font-size: .9em !default;
 $button-border-radius: $border-radius-base !default;
 
-$button-padding-large: spacer("small") spacer("medium-plus") !default;
-$button-font-size-large: 1em !default;
-
-$button-padding-extra-large: spacer("small-plus") spacer("large") !default;
-$button-font-size-extra-large: 1.2em !default;
-
-$button-padding-small: spacer("tiny") spacer("small") !default;
-$button-font-size-small: .8em !default;
-
-$button-padding-extra-small: spacer("tiny") spacer("tiny-plus") !default;
-$button-font-size-extra-small: .7em !default;
+$button-sizes: !default;
+$button-sizes: map-merge((
+    // Name - Padding - Font size
+    "xs": (spacer("tiny") spacer("tiny-plus"), .7em),
+    "s": (spacer("tiny") spacer("small"), .8em),
+    "l": (spacer("small") spacer("medium-plus"), 1em),
+    "xl": (spacer("small-plus") spacer("large"), 1.2em),
+), $button-sizes);
 
 // ----
 // Tags
@@ -116,11 +113,12 @@ $tag-focus-outline-size: 3px;
 $tag-focus-outline-color-darken-dark: 50%;
 $tag-focus-outline-color-dark: darken($components-background-dark, $tag-focus-outline-color-lighten);
 
-$tag-padding-large: spacer("tiny-plus") spacer("small") !default;
-$tag-font-size-large: .85em !default;
-
-$tag-padding-extra-large: spacer("small") spacer("small-plus") !default;
-$tag-font-size-extra-large: .9em !default;
+$tag-sizes: !default;
+$tag-sizes: map-merge((
+    // Name - Padding - Font size
+    "l": (spacer("tiny-plus") spacer("small") , .85em),
+    "xl": (spacer("small") spacer("small-plus"), .9em),
+), $tag-sizes);
 
 // ------
 // Alerts

@@ -312,15 +312,12 @@ button[class*="#{class("Tag")}"],
 }
 
 [class*="#{class("Tag")}"] {
-    &[class*="#{class("(Component)--large")}"] {
-		padding: $tag-padding-large;
-		font-size: $tag-font-size-large;
-	}
-
-	&[class*="#{class("(Component)--extra-large")}"] {
-		padding: $tag-padding-extra-large;
-		font-size: $tag-font-size-extra-large;
-	}
+    @each $name, $properties in $tag-sizes {
+        &[class*="--#{$name}"] {
+            padding: nth($properties, 1);
+            font-size: nth($properties, 2);
+        }
+    }
 }
 
 }

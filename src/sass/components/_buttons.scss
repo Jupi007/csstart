@@ -12,25 +12,12 @@ input[type="reset"],
 }
 
 [class*="#{class("Button")}"] {
-	&[class*="#{class("(Component)--large")}"] {
-		padding: $button-padding-large;
-		font-size: $button-font-size-large;
-	}
-
-	&[class*="#{class("(Component)--extra-large")}"] {
-		padding: $button-padding-extra-large;
-		font-size: $button-font-size-extra-large;
-	}
-
-	&[class*="#{class("(Component)--small")}"] {
-		padding: $button-padding-small;
-		font-size: $button-font-size-small;
-	}
-
-	&[class*="#{class("(Component)--extra-small")}"] {
-		padding: $button-padding-extra-small;
-		font-size: $button-font-size-extra-small;
-	}
+    @each $name, $properties in $button-sizes {
+        &[class*="--#{$name}"] {
+            padding: nth($properties, 1);
+            font-size: nth($properties, 2);
+        }
+    }
 
     &[class*="#{class("(Component)--block")}"] {
         display: block;

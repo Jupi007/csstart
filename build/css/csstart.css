@@ -11080,6 +11080,16 @@ input[type='reset'],
 	border-radius: 3px;
 }
 
+[class*='Button'][class*='--xs'] {
+	font-size: .7em;
+	padding: calc(var(--spacer-base) * .25) calc(var(--spacer-base) * .5);
+}
+
+[class*='Button'][class*='--s'] {
+	font-size: .8em;
+	padding: calc(var(--spacer-base) * .25) calc(var(--spacer-base) * .75);
+}
+
 [class*='Button'][class*='--l'] {
 	font-size: 1em;
 	padding: calc(var(--spacer-base) * .75) calc(var(--spacer-base) * 1.5);
@@ -11088,16 +11098,6 @@ input[type='reset'],
 [class*='Button'][class*='--xl'] {
 	font-size: 1.2em;
 	padding: calc(var(--spacer-base) * .9) calc(var(--spacer-base) * 2);
-}
-
-[class*='Button'][class*='--s'] {
-	font-size: .8em;
-	padding: calc(var(--spacer-base) * .25) calc(var(--spacer-base) * .75);
-}
-
-[class*='Button'][class*='--xs'] {
-	font-size: .7em;
-	padding: calc(var(--spacer-base) * .25) calc(var(--spacer-base) * .5);
 }
 
 [class*='Button'][class*='--block'] {
