@@ -12,6 +12,20 @@
     }
 }
 
+@mixin utility-option($name, $area: "default") {
+    $areas: (
+        "default": 1,
+        "responsive": 2,
+        "dark-theme": 3,
+        "print": 4,
+    );
+
+    $utility-options: getter($utilities-options, $name);
+    @if nth($utility-options, getter($areas, $area)) and nth($utility-options, getter($areas, "default")) {
+        @content;
+    }
+}
+
 @mixin transition($property, $duration: $transition-duration-base, $timing-function: $transition-timing-function-base, $delay: 0) {
 	@include option("transitions") {
         transition-property: #{$property};

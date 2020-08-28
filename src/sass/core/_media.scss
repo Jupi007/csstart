@@ -2,18 +2,13 @@
     @each $name, $value in $breakpoints {
     	@include respond-to($name, "up") {
             @include option("utilities") {
-                @include media-size-utilities($name + "-");
-                @include media-display-utilities($name + "-");
-                @include media-align-utilities($name + "-");
-                @include media-margin-utilities($name + "-");
-                @include media-padding-utilities($name + "-");
-                @include media-visibility-utilities($name + "-");
-                @include media-order-utilities($name + "-");
+                @include media-utilities("responsive", $name + "-");
             }
-            @include option("flex") {
+
+            @include utility-option("flex", "responsive") {
                 @include media-flex($name + "-");
             }
-            @include option("grid") {
+            @include utility-option("grid", "responsive") {
     		    @include media-grid($name + "-");
             }
     	}
@@ -22,9 +17,16 @@
 
 @include option("dark-theme-utilities") {
     @media (prefers-color-scheme: dark) {
-        @include media-border-utilities(class("dark-theme-utilities-prefix-"));
-        @include media-color-utilities(class("dark-theme-utilities-prefix-"));
-        @include media-display-utilities(class("dark-theme-utilities-prefix-"));
+        @include option("utilities") {
+            @include media-utilities("dark-theme", class("dark-theme-utilities-prefix-"));
+        }
+
+        @include utility-option("flex", "dark-theme") {
+            @include media-flex(class("dark-theme-utilities-prefix-"));
+        }
+        @include utility-option("grid", "dark-theme") {
+            @include media-grid(class("dark-theme-utilities-prefix-"));
+        }
     }
 }
 
@@ -162,19 +164,17 @@
     		&#{class("(print-)page-break-after")} {
     			page-break-after: always!important;
     		}
-
-            &#{class("margin")}#{class("(spacer)-0")} {
-                margin: 0!important;
-            }
-
-            &#{class("width")}#{class("(size)-auto")} {
-                width: auto!important;
-                max-width: 100%!important;
-                min-width: auto!important;
-            }
     	}
 
-        @include media-display-utilities(class("print-utilities-prefix-"));
-        @include media-visibility-utilities(class("print-utilities-prefix-"));
+        @include option("utilities") {
+            @include media-utilities("print", class("print-utilities-prefix-"));
+        }
+
+        @include utility-option("flex", "print") {
+            @include media-flex(class("print-utilities-prefix-"));
+        }
+        @include utility-option("grid", "print") {
+            @include media-grid(class("print-utilities-prefix-"));
+        }
     }
 }

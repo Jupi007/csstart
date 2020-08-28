@@ -1,4 +1,4 @@
-@include option("grid") {
+@include utility-option("grid") {
     [class*="#{class("Grid")}"] {
     	display: grid;
     	grid-auto-flow: row;

@@ -52,6 +52,151 @@
     }
 }
 
+@include describe('@mixin utility-option()') {
+    @include it('Check if the given utility is enabled') {
+        @include assert {
+            @include output {
+                @include utility-option('area') {
+                    display: block;
+                }
+                @include utility-option('area', "default") {
+                    display: block;
+                }
+            }
+
+            @include expect {
+                display: block;
+                display: block;
+            }
+        }
+    }
+    @include it('Check if the given utility is disabled') {
+        @include assert {
+            @include output {
+                @include utility-option('disabled-area') {
+                    display: none;
+                }
+                @include utility-option('disabled-area', "default") {
+                    display: none;
+                }
+            }
+
+            @include expect {}
+        }
+    }
+    @include it('Check if the given utility is just enabled on default area') {
+        @include assert {
+            @include output {
+                @include utility-option('enabled-area') {
+                    display: block;
+                }
+                @include utility-option('enabled-area', "default") {
+                    display: block;
+                }
+
+                @include utility-option('enabled-area', "responsive") {
+                    display: none;
+                }
+                @include utility-option('enabled-area', "dark-theme") {
+                    display: none;
+                }
+                @include utility-option('enabled-area', "print") {
+                    display: none;
+                }
+            }
+
+            @include expect {
+                display: block;
+                display: block;
+            }
+        }
+    }
+    @include it('Check if the given utility is just enabled on default and responsive area') {
+        @include assert {
+            @include output {
+                @include utility-option('responsive-area') {
+                    display: block;
+                }
+                @include utility-option('responsive-area', "default") {
+                    display: block;
+                }
+
+                @include utility-option('responsive-area', "responsive") {
+                    display: block;
+                }
+                @include utility-option('responsive-area', "dark-theme") {
+                    display: none;
+                }
+                @include utility-option('responsive-area', "print") {
+                    display: none;
+                }
+            }
+
+            @include expect {
+                display: block;
+                display: block;
+                display: block;
+            }
+        }
+    }
+    @include it('Check if the given utility is just enabled on default and dark-theme area') {
+        @include assert {
+            @include output {
+                @include utility-option('dark-theme-area') {
+                    display: block;
+                }
+                @include utility-option('dark-theme-area', "default") {
+                    display: block;
+                }
+
+                @include utility-option('dark-theme-area', "responsive") {
+                    display: none;
+                }
+                @include utility-option('dark-theme-area', "dark-theme") {
+                    display: block;
+                }
+                @include utility-option('dark-theme-area', "print") {
+                    display: none;
+                }
+            }
+
+            @include expect {
+                display: block;
+                display: block;
+                display: block;
+            }
+        }
+    }
+    @include it('Check if the given utility is just enabled on default and print area') {
+        @include assert {
+            @include output {
+                @include utility-option('print-area') {
+                    display: block;
+                }
+                @include utility-option('print-area', "default") {
+                    display: block;
+                }
+
+                @include utility-option('print-area', "responsive") {
+                    display: none;
+                }
+                @include utility-option('print-area', "dark-theme") {
+                    display: none;
+                }
+                @include utility-option('print-area', "print") {
+                    display: block;
+                }
+            }
+
+            @include expect {
+                display: block;
+                display: block;
+                display: block;
+            }
+        }
+    }
+}
+
 @include describe('@mixin transition()') {
     @include it('Returns a set of transition properties based on given parameters (without delay)') {
         @include assert {

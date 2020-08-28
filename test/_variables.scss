@@ -32,4 +32,14 @@ $breakpoints: (
 
 $classes: (
     "class-name": "class",
+);
+
+$utilities-options: (
+    // Name - Enabled - Responsive - Dark theme - Print
+    "area": (true, true, true, true),
+    "disabled-area": (false, false, false, false),
+    "enabled-area": (true, false, false, false),
+    "responsive-area": (true, true, false, false),
+    "dark-theme-area": (true, false, true, false),
+    "print-area": (true, false, false, true),
 )

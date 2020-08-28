@@ -1,3 +1,43 @@
+@mixin media-text-utilities($prefix: "") {
+    .#{$prefix}#{class("text")} {
+    	&#{class("(text)-normal")} {
+    		font-style: normal !important;
+    		font-weight: normal !important;
+    		text-decoration: none !important;
+    		text-transform: none !important;
+            font-size: 1em !important;
+    	}
+
+    	&#{class("(text)-left")} { text-align: left !important; }
+    	&#{class("(text)-center")} { text-align: center !important; }
+    	&#{class("(text)-right")} { text-align: right !important; }
+    	&#{class("(text)-justify")} { text-align: justify !important; }
+
+    	&#{class("(text)-wrap")} {
+    		white-space: wrap !important;
+    		word-break: break-all !important;
+    	}
+    	&#{class("(text)-nowrap")} { white-space: nowrap !important; }
+    	&#{class("(text)-truncate")} {
+    		overflow: hidden !important;
+    		text-overflow: ellipsis !important;
+    		white-space: nowrap !important;
+    	}
+
+    	&#{class("(text)-capitalize")} { text-transform: capitalize !important; }
+    	&#{class("(text)-uppercase")} { text-transform: uppercase !important; }
+    	&#{class("(text)-lowercase")} { text-transform: lowercase !important; }
+
+    	&#{class("(text)-italic")} { font-style: italic !important; }
+
+    	&#{class("(text)-underline")} { text-decoration: underline !important; }
+
+    	@each $name, $weight in $font-weights {
+    		&#{class("(text)-weight")}-#{$name} { font-weight: $weight !important; }
+    	}
+    }
+}
+
 @mixin media-border-utilities($prefix: "") {
     .#{$prefix}#{class("border")} {
     	border: 1px solid $body-color !important;
@@ -337,77 +377,71 @@
 	.#{$prefix}#{class("item-last")} { order: 1 !important; }
 }
 
-@include option("utilities") {
-    .#{class("text")} {
-    	&#{class("(text)-normal")} {
-    		font-style: normal !important;
-    		font-weight: normal !important;
-    		text-decoration: none !important;
-    		text-transform: none !important;
-            font-size: 1em !important;
-    	}
-
-    	&#{class("(text)-left")} { text-align: left !important; }
-    	&#{class("(text)-center")} { text-align: center !important; }
-    	&#{class("(text)-right")} { text-align: right !important; }
-    	&#{class("(text)-justify")} { text-align: justify !important; }
-
-    	&#{class("(text)-wrap")} {
-    		white-space: wrap !important;
-    		word-break: break-all !important;
-    	}
-    	&#{class("(text)-nowrap")} { white-space: nowrap !important; }
-    	&#{class("(text)-truncate")} {
-    		overflow: hidden !important;
-    		text-overflow: ellipsis !important;
-    		white-space: nowrap !important;
-    	}
-
-    	&#{class("(text)-capitalize")} { text-transform: capitalize !important; }
-    	&#{class("(text)-uppercase")} { text-transform: uppercase !important; }
-    	&#{class("(text)-lowercase")} { text-transform: lowercase !important; }
-
-    	&#{class("(text)-italic")} { font-style: italic !important; }
-
-    	&#{class("(text)-underline")} { text-decoration: underline !important; }
-
-    	@each $name, $weight in $font-weights {
-    		&#{class("(text)-weight")}-#{$name} { font-weight: $weight !important; }
-    	}
-    }
-
-    ol,
-    ul {
-    	&.#{class("unstyled")} {
-    		list-style: none;
-    		padding-left: 0;
-    	}
-    }
-
-    .#{class("floatbox")}::after {
+@mixin media-float-utilities($prefix: "") {
+    .#{$prefix}#{class("floatbox")}::after {
     	content: "" !important;
     	display: block !important;
     	clear: both !important;
     }
 
-    .#{class("float-left")} { float: left !important; }
-    img.#{class("float-left")} { margin-right: spacer($margin-base) !important; }
+    .#{$prefix}#{class("float-left")} { float: left !important; }
+    img.#{$prefix}#{class("float-left")} { margin-right: spacer($margin-base) !important; }
 
-    .#{class("float-right")} { float: right !important; }
-    img.#{class("float-right")} { margin-left: spacer($margin-base) !important; }
+    .#{$prefix}#{class("float-right")} { float: right !important; }
+    img.#{$prefix}#{class("float-right")} { margin-left: spacer($margin-base) !important; }
 
-    img.#{class("float-left")},
-    img.#{class("float-right")} {
+    img.#{$prefix}#{class("float-left")},
+    img.#{$prefix}#{class("float-right")} {
     	margin-bottom: spacer($margin-base) !important;
     }
 
-    .#{class("clear")} { clear: both !important; }
-    .#{class("clear-left")} { clear: left !important; }
-    .#{class("clear-right")} { clear: right !important; }
+    .#{$prefix} {
+        .#{class("clear")} { clear: both !important; }
+        .#{class("clear-left")} { clear: left !important; }
+        .#{class("clear-right")} { clear: right !important; }
 
-    // https://developer.mozilla.org/fr/docs/Web/CSS/Block_formatting_context
-    .#{class("block-formatting-context")} { overflow: hidden !important; }
+        // https://developer.mozilla.org/fr/docs/Web/CSS/Block_formatting_context
+        .#{class("block-formatting-context")} { overflow: hidden !important; }
+    }
+}
 
+@mixin media-utilities($area: "default", $prefix: "") {
+    @include utility-option("text", $area) {
+        @include media-text-utilities($prefix);
+    }
+    @include utility-option("border", $area) {
+        @include media-border-utilities($prefix);
+    }
+    @include utility-option("color", $area) {
+        @include media-color-utilities($prefix);
+    }
+    @include utility-option("size", $area) {
+        @include media-size-utilities($prefix);
+    }
+    @include utility-option("display", $area) {
+        @include media-display-utilities($prefix);
+    }
+    @include utility-option("align", $area) {
+        @include media-align-utilities($prefix);
+    }
+    @include utility-option("margin", $area) {
+        @include media-margin-utilities($prefix);
+    }
+    @include utility-option("padding", $area) {
+        @include media-padding-utilities($prefix);
+    }
+    @include utility-option("visibility", $area) {
+        @include media-visibility-utilities($prefix);
+    }
+    @include utility-option("order", $area) {
+        @include media-order-utilities($prefix);
+    }
+    @include utility-option("float", $area) {
+        @include media-float-utilities($prefix);
+    }
+}
+
+@include option("utilities") {
     .#{class("visually-hidden")} {
     	position: absolute !important;
     	border: 0 !important;
@@ -418,13 +452,5 @@
     	clip: rect(0, 0, 0, 0) !important;
     }
 
-    @include media-border-utilities();
-    @include media-color-utilities();
-    @include media-size-utilities();
-    @include media-display-utilities();
-    @include media-align-utilities();
-    @include media-margin-utilities();
-    @include media-padding-utilities();
-    @include media-visibility-utilities();
-    @include media-order-utilities();
+    @include media-utilities();
 }

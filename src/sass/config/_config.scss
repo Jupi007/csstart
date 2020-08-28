@@ -34,15 +34,32 @@ $options: map-merge((
         "table-zebra": true,
         "table-hover": true,
 
-    "grid": true,
-        "grid-masonry": false,
-    "flex": true,
-    "utilities": true,
+    "grid-masonry": false,
 
+    "utilities": true,
     "dark-theme-utilities": true,
     "print-utilities": true,
     "responsive-utilities": true,
 ), $options);
+
+$utilities-options: !default;
+$utilities-options: map-merge((
+    // Name   -   Enabled - Responsive - Dark theme - Print
+    "text":       (true,  false, false, false),
+    "border":     (true,  false, true,  false),
+    "color":      (true,  false, true,  false),
+    "size":       (true,  true,  false, true),
+    "display":    (true,  true,  true,  true),
+    "align":      (true,  true,  false, false),
+    "margin":     (true,  true,  false, true),
+    "padding":    (true,  true,  false, false),
+    "visibility": (true,  true,  false, true),
+    "order":      (true,  true,  false, false),
+    "float":      (false, false, false, false),
+
+    "flex":       (true,  true,  false, false),
+    "grid":       (true,  true,  false, false),
+), $utilities-options);
 
 // ------
 // Colors

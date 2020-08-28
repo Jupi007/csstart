@@ -48,7 +48,7 @@
 	}
 }
 
-@include option("flex") {
+@include utility-option("flex") {
     .#{class("Flex")} {
     	display: flex;
     	flex-direction: $flex-direction-base;
