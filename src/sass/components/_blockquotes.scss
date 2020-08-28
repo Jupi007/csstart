@@ -7,20 +7,23 @@
     color: var(--blockquote-color);
 	@include border-radius($blockquote-border-radius);
 	position: relative;
-	padding-left: 80px;
     margin-top: $blockquote-margin-top;
     margin-bottom: $blockquote-margin-bottom;
 
-	&:before {
-		content: "\201C";
-		position: absolute;
-		left: 15px;
-		top: 15px;
-		font-family: georgia, serif;
-		font-size: 7em;
-		line-height: .9;
-		color: var(--blockquote-quote-color);
-	}
+    @include option("blockquote-quote") {
+        padding-left: 80px;
+
+    	&:before {
+    		content: "\201C";
+    		position: absolute;
+    		left: 15px;
+    		top: 15px;
+    		font-family: georgia, serif;
+    		font-size: 7em;
+    		line-height: .9;
+    		color: var(--blockquote-quote-color);
+    	}
+    }
 
 	> :last-child {
 		margin-bottom: 0;
