@@ -49,6 +49,12 @@ $checkbox-checked-icon-color: color("white") !default;
 $checkbox-disabled-border-color: grey(30) !default;
 $checkbox-disabled-background: grey(10) !default;
 $checkbox-border-radius: 3px;
+$checkbox-focus-outline-width: 2px;
+$checkbox-focus-outline-color: grey(50);
+
+$switch-height: spacer("large");
+$switch-width: spacer("xx-large");
+$switch-border-radius: 2rem;
 
 $range-track-color: grey(70) !default;
 $range-track-disabled-color: grey(60) !default;

@@ -119,7 +119,7 @@ address {
 ol,
 ul {
 	padding-left: $list-padding-left;
-    
+
     &.#{class("unstyled")} {
         list-style: none;
         padding-left: 0;

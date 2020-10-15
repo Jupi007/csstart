@@ -9,15 +9,20 @@ input[type="radio"] {
 	vertical-align: middle;
 	position: relative;
 
-    @include transition("background, border");
+    @include transition("background, border, box-shadow");
 
 	&:active {
 		background: var(--checkbox-active-background);
 	}
 
+    &:focus {
+        box-shadow: 0 0 0 $checkbox-focus-outline-width $checkbox-focus-outline-color;
+    }
+
 	&:checked, &:indeterminate {
 		background: var(--checkbox-checked-background);
 		border-color: var(--checkbox-checked-background);
+
         &::before, &::after {
             opacity: 1;
         }
@@ -49,7 +54,7 @@ input[type="radio"] {
 
 }
 
-input[type="checkbox"] {
+input[type="checkbox"]:not(.#{class("Form-switch")}) {
     &::before {
         top: 63%; left: 30%;
     	transform: translate(-50%, -50%) rotate(50deg);
@@ -78,13 +83,15 @@ input[type="radio"] {
 }
 
 input[type="checkbox"],
-input[type="radio"] {
+input[type="radio"],
+input[type="checkbox"].#{class("Form-switch")} {
     &:indeterminate {
         &::before {
     		top: 50%; left: 50%;
     		transform: translate(-50%, -50%);
     		width: 40%;
     		height: 2px;
+            background: var(--checkbox-checked-icon-color);
         }
         &::after {
             display: none;

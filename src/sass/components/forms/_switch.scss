@@ -1,0 +1,25 @@
+@include option("form", "form-switch") {
+    input[type="checkbox"].#{class("Form-switch")} {
+        width: $switch-width;
+        height: $switch-height;
+        border-radius: $switch-border-radius;
+
+        &::before {
+            width: calc(#{$switch-height} - (#{$input-border-width} * 2));
+            height: 100%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            opacity: 1;
+            border-radius: calc(#{$switch-border-radius} - 1px);
+            background: var(--checkbox-checked-background);
+
+            @include transition("left, background");
+        }
+
+        &:checked::before {
+            left: calc(#{$switch-width} - #{$switch-height});
+            background: var(--checkbox-checked-icon-color);
+        }
+    }
+}
