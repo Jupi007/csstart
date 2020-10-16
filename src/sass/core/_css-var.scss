@@ -4,9 +4,9 @@
 :root {
     --spacer-base: #{$spacer-base};
 
-    --body-bg-color: #{$body-bg};
+    --body-bg: #{$body-bg};
     --body-color: #{$body-color};
-    --body-bg-color-inverted: #{$body-bg-dark};
+    --body-bg-inverted: #{$body-bg-dark};
     --body-color-inverted: #{$body-color-dark};
 
     --link-color: #{$link-color};
@@ -79,9 +79,9 @@
 @include option("dark-theme") {
     @media (prefers-color-scheme: dark) {
         :root {
-            --body-bg-color: #{$body-bg-dark};
+            --body-bg: #{$body-bg-dark};
             --body-color: #{$body-color-dark};
-            --body-bg-color-inverted: #{$body-bg};
+            --body-bg-inverted: #{$body-bg};
             --body-color-inverted: #{$body-color};
 
             --link-color: #{$link-color-dark};

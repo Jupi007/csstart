@@ -1,8 +1,8 @@
 :root {
 	--spacer-base: 1rem;
-	--body-bg-color: #fff;
+	--body-bg: #fff;
 	--body-color: #0d0d0d;
-	--body-bg-color-inverted: #262626;
+	--body-bg-inverted: #262626;
 	--body-color-inverted: #f2f2f2;
 	--link-color: #3935cd;
 	--link-hover-focus-color: #272491;
@@ -63,9 +63,9 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--body-bg-color: #262626;
+		--body-bg: #262626;
 		--body-color: #f2f2f2;
-		--body-bg-color-inverted: #fff;
+		--body-bg-inverted: #fff;
 		--body-color-inverted: #0d0d0d;
 		--link-color: #74c0cd;
 		--link-hover-focus-color: #41a3b4;
@@ -187,7 +187,7 @@ body {
 	margin: 0;
 	text-align: left;
 	color: var(--body-color);
-	background: var(--body-bg-color);
+	background: var(--body-bg);
 	scroll-behavior: smooth;
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
