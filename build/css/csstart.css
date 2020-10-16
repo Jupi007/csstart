@@ -11652,7 +11652,7 @@ input[type='reset'],
 
 @media (prefers-color-scheme: dark) {
 	[class*='Alert'][class*='-red'] {
-		color: #edabab;
+		color: #e06c6c;
 	}
 }
 
@@ -11664,7 +11664,7 @@ input[type='reset'],
 
 @media (prefers-color-scheme: dark) {
 	[class*='Alert'][class*='-orange'] {
-		color: #f3cfa5;
+		color: #e9ab62;
 	}
 }
 
@@ -11676,7 +11676,7 @@ input[type='reset'],
 
 @media (prefers-color-scheme: dark) {
 	[class*='Alert'][class*='-yellow'] {
-		color: #fff799;
+		color: #fff24d;
 	}
 }
 
@@ -11688,7 +11688,7 @@ input[type='reset'],
 
 @media (prefers-color-scheme: dark) {
 	[class*='Alert'][class*='-green'] {
-		color: #bae7b1;
+		color: #87d576;
 	}
 }
 
@@ -11700,7 +11700,7 @@ input[type='reset'],
 
 @media (prefers-color-scheme: dark) {
 	[class*='Alert'][class*='-blue'] {
-		color: #afadeb;
+		color: #7370dc;
 	}
 }
 
@@ -11712,7 +11712,7 @@ input[type='reset'],
 
 @media (prefers-color-scheme: dark) {
 	[class*='Alert'][class*='-light-blue'] {
-		color: #b4dde4;
+		color: #7cc4d0;
 	}
 }
 
@@ -11724,7 +11724,7 @@ input[type='reset'],
 
 @media (prefers-color-scheme: dark) {
 	[class*='Alert'][class*='-purple'] {
-		color: #cab0e8;
+		color: #a376d6;
 	}
 }
 
@@ -11736,7 +11736,7 @@ input[type='reset'],
 
 @media (prefers-color-scheme: dark) {
 	[class*='Alert'][class*='-brown'] {
-		color: #f3d4a5;
+		color: #eab461;
 	}
 }
 
@@ -11748,7 +11748,7 @@ input[type='reset'],
 
 @media (prefers-color-scheme: dark) {
 	[class*='Alert'][class*='-success'] {
-		color: #bae7b1;
+		color: #87d576;
 	}
 }
 
@@ -11760,7 +11760,7 @@ input[type='reset'],
 
 @media (prefers-color-scheme: dark) {
 	[class*='Alert'][class*='-info'] {
-		color: #b4dde4;
+		color: #7cc4d0;
 	}
 }
 
@@ -11772,7 +11772,7 @@ input[type='reset'],
 
 @media (prefers-color-scheme: dark) {
 	[class*='Alert'][class*='-warning'] {
-		color: #f3cfa5;
+		color: #e9ab62;
 	}
 }
 
@@ -11784,7 +11784,7 @@ input[type='reset'],
 
 @media (prefers-color-scheme: dark) {
 	[class*='Alert'][class*='-danger'] {
-		color: #edabab;
+		color: #e06c6c;
 	}
 }
 
