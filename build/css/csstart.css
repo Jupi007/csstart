@@ -11617,175 +11617,86 @@ input[type='reset'],
 	border: 1px solid var(--components-background);
 	border-left-width: 5px;
 	border-radius: 3px;
-	background: var(--alert-background);
 }
 
 [class*='Alert'][class*='-inverted'] {
 	color: var(--body-color-inverted);
 	border-color: var(--components-background-inverted);
-	background: var(--alert-background-inverted);
 }
 
 [class*='Alert'][class*='-dark'] {
 	color: #f2f2f2;
 	border-color: #fff;
-	background: rgba(255, 255, 255, .2);
 }
 
 [class*='Alert'][class*='-light'] {
 	color: #0d0d0d;
 	border-color: #333;
-	background: rgba(51, 51, 51, .2);
 }
 
 [class*='Alert'][class*='-ghost'] {
 	color: var(--body-color);
 	border-color: transparent;
-	background: transparent;
 }
 
 [class*='Alert'][class*='-red'] {
-	color: #541212;
+	color: #d94d4d;
 	border-color: #d94d4d;
-	background: rgba(217, 77, 77, .2);
-}
-
-@media (prefers-color-scheme: dark) {
-	[class*='Alert'][class*='-red'] {
-		color: #edabab;
-	}
 }
 
 [class*='Alert'][class*='-orange'] {
-	color: #5a360c;
+	color: #d9831e;
 	border-color: #d9831e;
-	background: rgba(217, 131, 30, .2);
-}
-
-@media (prefers-color-scheme: dark) {
-	[class*='Alert'][class*='-orange'] {
-		color: #f3cfa5;
-	}
 }
 
 [class*='Alert'][class*='-yellow'] {
-	color: #665e00;
+	color: #fff46c;
 	border-color: #fff46c;
-	background: rgba(255, 244, 108, .2);
-}
-
-@media (prefers-color-scheme: dark) {
-	[class*='Alert'][class*='-yellow'] {
-		color: #fff799;
-	}
 }
 
 [class*='Alert'][class*='-green'] {
-	color: #214e18;
+	color: #74cf61;
 	border-color: #74cf61;
-	background: rgba(116, 207, 97, .2);
-}
-
-@media (prefers-color-scheme: dark) {
-	[class*='Alert'][class*='-green'] {
-		color: #bae7b1;
-	}
 }
 
 [class*='Alert'][class*='-blue'] {
-	color: #161452;
+	color: #3935cd;
 	border-color: #3935cd;
-	background: rgba(57, 53, 205, .2);
-}
-
-@media (prefers-color-scheme: dark) {
-	[class*='Alert'][class*='-blue'] {
-		color: #afadeb;
-	}
 }
 
 [class*='Alert'][class*='-light-blue'] {
-	color: #1b444b;
+	color: #74c0cd;
 	border-color: #74c0cd;
-	background: rgba(116, 192, 205, .2);
-}
-
-@media (prefers-color-scheme: dark) {
-	[class*='Alert'][class*='-light-blue'] {
-		color: #b4dde4;
-	}
 }
 
 [class*='Alert'][class*='-purple'] {
-	color: #31174f;
+	color: #aa80d9;
 	border-color: #aa80d9;
-	background: rgba(170, 128, 217, .2);
-}
-
-@media (prefers-color-scheme: dark) {
-	[class*='Alert'][class*='-purple'] {
-		color: #cab0e8;
-	}
 }
 
 [class*='Alert'][class*='-brown'] {
-	color: #5a3b0c;
+	color: #835611;
 	border-color: #835611;
-	background: rgba(131, 86, 17, .2);
-}
-
-@media (prefers-color-scheme: dark) {
-	[class*='Alert'][class*='-brown'] {
-		color: #f3d4a5;
-	}
 }
 
 [class*='Alert'][class*='-success'] {
-	color: #214e18;
+	color: #74cf61;
 	border-color: #74cf61;
-	background: rgba(116, 207, 97, .2);
-}
-
-@media (prefers-color-scheme: dark) {
-	[class*='Alert'][class*='-success'] {
-		color: #bae7b1;
-	}
 }
 
 [class*='Alert'][class*='-info'] {
-	color: #1b444b;
+	color: #74c0cd;
 	border-color: #74c0cd;
-	background: rgba(116, 192, 205, .2);
-}
-
-@media (prefers-color-scheme: dark) {
-	[class*='Alert'][class*='-info'] {
-		color: #b4dde4;
-	}
 }
 
 [class*='Alert'][class*='-warning'] {
-	color: #5a360c;
+	color: #d9831e;
 	border-color: #d9831e;
-	background: rgba(217, 131, 30, .2);
-}
-
-@media (prefers-color-scheme: dark) {
-	[class*='Alert'][class*='-warning'] {
-		color: #f3cfa5;
-	}
 }
 
 [class*='Alert'][class*='-danger'] {
-	color: #541212;
+	color: #d94d4d;
 	border-color: #d94d4d;
-	background: rgba(217, 77, 77, .2);
-}
-
-@media (prefers-color-scheme: dark) {
-	[class*='Alert'][class*='-danger'] {
-		color: #edabab;
-	}
 }
 
 [class*='Alert'] h1,
