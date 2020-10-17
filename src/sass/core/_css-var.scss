@@ -1,6 +1,9 @@
 // ---------------------------------------------------
 // CSS Variables (for dynamic light and dark variants)
 // ---------------------------------------------------
+
+$inverted-suffix: "-inverted";
+
 :root {
     --spacer-base: #{$spacer-base};
 
@@ -74,6 +77,18 @@
     --blockquote-quote-color-inverted: #{$blockquote-quote-color-dark};
 
     --card-subtitle-color: #{$card-subtitle-color};
+
+    @each $name, $config in $custom-css-vars {
+        $light: nth($config, 1);
+        $dark: nth($config, 2);
+        $inverted: nth($config, 3);
+
+        --#{$name}: #{$light};
+
+        @if $inverted {
+            --#{$name}#{$inverted-suffix}: #{$dark};
+        }
+    }
 }
 
 @include option("dark-theme") {
@@ -149,6 +164,18 @@
             --blockquote-quote-color-inverted: #{$blockquote-quote-color};
 
             --card-subtitle-color: #{$card-subtitle-color-dark};
+
+            @each $name, $config in $custom-css-vars {
+                $light: nth($config, 1);
+                $dark: nth($config, 2);
+                $inverted: nth($config, 3);
+
+                --#{$name}: #{$dark};
+
+                @if $inverted {
+                    --#{$name}#{$inverted-suffix}: #{$light};
+                }
+            }
         }
     }
 

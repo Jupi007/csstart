@@ -108,6 +108,18 @@ $spacers: map-merge((
 	'xx-large-plus': 4.5,
 ), $spacers);
 
+// ---------------
+// Custom CSS vars
+// ---------------
+
+// Insert here your own CSS vars for dynamic light and dark variants
+
+$custom-css-vars: !default;
+$custom-css-vars: map-merge((
+    // name - light - dark - inverted (bool)
+    // "body-bg": ($body-bg, $body-bg-dark, true),
+), $custom-css-vars);
+
 // -----------
 // Transitions
 // -----------
