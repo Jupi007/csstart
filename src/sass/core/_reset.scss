@@ -449,15 +449,15 @@ iframe {
 
 details {
     margin-bottom: $paragraph-margin-bottom;
-
-    #{$headings} {
-        display: inline-block;
-    }
 }
 
 summary {
 	display: list-item;
 	cursor: pointer;
+
+    #{$headings} {
+        display: inline-block;
+    }
 }
 
 progress {

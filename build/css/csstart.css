@@ -623,18 +623,18 @@ details {
 	margin-bottom: calc(var(--spacer-base) * 1.5);
 }
 
-details h1,
-details h2,
-details h3,
-details h4,
-details h5,
-details h6 {
-	display: inline-block;
-}
-
 summary {
 	display: list-item;
 	cursor: pointer;
+}
+
+summary h1,
+summary h2,
+summary h3,
+summary h4,
+summary h5,
+summary h6 {
+	display: inline-block;
 }
 
 progress {
