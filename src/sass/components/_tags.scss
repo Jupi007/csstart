@@ -101,44 +101,19 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"]
 {
-    position: relative;
-    z-index: 1;
 	color: var(--components-color);
     cursor: pointer;
-
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: var(--components-background-hover);
-    	border-radius: inherit;
-        opacity: 0;
-        z-index: -1;
-
-        @include transition("opacity");
-    }
+    @include transition("background, color");
 
 	&:hover {
+        background: var(--components-background-hover);
         color: var(--components-color);
         text-decoration: none;
-
-        &::after {
-            opacity: 1;
-        }
     }
 
     &:focus {
         outline: 0;
         box-shadow: 0 0 0 $tag-focus-outline-size var(--tag-focus-outline-color);
-    }
-
-	&:active {
-        &::after {
-            opacity: 0;
-        }
     }
 }
 
@@ -152,11 +127,8 @@ button[class*="#{class("Tag")}"],
 
     @include option("components-inverted") {
         &[class*="#{class("(Component)-inverted")}"] {
-            &::after {
-                background: var(--components-background-hover-inverted);
-            }
-
             &:hover {
+                background: var(--components-background-hover-inverted);
                 color: var(--components-color-inverted);
             }
 
@@ -164,11 +136,8 @@ button[class*="#{class("Tag")}"],
                 color: var(--components-background-inverted);
                 box-shadow: 0 0 0 $tag-border-width var(--components-background-inverted) inset;
 
-                &::after {
-                    background: var(--components-background-inverted);
-                }
-
                 &:hover {
+                    background: var(--components-background-inverted);
                     color: var(--components-color-inverted);
                 }
             }
@@ -181,11 +150,8 @@ button[class*="#{class("Tag")}"],
 
     @include option("components-dark") {
         &[class*="#{class("(Component)-dark")}"] {
-            &::after {
-                background: $components-hover-background-dark;
-            }
-
             &:hover {
+                background: $components-hover-background-dark;
                 color: $components-color-dark;
             }
 
@@ -193,11 +159,8 @@ button[class*="#{class("Tag")}"],
                 color: $components-background-dark;
                 box-shadow: 0 0 0 $tag-border-width $components-background-dark inset;
 
-                &::after {
-                    background: $components-background-dark;
-                }
-
                 &:hover {
+                    background: $components-background-dark;
                     color: $components-color-dark;
                 }
             }
@@ -210,11 +173,8 @@ button[class*="#{class("Tag")}"],
 
     @include option("components-light") {
         &[class*="#{class("(Component)-light")}"] {
-            &::after {
-                background: $components-hover-background;
-            }
-
             &:hover {
+                background: $components-hover-background;
                 color: $components-color;
             }
 
@@ -222,11 +182,8 @@ button[class*="#{class("Tag")}"],
                 color: $components-background;
                 box-shadow: 0 0 0 $tag-border-width $components-background inset;
 
-                &::after {
-                    background: $components-background;
-                }
-
                 &:hover {
+                    background: $components-background;
                     color: $components-color;
                 }
             }
@@ -239,11 +196,8 @@ button[class*="#{class("Tag")}"],
 
     @include option("components-ghost") {
         &[class*="#{class("(Component)-ghost")}"] {
-            &::after {
+            &:hover {
                 background: transparent;
-            }
-
-    		&:hover {
     			color: var(--body-color);
     		}
         }
@@ -252,19 +206,14 @@ button[class*="#{class("Tag")}"],
     &[class*="#{class("(Component)--wired")}"] {
         background: transparent;
 
-        @include transition("color");
-
-		&::after {
-            background: var(--components-background);
-        }
-
-        &:active {
+		&:active {
             &::after {
                 opacity: .8;
             }
         }
 
 		&:hover {
+            background: var(--components-background);
 			color: var(--components-color);
 		}
 	}
@@ -279,11 +228,8 @@ button[class*="#{class("Tag")}"],
 
 			background: $bg;
 
-            &::after {
-                background: darken($bg, $components-hover-darken);
-            }
-
             &:hover {
+                background: darken($bg, $components-hover-darken);
                 @if ($bg == transparent) {
                     color: var(--body-color);
                 } @else {
@@ -295,11 +241,8 @@ button[class*="#{class("Tag")}"],
 				color: $bg;
 				box-shadow: 0 0 0 $tag-border-width $bg inset;
 
-                &::after {
+                &:hover {
                     background: $bg;
-                }
-
-				&:hover {
 					color: best-contrast($bg, $body-color, $body-color-dark);
 				}
 			}
