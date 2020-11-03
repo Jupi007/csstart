@@ -21,7 +21,7 @@ select {
     @include transition("border");
 	&:hover, &:focus { border-color: var(--input-hover-focus-border-color); }
 
-    &:invalid:not(:focus) {
+    &:invalid:focus {
         border-color: $input-invalid-border-color;
     }
 
