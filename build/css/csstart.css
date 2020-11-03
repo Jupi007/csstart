@@ -2193,19 +2193,19 @@ template {
 	align-items: stretch;
 }
 
-.dir--r {
+.dir-r {
 	flex-direction: row;
 }
 
-.dir--rr {
+.dir-rr {
 	flex-direction: row-reverse;
 }
 
-.dir--c {
+.dir-c {
 	flex-direction: column;
 }
 
-.dir--cr {
+.dir-cr {
 	flex-direction: column-reverse;
 }
 
@@ -2221,83 +2221,83 @@ template {
 	flex-wrap: nowrap;
 }
 
-.jc--s {
+.jc-s {
 	justify-content: flex-start;
 }
 
-.jc--e {
+.jc-e {
 	justify-content: end;
 }
 
-.jc--c {
+.jc-c {
 	justify-content: center;
 }
 
-.jc--b {
+.jc-b {
 	justify-content: space-between;
 }
 
-.jc--a {
+.jc-a {
 	justify-content: space-around;
 }
 
-.ai--s {
+.ai-s {
 	align-items: flex-start;
 }
 
-.ai--e {
+.ai-e {
 	align-items: end;
 }
 
-.ai--c {
+.ai-c {
 	align-items: center;
 }
 
-.ai--bl {
+.ai-bl {
 	align-items: baseline;
 }
 
-.ai--str {
+.ai-str {
 	align-items: stretch;
 }
 
-.ac--s {
+.ac-s {
 	align-content: flex-start;
 }
 
-.ac--e {
+.ac-e {
 	align-content: end;
 }
 
-.ac--c {
+.ac-c {
 	align-content: center;
 }
 
-.ac--bl {
+.ac-bl {
 	align-content: baseline;
 }
 
-.ac--str {
+.ac-str {
 	align-content: stretch;
 }
 
-.as--s {
+.as-s {
 	align-self: flex-start;
 }
 
-.as--e {
+.as-e {
 	align-self: end;
 }
 
-.as--c {
+.as-c {
 	align-self: center;
 }
 
-.as--bl {
+.as-bl {
 	align-self: baseline;
 }
 
-.as--str {
+.as-str {
 	align-self: stretch;
 }
 
@@ -3492,19 +3492,19 @@ template {
 		order: 1 !important;
 	}
 
-	.tiny-dir--r {
+	.tiny-dir-r {
 		flex-direction: row;
 	}
 
-	.tiny-dir--rr {
+	.tiny-dir-rr {
 		flex-direction: row-reverse;
 	}
 
-	.tiny-dir--c {
+	.tiny-dir-c {
 		flex-direction: column;
 	}
 
-	.tiny-dir--cr {
+	.tiny-dir-cr {
 		flex-direction: column-reverse;
 	}
 
@@ -3520,83 +3520,83 @@ template {
 		flex-wrap: nowrap;
 	}
 
-	.tiny-jc--s {
+	.tiny-jc-s {
 		justify-content: flex-start;
 	}
 
-	.tiny-jc--e {
+	.tiny-jc-e {
 		justify-content: end;
 	}
 
-	.tiny-jc--c {
+	.tiny-jc-c {
 		justify-content: center;
 	}
 
-	.tiny-jc--b {
+	.tiny-jc-b {
 		justify-content: space-between;
 	}
 
-	.tiny-jc--a {
+	.tiny-jc-a {
 		justify-content: space-around;
 	}
 
-	.tiny-ai--s {
+	.tiny-ai-s {
 		align-items: flex-start;
 	}
 
-	.tiny-ai--e {
+	.tiny-ai-e {
 		align-items: end;
 	}
 
-	.tiny-ai--c {
+	.tiny-ai-c {
 		align-items: center;
 	}
 
-	.tiny-ai--bl {
+	.tiny-ai-bl {
 		align-items: baseline;
 	}
 
-	.tiny-ai--str {
+	.tiny-ai-str {
 		align-items: stretch;
 	}
 
-	.tiny-ac--s {
+	.tiny-ac-s {
 		align-content: flex-start;
 	}
 
-	.tiny-ac--e {
+	.tiny-ac-e {
 		align-content: end;
 	}
 
-	.tiny-ac--c {
+	.tiny-ac-c {
 		align-content: center;
 	}
 
-	.tiny-ac--bl {
+	.tiny-ac-bl {
 		align-content: baseline;
 	}
 
-	.tiny-ac--str {
+	.tiny-ac-str {
 		align-content: stretch;
 	}
 
-	.tiny-as--s {
+	.tiny-as-s {
 		align-self: flex-start;
 	}
 
-	.tiny-as--e {
+	.tiny-as-e {
 		align-self: end;
 	}
 
-	.tiny-as--c {
+	.tiny-as-c {
 		align-self: center;
 	}
 
-	.tiny-as--bl {
+	.tiny-as-bl {
 		align-self: baseline;
 	}
 
-	.tiny-as--str {
+	.tiny-as-str {
 		align-self: stretch;
 	}
 
@@ -4767,19 +4767,19 @@ template {
 		order: 1 !important;
 	}
 
-	.small-dir--r {
+	.small-dir-r {
 		flex-direction: row;
 	}
 
-	.small-dir--rr {
+	.small-dir-rr {
 		flex-direction: row-reverse;
 	}
 
-	.small-dir--c {
+	.small-dir-c {
 		flex-direction: column;
 	}
 
-	.small-dir--cr {
+	.small-dir-cr {
 		flex-direction: column-reverse;
 	}
 
@@ -4795,83 +4795,83 @@ template {
 		flex-wrap: nowrap;
 	}
 
-	.small-jc--s {
+	.small-jc-s {
 		justify-content: flex-start;
 	}
 
-	.small-jc--e {
+	.small-jc-e {
 		justify-content: end;
 	}
 
-	.small-jc--c {
+	.small-jc-c {
 		justify-content: center;
 	}
 
-	.small-jc--b {
+	.small-jc-b {
 		justify-content: space-between;
 	}
 
-	.small-jc--a {
+	.small-jc-a {
 		justify-content: space-around;
 	}
 
-	.small-ai--s {
+	.small-ai-s {
 		align-items: flex-start;
 	}
 
-	.small-ai--e {
+	.small-ai-e {
 		align-items: end;
 	}
 
-	.small-ai--c {
+	.small-ai-c {
 		align-items: center;
 	}
 
-	.small-ai--bl {
+	.small-ai-bl {
 		align-items: baseline;
 	}
 
-	.small-ai--str {
+	.small-ai-str {
 		align-items: stretch;
 	}
 
-	.small-ac--s {
+	.small-ac-s {
 		align-content: flex-start;
 	}
 
-	.small-ac--e {
+	.small-ac-e {
 		align-content: end;
 	}
 
-	.small-ac--c {
+	.small-ac-c {
 		align-content: center;
 	}
 
-	.small-ac--bl {
+	.small-ac-bl {
 		align-content: baseline;
 	}
 
-	.small-ac--str {
+	.small-ac-str {
 		align-content: stretch;
 	}
 
-	.small-as--s {
+	.small-as-s {
 		align-self: flex-start;
 	}
 
-	.small-as--e {
+	.small-as-e {
 		align-self: end;
 	}
 
-	.small-as--c {
+	.small-as-c {
 		align-self: center;
 	}
 
-	.small-as--bl {
+	.small-as-bl {
 		align-self: baseline;
 	}
 
-	.small-as--str {
+	.small-as-str {
 		align-self: stretch;
 	}
 
@@ -6042,19 +6042,19 @@ template {
 		order: 1 !important;
 	}
 
-	.medium-dir--r {
+	.medium-dir-r {
 		flex-direction: row;
 	}
 
-	.medium-dir--rr {
+	.medium-dir-rr {
 		flex-direction: row-reverse;
 	}
 
-	.medium-dir--c {
+	.medium-dir-c {
 		flex-direction: column;
 	}
 
-	.medium-dir--cr {
+	.medium-dir-cr {
 		flex-direction: column-reverse;
 	}
 
@@ -6070,83 +6070,83 @@ template {
 		flex-wrap: nowrap;
 	}
 
-	.medium-jc--s {
+	.medium-jc-s {
 		justify-content: flex-start;
 	}
 
-	.medium-jc--e {
+	.medium-jc-e {
 		justify-content: end;
 	}
 
-	.medium-jc--c {
+	.medium-jc-c {
 		justify-content: center;
 	}
 
-	.medium-jc--b {
+	.medium-jc-b {
 		justify-content: space-between;
 	}
 
-	.medium-jc--a {
+	.medium-jc-a {
 		justify-content: space-around;
 	}
 
-	.medium-ai--s {
+	.medium-ai-s {
 		align-items: flex-start;
 	}
 
-	.medium-ai--e {
+	.medium-ai-e {
 		align-items: end;
 	}
 
-	.medium-ai--c {
+	.medium-ai-c {
 		align-items: center;
 	}
 
-	.medium-ai--bl {
+	.medium-ai-bl {
 		align-items: baseline;
 	}
 
-	.medium-ai--str {
+	.medium-ai-str {
 		align-items: stretch;
 	}
 
-	.medium-ac--s {
+	.medium-ac-s {
 		align-content: flex-start;
 	}
 
-	.medium-ac--e {
+	.medium-ac-e {
 		align-content: end;
 	}
 
-	.medium-ac--c {
+	.medium-ac-c {
 		align-content: center;
 	}
 
-	.medium-ac--bl {
+	.medium-ac-bl {
 		align-content: baseline;
 	}
 
-	.medium-ac--str {
+	.medium-ac-str {
 		align-content: stretch;
 	}
 
-	.medium-as--s {
+	.medium-as-s {
 		align-self: flex-start;
 	}
 
-	.medium-as--e {
+	.medium-as-e {
 		align-self: end;
 	}
 
-	.medium-as--c {
+	.medium-as-c {
 		align-self: center;
 	}
 
-	.medium-as--bl {
+	.medium-as-bl {
 		align-self: baseline;
 	}
 
-	.medium-as--str {
+	.medium-as-str {
 		align-self: stretch;
 	}
 
@@ -7317,19 +7317,19 @@ template {
 		order: 1 !important;
 	}
 
-	.large-dir--r {
+	.large-dir-r {
 		flex-direction: row;
 	}
 
-	.large-dir--rr {
+	.large-dir-rr {
 		flex-direction: row-reverse;
 	}
 
-	.large-dir--c {
+	.large-dir-c {
 		flex-direction: column;
 	}
 
-	.large-dir--cr {
+	.large-dir-cr {
 		flex-direction: column-reverse;
 	}
 
@@ -7345,83 +7345,83 @@ template {
 		flex-wrap: nowrap;
 	}
 
-	.large-jc--s {
+	.large-jc-s {
 		justify-content: flex-start;
 	}
 
-	.large-jc--e {
+	.large-jc-e {
 		justify-content: end;
 	}
 
-	.large-jc--c {
+	.large-jc-c {
 		justify-content: center;
 	}
 
-	.large-jc--b {
+	.large-jc-b {
 		justify-content: space-between;
 	}
 
-	.large-jc--a {
+	.large-jc-a {
 		justify-content: space-around;
 	}
 
-	.large-ai--s {
+	.large-ai-s {
 		align-items: flex-start;
 	}
 
-	.large-ai--e {
+	.large-ai-e {
 		align-items: end;
 	}
 
-	.large-ai--c {
+	.large-ai-c {
 		align-items: center;
 	}
 
-	.large-ai--bl {
+	.large-ai-bl {
 		align-items: baseline;
 	}
 
-	.large-ai--str {
+	.large-ai-str {
 		align-items: stretch;
 	}
 
-	.large-ac--s {
+	.large-ac-s {
 		align-content: flex-start;
 	}
 
-	.large-ac--e {
+	.large-ac-e {
 		align-content: end;
 	}
 
-	.large-ac--c {
+	.large-ac-c {
 		align-content: center;
 	}
 
-	.large-ac--bl {
+	.large-ac-bl {
 		align-content: baseline;
 	}
 
-	.large-ac--str {
+	.large-ac-str {
 		align-content: stretch;
 	}
 
-	.large-as--s {
+	.large-as-s {
 		align-self: flex-start;
 	}
 
-	.large-as--e {
+	.large-as-e {
 		align-self: end;
 	}
 
-	.large-as--c {
+	.large-as-c {
 		align-self: center;
 	}
 
-	.large-as--bl {
+	.large-as-bl {
 		align-self: baseline;
 	}
 
-	.large-as--str {
+	.large-as-str {
 		align-self: stretch;
 	}
 
@@ -8592,19 +8592,19 @@ template {
 		order: 1 !important;
 	}
 
-	.extraLarge-dir--r {
+	.extraLarge-dir-r {
 		flex-direction: row;
 	}
 
-	.extraLarge-dir--rr {
+	.extraLarge-dir-rr {
 		flex-direction: row-reverse;
 	}
 
-	.extraLarge-dir--c {
+	.extraLarge-dir-c {
 		flex-direction: column;
 	}
 
-	.extraLarge-dir--cr {
+	.extraLarge-dir-cr {
 		flex-direction: column-reverse;
 	}
 
@@ -8620,83 +8620,83 @@ template {
 		flex-wrap: nowrap;
 	}
 
-	.extraLarge-jc--s {
+	.extraLarge-jc-s {
 		justify-content: flex-start;
 	}
 
-	.extraLarge-jc--e {
+	.extraLarge-jc-e {
 		justify-content: end;
 	}
 
-	.extraLarge-jc--c {
+	.extraLarge-jc-c {
 		justify-content: center;
 	}
 
-	.extraLarge-jc--b {
+	.extraLarge-jc-b {
 		justify-content: space-between;
 	}
 
-	.extraLarge-jc--a {
+	.extraLarge-jc-a {
 		justify-content: space-around;
 	}
 
-	.extraLarge-ai--s {
+	.extraLarge-ai-s {
 		align-items: flex-start;
 	}
 
-	.extraLarge-ai--e {
+	.extraLarge-ai-e {
 		align-items: end;
 	}
 
-	.extraLarge-ai--c {
+	.extraLarge-ai-c {
 		align-items: center;
 	}
 
-	.extraLarge-ai--bl {
+	.extraLarge-ai-bl {
 		align-items: baseline;
 	}
 
-	.extraLarge-ai--str {
+	.extraLarge-ai-str {
 		align-items: stretch;
 	}
 
-	.extraLarge-ac--s {
+	.extraLarge-ac-s {
 		align-content: flex-start;
 	}
 
-	.extraLarge-ac--e {
+	.extraLarge-ac-e {
 		align-content: end;
 	}
 
-	.extraLarge-ac--c {
+	.extraLarge-ac-c {
 		align-content: center;
 	}
 
-	.extraLarge-ac--bl {
+	.extraLarge-ac-bl {
 		align-content: baseline;
 	}
 
-	.extraLarge-ac--str {
+	.extraLarge-ac-str {
 		align-content: stretch;
 	}
 
-	.extraLarge-as--s {
+	.extraLarge-as-s {
 		align-self: flex-start;
 	}
 
-	.extraLarge-as--e {
+	.extraLarge-as-e {
 		align-self: end;
 	}
 
-	.extraLarge-as--c {
+	.extraLarge-as-c {
 		align-self: center;
 	}
 
-	.extraLarge-as--bl {
+	.extraLarge-as-bl {
 		align-self: baseline;
 	}
 
-	.extraLarge-as--str {
+	.extraLarge-as-str {
 		align-self: stretch;
 	}
 
@@ -10836,6 +10836,7 @@ button:focus,
 input[type='button']:focus,
 input[type='submit']:focus,
 input[type='reset']:focus {
+	color: var(--components-color);
 	outline: 0;
 	box-shadow: 0 0 0 3px var(--tag-focus-outline-color);
 }

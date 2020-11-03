@@ -114,6 +114,7 @@ input[type="reset"]
     &:focus {
         outline: 0;
         box-shadow: 0 0 0 $tag-focus-outline-size var(--tag-focus-outline-color);
+        color: var(--components-color);
     }
 }
 
