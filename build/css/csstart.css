@@ -10870,7 +10870,6 @@ a[class*='Tag'][class*='-inverted'][class*='--wired'],
 button[class*='Tag'][class*='-inverted'][class*='--wired'],
 [class*='Button'][class*='-inverted'][class*='--wired'] {
 	color: var(--components-background-inverted);
-	box-shadow: 0 0 0 1px var(--components-background-inverted) inset;
 }
 
 a[class*='Tag'][class*='-inverted'][class*='--wired']:focus,
@@ -10904,7 +10903,6 @@ a[class*='Tag'][class*='-dark'][class*='--wired'],
 button[class*='Tag'][class*='-dark'][class*='--wired'],
 [class*='Button'][class*='-dark'][class*='--wired'] {
 	color: #fff;
-	box-shadow: 0 0 0 1px #fff inset;
 }
 
 a[class*='Tag'][class*='-dark'][class*='--wired']:focus,
@@ -10938,7 +10936,6 @@ a[class*='Tag'][class*='-light'][class*='--wired'],
 button[class*='Tag'][class*='-light'][class*='--wired'],
 [class*='Button'][class*='-light'][class*='--wired'] {
 	color: #333;
-	box-shadow: 0 0 0 1px #333 inset;
 }
 
 a[class*='Tag'][class*='-light'][class*='--wired']:focus,
@@ -10972,12 +10969,6 @@ a[class*='Tag'][class*='--wired'],
 button[class*='Tag'][class*='--wired'],
 [class*='Button'][class*='--wired'] {
 	background: transparent;
-}
-
-a[class*='Tag'][class*='--wired']:active::after,
-button[class*='Tag'][class*='--wired']:active::after,
-[class*='Button'][class*='--wired']:active::after {
-	opacity: .8;
 }
 
 a[class*='Tag'][class*='--wired']:hover,

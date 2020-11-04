@@ -139,7 +139,6 @@ button[class*="#{class("Tag")}"],
 
             &[class*="#{class("(Component)--wired")}"] {
                 color: var(--components-background-inverted);
-                box-shadow: 0 0 0 $tag-border-width var(--components-background-inverted) inset;
 
                 &:focus {
                     color: var(--components-color-inverted);
@@ -167,7 +166,6 @@ button[class*="#{class("Tag")}"],
 
             &[class*="#{class("(Component)--wired")}"] {
                 color: $components-background-dark;
-                box-shadow: 0 0 0 $tag-border-width $components-background-dark inset;
 
                 &:focus {
                     color: $components-background-dark;
@@ -195,7 +193,6 @@ button[class*="#{class("Tag")}"],
 
             &[class*="#{class("(Component)--wired")}"] {
                 color: $components-background;
-                box-shadow: 0 0 0 $tag-border-width $components-background inset;
 
                 &:focus {
                     color: $components-background;
@@ -225,12 +222,6 @@ button[class*="#{class("Tag")}"],
 
     &[class*="#{class("(Component)--wired")}"] {
         background: transparent;
-
-		&:active {
-            &::after {
-                opacity: .8;
-            }
-        }
 
 		&:hover {
             background: var(--components-background);
