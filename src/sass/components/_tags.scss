@@ -116,6 +116,10 @@ input[type="reset"]
         box-shadow: 0 0 0 $tag-focus-outline-size var(--tag-focus-outline-color);
         color: var(--components-color);
     }
+
+    &[class*="#{class("(Component)--wired")}"]:focus {
+		color: var(--components-background);
+	}
 }
 
 a[class*="#{class("Tag")}"],
@@ -137,6 +141,10 @@ button[class*="#{class("Tag")}"],
                 color: var(--components-background-inverted);
                 box-shadow: 0 0 0 $tag-border-width var(--components-background-inverted) inset;
 
+                &:focus {
+                    color: var(--components-color-inverted);
+                }
+
                 &:hover {
                     background: var(--components-background-inverted);
                     color: var(--components-color-inverted);
@@ -145,6 +153,7 @@ button[class*="#{class("Tag")}"],
 
             &:focus {
                 box-shadow: 0 0 0 $tag-focus-outline-size var(--tag-focus-outline-color-inverted);
+                color: var(--components-color-inverted);
             }
         }
     }
@@ -160,6 +169,10 @@ button[class*="#{class("Tag")}"],
                 color: $components-background-dark;
                 box-shadow: 0 0 0 $tag-border-width $components-background-dark inset;
 
+                &:focus {
+                    color: $components-background-dark;
+                }
+
                 &:hover {
                     background: $components-background-dark;
                     color: $components-color-dark;
@@ -168,6 +181,7 @@ button[class*="#{class("Tag")}"],
 
             &:focus {
                 box-shadow: 0 0 0 $tag-focus-outline-size $tag-focus-outline-color-dark;
+                color: $components-color-dark;
             }
         }
     }
@@ -183,6 +197,10 @@ button[class*="#{class("Tag")}"],
                 color: $components-background;
                 box-shadow: 0 0 0 $tag-border-width $components-background inset;
 
+                &:focus {
+                    color: $components-background;
+                }
+
                 &:hover {
                     background: $components-background;
                     color: $components-color;
@@ -191,6 +209,7 @@ button[class*="#{class("Tag")}"],
 
             &:focus {
                 box-shadow: 0 0 0 $tag-focus-outline-size $tag-focus-outline-color;
+                color: $components-color;
             }
         }
     }

@@ -10841,6 +10841,15 @@ input[type='reset']:focus {
 	box-shadow: 0 0 0 3px var(--tag-focus-outline-color);
 }
 
+a[class*='Tag'][class*='--wired']:focus,
+[class*='Button'][class*='--wired']:focus,
+button[class*='--wired']:focus,
+input[type='button'][class*='--wired']:focus,
+input[type='submit'][class*='--wired']:focus,
+input[type='reset'][class*='--wired']:focus {
+	color: var(--components-background);
+}
+
 a[class*='Tag']:hover,
 a[class*='Tag']:focus,
 button[class*='Tag']:hover,
@@ -10864,6 +10873,12 @@ button[class*='Tag'][class*='-inverted'][class*='--wired'],
 	box-shadow: 0 0 0 1px var(--components-background-inverted) inset;
 }
 
+a[class*='Tag'][class*='-inverted'][class*='--wired']:focus,
+button[class*='Tag'][class*='-inverted'][class*='--wired']:focus,
+[class*='Button'][class*='-inverted'][class*='--wired']:focus {
+	color: var(--components-color-inverted);
+}
+
 a[class*='Tag'][class*='-inverted'][class*='--wired']:hover,
 button[class*='Tag'][class*='-inverted'][class*='--wired']:hover,
 [class*='Button'][class*='-inverted'][class*='--wired']:hover {
@@ -10874,6 +10889,7 @@ button[class*='Tag'][class*='-inverted'][class*='--wired']:hover,
 a[class*='Tag'][class*='-inverted']:focus,
 button[class*='Tag'][class*='-inverted']:focus,
 [class*='Button'][class*='-inverted']:focus {
+	color: var(--components-color-inverted);
 	box-shadow: 0 0 0 3px var(--tag-focus-outline-color-inverted);
 }
 
@@ -10891,6 +10907,12 @@ button[class*='Tag'][class*='-dark'][class*='--wired'],
 	box-shadow: 0 0 0 1px #fff inset;
 }
 
+a[class*='Tag'][class*='-dark'][class*='--wired']:focus,
+button[class*='Tag'][class*='-dark'][class*='--wired']:focus,
+[class*='Button'][class*='-dark'][class*='--wired']:focus {
+	color: #fff;
+}
+
 a[class*='Tag'][class*='-dark'][class*='--wired']:hover,
 button[class*='Tag'][class*='-dark'][class*='--wired']:hover,
 [class*='Button'][class*='-dark'][class*='--wired']:hover {
@@ -10901,6 +10923,7 @@ button[class*='Tag'][class*='-dark'][class*='--wired']:hover,
 a[class*='Tag'][class*='-dark']:focus,
 button[class*='Tag'][class*='-dark']:focus,
 [class*='Button'][class*='-dark']:focus {
+	color: #0d0d0d;
 	box-shadow: 0 0 0 3px gray;
 }
 
@@ -10918,6 +10941,12 @@ button[class*='Tag'][class*='-light'][class*='--wired'],
 	box-shadow: 0 0 0 1px #333 inset;
 }
 
+a[class*='Tag'][class*='-light'][class*='--wired']:focus,
+button[class*='Tag'][class*='-light'][class*='--wired']:focus,
+[class*='Button'][class*='-light'][class*='--wired']:focus {
+	color: #333;
+}
+
 a[class*='Tag'][class*='-light'][class*='--wired']:hover,
 button[class*='Tag'][class*='-light'][class*='--wired']:hover,
 [class*='Button'][class*='-light'][class*='--wired']:hover {
@@ -10928,6 +10957,7 @@ button[class*='Tag'][class*='-light'][class*='--wired']:hover,
 a[class*='Tag'][class*='-light']:focus,
 button[class*='Tag'][class*='-light']:focus,
 [class*='Button'][class*='-light']:focus {
+	color: #f2f2f2;
 	box-shadow: 0 0 0 3px #666;
 }
 
