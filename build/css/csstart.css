@@ -19,7 +19,7 @@
 	--components-background-hover-inverted: #e6e6e6;
 	--components-color-inverted: #0d0d0d;
 	--tag-focus-outline-color: #666;
-	--tag-focus-outline-color-inverted: #ccc;
+	--tag-focus-outline-color-inverted: gray;
 	--alert-background: rgba(51, 51, 51, .2);
 	--alert-background-inverted: rgba(255, 255, 255, .2);
 	--table-border-color: #262626;
@@ -81,7 +81,7 @@
 		--components-background-inverted: #333;
 		--components-background-hover-inverted: #1a1a1a;
 		--components-color-inverted: #f2f2f2;
-		--tag-focus-outline-color: #ccc;
+		--tag-focus-outline-color: gray;
 		--tag-focus-outline-color-inverted: #666;
 		--alert-background: rgba(255, 255, 255, .2);
 		--alert-background-inverted: rgba(51, 51, 51, .2);
@@ -10901,7 +10901,7 @@ button[class*='Tag'][class*='-dark'][class*='--wired']:hover,
 a[class*='Tag'][class*='-dark']:focus,
 button[class*='Tag'][class*='-dark']:focus,
 [class*='Button'][class*='-dark']:focus {
-	box-shadow: 0 0 0 3px #ccc;
+	box-shadow: 0 0 0 3px gray;
 }
 
 a[class*='Tag'][class*='-light']:hover,

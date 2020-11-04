@@ -48,13 +48,13 @@ $checkbox-checked-background: grey(100) !default;
 $checkbox-checked-icon-color: color("white") !default;
 $checkbox-disabled-border-color: grey(30) !default;
 $checkbox-disabled-background: grey(10) !default;
-$checkbox-border-radius: 3px;
-$checkbox-focus-outline-width: 2px;
-$checkbox-focus-outline-color: grey(50);
+$checkbox-border-radius: 3px !default;
+$checkbox-focus-outline-width: 2px !default;
+$checkbox-focus-outline-color: grey(50) !default;
 
-$switch-height: spacer("large");
-$switch-width: spacer("xx-large");
-$switch-border-radius: 2rem;
+$switch-height: spacer("large") !default;
+$switch-width: spacer("xx-large") !default;
+$switch-border-radius: 2rem !default;
 
 $range-track-color: grey(70) !default;
 $range-track-disabled-color: grey(60) !default;
@@ -112,12 +112,11 @@ $tag-border-radius: $border-radius-base !default;
 $tag-padding: spacer("tiny") spacer("tiny-plus") !default;
 $tag-font-size: .8em !default;
 $tag-border-width: 1px !default;
-$tag-focus-outline-color-lighten: 20%;
-$tag-focus-outline-color: lighten($components-background, $tag-focus-outline-color-lighten);
-$tag-focus-outline-size: 3px;
+$tag-focus-outline-color-lighten: 20% !default;
+$tag-focus-outline-color: lighten($components-background, $tag-focus-outline-color-lighten) !default;
+$tag-focus-outline-size: 3px !default;
 
-$tag-focus-outline-color-darken-dark: 50%;
-$tag-focus-outline-color-dark: darken($components-background-dark, $tag-focus-outline-color-lighten);
+$tag-focus-outline-color-dark: darken($components-background-dark, 50%) !default;
 
 $tag-sizes: !default;
 $tag-sizes: map-merge((
@@ -136,12 +135,12 @@ $alert-border-left-width: 5px !default;
 $alert-border-radius: $border-radius-base !default;
 $alert-margin-bottom: $paragraph-margin-bottom !default;
 $alert-title-font-size: 1.5em !default;
-$alert-background-transparency-amount: .8;
-$alert-color-brightness: 20%;
+$alert-background-transparency-amount: .8 !default;
+$alert-color-brightness: 20% !default;
 $alert-background: transparentize($components-background, $alert-background-transparency-amount) !default;
 
 $alert-background-dark: transparentize($components-background-dark, $alert-background-transparency-amount) !default;
-$alert-color-brightness-dark: 80%;
+$alert-color-brightness-dark: 80% !default;
 
 // -----
 // Cards
@@ -156,13 +155,13 @@ $card-subtitle-color: grey(60) !default;
 $card-body-padding: spacer("medium") !default;
 $card-hover-box-shadow-width: 2px !default;
 
-$card-subtitle-color-dark: grey(40);
+$card-subtitle-color-dark: grey(40) !default;
 
 // -----
 // Media
 // -----
 
-$media-figure-margin-right: $paragraph-margin-bottom;
+$media-figure-margin-right: $paragraph-margin-bottom !default;
 
 // ----
 // Flex
