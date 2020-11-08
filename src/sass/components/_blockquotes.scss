@@ -1,15 +1,37 @@
+// ==============================
+// ==== Blockquote component ====
+// ==============================
+
+// Create a Blockquote by adding the .Blockquote class or add the .Afb class to the parent of a blockquote html tag
+
 @include option("blockquote") {
 
-[class*="#{class("Blockquote")}"],
-[class*="#{class("Auto-formating-block")}"] blockquote {
+.#{class("Blockquote")},
+.#{class("Auto-formating-block")} blockquote
+{
+    --blockquote-background: #{$blockquote-background};
+    --blockquote-color: #{$blockquote-color};
+    --blockquote-cite-color: #{$blockquote-cite-color};
+    --blockquote-quote-color: #{$blockquote-quote-color};
+
+    @include option("dark-theme") {
+        @media (prefers-color-scheme: dark) {
+            --blockquote-background: #{$blockquote-background-dark};
+            --blockquote-color: #{$blockquote-color-dark};
+            --blockquote-cite-color: #{$blockquote-cite-color-dark};
+            --blockquote-quote-color: #{$blockquote-quote-color-dark};
+        }
+    }
+
+    position: relative;
 	padding: $blockquote-padding;
-	background: var(--blockquote-background);
-    color: var(--blockquote-color);
-	@include border-radius($blockquote-border-radius);
-	position: relative;
     margin-top: $blockquote-margin-top;
     margin-bottom: $blockquote-margin-bottom;
+	@include border-radius($blockquote-border-radius);
+	background: var(--blockquote-background);
+    color: var(--blockquote-color);
 
+    // Add an extra quote (") in the top-left corner
     @include option("blockquote-quote") {
         padding-left: 80px;
 
@@ -25,10 +47,7 @@
     	}
     }
 
-	> :last-child {
-		margin-bottom: 0;
-	}
-
+    // Using a more specific selector instead of a class because of the Auto-formating-block
 	> cite {
 		display: block;
 		color: var(--blockquote-cite-color);
@@ -40,47 +59,54 @@
 		}
 	}
 
-    @include option("components-inverted") {
-    	&[class*="#{class("(Component)-inverted")}"] {
-            background: var(--blockquote-background-inverted);
-            color: var(--blockquote-color-inverted);
+    // Avoid to have an extra border at bottom and top
+	> :first-child {
+		margin-top: 0;
+	}
+	> :last-child {
+		margin-bottom: 0;
+	}
 
-            &:before {
-    		    color: var(--blockquote-quote-color-inverted);
-            }
+    // Dark/Light theme variants - enabled only if dark-theme option is set to true
+    // ============================================================================
+    @include option("dark-theme") {
 
-            > cite {
-    		    color: var(--blockquote-cite-color-inverted);
+        // Dynamic inverted variant - ex: use dark scheme colors in a light environment
+        @include option("components-inverted") {
+        	&-#{class("(Component)-inverted")} {
+                --blockquote-background: #{$blockquote-background-dark};
+                --blockquote-color: #{$blockquote-color-dark};
+                --blockquote-cite-color: #{$blockquote-cite-color-dark};
+                --blockquote-quote-color: #{$blockquote-quote-color-dark};
+
+                @include option("dark-theme") {
+                    @media (prefers-color-scheme: dark) {
+                        --blockquote-background: #{$blockquote-background};
+                        --blockquote-color: #{$blockquote-color};
+                        --blockquote-cite-color: #{$blockquote-cite-color};
+                        --blockquote-quote-color: #{$blockquote-quote-color};
+                    }
+                }
             }
         }
-    }
 
-    @include option("components-light") {
-    	&[class*="#{class("(Component)-inverted")}"] {
-            background: $blockquote-background;
-            color: $blockquote-color;
-
-            &:before {
-    		    color: $blockquote-quote-color;
-            }
-
-            > cite {
-    		    color: $blockquote-cite-color;
+        // Dark theme variant - always use dark scheme colors
+        @include option("components-light") {
+        	&-#{class("(Component)-light")} {
+                --blockquote-background: #{$blockquote-background};
+                --blockquote-color: #{$blockquote-color};
+                --blockquote-cite-color: #{$blockquote-cite-color};
+                --blockquote-quote-color: #{$blockquote-quote-color};
             }
         }
-    }
 
-    @include option("components-dark") {
-    	&[class*="#{class("(Component)-dark")}"] {
-            background: $blockquote-background-dark;
-            color: $blockquote-color-dark;
-
-            &:before {
-    		    color: $blockquote-quote-color-dark;
-            }
-
-            > cite {
-    		    color: $blockquote-cite-color-dark;
+        // Light theme variant - always use light scheme colors
+        @include option("components-dark") {
+        	&-#{class("(Component)-dark")} {
+                --blockquote-background: #{$blockquote-background-dark};
+                --blockquote-color: #{$blockquote-color-dark};
+                --blockquote-cite-color: #{$blockquote-cite-color-dark};
+                --blockquote-quote-color: #{$blockquote-quote-color-dark};
             }
         }
     }

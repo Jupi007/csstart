@@ -46,14 +46,6 @@
 	--range-thumb-color: #ccc;
 	--range-thumb-hover-color: #b3b3b3;
 	--progress-background: #ccc;
-	--blockquote-background: #e6e6e6;
-	--blockquote-color: #0d0d0d;
-	--blockquote-cite-color: #4d4d4d;
-	--blockquote-quote-color: #b3b3b3;
-	--blockquote-background-inverted: #333;
-	--blockquote-color-inverted: #f2f2f2;
-	--blockquote-cite-color-inverted: #999;
-	--blockquote-quote-color-inverted: #666;
 	--card-subtitle-color: #666;
 }
 
@@ -105,14 +97,6 @@
 		--range-thumb-color: #fff;
 		--range-thumb-hover-color: #e6e6e6;
 		--progress-background: #ccc;
-		--blockquote-background: #333;
-		--blockquote-color: #f2f2f2;
-		--blockquote-cite-color: #999;
-		--blockquote-quote-color: #666;
-		--blockquote-background-inverted: #e6e6e6;
-		--blockquote-color-inverted: #0d0d0d;
-		--blockquote-cite-color-inverted: #4d4d4d;
-		--blockquote-quote-color-inverted: #b3b3b3;
 		--card-subtitle-color: #999;
 	}
 }
@@ -10811,6 +10795,14 @@ a.Tag:focus:not(:active)::before,
 	}
 }
 
+.Alert > :first-child {
+	margin-top: 0;
+}
+
+.Alert > :last-child {
+	margin-bottom: 0;
+}
+
 .Alert-ghost {
 	--alert-border-color: transparent;
 }
@@ -11171,8 +11163,8 @@ a[class*='Card']:focus {
 	color: var(--table-caption-color);
 }
 
-[class*='Blockquote'],
-[class*='Afb'] blockquote {
+.Blockquote,
+.Afb blockquote {
 	position: relative;
 	margin-top: calc(calc(var(--spacer-base) * 1.5) * 2);
 	margin-bottom: calc(calc(var(--spacer-base) * 1.5) * 2);
@@ -11181,10 +11173,24 @@ a[class*='Card']:focus {
 	color: var(--blockquote-color);
 	border-radius: 12px;
 	background: var(--blockquote-background);
+	--blockquote-background: #e6e6e6;
+	--blockquote-color: #0d0d0d;
+	--blockquote-cite-color: #4d4d4d;
+	--blockquote-quote-color: #b3b3b3;
 }
 
-[class*='Blockquote']:before,
-[class*='Afb'] blockquote:before {
+@media (prefers-color-scheme: dark) {
+	.Blockquote,
+    .Afb blockquote {
+		--blockquote-background: #333;
+		--blockquote-color: #f2f2f2;
+		--blockquote-cite-color: #999;
+		--blockquote-quote-color: #666;
+	}
+}
+
+.Blockquote:before,
+.Afb blockquote:before {
 	font-family: georgia, serif;
 	font-size: 7em;
 	line-height: .9;
@@ -11195,70 +11201,61 @@ a[class*='Card']:focus {
 	color: var(--blockquote-quote-color);
 }
 
-[class*='Blockquote'] > :last-child,
-[class*='Afb'] blockquote > :last-child {
-	margin-bottom: 0;
-}
-
-[class*='Blockquote'] > cite,
-[class*='Afb'] blockquote > cite {
+.Blockquote > cite,
+.Afb blockquote > cite {
 	display: block;
 	margin-bottom: calc(var(--spacer-base) * 1.5);
 	text-align: right;
 	color: var(--blockquote-cite-color);
 }
 
-[class*='Blockquote'] > cite:before,
-[class*='Afb'] blockquote > cite:before {
+.Blockquote > cite:before,
+.Afb blockquote > cite:before {
 	content: '- ';
 }
 
-[class*='Blockquote'][class*='inverted'],
-[class*='Afb'] blockquote[class*='inverted'] {
-	color: var(--blockquote-color-inverted);
-	background: var(--blockquote-background-inverted);
+.Blockquote > :first-child,
+.Afb blockquote > :first-child {
+	margin-top: 0;
 }
 
-[class*='Blockquote'][class*='inverted']:before,
-[class*='Afb'] blockquote[class*='inverted']:before {
-	color: var(--blockquote-quote-color-inverted);
+.Blockquote > :last-child,
+.Afb blockquote > :last-child {
+	margin-bottom: 0;
 }
 
-[class*='Blockquote'][class*='inverted'] > cite,
-[class*='Afb'] blockquote[class*='inverted'] > cite {
-	color: var(--blockquote-cite-color-inverted);
+.Blockquote-inverted,
+.Afb blockquote-inverted {
+	--blockquote-background: #333;
+	--blockquote-color: #f2f2f2;
+	--blockquote-cite-color: #999;
+	--blockquote-quote-color: #666;
 }
 
-[class*='Blockquote'][class*='inverted'],
-[class*='Afb'] blockquote[class*='inverted'] {
-	color: #0d0d0d;
-	background: #e6e6e6;
+@media (prefers-color-scheme: dark) {
+	.Blockquote-inverted,
+    .Afb blockquote-inverted {
+		--blockquote-background: #e6e6e6;
+		--blockquote-color: #0d0d0d;
+		--blockquote-cite-color: #4d4d4d;
+		--blockquote-quote-color: #b3b3b3;
+	}
 }
 
-[class*='Blockquote'][class*='inverted']:before,
-[class*='Afb'] blockquote[class*='inverted']:before {
-	color: #b3b3b3;
+.Blockquote-light,
+.Afb blockquote-light {
+	--blockquote-background: #e6e6e6;
+	--blockquote-color: #0d0d0d;
+	--blockquote-cite-color: #4d4d4d;
+	--blockquote-quote-color: #b3b3b3;
 }
 
-[class*='Blockquote'][class*='inverted'] > cite,
-[class*='Afb'] blockquote[class*='inverted'] > cite {
-	color: #4d4d4d;
-}
-
-[class*='Blockquote'][class*='dark'],
-[class*='Afb'] blockquote[class*='dark'] {
-	color: #f2f2f2;
-	background: #333;
-}
-
-[class*='Blockquote'][class*='dark']:before,
-[class*='Afb'] blockquote[class*='dark']:before {
-	color: #666;
-}
-
-[class*='Blockquote'][class*='dark'] > cite,
-[class*='Afb'] blockquote[class*='dark'] > cite {
-	color: #999;
+.Blockquote-dark,
+.Afb blockquote-dark {
+	--blockquote-background: #333;
+	--blockquote-color: #f2f2f2;
+	--blockquote-cite-color: #999;
+	--blockquote-quote-color: #666;
 }
 
 [class*='Figure'],

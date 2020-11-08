@@ -24,6 +24,14 @@
 	margin-bottom: $alert-margin-bottom;
     color: var(--alert-color);
 
+    // Avoid to have an extra border at bottom and top
+	> :first-child {
+		margin-top: 0;
+	}
+	> :last-child {
+		margin-bottom: 0;
+	}
+
     // Ghost (transparent border) variant
     // ==================================
     @include option("components-ghost") {
