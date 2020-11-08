@@ -1,275 +1,197 @@
+// =======================
+// ==== Tag component ====
+// =======================
+
+// Create a Tag by adding the .Tag class
+
 @include option("tag") {
 
-[class*="#{class("Tag")}"],
-a[class*="#{class("Tag")}"],
-[class*="#{class("Button")}"],
-button,
-input[type="button"],
-input[type="submit"],
-input[type="reset"]
+.#{class("Tag")},
+.#{class("Button")}
 {
+    --tag-padding: #{$tag-padding};
+    --tag-font-size: #{$tag-font-size};
+    --tag-background: #{$components-background};
+    --tag-background-hover: #{darken($components-background, $components-hover-darken)};
+    --tag-color: #{$components-color};
+    --tag-focus-outline-color: #{$tag-focus-outline-color};
+
+    @include option("dark-theme") {
+        @media (prefers-color-scheme: dark) {
+            --tag-background: #{$components-background-dark};
+            --tag-background-hover: #{darken($components-background-dark, $components-hover-darken)};
+            --tag-color: #{$components-color-dark};
+            --tag-focus-outline-color: #{$tag-focus-outline-color-dark};
+        }
+    }
+
 	display: inline-block;
-	background: var(--components-background);
-	color: var(--components-color);
+    position: relative;
+    z-index: 1;
+	vertical-align: middle;
+	padding: var(--tag-padding);
 	border: none;
 	@include border-radius($tag-border-radius);
-	padding: $tag-padding;
-	font-size: $tag-font-size;
-	line-height: 1;
-	vertical-align: middle;
+	font-size: var(--tag-font-size);
     text-decoration: none;
-}
+	line-height: 1;
+	background: var(--tag-background);
+	color: var(--tag-color);
 
-[class*="#{class("Tag")}"],
-[class*="#{class("Button")}"]
-{
-    @include option("components-inverted") {
-        &[class*="#{class("(Component)-inverted")}"] {
-            background: var(--components-background-inverted);
-            color: var(--components-color-inverted);
+    @include transition("color");
 
-            &[class*="#{class("(Component)--wired")}"] {
-                background: transparent;
-                color: var(--components-background-inverted);
-                box-shadow: 0 0 0 $tag-border-width var(--components-background-inverted) inset;
-            }
+    // Used to get smooth transitions with :hover and :focus by using opacity transitions - common style of both
+    &::after, &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        border-radius: inherit;
+
+        @include transition("opacity");
+    }
+
+    // Used to get smooth transitions with :hover
+    &::after {
+        background: var(--tag-background-hover);
+    }
+
+    // Used to get smooth transitions with :focus
+    &::before {
+        box-shadow: 0 0 0 $tag-focus-outline-size var(--tag-focus-outline-color);
+    }
+
+    // Wired (border only) variant
+    // ===========================
+    &#{class("(Component)--wired")} {
+
+        background: transparent;
+        color: var(--tag-background);
+        // Using inset box-shadow to get the same size as other Buttons
+        box-shadow: 0 0 0 $tag-border-width var(--tag-background) inset;
+
+        // Use the same hover background-color as non hover and wired buttons
+        &::after {
+            background: var(--tag-background);
+        }
+
+        &:focus:not(:hover) {
+            color: var(--tag-background);
         }
     }
 
-    @include option("components-dark") {
-        &[class*="#{class("(Component)-dark")}"] {
-            color: $components-color-dark;
-            background: $components-background-dark;
-
-        	&[class*="#{class("(Component)--wired")}"] {
-        		background: transparent;
-        		color: $components-background-dark;
-        		box-shadow: 0 0 0 $tag-border-width $components-background-dark inset;
-        	}
-        }
-    }
-
-    @include option("components-light") {
-        &[class*="#{class("(Component)-light")}"] {
-            color: $components-color;
-            background: $components-background;
-
-        	&[class*="#{class("(Component)--wired")}"] {
-        		background: transparent;
-        		color: $components-background;
-        		box-shadow: 0 0 0 $tag-border-width $components-background inset;
-        	}
-        }
-    }
-
+    // Ghost (without background) variant
+    // ==================================
     @include option("components-ghost") {
-        &[class*="#{class("(Component)-ghost")}"] {
-            background: transparent;
-            color: var(--body-color);
+        &-#{class("(Component)-ghost")} {
+            --tag-background: transparent;
+            --tag-background-hover: transparent;
+            --tag-color: var(--body-color)
         }
     }
 
-	@each $component, $bg in $components {
-		&[class*="-#{$component}"] {
-			background: $bg;
+    // Dark/Light theme variants - enabled only if dark-theme option is set to true
+    // ============================================================================
+    @include option("dark-theme") {
 
-            @if ($bg == transparent) {
-                color: var(--body-color);
-            } @else {
-                color: best-contrast($bg, $body-color, $body-color-dark);
+        // Dynamic inverted variant - ex: use dark scheme colors in a light environment
+        @include option("components-inverted") {
+            &-#{class("(Component)-inverted")} {
+                --tag-background: #{$components-background-dark};
+                --tag-background-hover: #{darken($components-background-dark, $components-hover-darken)};
+                --tag-color: #{$components-color-dark};
+                --tag-focus-outline-color: #{$tag-focus-outline-color-dark};
+
+                @media (prefers-color-scheme: dark) {
+                    --tag-background: #{$components-background};
+                    --tag-background-hover: #{darken($components-background, $components-hover-darken)};
+                    --tag-color: #{$components-color};
+                    --tag-focus-outline-color: #{$tag-focus-outline-color};
+                }
             }
+        }
 
-			&[class*="#{class("(Component)--wired")}"] {
-				background: transparent;
-				color: $bg;
-				box-shadow: 0 0 0 $tag-border-width $bg inset;
-			}
+        // Dark theme variant - always use dark scheme colors
+        @include option("components-dark") {
+            &-#{class("(Component)-dark")} {
+                --tag-background: #{$components-background-dark};
+                --tag-background-hover: #{darken($components-background-dark, $components-hover-darken)};
+                --tag-color: #{$components-color-dark};
+                --tag-focus-outline-color: #{$tag-focus-outline-color-dark};
+            }
+        }
+
+        // Light theme variant - always use light scheme colors
+        @include option("components-light") {
+            &-#{class("(Component)-light")} {
+                --tag-background: #{$components-background};
+                --tag-background-hover: #{darken($components-background, $components-hover-darken)};
+                --tag-color: #{$components-color};
+                --tag-focus-outline-color: #{$tag-focus-outline-color};
+            }
+        }
+    }
+
+    // Color variants (defined in $components)
+    // =======================================
+	@each $component, $background in $components {
+		&-#{$component} {
+			--tag-background: #{$background};
+            --tag-background-hover: #{darken($background, $components-hover-darken)};
+            --tag-focus-outline-color: #{lighten($background, $tag-focus-outline-color-lighten)};
+
+            @if ($background == transparent) {
+                // Use the default color in the case of a transparent background
+                --tag-color: var(--body-color);
+            } @else {
+                // Use the best contrast ratio color with background
+                --tag-color: #{best-contrast($background, $body-color, $body-color-dark)};
+            }
 		}
 	}
-
-	&[class*="#{class("(Component)--wired")}"] {
-		background: transparent;
-		color: var(--components-background);
-		box-shadow: 0 0 0 $tag-border-width var(--components-background) inset;
-	}
 }
 
-a[class*="#{class("Tag")}"],
-[class*="#{class("Button")}"],
-button,
-input[type="button"],
-input[type="submit"],
-input[type="reset"]
+// Interactive states and behaviors
+// ================================
+a.#{class("Tag")},
+.#{class("Button")}
 {
-	color: var(--components-color);
     cursor: pointer;
-    @include transition("background, color");
 
 	&:hover {
-        background: var(--components-background-hover);
-        color: var(--components-color);
         text-decoration: none;
+        color: var(--tag-color);
+
+        // Show :hover background (defined in :after)
+        &::after {
+            opacity: 1;
+        }
     }
 
     &:focus {
-        outline: 0;
-        box-shadow: 0 0 0 $tag-focus-outline-size var(--tag-focus-outline-color);
-        color: var(--components-color);
-    }
-
-    &[class*="#{class("(Component)--wired")}"]:focus {
-		color: var(--components-background);
-	}
-}
-
-a[class*="#{class("Tag")}"],
-button[class*="#{class("Tag")}"],
-[class*="#{class("Button")}"]
-{
-    &:hover, &:focus {
         text-decoration: none;
-    }
+    	color: var(--tag-color);
+        // Replace outline by a box-shadow (defined in :before)
+        outline: 0;
 
-    @include option("components-inverted") {
-        &[class*="#{class("(Component)-inverted")}"] {
-            &:hover {
-                background: var(--components-background-hover-inverted);
-                color: var(--components-color-inverted);
-            }
-
-            &[class*="#{class("(Component)--wired")}"] {
-                color: var(--components-background-inverted);
-
-                &:focus {
-                    color: var(--components-color-inverted);
-                }
-
-                &:hover {
-                    background: var(--components-background-inverted);
-                    color: var(--components-color-inverted);
-                }
-            }
-
-            &:focus {
-                box-shadow: 0 0 0 $tag-focus-outline-size var(--tag-focus-outline-color-inverted);
-                color: var(--components-color-inverted);
-            }
+        // Show :focus box-shadow (defined in :before)
+        &:not(:active)::before {
+            opacity: 1;
         }
     }
-
-    @include option("components-dark") {
-        &[class*="#{class("(Component)-dark")}"] {
-            &:hover {
-                background: $components-hover-background-dark;
-                color: $components-color-dark;
-            }
-
-            &[class*="#{class("(Component)--wired")}"] {
-                color: $components-background-dark;
-
-                &:focus {
-                    color: $components-background-dark;
-                }
-
-                &:hover {
-                    background: $components-background-dark;
-                    color: $components-color-dark;
-                }
-            }
-
-            &:focus {
-                box-shadow: 0 0 0 $tag-focus-outline-size $tag-focus-outline-color-dark;
-                color: $components-color-dark;
-            }
-        }
-    }
-
-    @include option("components-light") {
-        &[class*="#{class("(Component)-light")}"] {
-            &:hover {
-                background: $components-hover-background;
-                color: $components-color;
-            }
-
-            &[class*="#{class("(Component)--wired")}"] {
-                color: $components-background;
-
-                &:focus {
-                    color: $components-background;
-                }
-
-                &:hover {
-                    background: $components-background;
-                    color: $components-color;
-                }
-            }
-
-            &:focus {
-                box-shadow: 0 0 0 $tag-focus-outline-size $tag-focus-outline-color;
-                color: $components-color;
-            }
-        }
-    }
-
-    @include option("components-ghost") {
-        &[class*="#{class("(Component)-ghost")}"] {
-            &:hover {
-                background: transparent;
-    			color: var(--body-color);
-    		}
-        }
-    }
-
-    &[class*="#{class("(Component)--wired")}"] {
-        background: transparent;
-
-		&:hover {
-            background: var(--components-background);
-			color: var(--components-color);
-		}
-	}
-
-    @each $component, $bg in $components {
-		&[class*="-#{$component}"] {
-            @if ($bg == transparent) {
-                color: var(--body-color);
-            } @else {
-                color: best-contrast($bg, $body-color, $body-color-dark);
-            }
-
-			background: $bg;
-
-            &:hover {
-                background: darken($bg, $components-hover-darken);
-                @if ($bg == transparent) {
-                    color: var(--body-color);
-                } @else {
-                    color: best-contrast($bg, $body-color, $body-color-dark);
-                }
-            }
-
-			&[class*="#{class("(Component)--wired")}"] {
-				color: $bg;
-				box-shadow: 0 0 0 $tag-border-width $bg inset;
-
-                &:hover {
-                    background: $bg;
-					color: best-contrast($bg, $body-color, $body-color-dark);
-				}
-			}
-
-            &:focus {
-                box-shadow: 0 0 0 $tag-focus-outline-size lighten($bg, $tag-focus-outline-color-lighten);
-            }
-		}
-	}
 }
 
-[class*="#{class("Tag")}"] {
+// Tag sizes (defined in $tag-sizes)
+// =================================
+.#{class("Tag")} {
     @each $name, $properties in $tag-sizes {
-        &[class*="--#{$name}"] {
-            padding: nth($properties, 1);
-            font-size: nth($properties, 2);
+        &--#{$name} {
+            --tag-padding: #{nth($properties, 1)};
+            --tag-font-size: #{nth($properties, 2)};
         }
     }
 }

@@ -29,9 +29,6 @@ $inverted-suffix: "-inverted";
     --components-background-hover-inverted: #{darken($components-background-dark, $components-hover-darken-dark)};
     --components-color-inverted: #{$components-color-dark};
 
-    --tag-focus-outline-color: #{$tag-focus-outline-color};
-    --tag-focus-outline-color-inverted: #{$tag-focus-outline-color-dark};
-
     --alert-background: #{$alert-background};
     --alert-background-inverted: #{$alert-background-dark};
 

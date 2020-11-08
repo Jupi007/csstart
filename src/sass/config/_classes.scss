@@ -31,23 +31,16 @@ $classes: map-merge((
     "(media)-figure": "-figure",
 
     // Components variants
-    "(Component)-inverted": "-inverted",
-    "(Component)-dark": "-dark",
-    "(Component)-light": "-light",
-    "(Component)-ghost": "-ghost",
+    "(Component)-inverted": "inverted",
+    "(Component)-dark": "dark",
+    "(Component)-light": "light",
+    "(Component)-ghost": "ghost",
 
     // Components options
     "(Component)--wired": "--wired",
-    "(Component)--block": "--block",
     "(Component)--link": "--link",
     "(Component)--fixed": "--fixed",
     "(Component)--slim": "--slim",
-
-    // Components sizes
-    "(Component)--extra-small": "--xs",
-    "(Component)--small": "--s",
-    "(Component)--large": "--l",
-    "(Component)--extra-large": "--xl",
 
     // Flex
     "Flex": "Flex",

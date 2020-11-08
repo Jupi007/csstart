@@ -1,27 +1,27 @@
+// ==========================
+// ==== Button component ====
+// ==========================
+
+// Create a Button by adding the .Button class
+
+// As the Button component depends on the Tag component also check if Tag is enable
 @include option("button", "tag") {
 
-button,
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
-[class*="#{class("Button")}"] {
-    font-size: $button-font-size;
-	padding: $button-padding;
+.#{class("Button")} {
+    --tag-font-size: #{$button-font-size};
+    --tag-padding: #{$button-padding};
+
+    user-select: none;
 	@include border-radius($button-border-radius);
     line-height: inherit;
-}
 
-[class*="#{class("Button")}"] {
+    // Button sizes (defined in $button-sizes)
+    // =======================================
     @each $name, $properties in $button-sizes {
-        &[class*="--#{$name}"] {
-            padding: nth($properties, 1);
-            font-size: nth($properties, 2);
+        &--#{$name} {
+            --tag-padding: #{nth($properties, 1)};
+            --tag-font-size: #{nth($properties, 2)};
         }
-    }
-
-    &[class*="#{class("(Component)--block")}"] {
-        display: block;
-        width: 100%;
     }
 }
 

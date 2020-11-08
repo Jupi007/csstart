@@ -232,16 +232,7 @@ $components-hover-background-dark: darken($components-background-dark, $componen
 
 $components: !default;
 $components: map-merge((
-    'red': color('red'),
-    'orange': color('orange'),
-    'yellow': color('yellow'),
-    'green': color('green'),
-    'blue': color('blue'),
-    'light-blue': color('light-blue'),
-    'purple': color('purple'),
-    'brown': color('brown'),
-
-	'success': color('success'),
+    'success': color('success'),
 	'info': color('info'),
 	'warning': color('warning'),
 	'danger': color('danger'),
