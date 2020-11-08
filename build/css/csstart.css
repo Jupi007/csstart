@@ -18,8 +18,6 @@
 	--components-background-inverted: #fff;
 	--components-background-hover-inverted: #e6e6e6;
 	--components-color-inverted: #0d0d0d;
-	--alert-background: rgba(51, 51, 51, .2);
-	--alert-background-inverted: rgba(255, 255, 255, .2);
 	--table-border-color: #262626;
 	--table-cell-border-color: gray;
 	--table-background: #fff;
@@ -79,10 +77,6 @@
 		--components-background-inverted: #333;
 		--components-background-hover-inverted: #1a1a1a;
 		--components-color-inverted: #f2f2f2;
-		--tag-focus-outline-color: gray;
-		--tag-focus-outline-color-inverted: #666;
-		--alert-background: rgba(255, 255, 255, .2);
-		--alert-background-inverted: rgba(51, 51, 51, .2);
 		--table-border-color: #4d4d4d;
 		--table-cell-border-color: gray;
 		--table-background: #333;
@@ -10799,61 +10793,67 @@ a.Tag:focus:not(:active)::before,
 	--tag-font-size: 1.2em;
 }
 
-[class*='Alert'] {
+.Alert {
 	margin-bottom: calc(var(--spacer-base) * 1.5);
 	padding: calc(var(--spacer-base) * 1);
-	color: var(--body-color);
-	border: 1px solid var(--components-background);
-	border-left-width: 5px;
+	color: var(--alert-color);
+	border: 1px solid var(--alert-border-color);
+	border-left-width: 10px;
 	border-radius: 3px;
+	--alert-border-color: #333;
+	--alert-color: var(--body-color);
 }
 
-[class*='Alert'][class*='inverted'] {
-	color: var(--body-color-inverted);
-	border-color: var(--components-background-inverted);
+@media (prefers-color-scheme: dark) {
+	.Alert {
+		--alert-border-color: #fff;
+		--alert-color: var(--body-color-dark);
+	}
 }
 
-[class*='Alert'][class*='dark'] {
-	color: #f2f2f2;
-	border-color: #fff;
+.Alert-ghost {
+	--alert-border-color: transparent;
 }
 
-[class*='Alert'][class*='light'] {
-	color: #0d0d0d;
-	border-color: #333;
+.Alert-inverted {
+	--alert-border-color: #fff;
+	--alert-color: var(--body-color-dark);
 }
 
-[class*='Alert'][class*='ghost'] {
-	color: var(--body-color);
-	border-color: transparent;
+@media (prefers-color-scheme: dark) {
+	.Alert-inverted {
+		--alert-border-color: #333;
+		--alert-color: var(--body-color);
+	}
 }
 
-[class*='Alert'][class*='-success'] {
-	color: #74cf61;
-	border-color: #74cf61;
+.Alert-dark {
+	--alert-border-color: #fff;
+	--alert-color: #f2f2f2;
 }
 
-[class*='Alert'][class*='-info'] {
-	color: #74c0cd;
-	border-color: #74c0cd;
+.Alert-light {
+	--alert-border-color: #333;
+	--alert-color: #0d0d0d;
 }
 
-[class*='Alert'][class*='-warning'] {
-	color: #d9831e;
-	border-color: #d9831e;
+.Alert-success {
+	--alert-border-color: #74cf61;
 }
 
-[class*='Alert'][class*='-danger'] {
-	color: #d94d4d;
-	border-color: #d94d4d;
+.Alert-info {
+	--alert-border-color: #74c0cd;
 }
 
-[class*='Alert'] h1,
-[class*='Alert'] h2,
-[class*='Alert'] h3,
-[class*='Alert'] h4,
-[class*='Alert'] h5,
-[class*='Alert'] h6 {
+.Alert-warning {
+	--alert-border-color: #d9831e;
+}
+
+.Alert-danger {
+	--alert-border-color: #d94d4d;
+}
+
+.Alert-title {
 	font-size: 1.5em;
 }
 
@@ -10915,7 +10915,7 @@ a.Tag:focus:not(:active)::before,
 	border-radius: 3px;
 }
 
-[class*='Card'][class*='--link'],
+[class*='Card'][class*='link'],
 a[class*='Card'] {
 	cursor: pointer;
 	transition-timing-function: ease;
@@ -10925,8 +10925,8 @@ a[class*='Card'] {
 	color: var(--body-color);
 }
 
-[class*='Card'][class*='--link']:hover,
-[class*='Card'][class*='--link']:focus,
+[class*='Card'][class*='link']:hover,
+[class*='Card'][class*='link']:focus,
 a[class*='Card']:hover,
 a[class*='Card']:focus {
 	text-decoration: none;
@@ -11036,15 +11036,15 @@ a[class*='Card']:focus {
 	background: var(--table-cell-hover-background);
 }
 
-[class*='Table'][class*='--fixed'],
-[class*='Afb'] table[class*='--fixed'] {
+[class*='Table'][class*='fixed'],
+[class*='Afb'] table[class*='fixed'] {
 	table-layout: fixed;
 }
 
-[class*='Table'][class*='--slim'] td,
-[class*='Table'][class*='--slim'] th,
-[class*='Afb'] table[class*='--slim'] td,
-[class*='Afb'] table[class*='--slim'] th {
+[class*='Table'][class*='slim'] td,
+[class*='Table'][class*='slim'] th,
+[class*='Afb'] table[class*='slim'] td,
+[class*='Afb'] table[class*='slim'] th {
 	padding: calc(var(--spacer-base) * .25) calc(var(--spacer-base) * .5);
 }
 

@@ -22,6 +22,8 @@ $classes: map-merge((
     "Media-child": "media",
 
     // Components children
+    "(Alert)-title": "title",
+
     "(card)-figure": "-figure",
     "(card)-title": "-title",
     "(card)-subtitle": "-subtitle",
@@ -37,10 +39,10 @@ $classes: map-merge((
     "(Component)-ghost": "ghost",
 
     // Components options
-    "(Component)--wired": "--wired",
-    "(Component)--link": "--link",
-    "(Component)--fixed": "--fixed",
-    "(Component)--slim": "--slim",
+    "(Component)--wired": "wired",
+    "(Component)--link": "link",
+    "(Component)--fixed": "fixed",
+    "(Component)--slim": "slim",
 
     // Flex
     "Flex": "Flex",

@@ -29,9 +29,6 @@ $inverted-suffix: "-inverted";
     --components-background-hover-inverted: #{darken($components-background-dark, $components-hover-darken-dark)};
     --components-color-inverted: #{$components-color-dark};
 
-    --alert-background: #{$alert-background};
-    --alert-background-inverted: #{$alert-background-dark};
-
     --table-border-color: #{$table-border-color};
     --table-cell-border-color: #{$table-cell-border-color};
     --table-background: #{$table-background};
@@ -112,12 +109,6 @@ $inverted-suffix: "-inverted";
             --components-background-inverted: #{$components-background};
             --components-background-hover-inverted: #{darken($components-background, $components-hover-darken)};
             --components-color-inverted: #{$components-color};
-
-            --tag-focus-outline-color: #{$tag-focus-outline-color-dark};
-            --tag-focus-outline-color-inverted: #{$tag-focus-outline-color};
-
-            --alert-background: #{$alert-background-dark};
-            --alert-background-inverted: #{$alert-background};
 
             --table-border-color: #{$table-border-color-dark};
             --table-cell-border-color: #{$table-cell-border-color-dark};

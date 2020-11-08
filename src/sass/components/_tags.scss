@@ -67,7 +67,7 @@
 
     // Wired (border only) variant
     // ===========================
-    &#{class("(Component)--wired")} {
+    &--#{class("(Component)--wired")} {
 
         background: transparent;
         color: var(--tag-background);
