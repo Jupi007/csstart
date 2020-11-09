@@ -1,4 +1,8 @@
-@include option("media") {
+// =========================
+// ==== Media component ====
+// =========================
+
+// Create a Media by adding the .Media class@include option("media") {
 
 .#{class("Media")} {
 	display: flex;
