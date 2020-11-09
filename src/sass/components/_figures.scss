@@ -1,3 +1,9 @@
+// ==========================
+// ==== Figure component ====
+// ==========================
+
+// Create a Figure by adding the .Figure class or add the .Afb class to the parent of a figure html tag
+
 @include option("figure") {
 
 .#{class("Figure")},
@@ -12,12 +18,14 @@
 	@include border-radius($figure-border-radius);
 	background: $figure-background;
 
+    // Using a more specific selector instead of a class because of the Auto-formating-block
 	figcaption {
 		margin-top: $figure-padding;
         text-align: center;
 		color: $figure-figcaption-color;
 	}
 
+    // Using a more specific selector instead of a class because of the Auto-formating-block
     img {
         max-height: $figure-max-height-image;
     }
@@ -27,6 +35,7 @@
 	&--#{class("(Component)-light")} {
 		background: $figure-background-light;
 
+        // Using a more specific selector instead of a class because of the Auto-formating-block
 		figcaption {
 			color: $figure-figcaption-color-light;
 		}
