@@ -60,8 +60,6 @@ $inverted-suffix: "-inverted";
     --range-thumb-hover-color: #{$range-thumb-hover-color};
     --progress-background: #{$progress-background};
 
-    --card-subtitle-color: #{$card-subtitle-color};
-
     @each $name, $config in $custom-css-vars {
         $light: nth($config, 1);
         $dark: nth($config, 2);
@@ -130,8 +128,6 @@ $inverted-suffix: "-inverted";
             --range-thumb-color: #{$range-thumb-color-dark};
             --range-thumb-hover-color: #{$range-thumb-hover-color-dark};
             --progress-background: #{$progress-background-dark};
-
-            --card-subtitle-color: #{$card-subtitle-color-dark};
 
             @each $name, $config in $custom-css-vars {
                 $light: nth($config, 1);

@@ -1,66 +1,131 @@
+// =========================
+// ==== Card component ====
+// =========================
+
+// Create a Card by adding the .Card class
+
 @include option("card") {
 
-[class*="#{class("Card")}"] {
+.#{class("Card")} {
+    --card-border-color: #{$card-border-color};
+    --card-background: #{$card-background};
+    --card-background-hover: #{$card-background-hover};
+    --card-subtitle-color: #{$card-subtitle-color};
+    --card-focus-outline-color: #{$card-focus-outline-color};
+
+    @include option("dark-theme") {
+        @media (prefers-color-scheme: dark) {
+            --card-border-color: #{$card-border-color-dark};
+            --card-background: #{$card-background-dark};
+            --card-background-hover: #{$card-background-hover-dark};
+            --card-subtitle-color: #{$card-subtitle-color-dark};
+            --card-focus-outline-color: #{$card-focus-outline-color-dark};
+        }
+    }
+
 	display: flex;
+    position: relative;
+    z-index: 1;
 	flex-direction: column;
 	position: relative;
-	@include border-radius($card-border-radius);
 	word-wrap: break-word;
-    border-radius: $card-border-radius;
+    @include border-radius($card-border-radius);
+    background: var(--card-background);
 
+    // Used to get smooth transitions with :hover and :focus by using opacity transitions - common style of both
+    &::after, &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        border-radius: inherit;
+
+        @include transition("opacity");
+    }
+
+    // Used to get smooth transitions with :hover
+    &::after {
+        background: var(--card-background-hover);
+    }
+
+    // Used to get smooth transitions with :focus
+    &::before {
+        box-shadow: 0 0 0 $card-focus-outline-size var(--card-focus-outline-color);
+    }
+
+    // Card children
+    // =============
+    &-#{class("(card)-body")} {
+        height: 100%;
+    	padding: $card-body-padding;
+    	border: 0 solid var(--card-border-color);
+        border-right-width: $card-border-width;
+        border-left-width: $card-border-width;
+
+        &:first-child {
+            border-top-width: $card-border-width;
+        }
+
+        &:last-child {
+            border-bottom-width: $card-border-width;
+        }
+    }
+
+    // Should be used on an img html tag
+    &-#{class("(card)-figure")} {
+        // Resize the image to fill the whole space available
+    	object-fit: cover;
+    	max-height: 100vh;
+    }
+
+    // Must be the child of a Card-body element
+    &-#{class("(card)-title")} {
+    	font-size: $card-title-font-size;
+    }
+
+    // Must be the child of a Card-body element
+    &-#{class("(card)-subtitle")} {
+    	display: block;
+    	font-size: $card-subtitle-font-size;
+    	color: var(--card-subtitle-color);
+    }
+
+    // Card children (body and figure) border-radius
+    // =============================================
     > :first-child {
         @include border-radius($card-border-radius $card-border-radius 0 0);
     }
-
     > :last-child {
         @include border-radius(0 0 $card-border-radius $card-border-radius);
     }
-
     > :only-child {
         @include border-radius($card-border-radius);
     }
 }
 
-[class*="#{class("Card")}"][class*="#{class("(Component)--link")}"],
-a[class*="#{class("Card")}"] {
+// Interactive states and behaviors
+// ================================
+a.#{class("Card")} {
 	cursor: pointer;
 	color: var(--body-color);
     text-decoration: none;
 
-    @include transition("box-shadow");
-
-	&:hover, &:focus {
-		box-shadow: 0 0 $card-hover-box-shadow-width $card-hover-box-shadow-width $card-border-color;
-        text-decoration: none;
-	}
-}
-
-.#{class("Card-child")}#{class("(card)-figure")} {
-	object-fit: cover;
-	max-height: 100vh;
-}
-
-.#{class("Card-child")}#{class("(card)-title")} {
-	font-size: $card-title-font-size;
-}
-
-.#{class("Card-child")}#{class("(card)-subtitle")} {
-	display: block;
-	font-size: $card-subtitle-font-size;
-	color: var(--card-subtitle-color);
-}
-
-[class*="#{class("Card-child")}#{class("(card)-body")}"] {
-    height: 100%;
-	padding: $card-body-padding;
-	border: $card-border-width solid $card-border-color;
-
-    &:first-child:not(:only-child) {
-        border-bottom: none;
+    &:hover::after {
+        opacity: 1;
     }
 
-    &:last-child:not(:only-child) {
-        border-top: none;
+    &:focus {
+        // Replace the outline by a box-shadow (defined in :before)
+        outline: 0;
+
+        // Show :focus box-shadow (defined in :before)
+        &:not(:active)::before {
+            opacity: 1;
+        }
     }
 }
 

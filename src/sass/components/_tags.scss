@@ -175,7 +175,7 @@ a.#{class("Tag")},
     &:focus {
         text-decoration: none;
     	color: var(--tag-color);
-        // Replace outline by a box-shadow (defined in :before)
+        // Replace the outline by a box-shadow (defined in :before)
         outline: 0;
 
         // Show :focus box-shadow (defined in :before)

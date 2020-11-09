@@ -147,14 +147,21 @@ $alert-color-brightness-dark: 80% !default;
 // -----
 
 $card-border-width: 1px !default;
-$card-border-color: grey(50) !default;
+$card-border-color: grey(40) !default;
 $card-border-radius: $border-radius-base !default;
+$card-background: grey(5);
+$card-background-hover: grey(8);
+$card-focus-outline-color: grey(50) !default;
+$card-focus-outline-size: 3px !default;
 $card-title-font-size: 1.4em !default;
 $card-subtitle-font-size: .9em !default;
 $card-subtitle-color: grey(60) !default;
 $card-body-padding: spacer("medium") !default;
-$card-hover-box-shadow-width: 2px !default;
 
+$card-border-color-dark: grey(70) !default;
+$card-background-dark: grey(90);
+$card-background-hover-dark: grey(93);
+$card-focus-outline-color-dark: darken($components-background-dark, 50%) !default;
 $card-subtitle-color-dark: grey(40) !default;
 
 // -----
