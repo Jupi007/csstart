@@ -1,32 +1,34 @@
 @include option("figure") {
 
-[class*="#{class("Figure")}"],
-[class*="#{class("Auto-formating-block")}"] figure {
+.#{class("Figure")},
+.#{class("Auto-formating-block")} figure {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background: $figure-background;
-	@include border-radius($figure-border-radius);
 	padding: $figure-padding;
     margin-top: $figure-margin-top;
     margin-bottom: $figure-margin-bottom;
+	@include border-radius($figure-border-radius);
+	background: $figure-background;
 
 	figcaption {
 		margin-top: $figure-padding;
-		color: $figure-figcaption-color;
         text-align: center;
+		color: $figure-figcaption-color;
 	}
 
     img {
         max-height: $figure-max-height-image;
     }
+}
 
-	&[class*="#{class("(Component)-light")}"] {
-		background: $figure-light-background;
+.#{class("Figure")} {
+	&--#{class("(Component)-light")} {
+		background: $figure-background-light;
 
 		figcaption {
-			color: $figure-light-figcaption-color;
+			color: $figure-figcaption-color-light;
 		}
 	}
 }

@@ -11299,8 +11299,8 @@ a.Card:focus:not(:active)::before {
 	--blockquote-quote-color: #666;
 }
 
-[class*='Figure'],
-[class*='Afb'] figure {
+.Figure,
+.Afb figure {
 	display: flex;
 	flex-direction: column;
 	margin-top: calc(calc(var(--spacer-base) * 1.5) * 2);
@@ -11312,25 +11312,23 @@ a.Card:focus:not(:active)::before {
 	justify-content: center;
 }
 
-[class*='Figure'] figcaption,
-[class*='Afb'] figure figcaption {
+.Figure figcaption,
+.Afb figure figcaption {
 	margin-top: calc(var(--spacer-base) * 2.5);
 	text-align: center;
 	color: #d9d9d9;
 }
 
-[class*='Figure'] img,
-[class*='Afb'] figure img {
+.Figure img,
+.Afb figure img {
 	max-height: 60vh;
 }
 
-[class*='Figure'][class*='light'],
-[class*='Afb'] figure[class*='light'] {
+.Figure--light {
 	background: #e6e6e6;
 }
 
-[class*='Figure'][class*='light'] figcaption,
-[class*='Afb'] figure[class*='light'] figcaption {
+.Figure--light figcaption {
 	color: #404040;
 }
 
