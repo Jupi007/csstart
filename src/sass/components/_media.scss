@@ -1,6 +1,6 @@
 @include option("media") {
 
-[class*="#{class("Media")}"] {
+.#{class("Media")} {
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
@@ -10,30 +10,30 @@
     		flex-direction: column;
             align-items: center;
 
-            .#{class("Media-child")}#{class("(media)-figure")} {
+            &-#{class("(Media)-figure")} {
                 margin: 0 0 $media-figure-margin-right 0;
             }
     	}
     }
-}
 
-.#{class("Media-child")}#{class("(media)-body")} {
-	flex: 1;
+    &-#{class("(Media)-body")} {
+    	flex: 1;
 
-    &:last-child {
-        margin-bottom: 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
-}
 
-.#{class("Media-child")}#{class("(media)-figure")} {
-    order: -1;
+    &-#{class("(Media)-figure")} {
+        order: -1;
 
-    &:not(.#{class("item-last")}) {
-        margin-right: $media-figure-margin-right;
-    }
-    
-    &.#{class("item-last")} {
-        margin-left: $media-figure-margin-right;
+        &:not(.#{class("item-last")}) {
+            margin-right: $media-figure-margin-right;
+        }
+
+        &.#{class("item-last")} {
+            margin-left: $media-figure-margin-right;
+        }
     }
 }
 

@@ -17,9 +17,6 @@ $classes: map-merge((
 
     "Auto-formating-block": "Afb",
 
-    // Components children namespace
-    "Media-child": "media",
-
     // Components children
     "(Alert)-title": "title",
 
@@ -28,8 +25,8 @@ $classes: map-merge((
     "(card)-subtitle": "subtitle",
     "(card)-body": "body",
 
-    "(media)-body": "-body",
-    "(media)-figure": "-figure",
+    "(Media)-body": "body",
+    "(Media)-figure": "figure",
 
     // Components variants
     "(Component)-inverted": "inverted",

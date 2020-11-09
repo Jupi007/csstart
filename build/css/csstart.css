@@ -10847,40 +10847,40 @@ a.Tag:focus:not(:active)::before,
 	font-size: 1.5em;
 }
 
-[class*='Media'] {
+.Media {
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
 }
 
 @media (max-width: 479px) {
-	[class*='Media'] {
+	.Media {
 		flex-direction: column;
 		align-items: center;
 	}
 
-	[class*='Media'] .media-figure {
+	.Media-figure {
 		margin: 0 0 calc(var(--spacer-base) * 1.5) 0;
 	}
 }
 
-.media-body {
+.Media-body {
 	flex: 1;
 }
 
-.media-body:last-child {
+.Media-body:last-child {
 	margin-bottom: 0;
 }
 
-.media-figure {
+.Media-figure {
 	order: -1;
 }
 
-.media-figure:not(.item-last) {
+.Media-figure:not(.item-last) {
 	margin-right: calc(var(--spacer-base) * 1.5);
 }
 
-.media-figure.item-last {
+.Media-figure.item-last {
 	margin-left: calc(var(--spacer-base) * 1.5);
 }
 
