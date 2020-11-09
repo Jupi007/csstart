@@ -59,7 +59,7 @@
 
     // Card children
     // =============
-    &-#{class("(card)-body")} {
+    &-#{class("(Card)-body")} {
         height: 100%;
     	padding: $card-body-padding;
     	border: 0 solid var(--card-border-color);
@@ -76,19 +76,19 @@
     }
 
     // Should be used on an img html tag
-    &-#{class("(card)-figure")} {
+    &-#{class("(Card)-figure")} {
         // Resize the image to fill the whole space available
     	object-fit: cover;
     	max-height: 100vh;
     }
 
     // Must be the child of a Card-body element
-    &-#{class("(card)-title")} {
+    &-#{class("(Card)-title")} {
     	font-size: $card-title-font-size;
     }
 
     // Must be the child of a Card-body element
-    &-#{class("(card)-subtitle")} {
+    &-#{class("(Card)-subtitle")} {
     	display: block;
     	font-size: $card-subtitle-font-size;
     	color: var(--card-subtitle-color);
