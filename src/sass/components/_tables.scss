@@ -1,17 +1,46 @@
+// ==============================
+// ==== Table component ====
+// ==============================
+
+// Create a Table by adding the .Table class or add the .Afb class to the parent of a table html tag
+
 @include option("table") {
 
-[class*="#{class("Table")}"],
-[class*="#{class("Auto-formating-block")}"] table, {
+.#{class("Table")},
+.#{class("Auto-formating-block")} table
+{
+    --table-border-color: #{$table-border-color};
+    --table-cell-border-color: #{$table-cell-border-color};
+    --table-background: #{$table-background};
+    --table-headings-cell-background: #{$table-headings-cell-background};
+    --table-zebra-cell-background: #{$table-zebra-cell-background};
+    --table-cell-hover-background: #{$table-cell-hover-background};
+    --table-caption-color: #{$table-caption-color};
+    --table-cell-padding: #{$table-cell-padding};
+
+    @include option("dark-theme") {
+        @media (prefers-color-scheme: dark) {
+            --table-border-color: #{$table-border-color-dark};
+            --table-cell-border-color: #{$table-cell-border-color-dark};
+            --table-background: #{$table-background-dark};
+            --table-headings-cell-background: #{$table-headings-cell-background-dark};
+            --table-zebra-cell-background: #{$table-zebra-cell-background-dark};
+            --table-cell-hover-background: #{$table-cell-hover-background-dark};
+            --table-caption-color: #{$table-caption-color-dark};
+        }
+    }
+
 	width: 100%;
 	max-width: 100%;
 	table-layout: auto;
+    margin-top: $table-margin-top;
+    margin-bottom: $table-margin-bottom;
 	border-spacing: 0px;
 	border: $table-border-width solid var(--table-border-color);
     @include border-radius($table-border-radius);
-    margin-top: $table-margin-top;
-    margin-bottom: $table-margin-bottom;
     background: var(--table-background);
 
+    // Tricky code to get border-radius on a table html tag
 	@if $table-border-radius > 0 {
 		border-collapse: separate;
 
@@ -37,6 +66,7 @@
 			}
 		}
 	}
+    // Use less code than upper if $table-border-radius is defined to 0
 	@else {
 		border-collapse: collapse;
 
@@ -46,7 +76,7 @@
 	}
 
 	td, th {
-		padding: $table-cell-padding;
+		padding: var(--table-cell-padding);
 	}
 
 	th {
@@ -55,142 +85,136 @@
 
     @include option("table-zebra") {
         tr:nth-child(even) {
-    		background: var(--table-zebra-cell-background);
+    		background: var(--table-zebra-cell-background); // TODO: use pseudo elements
     	}
     }
 
     @include option("table-hover") {
-        tbody tr {
-            @include transition("background");
+        tbody {
+            td {
+                position: relative;
+                z-index: 1;
 
-    		&:hover {
-                background: var(--table-cell-hover-background);
-            }
-    	}
-    }
+                // Used to get smooth transitions with :hover
+                &::after {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    opacity: 0;
+                    border-radius: inherit;
+                    background: var(--table-cell-hover-background);
 
-	&[class*="#{class("(Component)--fixed")}"] {
-		table-layout: fixed;
-	}
-
-	&[class*="#{class("(Component)--slim")}"] {
-		td, th {
-			padding: $table-slim-cell-padding;
-		}
-	}
-
-    @include option("components-inverted") {
-    	&[class*="#{class("(Component)-inverted")}"] {
-    		background: var(--table-background-inverted);
-    		color: var(--body-color-inverted);
-            border-color: var(--table-border-color-inverted);
-
-            td, th {
-                border-color: var(--table-cell-border-color-inverted);
-            }
-
-    		th {
-    			background: var(--table-headings-cell-background-inverted);
-    		}
-
-    		@include option("table-zebra") {
-    			tr:nth-child(even) {
-    				background: var(--table-zebra-cell-background-inverted);
-    			}
-    		}
-
-            @include option("table-hover") {
-                tbody tr:hover {
-                    background: var(--table-cell-hover-background-inverted);
+                    @include transition("opacity");
                 }
             }
 
-            a {
-                color: var(--link-color-inverted);
-
-                &:hover {
-                    color: var(--link-hover-focus-color-inverted);
-                }
-            }
-    	}
-    }
-
-    @include option("components-light") {
-    	&[class*="#{class("(Component)-light")}"] {
-    		background: $table-background;
-    		color: $body-color;
-            border-color: $table-border-color;
-
-            td, th {
-                border-color: $table-cell-border-color;
-            }
-
-    		th {
-    			background: $table-headings-cell-background;
-    		}
-
-            @include option("table-zebra") {
-            	tr:nth-child(even) {
-            		background: $table-zebra-cell-background;
-            	}
-            }
-
-            @include option("table-hover") {
-        		tbody tr:hover {
-                    background: $table-cell-hover-background;
-                }
-            }
-
-            a {
-                color: $link-color;
-
-                &:hover {
-                    color: $link-hover-focus-color;
-                }
-            }
-    	}
-    }
-
-    @include option("components-dark") {
-    	&[class*="#{class("(Component)-dark")}"] {
-    		background: $table-background-dark;
-    		color: $body-color-dark;
-            border-color: $table-border-color-dark;
-
-            td, th {
-                border-color: $table-cell-border-color-dark;
-            }
-
-    		th {
-    			background: $table-headings-cell-background-dark;
-    		}
-
-            @include option("table-zebra") {
-                tr:nth-child(even) {
-        			background: $table-zebra-cell-background-dark;
-        		}
-            }
-
-            @include option("table-hover") {
-        		tbody tr:hover {
-                    background: $table-cell-hover-background-dark;
-                }
-            }
-
-            a {
-                color: $link-color-dark;
-
-                &:hover {
-                    color: $link-hover-focus-color-dark;
-                }
+            tr:hover td::after {
+                opacity: 1;
             }
     	}
     }
 
 	caption {
+        font-style: $table-caption-font-style;
 		color: var(--table-caption-color);
-		font-style: $table-caption-font-style;
 	}
+}
+
+.#{class("Table")} {
+
+    // Dark/Light theme variants - enabled only if dark-theme option is set to true
+    // ============================================================================
+    @include option("dark-theme") {
+
+        // Dynamic inverted variant - ex: use dark scheme colors in a light environment
+        @include option("components-inverted") {
+        	&-#{class("(Component)-inverted")} {
+                --table-border-color: #{$table-border-color-dark};
+                --table-cell-border-color: #{$table-cell-border-color-dark};
+                --table-background: #{$table-background-dark};
+                --table-headings-cell-background: #{$table-headings-cell-background-dark};
+                --table-zebra-cell-background: #{$table-zebra-cell-background-dark};
+                --table-cell-hover-background: #{$table-cell-hover-background-dark};
+                --table-caption-color: #{$table-caption-color-dark};
+
+                @include option("dark-theme") {
+                    @media (prefers-color-scheme: dark) {
+                        --table-border-color: #{$table-border-color};
+                        --table-cell-border-color: #{$table-cell-border-color};
+                        --table-background: #{$table-background};
+                        --table-headings-cell-background: #{$table-headings-cell-background};
+                        --table-zebra-cell-background: #{$table-zebra-cell-background};
+                        --table-cell-hover-background: #{$table-cell-hover-background};
+                        --table-caption-color: #{$table-caption-color};
+                    }
+                }
+
+                a {
+                    color: var(--link-color-inverted);
+
+                    &:hover {
+                        color: var(--link-hover-focus-color-inverted);
+                    }
+                }
+        	}
+        }
+
+        // Light theme variant - always use dark scheme colors
+        @include option("components-light") {
+        	&-#{class("(Component)-light")} {
+                --table-border-color: #{$table-border-color};
+                --table-cell-border-color: #{$table-cell-border-color};
+                --table-background: #{$table-background};
+                --table-headings-cell-background: #{$table-headings-cell-background};
+                --table-zebra-cell-background: #{$table-zebra-cell-background};
+                --table-cell-hover-background: #{$table-cell-hover-background};
+                --table-caption-color: #{$table-caption-color};
+
+                a {
+                    color: $link-color;
+
+                    &:hover {
+                        color: $link-hover-focus-color;
+                    }
+                }
+        	}
+        }
+
+        // Dark theme variant - always use dark scheme colors
+        @include option("components-dark") {
+        	&-#{class("(Component)-dark")} {
+                --table-border-color: #{$table-border-color-dark};
+                --table-cell-border-color: #{$table-cell-border-color-dark};
+                --table-background: #{$table-background-dark};
+                --table-headings-cell-background: #{$table-headings-cell-background-dark};
+                --table-zebra-cell-background: #{$table-zebra-cell-background-dark};
+                --table-cell-hover-background: #{$table-cell-hover-background-dark};
+                --table-caption-color: #{$table-caption-color-dark};
+
+                a {
+                    color: $link-color-dark;
+
+                    &:hover {
+                        color: $link-hover-focus-color-dark;
+                    }
+                }
+        	}
+        }
+    }
+
+    &--#{class("(Component)--fixed")} {
+    	table-layout: fixed;
+    }
+
+    &--#{class("(Component)--slim")} {
+    	td, th {
+    		--table-cell-padding: #{$table-slim-cell-padding};
+    	}
+    }
 }
 
 }

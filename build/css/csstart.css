@@ -18,20 +18,6 @@
 	--components-background-inverted: #fff;
 	--components-background-hover-inverted: #e6e6e6;
 	--components-color-inverted: #0d0d0d;
-	--table-border-color: #262626;
-	--table-cell-border-color: gray;
-	--table-background: #fff;
-	--table-headings-cell-background: #ccc;
-	--table-zebra-cell-background: #f2f2f2;
-	--table-cell-hover-background: #e6e6e6;
-	--table-border-color-inverted: #4d4d4d;
-	--table-cell-border-color-inverted: gray;
-	--table-background-inverted: #333;
-	--table-headings-cell-background-inverted: #1a1a1a;
-	--table-zebra-cell-background-inverted: #404040;
-	--table-cell-hover-background-inverted: #262626;
-	--table-caption-color: #4d4d4d;
-	--table-caption-color-inverted: #b3b3b3;
 	--input-border-color: #ccc;
 	--input-hover-focus-border-color: gray;
 	--input-background: #fff;
@@ -68,20 +54,6 @@
 		--components-background-inverted: #333;
 		--components-background-hover-inverted: #1a1a1a;
 		--components-color-inverted: #f2f2f2;
-		--table-border-color: #4d4d4d;
-		--table-cell-border-color: gray;
-		--table-background: #333;
-		--table-headings-cell-background: #1a1a1a;
-		--table-zebra-cell-background: #404040;
-		--table-cell-hover-background: #262626;
-		--table-border-color-inverted: #262626;
-		--table-cell-border-color-inverted: gray;
-		--table-background-inverted: #fff;
-		--table-headings-cell-background-inverted: #ccc;
-		--table-zebra-cell-background-inverted: #f2f2f2;
-		--table-cell-hover-background-inverted: #e6e6e6;
-		--table-caption-color: #b3b3b3;
-		--table-caption-color-inverted: #4d4d4d;
 		--input-border-color: gray;
 		--input-hover-focus-border-color: #ccc;
 		--input-background: #333;
@@ -10996,8 +10968,8 @@ a.Card:focus:not(:active)::before {
 	opacity: 1;
 }
 
-[class*='Table'],
-[class*='Afb'] table {
+.Table,
+.Afb table {
 	width: 100%;
 	max-width: 100%;
 	margin-top: calc(calc(var(--spacer-base) * 1.5) * 2);
@@ -11008,200 +10980,183 @@ a.Card:focus:not(:active)::before {
 	border: 1px solid var(--table-border-color);
 	border-radius: 3px;
 	background: var(--table-background);
+	--table-border-color: #262626;
+	--table-cell-border-color: gray;
+	--table-background: #fff;
+	--table-headings-cell-background: #ccc;
+	--table-zebra-cell-background: #f2f2f2;
+	--table-cell-hover-background: #e6e6e6;
+	--table-caption-color: #4d4d4d;
+	--table-cell-padding: calc(var(--spacer-base) * .9);
 }
 
-[class*='Table'] td,
-[class*='Table'] th,
-[class*='Afb'] table td,
-[class*='Afb'] table th {
+@media (prefers-color-scheme: dark) {
+	.Table,
+    .Afb table {
+		--table-border-color: #4d4d4d;
+		--table-cell-border-color: gray;
+		--table-background: #333;
+		--table-headings-cell-background: #1a1a1a;
+		--table-zebra-cell-background: #404040;
+		--table-cell-hover-background: #262626;
+		--table-caption-color: #b3b3b3;
+	}
+}
+
+.Table td,
+.Table th,
+.Afb table td,
+.Afb table th {
 	border-right: 1px solid var(--table-cell-border-color);
 	border-bottom: 1px solid var(--table-cell-border-color);
 }
 
-[class*='Table'] td:last-child,
-[class*='Table'] th:last-child,
-[class*='Afb'] table td:last-child,
-[class*='Afb'] table th:last-child {
+.Table td:last-child,
+.Table th:last-child,
+.Afb table td:last-child,
+.Afb table th:last-child {
 	border-right: none;
 }
 
-[class*='Table'] tbody tr:last-child td,
-[class*='Table'] tbody tr:last-child th,
-[class*='Afb'] table tbody tr:last-child td,
-[class*='Afb'] table tbody tr:last-child th {
+.Table tbody tr:last-child td,
+.Table tbody tr:last-child th,
+.Afb table tbody tr:last-child td,
+.Afb table tbody tr:last-child th {
 	border-bottom: none;
 }
 
-[class*='Table'] tfoot td,
-[class*='Table'] tfoot th,
-[class*='Afb'] table tfoot td,
-[class*='Afb'] table tfoot th {
+.Table tfoot td,
+.Table tfoot th,
+.Afb table tfoot td,
+.Afb table tfoot th {
 	border-top: 1px solid var(--table-cell-border-color);
 	border-bottom: none;
 }
 
-[class*='Table'] td,
-[class*='Table'] th,
-[class*='Afb'] table td,
-[class*='Afb'] table th {
-	padding: calc(var(--spacer-base) * .9);
+.Table td,
+.Table th,
+.Afb table td,
+.Afb table th {
+	padding: var(--table-cell-padding);
 }
 
-[class*='Table'] th,
-[class*='Afb'] table th {
+.Table th,
+.Afb table th {
 	background: var(--table-headings-cell-background);
 }
 
-[class*='Table'] tr:nth-child(even),
-[class*='Afb'] table tr:nth-child(even) {
+.Table tr:nth-child(even),
+.Afb table tr:nth-child(even) {
 	background: var(--table-zebra-cell-background);
 }
 
-[class*='Table'] tbody tr,
-[class*='Afb'] table tbody tr {
-	transition-timing-function: ease;
-	transition-duration: .2s;
-	transition-property: background;
+.Table tbody td,
+.Afb table tbody td {
+	position: relative;
+	z-index: 1;
 }
 
-[class*='Table'] tbody tr:hover,
-[class*='Afb'] table tbody tr:hover {
+.Table tbody td::after,
+.Afb table tbody td::after {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	transition-timing-function: ease;
+	transition-duration: .2s;
+	transition-property: opacity;
+	opacity: 0;
+	border-radius: inherit;
 	background: var(--table-cell-hover-background);
 }
 
-[class*='Table'][class*='fixed'],
-[class*='Afb'] table[class*='fixed'] {
-	table-layout: fixed;
+.Table tbody tr:hover td::after,
+.Afb table tbody tr:hover td::after {
+	opacity: 1;
 }
 
-[class*='Table'][class*='slim'] td,
-[class*='Table'][class*='slim'] th,
-[class*='Afb'] table[class*='slim'] td,
-[class*='Afb'] table[class*='slim'] th {
-	padding: calc(var(--spacer-base) * .25) calc(var(--spacer-base) * .5);
+.Table caption,
+.Afb table caption {
+	font-style: italic;
+	color: var(--table-caption-color);
 }
 
-[class*='Table'][class*='inverted'],
-[class*='Afb'] table[class*='inverted'] {
-	color: var(--body-color-inverted);
-	border-color: var(--table-border-color-inverted);
-	background: var(--table-background-inverted);
+.Table-inverted {
+	--table-border-color: #4d4d4d;
+	--table-cell-border-color: gray;
+	--table-background: #333;
+	--table-headings-cell-background: #1a1a1a;
+	--table-zebra-cell-background: #404040;
+	--table-cell-hover-background: #262626;
+	--table-caption-color: #b3b3b3;
 }
 
-[class*='Table'][class*='inverted'] td,
-[class*='Table'][class*='inverted'] th,
-[class*='Afb'] table[class*='inverted'] td,
-[class*='Afb'] table[class*='inverted'] th {
-	border-color: var(--table-cell-border-color-inverted);
+@media (prefers-color-scheme: dark) {
+	.Table-inverted {
+		--table-border-color: #262626;
+		--table-cell-border-color: gray;
+		--table-background: #fff;
+		--table-headings-cell-background: #ccc;
+		--table-zebra-cell-background: #f2f2f2;
+		--table-cell-hover-background: #e6e6e6;
+		--table-caption-color: #4d4d4d;
+	}
 }
 
-[class*='Table'][class*='inverted'] th,
-[class*='Afb'] table[class*='inverted'] th {
-	background: var(--table-headings-cell-background-inverted);
-}
-
-[class*='Table'][class*='inverted'] tr:nth-child(even),
-[class*='Afb'] table[class*='inverted'] tr:nth-child(even) {
-	background: var(--table-zebra-cell-background-inverted);
-}
-
-[class*='Table'][class*='inverted'] tbody tr:hover,
-[class*='Afb'] table[class*='inverted'] tbody tr:hover {
-	background: var(--table-cell-hover-background-inverted);
-}
-
-[class*='Table'][class*='inverted'] a,
-[class*='Afb'] table[class*='inverted'] a {
+.Table-inverted a {
 	color: var(--link-color-inverted);
 }
 
-[class*='Table'][class*='inverted'] a:hover,
-[class*='Afb'] table[class*='inverted'] a:hover {
+.Table-inverted a:hover {
 	color: var(--link-hover-focus-color-inverted);
 }
 
-[class*='Table'][class*='light'],
-[class*='Afb'] table[class*='light'] {
-	color: #0d0d0d;
-	border-color: #262626;
-	background: #fff;
+.Table-light {
+	--table-border-color: #262626;
+	--table-cell-border-color: gray;
+	--table-background: #fff;
+	--table-headings-cell-background: #ccc;
+	--table-zebra-cell-background: #f2f2f2;
+	--table-cell-hover-background: #e6e6e6;
+	--table-caption-color: #4d4d4d;
 }
 
-[class*='Table'][class*='light'] td,
-[class*='Table'][class*='light'] th,
-[class*='Afb'] table[class*='light'] td,
-[class*='Afb'] table[class*='light'] th {
-	border-color: gray;
-}
-
-[class*='Table'][class*='light'] th,
-[class*='Afb'] table[class*='light'] th {
-	background: #ccc;
-}
-
-[class*='Table'][class*='light'] tr:nth-child(even),
-[class*='Afb'] table[class*='light'] tr:nth-child(even) {
-	background: #f2f2f2;
-}
-
-[class*='Table'][class*='light'] tbody tr:hover,
-[class*='Afb'] table[class*='light'] tbody tr:hover {
-	background: #e6e6e6;
-}
-
-[class*='Table'][class*='light'] a,
-[class*='Afb'] table[class*='light'] a {
+.Table-light a {
 	color: #3935cd;
 }
 
-[class*='Table'][class*='light'] a:hover,
-[class*='Afb'] table[class*='light'] a:hover {
+.Table-light a:hover {
 	color: #272491;
 }
 
-[class*='Table'][class*='dark'],
-[class*='Afb'] table[class*='dark'] {
-	color: #f2f2f2;
-	border-color: #4d4d4d;
-	background: #333;
+.Table-dark {
+	--table-border-color: #4d4d4d;
+	--table-cell-border-color: gray;
+	--table-background: #333;
+	--table-headings-cell-background: #1a1a1a;
+	--table-zebra-cell-background: #404040;
+	--table-cell-hover-background: #262626;
+	--table-caption-color: #b3b3b3;
 }
 
-[class*='Table'][class*='dark'] td,
-[class*='Table'][class*='dark'] th,
-[class*='Afb'] table[class*='dark'] td,
-[class*='Afb'] table[class*='dark'] th {
-	border-color: gray;
-}
-
-[class*='Table'][class*='dark'] th,
-[class*='Afb'] table[class*='dark'] th {
-	background: #1a1a1a;
-}
-
-[class*='Table'][class*='dark'] tr:nth-child(even),
-[class*='Afb'] table[class*='dark'] tr:nth-child(even) {
-	background: #404040;
-}
-
-[class*='Table'][class*='dark'] tbody tr:hover,
-[class*='Afb'] table[class*='dark'] tbody tr:hover {
-	background: #262626;
-}
-
-[class*='Table'][class*='dark'] a,
-[class*='Afb'] table[class*='dark'] a {
+.Table-dark a {
 	color: #74c0cd;
 }
 
-[class*='Table'][class*='dark'] a:hover,
-[class*='Afb'] table[class*='dark'] a:hover {
+.Table-dark a:hover {
 	color: #41a3b4;
 }
 
-[class*='Table'] caption,
-[class*='Afb'] table caption {
-	font-style: italic;
-	color: var(--table-caption-color);
+.Table--fixed {
+	table-layout: fixed;
+}
+
+.Table--slim td,
+.Table--slim th {
+	--table-cell-padding: calc(var(--spacer-base) * .25) calc(var(--spacer-base) * .5);
 }
 
 .Blockquote,
