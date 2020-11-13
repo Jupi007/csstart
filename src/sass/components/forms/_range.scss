@@ -1,3 +1,10 @@
+// ========================
+// ==== Form component ====
+// ========================
+
+// Helpers mixins
+// ==============
+
 @mixin range-track {
 	&::-moz-range-track {
         @content;
@@ -24,38 +31,57 @@
 
 @include option("form") {
 
-input[type="range"] {
-	cursor: pointer;
-	appearance: none;
-    border-color: transparent;
-    background: transparent;
+// Range styles
+// ============
+[type="range"] {
+    --range-track-color: #{$range-track-color};
+    --range-thumb-color: #{$range-thumb-color};
+    --range-thumb-hover-color: #{$range-thumb-hover-color};
 
-    &:focus {
-        outline: none;
-        border-color: var(--input-hover-focus-border-color);
+    @include option("dark-theme") {
+        @media (prefers-color-scheme: dark) {
+            --range-track-color: #{$range-track-color-dark};
+            --range-thumb-color: #{$range-thumb-color-dark};
+            --range-thumb-hover-color: #{$range-thumb-hover-color-dark};
+        }
     }
+
+	&[disabled] {
+        --range-thumb-hover-color: var(--range-thumb-color);
+	}
 
     @include range-track {
         width: 100%;
-		height: 2px;
+		height: 1px;
 		background: var(--range-track-color);
     }
 
     @include range-thumb {
 		appearance: none;
-        border: 2px solid var(--range-track-color);
-		height: 15px;
-		width: 15px;
+		height: $range-thumb-size;
+		width: $range-thumb-size;
 		border-radius: 50%;
 		background: var(--range-thumb-color);
+        border: 1px solid var(--range-track-color);
 
-        @include transition("background");
-		&:hover, &:focus { background: var(--range-thumb-hover-color); }
+        @include transition("background, box-shadow");
+
+		&:hover {
+            background: var(--range-thumb-hover-color);
+        }
     }
 
+    // Navigator specific styles
+    // =========================
+
+    // Fix webkit thumb misalignment
 	&::-webkit-slider-thumb {
-		margin-top: -7px;
+		margin-top: - ($range-thumb-size / 2) + 1px;
 	}
+    // Fix webkit range input size
+    &::-webkit-slider-runnable-track {
+        margin: var(--input-padding);
+    }
 
 	&::-ms-track {
 		width: 100%;
@@ -64,24 +90,6 @@ input[type="range"] {
 	}
 	&::-ms-thumb {
 		margin-top: 0;
-	}
-
-	&[disabled] {
-		background: none;
-		cursor: not-allowed;
-
-		@include range-track {
-            background: var(--range-track-disabled-color);
-        }
-
-		@include range-thumb {
-            border-color: var(--range-track-disabled-color);
-
-            @include transition("background");
-			&:hover, &:focus {
-                background: var(--range-thumb-color);
-            }
-        }
 	}
 }
 

@@ -33,7 +33,8 @@
     background: var(--card-background);
 
     // Used to get smooth transitions with :hover and :focus by using opacity transitions - common style of both
-    &::after, &:before {
+    &::after,
+    &::before {
         content: "";
         position: absolute;
         z-index: -1;

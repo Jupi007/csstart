@@ -1,101 +1,111 @@
+// ========================
+// ==== Form component ====
+// ========================
+
 @include option("form") {
 
-input[type="checkbox"],
-input[type="radio"] {
+// Checkbox and radio styles
+// =========================
+[type="checkbox"],
+[type="radio"]
+{
+    --checkbox-checked-background: #{$checkbox-checked-background};
+    --checkbox-disabled-border-color: #{$checkbox-disabled-border-color};
+    --checkbox-disabled-background: #{$checkbox-disabled-background};
+    --checkbox-checked-icon-color: #{$checkbox-checked-icon-color};
+
+    --checkbox-checked-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$checkbox-checked-icon-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 10l3 3l6-6'/></svg>"))};
+    --radio-checked-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='1.5' fill='#{$checkbox-checked-icon-color}'/></svg>"))};
+    --checkbox-indeterminate-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$checkbox-checked-icon-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/></svg>"))};
+
+    @include option("dark-theme") {
+        @media (prefers-color-scheme: dark) {
+            --checkbox-checked-background: #{$checkbox-checked-background-dark};
+            --checkbox-disabled-border-color: #{$checkbox-disabled-border-color-dark};
+            --checkbox-disabled-background: #{$checkbox-disabled-background-dark};
+            --checkbox-checked-icon-color: #{$checkbox-checked-icon-color-dark};
+
+            --checkbox-checked-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$checkbox-checked-icon-color-dark}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 10l3 3l6-6'/></svg>"))};
+            --radio-checked-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='1.5' fill='#{$checkbox-checked-icon-color-dark}'/></svg>"))};
+            --checkbox-indeterminate-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$checkbox-checked-icon-color-dark}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 10h8'/></svg>"))};
+        }
+    }
+
+    position: relative;
+    z-index: 1;
 	height: $checkbox-size;
 	width: $checkbox-size;
     margin: spacer('tiny-plus') spacer('medium');
     @include border-radius($checkbox-border-radius);
-	vertical-align: middle;
-	position: relative;
 
-    @include transition("background, border, box-shadow");
+    // Used to get smooth transitions with :hover, :focus, :checked and :indeterminate by using opacity transitions - common style of both
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        border-radius: inherit;
 
-	&:active {
-		background: var(--checkbox-active-background);
-	}
-
-    &:focus {
-        box-shadow: 0 0 0 $checkbox-focus-outline-width $checkbox-focus-outline-color;
+        @include transition("opacity");
     }
 
-	&:checked, &:indeterminate {
-		background: var(--checkbox-checked-background);
-		border-color: var(--checkbox-checked-background);
+    // Used to get smooth transitions with :hover
+    &::after {
+		background-color: var(--checkbox-checked-background);
+    }
 
-        &::before, &::after {
+    // Used to get smooth transitions with :focus
+    &::before {
+        box-shadow: 0 0 0 $checkbox-focus-outline-width $checkbox-focus-outline-color; // TODO: use css var for outline color
+    }
+
+    &[disabled] {
+        --input-background: var(--input-disabled-background);
+        --checkbox-checked-background: var(--input-disabled-background);
+    }
+
+    // Interactive states and behaviors
+    // ================================
+
+    &:checked, &:indeterminate {
+        --input-border-color: transparent;
+        --input-hover-border-color: transparent;
+
+        &::after {
             opacity: 1;
         }
-	}
-
-    &::before, &::after {
-        opacity: 0;
-        content: "";
-        display: block;
-        position: absolute;
-		background: var(--checkbox-checked-icon-color);
-		border-radius: 1px;
     }
 
-	&[disabled] {
-		border-color: var(--checkbox-disabled-border-color);
-		background: var(--checkbox-disabled-background);
-
-		&:hover, &:focus { border-color: var(--checkbox-disabled-border-color); }
-
-        &::before, &::after {
-    		background: var(--checkbox-disabled-background);
-        }
-
-		&:checked, &:indeterminate {
-			background: var(--checkbox-disabled-border-color);
-		}
-	}
+    &:focus::before {
+        opacity: 1;
+    }
 
 }
 
-input[type="checkbox"]:not(.#{class("Form-switch")}) {
-    &::before {
-        top: 63%; left: 30%;
-    	transform: translate(-50%, -50%) rotate(50deg);
-        width: 40%;
-        height: 10%;
-    }
+// Specific styles
+// ===============
 
-    &::after {
-        top: 52%; left: 62%;
-    	transform: translate(-50%, -50%) rotate(-50deg);
-        width: 70%;
-        height: 10%;
-    }
+[type="checkbox"]::after {
+    background-image: var(--checkbox-checked-icon);
 }
 
-input[type="radio"] {
+[type="radio"] {
 	border-radius: 50%;
 
 	&::after {
-		top: 50%; left: 50%;
-		transform: translate(-50%, -50%) scale(.4);
-		width: 100%;
-		height: 100%;
-        border-radius: 50%;
+		background-image: var(--radio-checked-icon);
 	}
 }
 
-input[type="checkbox"],
-input[type="radio"],
-input[type="checkbox"].#{class("Form-switch")} {
-    &:indeterminate {
-        &::before {
-    		top: 50%; left: 50%;
-    		transform: translate(-50%, -50%);
-    		width: 40%;
-    		height: 2px;
-            background: var(--checkbox-checked-icon-color);
-        }
-        &::after {
-            display: none;
-        }
+[type="checkbox"],
+[type="radio"] {
+    &:indeterminate::after {
+        background-image: var(--checkbox-indeterminate-icon);
     }
 }
 

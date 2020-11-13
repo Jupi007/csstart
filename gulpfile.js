@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var p = require('gulp-load-plugins')();
 var autoprefixer = require('autoprefixer');
-var cssnano = require('cssnano');
+var csso = require('gulp-csso');
 var browserSync = require('browser-sync').create();
 
 gulp.task('css', function(){
@@ -26,9 +26,9 @@ gulp.task('css-min', function(){
 	.pipe(p.csscomb())
 	.pipe(p.cssbeautify({indent: '	'}))
 	.pipe(p.postcss([
-		autoprefixer(),
-		cssnano()
+		autoprefixer()
 	]))
+    .pipe(csso())
 
 	.pipe(p.rename({
       suffix: '.min'

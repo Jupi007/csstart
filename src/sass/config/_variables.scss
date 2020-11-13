@@ -29,35 +29,34 @@ $label-margin-bottom: spacer("small") !default;
 
 $input-border-width: 1px !default;
 $input-border-color: grey(20) !default;
-$input-hover-focus-border-color: grey(50) !default;
+$input-hover-border-color: grey(50) !default;
 $input-border-radius: $border-radius-base !default;
 $input-invalid-border-color: color('danger') !default;
 $input-padding-vertical: spacer("tiny-plus") !default;
 $input-padding-horizontal: spacer("medium") !default;
-$input-background: color("white") !default;
-$input-disabled-background: grey(10) !default;
+$input-background: grey(3) !default;
+$input-disabled-background: grey(13) !default;
 
 $input-color-height: 35px !default;
 $input-color-padding: spacer("tiny-plus") !default;
 
 $select-option-padding: spacer("small") spacer("medium") !default;
 
-$checkbox-size: spacer("large") !default;
-$checkbox-active-background: grey(20) !default;
+$checkbox-size: 20px !default;
 $checkbox-checked-background: grey(100) !default;
-$checkbox-checked-icon-color: color("white") !default;
+$checkbox-checked-icon-color: grey(5) !default;
 $checkbox-disabled-border-color: grey(30) !default;
 $checkbox-disabled-background: grey(10) !default;
 $checkbox-border-radius: 3px !default;
-$checkbox-focus-outline-width: 2px !default;
+$checkbox-focus-outline-width: 3px !default;
 $checkbox-focus-outline-color: grey(50) !default;
 
-$switch-height: spacer("large") !default;
-$switch-width: spacer("xx-large") !default;
+$switch-height: $checkbox-size !default;
+$switch-width: $checkbox-size * 2 !default;
 $switch-border-radius: 2rem !default;
 
+$range-thumb-size: 15px;
 $range-track-color: grey(70) !default;
-$range-track-disabled-color: grey(60) !default;
 $range-thumb-color: grey(20) !default;
 $range-thumb-hover-color: grey(30) !default;
 
@@ -73,18 +72,17 @@ $meter-sub-optimum-background: color("warning") !default;
 $meter-sub-sub-optimum-background: color("success") !default;
 
 $input-border-color-dark: grey(50) !default;
-$input-hover-focus-border-color-dark: grey(20) !default;
+$input-hover-border-color-dark: grey(20) !default;
 $input-background-dark: grey(80) !default;
-$input-disabled-background-dark: grey(30) !default;
-$checkbox-active-background-dark: grey(60) !default;
+$input-disabled-background-dark: grey(60) !default;
 $checkbox-checked-background-dark: grey(10) !default;
 $checkbox-checked-icon-color-dark: grey(90) !default;
 $checkbox-disabled-border-color-dark: grey(30) !default;
 $checkbox-disabled-background-dark: grey(60) !default;
-$range-track-color-dark: grey(50) !default;
-$range-track-disabled-color-dark: grey(30) !default;
-$range-thumb-color-dark: color("white") !default;
-$range-thumb-hover-color-dark: grey(10) !default;
+$checkbox-focus-outline-color-dark: grey(50) !default;
+$range-track-color-dark: grey(20) !default;
+$range-thumb-color-dark: grey(70) !default;
+$range-thumb-hover-color-dark: grey(60) !default;
 $progress-background-dark: grey(20) !default;
 
 // -------

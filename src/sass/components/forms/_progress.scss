@@ -1,6 +1,22 @@
+// ========================
+// ==== Form component ====
+// ========================
+
 @include option("form") {
 
-meter, progress {
+// Progress and meter styles
+// =========================
+meter,
+progress
+{
+    --progress-background: #{$progress-background};
+
+    @include option("dark-theme") {
+        @media (prefers-color-scheme: dark) {
+            --progress-background: #{$progress-background-dark};
+        }
+    }
+
 	background: var(--progress-background);
 	border: none;
 	height: $progress-height;
@@ -17,9 +33,8 @@ meter, progress {
 	@include border-radius($progress-border-radius);
 }
 
-// ********
-// Progress
-// ********
+// Progress styles
+// ===============
 ::-webkit-progress-value {
 	background: $progress-bar-background;
 	@include border-radius($progress-border-radius);
@@ -45,9 +60,8 @@ progress:indeterminate {
 	to { background: darken( $progress-background , 5% ); }
 }
 
-// *****
-// Meter
-// ******
+// Meter styles
+// ============
 :-moz-meter-optimum::-moz-meter-bar,
 :-moz-meter-sub-optimum::-moz-meter-bar,
 :-moz-meter-sub-sub-optimum::-moz-meter-bar {

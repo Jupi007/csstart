@@ -1,25 +1,49 @@
+// ========================
+// ==== Form component ====
+// ========================
+
+// The Switch component is an optional part of the Form component
 @include option("form", "form-switch") {
-    input[type="checkbox"].#{class("Form-switch")} {
-        width: $switch-width;
-        height: $switch-height;
-        border-radius: $switch-border-radius;
 
-        &::before {
-            width: calc(#{$switch-height} - (#{$input-border-width} * 2));
-            height: 100%;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            opacity: 1;
-            border-radius: calc(#{$switch-border-radius} - 1px);
-            background: var(--checkbox-checked-background);
+// Checkbox Switch component
+// =========================
+.#{class("Form-switch")} {
+    width: $switch-width;
+    height: $switch-height;
+    border-radius: $switch-border-radius;
 
-            @include transition("left, background");
-        }
+    @include transition("border, background");
 
-        &:checked::before {
+    &::after {
+        width: calc(#{$switch-height} - (#{$input-border-width} * 2));
+        height: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 1;
+        border-radius: calc(#{$switch-border-radius} - 1px);
+        background: var(--checkbox-checked-background);
+
+        @include transition("left, background");
+    }
+
+    &:checked {
+        background-color: var(--checkbox-checked-background);
+
+        &::after {
             left: calc(#{$switch-width} - #{$switch-height});
             background: var(--checkbox-checked-icon-color);
         }
     }
+
+    &:indeterminate::after {
+        width: 100%;
+        left: 0;
+        background-color: var(--checkbox-checked-background);
+        background-image: var(--checkbox-indeterminate-icon);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
 }

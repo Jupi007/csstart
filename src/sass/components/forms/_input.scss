@@ -1,25 +1,48 @@
+// ========================
+// ==== Form component ====
+// ========================
+
 @include option("form") {
 
+// Global input styles
+// ===================
 input,
 textarea,
-select {
-	appearance: none;
+select
+{
+    --input-padding: #{$input-padding-vertical} #{$input-padding-horizontal};
+    --input-border-color: #{$input-border-color};
+    --input-hover-border-color: #{$input-hover-border-color};
+    --input-background: #{$input-background};
+    --input-disabled-background: #{$input-disabled-background};
+
+    @include option("dark-theme") {
+        @media (prefers-color-scheme: dark) {
+            --input-border-color: #{$input-border-color-dark};
+            --input-hover-border-color: #{$input-hover-border-color-dark};
+            --input-background: #{$input-background-dark};
+            --input-disabled-background: #{$input-disabled-background-dark};
+        }
+    }
+
+    vertical-align: middle;
+	padding: var(--input-padding);
 	border: $input-border-width solid var(--input-border-color);
 	@include border-radius($input-border-radius);
-	padding: $input-padding-vertical $input-padding-horizontal;
-	box-shadow: none;
-	background: var(--input-background);
-	outline: none;
-    vertical-align: middle;
-    vertical-align: -webkit-baseline-middle;
-    vertical-align: -moz-middle-with-baseline;
-    margin-left: spacer('medium');
-    margin-bottom: spacer('medium');
-    filter: none;
     color: var(--body-color);
+	background: var(--input-background);
+    outline: none;
+    // Remove default style
+	appearance: none;
+    // Remove Firefox password manger style
+    filter: none;
 
     @include transition("border");
-	&:hover, &:focus { border-color: var(--input-hover-focus-border-color); }
+
+	&:hover,
+    &:focus {
+        border-color: var(--input-hover-border-color);
+    }
 
     &:invalid:focus {
         border-color: $input-invalid-border-color;
@@ -30,44 +53,40 @@ select {
 		border-color: var(--input-border-color);
 		background: var(--input-disabled-background);
 
-		&:hover, &:focus { border-color: var(--input-border-color); }
+		&:hover,
+        &:focus {
+            border-color: var(--input-border-color);
+        }
 	}
 }
 
-input {
-	&[type="date"],
-	&[type="time"],
-	&[type="color"],
-	&[type="file"],
-	&[type="checkbox"],
-	&[type="radio"] {
-		cursor: pointer;
+select,
+[type="date"],
+[type="time"],
+[type="color"],
+[type="file"],
+[type="checkbox"],
+[type="radio"],
+[type="range"] {
+	cursor: pointer;
+}
 
-		&[disabled] { cursor: not-allowed; }
-	}
+[type="file"] {
+    background: transparent;
 
-	&[type="file"] {
-        background: transparent;
-
-		&:not(:focus) {
-            border-color: transparent;
-        }
-	}
-
-	&[type="color"] {
-		height: $input-color-height;
-		padding: $input-color-padding;
-	}
-
-    &[type="submit"] {
-        margin-left: 0;
+	&:not(:focus) {
+        border-color: transparent;
     }
+}
+
+[type="color"] {
+	height: $input-color-height;
+	padding: $input-color-padding;
 }
 
 textarea {
 	min-height: calc(#{$font-size-base} + #{$input-padding-vertical} * 2);
     transition-property: border;
-    vertical-align: initial;
 }
 
 }

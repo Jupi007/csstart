@@ -41,7 +41,8 @@
     @include transition("color");
 
     // Used to get smooth transitions with :hover and :focus by using opacity transitions - common style of both
-    &::after, &:before {
+    &::after,
+    &::before {
         content: "";
         position: absolute;
         z-index: -1;
@@ -157,6 +158,7 @@
 
 // Interactive states and behaviors
 // ================================
+button.#{class("Tag")},
 a.#{class("Tag")},
 .#{class("Button")}
 {
