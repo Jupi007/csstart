@@ -246,9 +246,6 @@ sup {
 }
 
 a {
-	transition-timing-function: ease;
-	transition-duration: .2s;
-	transition-property: color;
 	text-decoration: none;
 	color: var(--link-color);
 	background: transparent;

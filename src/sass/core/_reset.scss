@@ -178,8 +178,6 @@ a {
 	text-decoration: $link-decoration;
 	background: transparent;
 
-    @include transition("color");
-
 	&:hover, &:focus {
 		color: var(--link-hover-focus-color);
 		text-decoration: $link-hover-focus-decoration;
