@@ -2,6 +2,10 @@
 //-*-*-*-*-*-*-*-*-*-*-*-*CSS reset (based on Bootstrap Reboot) and basic styles-*-*-*-*-*-*-*-*-*-*-*-*-*
 //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
+:root {
+    --spacer-base: #{$spacer-base};
+}
+
 * {
     @media (prefers-reduced-motion: reduce) {
         animation: none !important;
@@ -45,6 +49,16 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 body {
+    --body-bg: #{$body-bg};
+    --body-color: #{$body-color};
+
+    @include option("dark-theme") {
+        @media (prefers-color-scheme: dark) {
+            --body-bg: #{$body-bg-dark};
+            --body-color: #{$body-color-dark};
+        }
+    }
+
 	margin: 0;
 	font-family: $font-family-sans-serif;
 	font-size: $mobile-font-size;
@@ -174,6 +188,20 @@ sub { bottom: -.25em; }
 sup { top: -.5em; }
 
 a {
+    --link-color: #{$link-color};
+    --link-hover-focus-color: #{$link-hover-focus-color};
+    --link-visited-color: #{$link-visited-color};
+    --link-visited-hover-focus-color: #{$link-visited-hover-focus-color};
+
+    @include option("dark-theme") {
+        @media (prefers-color-scheme: dark) {
+            --link-color: #{$link-color-dark};
+            --link-hover-focus-color: #{$link-hover-focus-color-dark};
+            --link-visited-color: #{$link-visited-color-dark};
+            --link-visited-hover-focus-color: #{$link-visited-hover-focus-color-dark};
+        }
+    }
+
 	color: var(--link-color);
 	text-decoration: $link-decoration;
 	background: transparent;
