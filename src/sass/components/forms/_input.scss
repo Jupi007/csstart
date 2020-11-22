@@ -16,14 +16,12 @@ select
     --input-border-color: #{$input-border-color};
     --input-hover-border-color: #{$input-hover-border-color};
     --input-background: #{$input-background};
-    --input-disabled-background: #{$input-disabled-background};
 
     @include option("dark-theme") {
         @media (prefers-color-scheme: dark) {
             --input-border-color: #{$input-border-color-dark};
             --input-hover-border-color: #{$input-hover-border-color-dark};
             --input-background: #{$input-background-dark};
-            --input-disabled-background: #{$input-disabled-background-dark};
         }
     }
 
@@ -52,8 +50,7 @@ select
 
 	&[disabled] {
 		cursor: not-allowed;
-		border-color: var(--input-border-color);
-		background: var(--input-disabled-background);
+		opacity: $input-disabled-opacity;
 
 		&:hover,
         &:focus {

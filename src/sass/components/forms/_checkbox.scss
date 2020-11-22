@@ -12,8 +12,6 @@
 [type="radio"]
 {
     --checkbox-checked-background: #{$checkbox-checked-background};
-    --checkbox-disabled-border-color: #{$checkbox-disabled-border-color};
-    --checkbox-disabled-background: #{$checkbox-disabled-background};
     --checkbox-checked-icon-color: #{$checkbox-checked-icon-color};
 
     --checkbox-checked-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$checkbox-checked-icon-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 10l3 3l6-6'/></svg>"))};
@@ -23,8 +21,6 @@
     @include option("dark-theme") {
         @media (prefers-color-scheme: dark) {
             --checkbox-checked-background: #{$checkbox-checked-background-dark};
-            --checkbox-disabled-border-color: #{$checkbox-disabled-border-color-dark};
-            --checkbox-disabled-background: #{$checkbox-disabled-background-dark};
             --checkbox-checked-icon-color: #{$checkbox-checked-icon-color-dark};
 
             --checkbox-checked-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$checkbox-checked-icon-color-dark}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 10l3 3l6-6'/></svg>"))};
@@ -64,11 +60,6 @@
     // Used to get smooth transitions with :focus
     &::before {
         box-shadow: 0 0 0 $checkbox-focus-outline-width $checkbox-focus-outline-color; // TODO: use css var for outline color
-    }
-
-    &[disabled] {
-        --input-background: var(--input-disabled-background);
-        --checkbox-checked-background: var(--input-disabled-background);
     }
 
     // Interactive states and behaviors
