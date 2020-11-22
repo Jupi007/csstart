@@ -12,10 +12,12 @@ meter,
 progress
 {
     --progress-background: #{$progress-background};
+    --progress-indeterminate-background: #{darken( $progress-background , 8% );};
 
     @include option("dark-theme") {
         @media (prefers-color-scheme: dark) {
             --progress-background: #{$progress-background-dark};
+            --progress-indeterminate-background: #{lighten( $progress-background-dark , 8% );};
         }
     }
 
@@ -59,7 +61,7 @@ progress:indeterminate {
 }
 
 @keyframes progress {
-	to { background: darken( $progress-background , 5% ); }
+	to { background: var(--progress-indeterminate-background); }
 }
 
 // Meter styles

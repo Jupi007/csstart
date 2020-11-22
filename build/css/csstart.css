@@ -10146,12 +10146,14 @@ progress {
 	border-radius: 3px;
 	background: var(--progress-background);
 	--progress-background: #ccc;
+	--progress-indeterminate-background: #b8b8b8;
 }
 
 @media (prefers-color-scheme: dark) {
 	meter,
     progress {
-		--progress-background: #ccc;
+		--progress-background: #999;
+		--progress-indeterminate-background: #adadad;
 	}
 }
 
@@ -10190,13 +10192,13 @@ progress:indeterminate::-moz-progress-bar {
 
 @-webkit-keyframes progress {
 	to {
-		background: #bfbfbf;
+		background: var(--progress-indeterminate-background);
 	}
 }
 
 @keyframes progress {
 	to {
-		background: #bfbfbf;
+		background: var(--progress-indeterminate-background);
 	}
 }
 
