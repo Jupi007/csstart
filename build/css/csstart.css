@@ -9070,8 +9070,8 @@ template {
 	body {
 		font-size: 12pt;
 		font-smooth: always;
-		color: #000;
-		background: #fff;
+		color: #0d0d0d;
+		background: white;
 		-moz-osx-font-smoothing: grayscale;
 		-webkit-font-smoothing: antialiased;
 		text-rendering: optimizeLegibility;
@@ -9787,7 +9787,6 @@ select {
 	--input-border-color: #ccc;
 	--input-hover-border-color: gray;
 	--input-background: #f7f7f7;
-	--input-disabled-background: #dedede;
 	-webkit-appearance: none;
 	   -moz-appearance: none;
 	        appearance: none;
@@ -9801,7 +9800,6 @@ select {
 		--input-border-color: gray;
 		--input-hover-border-color: #ccc;
 		--input-background: #333;
-		--input-disabled-background: #666;
 	}
 }
 
@@ -9824,8 +9822,7 @@ input[disabled],
 textarea[disabled],
 select[disabled] {
 	cursor: not-allowed;
-	border-color: var(--input-border-color);
-	background: var(--input-disabled-background);
+	opacity: .5;
 }
 
 input[disabled]:hover,
@@ -9908,8 +9905,6 @@ select[multiple] option:first-child {
 	margin: calc(var(--spacer-base) * .5) calc(var(--spacer-base) * 1);
 	border-radius: 3px;
 	--checkbox-checked-background: black;
-	--checkbox-disabled-border-color: #b3b3b3;
-	--checkbox-disabled-background: #e6e6e6;
 	--checkbox-checked-icon-color: #f2f2f2;
 	--checkbox-checked-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath fill=\'none\' stroke=\'%23f2f2f2\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M6 10l3 3l6-6\'/%3e%3c/svg%3e');
 	--radio-checked-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'-4 -4 8 8\'%3e%3ccircle r=\'1.5\' fill=\'%23f2f2f2\'/%3e%3c/svg%3e');
@@ -9920,8 +9915,6 @@ select[multiple] option:first-child {
 	[type='checkbox'],
     [type='radio'] {
 		--checkbox-checked-background: #e6e6e6;
-		--checkbox-disabled-border-color: #b3b3b3;
-		--checkbox-disabled-background: #666;
 		--checkbox-checked-icon-color: #1a1a1a;
 		--checkbox-checked-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath fill=\'none\' stroke=\'%231a1a1a\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M6 10l3 3l6-6\'/%3e%3c/svg%3e');
 		--radio-checked-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'-4 -4 8 8\'%3e%3ccircle r=\'1.5\' fill=\'%231a1a1a\'/%3e%3c/svg%3e');
@@ -9955,12 +9948,6 @@ select[multiple] option:first-child {
 [type='checkbox']::before,
 [type='radio']::before {
 	box-shadow: 0 0 0 3px gray;
-}
-
-[type='checkbox'][disabled],
-[type='radio'][disabled] {
-	--input-background: var(--input-disabled-background);
-	--checkbox-checked-background: var(--input-disabled-background);
 }
 
 [type='checkbox']:checked,
