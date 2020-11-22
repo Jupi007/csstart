@@ -20,7 +20,9 @@
     page-break-inside: avoid;
 	padding: $alert-padding;
 	border: $alert-border-width solid var(--alert-border-color);
-	border-left-width: $alert-border-left-width;
+    @if ($alert-big-border-position != none) {
+        border-#{$alert-big-border-position}-width: $alert-big-border-width;
+    }
 	@include border-radius($alert-border-radius);
 	margin-bottom: $alert-margin-bottom;
     color: var(--alert-color);
