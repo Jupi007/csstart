@@ -195,16 +195,12 @@ $headings-font-weight: font-weight('normal') !default;
 // -----
 
 $link-color: color('blue') !default;
-$link-visited-color: darken( color('purple') , 15% ) !default;
 $link-decoration: none !default;
 $link-hover-focus-color: darken( $link-color , 15% ) !default;
-$link-visited-hover-focus-color: darken( $link-visited-color , 15% ) !default;
 $link-hover-focus-decoration: underline !default;
 
 $link-color-dark: color('light-blue') !default;
 $link-hover-focus-color-dark: darken( $link-color-dark , 15% ) !default;
-$link-visited-color-dark: color('purple') !default;
-$link-visited-hover-focus-color-dark: darken( $link-visited-color-dark , 15% ) !default;
 
 // ----------
 // Components

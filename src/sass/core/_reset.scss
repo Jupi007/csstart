@@ -175,15 +175,11 @@ sup { top: -.5em; }
 a {
     --link-color: #{$link-color};
     --link-hover-focus-color: #{$link-hover-focus-color};
-    --link-visited-color: #{$link-visited-color};
-    --link-visited-hover-focus-color: #{$link-visited-hover-focus-color};
 
     @include option("dark-theme") {
         @media (prefers-color-scheme: dark) {
             --link-color: #{$link-color-dark};
             --link-hover-focus-color: #{$link-hover-focus-color-dark};
-            --link-visited-color: #{$link-visited-color-dark};
-            --link-visited-hover-focus-color: #{$link-visited-hover-focus-color-dark};
         }
     }
 
@@ -195,14 +191,6 @@ a {
 		color: var(--link-hover-focus-color);
 		text-decoration: $link-hover-focus-decoration;
 	}
-
-    &:visited {
-        color: var(--link-visited-color);
-
-        &:hover, &:focus {
-            color: var(--link-visited-hover-focus-color);
-        }
-    }
 }
 
 a:not([href]):not([tabindex]) {

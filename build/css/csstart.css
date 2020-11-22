@@ -1995,16 +1995,12 @@ a {
 	background: transparent;
 	--link-color: #3935cd;
 	--link-hover-focus-color: #272491;
-	--link-visited-color: #8345c7;
-	--link-visited-hover-focus-color: #5d2c94;
 }
 
 @media (prefers-color-scheme: dark) {
 	a {
 		--link-color: #74c0cd;
 		--link-hover-focus-color: #41a3b4;
-		--link-visited-color: #aa80d9;
-		--link-visited-hover-focus-color: #8345c7;
 	}
 }
 
@@ -2012,15 +2008,6 @@ a:hover,
 a:focus {
 	text-decoration: underline;
 	color: var(--link-hover-focus-color);
-}
-
-a:visited {
-	color: var(--link-visited-color);
-}
-
-a:visited:hover,
-a:visited:focus {
-	color: var(--link-visited-hover-focus-color);
 }
 
 a:not([href]):not([tabindex]),
