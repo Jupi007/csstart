@@ -1,0 +1,15 @@
+// ===============================
+// ==== Align utilities class ====
+// ===============================
+
+@mixin media-align-utilities($prefix: "") {
+    .#{$prefix}#{class("align")} {
+        &-#{class("(align)-left")} { margin-right: auto !important; }
+    	&-#{class("(align)-right")} { margin-left: auto !important; }
+    	&-#{class("(align)-center")} {
+    		margin-left: auto !important;
+    		margin-right: auto !important;
+    	}
+        &-#{class("(align)-auto")} { margin: auto; }
+    }
+}

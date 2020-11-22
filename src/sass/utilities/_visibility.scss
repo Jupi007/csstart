@@ -1,0 +1,8 @@
+// ====================================
+// ==== Visibility utilities class ====
+// ====================================
+
+@mixin media-visibility-utilities($prefix: "") {
+	.#{$prefix}#{class("visible")} { visibility: visible !important; }
+	.#{$prefix}#{class("hidden")} { visibility: hidden !important; }
+}

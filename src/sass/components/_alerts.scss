@@ -17,6 +17,7 @@
         }
     }
 
+    page-break-inside: avoid;
 	padding: $alert-padding;
 	border: $alert-border-width solid var(--alert-border-color);
 	border-left-width: $alert-border-left-width;

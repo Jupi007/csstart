@@ -1,0 +1,54 @@
+// ==============================
+// ==== Grid utilities class ====
+// ==============================
+
+// The CSStart Grid is an hybrid between an utility and a component.
+// Add the Grid class to create a Grid with only one column.
+// The CSStart Grid is mobile-first, so each breakpoint is applied upper.
+
+@include utility-option("grid") {
+    .#{class("Grid")} {
+    	display: grid;
+    	grid-auto-flow: row;
+    	grid-auto-columns: 1fr;
+    	grid-template-columns: none;
+
+        @include option("grid-masonry") {
+            &--#{class("(Grid)--masonry")} {
+                grid-template-rows: masonry;
+            }
+        }
+    }
+
+    @each $name, $value in $gutters  {
+        .#{class("Grid-gutter")}#{$name} {
+            grid-gap: $value;
+        }
+    }
+}
+
+// Responsive Grid utilities
+// =========================
+@mixin media-grid($prefix: "") {
+    .#{class("Grid")}-#{$prefix}-#{class("(Grid)-auto")} {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        grid-template-columns: none;
+    }
+
+    @for $i from 1 through $grid-max-cols {
+		.#{class("Grid")}-#{$prefix}-#{$i} {
+			grid-template-columns: repeat(#{$i}, 1fr);
+		}
+
+        .#{class("column")}-#{$prefix}-#{$i} {
+            grid-column: auto / span #{$i};
+        }
+    }
+
+    @for $i from 1 through $grid-max-rows {
+        .#{class("row")}-#{$prefix}-#{$i} {
+            grid-row: auto / span #{$i};
+        }
+    }
+}

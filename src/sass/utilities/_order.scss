@@ -1,0 +1,8 @@
+// ===============================
+// ==== Order utilities class ====
+// ===============================
+
+@mixin media-order-utilities($prefix: "") {
+	.#{$prefix}#{class("item-first")} { order: -1 !important; }
+	.#{$prefix}#{class("item-last")} { order: 1 !important; }
+}

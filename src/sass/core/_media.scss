@@ -1,38 +1,24 @@
-@include option("responsive-utilities") {
+// ==============================================================
+// ==== Media (responsive, dark, print) styles and utilities ====
+// ==============================================================
+
+@include option("responsive-utilities", "utilities") {
     @each $name, $value in $breakpoints {
     	@include respond-to($name, "up") {
-            @include option("utilities") {
-                @include media-utilities("responsive", $name + "-");
-            }
-
-            @include utility-option("flex", "responsive") {
-                @include media-flex($name + "-");
-            }
-            @include utility-option("grid", "responsive") {
-    		    @include media-grid($name + "-");
-            }
+            @include media-utilities("responsive", $name + "-");
     	}
     }
 }
 
-@include option("dark-theme-utilities") {
+@include option("dark-theme-utilities", "utilities") {
     @media (prefers-color-scheme: dark) {
-        @include option("utilities") {
-            @include media-utilities("dark-theme", class("dark-theme-utilities-prefix-"));
-        }
-
-        @include utility-option("flex", "dark-theme") {
-            @include media-flex(class("dark-theme-utilities-prefix-"));
-        }
-        @include utility-option("grid", "dark-theme") {
-            @include media-grid(class("dark-theme-utilities-prefix-"));
-        }
+        @include media-utilities("dark-theme", class("dark-theme-prefix") + "-");
     }
 }
 
 
 // Media Print reset and utilities based on Gutenberg (https://github.com/BafS/Gutenberg)
-@include option("print-utilities") {
+@include option("print-styles") {
     @include print {
     	*,
     	*:before,
@@ -51,12 +37,13 @@
     	}
 
     	body {
-    		font-size: 12pt;
-    		background: white;
     		font-smooth: always;
     		-moz-osx-font-smoothing: grayscale;
     		-webkit-font-smoothing: antialiased;
     		text-rendering: optimizeLegibility;
+        	font-size: 12pt;
+        	background: $print-body-bg;
+            color: $print-body-color;
     	}
 
     	table,
@@ -100,81 +87,70 @@
     		word-wrap: break-word;
     	}
 
-    	a {
-    		&[href^='http'],
-    		&[href^='ftp'] {
-    			&:after {
-    				content: ' (' attr(href) ')';
-    				font-size: 80%;
-    			}
-    		}
-
-    		&[href$='.jpg'],
-    		&[href$='.jpeg'],
-    		&[href$='.gif'],
-    		&[href$='.png'] {
-    			&:after {
-    				display: none;
-    			}
-    		}
-    	}
-
-    	abbr[title],
-    	acronym[title] {
-    		&:after {
-    			content: ' (' attr(title) ')';
-    		}
-    	}
-
-    	a {
-    		&.#{class("print-utilities-prefix-")}#{class("(print-)no-reformat")}:after { content: ''; }
-    	}
-
-    	abbr,
-    	acronym {
-    		&[title] {
-    			&.#{class("print-utilities-prefix-")}#{class("(print-)no-reformat")}:after { content: ''; }
-    		}
-    	}
-
-    	.#{class("print-utilities-prefix-")}#{class("(print-)no-reformat")} {
-    		abbr,
-    		acronym,
-    		a {
-    			&:after { content: ''; }
-    		}
-    	}
-
     	::placeholder {
     		color: transparent;
     	}
 
-    	.#{class("print-utilities-prefix-")} {
-            &#{class("(print-)main")} {
-                margin: 0!important;
-                background: transparent!important;
-                border: 0!important;
+        @include option("print-reformats") {
+            a {
+                &[href^='http'],
+                &[href^='ftp'] {
+                    &:after {
+                        content: ' (' attr(href) ')';
+                        font-size: 80%;
+                    }
+                }
+
+                &[href$='.jpg'],
+                &[href$='.jpeg'],
+                &[href$='.gif'],
+                &[href$='.png'] {
+                    &:after {
+                        display: none;
+                    }
+                }
             }
 
-    		&#{class("(print-)page-break")},
-    		&#{class("(print-)page-break-before")} {
+            abbr[title],
+            acronym[title] {
+                &:after {
+                    content: ' (' attr(title) ')';
+                }
+            }
+
+            a {
+                &.#{class("print-prefix")}-#{class("(print)-no-reformat")}:after { content: ''; }
+            }
+
+            abbr,
+            acronym {
+                &[title] {
+                    &.#{class("print-prefix")}-#{class("(print)-no-reformat")}:after { content: ''; }
+                }
+            }
+
+            .#{class("print-prefix")}-#{class("(print)-no-reformat")} {
+                abbr,
+                acronym,
+                a {
+                    &:after { content: ''; }
+                }
+            }
+        }
+
+    	.#{class("print-prefix")} {
+            &#{class("(print)-page-break")},
+    		&#{class("(print)-page-break-before")} {
     			page-break-before: always!important;
     		}
 
-    		&#{class("(print-)page-break-after")} {
+    		&#{class("(print)-page-break-after")} {
     			page-break-after: always!important;
     		}
     	}
 
         @include option("utilities") {
-            @include media-utilities("print", class("print-utilities-prefix-"));
-        }
-
-        @include utility-option("flex", "print") {
-            @include media-flex(class("print-utilities-prefix-"));
-        }
-        @include utility-option("grid", "print") {
-            @include media-grid(class("print-utilities-prefix-"));
+            @include media-utilities("print", class("print-prefix"));
         }
     }
 }

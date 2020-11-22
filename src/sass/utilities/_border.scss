@@ -1,0 +1,25 @@
+// ================================
+// ==== Border utilities class ====
+// ================================
+
+@mixin media-border-utilities($prefix: "") {
+    .#{$prefix}#{class("border")} {
+    	border: 1px solid $body-color !important;
+
+        &-#{class("(border)-none")} {
+            border: none !important;
+        }
+    }
+
+    .#{$prefix}#{class("border-radius")} {
+    	border-radius: $border-radius-base !important;
+    }
+
+    @each $name, $color in $colors {
+    	.#{$prefix}#{class("border")}-#{$name} { border: 1px solid $color !important; }
+    }
+
+    @for $i from 1 through 20 {
+    	.#{$prefix}#{class("border")}-#{class("grey")}#{$i * 5} { border: 1px solid grey($i * 5) !important; }
+    }
+}

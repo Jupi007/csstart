@@ -1,0 +1,43 @@
+// ==================================================================================
+// ==== Text (align, wrap, transform, style, decoration, weight) utilities class ====
+// ==================================================================================
+
+@mixin media-text-utilities($prefix: "") {
+    .#{$prefix}#{class("text")} {
+    	&-#{class("(text)-normal")} {
+    		font-style: normal !important;
+    		font-weight: normal !important;
+    		text-decoration: none !important;
+    		text-transform: none !important;
+            font-size: 1em !important;
+    	}
+
+    	&-#{class("(text)-left")} { text-align: left !important; }
+    	&-#{class("(text)-center")} { text-align: center !important; }
+    	&-#{class("(text)-right")} { text-align: right !important; }
+    	&-#{class("(text)-justify")} { text-align: justify !important; }
+
+    	&-#{class("(text)-wrap")} {
+    		white-space: wrap !important;
+    		word-break: break-all !important;
+    	}
+    	&-#{class("(text)-nowrap")} { white-space: nowrap !important; }
+    	&-#{class("(text)-truncate")} {
+    		overflow: hidden !important;
+    		text-overflow: ellipsis !important;
+    		white-space: nowrap !important;
+    	}
+
+    	&-#{class("(text)-capitalize")} { text-transform: capitalize !important; }
+    	&-#{class("(text)-uppercase")} { text-transform: uppercase !important; }
+    	&-#{class("(text)-lowercase")} { text-transform: lowercase !important; }
+
+    	&-#{class("(text)-italic")} { font-style: italic !important; }
+
+    	&-#{class("(text)-underline")} { text-decoration: underline !important; }
+
+    	@each $name, $weight in $font-weights {
+    		&-#{class("(text)-weight")}-#{$name} { font-weight: $weight !important; }
+    	}
+    }
+}

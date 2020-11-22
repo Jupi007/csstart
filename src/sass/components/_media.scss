@@ -12,7 +12,7 @@
 	align-items: flex-start;
 
     @include option("media-responsive") {
-        @include respond-to("tiny", "down") {
+        @include respond-to($media-responsive-breakpoint, "down") {
     		flex-direction: column;
             align-items: center;
 

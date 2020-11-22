@@ -1,0 +1,23 @@
+// =====================================================
+// ==== Color (text and background) utilities class ====
+// =====================================================
+
+@mixin media-color-utilities($prefix: "") {
+    .#{$prefix}#{class("text")}  {
+        @each $name, $color in $colors {
+            &-#{$name} { color: $color !important; }
+        }
+
+        @for $i from 1 through 20 {
+            &-#{class("grey")}#{$i * 5} { color: grey($i * 5) !important; }
+        }
+    }
+
+    @each $name, $color in $colors {
+    	.#{$prefix}#{class("background")}-#{$name} { background: $color !important; }
+    }
+
+    @for $i from 1 through 20 {
+    	.#{$prefix}#{class("background")}-#{class("grey")}#{$i * 5} { background: grey($i * 5) !important; }
+    }
+}

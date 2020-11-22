@@ -1,0 +1,19 @@
+// ================================
+// ==== Display utilities class ====
+// ================================
+
+@mixin media-display-utilities($prefix: "") {
+	.#{$prefix}#{class("display")} {
+		&-#{class("(display)-none")} { display: none !important; }
+		&-#{class("(display)-inline")} { display: inline !important; }
+		&-#{class("(display)-inline-block")} { display: inline-block !important; }
+		&-#{class("(display)-block")} { display: block !important; }
+		&-#{class("(display)-table")} { display: table !important; }
+		&-#{class("(display)-table-cell")} { display: table-cell !important; }
+		&-#{class("(display)-table-row")} { display: table-row !important; }
+		&-#{class("(display)-flex")} { display: flex !important; }
+		&-#{class("(display)-inline-flex")} { display: inline-flex !important; }
+		&-#{class("(display)-grid")} { display: grid !important; }
+		&-#{class("(display)-inline-grid")} { display: inline-grid !important; }
+	}
+}

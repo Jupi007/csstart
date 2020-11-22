@@ -1,0 +1,69 @@
+// ================================
+// ==== Utilities class import ====
+// ================================
+
+@import
+
+"text",
+"border",
+"color",
+"display",
+"size",
+"align",
+"margin",
+"padding",
+"visibility",
+"accessibility",
+"order",
+"float",
+"flex",
+"grid";
+
+@mixin media-utilities($area: "default", $prefix: "") {
+    @include utility-option("text", $area) {
+        @include media-text-utilities($prefix);
+    }
+    @include utility-option("border", $area) {
+        @include media-border-utilities($prefix);
+    }
+    @include utility-option("color", $area) {
+        @include media-color-utilities($prefix);
+    }
+    @include utility-option("size", $area) {
+        @include media-size-utilities($prefix);
+    }
+    @include utility-option("display", $area) {
+        @include media-display-utilities($prefix);
+    }
+    @include utility-option("align", $area) {
+        @include media-align-utilities($prefix);
+    }
+    @include utility-option("margin", $area) {
+        @include media-margin-utilities($prefix);
+    }
+    @include utility-option("padding", $area) {
+        @include media-padding-utilities($prefix);
+    }
+    @include utility-option("visibility", $area) {
+        @include media-visibility-utilities($prefix);
+    }
+    @include utility-option("accessibility", $area) {
+        @include media-accessibility-utilities($prefix);
+    }
+    @include utility-option("order", $area) {
+        @include media-order-utilities($prefix);
+    }
+    @include utility-option("float", $area) {
+        @include media-float-utilities($prefix);
+    }
+    @include utility-option("flex", $area) {
+        @include media-flex($prefix);
+    }
+    @include utility-option("grid", $area) {
+        @include media-grid($prefix);
+    }
+}
+
+@include option("utilities") {
+    @include media-utilities();
+}

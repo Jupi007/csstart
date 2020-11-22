@@ -1,0 +1,23 @@
+// ===============================
+// ==== Float utilities class ====
+// ===============================
+
+@mixin media-float-utilities($prefix: "") {
+    .#{$prefix}#{class("floatbox")}::after {
+    	content: "" !important;
+    	display: block !important;
+    	clear: both !important;
+    }
+
+    .#{$prefix}#{class("float-left")} { float: left !important; }
+    .#{$prefix}#{class("float-right")} { float: right !important; }
+
+    .#{$prefix} {
+        .#{class("clear")} { clear: both !important; }
+        .#{class("clear-left")} { clear: left !important; }
+        .#{class("clear-right")} { clear: right !important; }
+
+        // https://developer.mozilla.org/fr/docs/Web/CSS/Block_formatting_context
+        .#{class("block-formatting-context")} { overflow: hidden !important; }
+    }
+}

@@ -33,21 +33,6 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 	display: block;
 }
 
-@include respond-to("small", "down") {
-	div,
-	textarea,
-	table,
-	td,
-	th,
-	code,
-	pre,
-	samp {
-		word-wrap: break-word;
-		overflow-wrap: break-word;
-		hyphens: auto;
-	}
-}
-
 body {
     --body-bg: #{$body-bg};
     --body-color: #{$body-color};
@@ -63,7 +48,7 @@ body {
 	font-family: $font-family-sans-serif;
 	font-size: $mobile-font-size;
 
-	@include respond-to("small", "up") {
+	@include respond-to("s", "up") {
 		font-size: $font-size-base;
 	}
 

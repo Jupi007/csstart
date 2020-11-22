@@ -15,6 +15,8 @@ $options: map-merge((
     "smooth-scroll": true,
 
     "dark-theme": true,
+    "print-styles": true,
+        "print-reformats": true,
 
     "components-inverted": true,
     "components-dark": true,
@@ -40,27 +42,27 @@ $options: map-merge((
 
     "utilities": true,
     "dark-theme-utilities": true,
-    "print-utilities": true,
     "responsive-utilities": true,
 ), $options);
 
 $utilities-options: !default;
 $utilities-options: map-merge((
     // Name   -   Enabled - Responsive - Dark theme - Print
-    "text":       (true,  false, false, false),
-    "border":     (true,  false, true,  false),
-    "color":      (true,  false, true,  false),
-    "size":       (true,  true,  false, true),
-    "display":    (true,  true,  true,  true),
-    "align":      (true,  true,  false, false),
-    "margin":     (true,  true,  false, true),
-    "padding":    (true,  true,  false, false),
-    "visibility": (true,  true,  false, true),
-    "order":      (true,  true,  false, false),
-    "float":      (false, false, false, false),
+    "text":          (true,  false,  false, false),
+    "border":        (true,  false,  true,  false),
+    "color":         (true,  false,  true,  false),
+    "size":          (true,  true,   false, true),
+    "display":       (true,  true,   true,  true),
+    "align":         (true,  true,   false, false),
+    "margin":        (true,  true,   false, true),
+    "padding":       (true,  true,   false, false),
+    "visibility":    (true,  true,   false, true),
+    "accessibility": (true,  false,  false, false),
+    "order":         (true,  true,   false, false),
+    "float":         (false, false,  false, false),
 
-    "flex":       (true,  true,  false, false),
-    "grid":       (true,  true,  false, false),
+    "flex":          (true,  true,   false, false),
+    "grid":          (true,  true,   false, false),
 ), $utilities-options);
 
 // ------
@@ -237,8 +239,8 @@ $gutters: map-merge((
 	'-xl': spacer('large-plus'),
 ), $gutters);
 
-$grid-min-breakpoint: "small" !default;
 $grid-max-cols: 12 !default;
+$grid-max-rows: 4 !default;
 
 // -----------
 // Breakpoints
@@ -246,9 +248,9 @@ $grid-max-cols: 12 !default;
 
 $breakpoints: !default;
 $breakpoints: map-merge((
-	'tiny'        : 480px,
-	'small'       : 576px,
-	'medium'      : 768px,
-	'large'       : 992px,
-	'extraLarge' : 1500px,
+	'xs': 480px,
+	's': 576px,
+	'm': 768px,
+	'l': 992px,
+	'xl': 1500px,
 ), $breakpoints);

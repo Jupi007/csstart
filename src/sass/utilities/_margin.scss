@@ -1,0 +1,109 @@
+// ================================
+// ==== Margin utilities class ====
+// ================================
+
+@mixin media-margin-utilities($prefix: "") {
+	.#{$prefix}#{class("margin")} {
+        // Base margin
+		& {
+            margin: spacer($margin-base) !important;
+        }
+		&#{class("(spacer)-top")} {
+            margin-top: spacer($margin-base) !important;
+        }
+		&#{class("(spacer)-right")} {
+            margin-right: spacer($margin-base) !important;
+        }
+		&#{class("(spacer)-bottom")} {
+            margin-bottom: spacer($margin-base) !important;
+        }
+		&#{class("(spacer)-left")} {
+            margin-left: spacer($margin-base) !important;
+        }
+		&#{class("(spacer)-y-axis")} {
+			margin-top: spacer($margin-base) !important;
+			margin-bottom: spacer($margin-base) !important;
+		}
+		&#{class("(spacer)-x-axis")} {
+			margin-left: spacer($margin-base) !important;
+			margin-right: spacer($margin-base) !important;
+		}
+
+        // Margin 0
+		&-#{class("(spacer)-0")} {
+            margin: 0 !important;
+        }
+		&#{class("(spacer)-top")}-#{class("(spacer)-0")} {
+            margin-top: 0 !important;
+        }
+		&#{class("(spacer)-right")}-#{class("(spacer)-0")} {
+            margin-right: 0 !important;
+        }
+		&#{class("(spacer)-bottom")}-#{class("(spacer)-0")} {
+            margin-bottom: 0 !important;
+        }
+		&#{class("(spacer)-left")}-#{class("(spacer)-0")} {
+            margin-left: 0 !important;
+        }
+		&#{class("(spacer)-y-axis")}-#{class("(spacer)-0")} {
+			margin-top: 0 !important;
+			margin-bottom: 0 !important;
+		}
+		&#{class("(spacer)-x-axis")}-#{class("(spacer)-0")} {
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
+
+        // Auto margin
+		&-#{class("(spacer)-auto")} {
+            margin: auto !important;
+        }
+		&#{class("(spacer)-top")}-#{class("(spacer)-auto")} {
+            margin-top: auto !important;
+        }
+		&#{class("(spacer)-right")}-#{class("(spacer)-auto")} {
+            margin-right: auto !important;
+        }
+		&#{class("(spacer)-bottom")}-#{class("(spacer)-auto")} {
+            margin-bottom: auto !important;
+        }
+		&#{class("(spacer)-left")}-#{class("(spacer)-auto")} {
+            margin-left: auto !important;
+        }
+		&#{class("(spacer)-y-axis")}-#{class("(spacer)-auto")} {
+			margin-top: auto !important;
+			margin-bottom: auto !important;
+		}
+		&#{class("(spacer)-x-axis")}-#{class("(spacer)-auto")} {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+        // Named margins
+		@each $name, $spacer in $spacers {
+			&-#{$name} {
+                margin: spacer($name) !important;
+            }
+			&#{class("(spacer)-top")}-#{$name} {
+                margin-top: spacer($name) !important;
+            }
+			&#{class("(spacer)-right")}-#{$name} {
+                margin-right: spacer($name) !important;
+            }
+			&#{class("(spacer)-bottom")}-#{$name} {
+                margin-bottom: spacer($name) !important;
+            }
+			&#{class("(spacer)-left")}-#{$name} {
+                margin-left: spacer($name) !important;
+            }
+			&#{class("(spacer)-y-axis")}-#{$name} {
+				margin-top: spacer($name) !important;
+				margin-bottom: spacer($name) !important;
+			}
+			&#{class("(spacer)-x-axis")}-#{$name} {
+				margin-left: spacer($name) !important;
+				margin-right: spacer($name) !important;
+			}
+		}
+	}
+}
