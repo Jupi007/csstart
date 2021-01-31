@@ -9861,7 +9861,7 @@ select {
 }
 
 select:not([multiple]) {
-	padding-right: 2.5rem;
+	padding-right: 38px;
 	background-image: var(--select-icon);
 	background-repeat: no-repeat;
 	background-position: right 1rem center;
