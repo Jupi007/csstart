@@ -10,6 +10,6 @@
     		margin-left: auto !important;
     		margin-right: auto !important;
     	}
-        &-#{class("(align)-auto")} { margin: auto; }
+        &-#{class("(align)-auto")} { margin: auto !important; }
     }
 }
