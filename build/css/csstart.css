@@ -1805,6 +1805,13 @@ html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
 }
 
 article,
@@ -1831,7 +1838,6 @@ body {
 	background: var(--body-bg);
 	--body-bg: #fff;
 	--body-color: #0d0d0d;
-	scroll-behavior: smooth;
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -1846,12 +1852,6 @@ body {
 @media (min-width: 576px) {
 	body {
 		font-size: 1.6rem;
-	}
-}
-
-@media (prefers-reduced-motion: reduce) {
-	body {
-		scroll-behavior: auto;
 	}
 }
 
