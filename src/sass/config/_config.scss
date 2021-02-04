@@ -92,7 +92,7 @@ $colors: map-merge((
 // Spacers
 // -------
 
-$spacer-base: 1rem !default;
+$spacer-base: .6rem !default;
 
 $spacers: !default;
 $spacers: map-merge((
@@ -121,6 +121,7 @@ $transition-timing-function-base: ease !default;
 // Some base variables
 // -------------------
 
+$border-width-base: 1px;
 $border-radius-base: 3px !default;
 $border-radius-big: 12px !default;
 $margin-base: 'medium-plus' !default;
@@ -160,9 +161,11 @@ $headings-text-align: left !default;
 // Font sizes
 // ----------
 
-$font-size-base: 1.6rem !default;
-$mobile-font-size: 1.4rem !default;
+$font-size-root: null !default;
+$font-size-base: 1rem !default;
+$mobile-font-size: .9rem !default;
 $headings-font-size: 1em !default;
+$code-font-size: $mobile-font-size;
 
 $headings-font-sizes: !default;
 $headings-font-sizes: map-merge((

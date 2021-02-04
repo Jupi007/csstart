@@ -6,7 +6,11 @@ $headings: "h1, h2, h3, h4, h5, h6" !default;
 
 $headings-margin-bottom : spacer($margin-base, .5) !default;
 $paragraph-margin-bottom: spacer($margin-base) !default;
+
 $separator-margin: spacer($margin-base, 1.5) 0 !default;
+$separator-color: inherit !default;
+$separator-height: $border-width-base * 2 !default;
+$separator-opacity: .25 !default;
 
 $list-margin-bottom: spacer($margin-base) !default;
 $list-padding-left: spacer("xx-large") !default;
@@ -14,8 +18,9 @@ $list-padding-left: spacer("xx-large") !default;
 $dt-font-weight: font-weight("bold") !default;
 
 $kbd-border-radius: $border-radius-base !default;
-$kbd-padding: 1px 2px !default;
+$kbd-padding: 3px 6px !default;
 $kbd-font-size: .9em !default;
+$nested-kbd-font-weight: font-weight("bold") !default;
 
 $mark-border-radius: $border-radius-base !default;
 $mark-padding: 1px !default;
