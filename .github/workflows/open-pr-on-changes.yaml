@@ -13,17 +13,25 @@ jobs:
     strategy:
       matrix:
         buildenv: [
-          { project: Bootstrap Reboot, repo: "https://github.com/twbs/bootstrap.git", branch: main, projectdir: bootstrap, src: scss/_reboot.scss, dest: upstream/_reboot.scss },
+          {
+            project: Bootstrap Reboot,
+            repo: "https://github.com/twbs/bootstrap.git",
+            upstreambranch: main,
+            localbranch: bootstrap,
+            projectdir: bootstrap,
+            src: scss/_reboot.scss,
+            dest: upstream/_reboot.scss
+          },
       ]
     steps:
       # Checkout code
       - uses: actions/checkout@v2
-      - name: Download from ${{ matrix.buildenv.repo }}, on branch ${{ matrix.buildenv.branch }}
+      - name: Download from ${{ matrix.buildenv.repo }}, on branch ${{ matrix.buildenv.upstreambranch }}
         id: checknewupstream
         run: |
           hasModif="false"
           pushd /tmp
-          git clone --branch ${BRANCH} --depth 1 ${UPSTREAM_REPO_URL}
+          git clone --branch ${UPSTEAM_BRANCH} --depth 1 ${UPSTREAM_REPO_URL}
           popd
           rm -rf ${DEST}
           cp -a /tmp/${PROJECT_DIR}/${SRC} ${DEST}
@@ -34,7 +42,7 @@ jobs:
           echo "::set-output name=modified::${hasModif}"
         env:
           UPSTREAM_REPO_URL: ${{ matrix.buildenv.repo }}
-          BRANCH: ${{ matrix.buildenv.branch }}
+          UPSTEAM_BRANCH: ${{ matrix.buildenv.upstreambranch }}
           SRC: ${{ matrix.buildenv.src }}
           DEST: ${{ matrix.buildenv.dest }}
           PROJECT_DIR: ${{ matrix.buildenv.projectdir }}
@@ -46,5 +54,5 @@ jobs:
           title: Auto update new upstream snapshot for ${{ matrix.buildenv.project }}
           labels: automated pr, new upstream
           body: "[New upstream ${{ matrix.buildenv.project }} changes](https://github.com/ubuntu/yaru/actions?query=workflow%3A%22Update+PR+on+upstream+changes+once+landed+on+ubuntu%22) by GitHub Action"
-          branch: upstream-${{ matrix.buildenv.projectdir }}-update
+          branch: upstream-${{ matrix.buildenv.localbranch }}-update
           token: ${{ secrets.GITHUB_TOKEN }}
