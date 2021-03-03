@@ -343,6 +343,10 @@ select {
 
 select {
     word-wrap: normal;
+
+    &:disabled {
+        opacity: 1;
+    }
 }
 
 [list]::-webkit-calendar-picker-indicator {
