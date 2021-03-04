@@ -113,8 +113,11 @@ $tag-border-width: 1px !default;
 $tag-focus-outline-color-lighten: 20% !default;
 $tag-focus-outline-color: lighten($components-background, $tag-focus-outline-color-lighten) !default;
 $tag-focus-outline-size: 3px !default;
+$tag-wired-color: $components-color-dark !default;
+$tag-wired-background-opacity: .2;
 
 $tag-focus-outline-color-dark: darken($components-background-dark, 50%) !default;
+$tag-wired-color-dark: $components-color !default;
 
 $tag-sizes: () !default;
 $tag-sizes: map-merge((

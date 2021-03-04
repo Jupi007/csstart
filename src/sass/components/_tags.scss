@@ -14,6 +14,7 @@
     --tag-background: #{$components-background};
     --tag-background-hover: #{darken($components-background, $components-hover-darken)};
     --tag-color: #{$components-color};
+    --tag-wired-color: #{$tag-wired-color};
     --tag-focus-outline-color: #{$tag-focus-outline-color};
 
     @include option("dark-theme") {
@@ -21,6 +22,7 @@
             --tag-background: #{$components-background-dark};
             --tag-background-hover: #{darken($components-background-dark, $components-hover-darken)};
             --tag-color: #{$components-color-dark};
+            --tag-wired-color: #{$tag-wired-color-dark};
             --tag-focus-outline-color: #{$tag-focus-outline-color-dark};
         }
     }
@@ -69,19 +71,14 @@
     // Wired (border only) variant
     // ===========================
     &--#{class("(Component)--wired")} {
-
         background: transparent;
-        color: var(--tag-background);
+        color: var(--tag-wired-color);
         // Using inset box-shadow to get the same size as other Buttons
         box-shadow: 0 0 0 $tag-border-width var(--tag-background) inset;
 
         // Use the same hover background-color as non hover and wired buttons
         &::after {
             background: var(--tag-background);
-        }
-
-        &:focus:not(:hover) {
-            color: var(--tag-background);
         }
     }
 
@@ -105,12 +102,14 @@
                 --tag-background: #{$components-background-dark};
                 --tag-background-hover: #{darken($components-background-dark, $components-hover-darken)};
                 --tag-color: #{$components-color-dark};
+                --tag-wired-color: #{$tag-wired-color-dark};
                 --tag-focus-outline-color: #{$tag-focus-outline-color-dark};
 
                 @media (prefers-color-scheme: dark) {
                     --tag-background: #{$components-background};
                     --tag-background-hover: #{darken($components-background, $components-hover-darken)};
                     --tag-color: #{$components-color};
+                    --tag-wired-color: #{$tag-wired-color};
                     --tag-focus-outline-color: #{$tag-focus-outline-color};
                 }
             }
@@ -122,6 +121,7 @@
                 --tag-background: #{$components-background-dark};
                 --tag-background-hover: #{darken($components-background-dark, $components-hover-darken)};
                 --tag-color: #{$components-color-dark};
+                --tag-wired-color: #{$tag-wired-color-dark};
                 --tag-focus-outline-color: #{$tag-focus-outline-color-dark};
             }
         }
@@ -132,6 +132,7 @@
                 --tag-background: #{$components-background};
                 --tag-background-hover: #{darken($components-background, $components-hover-darken)};
                 --tag-color: #{$components-color};
+                --tag-wired-color: #{$tag-wired-color};
                 --tag-focus-outline-color: #{$tag-focus-outline-color};
             }
         }
@@ -183,6 +184,16 @@ a.#{class("Tag")},
         // Show :focus box-shadow (defined in :before)
         &:not(:active)::before {
             opacity: 1;
+        }
+    }
+
+    &--#{class("(Component)--wired")} {
+        &:hover, &:focus {
+            color: var(--tag-wired-color);
+        }
+
+        &:hover::after {
+            opacity: $tag-wired-background-opacity;
         }
     }
 }

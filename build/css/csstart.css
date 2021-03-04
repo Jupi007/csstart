@@ -10265,6 +10265,7 @@ meter::-webkit-meter-even-less-good-value {
 	--tag-background: #333;
 	--tag-background-hover: #1a1a1a;
 	--tag-color: #f2f2f2;
+	--tag-wired-color: #0d0d0d;
 	--tag-focus-outline-color: #666;
 }
 
@@ -10274,6 +10275,7 @@ meter::-webkit-meter-even-less-good-value {
 		--tag-background: #fff;
 		--tag-background-hover: #e6e6e6;
 		--tag-color: #0d0d0d;
+		--tag-wired-color: #f2f2f2;
 		--tag-focus-outline-color: gray;
 	}
 }
@@ -10308,7 +10310,7 @@ meter::-webkit-meter-even-less-good-value {
 
 .Tag--wired,
 .Button--wired {
-	color: var(--tag-background);
+	color: var(--tag-wired-color);
 	background: transparent;
 	box-shadow: 0 0 0 1px var(--tag-background) inset;
 }
@@ -10316,11 +10318,6 @@ meter::-webkit-meter-even-less-good-value {
 .Tag--wired::after,
 .Button--wired::after {
 	background: var(--tag-background);
-}
-
-.Tag--wired:focus:not(:hover),
-.Button--wired:focus:not(:hover) {
-	color: var(--tag-background);
 }
 
 .Tag-ghost,
@@ -10335,6 +10332,7 @@ meter::-webkit-meter-even-less-good-value {
 	--tag-background: #fff;
 	--tag-background-hover: #e6e6e6;
 	--tag-color: #0d0d0d;
+	--tag-wired-color: #f2f2f2;
 	--tag-focus-outline-color: gray;
 }
 
@@ -10344,6 +10342,7 @@ meter::-webkit-meter-even-less-good-value {
 		--tag-background: #333;
 		--tag-background-hover: #1a1a1a;
 		--tag-color: #f2f2f2;
+		--tag-wired-color: #0d0d0d;
 		--tag-focus-outline-color: #666;
 	}
 }
@@ -10353,6 +10352,7 @@ meter::-webkit-meter-even-less-good-value {
 	--tag-background: #fff;
 	--tag-background-hover: #e6e6e6;
 	--tag-color: #0d0d0d;
+	--tag-wired-color: #f2f2f2;
 	--tag-focus-outline-color: gray;
 }
 
@@ -10361,6 +10361,7 @@ meter::-webkit-meter-even-less-good-value {
 	--tag-background: #333;
 	--tag-background-hover: #1a1a1a;
 	--tag-color: #f2f2f2;
+	--tag-wired-color: #0d0d0d;
 	--tag-focus-outline-color: #666;
 }
 
@@ -10427,6 +10428,21 @@ button.Tag:focus:not(:active)::before,
 a.Tag:focus:not(:active)::before,
 .Button:focus:not(:active)::before {
 	opacity: 1;
+}
+
+button.Tag--wired:hover,
+button.Tag--wired:focus,
+a.Tag--wired:hover,
+a.Tag--wired:focus,
+.Button--wired:hover,
+.Button--wired:focus {
+	color: var(--tag-wired-color);
+}
+
+button.Tag--wired:hover::after,
+a.Tag--wired:hover::after,
+.Button--wired:hover::after {
+	opacity: .2;
 }
 
 .Tag--l {
