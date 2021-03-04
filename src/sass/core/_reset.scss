@@ -240,15 +240,16 @@ code {
 }
 
 kbd {
+    padding: $kbd-padding;
     border: 1px solid currentColor;
     @include border-radius($kbd-border-radius);
-    padding: $kbd-padding;
-    font-size: $kbd-font-size;
     vertical-align: middle;
+    font-size: $kbd-font-size;
+    line-height: 2;
 
     kbd {
-        border: none;
         padding: 0;
+        border: none;
         font-weight: $nested-kbd-font-weight;
     }
 }
