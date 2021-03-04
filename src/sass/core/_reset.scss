@@ -34,11 +34,15 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 body {
     --body-bg: #{$body-bg};
     --body-color: #{$body-color};
+    --body-bg-inverted: #{$body-bg-dark};
+    --body-color-inverted: #{$body-color-dark};
 
     @include option("dark-theme") {
         @media (prefers-color-scheme: dark) {
             --body-bg: #{$body-bg-dark};
             --body-color: #{$body-color-dark};
+            --body-bg-inverted: #{$body-bg};
+            --body-color-inverted: #{$body-color};
         }
     }
 

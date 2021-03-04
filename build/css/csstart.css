@@ -1830,6 +1830,8 @@ body {
 	background: var(--body-bg);
 	--body-bg: #fff;
 	--body-color: #0d0d0d;
+	--body-bg-inverted: #262626;
+	--body-color-inverted: #f2f2f2;
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -1838,6 +1840,8 @@ body {
 	body {
 		--body-bg: #262626;
 		--body-color: #f2f2f2;
+		--body-bg-inverted: #fff;
+		--body-color-inverted: #0d0d0d;
 	}
 }
 
