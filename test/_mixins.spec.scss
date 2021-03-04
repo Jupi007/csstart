@@ -275,7 +275,7 @@
         }
     }
 
-    @include it('Returns an error') {
+    /*@include it('Returns an error') {
         @include assert {
             @include output {
                 @include respond-to("wrong-breakpoint") {
@@ -297,7 +297,7 @@
 
             @include expect {}
         }
-    }
+    }*/
 }
 
 @include describe('@mixin print()') {
