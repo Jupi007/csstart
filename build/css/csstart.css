@@ -10253,7 +10253,7 @@ meter::-webkit-meter-even-less-good-value {
 	padding: var(--tag-padding);
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	transition-property: color, background, box-shadow;
+	transition-property: color;
 	vertical-align: middle;
 	text-decoration: none;
 	color: var(--tag-color);
@@ -10276,6 +10276,34 @@ meter::-webkit-meter-even-less-good-value {
 		--tag-color: #0d0d0d;
 		--tag-focus-outline-color: gray;
 	}
+}
+
+.Tag::after,
+.Tag::before,
+.Button::after,
+.Button::before {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	transition-timing-function: ease;
+	transition-duration: .2s;
+	transition-property: opacity;
+	opacity: 0;
+	border-radius: inherit;
+}
+
+.Tag::after,
+.Button::after {
+	background: var(--tag-background-hover);
+}
+
+.Tag::before,
+.Button::before {
+	box-shadow: 0 0 0 3px var(--tag-focus-outline-color);
 }
 
 .Tag--wired,
@@ -10379,7 +10407,12 @@ a.Tag:hover,
 .Button:hover {
 	text-decoration: none;
 	color: var(--tag-color);
-	background: var(--tag-background-hover);
+}
+
+button.Tag:hover::after,
+a.Tag:hover::after,
+.Button:hover::after {
+	opacity: 1;
 }
 
 button.Tag:focus,
@@ -10388,7 +10421,12 @@ a.Tag:focus,
 	text-decoration: none;
 	color: var(--tag-color);
 	outline: 0;
-	box-shadow: 0 0 0 3px var(--tag-focus-outline-color);
+}
+
+button.Tag:focus:not(:active)::before,
+a.Tag:focus:not(:active)::before,
+.Button:focus:not(:active)::before {
+	opacity: 1;
 }
 
 .Tag--l {
