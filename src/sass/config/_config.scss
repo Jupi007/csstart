@@ -6,7 +6,7 @@
 // CSStart options
 // ---------------
 
-$options: !default;
+$options: () !default;
 $options: map-merge((
 	"border-radius": true,
     "box-shadow": true,
@@ -45,7 +45,7 @@ $options: map-merge((
     "responsive-utilities": true,
 ), $options);
 
-$utilities-options: !default;
+$utilities-options: () !default;
 $utilities-options: map-merge((
     // Name   -   Enabled - Responsive - Dark theme - Print
     "text":          (true,  false,  false, false),
@@ -69,7 +69,7 @@ $utilities-options: map-merge((
 // Colors
 // ------
 
-$colors: !default;
+$colors: () !default;
 $colors: map-merge((
     'white': #ffffff,
     'black': #000000,
@@ -94,7 +94,7 @@ $colors: map-merge((
 
 $spacer-base: .6rem !default;
 
-$spacers: !default;
+$spacers: () !default;
 $spacers: map-merge((
 	'tiny': .25,
 	'tiny-plus': .5,
@@ -167,7 +167,7 @@ $mobile-font-size: .9rem !default;
 $headings-font-size: 1em !default;
 $code-font-size: $mobile-font-size;
 
-$headings-font-sizes: !default;
+$headings-font-sizes: () !default;
 $headings-font-sizes: map-merge((
 	h1: $headings-font-size + 1.4,
 	h2: $headings-font-size + 1.0,
@@ -181,7 +181,7 @@ $headings-font-sizes: map-merge((
 // Font weights
 // ------------
 
-$font-weights: !default;
+$font-weights: () !default;
 $font-weights: map-merge((
 	'lighter': lighter,
 	'light': 300,
@@ -219,7 +219,7 @@ $components-color-dark: $body-color !default;
 $components-hover-darken-dark: 10% !default;
 $components-hover-background-dark: darken($components-background-dark, $components-hover-darken-dark) !default;
 
-$components: !default;
+$components: () !default;
 $components: map-merge((
     'success': color('success'),
 	'info': color('info'),
@@ -231,7 +231,7 @@ $components: map-merge((
 // Grid
 // ----
 
-$gutters: !default;
+$gutters: () !default;
 $gutters: map-merge((
 	'': spacer('medium'),
 	'-l': spacer('large'),
@@ -245,7 +245,7 @@ $grid-max-rows: 4 !default;
 // Breakpoints
 // -----------
 
-$breakpoints: !default;
+$breakpoints: () !default;
 $breakpoints: map-merge((
 	'xs': 480px,
 	's': 576px,

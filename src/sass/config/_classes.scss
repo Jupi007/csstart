@@ -2,7 +2,7 @@
 //-*-*-*-*-*-*-*-*-*-*-*-*Classes config map to rule them all-*-*-*-*-*-*-*-*-*-*-*-*-*
 //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 
-$classes: !default;
+$classes: () !default;
 $classes: map-merge((
     // Components
     "Alert": "Alert",

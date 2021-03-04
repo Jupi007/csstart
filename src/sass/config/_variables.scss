@@ -93,7 +93,7 @@ $button-padding: spacer("tiny-plus") spacer("medium") !default;
 $button-font-size: .9em !default;
 $button-border-radius: $border-radius-base !default;
 
-$button-sizes: !default;
+$button-sizes: () !default;
 $button-sizes: map-merge((
     // Name - Padding - Font size
     "xs": (spacer("tiny") spacer("tiny-plus"), .7em),
@@ -116,7 +116,7 @@ $tag-focus-outline-size: 3px !default;
 
 $tag-focus-outline-color-dark: darken($components-background-dark, 50%) !default;
 
-$tag-sizes: !default;
+$tag-sizes: () !default;
 $tag-sizes: map-merge((
     // Name - Padding - Font size
     "l": (spacer("tiny-plus") spacer("small") , .85em),
