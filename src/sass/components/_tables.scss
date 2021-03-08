@@ -97,15 +97,8 @@
 
                 // Used to get smooth transitions with :hover
                 &::after {
-                    content: "";
-                    position: absolute;
-                    z-index: -1;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    opacity: 0;
-                    border-radius: inherit;
+                    @extend %magic-pseudo-element;
+                    
                     background: var(--table-cell-hover-background);
 
                     @include transition("opacity");

@@ -1,5 +1,31 @@
 @charset 'UTF-8';
 
+.Table tbody td::after,
+.Afb table tbody td::after,
+.Card::after,
+.Card::before,
+.Tag::after,
+.Tag::before,
+.Button::after,
+.Button::before,
+[type=checkbox]::after,
+[type=checkbox]::before,
+[type=radio]::after,
+[type=radio]::before {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	opacity: 0;
+	border-radius: inherit;
+	background-image: inherit;
+	background-repeat: inherit;
+	background-position: inherit;
+}
+
 .Grid {
 	display: grid;
 	grid-auto-flow: row;
@@ -9965,18 +9991,9 @@ select[multiple] option:first-child {
 [type=checkbox]::before,
 [type=radio]::after,
 [type=radio]::before {
-	position: absolute;
-	z-index: -1;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	content: '';
 	transition-timing-function: ease;
 	transition-duration: .2s;
 	transition-property: opacity;
-	opacity: 0;
-	border-radius: inherit;
 }
 
 [type=checkbox]::after,
@@ -10318,18 +10335,9 @@ meter::-webkit-meter-even-less-good-value {
 .Tag::before,
 .Button::after,
 .Button::before {
-	position: absolute;
-	z-index: -1;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	content: '';
 	transition-timing-function: ease;
 	transition-duration: .2s;
 	transition-property: opacity;
-	opacity: 0;
-	border-radius: inherit;
 }
 
 .Tag::after,
@@ -10658,18 +10666,9 @@ a.Tag--wired:hover::after,
 
 .Card::after,
 .Card::before {
-	position: absolute;
-	z-index: -1;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	content: '';
 	transition-timing-function: ease;
 	transition-duration: .2s;
 	transition-property: opacity;
-	opacity: 0;
-	border-radius: inherit;
 }
 
 .Card::after {
@@ -10832,18 +10831,9 @@ a.Card:focus:not(:active)::before {
 
 .Table tbody td::after,
 .Afb table tbody td::after {
-	position: absolute;
-	z-index: -1;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	content: '';
 	transition-timing-function: ease;
 	transition-duration: .2s;
 	transition-property: opacity;
-	opacity: 0;
-	border-radius: inherit;
 	background: var(--table-cell-hover-background);
 }
 
