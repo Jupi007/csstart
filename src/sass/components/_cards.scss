@@ -30,6 +30,7 @@
 	position: relative;
 	word-wrap: break-word;
     @include border-radius($card-border-radius);
+    border: $card-border-width solid var(--card-border-color);
     background: var(--card-background);
 
     // Used to get smooth transitions with :hover and :focus by using opacity transitions - common style of both
@@ -55,17 +56,6 @@
     &-#{class("(Card)-body")} {
         height: 100%;
     	padding: $card-body-padding;
-    	border: 0 solid var(--card-border-color);
-        border-right-width: $card-border-width;
-        border-left-width: $card-border-width;
-
-        &:first-child {
-            border-top-width: $card-border-width;
-        }
-
-        &:last-child {
-            border-bottom-width: $card-border-width;
-        }
     }
 
     // Should be used on an img html tag

@@ -10645,6 +10645,7 @@ a.Tag--wired:hover::after,
 	display: flex;
 	flex-direction: column;
 	word-wrap: break-word;
+	border: 1px solid var(--card-border-color);
 	border-radius: 3px;
 	background: var(--card-background);
 	--card-border-color: #999;
@@ -10682,17 +10683,6 @@ a.Tag--wired:hover::after,
 .Card-body {
 	height: 100%;
 	padding: calc(var(--spacer-base) * 1);
-	border: 0 solid var(--card-border-color);
-	border-right-width: 1px;
-	border-left-width: 1px;
-}
-
-.Card-body:first-child {
-	border-top-width: 1px;
-}
-
-.Card-body:last-child {
-	border-bottom-width: 1px;
 }
 
 .Card-figure {
