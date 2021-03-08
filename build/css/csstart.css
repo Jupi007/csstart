@@ -2307,6 +2307,35 @@ summary h6 {
 	display: inline-block;
 }
 
+@-webkit-keyframes details-sweep {
+	0% {
+		transform: translateY(-10px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes details-sweep {
+	0% {
+		transform: translateY(-10px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+details[open] summary ~ * {
+	-webkit-animation: details-sweep .4s ease;
+	        animation: details-sweep .4s ease;
+}
+
 progress {
 	vertical-align: baseline;
 }

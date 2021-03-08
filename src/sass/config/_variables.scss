@@ -26,6 +26,9 @@ $mark-border-radius: $border-radius-base !default;
 $mark-padding: 1px !default;
 $mark-background: color("yellow") !default;
 
+$details-animation-translateY: -10px !default;
+$details-animation-duration: $transition-duration-base * 2 !default;
+
 // -----
 // Forms
 // -----

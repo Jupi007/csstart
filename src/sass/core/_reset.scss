@@ -481,6 +481,23 @@ summary {
     }
 }
 
+@include option {
+    @keyframes details-sweep {
+        0% {
+            opacity: 0;
+            transform: translateY($details-animation-translateY);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    details[open] summary ~ * {
+        animation: details-sweep $details-animation-duration $transition-timing-function-base;
+    }
+}
+
 progress {
     vertical-align: baseline;
 }
