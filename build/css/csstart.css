@@ -10191,8 +10191,8 @@ progress {
 @media (prefers-color-scheme: dark) {
 	meter,
     progress {
-		--progress-background: #999;
-		--progress-indeterminate-background: #adadad;
+		--progress-background: #404040;
+		--progress-indeterminate-background: #545454;
 	}
 }
 
