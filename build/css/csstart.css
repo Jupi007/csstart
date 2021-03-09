@@ -2322,6 +2322,10 @@ details {
 summary {
 	display: list-item;
 	cursor: pointer;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 }
 
 summary h1,

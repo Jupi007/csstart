@@ -475,6 +475,7 @@ details {
 summary {
     display: list-item;
     cursor: pointer;
+    user-select: none;
 
     #{$headings} {
         display: inline-block;
