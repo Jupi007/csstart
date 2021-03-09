@@ -10645,7 +10645,6 @@ a.Tag--wired:hover::after,
 	display: flex;
 	flex-direction: column;
 	word-wrap: break-word;
-	border: 1px solid var(--card-border-color);
 	border-radius: 3px;
 	background: var(--card-background);
 	--card-border-color: #999;
@@ -10701,15 +10700,24 @@ a.Tag--wired:hover::after,
 	color: var(--card-subtitle-color);
 }
 
+.Card > * {
+	border: 0 solid var(--card-border-color);
+	border-right-width: 1px;
+	border-left-width: 1px;
+}
+
 .Card > :first-child {
+	border-top-width: 1px;
 	border-radius: 3px 3px 0 0;
 }
 
 .Card > :last-child {
+	border-bottom-width: 1px;
 	border-radius: 0 0 3px 3px;
 }
 
 .Card > :only-child {
+	border-width: 1px;
 	border-radius: 3px;
 }
 

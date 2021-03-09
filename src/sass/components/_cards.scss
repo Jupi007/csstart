@@ -30,7 +30,6 @@
 	position: relative;
 	word-wrap: break-word;
     @include border-radius($card-border-radius);
-    border: $card-border-width solid var(--card-border-color);
     background: var(--card-background);
 
     // Used to get smooth transitions with :hover and :focus by using opacity transitions - common style of both
@@ -77,16 +76,24 @@
     	color: var(--card-subtitle-color);
     }
 
-    // Card children (body and figure) border-radius
-    // =============================================
+    // Card children (body and figure) borders
+    // =======================================
+    > * {
+        border: 0 solid var(--card-border-color);
+        border-left-width: $card-border-width;
+        border-right-width: $card-border-width;
+    }
     > :first-child {
         @include border-radius($card-border-radius $card-border-radius 0 0);
+        border-top-width: $card-border-width;
     }
     > :last-child {
         @include border-radius(0 0 $card-border-radius $card-border-radius);
+        border-bottom-width: $card-border-width;
     }
     > :only-child {
         @include border-radius($card-border-radius);
+        border-width: $card-border-width;
     }
 }
 
