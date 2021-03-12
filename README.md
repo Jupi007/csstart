@@ -1,8 +1,6 @@
 # CSStart
 A fast start CSS stylesheet with some usefull utilities
 
-⚠ Do not use in production : it is just pre-alpha !
-
 ## 📦 Install
 ```
 npm install csstart
