@@ -77,7 +77,7 @@ hr:not([size]) {
 }
 
 #{$headings} {
-    margin-top: 0;
+    margin-top: $headings-margin-top;
     margin-bottom: $headings-margin-bottom;
     font-weight: $headings-font-weight;
     font-family: $headings-font-family;
