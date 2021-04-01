@@ -51,11 +51,11 @@ $input-color-padding: spacer("tiny-plus") !default;
 $select-option-padding: spacer("small") spacer("medium") !default;
 
 $checkbox-size: 20px !default;
-$checkbox-checked-background: grey(100) !default;
-$checkbox-checked-icon-color: grey(5) !default;
+$checkbox-checked-background: $components-background !default;
+$checkbox-checked-icon-color: $components-color !default;
 $checkbox-border-radius: 3px !default;
 $checkbox-focus-outline-width: 3px !default;
-$checkbox-focus-outline-color: grey(50) !default;
+$checkbox-focus-outline-color: lighten($components-background, 20%) !default;
 
 $switch-height: $checkbox-size !default;
 $switch-width: $checkbox-size * 2 !default;
@@ -68,7 +68,7 @@ $range-thumb-hover-color: grey(30) !default;
 
 $progress-height: spacer("large-plus") !default;
 $progress-background: grey(20) !default;
-$progress-bar-background: color("blue") !default;
+$progress-bar-background: $components-background !default;
 $progress-border-radius: $input-border-radius !default;
 $progress-indeterminate-animation: true !default;
 $progress-indeterminate-animation-duration: .4s !default;
@@ -80,13 +80,14 @@ $meter-sub-sub-optimum-background: color("success") !default;
 $input-border-color-dark: grey(50) !default;
 $input-hover-border-color-dark: grey(20) !default;
 $input-background-dark: grey(80) !default;
-$checkbox-checked-background-dark: grey(10) !default;
-$checkbox-checked-icon-color-dark: grey(90) !default;
-$checkbox-focus-outline-color-dark: grey(50) !default;
+$checkbox-checked-background-dark: $components-background-dark !default;
+$checkbox-checked-icon-color-dark: $components-color-dark !default;
+$checkbox-focus-outline-color-dark: darken($components-background-dark, 50%) !default;
 $range-track-color-dark: grey(20) !default;
 $range-thumb-color-dark: grey(70) !default;
 $range-thumb-hover-color-dark: grey(60) !default;
 $progress-background-dark: grey(75) !default;
+$progress-bar-background-dark: $components-background-dark !default;
 
 // -------
 // Buttons

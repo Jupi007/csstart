@@ -12,11 +12,13 @@ meter,
 progress
 {
     --progress-background: #{$progress-background};
+	--progress-bar-background: #{$progress-bar-background};
     --progress-indeterminate-background: #{darken( $progress-background , 8% )};
 
     @include option("dark-theme") {
         @media (prefers-color-scheme: dark) {
             --progress-background: #{$progress-background-dark};
+			--progress-bar-background: #{$progress-bar-background-dark};
             --progress-indeterminate-background: #{lighten( $progress-background-dark , 8% )};
         }
     }
@@ -40,12 +42,12 @@ progress
 // Progress styles
 // ===============
 ::-webkit-progress-value {
-	background: $progress-bar-background;
+	background: var(--progress-bar-background);
 	@include border-radius($progress-border-radius);
 }
 
 ::-moz-progress-bar {
-	background: $progress-bar-background;
+	background: var(--progress-bar-background);
 	@include border-radius($progress-border-radius);
 }
 
