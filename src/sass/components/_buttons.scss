@@ -7,6 +7,7 @@
 // As the Button component depends on the Tag component also check if Tag is enable
 @include option("button", "tag") {
 
+%button,
 .#{class("Button")} {
     --tag-font-size: #{$button-font-size};
     --tag-padding: #{$button-padding};

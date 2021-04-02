@@ -6,6 +6,8 @@
 
 @include option("tag") {
 
+%tag,
+%button,
 .#{class("Tag")},
 .#{class("Button")}
 {
@@ -150,9 +152,12 @@
 }
 
 // Interactive states and behaviors
-// ================================
+// ================================v
+button%tag,
+a%tag,
 button.#{class("Tag")},
 a.#{class("Tag")},
+%button,
 .#{class("Button")}
 {
     cursor: pointer;

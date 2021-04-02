@@ -6,6 +6,7 @@
 
 @include option("alert") {
 
+%alert,
 .#{class("Alert")} {
     --alert-border-color: #{$components-background};
     --alert-color: var(--body-color);
