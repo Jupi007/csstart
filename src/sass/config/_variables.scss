@@ -55,8 +55,8 @@ $checkbox-size: 20px !default;
 $checkbox-checked-background: $components-background !default;
 $checkbox-checked-icon-color: $components-color !default;
 $checkbox-border-radius: 3px !default;
-$checkbox-focus-outline-width: 3px !default;
-$checkbox-focus-outline-color: lighten($components-background, 20%) !default;
+$checkbox-focus-outline-width: $focus-outline-size-base !default;
+$checkbox-focus-outline-color: $components-focus-outline-color !default;
 
 $switch-height: $checkbox-size !default;
 $switch-width: $checkbox-size * 2 !default;
@@ -83,7 +83,7 @@ $input-hover-border-color-dark: grey(20) !default;
 $input-background-dark: grey(80) !default;
 $checkbox-checked-background-dark: $components-background-dark !default;
 $checkbox-checked-icon-color-dark: $components-color-dark !default;
-$checkbox-focus-outline-color-dark: darken($components-background-dark, 50%) !default;
+$checkbox-focus-outline-color-dark: $components-focus-outline-color-dark !default;
 $range-track-color-dark: grey(20) !default;
 $range-thumb-color-dark: grey(70) !default;
 $range-thumb-hover-color-dark: grey(60) !default;
@@ -115,13 +115,13 @@ $tag-border-radius: $border-radius-base !default;
 $tag-padding: spacer("tiny") spacer("tiny-plus") !default;
 $tag-font-size: .8em !default;
 $tag-border-width: 1px !default;
-$tag-focus-outline-color-lighten: 20% !default;
-$tag-focus-outline-color: lighten($components-background, $tag-focus-outline-color-lighten) !default;
-$tag-focus-outline-size: 3px !default;
+$tag-focus-outline-color-lighten: $components-focus-outline-color-lighten !default;
+$tag-focus-outline-color: $components-focus-outline-color !default;
+$tag-focus-outline-size: $focus-outline-size-base !default;
 $tag-wired-color: $components-color-dark !default;
-$tag-wired-background-opacity: .2;
+$tag-wired-background-opacity: .2 !default;
 
-$tag-focus-outline-color-dark: darken($components-background-dark, 50%) !default;
+$tag-focus-outline-color-dark: $components-focus-outline-color-dark !default;
 $tag-wired-color-dark: $components-color !default;
 
 $tag-sizes: () !default;
@@ -158,8 +158,8 @@ $card-border-color: grey(40) !default;
 $card-border-radius: $border-radius-base !default;
 $card-background: grey(5) !default;
 $card-background-hover: grey(8) !default;
-$card-focus-outline-color: grey(50) !default;
-$card-focus-outline-size: 3px !default;
+$card-focus-outline-color: $components-focus-outline-color !default;
+$card-focus-outline-size: $focus-outline-size-base !default;
 $card-title-font-size: 1.4em !default;
 $card-subtitle-font-size: .9em !default;
 $card-subtitle-color: grey(60) !default;
@@ -168,7 +168,7 @@ $card-body-padding: spacer("medium") !default;
 $card-border-color-dark: grey(70) !default;
 $card-background-dark: grey(90) !default;
 $card-background-hover-dark: grey(93) !default;
-$card-focus-outline-color-dark: darken($components-background-dark, 50%) !default;
+$card-focus-outline-color-dark: $components-focus-outline-color-dark !default;
 $card-subtitle-color-dark: grey(40) !default;
 
 // -----
