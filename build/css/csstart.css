@@ -2011,11 +2011,11 @@ sup {
 }
 
 a {
-	text-decoration: none;
+	text-decoration: underline;
 	color: var(--link-color);
 	background: transparent;
 	--link-color: #3935cd;
-	--link-hover-focus-color: #272491;
+	--link-hover-focus-color: #211f7d;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -10896,7 +10896,7 @@ a.Card:focus:not(:active)::before {
 }
 
 .Table-light a:hover {
-	color: #272491;
+	color: #211f7d;
 }
 
 .Table-dark {

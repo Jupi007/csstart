@@ -200,8 +200,8 @@ $headings-font-weight: font-weight('normal') !default;
 // -----
 
 $link-color: color('blue') !default;
-$link-decoration: none !default;
-$link-hover-focus-color: darken( $link-color , 15% ) !default;
+$link-decoration: underline !default;
+$link-hover-focus-color: darken( $link-color , 20% ) !default;
 $link-hover-focus-decoration: underline !default;
 
 $link-color-dark: color('light-blue') !default;
