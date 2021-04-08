@@ -10088,16 +10088,24 @@ select[multiple] option:first-child {
 }
 
 [type=range] {
-	--range-track-color: #4d4d4d;
-	--range-thumb-color: #ccc;
-	--range-thumb-hover-color: #b3b3b3;
+	border: none;
+	background: none;
+	--range-track-color: #bfbfbf;
+	--range-progress-color: #333;
+	--range-thumb-color: #e6e6e6;
+	--range-thumb-border-color: #333;
+	--range-thumb-hover-color: #ccc;
+	--range-thumb-focus-outline-color: #a6a6a6;
 }
 
 @media (prefers-color-scheme: dark) {
 	[type=range] {
-		--range-track-color: #ccc;
+		--range-track-color: #595959;
+		--range-progress-color: #fff;
 		--range-thumb-color: #4d4d4d;
-		--range-thumb-hover-color: #666;
+		--range-thumb-border-color: #ccc;
+		--range-thumb-hover-color: #333;
+		--range-thumb-focus-outline-color: gray;
 	}
 }
 
@@ -10105,22 +10113,26 @@ select[multiple] option:first-child {
 	--range-thumb-hover-color: var(--range-thumb-color);
 }
 
-[type=range]::-moz-range-track {
+[type=range]::-moz-range-track,
+[type=range]::-moz-range-progress {
 	width: 100%;
-	height: 1px;
+	height: 2px;
+	border-radius: 3px;
 	background: var(--range-track-color);
 }
 
 [type=range]::-webkit-slider-runnable-track {
 	width: 100%;
-	height: 1px;
+	height: 2px;
+	border-radius: 3px;
 	background: var(--range-track-color);
 }
 
-[type=range]::-ms-fill-lower,
-[type=range]::-ms-fill-upper {
+[type=range]::-ms-fill-upper,
+[type=range]::-ms-fill-lower {
 	width: 100%;
-	height: 1px;
+	height: 2px;
+	border-radius: 3px;
 	background: var(--range-track-color);
 }
 
@@ -10129,9 +10141,9 @@ select[multiple] option:first-child {
 	height: 15px;
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	-moz-transition-property: background, box-shadow;
-	transition-property: background, box-shadow;
-	border: 1px solid var(--range-track-color);
+	-moz-transition-property: background, box-shadow, border;
+	transition-property: background, box-shadow, border;
+	border: 1px solid var(--range-thumb-border-color);
 	border-radius: 50%;
 	background: var(--range-thumb-color);
 	-moz-appearance: none;
@@ -10147,9 +10159,9 @@ select[multiple] option:first-child {
 	height: 15px;
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	-webkit-transition-property: background, box-shadow;
-	transition-property: background, box-shadow;
-	border: 1px solid var(--range-track-color);
+	-webkit-transition-property: background, box-shadow, border;
+	transition-property: background, box-shadow, border;
+	border: 1px solid var(--range-thumb-border-color);
 	border-radius: 50%;
 	background: var(--range-thumb-color);
 	-webkit-appearance: none;
@@ -10165,9 +10177,9 @@ select[multiple] option:first-child {
 	height: 15px;
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	-ms-transition-property: background, box-shadow;
-	transition-property: background, box-shadow;
-	border: 1px solid var(--range-track-color);
+	-ms-transition-property: background, box-shadow, border;
+	transition-property: background, box-shadow, border;
+	border: 1px solid var(--range-thumb-border-color);
 	border-radius: 50%;
 	background: var(--range-thumb-color);
 	appearance: none;
@@ -10175,6 +10187,30 @@ select[multiple] option:first-child {
 
 [type=range]::-ms-thumb:hover {
 	background: var(--range-thumb-hover-color);
+}
+
+[type=range]:focus::-moz-range-thumb {
+	box-shadow: 0 0 0 3px var(--range-thumb-focus-outline-color);
+}
+
+[type=range]:focus::-webkit-slider-thumb {
+	box-shadow: 0 0 0 3px var(--range-thumb-focus-outline-color);
+}
+
+[type=range]:focus::-ms-thumb {
+	box-shadow: 0 0 0 3px var(--range-thumb-focus-outline-color);
+}
+
+[type=range]::-moz-range-progress {
+	background-color: var(--range-progress-color);
+}
+
+[type=range]::-webkit-slider-runnable-track {
+	background-color: var(--range-progress-color);
+}
+
+[type=range]::-ms-fill-lower {
+	background-color: var(--range-progress-color);
 }
 
 [type=range]::-webkit-slider-thumb {
@@ -10212,9 +10248,9 @@ progress {
 @media (prefers-color-scheme: dark) {
 	meter,
     progress {
-		--progress-background: #404040;
+		--progress-background: #4d4d4d;
 		--progress-bar-background: #fff;
-		--progress-indeterminate-background: #545454;
+		--progress-indeterminate-background: #616161;
 	}
 }
 

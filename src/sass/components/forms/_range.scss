@@ -8,13 +8,13 @@
 // ==============
 
 @mixin range-track {
-	&::-moz-range-track {
+	&::-moz-range-track, &::-moz-range-progress {
         @content;
     }
     &::-webkit-slider-runnable-track {
         @content;
     }
-    &::-ms-fill-lower, &::-ms-fill-upper {
+    &::-ms-fill-upper, &::-ms-fill-lower {
         @content;
     }
 }
@@ -31,22 +31,44 @@
     }
 }
 
+@mixin range-progress {
+    &::-moz-range-progress {
+        @content;
+    }
+    &::-webkit-slider-runnable-track { // As Webkit doesn't support range-progress, use range-track instead
+        @content;
+    }
+    &::-ms-fill-lower {
+        @content;
+    }
+}
+
 @include option("form") {
 
 // Range styles
 // ============
 [type="range"] {
     --range-track-color: #{$range-track-color};
+    --range-progress-color: #{$range-progress-color};
     --range-thumb-color: #{$range-thumb-color};
+    --range-thumb-border-color: #{$range-thumb-border-color};
     --range-thumb-hover-color: #{$range-thumb-hover-color};
+    --range-thumb-focus-outline-color: #{$range-thumb-focus-outline-color};
 
     @include option("dark-theme") {
         @media (prefers-color-scheme: dark) {
             --range-track-color: #{$range-track-color-dark};
+            --range-progress-color: #{$range-progress-color-dark};
             --range-thumb-color: #{$range-thumb-color-dark};
+            --range-thumb-border-color: #{$range-thumb-border-color-dark};
             --range-thumb-hover-color: #{$range-thumb-hover-color-dark};
+            --range-thumb-focus-outline-color: #{$range-thumb-focus-outline-color-dark};
         }
     }
+
+    // Remove default input styling
+    background: none;
+    border: none;
 
 	&[disabled] {
         --range-thumb-hover-color: var(--range-thumb-color);
@@ -54,8 +76,9 @@
 
     @include range-track {
         width: 100%;
-		height: 1px;
+		height: $range-track-height;
 		background: var(--range-track-color);
+        border-radius: $range-track-border-radius;
     }
 
     @include range-thumb {
@@ -64,13 +87,23 @@
 		width: $range-thumb-size;
 		border-radius: 50%;
 		background: var(--range-thumb-color);
-        border: 1px solid var(--range-track-color);
+        border: 1px solid var(--range-thumb-border-color);
 
-        @include transition("background, box-shadow");
+        @include transition("background, box-shadow, border");
 
 		&:hover {
             background: var(--range-thumb-hover-color);
         }
+    }
+
+    &:focus {
+        @include range-thumb {
+            box-shadow: 0 0 0 $range-thumb-focus-outline-width var(--range-thumb-focus-outline-color);
+        }
+    }
+
+    @include range-progress {
+        background-color: var(--range-progress-color);
     }
 
     // Navigator specific styles

@@ -63,9 +63,15 @@ $switch-width: $checkbox-size * 2 !default;
 $switch-border-radius: 2rem !default;
 
 $range-thumb-size: 15px;
-$range-track-color: grey(70) !default;
-$range-thumb-color: grey(20) !default;
-$range-thumb-hover-color: grey(30) !default;
+$range-track-height: 2px;
+$range-track-border-radius: $border-radius-base;
+$range-track-color: grey(25) !default;
+$range-progress-color: $components-background !default;
+$range-thumb-color: grey(10) !default;
+$range-thumb-border-color: grey(80) !default;
+$range-thumb-hover-color: grey(20) !default;
+$range-thumb-focus-outline-width: $focus-outline-size-base !default;
+$range-thumb-focus-outline-color: darken($range-thumb-color, 25%) !default;
 
 $progress-height: spacer("large-plus") !default;
 $progress-background: grey(20) !default;
@@ -84,10 +90,13 @@ $input-background-dark: grey(80) !default;
 $checkbox-checked-background-dark: $components-background-dark !default;
 $checkbox-checked-icon-color-dark: $components-color-dark !default;
 $checkbox-focus-outline-color-dark: $components-focus-outline-color-dark !default;
-$range-track-color-dark: grey(20) !default;
+$range-track-color-dark: grey(65) !default;
+$range-progress-color-dark: $components-background-dark !default;
 $range-thumb-color-dark: grey(70) !default;
-$range-thumb-hover-color-dark: grey(60) !default;
-$progress-background-dark: grey(75) !default;
+$range-thumb-border-color-dark: grey(20) !default;
+$range-thumb-focus-outline-color-dark: lighten($range-thumb-color-dark, 20%) !default;
+$range-thumb-hover-color-dark: grey(80) !default;
+$progress-background-dark: grey(70) !default;
 $progress-bar-background-dark: $components-background-dark !default;
 
 // -------
