@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @function getter($map, $name) {
 	@if map-has-key($map, $name) {
 		@return(map-get($map, $name));
@@ -93,7 +95,7 @@
 		@return null;
     }
 
-    @return (red($color) + green($color) + blue($color)) / (255 * 3);
+    @return math.div(red($color) + green($color) + blue($color), 255 * 3);
 }
 
 @function brightness-ratio($base, $color) {

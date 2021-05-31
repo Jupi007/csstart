@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // ========================
 // ==== Form component ====
 // ========================
@@ -112,7 +114,7 @@
 
     // Fix webkit thumb misalignment
 	&::-webkit-slider-thumb {
-		margin-top: - ($range-thumb-size / 2) + 1px;
+		margin-top: - math.div($range-thumb-size, 2) + 1px;
 	}
     // Fix webkit range input size
     &::-webkit-slider-runnable-track {
