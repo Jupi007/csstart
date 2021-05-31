@@ -177,7 +177,6 @@ a.#{class("Tag")},
         text-decoration: none;
     	color: var(--tag-color);
         outline: 0;
-        z-index: 2; // move the tag in top of other elements to avoid focus outline crop
 
         // Show :focus box-shadow (defined in :before)
         &:not(:active)::before {
