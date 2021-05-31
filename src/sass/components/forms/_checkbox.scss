@@ -51,18 +51,20 @@
 
     // Used to get smooth transitions with :focus
     &::before {
-        box-shadow: 0 0 0 $checkbox-focus-outline-width $checkbox-focus-outline-color; // TODO: use css var for outline color
+        outline: $checkbox-focus-outline-size solid $checkbox-focus-outline-color; // TODO: use css var for outline color
+        outline-offset: if($checkbox-focus-outline-offset != 0, $checkbox-focus-outline-offset + 1, $checkbox-focus-outline-offset);
     }
 
     // Interactive states and behaviors
     // ================================
 
     &:checked, &:indeterminate {
-        --input-border-color: transparent;
-        --input-hover-border-color: transparent;
+        --input-border-color: var(--checkbox-checked-background);
+        --input-hover-border-color: var(--checkbox-checked-background);
 
         &::after {
             opacity: 1;
+            border: 1px solid var(--checkbox-checked-background);
         }
     }
 
@@ -77,6 +79,7 @@
 
 [type="checkbox"]::after {
     background-image: var(--checkbox-checked-icon);
+    border-radius: $checkbox-border-radius - 1;
 }
 
 [type="radio"] {
@@ -84,6 +87,7 @@
 
 	&::after {
 		background-image: var(--radio-checked-icon);
+        border-radius: 40%;
 	}
 }
 

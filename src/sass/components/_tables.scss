@@ -150,7 +150,7 @@
                     color: var(--link-color-inverted);
 
                     &:hover {
-                        color: var(--link-hover-focus-color-inverted);
+                        color: var(--link-hover-color-inverted);
                     }
                 }
         	}
@@ -171,7 +171,7 @@
                     color: $link-color;
 
                     &:hover {
-                        color: $link-hover-focus-color;
+                        color: $link-hover-color;
                     }
                 }
         	}
@@ -192,7 +192,7 @@
                     color: $link-color-dark;
 
                     &:hover {
-                        color: $link-hover-focus-color-dark;
+                        color: $link-hover-color-dark;
                     }
                 }
         	}

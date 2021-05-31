@@ -55,8 +55,9 @@ $checkbox-size: 20px !default;
 $checkbox-checked-background: $components-background !default;
 $checkbox-checked-icon-color: $components-color !default;
 $checkbox-border-radius: 3px !default;
-$checkbox-focus-outline-width: $focus-outline-size-base !default;
+$checkbox-focus-outline-size: $focus-outline-size-base !default;
 $checkbox-focus-outline-color: $components-focus-outline-color !default;
+$checkbox-focus-outline-offset: $focus-outline-offset-base !default;
 
 $switch-height: $checkbox-size !default;
 $switch-width: $checkbox-size * 2 !default;
@@ -70,8 +71,9 @@ $range-progress-color: $components-background !default;
 $range-thumb-color: grey(10) !default;
 $range-thumb-border-color: grey(80) !default;
 $range-thumb-hover-color: grey(20) !default;
-$range-thumb-focus-outline-width: $focus-outline-size-base !default;
+$range-thumb-focus-outline-size: $focus-outline-size-base !default;
 $range-thumb-focus-outline-color: darken($range-thumb-color, 25%) !default;
+$range-thumb-focus-outline-offset: 0 !default;
 
 $progress-height: spacer("large-plus") !default;
 $progress-background: grey(20) !default;
@@ -127,6 +129,7 @@ $tag-border-width: 1px !default;
 $tag-focus-outline-color-lighten: $components-focus-outline-color-lighten !default;
 $tag-focus-outline-color: $components-focus-outline-color !default;
 $tag-focus-outline-size: $focus-outline-size-base !default;
+$tag-focus-outline-offset: $focus-outline-offset-base !default;
 $tag-wired-color: $components-color-dark !default;
 $tag-wired-background-opacity: .2 !default;
 
@@ -169,6 +172,7 @@ $card-background: grey(5) !default;
 $card-background-hover: grey(8) !default;
 $card-focus-outline-color: $components-focus-outline-color !default;
 $card-focus-outline-size: $focus-outline-size-base !default;
+$card-focus-outline-offset: $focus-outline-offset-base !default;
 $card-title-font-size: 1.4em !default;
 $card-subtitle-font-size: .9em !default;
 $card-subtitle-color: grey(60) !default;

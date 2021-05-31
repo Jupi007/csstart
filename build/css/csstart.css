@@ -11,7 +11,8 @@
 [type=checkbox]::after,
 [type=checkbox]::before,
 [type=radio]::after,
-[type=radio]::before {
+[type=radio]::before,
+a::before {
 	position: absolute;
 	z-index: -1;
 	top: 0;
@@ -2011,24 +2012,39 @@ sup {
 }
 
 a {
+	position: relative;
 	text-decoration: underline;
 	color: var(--link-color);
 	background: transparent;
 	--link-color: #3935cd;
-	--link-hover-focus-color: #211f7d;
+	--link-hover-color: #211f7d;
+	--link-focus-outline-color: #8987e1;
 }
 
 @media (prefers-color-scheme: dark) {
 	a {
 		--link-color: #74c0cd;
-		--link-hover-focus-color: #41a3b4;
+		--link-hover-color: #41a3b4;
+		--link-focus-outline-color: #bfe2e8;
 	}
 }
 
-a:hover,
-a:focus {
+a::before {
+	transition-timing-function: ease;
+	transition-duration: .2s;
+	transition-property: opacity;
+	border-radius: 3px;
+	outline: 3px solid var(--link-focus-outline-color);
+	outline-offset: 2px;
+}
+
+a:hover {
 	text-decoration: underline;
-	color: var(--link-hover-focus-color);
+	color: var(--link-hover-color);
+}
+
+a:focus::before {
+	opacity: 1;
 }
 
 a:not([href]):not([tabindex]),
@@ -10006,15 +10022,16 @@ select[multiple] option:first-child {
 
 [type=checkbox]::before,
 [type=radio]::before {
-	box-shadow: 0 0 0 3px #666;
+	outline: 3px solid #666;
+	outline-offset: 3px;
 }
 
 [type=checkbox]:checked,
 [type=checkbox]:indeterminate,
 [type=radio]:checked,
 [type=radio]:indeterminate {
-	--input-border-color: transparent;
-	--input-hover-border-color: transparent;
+	--input-border-color: var(--checkbox-checked-background);
+	--input-hover-border-color: var(--checkbox-checked-background);
 }
 
 [type=checkbox]:checked::after,
@@ -10022,6 +10039,7 @@ select[multiple] option:first-child {
 [type=radio]:checked::after,
 [type=radio]:indeterminate::after {
 	opacity: 1;
+	border: 1px solid var(--checkbox-checked-background);
 }
 
 [type=checkbox]:focus::before,
@@ -10030,6 +10048,7 @@ select[multiple] option:first-child {
 }
 
 [type=checkbox]::after {
+	border-radius: 2px;
 	background-image: var(--checkbox-checked-icon);
 }
 
@@ -10038,6 +10057,7 @@ select[multiple] option:first-child {
 }
 
 [type=radio]::after {
+	border-radius: 40%;
 	background-image: var(--radio-checked-icon);
 }
 
@@ -10085,6 +10105,11 @@ select[multiple] option:first-child {
 	background-image: var(--checkbox-indeterminate-icon);
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.Switch:checked::after,
+.Switch:indeterminate::after {
+	border: none;
 }
 
 [type=range] {
@@ -10141,8 +10166,8 @@ select[multiple] option:first-child {
 	height: 15px;
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	-moz-transition-property: background, box-shadow, border;
-	transition-property: background, box-shadow, border;
+	-moz-transition-property: background, outline, border;
+	transition-property: background, outline, border;
 	border: 1px solid var(--range-thumb-border-color);
 	border-radius: 50%;
 	background: var(--range-thumb-color);
@@ -10159,8 +10184,8 @@ select[multiple] option:first-child {
 	height: 15px;
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	-webkit-transition-property: background, box-shadow, border;
-	transition-property: background, box-shadow, border;
+	-webkit-transition-property: background, outline, border;
+	transition-property: background, outline, border;
 	border: 1px solid var(--range-thumb-border-color);
 	border-radius: 50%;
 	background: var(--range-thumb-color);
@@ -10177,8 +10202,8 @@ select[multiple] option:first-child {
 	height: 15px;
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	-ms-transition-property: background, box-shadow, border;
-	transition-property: background, box-shadow, border;
+	-ms-transition-property: background, outline, border;
+	transition-property: background, outline, border;
 	border: 1px solid var(--range-thumb-border-color);
 	border-radius: 50%;
 	background: var(--range-thumb-color);
@@ -10190,15 +10215,18 @@ select[multiple] option:first-child {
 }
 
 [type=range]:focus::-moz-range-thumb {
-	box-shadow: 0 0 0 3px var(--range-thumb-focus-outline-color);
+	outline: 3px solid var(--range-thumb-focus-outline-color);
+	outline-offset: 0;
 }
 
 [type=range]:focus::-webkit-slider-thumb {
-	box-shadow: 0 0 0 3px var(--range-thumb-focus-outline-color);
+	outline: 3px solid var(--range-thumb-focus-outline-color);
+	outline-offset: 0;
 }
 
 [type=range]:focus::-ms-thumb {
-	box-shadow: 0 0 0 3px var(--range-thumb-focus-outline-color);
+	outline: 3px solid var(--range-thumb-focus-outline-color);
+	outline-offset: 0;
 }
 
 [type=range]::-moz-range-progress {
@@ -10388,7 +10416,8 @@ meter::-webkit-meter-even-less-good-value {
 
 .Tag::before,
 .Button::before {
-	box-shadow: 0 0 0 3px var(--tag-focus-outline-color);
+	outline: 3px solid var(--tag-focus-outline-color);
+	outline-offset: 2px;
 }
 
 .Tag--wired,
@@ -10502,6 +10531,7 @@ a.Tag:hover::after,
 button.Tag:focus,
 a.Tag:focus,
 .Button:focus {
+	z-index: 2;
 	text-decoration: none;
 	color: var(--tag-color);
 	outline: 0;
@@ -10717,7 +10747,8 @@ a.Tag--wired:hover::after,
 }
 
 .Card::before {
-	box-shadow: 0 0 0 3px var(--card-focus-outline-color);
+	outline: 3px solid var(--card-focus-outline-color);
+	outline-offset: 2px;
 }
 
 .Card-body {
@@ -10914,7 +10945,7 @@ a.Card:focus:not(:active)::before {
 }
 
 .Table-inverted a:hover {
-	color: var(--link-hover-focus-color-inverted);
+	color: var(--link-hover-color-inverted);
 }
 
 .Table-light {

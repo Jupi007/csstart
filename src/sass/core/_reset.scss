@@ -168,22 +168,39 @@ sup { top: -.5em; }
 
 a {
     --link-color: #{$link-color};
-    --link-hover-focus-color: #{$link-hover-focus-color};
+    --link-hover-color: #{$link-hover-color};
+    --link-focus-outline-color: #{$link-focus-outline-color};
 
     @include option("dark-theme") {
         @media (prefers-color-scheme: dark) {
             --link-color: #{$link-color-dark};
-            --link-hover-focus-color: #{$link-hover-focus-color-dark};
+            --link-hover-color: #{$link-hover-color-dark};
+            --link-focus-outline-color: #{$link-focus-outline-color-dark};
         }
     }
 
+    position: relative;
     color: var(--link-color);
     text-decoration: $link-decoration;
     background: transparent;
 
-    &:hover, &:focus {
-        color: var(--link-hover-focus-color);
-        text-decoration: $link-hover-focus-decoration;
+    &::before {
+        @extend %magic-pseudo-element;
+
+        border-radius: $border-radius-base;
+        outline: $focus-outline-size-base solid var(--link-focus-outline-color);
+        outline-offset: $focus-outline-offset-base;
+
+        @include transition("opacity");
+    }
+
+    &:hover {
+        color: var(--link-hover-color);
+        text-decoration: $link-hover-decoration;
+    }
+
+    &:focus::before {
+        opacity: 1;
     }
 }
 

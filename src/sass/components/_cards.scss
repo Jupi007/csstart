@@ -47,7 +47,8 @@
 
     // Used to get smooth transitions with :focus
     &::before {
-        box-shadow: 0 0 0 $card-focus-outline-size var(--card-focus-outline-color);
+        outline: $card-focus-outline-size solid var(--card-focus-outline-color);
+        outline-offset: $card-focus-outline-offset;
     }
 
     // Card children

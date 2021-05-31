@@ -59,7 +59,8 @@
 
     // Used to get smooth transitions with :focus
     &::before {
-        box-shadow: 0 0 0 $tag-focus-outline-size var(--tag-focus-outline-color);
+        outline: $tag-focus-outline-size solid var(--tag-focus-outline-color);
+        outline-offset: $tag-focus-outline-offset;
     }
 
     // Wired (border only) variant
@@ -175,8 +176,8 @@ a.#{class("Tag")},
     &:focus {
         text-decoration: none;
     	color: var(--tag-color);
-        // Replace the outline by a box-shadow (defined in :before)
         outline: 0;
+        z-index: 2; // move the tag in top of other elements to avoid focus outline crop
 
         // Show :focus box-shadow (defined in :before)
         &:not(:active)::before {

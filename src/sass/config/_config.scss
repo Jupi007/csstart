@@ -201,17 +201,20 @@ $headings-font-weight: font-weight('normal') !default;
 
 $link-color: color('blue') !default;
 $link-decoration: underline !default;
-$link-hover-focus-color: darken( $link-color , 20% ) !default;
-$link-hover-focus-decoration: underline !default;
+$link-hover-color: darken( $link-color , 20% ) !default;
+$link-hover-decoration: underline !default;
+$link-focus-outline-color: lighten($link-color, 20%) !default;
 
 $link-color-dark: color('light-blue') !default;
-$link-hover-focus-color-dark: darken( $link-color-dark , 15% ) !default;
+$link-hover-color-dark: darken($link-color-dark, 15%) !default;
+$link-focus-outline-color-dark: lighten($link-color-dark, 20%) !default;
 
 // -------------
 // Focus outline
 // -------------
 
 $focus-outline-size-base: 3px !default;
+$focus-outline-offset-base: 2px !default;
 
 // ----------
 // Components

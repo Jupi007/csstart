@@ -46,6 +46,12 @@
         background-repeat: no-repeat;
         background-position: center;
     }
+
+    &:checked, &:indeterminate {
+        &::after {
+            border: none;
+        }
+    }
 }
 
 }
