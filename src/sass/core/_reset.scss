@@ -184,6 +184,8 @@ a {
     text-decoration: $link-decoration;
     background: transparent;
 
+    @include transition('color');
+
     &::before {
         @extend %magic-pseudo-element;
 

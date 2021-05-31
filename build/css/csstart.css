@@ -2013,6 +2013,9 @@ sup {
 
 a {
 	position: relative;
+	transition-timing-function: ease;
+	transition-duration: .2s;
+	transition-property: color;
 	text-decoration: underline;
 	color: var(--link-color);
 	background: transparent;
