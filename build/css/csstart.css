@@ -14,6 +14,7 @@
 [type=radio]::before,
 a::before {
 	position: absolute;
+	z-index: -1;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -2043,6 +2044,10 @@ a::before {
 a:hover {
 	text-decoration: underline;
 	color: var(--link-hover-color);
+}
+
+a:focus {
+	outline: none;
 }
 
 a:focus::before {
@@ -10533,7 +10538,6 @@ a.Tag:hover::after,
 button.Tag:focus,
 a.Tag:focus,
 .Button:focus {
-	z-index: 2;
 	text-decoration: none;
 	color: var(--tag-color);
 	outline: 0;
