@@ -111,3 +111,12 @@
         @include assert-equal(set-brightness("wrong-color", 50%), null);
     }*/
 }
+
+@include describe('respond-to()') {
+    @include it('Returns a min-width string') {
+        @include assert-equal(respond-to('medium', 'up'), 'min-width: 768px');
+    }
+    @include it('Returns a maw-width string') {
+        @include assert-equal(respond-to('medium', 'down'), 'max-width: 767px');
+    }
+}

@@ -126,3 +126,24 @@
         $brightness
     );
 }
+
+@function respond-to($name, $direction: "up") {
+    @if map-has-key($breakpoints, $name) {
+		@if $direction == "up" {
+			@return "min-width: " + map-get($breakpoints, $name);
+		}
+
+		@else if $direction == "down" {
+			@return "max-width: " + (map-get($breakpoints, $name) - 1);
+		}
+
+        @else {
+            @warn "Unfortunately, `#{$direction}` value is not valid. It should be `up` or `down`.";
+        }
+	}
+
+	@else {
+		@warn "Unfortunately, `#{$name}` value could be retrieved from `#{$breakpoints}`. "
+		+ "Please make sure it is defined in `$breakpoints` map.";
+	}
+}
