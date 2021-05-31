@@ -201,8 +201,12 @@ a {
         text-decoration: $link-hover-decoration;
     }
 
-    &:focus::before {
-        opacity: 1;
+    &:focus {
+        outline: none;
+        
+        &::before {
+            opacity: 1;
+        }
     }
 }
 
