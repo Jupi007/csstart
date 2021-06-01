@@ -190,8 +190,8 @@ a {
         @extend %magic-pseudo-element;
 
         border-radius: $border-radius-base;
-        outline: $focus-outline-size-base solid var(--link-focus-outline-color);
-        outline-offset: $focus-outline-offset-base;
+        outline: $link-focus-outline-size solid var(--link-focus-outline-color);
+        outline-offset: $link-focus-outline-offset;
 
         @include transition("opacity");
     }
