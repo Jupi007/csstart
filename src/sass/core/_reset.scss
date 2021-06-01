@@ -76,7 +76,7 @@ hr:not([size]) {
     height: $separator-height; // 2
 }
 
-#{$headings} {
+h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: $headings-margin-bottom;
     font-weight: $headings-font-weight;
@@ -516,7 +516,7 @@ summary {
         outline-offset: $summary-focus-outline-offset;
     }
 
-    > #{$headings} {
+    > h1, > h2, > h3, > h4, > h5, > h6 {
         display: inline-block;
     }
 }

@@ -2368,11 +2368,11 @@ summary:focus {
 }
 
 summary > h1,
-summary h2,
-summary h3,
-summary h4,
-summary h5,
-summary h6 {
+summary > h2,
+summary > h3,
+summary > h4,
+summary > h5,
+summary > h6 {
 	display: inline-block;
 }
 

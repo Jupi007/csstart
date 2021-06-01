@@ -60,14 +60,14 @@
     		page-break-inside: avoid;
     	}
 
-    	#{$headings},
+    	h1, h2, h3, h4, h5, h6,
     	p,
     	a {
     		orphans: 3;
     		widows: 3;
     	}
 
-    	#{$headings} {
+    	h1, h2, h3, h4, h5, h6 {
     		page-break-after: avoid;
     		page-break-inside: avoid;
 
