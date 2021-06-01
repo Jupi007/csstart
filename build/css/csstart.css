@@ -2342,15 +2342,32 @@ details {
 }
 
 summary {
-	display: list-item;
+	position: relative;
+	display: inline list-item;
 	cursor: pointer;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
 	    -ms-user-select: none;
 	        user-select: none;
+	transition-timing-function: ease;
+	transition-duration: .2s;
+	transition-property: outline;
+	--summary-focus-outline-color: #666;
 }
 
-summary h1,
+@media (prefers-color-scheme: dark) {
+	summary {
+		--summary-focus-outline-color: gray;
+	}
+}
+
+summary:focus {
+	border-radius: 3px;
+	outline: 3px solid var(--summary-focus-outline-color);
+	outline-offset: 2px;
+}
+
+summary > h1,
 summary h2,
 summary h3,
 summary h4,

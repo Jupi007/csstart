@@ -29,6 +29,11 @@ $mark-background: color("yellow") !default;
 
 $details-animation-translateY: -10px !default;
 $details-animation-duration: $transition-duration-base * 2 !default;
+$summary-focus-outline-size: $focus-outline-size-base !default;
+$summary-focus-outline-color: $components-focus-outline-color !default;
+$summary-focus-outline-offset: $focus-outline-offset-base !default;
+
+$summary-focus-outline-color-dark: $components-focus-outline-color-dark !default;
 
 // -----
 // Forms

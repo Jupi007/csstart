@@ -495,16 +495,33 @@ details {
 }
 
 summary {
-    display: list-item;
+    --summary-focus-outline-color: #{$summary-focus-outline-color};
+
+    @include option("dark-theme") {
+        @media (prefers-color-scheme: dark) {
+            --summary-focus-outline-color: #{$summary-focus-outline-color-dark};
+        }
+    }
+
+    position: relative;
+    display: inline list-item;
     cursor: pointer;
     user-select: none;
 
-    #{$headings} {
+    @include transition("outline");
+
+    &:focus {
+        border-radius: $border-radius-base;
+        outline: $summary-focus-outline-size solid var(--summary-focus-outline-color);
+        outline-offset: $summary-focus-outline-offset;
+    }
+
+    > #{$headings} {
         display: inline-block;
     }
 }
 
-@include option {
+@include option('details-animation') {
     @keyframes details-sweep {
         0% {
             opacity: 0;
