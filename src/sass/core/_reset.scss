@@ -508,8 +508,6 @@ summary {
     cursor: pointer;
     user-select: none;
 
-    @include transition("outline");
-
     &:focus {
         border-radius: $border-radius-base;
         outline: $summary-focus-outline-size solid var(--summary-focus-outline-color);

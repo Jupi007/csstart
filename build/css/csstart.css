@@ -2349,9 +2349,6 @@ summary {
 	   -moz-user-select: none;
 	    -ms-user-select: none;
 	        user-select: none;
-	transition-timing-function: ease;
-	transition-duration: .2s;
-	transition-property: outline;
 	--summary-focus-outline-color: #666;
 }
 
@@ -10190,8 +10187,8 @@ select[multiple] option:first-child {
 	height: 15px;
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	-moz-transition-property: background, outline, border;
-	transition-property: background, outline, border;
+	-moz-transition-property: background, border;
+	transition-property: background, border;
 	border: 1px solid var(--range-thumb-border-color);
 	border-radius: 50%;
 	background: var(--range-thumb-color);
@@ -10208,8 +10205,8 @@ select[multiple] option:first-child {
 	height: 15px;
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	-webkit-transition-property: background, outline, border;
-	transition-property: background, outline, border;
+	-webkit-transition-property: background, border;
+	transition-property: background, border;
 	border: 1px solid var(--range-thumb-border-color);
 	border-radius: 50%;
 	background: var(--range-thumb-color);
@@ -10226,8 +10223,8 @@ select[multiple] option:first-child {
 	height: 15px;
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	-ms-transition-property: background, outline, border;
-	transition-property: background, outline, border;
+	-ms-transition-property: background, border;
+	transition-property: background, border;
 	border: 1px solid var(--range-thumb-border-color);
 	border-radius: 50%;
 	background: var(--range-thumb-color);

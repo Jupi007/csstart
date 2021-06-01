@@ -91,7 +91,7 @@
 		background: var(--range-thumb-color);
         border: 1px solid var(--range-thumb-border-color);
 
-        @include transition("background, outline, border");
+        @include transition("background, border");
 
 		&:hover {
             background: var(--range-thumb-hover-color);
