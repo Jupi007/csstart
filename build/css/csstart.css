@@ -10762,6 +10762,10 @@ a.Tag--wired:hover::after,
 	padding: calc(var(--spacer-base) * 1);
 }
 
+.Card-body > :first-child {
+	margin-top: 0;
+}
+
 .Card-figure {
 	max-height: 100vh;
 	-o-object-fit: cover;
