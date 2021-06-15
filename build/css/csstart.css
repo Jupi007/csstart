@@ -11145,4 +11145,26 @@ a.Card:focus:not(:active)::before {
 	color: #404040;
 }
 
+.Linked {
+	display: flex;
+	flex-direction: row;
+	gap: 2px;
+}
+
+.Linked > * {
+	border-radius: 0;
+}
+
+.Linked > :first-child {
+	border-radius: 3px 0 0 3px;
+}
+
+.Linked > :last-child {
+	border-radius: 0 3px 3px 0;
+}
+
+.Linked > :focus {
+	z-index: 2;
+}
+
 /*# sourceMappingURL=csstart.css.map */

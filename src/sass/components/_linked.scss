@@ -1,0 +1,32 @@
+// ==========================
+// ==== Linked component ====
+// ==========================
+
+// Create linked components by adding the .Linked on the parent of some components
+
+@include option("linked") {
+
+.#{class("Linked")} {
+    display: flex;
+    flex-direction: row;
+    gap: $linked-gap;
+
+    > * {
+        border-radius: 0;
+    }
+
+    > :first-child {
+        border-radius: $linked-border-radius 0 0 $linked-border-radius;
+    }
+
+    > :last-child {
+        border-radius: 0 $linked-border-radius $linked-border-radius 0;
+    }
+
+    > :focus {
+        z-index: 2;
+    }
+}
+
+}
+    
