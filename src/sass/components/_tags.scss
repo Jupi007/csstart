@@ -14,7 +14,7 @@
     --tag-padding: #{$tag-padding};
     --tag-font-size: #{$tag-font-size};
     --tag-background: #{$components-background};
-    --tag-background-hover: #{darken($components-background, $components-hover-darken)};
+    --tag-background-hover: #{$components-hover-background};
     --tag-color: #{$components-color};
     --tag-wired-color: #{$tag-wired-color};
     --tag-focus-outline-color: #{$tag-focus-outline-color};
@@ -22,7 +22,7 @@
     @include option("dark-theme") {
         @media (prefers-color-scheme: dark) {
             --tag-background: #{$components-background-dark};
-            --tag-background-hover: #{darken($components-background-dark, $components-hover-darken)};
+            --tag-background-hover: #{$components-hover-background-dark};
             --tag-color: #{$components-color-dark};
             --tag-wired-color: #{$tag-wired-color-dark};
             --tag-focus-outline-color: #{$tag-focus-outline-color-dark};
@@ -95,14 +95,14 @@
         @include option("components-inverted") {
             &-#{class("(Component)-inverted")} {
                 --tag-background: #{$components-background-dark};
-                --tag-background-hover: #{darken($components-background-dark, $components-hover-darken)};
+                --tag-background-hover: #{$components-hover-background-dark};
                 --tag-color: #{$components-color-dark};
                 --tag-wired-color: #{$tag-wired-color-dark};
                 --tag-focus-outline-color: #{$tag-focus-outline-color-dark};
 
                 @media (prefers-color-scheme: dark) {
                     --tag-background: #{$components-background};
-                    --tag-background-hover: #{darken($components-background, $components-hover-darken)};
+                    --tag-background-hover: #{$components-hover-background};
                     --tag-color: #{$components-color};
                     --tag-wired-color: #{$tag-wired-color};
                     --tag-focus-outline-color: #{$tag-focus-outline-color};
@@ -114,7 +114,7 @@
         @include option("components-dark") {
             &-#{class("(Component)-dark")} {
                 --tag-background: #{$components-background-dark};
-                --tag-background-hover: #{darken($components-background-dark, $components-hover-darken)};
+                --tag-background-hover: #{$components-hover-background-dark};
                 --tag-color: #{$components-color-dark};
                 --tag-wired-color: #{$tag-wired-color-dark};
                 --tag-focus-outline-color: #{$tag-focus-outline-color-dark};
@@ -125,7 +125,7 @@
         @include option("components-light") {
             &-#{class("(Component)-light")} {
                 --tag-background: #{$components-background};
-                --tag-background-hover: #{darken($components-background, $components-hover-darken)};
+                --tag-background-hover: #{$components-hover-background};
                 --tag-color: #{$components-color};
                 --tag-wired-color: #{$tag-wired-color};
                 --tag-focus-outline-color: #{$tag-focus-outline-color};
