@@ -35,15 +35,15 @@ a::before {
 }
 
 .has-gutter {
-	grid-gap: calc(var(--spacer-base) * 1);
+	gap: calc(var(--spacer-base) * 1);
 }
 
 .has-gutter-l {
-	grid-gap: calc(var(--spacer-base) * 2);
+	gap: calc(var(--spacer-base) * 2);
 }
 
 .has-gutter-xl {
-	grid-gap: calc(var(--spacer-base) * 2.5);
+	gap: calc(var(--spacer-base) * 2.5);
 }
 
 .txt-normal {
@@ -11123,11 +11123,11 @@ a.Card:focus:not(:active)::before {
 	background: #333;
 	align-items: center;
 	justify-content: center;
+	gap: calc(var(--spacer-base) * 2.5);
 }
 
 .Figure figcaption,
 .Afb figure figcaption {
-	margin-top: calc(var(--spacer-base) * 2.5);
 	text-align: center;
 	color: #d9d9d9;
 }

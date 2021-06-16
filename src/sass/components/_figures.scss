@@ -13,6 +13,7 @@
 	align-items: center;
 	justify-content: center;
 	padding: $figure-padding;
+	gap: $figure-padding;
     margin-top: $figure-margin-top;
     margin-bottom: $figure-margin-bottom;
 	@include border-radius($figure-border-radius);
@@ -20,7 +21,6 @@
 
     // Using a more specific selector instead of a class because of the Auto-formating-block
 	figcaption {
-		margin-top: $figure-padding;
         text-align: center;
 		color: $figure-figcaption-color;
 	}

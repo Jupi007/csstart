@@ -22,7 +22,7 @@
 
     @each $name, $value in $gutters  {
         .#{class("Grid-gutter")}#{$name} {
-            grid-gap: $value;
+            gap: $value;
         }
     }
 }
