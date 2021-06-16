@@ -158,7 +158,7 @@ $tag-sizes: map-merge((
 // Alerts
 // ------
 
-$alert-padding: spacer("medium") !default;
+$alert-padding: spacer($margin-base) !default;
 $alert-border-width: 1px !default;
 $alert-big-border-width: 6px !default;
 $alert-big-border-position: left !default;
@@ -187,7 +187,7 @@ $card-focus-outline-offset: $focus-outline-offset-base !default;
 $card-title-font-size: 1.4em !default;
 $card-subtitle-font-size: .9em !default;
 $card-subtitle-color: grey(60) !default;
-$card-body-padding: spacer("medium") !default;
+$card-body-padding: spacer($margin-base) !default;
 
 $card-border-color-dark: grey(70) !default;
 $card-background-dark: grey(90) !default;
