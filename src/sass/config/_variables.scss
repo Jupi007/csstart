@@ -67,9 +67,9 @@ $switch-height: $checkbox-size !default;
 $switch-width: $checkbox-size * 2 !default;
 $switch-border-radius: 2rem !default;
 
-$range-thumb-size: 15px;
-$range-track-height: 2px;
-$range-track-border-radius: $border-radius-base;
+$range-thumb-size: 15px !default;
+$range-track-height: 2px !default;
+$range-track-border-radius: $border-radius-base !default;
 $range-track-color: grey(25) !default;
 $range-progress-color: $components-background !default;
 $range-thumb-color: grey(10) !default;
