@@ -40,7 +40,7 @@ $summary-focus-outline-color-dark: $components-focus-outline-color-dark !default
 
 $label-margin-bottom: spacer("small") !default;
 
-$input-border-width: 1px !default;
+$input-border-width: $border-width-base !default;
 $input-border-color: grey(20) !default;
 $input-hover-border-color: grey(50) !default;
 $input-border-radius: $border-radius-base !default;
@@ -136,7 +136,7 @@ $button-sizes: map-merge((
 $tag-border-radius: $border-radius-base !default;
 $tag-padding: spacer("tiny") spacer("tiny-plus") !default;
 $tag-font-size: .8em !default;
-$tag-border-width: 1px !default;
+$tag-border-width: $border-width-base !default;
 $tag-focus-outline-color-lighten: $components-focus-outline-color-lighten !default;
 $tag-focus-outline-color: $components-focus-outline-color !default;
 $tag-focus-outline-size: $focus-outline-size-base !default;
@@ -159,7 +159,7 @@ $tag-sizes: map-merge((
 // ------
 
 $alert-padding: spacer($margin-base) !default;
-$alert-border-width: 1px !default;
+$alert-border-width: $border-width-base !default;
 $alert-big-border-width: 6px !default;
 $alert-big-border-position: left !default;
 $alert-border-radius: $border-radius-base !default;
@@ -176,7 +176,7 @@ $alert-color-brightness-dark: 80% !default;
 // Cards
 // -----
 
-$card-border-width: 1px !default;
+$card-border-width: $border-width-base !default;
 $card-border-color: grey(40) !default;
 $card-border-radius: $border-radius-base !default;
 $card-background: grey(5) !default;
@@ -219,7 +219,7 @@ $table-background: $body-bg !default;
 $table-border-radius: $border-radius-base !default;
 $table-border-color: grey(85) !default;
 $table-cell-border-color: grey(50) !default;
-$table-border-width: 1px !default;
+$table-border-width: $border-width-base !default;
 $table-cell-padding: spacer("small-plus") !default;
 $table-margin-top: calc(#{$paragraph-margin-bottom} * 2) !default;
 $table-margin-bottom: calc(#{$paragraph-margin-bottom} * 2) !default;
