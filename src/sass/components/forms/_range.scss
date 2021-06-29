@@ -47,27 +47,18 @@
 
 @include option("form") {
 
+@include theme-vars(
+    (--range-track-color, $range-track-color, $range-track-color-dark),
+    (--range-progress-color, $range-progress-color, $range-progress-color-dark),
+    (--range-thumb-color, $range-thumb-color, $range-thumb-color-dark),
+    (--range-thumb-border-color, $range-thumb-border-color, $range-thumb-border-color-dark),
+    (--range-thumb-hover-color, $range-thumb-hover-color, $range-thumb-hover-color-dark),
+    (--range-thumb-focus-outline-color, $range-thumb-focus-outline-color, $range-thumb-focus-outline-color-dark),
+);
+
 // Range styles
 // ============
 [type="range"] {
-    --range-track-color: #{$range-track-color};
-    --range-progress-color: #{$range-progress-color};
-    --range-thumb-color: #{$range-thumb-color};
-    --range-thumb-border-color: #{$range-thumb-border-color};
-    --range-thumb-hover-color: #{$range-thumb-hover-color};
-    --range-thumb-focus-outline-color: #{$range-thumb-focus-outline-color};
-
-    @include option("dark-theme") {
-        @media (prefers-color-scheme: dark) {
-            --range-track-color: #{$range-track-color-dark};
-            --range-progress-color: #{$range-progress-color-dark};
-            --range-thumb-color: #{$range-thumb-color-dark};
-            --range-thumb-border-color: #{$range-thumb-border-color-dark};
-            --range-thumb-hover-color: #{$range-thumb-hover-color-dark};
-            --range-thumb-focus-outline-color: #{$range-thumb-focus-outline-color-dark};
-        }
-    }
-
     // Remove default input styling
     background: none;
     border: none;

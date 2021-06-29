@@ -6,24 +6,16 @@
 
 @include option("card") {
 
+@include theme-vars(
+    (--card-border-color, $card-border-color, $card-border-color-dark),
+    (--card-background, $card-background, $card-background-dark),
+    (--card-background-hover, $card-background-hover, $card-background-hover-dark),
+    (--card-subtitle-color, $card-subtitle-color, $card-subtitle-color-dark),
+    (--card-focus-outline-color, $card-focus-outline-color, $card-focus-outline-color-dark)
+);
+
 .#{class("Card")} {
-    --card-border-color: #{$card-border-color};
-    --card-background: #{$card-background};
-    --card-background-hover: #{$card-background-hover};
-    --card-subtitle-color: #{$card-subtitle-color};
-    --card-focus-outline-color: #{$card-focus-outline-color};
-
-    @include option("dark-theme") {
-        @media (prefers-color-scheme: dark) {
-            --card-border-color: #{$card-border-color-dark};
-            --card-background: #{$card-background-dark};
-            --card-background-hover: #{$card-background-hover-dark};
-            --card-subtitle-color: #{$card-subtitle-color-dark};
-            --card-focus-outline-color: #{$card-focus-outline-color-dark};
-        }
-    }
-
-	display: flex;
+    display: flex;
     position: relative;
     z-index: 1;
 	flex-direction: column;

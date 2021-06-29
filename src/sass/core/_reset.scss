@@ -31,21 +31,14 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     display: block;
 }
 
+@include theme-vars(
+    (--body-bg, $body-bg, $body-bg-dark),
+    (--body-color, $body-color, $body-color-dark),
+    (--body-bg-inverted, $body-bg-dark, $body-bg),
+    (--body-color-inverted, $body-color-dark, $body-color)
+);
+
 body {
-    --body-bg: #{$body-bg};
-    --body-color: #{$body-color};
-    --body-bg-inverted: #{$body-bg-dark};
-    --body-color-inverted: #{$body-color-dark};
-
-    @include option("dark-theme") {
-        @media (prefers-color-scheme: dark) {
-            --body-bg: #{$body-bg-dark};
-            --body-color: #{$body-color-dark};
-            --body-bg-inverted: #{$body-bg};
-            --body-color-inverted: #{$body-color};
-        }
-    }
-
     margin: 0;
     font-family: $font-family-sans-serif;
     font-size: $mobile-font-size;
@@ -166,19 +159,13 @@ sup {
 sub { bottom: -.25em; }
 sup { top: -.5em; }
 
+@include theme-vars(
+    (--link-color, $link-color, $link-color-dark),
+    (--link-hover-color, $link-hover-color, $link-hover-color-dark),
+    (--link-focus-outline-color, $link-focus-outline-color, $link-focus-outline-color-dark),
+);
+
 a {
-    --link-color: #{$link-color};
-    --link-hover-color: #{$link-hover-color};
-    --link-focus-outline-color: #{$link-focus-outline-color};
-
-    @include option("dark-theme") {
-        @media (prefers-color-scheme: dark) {
-            --link-color: #{$link-color-dark};
-            --link-hover-color: #{$link-hover-color-dark};
-            --link-focus-outline-color: #{$link-focus-outline-color-dark};
-        }
-    }
-
     position: relative;
     color: var(--link-color);
     text-decoration: $link-decoration;
@@ -494,15 +481,11 @@ details {
     margin-bottom: $paragraph-margin-bottom;
 }
 
+@include theme-vars(
+    (--summary-focus-outline-color, $summary-focus-outline-color, $summary-focus-outline-color-dark)
+);
+
 summary {
-    --summary-focus-outline-color: #{$summary-focus-outline-color};
-
-    @include option("dark-theme") {
-        @media (prefers-color-scheme: dark) {
-            --summary-focus-outline-color: #{$summary-focus-outline-color-dark};
-        }
-    }
-
     position: relative;
     display: inline list-item;
     cursor: pointer;

@@ -1,5 +1,17 @@
 @use "sass:math";
 
+@function option($names...) {
+    $content: true;
+
+    @each $name in $names {
+        @if not getter($options, $name) {
+    		$content: false;
+    	}
+    }
+
+    @return $content;
+}
+
 @function getter($map, $name) {
 	@if map-has-key($map, $name) {
 		@return(map-get($map, $name));

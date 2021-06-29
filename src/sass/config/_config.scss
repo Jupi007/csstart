@@ -16,7 +16,10 @@ $options: map-merge((
 
     "details-animation": true,
 
+    // At least one of them have to be true
+    "light-theme": true,
     "dark-theme": true,
+
     "print-styles": true,
         "print-reformats": true,
 

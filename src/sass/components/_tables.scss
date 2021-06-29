@@ -6,31 +6,22 @@
 
 @include option("table") {
 
+@include theme-vars(
+    (--table-border-color, $table-border-color, $table-border-color-dark),
+    (--table-cell-border-color, $table-cell-border-color, $table-cell-border-color-dark),
+    (--table-background, $table-background, $table-background-dark),
+    (--table-headings-cell-background, $table-headings-cell-background, $table-headings-cell-background-dark),
+    (--table-zebra-cell-background, $table-zebra-cell-background, $table-zebra-cell-background-dark),
+    (--table-cell-hover-background, $table-cell-hover-background, $table-cell-hover-background-dark),
+    (--table-caption-color, $table-caption-color, $table-caption-color-dark)
+);
+
 .#{class("Table")},
 .#{class("Auto-formating-block")} table
 {
-    --table-border-color: #{$table-border-color};
-    --table-cell-border-color: #{$table-cell-border-color};
-    --table-background: #{$table-background};
-    --table-headings-cell-background: #{$table-headings-cell-background};
-    --table-zebra-cell-background: #{$table-zebra-cell-background};
-    --table-cell-hover-background: #{$table-cell-hover-background};
-    --table-caption-color: #{$table-caption-color};
-    --table-cell-padding: #{$table-cell-padding};
+    --table-cell-padding: $table-cell-padding;
 
-    @include option("dark-theme") {
-        @media (prefers-color-scheme: dark) {
-            --table-border-color: #{$table-border-color-dark};
-            --table-cell-border-color: #{$table-cell-border-color-dark};
-            --table-background: #{$table-background-dark};
-            --table-headings-cell-background: #{$table-headings-cell-background-dark};
-            --table-zebra-cell-background: #{$table-zebra-cell-background-dark};
-            --table-cell-hover-background: #{$table-cell-hover-background-dark};
-            --table-caption-color: #{$table-caption-color-dark};
-        }
-    }
-
-	width: 100%;
+    width: 100%;
 	max-width: 100%;
 	table-layout: auto;
     margin-top: $table-margin-top;

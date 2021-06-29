@@ -6,18 +6,13 @@
 
 @include option("alert") {
 
+@include theme-vars(
+    (--alert-border-color, $alert-border-color, $alert-border-color-dark),
+    (--alert-color, $alert-color, $alert-color-dark)
+);
+
 %alert,
 .#{class("Alert")} {
-    --alert-border-color: #{$components-background};
-    --alert-color: var(--body-color);
-
-    @include option("dark-theme") {
-        @media (prefers-color-scheme: dark) {
-            --alert-border-color: #{$components-background-dark};
-            --alert-color: var(--body-color-dark);
-        }
-    }
-
     page-break-inside: avoid;
 	padding: $alert-padding;
 	border: $alert-border-width solid var(--alert-border-color);

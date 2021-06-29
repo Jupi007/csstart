@@ -54,14 +54,19 @@ $input-color-height: 35px !default;
 $input-color-padding: spacer("tiny-plus") !default;
 
 $select-option-padding: spacer("small") spacer("medium") !default;
+$select-icon-color: color('white') !default;
+$select-icon: escape-svg(url("data:image/svg+xml,<svg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path d='m5 8 5 5 5-5' fill='none' stroke='#{$select-icon-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/></svg>")) !default;
 
 $checkbox-size: 20px !default;
 $checkbox-checked-background: $components-background !default;
 $checkbox-checked-icon-color: $components-color !default;
 $checkbox-border-radius: 3px !default;
-$checkbox-focus-outline-size: $focus-outline-size-base !default;
 $checkbox-focus-outline-color: $components-focus-outline-color !default;
+$checkbox-focus-outline-size: $focus-outline-size-base !default;
 $checkbox-focus-outline-offset: $focus-outline-offset-base !default;
+$checkbox-checked-icon: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$checkbox-checked-icon-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 10l3 3l6-6'/></svg>")) !default;
+$radio-checked-icon: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='1.5' fill='#{$checkbox-checked-icon-color}'/></svg>")) !default;
+$checkbox-indeterminate-icon: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$checkbox-checked-icon-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/></svg>")) !default;
 
 $switch-height: $checkbox-size !default;
 $switch-width: $checkbox-size * 2 !default;
@@ -83,6 +88,7 @@ $progress-height: spacer("large-plus") !default;
 $progress-background: grey(20) !default;
 $progress-bar-background: $components-background !default;
 $progress-border-radius: $input-border-radius !default;
+$progress-indeterminate-background: darken($progress-background, 8%) !default;
 $progress-indeterminate-animation: true !default;
 $progress-indeterminate-animation-duration: .4s !default;
 
@@ -93,9 +99,14 @@ $meter-sub-sub-optimum-background: color("success") !default;
 $input-border-color-dark: grey(50) !default;
 $input-hover-border-color-dark: grey(20) !default;
 $input-background-dark: grey(80) !default;
+$select-icon-color-dark: color('white') !default;
+$select-icon-dark: escape-svg(url("data:image/svg+xml,<svg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path d='m5 8 5 5 5-5' fill='none' stroke='#{$select-icon-color-dark}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/></svg>")) !default;
 $checkbox-checked-background-dark: $components-background-dark !default;
 $checkbox-checked-icon-color-dark: $components-color-dark !default;
 $checkbox-focus-outline-color-dark: $components-focus-outline-color-dark !default;
+$checkbox-checked-icon-dark: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$checkbox-checked-icon-color-dark}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 10l3 3l6-6'/></svg>")) !default;
+$radio-checked-icon-dark: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='1.5' fill='#{$checkbox-checked-icon-color-dark}'/></svg>")) !default;
+$checkbox-indeterminate-icon-dark: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$checkbox-checked-icon-color-dark}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/></svg>")) !default;
 $range-track-color-dark: grey(65) !default;
 $range-progress-color-dark: $components-background-dark !default;
 $range-thumb-color-dark: grey(70) !default;
@@ -104,6 +115,7 @@ $range-thumb-focus-outline-color-dark: lighten($range-thumb-color-dark, 20%) !de
 $range-thumb-hover-color-dark: grey(80) !default;
 $progress-background-dark: grey(70) !default;
 $progress-bar-background-dark: $components-background-dark !default;
+$progress-indeterminate-background-dark: darken($progress-background-dark, 8%) !default;
 
 // ------
 // Linked
@@ -137,6 +149,9 @@ $tag-border-radius: $border-radius-base !default;
 $tag-padding: spacer("tiny") spacer("tiny-plus") !default;
 $tag-font-size: .8em !default;
 $tag-border-width: $border-width-base !default;
+$tag-background: $components-background !default;
+$tag-hover-background: $components-hover-background !default;
+$tag-color: $components-color !default;
 $tag-focus-outline-color-lighten: $components-focus-outline-color-lighten !default;
 $tag-focus-outline-color: $components-focus-outline-color !default;
 $tag-focus-outline-size: $focus-outline-size-base !default;
@@ -144,6 +159,9 @@ $tag-focus-outline-offset: $focus-outline-offset-base !default;
 $tag-wired-color: $components-color-dark !default;
 $tag-wired-background-opacity: .2 !default;
 
+$tag-background-dark: $components-background-dark !default;
+$tag-hover-background-dark: $components-hover-background-dark !default;
+$tag-color-dark: $components-color-dark !default;
 $tag-focus-outline-color-dark: $components-focus-outline-color-dark !default;
 $tag-wired-color-dark: $components-color !default;
 
@@ -167,10 +185,13 @@ $alert-margin-bottom: $paragraph-margin-bottom !default;
 $alert-title-font-size: 1.5em !default;
 $alert-background-transparency-amount: .8 !default;
 $alert-color-brightness: 20% !default;
+$alert-color: $body-color !default;
 $alert-background: transparentize($components-background, $alert-background-transparency-amount) !default;
+$alert-border-color: $components-background !default;
 
+$alert-color-dark: $body-color-dark !default;
 $alert-background-dark: transparentize($components-background-dark, $alert-background-transparency-amount) !default;
-$alert-color-brightness-dark: 80% !default;
+$alert-border-color-dark: $components-background-dark !default;
 
 // -----
 // Cards

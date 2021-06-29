@@ -79,3 +79,92 @@
         }
     }
 }
+
+@mixin light-theme-vars {
+    
+}
+
+@mixin dark-theme-vars {
+    @media (prefers-color-scheme: dark) {
+        :root {
+            @content;
+        }
+    }
+
+    .dark {
+        @content;
+    }
+}
+
+@mixin theme-vars($vars...) {
+    // If only light theme
+    @if option('light-theme') and not option('dark-theme') {
+        :root {
+            @each $var in $vars {
+                #{nth($var, 1)}: #{nth($var, 2)}
+            }
+        }
+
+        .dark {
+            @each $var in $vars {
+                #{nth($var, 1)}: #{nth($var, 3)};
+            }
+        }
+    }
+
+    // If only dark theme
+    @else if option('dark-theme') and not option('light-theme') {
+        :root {
+            @each $var in $vars {
+                #{nth($var, 1)}: #{nth($var, 3)}
+            }
+        }
+
+        .light {
+            @each $var in $vars {
+                #{nth($var, 1)}: #{nth($var, 2)};
+            }
+        }
+    }
+
+    // When both are enable
+    @else if option('light-theme', 'dark-theme') {
+        :root {
+            @each $var in $vars {
+                #{nth($var, 1)}: #{nth($var, 2)};
+            }
+        }
+
+        .inverted {
+            @each $var in $vars {
+                #{nth($var, 1)}: #{nth($var, 3)};
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                @each $var in $vars {
+                    #{nth($var, 1)}: #{nth($var, 3)};
+                }
+            }
+
+            .inverted {
+                @each $var in $vars {
+                    #{nth($var, 1)}: #{nth($var, 2)};
+                }
+            }
+        }
+    
+        .light {
+            @each $var in $vars {
+                #{nth($var, 1)}: #{nth($var, 2)};
+            }
+        }
+    
+        .dark {
+            @each $var in $vars {
+                #{nth($var, 1)}: #{nth($var, 3)};
+            }
+        }
+    }
+}

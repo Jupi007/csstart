@@ -6,23 +6,16 @@
 
 @include option("blockquote") {
 
+@include theme-vars(
+    (--blockquote-background, $blockquote-background, $blockquote-background-dark),
+    (--blockquote-color, $blockquote-color, $blockquote-color-dark),
+    (--blockquote-cite-color, $blockquote-cite-color, $blockquote-cite-color-dark),
+    (--blockquote-quote-color, $blockquote-quote-color, $blockquote-quote-color-dark)
+);
+
 .#{class("Blockquote")},
 .#{class("Auto-formating-block")} blockquote
 {
-    --blockquote-background: #{$blockquote-background};
-    --blockquote-color: #{$blockquote-color};
-    --blockquote-cite-color: #{$blockquote-cite-color};
-    --blockquote-quote-color: #{$blockquote-quote-color};
-
-    @include option("dark-theme") {
-        @media (prefers-color-scheme: dark) {
-            --blockquote-background: #{$blockquote-background-dark};
-            --blockquote-color: #{$blockquote-color-dark};
-            --blockquote-cite-color: #{$blockquote-cite-color-dark};
-            --blockquote-quote-color: #{$blockquote-quote-color-dark};
-        }
-    }
-
     position: relative;
 	padding: $blockquote-padding;
     margin-top: $blockquote-margin-top;

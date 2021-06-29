@@ -6,6 +6,12 @@
 
 @include option("form") {
 
+@include theme-vars(
+    (--input-border-color, $input-border-color, $input-border-color-dark),
+    (--input-hover-border-color, $input-hover-border-color, $input-hover-border-color-dark),
+    (--input-background, $input-background, $input-background-dark)
+);
+
 // Global input styles
 // ===================
 input,
@@ -13,17 +19,6 @@ textarea,
 select
 {
     --input-padding: #{$input-padding-vertical} #{$input-padding-horizontal};
-    --input-border-color: #{$input-border-color};
-    --input-hover-border-color: #{$input-hover-border-color};
-    --input-background: #{$input-background};
-
-    @include option("dark-theme") {
-        @media (prefers-color-scheme: dark) {
-            --input-border-color: #{$input-border-color-dark};
-            --input-hover-border-color: #{$input-hover-border-color-dark};
-            --input-background: #{$input-background-dark};
-        }
-    }
 
     vertical-align: middle;
 	padding: var(--input-padding);

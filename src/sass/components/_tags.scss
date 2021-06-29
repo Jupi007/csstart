@@ -6,6 +6,14 @@
 
 @include option("tag") {
 
+@include theme-vars(
+    (--tag-background, $tag-background, $tag-background-dark),
+    (--tag-hover-background, $tag-hover-background, $tag-hover-background-dark),
+    (--tag-color, $tag-color, $tag-color-dark),
+    (--tag-wired-color, $tag-wired-color, $tag-wired-color-dark),
+    (--tag-focus-outline-color, $tag-focus-outline-color, $tag-focus-outline-color-dark)
+);
+
 %tag,
 %button,
 .#{class("Tag")},
@@ -13,21 +21,6 @@
 {
     --tag-padding: #{$tag-padding};
     --tag-font-size: #{$tag-font-size};
-    --tag-background: #{$components-background};
-    --tag-background-hover: #{$components-hover-background};
-    --tag-color: #{$components-color};
-    --tag-wired-color: #{$tag-wired-color};
-    --tag-focus-outline-color: #{$tag-focus-outline-color};
-
-    @include option("dark-theme") {
-        @media (prefers-color-scheme: dark) {
-            --tag-background: #{$components-background-dark};
-            --tag-background-hover: #{$components-hover-background-dark};
-            --tag-color: #{$components-color-dark};
-            --tag-wired-color: #{$tag-wired-color-dark};
-            --tag-focus-outline-color: #{$tag-focus-outline-color-dark};
-        }
-    }
 
 	display: inline-block;
     position: relative;
@@ -54,7 +47,7 @@
 
     // Used to get smooth transitions with :hover
     &::after {
-        background: var(--tag-background-hover);
+        background: var(--tag-hover-background);
     }
 
     // Used to get smooth transitions with :focus
@@ -82,7 +75,7 @@
     @include option("components-ghost") {
         &-#{class("(Component)-ghost")} {
             --tag-background: transparent;
-            --tag-background-hover: transparent;
+            --tag-hover-background: transparent;
             --tag-color: var(--body-color)
         }
     }
@@ -95,14 +88,14 @@
         @include option("components-inverted") {
             &-#{class("(Component)-inverted")} {
                 --tag-background: #{$components-background-dark};
-                --tag-background-hover: #{$components-hover-background-dark};
+                --tag-hover-background: #{$components-hover-background-dark};
                 --tag-color: #{$components-color-dark};
                 --tag-wired-color: #{$tag-wired-color-dark};
                 --tag-focus-outline-color: #{$tag-focus-outline-color-dark};
 
                 @media (prefers-color-scheme: dark) {
                     --tag-background: #{$components-background};
-                    --tag-background-hover: #{$components-hover-background};
+                    --tag-hover-background: #{$components-hover-background};
                     --tag-color: #{$components-color};
                     --tag-wired-color: #{$tag-wired-color};
                     --tag-focus-outline-color: #{$tag-focus-outline-color};
@@ -114,7 +107,7 @@
         @include option("components-dark") {
             &-#{class("(Component)-dark")} {
                 --tag-background: #{$components-background-dark};
-                --tag-background-hover: #{$components-hover-background-dark};
+                --tag-hover-background: #{$components-hover-background-dark};
                 --tag-color: #{$components-color-dark};
                 --tag-wired-color: #{$tag-wired-color-dark};
                 --tag-focus-outline-color: #{$tag-focus-outline-color-dark};
@@ -125,7 +118,7 @@
         @include option("components-light") {
             &-#{class("(Component)-light")} {
                 --tag-background: #{$components-background};
-                --tag-background-hover: #{$components-hover-background};
+                --tag-hover-background: #{$components-hover-background};
                 --tag-color: #{$components-color};
                 --tag-wired-color: #{$tag-wired-color};
                 --tag-focus-outline-color: #{$tag-focus-outline-color};
@@ -138,7 +131,7 @@
 	@each $component, $background in $components {
 		&-#{$component} {
 			--tag-background: #{$background};
-            --tag-background-hover: #{darken($background, $components-hover-darken)};
+            --tag-hover-background: #{darken($background, $components-hover-darken)};
             --tag-focus-outline-color: #{lighten($background, $tag-focus-outline-color-lighten)};
 
             @if ($background == transparent) {

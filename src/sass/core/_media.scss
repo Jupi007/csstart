@@ -10,7 +10,7 @@
     }
 }
 
-@include option("dark-theme-utilities", "utilities") {
+@include option("dark-theme-utilities", "utilities", "dark-theme", "light-theme") {
     @media (prefers-color-scheme: dark) {
         @include media-utilities("dark-theme", class("dark-theme-prefix") + "-");
     }

@@ -6,29 +6,20 @@
 
 @include option("form") {
 
+@include theme-vars(
+    (--checkbox-checked-background, $checkbox-checked-background, $checkbox-checked-background-dark),
+    (--checkbox-checked-icon-color, $checkbox-checked-icon-color, $checkbox-checked-icon-color-dark),
+    (--checkbox-focus-outline-color, $checkbox-focus-outline-color, $checkbox-focus-outline-color-dark),
+    (--checkbox-checked-icon, $checkbox-checked-icon, $checkbox-checked-icon-dark),
+    (--radio-checked-icon, $radio-checked-icon, $radio-checked-icon-dark),
+    (--checkbox-indeterminate-icon, $checkbox-indeterminate-icon, $checkbox-indeterminate-icon-dark)
+);
+
 // Checkbox and radio styles
 // =========================
 [type="checkbox"],
 [type="radio"]
 {
-    --checkbox-checked-background: #{$checkbox-checked-background};
-    --checkbox-checked-icon-color: #{$checkbox-checked-icon-color};
-
-    --checkbox-checked-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$checkbox-checked-icon-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 10l3 3l6-6'/></svg>"))};
-    --radio-checked-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='1.5' fill='#{$checkbox-checked-icon-color}'/></svg>"))};
-    --checkbox-indeterminate-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$checkbox-checked-icon-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/></svg>"))};
-
-    @include option("dark-theme") {
-        @media (prefers-color-scheme: dark) {
-            --checkbox-checked-background: #{$checkbox-checked-background-dark};
-            --checkbox-checked-icon-color: #{$checkbox-checked-icon-color-dark};
-
-            --checkbox-checked-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$checkbox-checked-icon-color-dark}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 10l3 3l6-6'/></svg>"))};
-            --radio-checked-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='1.5' fill='#{$checkbox-checked-icon-color-dark}'/></svg>"))};
-            --checkbox-indeterminate-icon: #{escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$checkbox-checked-icon-color-dark}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 10h8'/></svg>"))};
-        }
-    }
-
     position: relative;
     z-index: 1;
 	height: $checkbox-size;
@@ -51,7 +42,7 @@
 
     // Used to get smooth transitions with :focus
     &::before {
-        outline: $checkbox-focus-outline-size solid $checkbox-focus-outline-color; // TODO: use css var for outline color
+        outline: $checkbox-focus-outline-size solid var(--checkbox-focus-outline-color);
         outline-offset: if($checkbox-focus-outline-offset != 0, $checkbox-focus-outline-offset + 1, $checkbox-focus-outline-offset);
     }
 

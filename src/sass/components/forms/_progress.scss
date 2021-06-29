@@ -5,24 +5,17 @@
 // Automatically style html progress form elements
 
 @include option("form") {
-
+	
+@include theme-vars(
+    (--progress-background, $progress-background, $progress-background-dark),
+    (--progress-bar-background, $progress-bar-background, $progress-bar-background-dark),
+    (--progress-indeterminate-background, $progress-indeterminate-background, $progress-indeterminate-background-dark)
+);
 // Progress and meter styles
 // =========================
 meter,
 progress
 {
-    --progress-background: #{$progress-background};
-	--progress-bar-background: #{$progress-bar-background};
-    --progress-indeterminate-background: #{darken( $progress-background , 8% )};
-
-    @include option("dark-theme") {
-        @media (prefers-color-scheme: dark) {
-            --progress-background: #{$progress-background-dark};
-			--progress-bar-background: #{$progress-bar-background-dark};
-            --progress-indeterminate-background: #{lighten( $progress-background-dark , 8% )};
-        }
-    }
-
 	background: var(--progress-background);
 	border: none;
 	height: $progress-height;
