@@ -27,23 +27,21 @@
     margin: spacer('tiny-plus') spacer('medium');
     @include border-radius($checkbox-border-radius);
 
-    // Used to get smooth transitions with :hover, :focus, :checked and :indeterminate by using opacity transitions - common style of both
-    &::after,
-    &::before {
+    outline: $checkbox-focus-outline-size solid transparentize(#000, 1);
+    outline-offset: $checkbox-focus-outline-offset;
+
+    @include transition(outline-color);
+
+    // Used to get smooth transitions with :hover, :checked and :indeterminate by using opacity transitions
+    &::after {
         @extend %magic-pseudo-element;
 
-        @include transition("opacity");
+        @include transition(opacity);
     }
 
     // Used to get smooth transitions with :hover
     &::after {
 		background-color: var(--checkbox-checked-background);
-    }
-
-    // Used to get smooth transitions with :focus
-    &::before {
-        outline: $checkbox-focus-outline-size solid var(--checkbox-focus-outline-color);
-        outline-offset: if($checkbox-focus-outline-offset != 0, $checkbox-focus-outline-offset + 1, $checkbox-focus-outline-offset);
     }
 
     // Interactive states and behaviors
@@ -59,8 +57,8 @@
         }
     }
 
-    &:focus::before {
-        opacity: 1;
+    &:focus {
+        outline-color: var(--checkbox-focus-outline-color);
     }
 
 }

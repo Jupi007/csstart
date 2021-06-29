@@ -3,16 +3,10 @@
 .Table tbody td::after,
 .Afb table tbody td::after,
 .Card::after,
-.Card::before,
 .Tag::after,
-.Tag::before,
 .Button::after,
-.Button::before,
 [type=checkbox]::after,
-[type=checkbox]::before,
-[type=radio]::after,
-[type=radio]::before,
-a::before {
+[type=radio]::after {
 	position: absolute;
 	z-index: -1;
 	top: 0;
@@ -2084,19 +2078,13 @@ a {
 	position: relative;
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	transition-property: color;
+	transition-property: color, outline-color;
 	text-decoration: underline;
 	color: var(--link-color);
-	background: transparent;
-}
-
-a::before {
-	transition-timing-function: ease;
-	transition-duration: .2s;
-	transition-property: opacity;
 	border-radius: 3px;
-	outline: 3px solid var(--link-focus-outline-color);
+	outline: 3px solid rgba(0, 0, 0, 0);
 	outline-offset: 2px;
+	background: transparent;
 }
 
 a:hover {
@@ -2105,11 +2093,7 @@ a:hover {
 }
 
 a:focus {
-	outline: none;
-}
-
-a:focus::before {
-	opacity: 1;
+	outline-color: var(--link-focus-outline-color);
 }
 
 a:not([href]):not([tabindex]),
@@ -2233,15 +2217,6 @@ label {
 
 button {
 	border-radius: 0;
-}
-
-button:focus {
-	outline: 1px dotted;
-	outline: 5px auto -webkit-focus-ring-color;
-}
-
-button:focus:not(:focus-visible) {
-	outline: 0;
 }
 
 input,
@@ -2433,12 +2408,16 @@ summary {
 	   -moz-user-select: none;
 	    -ms-user-select: none;
 	        user-select: none;
+	transition-timing-function: ease;
+	transition-duration: .2s;
+	transition-property: outline-color;
+	border-radius: 3px;
+	outline: 3px solid rgba(0, 0, 0, 0);
+	outline-offset: 2px;
 }
 
 summary:focus {
-	border-radius: 3px;
-	outline: 3px solid var(--summary-focus-outline-color);
-	outline-offset: 2px;
+	outline-color: var(--summary-focus-outline-color);
 }
 
 summary > h1,
@@ -10182,13 +10161,16 @@ select[multiple] option:first-child {
 	width: 20px;
 	height: 20px;
 	margin: calc(var(--spacer-base) * .5) calc(var(--spacer-base) * 1);
+	transition-timing-function: ease;
+	transition-duration: .2s;
+	transition-property: outline-color;
 	border-radius: 3px;
+	outline: 3px solid rgba(0, 0, 0, 0);
+	outline-offset: 2px;
 }
 
 [type=checkbox]::after,
-[type=checkbox]::before,
-[type=radio]::after,
-[type=radio]::before {
+[type=radio]::after {
 	transition-timing-function: ease;
 	transition-duration: .2s;
 	transition-property: opacity;
@@ -10197,12 +10179,6 @@ select[multiple] option:first-child {
 [type=checkbox]::after,
 [type=radio]::after {
 	background-color: var(--checkbox-checked-background);
-}
-
-[type=checkbox]::before,
-[type=radio]::before {
-	outline: 3px solid var(--checkbox-focus-outline-color);
-	outline-offset: 3px;
 }
 
 [type=checkbox]:checked,
@@ -10221,9 +10197,9 @@ select[multiple] option:first-child {
 	border: 1px solid var(--checkbox-checked-background);
 }
 
-[type=checkbox]:focus::before,
-[type=radio]:focus::before {
-	opacity: 1;
+[type=checkbox]:focus,
+[type=radio]:focus {
+	outline-color: var(--checkbox-focus-outline-color);
 }
 
 [type=checkbox]::after {
@@ -10384,10 +10360,12 @@ select[multiple] option:first-child {
 	height: 15px;
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	-moz-transition-property: background, border;
-	transition-property: background, border;
+	-moz-transition-property: background, border, outline-color;
+	transition-property: background, border, outline-color;
 	border: 1px solid var(--range-thumb-border-color);
 	border-radius: 50%;
+	outline: 3px solid rgba(0, 0, 0, 0);
+	outline-offset: 0;
 	background: var(--range-thumb-color);
 	-moz-appearance: none;
 	     appearance: none;
@@ -10402,10 +10380,12 @@ select[multiple] option:first-child {
 	height: 15px;
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	-webkit-transition-property: background, border;
-	transition-property: background, border;
+	-webkit-transition-property: background, border, outline-color;
+	transition-property: background, border, outline-color;
 	border: 1px solid var(--range-thumb-border-color);
 	border-radius: 50%;
+	outline: 3px solid rgba(0, 0, 0, 0);
+	outline-offset: 0;
 	background: var(--range-thumb-color);
 	-webkit-appearance: none;
 	        appearance: none;
@@ -10420,10 +10400,12 @@ select[multiple] option:first-child {
 	height: 15px;
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	-ms-transition-property: background, border;
-	transition-property: background, border;
+	-ms-transition-property: background, border, outline-color;
+	transition-property: background, border, outline-color;
 	border: 1px solid var(--range-thumb-border-color);
 	border-radius: 50%;
+	outline: 3px solid rgba(0, 0, 0, 0);
+	outline-offset: 0;
 	background: var(--range-thumb-color);
 	appearance: none;
 }
@@ -10433,18 +10415,15 @@ select[multiple] option:first-child {
 }
 
 [type=range]:focus::-moz-range-thumb {
-	outline: 3px solid var(--range-thumb-focus-outline-color);
-	outline-offset: 0;
+	outline-color: var(--range-thumb-focus-outline-color);
 }
 
 [type=range]:focus::-webkit-slider-thumb {
-	outline: 3px solid var(--range-thumb-focus-outline-color);
-	outline-offset: 0;
+	outline-color: var(--range-thumb-focus-outline-color);
 }
 
 [type=range]:focus::-ms-thumb {
-	outline: 3px solid var(--range-thumb-focus-outline-color);
-	outline-offset: 0;
+	outline-color: var(--range-thumb-focus-outline-color);
 }
 
 [type=range]::-moz-range-progress {
@@ -10667,21 +10646,21 @@ meter::-webkit-meter-even-less-good-value {
 	padding: var(--tag-padding);
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	transition-property: color;
+	transition-property: color, outline-color;
 	vertical-align: middle;
 	text-decoration: none;
 	color: var(--tag-color);
 	border: none;
 	border-radius: 3px;
+	outline: 3px solid rgba(0, 0, 0, 0);
+	outline-offset: 2px;
 	background: var(--tag-background);
 	--tag-padding: calc(var(--spacer-base) * .25) calc(var(--spacer-base) * .5);
 	--tag-font-size: .8em;
 }
 
 .Tag::after,
-.Tag::before,
-.Button::after,
-.Button::before {
+.Button::after {
 	transition-timing-function: ease;
 	transition-duration: .2s;
 	transition-property: opacity;
@@ -10690,12 +10669,6 @@ meter::-webkit-meter-even-less-good-value {
 .Tag::after,
 .Button::after {
 	background: var(--tag-hover-background);
-}
-
-.Tag::before,
-.Button::before {
-	outline: 3px solid var(--tag-focus-outline-color);
-	outline-offset: 2px;
 }
 
 .Tag--wired,
@@ -10773,13 +10746,7 @@ a.Tag:focus,
 .Button:focus {
 	text-decoration: none;
 	color: var(--tag-color);
-	outline: 0;
-}
-
-button.Tag:focus:not(:active)::before,
-a.Tag:focus:not(:active)::before,
-.Button:focus:not(:active)::before {
-	opacity: 1;
+	outline-color: var(--tag-focus-outline-color);
 }
 
 button.Tag--wired:hover,
@@ -11005,13 +10972,17 @@ a.Tag--wired:hover::after,
 	z-index: 1;
 	display: flex;
 	flex-direction: column;
+	transition-timing-function: ease;
+	transition-duration: .2s;
+	transition-property: outline-color;
 	word-wrap: break-word;
 	border-radius: 3px;
+	outline: 3px solid rgba(0, 0, 0, 0);
+	outline-offset: 2px;
 	background: var(--card-background);
 }
 
-.Card::after,
-.Card::before {
+.Card::after {
 	transition-timing-function: ease;
 	transition-duration: .2s;
 	transition-property: opacity;
@@ -11019,11 +10990,6 @@ a.Tag--wired:hover::after,
 
 .Card::after {
 	background: var(--card-background-hover);
-}
-
-.Card::before {
-	outline: 3px solid var(--card-focus-outline-color);
-	outline-offset: 2px;
 }
 
 .Card-body {
@@ -11083,11 +11049,7 @@ a.Card:hover::after {
 }
 
 a.Card:focus {
-	outline: 0;
-}
-
-a.Card:focus:not(:active)::before {
-	opacity: 1;
+	outline-color: var(--card-focus-outline-color);
 }
 
 :root {

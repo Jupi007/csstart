@@ -35,25 +35,21 @@
 	background: var(--tag-background);
 	color: var(--tag-color);
 
-    @include transition("color");
+    outline: $tag-focus-outline-size solid transparentize(#000, 1);
+    outline-offset: $tag-focus-outline-offset;
+
+    @include transition('color, outline-color');
 
     // Used to get smooth transitions with :hover and :focus by using opacity transitions - common style of both
-    &::after,
-    &::before {
+    &::after {
         @extend %magic-pseudo-element;
 
-        @include transition("opacity");
+        @include transition(opacity);
     }
 
     // Used to get smooth transitions with :hover
     &::after {
         background: var(--tag-hover-background);
-    }
-
-    // Used to get smooth transitions with :focus
-    &::before {
-        outline: $tag-focus-outline-size solid var(--tag-focus-outline-color);
-        outline-offset: $tag-focus-outline-offset;
     }
 
     // Wired (border only) variant
@@ -123,12 +119,7 @@ a.#{class("Tag")},
     &:focus {
         text-decoration: none;
     	color: var(--tag-color);
-        outline: 0;
-
-        // Show :focus box-shadow (defined in :before)
-        &:not(:active)::before {
-            opacity: 1;
-        }
+        outline-color: var(--tag-focus-outline-color);;
     }
 
     &--#{class("(Component)--wired")} {

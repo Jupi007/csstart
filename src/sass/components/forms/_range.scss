@@ -82,7 +82,10 @@
 		background: var(--range-thumb-color);
         border: 1px solid var(--range-thumb-border-color);
 
-        @include transition("background, border");
+        outline: $range-thumb-focus-outline-size solid transparentize(#000, 1);
+        outline-offset: $range-thumb-focus-outline-offset;
+
+        @include transition("background, border, outline-color");
 
 		&:hover {
             background: var(--range-thumb-hover-color);
@@ -91,8 +94,7 @@
 
     &:focus {
         @include range-thumb {
-            outline: $range-thumb-focus-outline-size solid var(--range-thumb-focus-outline-color); // TODO: use css var for outline color
-            outline-offset: $range-thumb-focus-outline-offset;
+            outline-color: var(--range-thumb-focus-outline-color);
         }
     }
 

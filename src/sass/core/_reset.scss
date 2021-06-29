@@ -170,18 +170,12 @@ a {
     color: var(--link-color);
     text-decoration: $link-decoration;
     background: transparent;
+    
+    border-radius: $border-radius-base;
+    outline: $link-focus-outline-size solid transparentize(#000, 1);
+    outline-offset: $link-focus-outline-offset;
 
-    @include transition('color');
-
-    &::before {
-        @extend %magic-pseudo-element;
-
-        border-radius: $border-radius-base;
-        outline: $link-focus-outline-size solid var(--link-focus-outline-color);
-        outline-offset: $link-focus-outline-offset;
-
-        @include transition("opacity");
-    }
+    @include transition('color, outline-color');
 
     &:hover {
         color: var(--link-hover-color);
@@ -189,11 +183,7 @@ a {
     }
 
     &:focus {
-        outline: none;
-        
-        &::before {
-            opacity: 1;
-        }
+        outline-color: var(--link-focus-outline-color);
     }
 }
 
@@ -318,15 +308,6 @@ label {
 
 button {
     border-radius: 0;
-
-    &:focus {
-        outline: 1px dotted;
-        outline: 5px auto -webkit-focus-ring-color;
-    }
-}
-
-button:focus:not(:focus-visible) {
-    outline: 0;
 }
 
 input,
@@ -491,10 +472,14 @@ summary {
     cursor: pointer;
     user-select: none;
 
+    border-radius: $border-radius-base;
+    outline: $summary-focus-outline-size solid transparentize(#000, 1);;
+    outline-offset: $summary-focus-outline-offset;
+
+    @include transition(outline-color);
+
     &:focus {
-        border-radius: $border-radius-base;
-        outline: $summary-focus-outline-size solid var(--summary-focus-outline-color);
-        outline-offset: $summary-focus-outline-offset;
+        outline-color: var(--summary-focus-outline-color);
     }
 
     > h1, > h2, > h3, > h4, > h5, > h6 {
