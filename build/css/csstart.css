@@ -11055,6 +11055,7 @@ a.Card:focus {
 	table-layout: auto;
 	border-spacing: 0;
 	border-collapse: separate;
+	color: var(--body-color);
 	border: 1px solid var(--table-border-color);
 	border-radius: 3px;
 	background: var(--table-background);
