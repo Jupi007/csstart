@@ -9,6 +9,7 @@
 @include theme-vars(
     (--tag-background, $tag-background, $tag-background-dark),
     (--tag-hover-background, $tag-hover-background, $tag-hover-background-dark),
+    (--tag-wired-hover-background, transparentize($tag-hover-background, $tag-wired-hover-background-transparentize), transparentize($tag-hover-background-dark, $tag-wired-hover-background-transparentize)),
     (--tag-color, $tag-color, $tag-color-dark),
     (--tag-wired-color, $tag-wired-color, $tag-wired-color-dark),
     (--tag-focus-outline-color, $tag-focus-outline-color, $tag-focus-outline-color-dark)
@@ -45,11 +46,6 @@
         color: var(--tag-wired-color);
         // Using inset box-shadow to get the same size as other Buttons
         box-shadow: 0 0 0 $tag-border-width var(--tag-background) inset;
-
-        // Use the same hover background-color as non hover and wired buttons
-        &:hover {
-            background: var(--tag-background);
-        }
     }
 
     // Ghost (without background) variant
@@ -58,7 +54,8 @@
         &-#{class("(Component)-ghost")} {
             --tag-background: transparent;
             --tag-hover-background: transparent;
-            --tag-color: var(--body-color)
+            --tag-wired-hover-background: transparent;
+            --tag-color: var(--body-color);
         }
     }
 
@@ -68,6 +65,7 @@
 		&-#{$component} {
 			--tag-background: #{$background};
             --tag-hover-background: #{darken($background, $components-hover-darken)};
+            --tag-wired-hover-background: #{transparentize($background, $tag-wired-hover-background-transparentize)};
             --tag-focus-outline-color: #{lighten($background, $tag-focus-outline-color-lighten)};
 
             @if ($background == transparent) {
@@ -108,9 +106,9 @@ a.#{class("Tag")},
         &:hover, &:focus {
             color: var(--tag-wired-color);
         }
-
-        &:hover::after {
-            opacity: $tag-wired-background-opacity;
+        
+        &:hover {
+            background: var(--tag-wired-hover-background);
         }
     }
 }

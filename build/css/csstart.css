@@ -10546,6 +10546,7 @@ meter::-webkit-meter-even-less-good-value {
 :root {
 	--tag-background: #333;
 	--tag-hover-background: #1a1a1a;
+	--tag-wired-hover-background: rgba(26, 26, 26, .2);
 	--tag-color: #f2f2f2;
 	--tag-wired-color: #0d0d0d;
 	--tag-focus-outline-color: #666;
@@ -10554,6 +10555,7 @@ meter::-webkit-meter-even-less-good-value {
 .inverted {
 	--tag-background: #fff;
 	--tag-hover-background: #e6e6e6;
+	--tag-wired-hover-background: rgba(230, 230, 230, .2);
 	--tag-color: #0d0d0d;
 	--tag-wired-color: #f2f2f2;
 	--tag-focus-outline-color: gray;
@@ -10563,6 +10565,7 @@ meter::-webkit-meter-even-less-good-value {
 	:root {
 		--tag-background: #fff;
 		--tag-hover-background: #e6e6e6;
+		--tag-wired-hover-background: rgba(230, 230, 230, .2);
 		--tag-color: #0d0d0d;
 		--tag-wired-color: #f2f2f2;
 		--tag-focus-outline-color: gray;
@@ -10571,6 +10574,7 @@ meter::-webkit-meter-even-less-good-value {
 	.inverted {
 		--tag-background: #333;
 		--tag-hover-background: #1a1a1a;
+		--tag-wired-hover-background: rgba(26, 26, 26, .2);
 		--tag-color: #f2f2f2;
 		--tag-wired-color: #0d0d0d;
 		--tag-focus-outline-color: #666;
@@ -10580,6 +10584,7 @@ meter::-webkit-meter-even-less-good-value {
 .light {
 	--tag-background: #333;
 	--tag-hover-background: #1a1a1a;
+	--tag-wired-hover-background: rgba(26, 26, 26, .2);
 	--tag-color: #f2f2f2;
 	--tag-wired-color: #0d0d0d;
 	--tag-focus-outline-color: #666;
@@ -10588,6 +10593,7 @@ meter::-webkit-meter-even-less-good-value {
 .dark {
 	--tag-background: #fff;
 	--tag-hover-background: #e6e6e6;
+	--tag-wired-hover-background: rgba(230, 230, 230, .2);
 	--tag-color: #0d0d0d;
 	--tag-wired-color: #f2f2f2;
 	--tag-focus-outline-color: gray;
@@ -10621,15 +10627,11 @@ meter::-webkit-meter-even-less-good-value {
 	box-shadow: 0 0 0 1px var(--tag-background) inset;
 }
 
-.Tag--wired:hover,
-.Button--wired:hover {
-	background: var(--tag-background);
-}
-
 .Tag-ghost,
 .Button-ghost {
 	--tag-background: transparent;
 	--tag-hover-background: transparent;
+	--tag-wired-hover-background: transparent;
 	--tag-color: var(--body-color);
 }
 
@@ -10637,6 +10639,7 @@ meter::-webkit-meter-even-less-good-value {
 .Button-success {
 	--tag-background: #74cf61;
 	--tag-hover-background: #52c23b;
+	--tag-wired-hover-background: rgba(116, 207, 97, .2);
 	--tag-focus-outline-color: #b9e7af;
 	--tag-color: #0d0d0d;
 }
@@ -10645,6 +10648,7 @@ meter::-webkit-meter-even-less-good-value {
 .Button-info {
 	--tag-background: #74c0cd;
 	--tag-hover-background: #4eafc0;
+	--tag-wired-hover-background: rgba(116, 192, 205, .2);
 	--tag-focus-outline-color: #bfe2e8;
 	--tag-color: #0d0d0d;
 }
@@ -10653,6 +10657,7 @@ meter::-webkit-meter-even-less-good-value {
 .Button-warning {
 	--tag-background: #d9831e;
 	--tag-hover-background: #ac6818;
+	--tag-wired-hover-background: rgba(217, 131, 30, .2);
 	--tag-focus-outline-color: #ebb372;
 	--tag-color: #f2f2f2;
 }
@@ -10661,6 +10666,7 @@ meter::-webkit-meter-even-less-good-value {
 .Button-danger {
 	--tag-background: #d94d4d;
 	--tag-hover-background: #c82b2b;
+	--tag-wired-hover-background: rgba(217, 77, 77, .2);
 	--tag-focus-outline-color: #eba1a1;
 	--tag-color: #f2f2f2;
 }
@@ -10696,10 +10702,10 @@ a.Tag--wired:focus,
 	color: var(--tag-wired-color);
 }
 
-button.Tag--wired:hover::after,
-a.Tag--wired:hover::after,
-.Button--wired:hover::after {
-	opacity: .2;
+button.Tag--wired:hover,
+a.Tag--wired:hover,
+.Button--wired:hover {
+	background: var(--tag-wired-hover-background);
 }
 
 .Tag--l {
