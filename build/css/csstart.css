@@ -10029,29 +10029,29 @@ textarea {
 }
 
 :root {
-	--select-icon: url('data:image/svg+xml,%3csvg viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3e%3cpath d=\'m5 8 5 5 5-5\' fill=\'none\' stroke=\'%23ffffff\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\'/%3e%3c/svg%3e');
+	--select-icon: url('data:image/svg+xml,%3csvg viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3e%3cpath d=\'m5 8 5 5 5-5\' fill=\'none\' stroke=\'%230d0d0d\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\'/%3e%3c/svg%3e');
 }
 
 .inverted {
-	--select-icon: url('data:image/svg+xml,%3csvg viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3e%3cpath d=\'m5 8 5 5 5-5\' fill=\'none\' stroke=\'%23ffffff\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\'/%3e%3c/svg%3e');
+	--select-icon: url('data:image/svg+xml,%3csvg viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3e%3cpath d=\'m5 8 5 5 5-5\' fill=\'none\' stroke=\'%23f2f2f2\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\'/%3e%3c/svg%3e');
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--select-icon: url('data:image/svg+xml,%3csvg viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3e%3cpath d=\'m5 8 5 5 5-5\' fill=\'none\' stroke=\'%23ffffff\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\'/%3e%3c/svg%3e');
+		--select-icon: url('data:image/svg+xml,%3csvg viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3e%3cpath d=\'m5 8 5 5 5-5\' fill=\'none\' stroke=\'%23f2f2f2\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\'/%3e%3c/svg%3e');
 	}
 
 	.inverted {
-		--select-icon: url('data:image/svg+xml,%3csvg viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3e%3cpath d=\'m5 8 5 5 5-5\' fill=\'none\' stroke=\'%23ffffff\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\'/%3e%3c/svg%3e');
+		--select-icon: url('data:image/svg+xml,%3csvg viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3e%3cpath d=\'m5 8 5 5 5-5\' fill=\'none\' stroke=\'%230d0d0d\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\'/%3e%3c/svg%3e');
 	}
 }
 
 .light {
-	--select-icon: url('data:image/svg+xml,%3csvg viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3e%3cpath d=\'m5 8 5 5 5-5\' fill=\'none\' stroke=\'%23ffffff\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\'/%3e%3c/svg%3e');
+	--select-icon: url('data:image/svg+xml,%3csvg viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3e%3cpath d=\'m5 8 5 5 5-5\' fill=\'none\' stroke=\'%230d0d0d\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\'/%3e%3c/svg%3e');
 }
 
 .dark {
-	--select-icon: url('data:image/svg+xml,%3csvg viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3e%3cpath d=\'m5 8 5 5 5-5\' fill=\'none\' stroke=\'%23ffffff\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\'/%3e%3c/svg%3e');
+	--select-icon: url('data:image/svg+xml,%3csvg viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3e%3cpath d=\'m5 8 5 5 5-5\' fill=\'none\' stroke=\'%23f2f2f2\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\'/%3e%3c/svg%3e');
 }
 
 select:not([multiple]) {

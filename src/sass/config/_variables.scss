@@ -54,7 +54,7 @@ $input-color-height: 35px !default;
 $input-color-padding: spacer("tiny-plus") !default;
 
 $select-option-padding: spacer("small") spacer("medium") !default;
-$select-icon-color: color('white') !default;
+$select-icon-color: $body-color !default;
 $select-icon: escape-svg(url("data:image/svg+xml,<svg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path d='m5 8 5 5 5-5' fill='none' stroke='#{$select-icon-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/></svg>")) !default;
 
 $checkbox-size: 20px !default;
@@ -99,7 +99,7 @@ $meter-sub-sub-optimum-background: color("success") !default;
 $input-border-color-dark: grey(50) !default;
 $input-hover-border-color-dark: grey(20) !default;
 $input-background-dark: grey(80) !default;
-$select-icon-color-dark: color('white') !default;
+$select-icon-color-dark: $body-color-dark !default;
 $select-icon-dark: escape-svg(url("data:image/svg+xml,<svg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path d='m5 8 5 5 5-5' fill='none' stroke='#{$select-icon-color-dark}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/></svg>")) !default;
 $checkbox-checked-background-dark: $components-background-dark !default;
 $checkbox-checked-icon-color-dark: $components-color-dark !default;
