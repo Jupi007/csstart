@@ -59,50 +59,6 @@
 	> :last-child {
 		margin-bottom: 0;
 	}
-
-    // Dark/Light theme variants - enabled only if dark-theme option is set to true
-    // ============================================================================
-    @include option("dark-theme") {
-
-        // Dynamic inverted variant - ex: use dark scheme colors in a light environment
-        @include option("components-inverted") {
-        	&-#{class("(Component)-inverted")} {
-                --blockquote-background: #{$blockquote-background-dark};
-                --blockquote-color: #{$blockquote-color-dark};
-                --blockquote-cite-color: #{$blockquote-cite-color-dark};
-                --blockquote-quote-color: #{$blockquote-quote-color-dark};
-
-                @include option("dark-theme") {
-                    @media (prefers-color-scheme: dark) {
-                        --blockquote-background: #{$blockquote-background};
-                        --blockquote-color: #{$blockquote-color};
-                        --blockquote-cite-color: #{$blockquote-cite-color};
-                        --blockquote-quote-color: #{$blockquote-quote-color};
-                    }
-                }
-            }
-        }
-
-        // Dark theme variant - always use dark scheme colors
-        @include option("components-light") {
-        	&-#{class("(Component)-light")} {
-                --blockquote-background: #{$blockquote-background};
-                --blockquote-color: #{$blockquote-color};
-                --blockquote-cite-color: #{$blockquote-cite-color};
-                --blockquote-quote-color: #{$blockquote-quote-color};
-            }
-        }
-
-        // Light theme variant - always use light scheme colors
-        @include option("components-dark") {
-        	&-#{class("(Component)-dark")} {
-                --blockquote-background: #{$blockquote-background-dark};
-                --blockquote-color: #{$blockquote-color-dark};
-                --blockquote-cite-color: #{$blockquote-cite-color-dark};
-                --blockquote-quote-color: #{$blockquote-quote-color-dark};
-            }
-        }
-    }
 }
 
 }

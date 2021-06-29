@@ -80,52 +80,6 @@
         }
     }
 
-    // Dark/Light theme variants - enabled only if dark-theme option is set to true
-    // ============================================================================
-    @include option("dark-theme") {
-
-        // Dynamic inverted variant - ex: use dark scheme colors in a light environment
-        @include option("components-inverted") {
-            &-#{class("(Component)-inverted")} {
-                --tag-background: #{$components-background-dark};
-                --tag-hover-background: #{$components-hover-background-dark};
-                --tag-color: #{$components-color-dark};
-                --tag-wired-color: #{$tag-wired-color-dark};
-                --tag-focus-outline-color: #{$tag-focus-outline-color-dark};
-
-                @media (prefers-color-scheme: dark) {
-                    --tag-background: #{$components-background};
-                    --tag-hover-background: #{$components-hover-background};
-                    --tag-color: #{$components-color};
-                    --tag-wired-color: #{$tag-wired-color};
-                    --tag-focus-outline-color: #{$tag-focus-outline-color};
-                }
-            }
-        }
-
-        // Dark theme variant - always use dark scheme colors
-        @include option("components-dark") {
-            &-#{class("(Component)-dark")} {
-                --tag-background: #{$components-background-dark};
-                --tag-hover-background: #{$components-hover-background-dark};
-                --tag-color: #{$components-color-dark};
-                --tag-wired-color: #{$tag-wired-color-dark};
-                --tag-focus-outline-color: #{$tag-focus-outline-color-dark};
-            }
-        }
-
-        // Light theme variant - always use light scheme colors
-        @include option("components-light") {
-            &-#{class("(Component)-light")} {
-                --tag-background: #{$components-background};
-                --tag-hover-background: #{$components-hover-background};
-                --tag-color: #{$components-color};
-                --tag-wired-color: #{$tag-wired-color};
-                --tag-focus-outline-color: #{$tag-focus-outline-color};
-            }
-        }
-    }
-
     // Color variants (defined in $components)
     // =======================================
 	@each $component, $background in $components {

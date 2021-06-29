@@ -39,42 +39,6 @@
         }
     }
 
-    // Dark/Light theme variants - enabled only if dark-theme option is set to true
-    // ============================================================================
-    @include option("dark-theme") {
-
-        // Dynamic inverted variant - ex: use dark scheme colors in a light environment
-        @include option("components-inverted") {
-            &-#{class("(Component)-inverted")} {
-                --alert-border-color: #{$components-background-dark};
-                --alert-color: var(--body-color-dark);
-
-                @include option("dark-theme") {
-                    @media (prefers-color-scheme: dark) {
-                        --alert-border-color: #{$components-background};
-                        --alert-color: var(--body-color);
-                    }
-                }
-            }
-        }
-
-        // Dark theme variant - always use dark scheme colors
-        @include option("components-dark") {
-            &-#{class("(Component)-dark")} {
-                --alert-border-color: #{$components-background-dark};
-                --alert-color: #{$body-color-dark};
-            }
-        }
-
-        // Light theme variant - always use light scheme colors
-        @include option("components-light") {
-            &-#{class("(Component)-light")} {
-                --alert-border-color: #{$components-background};
-                --alert-color: #{$body-color};
-            }
-        }
-    }
-
     // Color variants (defined in $components)
     // =======================================
 	@each $component, $background in $components {
