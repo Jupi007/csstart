@@ -19,7 +19,7 @@
 .#{class("Table")},
 .#{class("Auto-formating-block")} table
 {
-    --table-cell-padding: $table-cell-padding;
+    --table-cell-padding: #{$table-cell-padding};
 
     width: 100%;
 	max-width: 100%;

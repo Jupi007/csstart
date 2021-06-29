@@ -11126,7 +11126,7 @@ a.Card:focus {
 	border: 1px solid var(--table-border-color);
 	border-radius: 3px;
 	background: var(--table-background);
-	--table-cell-padding: $table-cell-padding;
+	--table-cell-padding: calc(var(--spacer-base) * .9);
 }
 
 .Table td,
