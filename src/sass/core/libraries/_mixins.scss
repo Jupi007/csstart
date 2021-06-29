@@ -135,7 +135,7 @@
             }
         }
 
-        .inverted {
+        .#{class("(Component)-inverted")} {
             @each $var in $vars {
                 #{nth($var, 1)}: #{nth($var, 3)};
             }
@@ -148,20 +148,20 @@
                 }
             }
 
-            .inverted {
+            .#{class("(Component)-inverted")} {
                 @each $var in $vars {
                     #{nth($var, 1)}: #{nth($var, 2)};
                 }
             }
         }
     
-        .light {
+        .#{class("(Component)-light")} {
             @each $var in $vars {
                 #{nth($var, 1)}: #{nth($var, 2)};
             }
         }
     
-        .dark {
+        .#{class("(Component)-dark")} {
             @each $var in $vars {
                 #{nth($var, 1)}: #{nth($var, 3)};
             }
