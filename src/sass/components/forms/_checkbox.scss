@@ -51,13 +51,15 @@
 // Specific styles
 // ===============
 
-[type="checkbox"] {
+[type="checkbox"]:checked {
     background-image: var(--checkbox-checked-icon);
 }
 
 [type="radio"] {
 	border-radius: 50%;
-    background-image: var(--radio-checked-icon);
+    &:checked {
+        background-image: var(--radio-checked-icon);
+    }
 }
 
 [type="checkbox"],
