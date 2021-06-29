@@ -20,29 +20,17 @@
 [type="checkbox"],
 [type="radio"]
 {
-    position: relative;
-    z-index: 1;
 	height: $checkbox-size;
 	width: $checkbox-size;
     margin: spacer('tiny-plus') spacer('medium');
     @include border-radius($checkbox-border-radius);
 
+    background-repeat: no-repeat;
+
     outline: $checkbox-focus-outline-size solid transparentize(#000, 1);
     outline-offset: $checkbox-focus-outline-offset;
 
-    @include transition(outline-color);
-
-    // Used to get smooth transitions with :hover, :checked and :indeterminate by using opacity transitions
-    &::after {
-        @extend %magic-pseudo-element;
-
-        @include transition(opacity);
-    }
-
-    // Used to get smooth transitions with :hover
-    &::after {
-		background-color: var(--checkbox-checked-background);
-    }
+    @include transition('background, border, outline-color');
 
     // Interactive states and behaviors
     // ================================
@@ -51,10 +39,7 @@
         --input-border-color: var(--checkbox-checked-background);
         --input-hover-border-color: var(--checkbox-checked-background);
 
-        &::after {
-            opacity: 1;
-            border: 1px solid var(--checkbox-checked-background);
-        }
+        background-color: var(--checkbox-checked-background);
     }
 
     &:focus {
@@ -66,23 +51,18 @@
 // Specific styles
 // ===============
 
-[type="checkbox"]::after {
+[type="checkbox"] {
     background-image: var(--checkbox-checked-icon);
-    border-radius: $checkbox-border-radius - 1;
 }
 
 [type="radio"] {
 	border-radius: 50%;
-
-	&::after {
-		background-image: var(--radio-checked-icon);
-        border-radius: 40%;
-	}
+    background-image: var(--radio-checked-icon);
 }
 
 [type="checkbox"],
 [type="radio"] {
-    &:indeterminate::after {
+    &:indeterminate {
         background-image: var(--checkbox-indeterminate-icon);
     }
 }

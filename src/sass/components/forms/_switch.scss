@@ -10,6 +10,7 @@
 // Checkbox Switch component
 // =========================
 .#{class("Form-switch")} {
+    position: relative;
     width: $switch-width;
     height: $switch-height;
     border-radius: $switch-border-radius;
@@ -17,12 +18,17 @@
     @include transition("border, background");
 
     &::after {
-        width: calc(#{$switch-height} - (#{$input-border-width} * 2));
-        height: 100%;
+        content: "";
+        position: absolute;
         left: 0;
         top: 0;
         bottom: 0;
+        
         opacity: 1;
+
+        width: calc(#{$switch-height} - (#{$input-border-width} * 2));
+        height: 100%;
+        
         border-radius: calc(#{$switch-border-radius} - 1px);
         background: var(--checkbox-checked-background);
 

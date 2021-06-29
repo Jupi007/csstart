@@ -1,26 +1,5 @@
 @charset 'UTF-8';
 
-.Table tbody td::after,
-.Afb table tbody td::after,
-.Card::after,
-.Tag::after,
-.Button::after,
-[type=checkbox]::after,
-[type=radio]::after {
-	position: absolute;
-	z-index: -1;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	content: '';
-	opacity: 0;
-	border-radius: inherit;
-	background-image: inherit;
-	background-repeat: inherit;
-	background-position: inherit;
-}
-
 .Grid {
 	display: grid;
 	grid-auto-flow: row;
@@ -10156,45 +10135,25 @@ select[multiple] option:first-child {
 
 [type=checkbox],
 [type=radio] {
-	position: relative;
-	z-index: 1;
 	width: 20px;
 	height: 20px;
 	margin: calc(var(--spacer-base) * .5) calc(var(--spacer-base) * 1);
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	transition-property: outline-color;
+	transition-property: background, border, outline-color;
 	border-radius: 3px;
 	outline: 3px solid rgba(0, 0, 0, 0);
 	outline-offset: 2px;
-}
-
-[type=checkbox]::after,
-[type=radio]::after {
-	transition-timing-function: ease;
-	transition-duration: .2s;
-	transition-property: opacity;
-}
-
-[type=checkbox]::after,
-[type=radio]::after {
-	background-color: var(--checkbox-checked-background);
+	background-repeat: no-repeat;
 }
 
 [type=checkbox]:checked,
 [type=checkbox]:indeterminate,
 [type=radio]:checked,
 [type=radio]:indeterminate {
+	background-color: var(--checkbox-checked-background);
 	--input-border-color: var(--checkbox-checked-background);
 	--input-hover-border-color: var(--checkbox-checked-background);
-}
-
-[type=checkbox]:checked::after,
-[type=checkbox]:indeterminate::after,
-[type=radio]:checked::after,
-[type=radio]:indeterminate::after {
-	opacity: 1;
-	border: 1px solid var(--checkbox-checked-background);
 }
 
 [type=checkbox]:focus,
@@ -10202,26 +10161,22 @@ select[multiple] option:first-child {
 	outline-color: var(--checkbox-focus-outline-color);
 }
 
-[type=checkbox]::after {
-	border-radius: 2px;
+[type=checkbox] {
 	background-image: var(--checkbox-checked-icon);
 }
 
 [type=radio] {
 	border-radius: 50%;
-}
-
-[type=radio]::after {
-	border-radius: 40%;
 	background-image: var(--radio-checked-icon);
 }
 
-[type=checkbox]:indeterminate::after,
-[type=radio]:indeterminate::after {
+[type=checkbox]:indeterminate,
+[type=radio]:indeterminate {
 	background-image: var(--checkbox-indeterminate-icon);
 }
 
 .Switch {
+	position: relative;
 	width: 40px;
 	height: 20px;
 	transition-timing-function: ease;
@@ -10231,11 +10186,13 @@ select[multiple] option:first-child {
 }
 
 .Switch::after {
+	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	width: calc(20px - (1px * 2));
 	height: 100%;
+	content: '';
 	transition-timing-function: ease;
 	transition-duration: .2s;
 	transition-property: left, background;
@@ -10640,13 +10597,11 @@ meter::-webkit-meter-even-less-good-value {
 .Button {
 	font-size: var(--tag-font-size);
 	line-height: 1;
-	position: relative;
-	z-index: 1;
 	display: inline-block;
 	padding: var(--tag-padding);
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	transition-property: color, outline-color;
+	transition-property: background, color, outline-color;
 	vertical-align: middle;
 	text-decoration: none;
 	color: var(--tag-color);
@@ -10659,18 +10614,6 @@ meter::-webkit-meter-even-less-good-value {
 	--tag-font-size: .8em;
 }
 
-.Tag::after,
-.Button::after {
-	transition-timing-function: ease;
-	transition-duration: .2s;
-	transition-property: opacity;
-}
-
-.Tag::after,
-.Button::after {
-	background: var(--tag-hover-background);
-}
-
 .Tag--wired,
 .Button--wired {
 	color: var(--tag-wired-color);
@@ -10678,8 +10621,8 @@ meter::-webkit-meter-even-less-good-value {
 	box-shadow: 0 0 0 1px var(--tag-background) inset;
 }
 
-.Tag--wired::after,
-.Button--wired::after {
+.Tag--wired:hover,
+.Button--wired:hover {
 	background: var(--tag-background);
 }
 
@@ -10733,12 +10676,7 @@ a.Tag:hover,
 .Button:hover {
 	text-decoration: none;
 	color: var(--tag-color);
-}
-
-button.Tag:hover::after,
-a.Tag:hover::after,
-.Button:hover::after {
-	opacity: 1;
+	background: var(--tag-hover-background);
 }
 
 button.Tag:focus,
@@ -10968,28 +10906,16 @@ a.Tag--wired:hover::after,
 
 .Card {
 	position: relative;
-	position: relative;
-	z-index: 1;
 	display: flex;
 	flex-direction: column;
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	transition-property: outline-color;
+	transition-property: background, outline-color;
 	word-wrap: break-word;
 	border-radius: 3px;
 	outline: 3px solid rgba(0, 0, 0, 0);
 	outline-offset: 2px;
 	background: var(--card-background);
-}
-
-.Card::after {
-	transition-timing-function: ease;
-	transition-duration: .2s;
-	transition-property: opacity;
-}
-
-.Card::after {
-	background: var(--card-background-hover);
 }
 
 .Card-body {
@@ -11044,8 +10970,8 @@ a.Card {
 	color: var(--body-color);
 }
 
-a.Card:hover::after {
-	opacity: 1;
+a.Card:hover {
+	background: var(--card-background-hover);
 }
 
 a.Card:focus {
@@ -11178,21 +11104,14 @@ a.Card:focus {
 
 .Table tbody td,
 .Afb table tbody td {
-	position: relative;
-	z-index: 1;
-}
-
-.Table tbody td::after,
-.Afb table tbody td::after {
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	transition-property: opacity;
-	background: var(--table-cell-hover-background);
+	transition-property: background;
 }
 
-.Table tbody tr:hover td::after,
-.Afb table tbody tr:hover td::after {
-	opacity: 1;
+.Table tbody tr:hover td,
+.Afb table tbody tr:hover td {
+	background: var(--table-cell-hover-background);
 }
 
 .Table caption,

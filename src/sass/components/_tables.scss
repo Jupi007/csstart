@@ -83,21 +83,11 @@
     @include option("table-hover") {
         tbody {
             td {
-                position: relative;
-                z-index: 1;
-
-                // Used to get smooth transitions with :hover
-                &::after {
-                    @extend %magic-pseudo-element;
-                    
-                    background: var(--table-cell-hover-background);
-
-                    @include transition("opacity");
-                }
+                @include transition('background');
             }
 
-            tr:hover td::after {
-                opacity: 1;
+            tr:hover td {
+				background: var(--table-cell-hover-background);
             }
     	}
     }

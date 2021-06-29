@@ -23,8 +23,6 @@
     --tag-font-size: #{$tag-font-size};
 
 	display: inline-block;
-    position: relative;
-    z-index: 1;
 	vertical-align: middle;
 	padding: var(--tag-padding);
 	border: none;
@@ -38,19 +36,7 @@
     outline: $tag-focus-outline-size solid transparentize(#000, 1);
     outline-offset: $tag-focus-outline-offset;
 
-    @include transition('color, outline-color');
-
-    // Used to get smooth transitions with :hover and :focus by using opacity transitions - common style of both
-    &::after {
-        @extend %magic-pseudo-element;
-
-        @include transition(opacity);
-    }
-
-    // Used to get smooth transitions with :hover
-    &::after {
-        background: var(--tag-hover-background);
-    }
+    @include transition('background, color, outline-color');
 
     // Wired (border only) variant
     // ===========================
@@ -61,7 +47,7 @@
         box-shadow: 0 0 0 $tag-border-width var(--tag-background) inset;
 
         // Use the same hover background-color as non hover and wired buttons
-        &::after {
+        &:hover {
             background: var(--tag-background);
         }
     }
@@ -107,13 +93,9 @@ a.#{class("Tag")},
     cursor: pointer;
 
 	&:hover {
-        text-decoration: none;
         color: var(--tag-color);
-
-        // Show :hover background (defined in :after)
-        &::after {
-            opacity: 1;
-        }
+        background: var(--tag-hover-background);
+        text-decoration: none;
     }
 
     &:focus {

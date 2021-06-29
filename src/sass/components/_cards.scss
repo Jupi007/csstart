@@ -16,8 +16,6 @@
 
 .#{class("Card")} {
     display: flex;
-    position: relative;
-    z-index: 1;
 	flex-direction: column;
 	position: relative;
 	word-wrap: break-word;
@@ -27,19 +25,7 @@
     outline: $card-focus-outline-size solid transparentize(#000, 1);
     outline-offset: $card-focus-outline-offset;
 
-    @include transition(outline-color);
-
-    // Used to get smooth transitions with :hover by using opacity transitions
-    &::after {
-        @extend %magic-pseudo-element;
-
-        @include transition("opacity");
-    }
-
-    // Used to get smooth transitions with :hover
-    &::after {
-        background: var(--card-background-hover);
-    }
+    @include transition('background, outline-color');
 
     // Card children
     // =============
@@ -99,8 +85,8 @@ a.#{class("Card")} {
 	color: var(--body-color);
     text-decoration: none;
 
-    &:hover::after {
-        opacity: 1;
+    &:hover {
+        background: var(--card-background-hover);
     }
 
     &:focus {
