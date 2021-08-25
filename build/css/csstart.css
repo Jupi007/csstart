@@ -10079,6 +10079,8 @@ select[multiple] option:first-child {
 
 :root {
 	--checkbox-checked-background: #333;
+	--checkbox-active-background: rgba(51, 51, 51, .25);
+	--checkbox-checked-active-background: rgba(51, 51, 51, .75);
 	--checkbox-checked-icon-color: #f2f2f2;
 	--checkbox-focus-outline-color: #666;
 	--checkbox-checked-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath fill=\'none\' stroke=\'%23f2f2f2\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M6 10l3 3l6-6\'/%3e%3c/svg%3e');
@@ -10088,6 +10090,8 @@ select[multiple] option:first-child {
 
 .inverted {
 	--checkbox-checked-background: #fff;
+	--checkbox-active-background: rgba(255, 255, 255, .25);
+	--checkbox-checked-active-background: rgba(255, 255, 255, .75);
 	--checkbox-checked-icon-color: #0d0d0d;
 	--checkbox-focus-outline-color: gray;
 	--checkbox-checked-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath fill=\'none\' stroke=\'%230d0d0d\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M6 10l3 3l6-6\'/%3e%3c/svg%3e');
@@ -10098,6 +10102,8 @@ select[multiple] option:first-child {
 @media (prefers-color-scheme: dark) {
 	:root {
 		--checkbox-checked-background: #fff;
+		--checkbox-active-background: rgba(255, 255, 255, .25);
+		--checkbox-checked-active-background: rgba(255, 255, 255, .75);
 		--checkbox-checked-icon-color: #0d0d0d;
 		--checkbox-focus-outline-color: gray;
 		--checkbox-checked-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath fill=\'none\' stroke=\'%230d0d0d\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M6 10l3 3l6-6\'/%3e%3c/svg%3e');
@@ -10107,6 +10113,8 @@ select[multiple] option:first-child {
 
 	.inverted {
 		--checkbox-checked-background: #333;
+		--checkbox-active-background: rgba(51, 51, 51, .25);
+		--checkbox-checked-active-background: rgba(51, 51, 51, .75);
 		--checkbox-checked-icon-color: #f2f2f2;
 		--checkbox-focus-outline-color: #666;
 		--checkbox-checked-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath fill=\'none\' stroke=\'%23f2f2f2\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M6 10l3 3l6-6\'/%3e%3c/svg%3e');
@@ -10117,6 +10125,8 @@ select[multiple] option:first-child {
 
 .light {
 	--checkbox-checked-background: #333;
+	--checkbox-active-background: rgba(51, 51, 51, .25);
+	--checkbox-checked-active-background: rgba(51, 51, 51, .75);
 	--checkbox-checked-icon-color: #f2f2f2;
 	--checkbox-focus-outline-color: #666;
 	--checkbox-checked-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath fill=\'none\' stroke=\'%23f2f2f2\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M6 10l3 3l6-6\'/%3e%3c/svg%3e');
@@ -10126,6 +10136,8 @@ select[multiple] option:first-child {
 
 .dark {
 	--checkbox-checked-background: #fff;
+	--checkbox-active-background: rgba(255, 255, 255, .25);
+	--checkbox-checked-active-background: rgba(255, 255, 255, .75);
 	--checkbox-checked-icon-color: #0d0d0d;
 	--checkbox-focus-outline-color: gray;
 	--checkbox-checked-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath fill=\'none\' stroke=\'%230d0d0d\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M6 10l3 3l6-6\'/%3e%3c/svg%3e');
@@ -10147,6 +10159,11 @@ select[multiple] option:first-child {
 	background-repeat: no-repeat;
 }
 
+[type=checkbox]:active,
+[type=radio]:active {
+	background-color: var(--checkbox-active-background);
+}
+
 [type=checkbox]:checked,
 [type=checkbox]:indeterminate,
 [type=radio]:checked,
@@ -10154,6 +10171,13 @@ select[multiple] option:first-child {
 	background-color: var(--checkbox-checked-background);
 	--input-border-color: var(--checkbox-checked-background);
 	--input-hover-border-color: var(--checkbox-checked-background);
+}
+
+[type=checkbox]:checked:active,
+[type=checkbox]:indeterminate:active,
+[type=radio]:checked:active,
+[type=radio]:indeterminate:active {
+	background-color: var(--checkbox-checked-active-background);
 }
 
 [type=checkbox]:focus,

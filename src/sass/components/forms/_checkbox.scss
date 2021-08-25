@@ -8,6 +8,8 @@
 
 @include theme-vars(
     (--checkbox-checked-background, $checkbox-checked-background, $checkbox-checked-background-dark),
+    (--checkbox-active-background, $checkbox-active-background, $checkbox-active-background-dark),
+    (--checkbox-checked-active-background, $checkbox-checked-active-background, $checkbox-checked-active-background-dark),
     (--checkbox-checked-icon-color, $checkbox-checked-icon-color, $checkbox-checked-icon-color-dark),
     (--checkbox-focus-outline-color, $checkbox-focus-outline-color, $checkbox-focus-outline-color-dark),
     (--checkbox-checked-icon, $checkbox-checked-icon, $checkbox-checked-icon-dark),
@@ -35,11 +37,19 @@
     // Interactive states and behaviors
     // ================================
 
+    &:active {
+        background-color: var(--checkbox-active-background);
+    }
+
     &:checked, &:indeterminate {
         --input-border-color: var(--checkbox-checked-background);
         --input-hover-border-color: var(--checkbox-checked-background);
 
         background-color: var(--checkbox-checked-background);
+
+        &:active {
+            background-color: var(--checkbox-checked-active-background);
+        }
     }
 
     &:focus {
