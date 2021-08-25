@@ -107,7 +107,7 @@
 
     // Fix webkit thumb misalignment
 	&::-webkit-slider-thumb {
-		margin-top: - math.div($range-thumb-size, 2) + 1px;
+		margin-top: -#{math.div($range-thumb-size, 2)};
 	}
     // Fix webkit range input size
     &::-webkit-slider-runnable-track {

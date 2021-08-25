@@ -18,15 +18,15 @@ $list-padding-left: spacer("xx-large") !default;
 $dt-font-weight: font-weight("bold") !default;
 
 $kbd-border-radius: $border-radius-base !default;
-$kbd-padding: 3px 6px !default;
+$kbd-padding: px-to-rem(3px) px-to-rem(6px) !default;
 $kbd-font-size: .9em !default;
 $nested-kbd-font-weight: font-weight("bold") !default;
 
 $mark-border-radius: $border-radius-base !default;
-$mark-padding: 1px !default;
+$mark-padding: px-to-rem(1px) !default;
 $mark-background: color("yellow") !default;
 
-$details-animation-translateY: -10px !default;
+$details-animation-translateY: px-to-rem(-10px) !default;
 $details-animation-duration: $transition-duration-base * 2 !default;
 $summary-focus-outline-size: $focus-outline-size-base !default;
 $summary-focus-outline-color: $components-focus-outline-color !default;
@@ -50,17 +50,17 @@ $input-padding-horizontal: spacer("medium") !default;
 $input-background: grey(3) !default;
 $input-disabled-opacity: .5 !default;
 
-$input-color-height: 35px !default;
+$input-color-height: px-to-rem(35px) !default;
 $input-color-padding: spacer("tiny-plus") !default;
 
 $select-option-padding: spacer("small") spacer("medium") !default;
 $select-icon-color: $body-color !default;
 $select-icon: escape-svg(url("data:image/svg+xml,<svg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path d='m5 8 5 5 5-5' fill='none' stroke='#{$select-icon-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/></svg>")) !default;
 
-$checkbox-size: 20px !default;
+$checkbox-size: px-to-rem(20px) !default;
 $checkbox-checked-background: $components-background !default;
 $checkbox-checked-icon-color: $components-color !default;
-$checkbox-border-radius: 3px !default;
+$checkbox-border-radius: $border-radius-base !default;
 $checkbox-focus-outline-color: $components-focus-outline-color !default;
 $checkbox-focus-outline-size: $focus-outline-size-base !default;
 $checkbox-focus-outline-offset: $focus-outline-offset-base !default;
@@ -69,10 +69,10 @@ $radio-checked-icon: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w
 $checkbox-indeterminate-icon: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$checkbox-checked-icon-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/></svg>")) !default;
 
 $switch-height: $checkbox-size !default;
-$switch-width: $checkbox-size * 2 !default;
+$switch-width:  $checkbox-size * 2 !default;
 $switch-border-radius: 2rem !default;
 
-$range-thumb-size: 15px !default;
+$range-thumb-size: px-to-rem(15px) !default;
 $range-track-height: 2px !default;
 $range-track-border-radius: $border-radius-base !default;
 $range-track-color: grey(25) !default;
@@ -178,7 +178,7 @@ $tag-sizes: map-merge((
 
 $alert-padding: spacer($margin-base) !default;
 $alert-border-width: $border-width-base !default;
-$alert-big-border-width: 6px !default;
+$alert-big-border-width: px-to-rem(6px) !default;
 $alert-big-border-position: left !default;
 $alert-border-radius: $border-radius-base !default;
 $alert-margin-bottom: $paragraph-margin-bottom !default;

@@ -161,3 +161,8 @@
 		+ "Please make sure it is defined in `$breakpoints` map.";
 	}
 }
+
+@function px-to-rem($value, $context: null) {
+    $remSize: math.div($value, if($context != null, $font-size-root, 16px)); // Use 16px as default navigator font-size
+    @return $remSize * 1rem;
+}

@@ -128,8 +128,8 @@ $transition-timing-function-base: ease !default;
 // -------------------
 
 $border-width-base: 1px !default;
-$border-radius-base: 3px !default;
-$border-radius-big: 12px !default;
+$border-radius-base: px-to-rem(3px) !default;
+$border-radius-big: px-to-rem(12px) !default;
 $margin-base: 'medium-plus' !default;
 
 // -----------
@@ -203,8 +203,8 @@ $headings-font-weight: font-weight('normal') !default;
 // Focus outline
 // -------------
 
-$focus-outline-size-base: 3px !default;
-$focus-outline-offset-base: 2px !default;
+$focus-outline-size-base: px-to-rem(3px) !default;
+$focus-outline-offset-base: px-to-rem(2px) !default;
 
 // -----
 // Links
@@ -267,9 +267,9 @@ $grid-max-rows: 4 !default;
 
 $breakpoints: () !default;
 $breakpoints: map-merge((
-	'xs': 480px,
-	's': 576px,
-	'm': 768px,
-	'l': 992px,
-	'xl': 1500px,
+	'xs': px-to-rem(480px),
+	's': px-to-rem(576px),
+	'm': px-to-rem(768px),
+	'l': px-to-rem(992px),
+	'xl': px-to-rem(1500px),
 ), $breakpoints);
