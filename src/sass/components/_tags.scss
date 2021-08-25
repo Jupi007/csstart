@@ -31,7 +31,7 @@
 	font-size: var(--tag-font-size);
     text-decoration: none;
 	line-height: 1;
-	background: var(--tag-background);
+	background-color: var(--tag-background);
 	color: var(--tag-color);
 
     outline: $tag-focus-outline-size solid transparentize(#000, 1);
@@ -42,7 +42,7 @@
     // Wired (border only) variant
     // ===========================
     &--#{class("(Component)--wired")} {
-        background: transparent;
+        background-color: transparent;
         color: var(--tag-wired-color);
         // Using inset box-shadow to get the same size as other Buttons
         box-shadow: 0 0 0 $tag-border-width var(--tag-background) inset;
@@ -92,7 +92,7 @@ a.#{class("Tag")},
 
 	&:hover {
         color: var(--tag-color);
-        background: var(--tag-hover-background);
+        background-color: var(--tag-hover-background);
         text-decoration: none;
     }
 
@@ -108,7 +108,7 @@ a.#{class("Tag")},
         }
         
         &:hover {
-            background: var(--tag-wired-hover-background);
+            background-color: var(--tag-wired-hover-background);
         }
     }
 }

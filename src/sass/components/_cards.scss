@@ -20,7 +20,7 @@
 	position: relative;
 	word-wrap: break-word;
     @include border-radius($card-border-radius);
-    background: var(--card-background);
+    background-color: var(--card-background);
 
     outline: $card-focus-outline-size solid transparentize(#000, 1);
     outline-offset: $card-focus-outline-offset;
@@ -86,7 +86,7 @@ a.#{class("Card")} {
     text-decoration: none;
 
     &:hover {
-        background: var(--card-background-hover);
+        background-color: var(--card-background-hover);
     }
 
     &:focus {

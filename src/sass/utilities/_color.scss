@@ -14,10 +14,10 @@
     }
 
     @each $name, $color in $colors {
-    	.#{$prefix}#{class("background")}-#{$name} { background: $color !important; }
+    	.#{$prefix}#{class("background")}-#{$name} { background-color: $color !important; }
     }
 
     @for $i from 1 through 20 {
-    	.#{$prefix}#{class("background")}-#{class("grey")}#{$i * 5} { background: grey($i * 5) !important; }
+    	.#{$prefix}#{class("background")}-#{class("grey")}#{$i * 5} { background-color: grey($i * 5) !important; }
     }
 }

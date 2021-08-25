@@ -17,7 +17,7 @@
     margin-top: $figure-margin-top;
     margin-bottom: $figure-margin-bottom;
 	@include border-radius($figure-border-radius);
-	background: $figure-background;
+	background-color: $figure-background;
 
     // Using a more specific selector instead of a class because of the Auto-formating-block
 	figcaption {
@@ -33,7 +33,7 @@
 
 .#{class("Figure")} {
 	&--#{class("(Component)-light")} {
-		background: $figure-background-light;
+		background-color: $figure-background-light;
 
         // Using a more specific selector instead of a class because of the Auto-formating-block
 		figcaption {

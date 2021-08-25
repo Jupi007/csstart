@@ -21,7 +21,7 @@
     margin-top: $blockquote-margin-top;
     margin-bottom: $blockquote-margin-bottom;
 	@include border-radius($blockquote-border-radius);
-	background: var(--blockquote-background);
+	background-color: var(--blockquote-background);
     color: var(--blockquote-color);
 
     // Add an extra quote (") in the top-left corner

@@ -30,7 +30,7 @@
         height: 100%;
         
         border-radius: calc(#{$switch-border-radius} - 1px);
-        background: var(--checkbox-checked-background);
+        background-color: var(--checkbox-checked-background);
 
         @include transition("left, background");
     }

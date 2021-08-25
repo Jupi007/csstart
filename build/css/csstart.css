@@ -383,139 +383,139 @@
 }
 
 .bg-white {
-	background: #fff !important;
+	background-color: #fff !important;
 }
 
 .bg-black {
-	background: #000 !important;
+	background-color: #000 !important;
 }
 
 .bg-red {
-	background: #d94d4d !important;
+	background-color: #d94d4d !important;
 }
 
 .bg-orange {
-	background: #d9831e !important;
+	background-color: #d9831e !important;
 }
 
 .bg-yellow {
-	background: #fff46c !important;
+	background-color: #fff46c !important;
 }
 
 .bg-green {
-	background: #74cf61 !important;
+	background-color: #74cf61 !important;
 }
 
 .bg-blue {
-	background: #3935cd !important;
+	background-color: #3935cd !important;
 }
 
 .bg-light-blue {
-	background: #74c0cd !important;
+	background-color: #74c0cd !important;
 }
 
 .bg-purple {
-	background: #aa80d9 !important;
+	background-color: #aa80d9 !important;
 }
 
 .bg-brown {
-	background: #835611 !important;
+	background-color: #835611 !important;
 }
 
 .bg-success {
-	background: 'green' !important;
+	background-color: 'green' !important;
 }
 
 .bg-info {
-	background: 'light-blue' !important;
+	background-color: 'light-blue' !important;
 }
 
 .bg-warning {
-	background: 'orange' !important;
+	background-color: 'orange' !important;
 }
 
 .bg-danger {
-	background: 'red' !important;
+	background-color: 'red' !important;
 }
 
 .bg-grey5 {
-	background: #f2f2f2 !important;
+	background-color: #f2f2f2 !important;
 }
 
 .bg-grey10 {
-	background: #e6e6e6 !important;
+	background-color: #e6e6e6 !important;
 }
 
 .bg-grey15 {
-	background: #d9d9d9 !important;
+	background-color: #d9d9d9 !important;
 }
 
 .bg-grey20 {
-	background: #ccc !important;
+	background-color: #ccc !important;
 }
 
 .bg-grey25 {
-	background: #bfbfbf !important;
+	background-color: #bfbfbf !important;
 }
 
 .bg-grey30 {
-	background: #b3b3b3 !important;
+	background-color: #b3b3b3 !important;
 }
 
 .bg-grey35 {
-	background: #a6a6a6 !important;
+	background-color: #a6a6a6 !important;
 }
 
 .bg-grey40 {
-	background: #999 !important;
+	background-color: #999 !important;
 }
 
 .bg-grey45 {
-	background: #8c8c8c !important;
+	background-color: #8c8c8c !important;
 }
 
 .bg-grey50 {
-	background: gray !important;
+	background-color: gray !important;
 }
 
 .bg-grey55 {
-	background: #737373 !important;
+	background-color: #737373 !important;
 }
 
 .bg-grey60 {
-	background: #666 !important;
+	background-color: #666 !important;
 }
 
 .bg-grey65 {
-	background: #595959 !important;
+	background-color: #595959 !important;
 }
 
 .bg-grey70 {
-	background: #4d4d4d !important;
+	background-color: #4d4d4d !important;
 }
 
 .bg-grey75 {
-	background: #404040 !important;
+	background-color: #404040 !important;
 }
 
 .bg-grey80 {
-	background: #333 !important;
+	background-color: #333 !important;
 }
 
 .bg-grey85 {
-	background: #262626 !important;
+	background-color: #262626 !important;
 }
 
 .bg-grey90 {
-	background: #1a1a1a !important;
+	background-color: #1a1a1a !important;
 }
 
 .bg-grey95 {
-	background: #0d0d0d !important;
+	background-color: #0d0d0d !important;
 }
 
 .bg-grey100 {
-	background: black !important;
+	background-color: black !important;
 }
 
 .w-auto {
@@ -9010,139 +9010,139 @@ template {
 	}
 
 	.dark-bg-white {
-		background: #fff !important;
+		background-color: #fff !important;
 	}
 
 	.dark-bg-black {
-		background: #000 !important;
+		background-color: #000 !important;
 	}
 
 	.dark-bg-red {
-		background: #d94d4d !important;
+		background-color: #d94d4d !important;
 	}
 
 	.dark-bg-orange {
-		background: #d9831e !important;
+		background-color: #d9831e !important;
 	}
 
 	.dark-bg-yellow {
-		background: #fff46c !important;
+		background-color: #fff46c !important;
 	}
 
 	.dark-bg-green {
-		background: #74cf61 !important;
+		background-color: #74cf61 !important;
 	}
 
 	.dark-bg-blue {
-		background: #3935cd !important;
+		background-color: #3935cd !important;
 	}
 
 	.dark-bg-light-blue {
-		background: #74c0cd !important;
+		background-color: #74c0cd !important;
 	}
 
 	.dark-bg-purple {
-		background: #aa80d9 !important;
+		background-color: #aa80d9 !important;
 	}
 
 	.dark-bg-brown {
-		background: #835611 !important;
+		background-color: #835611 !important;
 	}
 
 	.dark-bg-success {
-		background: 'green' !important;
+		background-color: 'green' !important;
 	}
 
 	.dark-bg-info {
-		background: 'light-blue' !important;
+		background-color: 'light-blue' !important;
 	}
 
 	.dark-bg-warning {
-		background: 'orange' !important;
+		background-color: 'orange' !important;
 	}
 
 	.dark-bg-danger {
-		background: 'red' !important;
+		background-color: 'red' !important;
 	}
 
 	.dark-bg-grey5 {
-		background: #f2f2f2 !important;
+		background-color: #f2f2f2 !important;
 	}
 
 	.dark-bg-grey10 {
-		background: #e6e6e6 !important;
+		background-color: #e6e6e6 !important;
 	}
 
 	.dark-bg-grey15 {
-		background: #d9d9d9 !important;
+		background-color: #d9d9d9 !important;
 	}
 
 	.dark-bg-grey20 {
-		background: #ccc !important;
+		background-color: #ccc !important;
 	}
 
 	.dark-bg-grey25 {
-		background: #bfbfbf !important;
+		background-color: #bfbfbf !important;
 	}
 
 	.dark-bg-grey30 {
-		background: #b3b3b3 !important;
+		background-color: #b3b3b3 !important;
 	}
 
 	.dark-bg-grey35 {
-		background: #a6a6a6 !important;
+		background-color: #a6a6a6 !important;
 	}
 
 	.dark-bg-grey40 {
-		background: #999 !important;
+		background-color: #999 !important;
 	}
 
 	.dark-bg-grey45 {
-		background: #8c8c8c !important;
+		background-color: #8c8c8c !important;
 	}
 
 	.dark-bg-grey50 {
-		background: gray !important;
+		background-color: gray !important;
 	}
 
 	.dark-bg-grey55 {
-		background: #737373 !important;
+		background-color: #737373 !important;
 	}
 
 	.dark-bg-grey60 {
-		background: #666 !important;
+		background-color: #666 !important;
 	}
 
 	.dark-bg-grey65 {
-		background: #595959 !important;
+		background-color: #595959 !important;
 	}
 
 	.dark-bg-grey70 {
-		background: #4d4d4d !important;
+		background-color: #4d4d4d !important;
 	}
 
 	.dark-bg-grey75 {
-		background: #404040 !important;
+		background-color: #404040 !important;
 	}
 
 	.dark-bg-grey80 {
-		background: #333 !important;
+		background-color: #333 !important;
 	}
 
 	.dark-bg-grey85 {
-		background: #262626 !important;
+		background-color: #262626 !important;
 	}
 
 	.dark-bg-grey90 {
-		background: #1a1a1a !important;
+		background-color: #1a1a1a !important;
 	}
 
 	.dark-bg-grey95 {
-		background: #0d0d0d !important;
+		background-color: #0d0d0d !important;
 	}
 
 	.dark-bg-grey100 {
-		background: black !important;
+		background-color: black !important;
 	}
 
 	.dark-d-none {
@@ -9960,7 +9960,7 @@ select {
 	border: 1px solid var(--input-border-color);
 	border-radius: .1875rem;
 	outline: none;
-	background: var(--input-background);
+	background-color: var(--input-background);
 	--input-padding: calc(var(--spacer-base) * .5) calc(var(--spacer-base) * 1);
 	-webkit-appearance: none;
 	   -moz-appearance: none;
@@ -10011,7 +10011,7 @@ select,
 }
 
 [type=file] {
-	background: transparent;
+	background-color: transparent;
 }
 
 [type=file]:not(:focus) {
@@ -10225,7 +10225,7 @@ select[multiple] option:first-child {
 	transition-property: left, background;
 	opacity: 1;
 	border-radius: calc(2rem - 1px);
-	background: var(--checkbox-checked-background);
+	background-color: var(--checkbox-checked-background);
 }
 
 .Switch:checked {
@@ -10642,7 +10642,7 @@ meter::-webkit-meter-even-less-good-value {
 	border-radius: .1875rem;
 	outline: .1875rem solid rgba(0, 0, 0, 0);
 	outline-offset: .125rem;
-	background: var(--tag-background);
+	background-color: var(--tag-background);
 	--tag-padding: calc(var(--spacer-base) * .25) calc(var(--spacer-base) * .5);
 	--tag-font-size: .8em;
 }
@@ -10650,7 +10650,7 @@ meter::-webkit-meter-even-less-good-value {
 .Tag--wired,
 .Button--wired {
 	color: var(--tag-wired-color);
-	background: transparent;
+	background-color: transparent;
 	box-shadow: 0 0 0 1px var(--tag-background) inset;
 }
 
@@ -10709,7 +10709,7 @@ a.Tag:hover,
 .Button:hover {
 	text-decoration: none;
 	color: var(--tag-color);
-	background: var(--tag-hover-background);
+	background-color: var(--tag-hover-background);
 }
 
 button.Tag:focus,
@@ -10732,7 +10732,7 @@ a.Tag--wired:focus,
 button.Tag--wired:hover,
 a.Tag--wired:hover,
 .Button--wired:hover {
-	background: var(--tag-wired-hover-background);
+	background-color: var(--tag-wired-hover-background);
 }
 
 .Tag--l {
@@ -10948,7 +10948,7 @@ a.Tag--wired:hover,
 	border-radius: .1875rem;
 	outline: .1875rem solid rgba(0, 0, 0, 0);
 	outline-offset: .125rem;
-	background: var(--card-background);
+	background-color: var(--card-background);
 }
 
 .Card-body {
@@ -11004,7 +11004,7 @@ a.Card {
 }
 
 a.Card:hover {
-	background: var(--card-background-hover);
+	background-color: var(--card-background-hover);
 }
 
 a.Card:focus {
@@ -11085,7 +11085,7 @@ a.Card:focus {
 	color: var(--body-color);
 	border: 1px solid var(--table-border-color);
 	border-radius: .1875rem;
-	background: var(--table-background);
+	background-color: var(--table-background);
 	--table-cell-padding: calc(var(--spacer-base) * .9);
 }
 
@@ -11128,12 +11128,12 @@ a.Card:focus {
 
 .Table th,
 .Afb table th {
-	background: var(--table-headings-cell-background);
+	background-color: var(--table-headings-cell-background);
 }
 
 .Table tr:nth-child(even),
 .Afb table tr:nth-child(even) {
-	background: var(--table-zebra-cell-background);
+	background-color: var(--table-zebra-cell-background);
 }
 
 .Table tbody td,
@@ -11145,7 +11145,7 @@ a.Card:focus {
 
 .Table tbody tr:hover td,
 .Afb table tbody tr:hover td {
-	background: var(--table-cell-hover-background);
+	background-color: var(--table-cell-hover-background);
 }
 
 .Table caption,
@@ -11216,7 +11216,7 @@ a.Card:focus {
 	padding-left: 80px;
 	color: var(--blockquote-color);
 	border-radius: .75rem;
-	background: var(--blockquote-background);
+	background-color: var(--blockquote-background);
 }
 
 .Blockquote:before,
@@ -11262,7 +11262,7 @@ a.Card:focus {
 	margin-bottom: calc(calc(var(--spacer-base) * .75) * 2);
 	padding: calc(var(--spacer-base) * 2.5);
 	border-radius: .75rem;
-	background: #333;
+	background-color: #333;
 	align-items: center;
 	justify-content: center;
 	gap: calc(var(--spacer-base) * 2.5);
@@ -11280,7 +11280,7 @@ a.Card:focus {
 }
 
 .Figure--light {
-	background: #e6e6e6;
+	background-color: #e6e6e6;
 }
 
 .Figure--light figcaption {

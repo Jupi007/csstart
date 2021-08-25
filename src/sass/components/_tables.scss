@@ -29,7 +29,7 @@
 	border-spacing: 0px;
 	border: $table-border-width solid var(--table-border-color);
     @include border-radius($table-border-radius);
-    background: var(--table-background);
+    background-color: var(--table-background);
 	color: var(--body-color);
 
     // Tricky code to get border-radius on a table html tag
@@ -72,12 +72,12 @@
 	}
 
 	th {
-		background: var(--table-headings-cell-background);
+		background-color: var(--table-headings-cell-background);
 	}
 
     @include option("table-zebra") {
         tr:nth-child(even) {
-    		background: var(--table-zebra-cell-background);
+    		background-color: var(--table-zebra-cell-background);
     	}
     }
 
@@ -88,7 +88,7 @@
             }
 
             tr:hover td {
-				background: var(--table-cell-hover-background);
+				background-color: var(--table-cell-hover-background);
             }
     	}
     }
