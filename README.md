@@ -12,4 +12,4 @@ yarn install csstart
 or clone repository 🔥
 
 ## Usage
-Use pre-builed build/csstart.min.css file to use it immediately or include src/sass/csstart.scss if you want more flexibility !
+Use pre-builed `build/csstart.min.css` file to use it immediately or include `src/sass/csstart.scss` if you want more flexibility !
