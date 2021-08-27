@@ -29,7 +29,7 @@ select
     outline: none;
     // Remove default style
 	appearance: none;
-    // Remove Firefox password manger style
+    // Remove Firefox password manager style
     filter: none;
 
     @include transition("border");
