@@ -290,15 +290,16 @@ $blockquote-cite-color-dark: grey(40) !default;
 // Figures
 // -------
 
-$figure-background: grey(80) !default;
+$figure-background: grey(10) !default;
+$figure-color: grey(75) !default;
 $figure-border-radius: $border-radius-big !default;
 $figure-padding: spacer("large-plus") !default;
 $figure-margin-top: calc(#{$paragraph-margin-bottom} * 2) !default;
 $figure-margin-bottom: calc(#{$paragraph-margin-bottom} * 2) !default;
-$figure-figcaption-color: grey(15) !default;
-$figure-background-light: grey(10) !default;
-$figure-figcaption-color-light: grey(75) !default;
 $figure-max-height-image: 60vh !default;
+
+$figure-background-dark: grey(80) !default;
+$figure-color-dark: grey(15) !default;
 
 // -----
 // Print

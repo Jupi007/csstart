@@ -11254,6 +11254,38 @@ a.Card:focus {
 	margin-bottom: 0;
 }
 
+:root {
+	--figure-background: #e6e6e6;
+	--figure-color: #404040;
+}
+
+.inverted {
+	--figure-background: #333;
+	--figure-color: #d9d9d9;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--figure-background: #333;
+		--figure-color: #d9d9d9;
+	}
+
+	.inverted {
+		--figure-background: #e6e6e6;
+		--figure-color: #404040;
+	}
+}
+
+.light {
+	--figure-background: #e6e6e6;
+	--figure-color: #404040;
+}
+
+.dark {
+	--figure-background: #333;
+	--figure-color: #d9d9d9;
+}
+
 .Figure,
 .Afb figure {
 	display: flex;
@@ -11261,30 +11293,18 @@ a.Card:focus {
 	margin-top: calc(calc(var(--spacer-base) * .75) * 2);
 	margin-bottom: calc(calc(var(--spacer-base) * .75) * 2);
 	padding: calc(var(--spacer-base) * 2.5);
+	text-align: center;
+	color: var(--figure-color);
 	border-radius: .75rem;
-	background-color: #333;
+	background-color: var(--figure-background);
 	align-items: center;
 	justify-content: center;
 	gap: calc(var(--spacer-base) * 2.5);
 }
 
-.Figure figcaption,
-.Afb figure figcaption {
-	text-align: center;
-	color: #d9d9d9;
-}
-
 .Figure img,
 .Afb figure img {
 	max-height: 60vh;
-}
-
-.Figure--light {
-	background-color: #e6e6e6;
-}
-
-.Figure--light figcaption {
-	color: #404040;
 }
 
 .Linked {

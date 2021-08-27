@@ -6,6 +6,11 @@
 
 @include option("figure") {
 
+@include theme-vars(
+	(--figure-background, $figure-background, $figure-background-dark),
+	(--figure-color, $figure-color, $figure-color-dark)
+);
+
 .#{class("Figure")},
 .#{class("Auto-formating-block")} figure {
 	display: flex;
@@ -17,29 +22,14 @@
     margin-top: $figure-margin-top;
     margin-bottom: $figure-margin-bottom;
 	@include border-radius($figure-border-radius);
-	background-color: $figure-background;
-
-    // Using a more specific selector instead of a class because of the Auto-formating-block
-	figcaption {
-        text-align: center;
-		color: $figure-figcaption-color;
-	}
+	background-color: var(--figure-background);
+    text-align: center;
+	color: var(--figure-color);
 
     // Using a more specific selector instead of a class because of the Auto-formating-block
     img {
         max-height: $figure-max-height-image;
     }
-}
-
-.#{class("Figure")} {
-	&--#{class("(Component)-light")} {
-		background-color: $figure-background-light;
-
-        // Using a more specific selector instead of a class because of the Auto-formating-block
-		figcaption {
-			color: $figure-figcaption-color-light;
-		}
-	}
 }
 
 }
