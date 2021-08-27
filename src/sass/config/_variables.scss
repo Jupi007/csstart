@@ -38,7 +38,26 @@ $summary-focus-outline-color-dark: $components-focus-outline-color-dark !default
 // Forms
 // -----
 
+$label-required-indicator: '*' !default;
+$label-required-indicator-color: color("danger") !default;
 $label-margin-bottom: spacer("small") !default;
+
+$form-gap: spacer('large-plus') !default;
+$form-width: px-to-rem(600px) !default;
+$form-title-text-align: center !default;
+$form-input-wrapper-gap: spacer('small') !default;
+$form-check-wrapper-gap: spacer('medium') !default;
+$form-button-wrapper-gap: spacer('small') !default;
+$form-help-text-align: right !default;
+$form-help-font-size: .9em !default;
+$form-help-color: grey(50) !default;
+
+$fieldset-padding: spacer('medium') !default;
+$fieldset-border-width: $border-width-base !default;
+$fieldset-border-color: grey(15) !default;
+$fieldset-border-radius: $border-radius-base !default;
+
+$legend-padding: spacer('tiny') !default;
 
 $input-border-width: $border-width-base !default;
 $input-border-color: grey(20) !default;
@@ -49,6 +68,8 @@ $input-padding-vertical: spacer("tiny-plus") !default;
 $input-padding-horizontal: spacer("medium") !default;
 $input-background: grey(3) !default;
 $input-disabled-opacity: .5 !default;
+
+$textarea-height: px-to-rem(200px) !default;
 
 $input-color-height: px-to-rem(35px) !default;
 $input-color-padding: spacer("tiny-plus") !default;
@@ -98,6 +119,8 @@ $meter-optimum-background: color("danger") !default;
 $meter-sub-optimum-background: color("warning") !default;
 $meter-sub-sub-optimum-background: color("success") !default;
 
+$form-help-color-dark: grey(40) !default;
+$fieldset-border-color-dark: grey(70) !default;
 $input-border-color-dark: grey(50) !default;
 $input-hover-border-color-dark: grey(20) !default;
 $input-background-dark: grey(80) !default;

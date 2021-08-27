@@ -1,0 +1,26 @@
+// ========================
+// ==== Form component ====
+// ========================
+
+// Automatically style html fieldset and legend form elements
+
+@include option("form") {
+
+@include theme-vars(
+    (--fieldset-border-color, $fieldset-border-color, $fieldset-border-color-dark)
+);
+
+fieldset {
+    padding: $fieldset-padding;
+    border: $fieldset-border-width solid var(--fieldset-border-color);
+    border-radius: $fieldset-border-radius;
+}
+
+legend {
+    display: inline;
+    width: auto;
+    padding: $legend-padding;
+    margin: 0;
+}
+
+}

@@ -24,7 +24,6 @@
 {
 	height: $checkbox-size;
 	width: $checkbox-size;
-    margin: spacer('tiny-plus') spacer('medium');
     @include border-radius($checkbox-border-radius);
 
     background-repeat: no-repeat;

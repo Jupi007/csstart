@@ -66,9 +66,21 @@ select,
 }
 
 [type="file"] {
+    padding: 0;
     background-color: transparent;
 
-	&:not(:focus) {
+    outline: $focus-outline-size-base solid transparentize(#000, 1);
+    outline-offset: $focus-outline-offset-base;
+
+    @include transition(outline-color);
+
+    &:focus {
+        outline-color: var(--components-focus-outline-color);
+    }
+
+	&,
+    &:hover,
+    &:focus {
         border-color: transparent;
     }
 }
@@ -80,7 +92,7 @@ select,
 
 textarea {
 	min-height: calc(#{$font-size-base} + #{$input-padding-vertical} * 2);
-    transition-property: border;
+    height: $textarea-height;
 }
 
 }

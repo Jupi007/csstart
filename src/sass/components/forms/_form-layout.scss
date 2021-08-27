@@ -1,0 +1,70 @@
+// ========================
+// ==== Form component ====
+// ========================
+
+// Form layout component
+
+@include option("form", "form-layout") {
+
+@include theme-vars(
+    (--form-help-color, $form-help-color, $form-help-color-dark)
+);
+
+.Form {
+    display: flex;
+    flex-direction: column;
+    gap: $form-gap;
+
+    max-width: $form-width;
+    margin: auto;
+
+    &-title {
+        margin: 0;
+        text-align: $form-title-text-align;
+    }
+
+    &-inputWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: $form-input-wrapper-gap;
+    }
+
+    &-checkWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: $form-check-wrapper-gap;
+    }
+
+    &-buttonWrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: $form-button-wrapper-gap;
+    }
+
+    &-label {
+        margin: 0;
+
+        &.required::before {
+            color: $label-required-indicator-color;
+            content: $label-required-indicator + " ";
+        }
+    }
+
+    &-input,
+    &-textarea {
+        width: 100%;
+    }
+
+    &-help {
+        margin: 0;
+        text-align: $form-help-text-align;
+        font-size: $form-help-font-size;
+        color: var(--form-help-color);
+    }
+}
+
+}
