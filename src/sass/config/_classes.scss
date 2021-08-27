@@ -13,6 +13,7 @@ $classes: map-merge((
     "Figure": "Figure",
     "Media": "Media",
     "Table": "Table",
+    "Form": "Form",
     "Form-switch": "Switch",
     "Linked": "Linked",
 
@@ -39,6 +40,17 @@ $classes: map-merge((
     "(Component)--wired": "wired",
     "(Component)--fixed": "fixed",
     "(Component)--slim": "slim",
+
+    // Form
+    "(Form)-title": "title",
+    "(Form)-inputWrapper": "inputWrapper",
+    "(Form)-checkWrapper": "checkWrapper",
+    "(Form)-buttonWrapper": "buttonWrapper",
+    "(Form)-label": "label",
+    "(Form-label)--required": "required",
+    "(Form)-input": "input",
+    "(Form)-textarea": "textarea",
+    "(Form)-help": "help",
 
     // Flex
     "Flex": "Flex",

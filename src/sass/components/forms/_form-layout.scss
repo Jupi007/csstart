@@ -10,7 +10,7 @@
     (--form-help-color, $form-help-color, $form-help-color-dark)
 );
 
-.Form {
+.#{class("Form")} {
     display: flex;
     flex-direction: column;
     gap: $form-gap;
@@ -18,25 +18,25 @@
     max-width: $form-width;
     margin: auto;
 
-    &-title {
+    &-#{class("(Form)-title")} {
         margin: 0;
         text-align: $form-title-text-align;
     }
 
-    &-inputWrapper {
+    &-#{class("(Form)-inputWrapper")} {
         display: flex;
         flex-direction: column;
         gap: $form-input-wrapper-gap;
     }
 
-    &-checkWrapper {
+    &-#{class("(Form)-checkWrapper")} {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: $form-check-wrapper-gap;
     }
 
-    &-buttonWrapper {
+    &-#{class("(Form)-buttonWrapper")} {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -45,21 +45,21 @@
         gap: $form-button-wrapper-gap;
     }
 
-    &-label {
+    &-#{class("(Form)-label")} {
         margin: 0;
 
-        &.required::before {
+        &.#{class("(Form-label)--required")}::before {
             color: $label-required-indicator-color;
             content: $label-required-indicator + " ";
         }
     }
 
-    &-input,
-    &-textarea {
+    &-#{class("(Form)-input")},
+    &-#{class("(Form)-textarea")} {
         width: 100%;
     }
 
-    &-help {
+    &-#{class("(Form)-help")} {
         margin: 0;
         text-align: $form-help-text-align;
         font-size: $form-help-font-size;
