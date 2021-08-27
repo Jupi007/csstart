@@ -4,21 +4,12 @@
 
 @import
 
-// Libraries
-'core/libraries/functions',
-'core/libraries/mixins',
+'libraries',
+'config',
 
-// Config
-'config/config',
-'config/variables',
-'config/classes',
+'utilities',
 
-// Utilities
-'utilities/utilities',
-
-// Core
 'core/reset',
 'core/media',
 
-// Components
 'components';

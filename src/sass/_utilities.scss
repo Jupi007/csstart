@@ -4,20 +4,20 @@
 
 @import
 
-"text",
-"border",
-"color",
-"display",
-"size",
-"align",
-"margin",
-"padding",
-"visibility",
-"accessibility",
-"order",
-"float",
-"flex",
-"grid";
+"utilities/text",
+"utilities/border",
+"utilities/color",
+"utilities/display",
+"utilities/size",
+"utilities/align",
+"utilities/margin",
+"utilities/padding",
+"utilities/visibility",
+"utilities/accessibility",
+"utilities/order",
+"utilities/float",
+"utilities/flex",
+"utilities/grid";
 
 @mixin media-utilities($area: "default", $prefix: "") {
     @include utility-option("text", $area) {
