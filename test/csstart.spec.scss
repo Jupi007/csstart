@@ -2,8 +2,8 @@
 
 @import "_variables.scss";
 
-@import "../src/sass/core/libraries/functions";
+@import "../src/sass/libraries/functions";
 @import "_functions.spec.scss";
 
-@import "../src/sass/core/libraries/mixins";
+@import "../src/sass/libraries/mixins";
 @import "_mixins.spec.scss";
