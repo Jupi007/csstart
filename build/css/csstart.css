@@ -9975,26 +9975,19 @@ template {
 	text-align: center;
 }
 
-.Form-inputWrapper {
-	display: flex;
-	flex-direction: column;
-	gap: calc(var(--spacer-base) * .75);
-}
-
-.Form-checkWrapper {
+.Form-row,
+.Form-buttonRow {
 	display: flex;
 	flex-direction: row;
-	align-items: center;
-	gap: calc(var(--spacer-base) * 1);
-}
-
-.Form-buttonWrapper {
-	display: flex;
-	flex-direction: row;
+	width: 100%;
 	flex-wrap: wrap;
 	align-items: center;
-	justify-content: center;
 	gap: calc(var(--spacer-base) * .75);
+}
+
+.Form-buttonRow {
+	justify-content: center;
+	gap: calc(var(--spacer-base) * .75) calc(var(--spacer-base) * 1);
 }
 
 .Form-label {
@@ -10013,6 +10006,7 @@ template {
 
 .Form-help {
 	font-size: .9em;
+	width: 100%;
 	margin: 0;
 	text-align: right;
 	color: var(--form-help-color);
@@ -10162,6 +10156,7 @@ select,
 	transition-timing-function: ease;
 	transition-duration: .2s;
 	transition-property: outline-color;
+	border-radius: 0;
 	outline: .1875rem solid rgba(0, 0, 0, 0);
 	outline-offset: .125rem;
 	background-color: transparent;

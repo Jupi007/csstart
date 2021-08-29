@@ -43,9 +43,8 @@ $classes: map-merge((
 
     // Form
     "(Form)-title": "title",
-    "(Form)-inputWrapper": "inputWrapper",
-    "(Form)-checkWrapper": "checkWrapper",
-    "(Form)-buttonWrapper": "buttonWrapper",
+    "(Form)-row": "row",
+    "(Form)-buttonRow": "buttonRow",
     "(Form)-label": "label",
     "(Form-label)--required": "required",
     "(Form)-input": "input",
