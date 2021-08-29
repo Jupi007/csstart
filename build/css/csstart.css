@@ -1555,6 +1555,36 @@
 	order: 1 !important;
 }
 
+.floatbox::after {
+	display: block !important;
+	clear: both !important;
+	content: '' !important;
+}
+
+.fl {
+	float: left !important;
+}
+
+.fr {
+	float: right !important;
+}
+
+.clear {
+	clear: both !important;
+}
+
+.clear-l {
+	clear: left !important;
+}
+
+.clear-r {
+	clear: right !important;
+}
+
+.bfc {
+	overflow: hidden !important;
+}
+
 .dir-r {
 	flex-direction: row !important;
 }

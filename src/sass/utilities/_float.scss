@@ -12,12 +12,10 @@
     .#{$prefix}#{class("float-left")} { float: left !important; }
     .#{$prefix}#{class("float-right")} { float: right !important; }
 
-    .#{$prefix} {
-        .#{class("clear")} { clear: both !important; }
-        .#{class("clear-left")} { clear: left !important; }
-        .#{class("clear-right")} { clear: right !important; }
+    .#{$prefix}#{class("clear")} { clear: both !important; }
+    .#{$prefix}#{class("clear-left")} { clear: left !important; }
+    .#{$prefix}#{class("clear-right")} { clear: right !important; }
 
-        // https://developer.mozilla.org/fr/docs/Web/CSS/Block_formatting_context
-        .#{class("block-formatting-context")} { overflow: hidden !important; }
-    }
+    // https://developer.mozilla.org/fr/docs/Web/CSS/Block_formatting_context
+    .#{$prefix}#{class("block-formatting-context")} { overflow: hidden !important; }
 }
