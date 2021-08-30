@@ -39,8 +39,11 @@ select
         border-color: var(--input-hover-border-color);
     }
 
-    &:invalid:focus {
-        border-color: $input-invalid-border-color;
+    &:invalid {
+        &:not(:placeholder-shown)[placeholder],
+        &:focus:not([placeholder]) {
+            border-color: $input-invalid-border-color;
+        }
     }
 
 	&[disabled] {

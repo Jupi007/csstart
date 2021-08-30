@@ -1834,6 +1834,7 @@
 *::after {
 	box-sizing: border-box;
 	max-width: 100%;
+	height: auto;
 }
 
 article,
@@ -10148,9 +10149,20 @@ select:focus {
 	border-color: var(--input-hover-border-color);
 }
 
-input:invalid:focus,
-textarea:invalid:focus,
-select:invalid:focus {
+input:invalid:not(:-moz-placeholder-shown)[placeholder], textarea:invalid:not(:-moz-placeholder-shown)[placeholder], select:invalid:not(:-moz-placeholder-shown)[placeholder] {
+	border-color: #d94d4d;
+}
+
+input:invalid:not(:-ms-input-placeholder)[placeholder], textarea:invalid:not(:-ms-input-placeholder)[placeholder], select:invalid:not(:-ms-input-placeholder)[placeholder] {
+	border-color: #d94d4d;
+}
+
+input:invalid:not(:placeholder-shown)[placeholder],
+input:invalid:focus:not([placeholder]),
+textarea:invalid:not(:placeholder-shown)[placeholder],
+textarea:invalid:focus:not([placeholder]),
+select:invalid:not(:placeholder-shown)[placeholder],
+select:invalid:focus:not([placeholder]) {
 	border-color: #d94d4d;
 }
 
