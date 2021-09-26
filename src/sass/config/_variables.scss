@@ -28,16 +28,16 @@ $mark-background: color("yellow") !default;
 
 $details-animation-translateY: px-to-rem(-10px) !default;
 $details-animation-duration: $transition-duration-base * 2 !default;
-$summary-arrow-icon-color: $body-color;
-$summary-arrow-icon: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$summary-arrow-icon-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m7 16 6-6-6-6'/></svg>"));
-$summary-arrow-icon-size: px-to-rem(20px);
-$summary-gap: spacer('tiny');
+$summary-arrow-icon-color: $body-color !default;
+$summary-arrow-icon: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$summary-arrow-icon-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m7 16 6-6-6-6'/></svg>")) !default;
+$summary-arrow-icon-size: px-to-rem(20px) !default;
+$summary-gap: spacer('tiny-plus') !default;
 $summary-focus-outline-size: $focus-outline-size-base !default;
 $summary-focus-outline-color: $components-focus-outline-color !default;
 $summary-focus-outline-offset: $focus-outline-offset-base !default;
 
-$summary-arrow-icon-color-dark: $body-color-dark;
-$summary-arrow-icon-dark: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$summary-arrow-icon-color-dark}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m7 16 6-6-6-6'/></svg>"));
+$summary-arrow-icon-color-dark: $body-color-dark !default;
+$summary-arrow-icon-dark: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$summary-arrow-icon-color-dark}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m7 16 6-6-6-6'/></svg>")) !default;
 $summary-focus-outline-color-dark: $components-focus-outline-color-dark !default;
 
 // -----

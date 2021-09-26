@@ -463,71 +463,13 @@ details {
     margin-bottom: $paragraph-margin-bottom;
 }
 
-@include theme-vars(
-    (--summary-focus-outline-color, $summary-focus-outline-color, $summary-focus-outline-color-dark),
-    (--summary-arrow-icon, $summary-arrow-icon, $summary-arrow-icon-dark)
-);
-
 summary {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: list-item;
     cursor: pointer;
-    user-select: none;
-    list-style: none;
-
-    padding-left: calc(#{$summary-arrow-icon-size} + #{$summary-gap});
-
-    border-radius: $border-radius-base;
-    outline: $summary-focus-outline-size solid transparentize(#000, 1);;
-    outline-offset: $summary-focus-outline-offset;
-
-    @include transition(outline-color);
-
-    &:focus {
-        outline-color: var(--summary-focus-outline-color);
-    }
-
-    &:before {
-        content: "";
-
-        position: absolute;
-        left: 0;
-
-        width: $summary-arrow-icon-size;
-        height: $summary-arrow-icon-size;
-
-        background: var(--summary-arrow-icon);
-
-        @include transition(transform);
-
-        details[open] & {
-            transform: rotate(90deg);
-        }
-    }
 
     > h1, > h2, > h3, > h4, > h5, > h6 {
         display: inline-block;
         margin: 0;
-        line-height: 1;
-    }
-}
-
-@include option('details-animation') {
-    @keyframes details-sweep {
-        0% {
-            opacity: 0;
-            transform: translateY($details-animation-translateY);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    details[open] summary ~ * {
-        animation: details-sweep $details-animation-duration $transition-timing-function-base;
     }
 }
 

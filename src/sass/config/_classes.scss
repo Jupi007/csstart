@@ -16,6 +16,7 @@ $classes: map-merge((
     "Form": "Form",
     "Form-switch": "Switch",
     "Linked": "Linked",
+    "Details": "Details",
 
     "Auto-formating-block": "Afb",
 
@@ -29,6 +30,8 @@ $classes: map-merge((
 
     "(Media)-body": "body",
     "(Media)-figure": "figure",
+
+    "(Details)-summary": "summary",
 
     // Components variants
     "(Component)-inverted": "inverted",

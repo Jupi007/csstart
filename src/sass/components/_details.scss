@@ -1,0 +1,74 @@
+// ===========================
+// ==== Details component ====
+// ===========================
+
+// Style html details and summary elements
+
+@include option('details') {
+
+@include theme-vars(
+    (--summary-focus-outline-color, $summary-focus-outline-color, $summary-focus-outline-color-dark),
+    (--summary-arrow-icon, $summary-arrow-icon, $summary-arrow-icon-dark)
+);
+
+.#{class("Details")}-#{class("(Details)-summary")} {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-left: calc(#{$summary-arrow-icon-size} + #{$summary-gap});
+
+    border-radius: $border-radius-base;
+
+    outline: $summary-focus-outline-size solid transparentize(#000, 1);;
+    outline-offset: $summary-focus-outline-offset;
+
+    list-style: none;
+    
+    @include transition(outline-color);
+
+    &:focus {
+        outline-color: var(--summary-focus-outline-color);
+    }
+
+    &:before {
+        content: "";
+
+        position: absolute;
+        left: 0;
+
+        width: $summary-arrow-icon-size;
+        height: $summary-arrow-icon-size;
+
+        background: var(--summary-arrow-icon);
+
+        @include transition(transform);
+
+        .#{class("Details")}[open] & {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+@include option('details-animation') {
+    @keyframes details-sweep {
+        0% {
+            opacity: 0;
+            transform: translateY($details-animation-translateY);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .#{class("Details")}[open] .#{class("Details")}-#{class("(Details)-summary")} ~ * {
+            animation: details-sweep $details-animation-duration $transition-timing-function-base;
+        }
+    }
+}
+
+}

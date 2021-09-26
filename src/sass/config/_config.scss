@@ -14,8 +14,6 @@ $options: map-merge((
 
     "smooth-scroll": true,
 
-    "details-animation": true,
-
     // At least one of them have to be true
     "light-theme": true,
     "dark-theme": true,
@@ -44,6 +42,8 @@ $options: map-merge((
         "table-zebra": true,
         "table-hover": true,
     "linked": true,
+    "details": true,
+        "details-animation": true,
 
     "grid-masonry": false,
 
