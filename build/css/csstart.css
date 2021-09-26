@@ -11149,23 +11149,23 @@ a.Card:focus {
 }
 
 .inverted {
-	--table-border-color: #4d4d4d;
-	--table-cell-border-color: gray;
+	--table-border-color: #666;
+	--table-cell-border-color: #595959;
 	--table-background: #333;
-	--table-headings-cell-background: #1a1a1a;
+	--table-headings-cell-background: #242424;
 	--table-zebra-cell-background: #404040;
-	--table-cell-hover-background: #262626;
+	--table-cell-hover-background: #2b2b2b;
 	--table-caption-color: #b3b3b3;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--table-border-color: #4d4d4d;
-		--table-cell-border-color: gray;
+		--table-border-color: #666;
+		--table-cell-border-color: #595959;
 		--table-background: #333;
-		--table-headings-cell-background: #1a1a1a;
+		--table-headings-cell-background: #242424;
 		--table-zebra-cell-background: #404040;
-		--table-cell-hover-background: #262626;
+		--table-cell-hover-background: #2b2b2b;
 		--table-caption-color: #b3b3b3;
 	}
 
@@ -11191,12 +11191,12 @@ a.Card:focus {
 }
 
 .dark {
-	--table-border-color: #4d4d4d;
-	--table-cell-border-color: gray;
+	--table-border-color: #666;
+	--table-cell-border-color: #595959;
 	--table-background: #333;
-	--table-headings-cell-background: #1a1a1a;
+	--table-headings-cell-background: #242424;
 	--table-zebra-cell-background: #404040;
-	--table-cell-hover-background: #262626;
+	--table-cell-hover-background: #2b2b2b;
 	--table-caption-color: #b3b3b3;
 }
 
@@ -11437,7 +11437,7 @@ a.Card:focus {
 .Linked {
 	display: flex;
 	flex-direction: row;
-	gap: 2px;
+	gap: 1px;
 }
 
 .Linked > * {

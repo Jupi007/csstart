@@ -153,7 +153,7 @@ $progress-indeterminate-background-dark: darken($progress-background-dark, 8%) !
 // Linked
 // ------
 
-$linked-gap: 2px !default;
+$linked-gap: 1px !default;
 $linked-border-radius: $border-radius-base !default;
 
 // -------
@@ -281,13 +281,13 @@ $table-headings-cell-background: grey(20) !default;
 $table-zebra-cell-background: grey(5) !default;
 $table-cell-hover-background: grey(10) !default;
 
-$table-border-color-dark: grey(70) !default;
-$table-cell-border-color-dark: grey(50) !default;
+$table-border-color-dark: grey(60) !default;
+$table-cell-border-color-dark: grey(65) !default;
 $table-background-dark: grey(80) !default;
-$table-headings-cell-background-dark: grey(90) !default;
+$table-headings-cell-background-dark: grey(86) !default;
 $table-zebra-headings-cell-background-dark: grey(90) !default;
 $table-zebra-cell-background-dark: grey(75) !default;
-$table-cell-hover-background-dark: grey(85) !default;
+$table-cell-hover-background-dark: grey(83) !default;
 
 $table-caption-color: grey(70) !default;
 $table-caption-font-style: italic !default;
