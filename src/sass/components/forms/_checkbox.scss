@@ -36,7 +36,7 @@
     // Interactive states and behaviors
     // ================================
 
-    &:active {
+    &:active:not(:disabled) {
         background-color: var(--checkbox-active-background);
     }
 
@@ -46,7 +46,7 @@
 
         background-color: var(--checkbox-checked-background);
 
-        &:active {
+        &:active:not(:disabled) {
             background-color: var(--checkbox-checked-active-background);
         }
     }

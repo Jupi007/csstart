@@ -10285,8 +10285,8 @@ select[multiple] option:first-child {
 	background-repeat: no-repeat;
 }
 
-[type=checkbox]:active,
-[type=radio]:active {
+[type=checkbox]:active:not(:disabled),
+[type=radio]:active:not(:disabled) {
 	background-color: var(--checkbox-active-background);
 }
 
@@ -10299,10 +10299,10 @@ select[multiple] option:first-child {
 	--input-hover-border-color: var(--checkbox-checked-background);
 }
 
-[type=checkbox]:checked:active,
-[type=checkbox]:indeterminate:active,
-[type=radio]:checked:active,
-[type=radio]:indeterminate:active {
+[type=checkbox]:checked:active:not(:disabled),
+[type=checkbox]:indeterminate:active:not(:disabled),
+[type=radio]:checked:active:not(:disabled),
+[type=radio]:indeterminate:active:not(:disabled) {
 	background-color: var(--checkbox-checked-active-background);
 }
 
