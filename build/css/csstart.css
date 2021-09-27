@@ -11142,7 +11142,7 @@ a.Card:focus {
 	--table-border-color: #262626;
 	--table-cell-border-color: gray;
 	--table-background: #fff;
-	--table-headings-cell-background: #ccc;
+	--table-headings-cell-background: #d1d1d1;
 	--table-zebra-cell-background: #f2f2f2;
 	--table-cell-hover-background: #e6e6e6;
 	--table-caption-color: #4d4d4d;
@@ -11173,7 +11173,7 @@ a.Card:focus {
 		--table-border-color: #262626;
 		--table-cell-border-color: gray;
 		--table-background: #fff;
-		--table-headings-cell-background: #ccc;
+		--table-headings-cell-background: #d1d1d1;
 		--table-zebra-cell-background: #f2f2f2;
 		--table-cell-hover-background: #e6e6e6;
 		--table-caption-color: #4d4d4d;
@@ -11184,7 +11184,7 @@ a.Card:focus {
 	--table-border-color: #262626;
 	--table-cell-border-color: gray;
 	--table-background: #fff;
-	--table-headings-cell-background: #ccc;
+	--table-headings-cell-background: #d1d1d1;
 	--table-zebra-cell-background: #f2f2f2;
 	--table-cell-hover-background: #e6e6e6;
 	--table-caption-color: #4d4d4d;
