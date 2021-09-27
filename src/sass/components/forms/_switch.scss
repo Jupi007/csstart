@@ -15,7 +15,7 @@
     height: $switch-height;
     border-radius: $switch-border-radius;
 
-    @include transition("border, background");
+    @include transition("border, background, outline");
 
     &::after {
         content: "";

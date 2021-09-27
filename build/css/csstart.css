@@ -10334,7 +10334,7 @@ select[multiple] option:first-child {
 	height: 1.25rem;
 	transition-timing-function: ease;
 	transition-duration: .2s;
-	transition-property: border, background;
+	transition-property: border, background, outline;
 	border-radius: 2rem;
 }
 
