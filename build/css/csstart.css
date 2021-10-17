@@ -10983,7 +10983,7 @@ a.Tag--wired:hover,
 	align-items: flex-start;
 }
 
-@media (max-width: 29rem) {
+@media (max-width: 29.9375rem) {
 	.Media {
 		flex-direction: column;
 		align-items: center;
