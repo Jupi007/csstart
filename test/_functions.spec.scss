@@ -27,7 +27,7 @@
 
 @include describe('spacer()') {
     @include it('Returns a css calc function which calculating a spacer') {
-        @include assert-equal(spacer('large'), calc(var(--spacer-base) * 2));
+        @include assert-equal('#{spacer('large')}', 'calc(var(--spacer-base) * 2)');
     }
     /*@include it('Returns an error') {
         @include assert-equal(spacer('wrong-spacer'), null);
@@ -58,18 +58,18 @@
     }*/
 }
 
-@include describe('brightness()') {
+@include describe('get-brightness()') {
     @include it('Returns the brightness of white color') {
-        @include assert-equal(brightness(#ffffff), 1);
+        @include assert-equal(get-brightness(#ffffff), 1);
     }
     @include it('Returns the brightness of dark color') {
-        @include assert-equal(brightness(#000000), 0);
+        @include assert-equal(get-brightness(#000000), 0);
     }
     @include it('Returns the brightness of the given color') {
-        @include assert-equal(brightness(#4aba73), .4901960784, $inspect: true);
+        @include assert-equal(get-brightness(#4aba73), .4901960784, $inspect: true);
     }
     /*@include it('Returns an error') {
-        @include assert-equal(brightness("wrong-color"), null);
+        @include assert-equal(get-brightness("wrong-color"), null);
     }*/
 }
 
@@ -114,9 +114,9 @@
 
 @include describe('respond-to()') {
     @include it('Returns a min-width string') {
-        @include assert-equal(respond-to('medium', 'up'), 'min-width: 768px');
+        @include assert-equal(respond-to('medium', 'up'), 'min-width: 48rem');
     }
     @include it('Returns a maw-width string') {
-        @include assert-equal(respond-to('medium', 'down'), 'max-width: 767px');
+        @include assert-equal(respond-to('medium', 'down'), 'max-width: 47.9375rem');
     }
 }
