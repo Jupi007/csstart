@@ -101,7 +101,7 @@
 	}
 }
 
-@function brightness($color) {
+@function get-brightness($color) {
     @if type-of($color) != color {
         @warn "Unfortunately, `#{$color}` value is not valid. It should be a color.";
 		@return null;
@@ -116,7 +116,7 @@
 		@return null;
     }
 
-    @return abs(brightness($base) - brightness($color));
+    @return abs(get-brightness($base) - get-brightness($color));
 }
 
 @function best-contrast($base, $color1, $color2) {

@@ -550,12 +550,12 @@
 
 .w13 {
 	width: 100% !important;
-	max-width: calc(100% / 3) !important;
+	max-width: 33.3333333333% !important;
 }
 
 .w23 {
 	width: 100% !important;
-	max-width: calc((100% / 3) * 2) !important;
+	max-width: 66.6666666667% !important;
 }
 
 .h-auto {
@@ -590,12 +590,12 @@
 
 .h13 {
 	height: 100% !important;
-	max-height: calc(100% / 3) !important;
+	max-height: 33.3333333333% !important;
 }
 
 .h23 {
 	height: 100% !important;
-	max-height: calc((100% / 3) * 2) !important;
+	max-height: 66.6666666667% !important;
 }
 
 .d-none {
@@ -2444,12 +2444,12 @@ template {
 
 	.xs-w13 {
 		width: 100% !important;
-		max-width: calc(100% / 3) !important;
+		max-width: 33.3333333333% !important;
 	}
 
 	.xs-w23 {
 		width: 100% !important;
-		max-width: calc((100% / 3) * 2) !important;
+		max-width: 66.6666666667% !important;
 	}
 
 	.xs-h-auto {
@@ -2484,12 +2484,12 @@ template {
 
 	.xs-h13 {
 		height: 100% !important;
-		max-height: calc(100% / 3) !important;
+		max-height: 33.3333333333% !important;
 	}
 
 	.xs-h23 {
 		height: 100% !important;
-		max-height: calc((100% / 3) * 2) !important;
+		max-height: 66.6666666667% !important;
 	}
 
 	.xs-d-none {
@@ -3699,12 +3699,12 @@ template {
 
 	.s-w13 {
 		width: 100% !important;
-		max-width: calc(100% / 3) !important;
+		max-width: 33.3333333333% !important;
 	}
 
 	.s-w23 {
 		width: 100% !important;
-		max-width: calc((100% / 3) * 2) !important;
+		max-width: 66.6666666667% !important;
 	}
 
 	.s-h-auto {
@@ -3739,12 +3739,12 @@ template {
 
 	.s-h13 {
 		height: 100% !important;
-		max-height: calc(100% / 3) !important;
+		max-height: 33.3333333333% !important;
 	}
 
 	.s-h23 {
 		height: 100% !important;
-		max-height: calc((100% / 3) * 2) !important;
+		max-height: 66.6666666667% !important;
 	}
 
 	.s-d-none {
@@ -4954,12 +4954,12 @@ template {
 
 	.m-w13 {
 		width: 100% !important;
-		max-width: calc(100% / 3) !important;
+		max-width: 33.3333333333% !important;
 	}
 
 	.m-w23 {
 		width: 100% !important;
-		max-width: calc((100% / 3) * 2) !important;
+		max-width: 66.6666666667% !important;
 	}
 
 	.m-h-auto {
@@ -4994,12 +4994,12 @@ template {
 
 	.m-h13 {
 		height: 100% !important;
-		max-height: calc(100% / 3) !important;
+		max-height: 33.3333333333% !important;
 	}
 
 	.m-h23 {
 		height: 100% !important;
-		max-height: calc((100% / 3) * 2) !important;
+		max-height: 66.6666666667% !important;
 	}
 
 	.m-d-none {
@@ -6209,12 +6209,12 @@ template {
 
 	.l-w13 {
 		width: 100% !important;
-		max-width: calc(100% / 3) !important;
+		max-width: 33.3333333333% !important;
 	}
 
 	.l-w23 {
 		width: 100% !important;
-		max-width: calc((100% / 3) * 2) !important;
+		max-width: 66.6666666667% !important;
 	}
 
 	.l-h-auto {
@@ -6249,12 +6249,12 @@ template {
 
 	.l-h13 {
 		height: 100% !important;
-		max-height: calc(100% / 3) !important;
+		max-height: 33.3333333333% !important;
 	}
 
 	.l-h23 {
 		height: 100% !important;
-		max-height: calc((100% / 3) * 2) !important;
+		max-height: 66.6666666667% !important;
 	}
 
 	.l-d-none {
@@ -7464,12 +7464,12 @@ template {
 
 	.xl-w13 {
 		width: 100% !important;
-		max-width: calc(100% / 3) !important;
+		max-width: 33.3333333333% !important;
 	}
 
 	.xl-w23 {
 		width: 100% !important;
-		max-width: calc((100% / 3) * 2) !important;
+		max-width: 66.6666666667% !important;
 	}
 
 	.xl-h-auto {
@@ -7504,12 +7504,12 @@ template {
 
 	.xl-h13 {
 		height: 100% !important;
-		max-height: calc(100% / 3) !important;
+		max-height: 33.3333333333% !important;
 	}
 
 	.xl-h23 {
 		height: 100% !important;
-		max-height: calc((100% / 3) * 2) !important;
+		max-height: 66.6666666667% !important;
 	}
 
 	.xl-d-none {
@@ -9321,12 +9321,12 @@ template {
 
 	.printw13 {
 		width: 100% !important;
-		max-width: calc(100% / 3) !important;
+		max-width: 33.3333333333% !important;
 	}
 
 	.printw23 {
 		width: 100% !important;
-		max-width: calc((100% / 3) * 2) !important;
+		max-width: 66.6666666667% !important;
 	}
 
 	.printh-auto {
@@ -9361,12 +9361,12 @@ template {
 
 	.printh13 {
 		height: 100% !important;
-		max-height: calc(100% / 3) !important;
+		max-height: 33.3333333333% !important;
 	}
 
 	.printh23 {
 		height: 100% !important;
-		max-height: calc((100% / 3) * 2) !important;
+		max-height: 66.6666666667% !important;
 	}
 
 	.printd-none {
