@@ -11087,6 +11087,10 @@ a.Tag--wired:hover,
 	margin-top: 0;
 }
 
+.Card-body > :last-child {
+	margin-bottom: 0;
+}
+
 .Card-figure {
 	max-height: 100vh;
 	-o-object-fit: cover;

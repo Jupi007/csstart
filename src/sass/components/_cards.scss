@@ -33,8 +33,12 @@
         height: 100%;
     	padding: $card-body-padding;
         
-         > :first-child {
+        > :first-child {
             margin-top: 0;
+        }
+
+        > :last-child {
+            margin-bottom: 0;
         }
     }
 
