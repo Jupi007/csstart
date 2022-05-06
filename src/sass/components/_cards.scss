@@ -30,6 +30,7 @@
     // Card children
     // =============
     &-#{class("(Card)-body")} {
+        min-width: 0;
         height: 100%;
     	padding: $card-body-padding;
         

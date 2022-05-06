@@ -16,11 +16,13 @@
     }
 
     > :first-child {
-        border-radius: $linked-border-radius 0 0 $linked-border-radius;
+        border-top-left-radius: $linked-border-radius;
+        border-bottom-left-radius: $linked-border-radius;
     }
 
     > :last-child {
-        border-radius: 0 $linked-border-radius $linked-border-radius 0;
+        border-top-right-radius: $linked-border-radius;
+        border-bottom-right-radius: $linked-border-radius;
     }
 
     > :focus {

@@ -4,7 +4,7 @@
 	display: grid;
 	grid-auto-flow: row;
 	grid-auto-columns: 1fr;
-	grid-template-columns: none;
+	grid-template-columns: minmax(0, 1fr);
 }
 
 .has-gutter {
@@ -11079,6 +11079,7 @@ a.Tag--wired:hover,
 }
 
 .Card-body {
+	min-width: 0;
 	height: 100%;
 	padding: calc(var(--spacer-base) * 1.5);
 }
@@ -11453,11 +11454,13 @@ a.Card:focus {
 }
 
 .Linked > :first-child {
-	border-radius: .1875rem 0 0 .1875rem;
+	border-top-left-radius: .1875rem;
+	border-bottom-left-radius: .1875rem;
 }
 
 .Linked > :last-child {
-	border-radius: 0 .1875rem .1875rem 0;
+	border-top-right-radius: .1875rem;
+	border-bottom-right-radius: .1875rem;
 }
 
 .Linked > :focus {
