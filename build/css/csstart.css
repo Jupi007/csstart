@@ -11128,6 +11128,10 @@ a.Tag--wired:hover,
 	border-radius: .1875rem;
 }
 
+.Card-body + .Card-body {
+	border-top-width: 1px;
+}
+
 a.Card {
 	cursor: pointer;
 	text-decoration: none;
