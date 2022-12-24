@@ -2049,39 +2049,39 @@ sup {
 :root {
 	--link-color: #3935cd;
 	--link-hover-color: #211f7d;
-	--link-focus-outline-color: #8987e1;
+	--link-focus-outline-color: rgba(57, 53, 205, .5);
 }
 
 .inverted {
 	--link-color: #74c0cd;
 	--link-hover-color: #41a3b4;
-	--link-focus-outline-color: #bfe2e8;
+	--link-focus-outline-color: rgba(116, 192, 205, .5);
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
 		--link-color: #74c0cd;
 		--link-hover-color: #41a3b4;
-		--link-focus-outline-color: #bfe2e8;
+		--link-focus-outline-color: rgba(116, 192, 205, .5);
 	}
 
 	.inverted {
 		--link-color: #3935cd;
 		--link-hover-color: #211f7d;
-		--link-focus-outline-color: #8987e1;
+		--link-focus-outline-color: rgba(57, 53, 205, .5);
 	}
 }
 
 .light {
 	--link-color: #3935cd;
 	--link-hover-color: #211f7d;
-	--link-focus-outline-color: #8987e1;
+	--link-focus-outline-color: rgba(57, 53, 205, .5);
 }
 
 .dark {
 	--link-color: #74c0cd;
 	--link-hover-color: #41a3b4;
-	--link-focus-outline-color: #bfe2e8;
+	--link-focus-outline-color: rgba(116, 192, 205, .5);
 }
 
 a {
