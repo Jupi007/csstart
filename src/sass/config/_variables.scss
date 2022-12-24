@@ -97,7 +97,7 @@ $radio-checked-icon: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w
 $checkbox-indeterminate-icon: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$checkbox-checked-icon-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/></svg>")) !default;
 
 $switch-height: $checkbox-size !default;
-$switch-width:  $checkbox-size * 2 !default;
+$switch-width: $checkbox-size * 2 !default;
 $switch-border-radius: 2rem !default;
 
 $range-thumb-size: px-to-rem(15px) !default;
@@ -164,14 +164,15 @@ $button-padding: spacer("tiny-plus") spacer("medium") !default;
 $button-font-size: .9em !default;
 $button-border-radius: $border-radius-base !default;
 
-$button-sizes: () !default;
-$button-sizes: map-merge((
-    // Name - Padding - Font size
-    "xs": (spacer("tiny") spacer("tiny-plus"), .7em),
-    "s": (spacer("tiny") spacer("small"), .8em),
-    "l": (spacer("small") spacer("medium-plus"), 1em),
-    "xl": (spacer("small-plus") spacer("large"), 1.2em),
-), $button-sizes);
+$button-sizes: (
+    ) !default;
+$button-sizes: map-merge(( // Name - Padding - Font size
+            "xs": (spacer("tiny") spacer("tiny-plus"), .7em),
+            "s": (spacer("tiny") spacer("small"), .8em),
+            "l": (spacer("small") spacer("medium-plus"), 1em),
+            "xl": (spacer("small-plus") spacer("large"), 1.2em),
+        ), $button-sizes
+);
 
 // ----
 // Tags
@@ -184,7 +185,7 @@ $tag-border-width: $border-width-base !default;
 $tag-background: $components-background !default;
 $tag-hover-background: $components-hover-background !default;
 $tag-color: $components-color !default;
-$tag-focus-outline-color-lighten: $components-focus-outline-color-lighten !default;
+$tag-focus-outline-color-transparentize: $components-focus-outline-color-transparentize !default;
 $tag-focus-outline-color: $components-focus-outline-color !default;
 $tag-focus-outline-size: $focus-outline-size-base !default;
 $tag-focus-outline-offset: $focus-outline-offset-base !default;
@@ -197,12 +198,13 @@ $tag-color-dark: $components-color-dark !default;
 $tag-focus-outline-color-dark: $components-focus-outline-color-dark !default;
 $tag-wired-color-dark: $components-color !default;
 
-$tag-sizes: () !default;
-$tag-sizes: map-merge((
-    // Name - Padding - Font size
-    "l": (spacer("tiny-plus") spacer("small") , .85em),
-    "xl": (spacer("small") spacer("small-plus"), .9em),
-), $tag-sizes);
+$tag-sizes: (
+    ) !default;
+$tag-sizes: map-merge(( // Name - Padding - Font size
+            "l": (spacer("tiny-plus") spacer("small"), .85em),
+            "xl": (spacer("small") spacer("small-plus"), .9em),
+        ), $tag-sizes
+);
 
 // ------
 // Alerts

@@ -9873,7 +9873,7 @@ template {
 }
 
 :root {
-	--components-focus-outline-color: #666;
+	--components-focus-outline-color: rgba(51, 51, 51, .5);
 }
 
 .inverted {
@@ -9886,12 +9886,12 @@ template {
 	}
 
 	.inverted {
-		--components-focus-outline-color: #666;
+		--components-focus-outline-color: rgba(51, 51, 51, .5);
 	}
 }
 
 .light {
-	--components-focus-outline-color: #666;
+	--components-focus-outline-color: rgba(51, 51, 51, .5);
 }
 
 .dark {
@@ -10209,7 +10209,7 @@ select[multiple] option:first-child {
 	--checkbox-active-background: rgba(51, 51, 51, .25);
 	--checkbox-checked-active-background: rgba(51, 51, 51, .75);
 	--checkbox-checked-icon-color: #f2f2f2;
-	--checkbox-focus-outline-color: #666;
+	--checkbox-focus-outline-color: rgba(51, 51, 51, .5);
 	--checkbox-checked-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath fill=\'none\' stroke=\'%23f2f2f2\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M6 10l3 3l6-6\'/%3e%3c/svg%3e');
 	--radio-checked-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'-4 -4 8 8\'%3e%3ccircle r=\'1.5\' fill=\'%23f2f2f2\'/%3e%3c/svg%3e');
 	--checkbox-indeterminate-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath fill=\'none\' stroke=\'%23f2f2f2\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'3\' d=\'M6 10h8\'/%3e%3c/svg%3e');
@@ -10243,7 +10243,7 @@ select[multiple] option:first-child {
 		--checkbox-active-background: rgba(51, 51, 51, .25);
 		--checkbox-checked-active-background: rgba(51, 51, 51, .75);
 		--checkbox-checked-icon-color: #f2f2f2;
-		--checkbox-focus-outline-color: #666;
+		--checkbox-focus-outline-color: rgba(51, 51, 51, .5);
 		--checkbox-checked-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath fill=\'none\' stroke=\'%23f2f2f2\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M6 10l3 3l6-6\'/%3e%3c/svg%3e');
 		--radio-checked-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'-4 -4 8 8\'%3e%3ccircle r=\'1.5\' fill=\'%23f2f2f2\'/%3e%3c/svg%3e');
 		--checkbox-indeterminate-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath fill=\'none\' stroke=\'%23f2f2f2\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'3\' d=\'M6 10h8\'/%3e%3c/svg%3e');
@@ -10255,7 +10255,7 @@ select[multiple] option:first-child {
 	--checkbox-active-background: rgba(51, 51, 51, .25);
 	--checkbox-checked-active-background: rgba(51, 51, 51, .75);
 	--checkbox-checked-icon-color: #f2f2f2;
-	--checkbox-focus-outline-color: #666;
+	--checkbox-focus-outline-color: rgba(51, 51, 51, .5);
 	--checkbox-checked-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath fill=\'none\' stroke=\'%23f2f2f2\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M6 10l3 3l6-6\'/%3e%3c/svg%3e');
 	--radio-checked-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'-4 -4 8 8\'%3e%3ccircle r=\'1.5\' fill=\'%23f2f2f2\'/%3e%3c/svg%3e');
 	--checkbox-indeterminate-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath fill=\'none\' stroke=\'%23f2f2f2\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'3\' d=\'M6 10h8\'/%3e%3c/svg%3e');
@@ -10703,7 +10703,7 @@ meter::-webkit-meter-even-less-good-value {
 	--tag-wired-hover-background: rgba(26, 26, 26, .2);
 	--tag-color: #f2f2f2;
 	--tag-wired-color: #0d0d0d;
-	--tag-focus-outline-color: #666;
+	--tag-focus-outline-color: rgba(51, 51, 51, .5);
 }
 
 .inverted {
@@ -10731,7 +10731,7 @@ meter::-webkit-meter-even-less-good-value {
 		--tag-wired-hover-background: rgba(26, 26, 26, .2);
 		--tag-color: #f2f2f2;
 		--tag-wired-color: #0d0d0d;
-		--tag-focus-outline-color: #666;
+		--tag-focus-outline-color: rgba(51, 51, 51, .5);
 	}
 }
 
@@ -10741,7 +10741,7 @@ meter::-webkit-meter-even-less-good-value {
 	--tag-wired-hover-background: rgba(26, 26, 26, .2);
 	--tag-color: #f2f2f2;
 	--tag-wired-color: #0d0d0d;
-	--tag-focus-outline-color: #666;
+	--tag-focus-outline-color: rgba(51, 51, 51, .5);
 }
 
 .dark {
@@ -10794,7 +10794,7 @@ meter::-webkit-meter-even-less-good-value {
 	--tag-background: #74cf61;
 	--tag-hover-background: #52c23b;
 	--tag-wired-hover-background: rgba(116, 207, 97, .2);
-	--tag-focus-outline-color: #b9e7af;
+	--tag-focus-outline-color: rgba(116, 207, 97, .5);
 	--tag-color: #0d0d0d;
 }
 
@@ -10803,7 +10803,7 @@ meter::-webkit-meter-even-less-good-value {
 	--tag-background: #74c0cd;
 	--tag-hover-background: #4eafc0;
 	--tag-wired-hover-background: rgba(116, 192, 205, .2);
-	--tag-focus-outline-color: #bfe2e8;
+	--tag-focus-outline-color: rgba(116, 192, 205, .5);
 	--tag-color: #0d0d0d;
 }
 
@@ -10812,7 +10812,7 @@ meter::-webkit-meter-even-less-good-value {
 	--tag-background: #d9831e;
 	--tag-hover-background: #ac6818;
 	--tag-wired-hover-background: rgba(217, 131, 30, .2);
-	--tag-focus-outline-color: #ebb372;
+	--tag-focus-outline-color: rgba(217, 131, 30, .5);
 	--tag-color: #f2f2f2;
 }
 
@@ -10821,7 +10821,7 @@ meter::-webkit-meter-even-less-good-value {
 	--tag-background: #d94d4d;
 	--tag-hover-background: #c82b2b;
 	--tag-wired-hover-background: rgba(217, 77, 77, .2);
-	--tag-focus-outline-color: #eba1a1;
+	--tag-focus-outline-color: rgba(217, 77, 77, .5);
 	--tag-color: #f2f2f2;
 }
 
@@ -11019,7 +11019,7 @@ a.Tag--wired:hover,
 	--card-background: #f2f2f2;
 	--card-background-hover: #ebebeb;
 	--card-subtitle-color: #666;
-	--card-focus-outline-color: #666;
+	--card-focus-outline-color: rgba(51, 51, 51, .5);
 }
 
 .inverted {
@@ -11044,7 +11044,7 @@ a.Tag--wired:hover,
 		--card-background: #f2f2f2;
 		--card-background-hover: #ebebeb;
 		--card-subtitle-color: #666;
-		--card-focus-outline-color: #666;
+		--card-focus-outline-color: rgba(51, 51, 51, .5);
 	}
 }
 
@@ -11053,7 +11053,7 @@ a.Tag--wired:hover,
 	--card-background: #f2f2f2;
 	--card-background-hover: #ebebeb;
 	--card-subtitle-color: #666;
-	--card-focus-outline-color: #666;
+	--card-focus-outline-color: rgba(51, 51, 51, .5);
 }
 
 .dark {
@@ -11468,7 +11468,7 @@ a.Card:focus {
 }
 
 :root {
-	--summary-focus-outline-color: #666;
+	--summary-focus-outline-color: rgba(51, 51, 51, .5);
 	--summary-arrow-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath fill=\'none\' stroke=\'%230d0d0d\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'m7 16 6-6-6-6\'/%3e%3c/svg%3e');
 }
 
@@ -11484,13 +11484,13 @@ a.Card:focus {
 	}
 
 	.inverted {
-		--summary-focus-outline-color: #666;
+		--summary-focus-outline-color: rgba(51, 51, 51, .5);
 		--summary-arrow-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath fill=\'none\' stroke=\'%230d0d0d\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'m7 16 6-6-6-6\'/%3e%3c/svg%3e');
 	}
 }
 
 .light {
-	--summary-focus-outline-color: #666;
+	--summary-focus-outline-color: rgba(51, 51, 51, .5);
 	--summary-arrow-icon: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath fill=\'none\' stroke=\'%230d0d0d\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'m7 16 6-6-6-6\'/%3e%3c/svg%3e');
 }
 

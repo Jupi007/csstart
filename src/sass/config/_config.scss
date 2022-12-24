@@ -6,94 +6,97 @@
 // CSStart options
 // ---------------
 
-$options: () !default;
-$options: map-merge((
-	"border-radius": true,
-    "box-shadow": true,
-	"transitions": true,
+$options: (
+    ) !default;
+$options: map-merge(("border-radius": true,
+            "box-shadow": true,
+            "transitions": true,
 
-    "smooth-scroll": true,
+            "smooth-scroll": true,
 
-    // At least one of them have to be true
-    "light-theme": true,
-    "dark-theme": true,
+            // At least one of them have to be true
+            "light-theme": true,
+            "dark-theme": true,
 
-    "print-styles": true,
-        "print-reformats": true,
+            "print-styles": true,
+            "print-reformats": true,
 
-    "components-inverted": true,
-    "components-dark": true,
-    "components-light": true,
-    "components-ghost": true,
+            "components-inverted": true,
+            "components-dark": true,
+            "components-light": true,
+            "components-ghost": true,
 
-    "form": true,
-        "form-layout": true,
-        "form-switch": true,
-    "alert": true,
-	"blockquote": true,
-        "blockquote-quote": true,
-	"tag": true,
-	"button": true, // Need tags enable
-	"card": true,
-	"figure": true,
-	"media": true,
-	"media-responsive": true,
-	"table": true,
-        "table-zebra": true,
-        "table-hover": true,
-    "linked": true,
-    "details": true,
-        "details-animation": true,
+            "form": true,
+            "form-layout": true,
+            "form-switch": true,
+            "alert": true,
+            "blockquote": true,
+            "blockquote-quote": true,
+            "tag": true,
+            "button": true, // Need tags enable
+            "card": true,
+            "figure": true,
+            "media": true,
+            "media-responsive": true,
+            "table": true,
+            "table-zebra": true,
+            "table-hover": true,
+            "linked": true,
+            "details": true,
+            "details-animation": true,
 
-    "grid-masonry": false,
+            "grid-masonry": false,
 
-    "utilities": true,
-    "dark-theme-utilities": true,
-    "responsive-utilities": true,
-), $options);
+            "utilities": true,
+            "dark-theme-utilities": true,
+            "responsive-utilities": true,
+        ), $options
+);
 
-$utilities-options: () !default;
-$utilities-options: map-merge((
-    // Name   -   Enabled - Responsive - Dark theme - Print
-    "text":          (true,  false,  false, false),
-    "border":        (true,  false,  true,  false),
-    "color":         (true,  false,  true,  false),
-    "size":          (true,  true,   false, true),
-    "display":       (true,  true,   true,  true),
-    "align":         (true,  true,   false, false),
-    "margin":        (true,  true,   false, true),
-    "padding":       (true,  true,   false, false),
-    "visibility":    (true,  true,   false, true),
-    "accessibility": (true,  false,  false, false),
-    "order":         (true,  true,   false, false),
-    "float":         (true,  false,  false, false),
+$utilities-options: (
+    ) !default;
+$utilities-options: map-merge(( // Name   -   Enabled - Responsive - Dark theme - Print
+            "text": (true, false, false, false),
+            "border": (true, false, true, false),
+            "color": (true, false, true, false),
+            "size": (true, true, false, true),
+            "display": (true, true, true, true),
+            "align": (true, true, false, false),
+            "margin": (true, true, false, true),
+            "padding": (true, true, false, false),
+            "visibility": (true, true, false, true),
+            "accessibility": (true, false, false, false),
+            "order": (true, true, false, false),
+            "float": (true, false, false, false),
 
-    "flex":          (true,  true,   false, false),
-    "grid":          (true,  true,   false, false),
-), $utilities-options);
+            "flex": (true, true, false, false),
+            "grid": (true, true, false, false),
+        ), $utilities-options
+);
 
 // ------
 // Colors
 // ------
 
-$colors: () !default;
-$colors: map-merge((
-    'white': #ffffff,
-    'black': #000000,
-    'red': rgb(217, 77, 77),
-    'orange': rgb(217, 131, 30),
-    'yellow': rgb(255, 244, 108),
-    'green': rgb(116, 207, 97),
-    'blue': rgb(57, 53, 205),
-    'light-blue': rgb(116, 192, 205),
-    'purple': rgb(170, 128, 217),
-    'brown': rgb(131, 86, 17),
+$colors: (
+    ) !default;
+$colors: map-merge(('white': #ffffff,
+            'black': #000000,
+            'red': rgb(217, 77, 77),
+            'orange': rgb(217, 131, 30),
+            'yellow': rgb(255, 244, 108),
+            'green': rgb(116, 207, 97),
+            'blue': rgb(57, 53, 205),
+            'light-blue': rgb(116, 192, 205),
+            'purple': rgb(170, 128, 217),
+            'brown': rgb(131, 86, 17),
 
-    'success': 'green',
-    'info': 'light-blue',
-    'warning': 'orange',
-    'danger': 'red'
-), $colors);
+            'success': 'green',
+            'info': 'light-blue',
+            'warning': 'orange',
+            'danger': 'red'
+        ), $colors
+);
 
 // -------
 // Spacers
@@ -101,21 +104,22 @@ $colors: map-merge((
 
 $spacer-base: .6rem !default;
 
-$spacers: () !default;
-$spacers: map-merge((
-	'tiny': .25,
-	'tiny-plus': .5,
-	'small': .75,
-	'small-plus': .9,
-	'medium': 1,
-	'medium-plus': 1.5,
-	'large': 2,
-	'large-plus': 2.5,
-	'x-large': 3,
-	'x-large-plus': 3.5,
-	'xx-large': 4,
-	'xx-large-plus': 4.5,
-), $spacers);
+$spacers: (
+    ) !default;
+$spacers: map-merge(('tiny': .25,
+            'tiny-plus': .5,
+            'small': .75,
+            'small-plus': .9,
+            'medium': 1,
+            'medium-plus': 1.5,
+            'large': 2,
+            'large-plus': 2.5,
+            'x-large': 3,
+            'x-large-plus': 3.5,
+            'xx-large': 4,
+            'xx-large-plus': 4.5,
+        ), $spacers
+);
 
 // -----------
 // Transitions
@@ -174,28 +178,30 @@ $mobile-font-size: .9rem !default;
 $headings-font-size: 1em !default;
 $code-font-size: $mobile-font-size !default;
 
-$headings-font-sizes: () !default;
-$headings-font-sizes: map-merge((
-	h1: $headings-font-size + 1.4,
-	h2: $headings-font-size + 1.0,
-	h3: $headings-font-size + 0.8,
-	h4: $headings-font-size + 0.4,
-	h5: $headings-font-size + 0.2,
-	h6: $headings-font-size + 0.1,
-), $headings-font-sizes);
+$headings-font-sizes: (
+    ) !default;
+$headings-font-sizes: map-merge((h1: $headings-font-size + 1.4,
+            h2: $headings-font-size + 1.0,
+            h3: $headings-font-size + 0.8,
+            h4: $headings-font-size + 0.4,
+            h5: $headings-font-size + 0.2,
+            h6: $headings-font-size + 0.1,
+        ), $headings-font-sizes
+);
 
 // ------------
 // Font weights
 // ------------
 
-$font-weights: () !default;
-$font-weights: map-merge((
-	'lighter': lighter,
-	'light': 300,
-	'normal': 400,
-	'bold': 700,
-	'bolder': bolder,
-), $font-weights);
+$font-weights: (
+    ) !default;
+$font-weights: map-merge(('lighter': lighter,
+            'light': 300,
+            'normal': 400,
+            'bold': 700,
+            'bolder': bolder,
+        ), $font-weights
+);
 
 $font-weight-base: font-weight('normal') !default;
 $headings-font-weight: font-weight('normal') !default;
@@ -213,7 +219,7 @@ $focus-outline-offset-base: px-to-rem(2px) !default;
 
 $link-color: color('blue') !default;
 $link-decoration: underline !default;
-$link-hover-color: darken( $link-color , 20% ) !default;
+$link-hover-color: darken($link-color , 20%) !default;
 $link-hover-decoration: underline !default;
 $link-focus-outline-size: $focus-outline-size-base !default;
 $link-focus-outline-color: lighten($link-color, 20%) !default;
@@ -231,8 +237,8 @@ $components-background: grey(80) !default;
 $components-color: $body-color-dark !default;
 $components-hover-darken: 10% !default;
 $components-hover-background: darken($components-background, $components-hover-darken) !default;
-$components-focus-outline-color-lighten: 20% !default;
-$components-focus-outline-color: lighten($components-background, $components-focus-outline-color-lighten) !default;
+$components-focus-outline-color-transparentize: .5 !default;
+$components-focus-outline-color: transparentize($components-background, $components-focus-outline-color-transparentize) !default;
 
 $components-background-dark: color('white') !default;
 $components-color-dark: $body-color !default;
@@ -240,24 +246,26 @@ $components-hover-darken-dark: 10% !default;
 $components-hover-background-dark: darken($components-background-dark, $components-hover-darken-dark) !default;
 $components-focus-outline-color-dark: darken($components-background-dark, 50%) !default;
 
-$components: () !default;
-$components: map-merge((
-    'success': color('success'),
-	'info': color('info'),
-	'warning': color('warning'),
-	'danger': color('danger'),
-), $components);
+$components: (
+    ) !default;
+$components: map-merge(('success': color('success'),
+            'info': color('info'),
+            'warning': color('warning'),
+            'danger': color('danger'),
+        ), $components
+);
 
 // ----
 // Grid
 // ----
 
-$gutters: () !default;
-$gutters: map-merge((
-	'': spacer('medium'),
-	'-l': spacer('large'),
-	'-xl': spacer('large-plus'),
-), $gutters);
+$gutters: (
+    ) !default;
+$gutters: map-merge(('': spacer('medium'),
+            '-l': spacer('large'),
+            '-xl': spacer('large-plus'),
+        ), $gutters
+);
 
 $grid-max-cols: 12 !default;
 $grid-max-rows: 4 !default;
@@ -266,11 +274,12 @@ $grid-max-rows: 4 !default;
 // Breakpoints
 // -----------
 
-$breakpoints: () !default;
-$breakpoints: map-merge((
-	'xs': px-to-rem(480px),
-	's': px-to-rem(576px),
-	'm': px-to-rem(768px),
-	'l': px-to-rem(992px),
-	'xl': px-to-rem(1500px),
-), $breakpoints);
+$breakpoints: (
+    ) !default;
+$breakpoints: map-merge(('xs': px-to-rem(480px),
+            's': px-to-rem(576px),
+            'm': px-to-rem(768px),
+            'l': px-to-rem(992px),
+            'xl': px-to-rem(1500px),
+        ), $breakpoints
+);

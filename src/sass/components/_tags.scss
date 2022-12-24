@@ -6,122 +6,126 @@
 
 @include option("tag") {
 
-@include theme-vars(
-    (--tag-background, $tag-background, $tag-background-dark),
-    (--tag-hover-background, $tag-hover-background, $tag-hover-background-dark),
-    (--tag-wired-hover-background, transparentize($tag-hover-background, $tag-wired-hover-background-transparentize), transparentize($tag-hover-background-dark, $tag-wired-hover-background-transparentize)),
-    (--tag-color, $tag-color, $tag-color-dark),
-    (--tag-wired-color, $tag-wired-color, $tag-wired-color-dark),
-    (--tag-focus-outline-color, $tag-focus-outline-color, $tag-focus-outline-color-dark)
-);
+    @include theme-vars((--tag-background, $tag-background, $tag-background-dark),
+        (--tag-hover-background, $tag-hover-background, $tag-hover-background-dark),
+        (--tag-wired-hover-background, transparentize($tag-hover-background, $tag-wired-hover-background-transparentize), transparentize($tag-hover-background-dark, $tag-wired-hover-background-transparentize)),
+        (--tag-color, $tag-color, $tag-color-dark),
+        (--tag-wired-color, $tag-wired-color, $tag-wired-color-dark),
+        (--tag-focus-outline-color, $tag-focus-outline-color, $tag-focus-outline-color-dark));
 
-%tag,
-%button,
-.#{class("Tag")},
-.#{class("Button")}
-{
-    --tag-padding: #{$tag-padding};
-    --tag-font-size: #{$tag-font-size};
+    %tag,
+    %button,
+    .#{class("Tag")},
+    .#{class("Button")} {
+        --tag-padding: #{$tag-padding};
+        --tag-font-size: #{$tag-font-size};
 
-	display: inline-block;
-	vertical-align: middle;
-	padding: var(--tag-padding);
-	border: none;
-	@include border-radius($tag-border-radius);
-	font-size: var(--tag-font-size);
-    text-decoration: none;
-	line-height: 1;
-	background-color: var(--tag-background);
-	color: var(--tag-color);
-
-    outline: $tag-focus-outline-size solid transparentize(#000, 1);
-    outline-offset: $tag-focus-outline-offset;
-
-    @include transition('background, color, outline-color');
-
-    // Wired (border only) variant
-    // ===========================
-    &--#{class("(Component)--wired")} {
-        background-color: transparent;
-        color: var(--tag-wired-color);
-        // Using inset box-shadow to get the same size as other Buttons
-        box-shadow: 0 0 0 $tag-border-width var(--tag-background) inset;
-    }
-
-    // Ghost (without background) variant
-    // ==================================
-    @include option("components-ghost") {
-        &-#{class("(Component)-ghost")} {
-            --tag-background: transparent;
-            --tag-hover-background: transparent;
-            --tag-wired-hover-background: transparent;
-            --tag-color: var(--body-color);
-        }
-    }
-
-    // Color variants (defined in $components)
-    // =======================================
-	@each $component, $background in $components {
-		&-#{$component} {
-			--tag-background: #{$background};
-            --tag-hover-background: #{darken($background, $components-hover-darken)};
-            --tag-wired-hover-background: #{transparentize($background, $tag-wired-hover-background-transparentize)};
-            --tag-focus-outline-color: #{lighten($background, $tag-focus-outline-color-lighten)};
-
-            @if ($background == transparent) {
-                // Use the default color in the case of a transparent background
-                --tag-color: var(--body-color);
-            } @else {
-                // Use the best contrast ratio color with background
-                --tag-color: #{best-contrast($background, $body-color, $body-color-dark)};
-            }
-		}
-	}
-}
-
-// Interactive states and behaviors
-// ================================v
-button%tag,
-a%tag,
-button.#{class("Tag")},
-a.#{class("Tag")},
-%button,
-.#{class("Button")}
-{
-    cursor: pointer;
-
-	&:hover {
+        display: inline-block;
+        vertical-align: middle;
+        padding: var(--tag-padding);
+        border: none;
+        @include border-radius($tag-border-radius);
+        font-size: var(--tag-font-size);
+        text-decoration: none;
+        line-height: 1;
+        background-color: var(--tag-background);
         color: var(--tag-color);
-        background-color: var(--tag-hover-background);
-        text-decoration: none;
-    }
 
-    &:focus {
-        text-decoration: none;
-    	color: var(--tag-color);
-        outline-color: var(--tag-focus-outline-color);;
-    }
+        outline: $tag-focus-outline-size solid transparentize(#000, 1);
+        outline-offset: $tag-focus-outline-offset;
 
-    &--#{class("(Component)--wired")} {
-        &:hover, &:focus {
+        @include transition('background, color, outline-color');
+
+        // Wired (border only) variant
+        // ===========================
+        &--#{class("(Component)--wired")} {
+            background-color: transparent;
             color: var(--tag-wired-color);
+            // Using inset box-shadow to get the same size as other Buttons
+            box-shadow: 0 0 0 $tag-border-width var(--tag-background) inset;
         }
-        
-        &:hover {
-            background-color: var(--tag-wired-hover-background);
-        }
-    }
-}
 
-// Tag sizes (defined in $tag-sizes)
-// =================================
-.#{class("Tag")} {
-    @each $name, $properties in $tag-sizes {
-        &--#{$name} {
-            --tag-padding: #{nth($properties, 1)};
-            --tag-font-size: #{nth($properties, 2)};
+        // Ghost (without background) variant
+        // ==================================
+        @include option("components-ghost") {
+            &-#{class("(Component)-ghost")} {
+                --tag-background: transparent;
+                --tag-hover-background: transparent;
+                --tag-wired-hover-background: transparent;
+                --tag-color: var(--body-color);
+            }
+        }
+
+        // Color variants (defined in $components)
+        // =======================================
+        @each $component,
+        $background in $components {
+            &-#{$component} {
+                --tag-background: #{$background};
+                --tag-hover-background: #{darken($background, $components-hover-darken)};
+                --tag-wired-hover-background: #{transparentize($background, $tag-wired-hover-background-transparentize)};
+                --tag-focus-outline-color: #{transparentize($background, $tag-focus-outline-color-transparentize)};
+
+                @if ($background ==transparent) {
+                    // Use the default color in the case of a transparent background
+                    --tag-color: var(--body-color);
+                }
+
+                @else {
+                    // Use the best contrast ratio color with background
+                    --tag-color: #{best-contrast($background, $body-color, $body-color-dark)};
+                }
+            }
         }
     }
-}
+
+    // Interactive states and behaviors
+    // ================================v
+    button%tag,
+    a%tag,
+    button.#{class("Tag")},
+    a.#{class("Tag")},
+    %button,
+    .#{class("Button")} {
+        cursor: pointer;
+
+        &:hover {
+            color: var(--tag-color);
+            background-color: var(--tag-hover-background);
+            text-decoration: none;
+        }
+
+        &:focus {
+            text-decoration: none;
+            color: var(--tag-color);
+            outline-color: var(--tag-focus-outline-color);
+            ;
+        }
+
+        &--#{class("(Component)--wired")} {
+
+            &:hover,
+            &:focus {
+                color: var(--tag-wired-color);
+            }
+
+            &:hover {
+                background-color: var(--tag-wired-hover-background);
+            }
+        }
+    }
+
+    // Tag sizes (defined in $tag-sizes)
+    // =================================
+    .#{class("Tag")} {
+
+        @each $name,
+        $properties in $tag-sizes {
+            &--#{$name} {
+                --tag-padding: #{nth($properties, 1)};
+                --tag-font-size: #{nth($properties, 2)};
+            }
+        }
+    }
 
 }
